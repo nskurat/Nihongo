@@ -1,0 +1,1253 @@
+import React, { useState } from 'react';
+import { BookOpen, CheckCircle, Info, MessageCircle, Eye, EyeOff, LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2 } from 'lucide-react';
+
+// Comprehensive Data for Minna No Nihongo Intermediate I
+const grammarData = {
+  1: [
+    {
+      id: "1-1",
+      title: "V-て きます / V-て いきます",
+      meaning: "Changes over time / Direction of action",
+      structure: "Verb (て-form) + きます / いきます",
+      explanation: "Indicates a physical or temporal progression. '〜てきます' describes an action or change that has continued up to the present, or an action directed toward the speaker. '〜ていきます' describes an action or change that will continue from the present into the future, or an action directed away from the speaker.",
+      examples: [
+        { jp: "だんだん寒くなってきました。", en: "It has gradually become colder (up to now)." },
+        { jp: "これからも日本語を勉強していきます。", en: "I will continue studying Japanese from now on." }
+      ]
+    },
+    {
+      id: "1-2",
+      title: "〜ように 言う / 頼む / 注意する",
+      meaning: "Indirect requests, commands, or advice",
+      structure: "Verb (Dictionary / ない form) + ように + 言う/頼む/注意する",
+      explanation: "Used to indirectly quote a command, request, or piece of advice given by someone. It transforms direct commands into reported speech.",
+      examples: [
+        { jp: "先生に宿題を忘れないように言われました。", en: "I was told by the teacher not to forget my homework." },
+        { jp: "医者にタバコを吸わないように注意されました。", en: "I was warned by the doctor not to smoke." }
+      ]
+    },
+    {
+      id: "1-3",
+      title: "〜という N",
+      meaning: "The Noun called / named ~",
+      structure: "Name/Word + という + Noun",
+      explanation: "Used to introduce a specific name or define a term that the listener might not know. It links a specific proper noun or concept to a broader category noun.",
+      examples: [
+        { jp: "桃太郎という話を知っていますか。", en: "Do you know a story called 'Momotaro'?" },
+        { jp: "これは「おにぎり」という食べ物です。", en: "This is a food called 'Onigiri'." }
+      ]
+    },
+    {
+      id: "1-4",
+      title: "〜みたいだ / みたいに / みたいな",
+      meaning: "Seems like / Resembles / Like ~",
+      structure: "Verb/Adj/Noun (Plain form) + みたいだ",
+      explanation: "A colloquial equivalent of '〜ようだ'. It expresses the speaker's conjecture based on observation, or expresses resemblance. When modifying a noun, use 'みたいな'. When modifying a verb/adjective, use 'みたいに'.",
+      examples: [
+        { jp: "氷みたいな手ですね。", en: "Your hands are like ice, aren't they?" },
+        { jp: "日本人のみたいに上手に日本語を話します。", en: "They speak Japanese well, just like a Japanese person." }
+      ]
+    }
+  ],
+  2: [
+    {
+      id: "2-1",
+      title: "V-て ほしい / V-ないで ほしい",
+      meaning: "Want someone to do / not do something",
+      structure: "Verb (て-form) + ほしい / Verb (ない-form) + で + ほしい",
+      explanation: "Expresses the speaker's desire for someone else (usually marked with に) to perform or not perform a specific action.",
+      examples: [
+        { jp: "私はあなたに英語を教えてほしいです。", en: "I want you to teach me English." },
+        { jp: "ここでタバコを吸わないでほしいんですが。", en: "I would like you not to smoke here..." }
+      ]
+    },
+    {
+      id: "2-2",
+      title: "〜ことに する / 〜ことに している",
+      meaning: "Decide to do / Make it a rule to do",
+      structure: "Verb (Dictionary / ない form) + ことに する/している",
+      explanation: "'ことにする' indicates a decision made by the speaker. 'ことにしている' indicates a habit or routine that is the result of the speaker's own conscious decision.",
+      examples: [
+        { jp: "毎日ジョギングをすることにしました。", en: "I decided to jog every day." },
+        { jp: "健康のために、甘いものを食べないことにしています。", en: "For my health, I make it a rule not to eat sweets." }
+      ]
+    },
+    {
+      id: "2-3",
+      title: "〜ことに なる / 〜ことに なっている",
+      meaning: "It has been decided that / It is a rule that",
+      structure: "Verb (Dictionary / ない form) + ことに なる/なっている",
+      explanation: "'ことになる' indicates a decision made by someone else or circumstances out of the speaker's control. 'ことになっている' refers to an established rule or custom.",
+      examples: [
+        { jp: "来月、日本へ出張することになりました。", en: "It has been decided that I will go on a business trip to Japan next month." },
+        { jp: "この部屋には入ってはいけないことになっています。", en: "It is a rule that you must not enter this room." }
+      ]
+    }
+  ],
+  3: [
+    {
+      id: "3-1",
+      title: "〜ように する / 〜ように している",
+      meaning: "Make an effort to / Habit of effort",
+      structure: "Verb (Dictionary / ない form) + ように する/している",
+      explanation: "Indicates making a conscious, ongoing effort to do (or not do) something. It focuses on the continuous attempt rather than a strict rule.",
+      examples: [
+        { jp: "野菜をたくさん食べるようにしています。", en: "I am making an effort to eat a lot of vegetables." },
+        { jp: "絶対に遅刻しないようにしてください。", en: "Please make sure (make an effort) not to be late." }
+      ]
+    },
+    {
+      id: "3-2",
+      title: "V-る ようになる",
+      meaning: "Come to be able to / Change in state",
+      structure: "Verb (Dictionary form) + ようになる",
+      explanation: "Expresses a change in ability or the development of a new habit. It often follows potential verbs or verbs indicating a state.",
+      examples: [
+        { jp: "毎日練習して、泳げるようになりました。", en: "By practicing every day, I became able to swim." },
+        { jp: "日本に来てから、納豆を食べるようになりました。", en: "After coming to Japan, I started eating natto." }
+      ]
+    },
+    {
+      id: "3-3",
+      title: "V-終わる / 始める / 続ける",
+      meaning: "Finish / Start / Continue doing",
+      structure: "Verb (ます stem) + 終わる / 始める / 続ける",
+      explanation: "Compound verbs. Attach these to the stem of a verb to indicate the beginning, continuation, or completion of that action.",
+      examples: [
+        { jp: "その本はもう読み終わりました。", en: "I have already finished reading that book." },
+        { jp: "疲れても、歩き続けなければなりません。", en: "Even if you are tired, you must continue walking." }
+      ]
+    }
+  ],
+  4: [
+    {
+      id: "4-1",
+      title: "〜らしい",
+      meaning: "It seems / Typical of ~",
+      structure: "Verb/Adj (Plain) / Noun + らしい",
+      explanation: "Has two meanings: 1) Conjecture based on objective information or hearsay. 2) Attached to a noun to mean 'typical of' or 'having all the expected characteristics of' that noun.",
+      examples: [
+        { jp: "うわさによると、二人は結婚するらしい。", en: "According to rumors, those two are getting married." },
+        { jp: "今日は春らしい天気ですね。", en: "Today is very spring-like weather, isn't it?" }
+      ]
+    },
+    {
+      id: "4-2",
+      title: "〜がる / 〜がっている",
+      meaning: "Showing signs of feeling (Third person)",
+      structure: "い-Adj (drop い) / な-Adj / V-たい (drop い) + がる",
+      explanation: "Used to describe the emotions, physical feelings, or desires of someone other than the speaker, based on their outward behavior or signs.",
+      examples: [
+        { jp: "子供がおもちゃを欲しがっています。", en: "The child is acting like they want a toy." },
+        { jp: "彼は犬を怖がります。", en: "He is afraid of (shows fear of) dogs." }
+      ]
+    },
+    {
+      id: "4-3",
+      title: "V-させられる (Causative-Passive)",
+      meaning: "Be forced or made to do something",
+      structure: "Verb (Causative-Passive Form)",
+      explanation: "Indicates that the subject was forced or made to do something against their will by someone else. Expresses annoyance or reluctance.",
+      examples: [
+        { jp: "子供の時、母に野菜を食べさせられました。", en: "When I was a child, I was forced to eat vegetables by my mother." },
+        { jp: "先生に漢字を100回書かされました。", en: "I was made to write the kanji 100 times by the teacher." }
+      ]
+    }
+  ],
+  5: [
+    {
+      id: "5-1",
+      title: "〜ばいい / 〜たらいい / 〜といい",
+      meaning: "Asking for/Giving advice, Hoping",
+      structure: "Verb (Conditional ば / たら / と) + いい",
+      explanation: "Used in questions to ask for advice. Used in statements to give advice ('You should...'). Can also express a hope or wish for the future.",
+      examples: [
+        { jp: "どこでカメラを買ったらいいですか。", en: "Where should I buy a camera? (Asking for advice)" },
+        { jp: "明日、晴れるといいですね。", en: "I hope it will be sunny tomorrow. (Wish/Hope)" }
+      ]
+    },
+    {
+      id: "5-2",
+      title: "〜おかげで / 〜せいで",
+      meaning: "Thanks to / Because of (Fault)",
+      structure: "Verb/Adj (Plain) / Noun + の + おかげで / せいで",
+      explanation: "'〜おかげで' is used for positive outcomes resulting from someone or something (Thanks to). '〜せいで' is used for negative outcomes, blaming the cause (Because of / Thanks to ~).",
+      examples: [
+        { jp: "先生のおかげで、試験に合格しました。", en: "Thanks to the teacher, I passed the exam." },
+        { jp: "バスが遅れたせいで、授業に遅刻しました。", en: "Because the bus was late, I was late for class." }
+      ]
+    },
+    {
+      id: "5-3",
+      title: "〜て もらう / 〜て くれる",
+      meaning: "Receiving favors (Expanded)",
+      structure: "Verb (て-form) + もらう / くれる",
+      explanation: "Expressing gratitude for actions done by others. Frequently used in their potential or negative forms to make casual or polite requests.",
+      examples: [
+        { jp: "ちょっと手伝ってくれない？", en: "Could you help me a little? (Casual request)" },
+        { jp: "ペンを貸してもらえませんか。", en: "Could I have you lend me a pen? (Polite request)" }
+      ]
+    }
+  ],
+  6: [
+    {
+      id: "6-1",
+      title: "N は 〜の 一つだ",
+      meaning: "N is one of the ~",
+      structure: "Noun は [Category/Group] の 一つだ",
+      explanation: "Used to state that the subject (Noun) belongs to a larger group or is one instance among many. Very common in essays and formal writing.",
+      examples: [
+        { jp: "漢字は、日本語の文字の一つです。", en: "Kanji is one of the writing systems in Japanese." },
+        { jp: "この町は、日本で最も美しい場所の一つだ。", en: "This town is one of the most beautiful places in Japan." }
+      ]
+    },
+    {
+      id: "6-2",
+      title: "N にとって",
+      meaning: "For N / To N (From the standpoint of)",
+      structure: "Noun + にとって",
+      explanation: "Expresses a perspective or standpoint. It means 'as far as Noun is concerned' or 'to Noun'. It is often followed by an adjective indicating value, importance, or difficulty.",
+      examples: [
+        { jp: "私にとって、家族は一番大切なものです。", en: "To me, family is the most important thing." },
+        { jp: "外国人にとって、日本の習慣を理解するのは難しい。", en: "For foreigners, understanding Japanese customs is difficult." }
+      ]
+    },
+    {
+      id: "6-3",
+      title: "N の 代わりに",
+      meaning: "Instead of N / On behalf of N",
+      structure: "Noun + の + 代わりに (かわりに)",
+      explanation: "Indicates substitution. It can mean doing something in place of an object (using X instead of Y) or on behalf of a person.",
+      examples: [
+        { jp: "コーヒーの代わりに、お茶を飲みます。", en: "I will drink tea instead of coffee." },
+        { jp: "社長の代わりに、私が会議に出席します。", en: "I will attend the meeting on behalf of the company president." }
+      ]
+    }
+  ],
+  7: [
+    {
+      id: "7-1",
+      title: "〜から〜にかけて",
+      meaning: "From ~ through ~ (Spanning time/space)",
+      structure: "Noun 1 (Time/Place) + から + Noun 2 (Time/Place) + にかけて",
+      explanation: "Indicates a rough span of time or space. Unlike '〜から〜まで' which has clear start and end points, '〜にかけて' implies a continuous or intermittent action/state spread over that general period or area.",
+      examples: [
+        { jp: "明日は、昼から夕方にかけて雨が降るでしょう。", en: "Tomorrow, it will likely rain from noon through the late afternoon." },
+        { jp: "関東地方から東北地方にかけて、大きな地震がありました。", en: "There was a large earthquake spanning from the Kanto region through the Tohoku region." }
+      ]
+    },
+    {
+      id: "7-2",
+      title: "〜として",
+      meaning: "As ~ / In the capacity or role of ~",
+      structure: "Noun + として",
+      explanation: "Indicates the role, capacity, status, or function of someone or something. Similar to saying 'working as' or 'used as' in English.",
+      examples: [
+        { jp: "彼は留学生として日本に来ました。", en: "He came to Japan as an international student." },
+        { jp: "この部屋は、会議室として使われています。", en: "This room is used as a meeting room." }
+      ]
+    },
+    {
+      id: "7-3",
+      title: "〜(の)なら",
+      meaning: "If it is the case that ~ / Given that ~",
+      structure: "Verb/Adj (Plain) + (の)なら / Noun + なら",
+      explanation: "Used to make a suggestion, request, or statement based on what the other person just said, or a given situation. 'If that's the case...'",
+      examples: [
+        { jp: "A: パソコンを買いたいんですが。\nB: パソコンなら、あの店が安いですよ。", en: "A: I want to buy a PC.\nB: If it's a PC you want, that store is cheap." },
+        { jp: "嫌なら、無理に行かなくてもいいですよ。", en: "If you don't want to (If it's disagreeable), you don't have to force yourself to go." }
+      ]
+    }
+  ],
+  8: [
+    {
+      id: "8-1",
+      title: "V-る / V-ない ことがある",
+      meaning: "There are times when ~ / Sometimes ~",
+      structure: "Verb (Dictionary form / ない form) + ことがある",
+      explanation: "Expresses that something happens occasionally. Do not confuse this with 'V-た ことがある' which means 'have the experience of doing'.",
+      examples: [
+        { jp: "朝ごはんを食べないことがあります。", en: "There are times when I don't eat breakfast." },
+        { jp: "電車が遅れて、授業に遅刻することがあります。", en: "Sometimes the train is delayed, and I am late for class." }
+      ]
+    },
+    {
+      id: "8-2",
+      title: "〜によって / 〜による",
+      meaning: "Depending on / By means of / Due to",
+      structure: "Noun + によって / Noun + による + Noun",
+      explanation: "A versatile grammar point. It can mean 'depending on the noun' (variation), 'by means of' (method), 'caused by' (cause), or 'created by' (passive actor).",
+      examples: [
+        { jp: "国によって、文化や習慣が違います。", en: "Culture and customs differ depending on the country." },
+        { jp: "この絵はピカソによって描かれました。", en: "This painting was drawn by Picasso." },
+        { jp: "台風によって、木が倒れました。", en: "The tree fell due to the typhoon." }
+      ]
+    },
+    {
+      id: "8-3",
+      title: "〜に対して",
+      meaning: "Towards ~ / In contrast to ~",
+      structure: "Noun + に対して (たいして)",
+      explanation: "Used to indicate an attitude or action directed 'towards' someone or something. It can also be used to show a clear contrast between two things ('In contrast to A, B is...').",
+      examples: [
+        { jp: "先生に対して、そんな言葉を使ってはいけません。", en: "You must not use such words towards a teacher." },
+        { jp: "兄が静かなのに対して、弟はとても元気だ。", en: "In contrast to my older brother being quiet, my younger brother is very energetic." }
+      ]
+    }
+  ],
+  9: [
+    {
+      id: "9-1",
+      title: "〜ば〜ほど",
+      meaning: "The more ~, the more ~",
+      structure: "Verb (ば form) + Verb (Dictionary) + ほど",
+      explanation: "Used to express that as one condition changes, another condition changes proportionally. You repeat the same verb or adjective twice (once in 'ba' form, once in dictionary form).",
+      examples: [
+        { jp: "日本語は、話せば話すほど上手になります。", en: "The more you speak Japanese, the better you become." },
+        { jp: "スーパーは家から近ければ近いほど便利です。", en: "The closer the supermarket is to home, the more convenient it is." }
+      ]
+    },
+    {
+      id: "9-2",
+      title: "〜ばかり / 〜てばかりいる",
+      meaning: "Only / Doing nothing but ~",
+      structure: "Noun + ばかり / Verb (て form) + ばかりいる",
+      explanation: "Used to emphasize that there is an unusually large amount of one thing, or that someone is doing only one action repeatedly, usually with a slightly negative connotation.",
+      examples: [
+        { jp: "休みの日は、ゲームをしてばかりいます。", en: "On my days off, I do nothing but play games." },
+        { jp: "私の息子は肉ばかり食べて、野菜を食べません。", en: "My son eats only meat and won't eat vegetables." }
+      ]
+    },
+    {
+      id: "9-3",
+      title: "〜について",
+      meaning: "About ~ / Regarding ~",
+      structure: "Noun + について / Noun + についての + Noun",
+      explanation: "Indicates the topic or subject of an action, thought, or research. Similar to 'about' or 'concerning' in English.",
+      examples: [
+        { jp: "日本の歴史について調べています。", en: "I am researching about Japanese history." },
+        { jp: "環境問題についてのスピーチを聞きました。", en: "I listened to a speech regarding environmental issues." }
+      ]
+    }
+  ],
+  10: [
+    {
+      id: "10-1",
+      title: "〜まま",
+      meaning: "As it is / Leaving something as is",
+      structure: "Verb (た form / ない form) / Noun の / な-Adj な + まま",
+      explanation: "Expresses that a state remains unchanged, or that an action is performed while a certain state continues (often when it shouldn't).",
+      examples: [
+        { jp: "靴を履いたまま、部屋に入らないでください。", en: "Please do not enter the room with your shoes still on (as they are)." },
+        { jp: "テレビをつけたまま寝てしまいました。", en: "I fell asleep with the TV left on." }
+      ]
+    },
+    {
+      id: "10-2",
+      title: "〜ずに",
+      meaning: "Without doing ~",
+      structure: "Verb (ない form, drop ない) + ずに (※する -> せずに)",
+      explanation: "A written or slightly formal equivalent of '〜ないで'. It means doing an action without doing another expected action.",
+      examples: [
+        { jp: "朝ごはんを食べずに学校へ行きました。", en: "I went to school without eating breakfast." },
+        { jp: "辞書を使わずに、新聞を読みました。", en: "I read the newspaper without using a dictionary." }
+      ]
+    },
+    {
+      id: "10-3",
+      title: "〜はずだ",
+      meaning: "It is expected that / Should be ~",
+      structure: "Verb/Adj (Plain form) / Noun の + はずだ",
+      explanation: "Expresses a strong conviction, expectation, or logical conclusion based on objective facts or reasons.",
+      examples: [
+        { jp: "彼は日本に10年住んでいるから、日本語が上手なはずだ。", en: "He has lived in Japan for 10 years, so his Japanese should be (expected to be) good." },
+        { jp: "今日は日曜日だから、銀行は休みの手ずです。", en: "Today is Sunday, so the bank should be closed." }
+      ]
+    }
+  ],
+  11: [
+    {
+      id: "11-1",
+      title: "〜てくる・〜ていく",
+      meaning: "Change leading up to present / Change from now into future",
+      structure: "Verb (て-form) + くる / いく",
+      explanation: "Indicates arriving at a present situation through a process of change ('〜てくる'), or moving in the direction of a future change ('〜ていく').",
+      examples: [
+        { jp: "だんだん春らしくなってきました。", en: "Little by little, it became spring-like." },
+        { jp: "これからは、日本で働く外国人が増えていくでしょう。", en: "The number of non-Japanese nationals working in Japan will probably increase from now on." }
+      ]
+    },
+    {
+      id: "11-2",
+      title: "〜たら［どう］？",
+      meaning: "How about doing...? / Why don't you...?",
+      structure: "Verb (たら form) ＋ ［どう］？",
+      explanation: "Used to make a suggestion. '〜たらどう？' or just '〜たら？' is used when speaking to someone junior or someone with whom one is on familiar terms. A polite form is '〜たらいかがですか'.",
+      examples: [
+        { jp: "電話でもかけてあげたらどう？", en: "Why don't you call her or something?" },
+        { jp: "薬を飲んで、今日は早く寝たら？", en: "How about taking some medicine and going to bed early today?" }
+      ]
+    },
+    {
+      id: "11-3",
+      title: "〜より…ほうが…",
+      meaning: "… is more … than 〜 (Comparison)",
+      structure: "Noun/Verb/Adj (Plain) + より + Noun/Verb/Adj (Plain) + ほうが…",
+      explanation: "Used to compare two things, stating that one (the 'ほうが' part) is more something than the other (the 'より' part). Note that Na-adjectives take 'な' before 'ほうが' and Nouns take 'の'.",
+      examples: [
+        { jp: "安いより高いほうがいいです。", en: "Expensive is better than cheap." },
+        { jp: "電車で行くより、バスで行くほうが安いです。", en: "Going by bus is cheaper than going by train." }
+      ]
+    },
+    {
+      id: "11-4",
+      title: "〜らしい",
+      meaning: "Typical of ~ / Having the characteristics of ~",
+      structure: "Noun + らしい",
+      explanation: "Attached to a noun to indicate that someone or something possesses the typical characteristics of that noun.",
+      examples: [
+        { jp: "彼は男らしいです。", en: "He is manly (typical of a man)." },
+        { jp: "今日は春らしい天気ですね。", en: "Today is very spring-like weather, isn't it?" }
+      ]
+    },
+    {
+      id: "11-5",
+      title: "〜として",
+      meaning: "As ~ / In the capacity of ~",
+      structure: "Noun + として",
+      explanation: "Indicates the role, capacity, status, or function of someone or something.",
+      examples: [
+        { jp: "留学生として日本へ来ました。", en: "I came to Japan as an international student." },
+        { jp: "この部屋は会議室として使われています。", en: "This room is used as a meeting room." }
+      ]
+    },
+    {
+      id: "11-6",
+      title: "〜ず［に］",
+      meaning: "Without doing ~",
+      structure: "Verb (ない form, drop ない) + ず［に］ (※する -> せず)",
+      explanation: "A written or slightly formal equivalent of '〜ないで'. It means doing an action without doing another expected action.",
+      examples: [
+        { jp: "辞書を使わずに、新聞を読みました。", en: "I read the newspaper without using a dictionary." },
+        { jp: "朝ごはんを食べずに学校へ行きました。", en: "I went to school without eating breakfast." }
+      ]
+    },
+    {
+      id: "11-7",
+      title: "〜ている",
+      meaning: "Experience / State",
+      structure: "Verb (て-form) + いる",
+      explanation: "Used to describe an experience or a state that has continued from the past to the present.",
+      examples: [
+        { jp: "私は日本に住んでいる。", en: "I live in Japan (and still do)." },
+        { jp: "彼は結婚している。", en: "He is married." }
+      ]
+    }
+  ],
+  12: [
+    {
+      id: "12-1",
+      title: "…もの／もんだから",
+      meaning: "Because... (Reason/Excuse)",
+      structure: "Verb/Adj (Plain) / Noun な + もの／もんだから",
+      explanation: "Indicates the reason or cause of something, often used to justify it, or give a reason for it in order to deny responsibility or excuse oneself.",
+      examples: [
+        { jp: "急いでいたものですから、かぎをかけるのを忘れてしまいました。", en: "I was in a rush, so I went and forgot to lock up." },
+        { jp: "とても安かったものだから、買いすぎたんです。", en: "It was very cheap, so I bought too much." }
+      ]
+    },
+    {
+      id: "12-2",
+      title: "〜（ら）れる (Indirect Passive)",
+      meaning: "Be adversely affected by ~",
+      structure: "Verb (Passive form)",
+      explanation: "In addition to direct passive sentences, this form is used when the speaker is adversely affected by an action, often an action involving an intransitive verb (like raining or crying).",
+      examples: [
+        { jp: "雨に降られて、服がぬれてしまった。", en: "I was caught in the rain (adversely affected by the rain falling), and my clothes got wet." },
+        { jp: "夜中に隣の赤ちゃんに泣かれて、眠れませんでした。", en: "The baby next door cried in the middle of the night, and I couldn't sleep." }
+      ]
+    },
+    {
+      id: "12-3",
+      title: "〜たり〜たり",
+      meaning: "Doing things like ~ and ~",
+      structure: "Verb (た-form) + り、Verb (た-form) + りする",
+      explanation: "Used to list actions or states as examples among others.",
+      examples: [
+        { jp: "休みの日は、本を読んだり、映画を見たりします。", en: "On my days off, I do things like read books and watch movies." },
+        { jp: "最近、雨が降ったり止んだりしています。", en: "Recently, it has been raining and stopping repeatedly." }
+      ]
+    },
+    {
+      id: "12-4",
+      title: "〜っぱなし",
+      meaning: "Leaving something as it is (Negative connotation)",
+      structure: "Verb (ます stem) + っぱなし",
+      explanation: "Indicates leaving something in a certain state, usually when it should be changed or put away. Often has a negative connotation.",
+      examples: [
+        { jp: "服が脱ぎっぱなしだ。かたづけないから、部屋がきたない。", en: "You just take your clothes off and leave them lying around. You don't put them away, so your room is untidy." },
+        { jp: "こらっ。ドアが開けっぱなしだよ。早く閉めなさい。", en: "Hey, you've left the door open. Hurry up and shut it." }
+      ]
+    },
+    {
+      id: "12-5",
+      title: "…おかげで、…・…おかげだ",
+      meaning: "Thanks to... (Favorable result)",
+      structure: "Verb/Adj (Plain form) / Noun の + おかげで",
+      explanation: "Used when a favorable result is produced by a particular cause.",
+      examples: [
+        { jp: "先生が手紙を書いてくださったおかげで、大きい病院で研修を受けられることになった。", en: "Thanks to my teacher writing a letter, I was able to get a training place at a big hospital." },
+        { jp: "値段が安かったおかげで、たくさん買えました。", en: "Thanks to the price being low, I was able to buy a lot." }
+      ]
+    },
+    {
+      id: "12-6",
+      title: "…せいで、…・…せいだ",
+      meaning: "Because of... (Negative result/Fault)",
+      structure: "Verb/Adj (Plain form) / Noun の + せいで",
+      explanation: "Used when an undesirable result is produced by a particular cause, attributing fault.",
+      examples: [
+        { jp: "バスが遅れたせいで、会議に間に合いませんでした。", en: "Because the bus was late, I didn't make it to the meeting on time." },
+        { jp: "風邪をひいたせいで、旅行に行けなくなった。", en: "Because I caught a cold, I couldn't go on the trip." }
+      ]
+    }
+  ],
+  13: [
+    {
+      id: "13-1",
+      title: "〜たて",
+      meaning: "Just done / Freshly done",
+      structure: "Verb (ます stem) + たて",
+      explanation: "Indicates that an action has just been completed, emphasizing freshness or newness. Often used with food or products.",
+      examples: [
+        { jp: "焼きたてのパンはおいしいです。", en: "Freshly baked bread is delicious." },
+        { jp: "ペンキ塗立て。", en: "Freshly painted. (Sign)" }
+      ]
+    },
+    {
+      id: "13-2",
+      title: "たとえ〜ても",
+      meaning: "Even if ~",
+      structure: "たとえ + Verb/Adj (て-form) + も",
+      explanation: "Used to present a hypothetical situation and state that the outcome or conclusion will not change regardless of that situation.",
+      examples: [
+        { jp: "たとえ雨が降っても、試合は行われます。", en: "Even if it rains, the match will be held." },
+        { jp: "たとえ親が反対しても、私は彼と結婚します。", en: "Even if my parents oppose it, I will marry him." }
+      ]
+    },
+    {
+      id: "13-3",
+      title: "〜たりしない",
+      meaning: "Not do things like ~",
+      structure: "Verb (た-form) + りしない",
+      explanation: "A strong denial of doing a certain action or things like it.",
+      examples: [
+        { jp: "私は絶対にうそをついたりしません。", en: "I absolutely do not do things like tell lies." },
+        { jp: "あんなひどいことを言ったりしないでください。", en: "Please don't do things like say such terrible things." }
+      ]
+    },
+    {
+      id: "13-4",
+      title: "〜ほど",
+      meaning: "To the extent that ~ / So ~ that ~",
+      structure: "Verb (Plain) / Noun + ほど",
+      explanation: "Expresses the degree or extent of a state or action by comparing it to an extreme example.",
+      examples: [
+        { jp: "死ぬほど疲れました。", en: "I am tired to the extent of dying (dead tired)." },
+        { jp: "涙が出るほど笑いました。", en: "I laughed so much that tears came out." }
+      ]
+    }
+  ],
+  14: [
+    {
+      id: "14-1",
+      title: "〜際（に）",
+      meaning: "When... / At the time of...",
+      structure: "Verb (Dictionary/た-form) / Noun の + 際（に）",
+      explanation: "Means more or less the same as '〜とき', but is used mainly in formal writing or public announcements.",
+      examples: [
+        { jp: "外出の際、必ずフロントに鍵をお預けください。", en: "When leaving the hotel, please be sure to leave your key at the front desk." },
+        { jp: "PCをお使いの場合は、チェックインの際、必ずお申し出ください。", en: "If you are going to use a PC, please be sure to say so when you check in." }
+      ]
+    },
+    {
+      id: "14-2",
+      title: "〜といった",
+      meaning: "Such as ~ / Like ~",
+      structure: "Noun 1, Noun 2... + といった + Noun 3",
+      explanation: "Indicates that N1, N2 etc. are specific examples of N3. It implies that there are also other examples apart from those mentioned.",
+      examples: [
+        { jp: "5月5日には「ちまき」「かしわもち」といった昔からの菓子を食べる習慣がある。", en: "On 5th May, there is the custom of eating traditional confectionery such as 'chimaki' and 'kashiwamochi'." },
+        { jp: "この大学にはルーマニア、ポーランドといった東ヨーロッパからの留学生が多い。", en: "There are many students from Eastern European countries such as Romania and Poland at this university." }
+      ]
+    },
+    {
+      id: "14-3",
+      title: "〜に（も）わたって",
+      meaning: "Extending over / Spanning (time or space)",
+      structure: "Noun (Time/Space) + に（も）わたって",
+      explanation: "Indicates that the speaker feels that the span of time mentioned is lengthy or the area extensive.",
+      examples: [
+        { jp: "手術は3時間にわたって行われた。", en: "The operation lasted for three hours." },
+        { jp: "砂漠は東西450キロにわたって広がっている。", en: "The desert extends 450 km across from East to West." }
+      ]
+    }
+  ],
+  15: [
+    {
+      id: "15-1",
+      title: "〜という",
+      meaning: "It is said that... / They say...",
+      structure: "Plain form + という",
+      explanation: "Indicates reported speech (hearsay). It is used mainly in writing.",
+      examples: [
+        { jp: "日本で最も古い大学が京都にあるという。", en: "They say that the oldest university in Japan is in Kyoto." },
+        { jp: "普通の電球の8分の1から5分の1の電気代で済み、寿命は40倍あるという。", en: "They are said to cost 1/8 to 1/5 of a normal bulb in electricity charges and to last 40 times as long." }
+      ]
+    },
+    {
+      id: "15-2",
+      title: "〜たびに",
+      meaning: "Every time / Whenever...",
+      structure: "Verb (Dictionary form) / Noun の + たびに",
+      explanation: "Means 'every time...'.",
+      examples: [
+        { jp: "隣の家のお嬢さんは会うたびにきれいになっている。", en: "The girl next door gets prettier every time I see her." },
+        { jp: "欧米では転職するたびに給料が上がるというが、日本では必ずしもそうではない。", en: "They say that in Western countries, one's salary rises every time one changes jobs, but this is not necessarily so in Japan." }
+      ]
+    },
+    {
+      id: "15-3",
+      title: "〜に関する／関して",
+      meaning: "Regarding / Concerning...",
+      structure: "Noun + に関する／関して",
+      explanation: "Indicates what is contained in the noun. Means more or less the same as '〜について', but is more of a written expression.",
+      examples: [
+        { jp: "今回の講演会に関してご意見のある方はこの紙に書いて出口の箱にお入れください。", en: "Would anyone who has any comments or suggestions about this lecture please write them on these slips of paper and place them in the box at the exit." },
+        { jp: "東京で環境問題に関する会議が開かれた。", en: "A conference on environmental issues was held in Tokyo." }
+      ]
+    },
+    {
+      id: "15-4",
+      title: "…わけではない",
+      meaning: "It doesn't mean that... / It is not necessarily the case that...",
+      structure: "Verb/Adj (Plain form) / Noun な + わけではない",
+      explanation: "Negates a conclusion that could easily or generally be drawn from the context or from the situation described.",
+      examples: [
+        { jp: "この店は人気があるが、必ずしも毎日大勢の客が入るわけではない。", en: "This shop is popular, but that doesn't mean that huge numbers of customers visit it every day." },
+        { jp: "宿題はたくさんあるが、今日中に全部しなければならないわけではない。", en: "I've got a lot of homework, but it doesn't mean I have to do it all today." }
+      ]
+    }
+  ],
+  16: [
+    {
+      id: "16-1",
+      title: "〜に応じて",
+      meaning: "In response to / Depending on",
+      structure: "Noun + に応じて / Noun 1 + に応じた + Noun 2",
+      explanation: "Indicates doing something appropriately 'in response to' a demand or request. When used with a word representing change or diversity, it means 'in response to the change/diversity'.",
+      examples: [
+        { jp: "学生たちは大学に授業料についての要求をしました。1年間話し合った後、大学は要求に応じました。", en: "The students made demands about the tuition fees. After discussing it for a year, the university acceded to their demands." },
+        { jp: "時代の変化に応じて若者の文化や考え方も変わる。", en: "Young people's culture and thinking also change in response to the changing times." }
+      ]
+    },
+    {
+      id: "16-2",
+      title: "〜によって / 〜による",
+      meaning: "Due to / As a result of (Cause)",
+      structure: "Noun + によって / Noun 1 + による + Noun 2",
+      explanation: "In this context, '〜によって' indicates a direct cause leading to a result. When modifying a noun, it takes the form '〜による N'.",
+      examples: [
+        { jp: "急激な円高によって経営が苦しくなり、倒産する企業もある。", en: "As a result of the rapid rise in the yen, some companies are struggling or going bankrupt." },
+        { jp: "ATMのトラブルによる被害は、この銀行の利用客にとどまらない。", en: "The damage due to the cash-machine problems is not confined to this bank's customers." }
+      ]
+    },
+    {
+      id: "16-3",
+      title: "〜にもかかわらず",
+      meaning: "Despite / In spite of",
+      structure: "Verb/Adj (Plain) / Noun (である) + にもかかわらず",
+      explanation: "Indicates an action or event occurring despite contrary expectations. It carries a similar meaning to '〜のに' but is more formal.",
+      examples: [
+        { jp: "雨が激しく降っているにもかかわらず、サッカーの試合は行われた。", en: "Despite the heavy rain, the soccer match was held." },
+        { jp: "彼は熱があるにもかかわらず、仕事へ行きました。", en: "In spite of having a fever, he went to work." }
+      ]
+    },
+    {
+      id: "16-4",
+      title: "〜ところだった",
+      meaning: "Was just about to / Almost happened",
+      structure: "Verb (Dictionary form) + ところだった",
+      explanation: "Used to express that a situation (often negative or dangerous) was just about to happen, but was narrowly avoided.",
+      examples: [
+        { jp: "もう少しで電車に乗り遅れるところだった。", en: "I was just about to miss the train (but I made it)." },
+        { jp: "あやうく事故を起こすところだった。", en: "I almost caused an accident." }
+      ]
+    }
+  ],
+  17: [
+    {
+      id: "17-1",
+      title: "〜にしては",
+      meaning: "Considering... / For a...",
+      structure: "Noun / Plain form (なA -だ -> -である / N -だ -> -) + にしては",
+      explanation: "Indicates that the outcome or degree of something is different from what would normally be expected based on the given premise (X).",
+      examples: [
+        { jp: "彼女のピアノの腕は素人にしては相当のものだ。", en: "Her piano playing is quite good, considering she is an amateur." },
+        { jp: "このレポートは一晩で書いたにしてはよくできている。", en: "This report is well written, considering it was done in one night." }
+      ]
+    },
+    {
+      id: "17-2",
+      title: "〜からには",
+      meaning: "Because X, then of course Y / Now that...",
+      structure: "Verb (Plain) / Noun (である) + からには",
+      explanation: "Means 'because X is a fact, then naturally Y'. The 'Y' part is often an expression of a strong determination, order, obligation, or aspiration.",
+      examples: [
+        { jp: "大学院に入ったからには、どんなに大変でも学位を取って国へ帰りたい。", en: "Now that I've gotten into graduate school, I want to get my degree and go back home no matter how tough it is." },
+        { jp: "やるからには勝たなければならないと思う。", en: "As long as I'm doing it, I feel I have to win." }
+      ]
+    },
+    {
+      id: "17-3",
+      title: "〜ざるを得ない",
+      meaning: "Cannot help but / Have no choice but to",
+      structure: "Verb (ない form, drop ない) + ざるを得ない (※する -> せざるを得ない)",
+      explanation: "Indicates that one does not want to do something, but has absolutely no other choice due to the circumstances.",
+      examples: [
+        { jp: "熱が39度もあるので、今日の会議は休まざるを得ない。", en: "Since I have a fever of 39 degrees, I have no choice but to miss today's meeting." },
+        { jp: "電車が止まってしまったので、歩いて帰らざるを得ない。", en: "Because the trains have stopped, I cannot help but walk home." }
+      ]
+    },
+    {
+      id: "17-4",
+      title: "〜からなる",
+      meaning: "Consists of / Is composed of",
+      structure: "Noun + からなる / からなっている",
+      explanation: "A formal expression used to describe what parts, elements, or materials make up a whole entity.",
+      examples: [
+        { jp: "この本は、10の章からなっている。", en: "This book is composed of 10 chapters." },
+        { jp: "水は水素と酸素からなる。", en: "Water consists of hydrogen and oxygen." }
+      ]
+    }
+  ],
+  18: [
+    {
+      id: "18-1",
+      title: "〜に違いない",
+      meaning: "Must be / Undoubtedly",
+      structure: "Verb/Adj/Noun (Plain form) + に違いない (※Na-Adj/Noun drop だ)",
+      explanation: "Expresses the speaker's strong conviction, certainty, or educated guess about a situation. Stronger than '〜はずだ'.",
+      examples: [
+        { jp: "毎日遅くまで練習しているから、彼は疲れているに違いない。", en: "Since he practices late every day, he must undoubtedly be tired." },
+        { jp: "犯人はあの男に違いない。", en: "The culprit must be that man." }
+      ]
+    },
+    {
+      id: "18-2",
+      title: "〜に比べて",
+      meaning: "Compared to",
+      structure: "Noun + に比べて",
+      explanation: "Used to compare two or more things, highlighting the differences between them.",
+      examples: [
+        { jp: "今年の夏は去年に比べて涼しい。", en: "This summer is cooler compared to last year." },
+        { jp: "田舎は都会に比べて物価が安い。", en: "Prices are cheaper in the countryside compared to the city." }
+      ]
+    },
+    {
+      id: "18-3",
+      title: "〜ものの",
+      meaning: "Although / Even though",
+      structure: "Verb/Adj (Plain) / Noun (である) + ものの",
+      explanation: "Indicates that although the first part (the premise) is true, the result in the second part is contrary to expectations or is not fully realized.",
+      examples: [
+        { jp: "新しいパソコンを買ったものの、使い方がわからない。", en: "Even though I bought a new PC, I don't know how to use it." },
+        { jp: "日本語の勉強を始めたものの、なかなか上達しない。", en: "Although I started studying Japanese, I'm not making much progress." }
+      ]
+    }
+  ],
+  19: [
+    {
+      id: "19-1",
+      title: "〜として（は）／〜としても／〜としての",
+      meaning: "From the viewpoint of / As for / In the capacity of",
+      structure: "Noun + として（は）／としても／としての + Noun",
+      explanation: "Indicates the standpoint, capacity, or role of someone or something. 'としては' emphasizes the standpoint. 'としても' means 'also as'. 'としての' modifies a following noun.",
+      examples: [
+        { jp: "彼は教師としては素晴らしいが、親としてはどうだろうか。", en: "As a teacher he is wonderful, but I wonder about him as a parent." },
+        { jp: "趣味としても、スポーツは良いものだ。", en: "Even as a hobby, sports are a good thing." },
+        { jp: "社長としての責任を果たす。", en: "I will fulfill my responsibilities as the company president." }
+      ]
+    },
+    {
+      id: "19-2",
+      title: "〜はもちろん／〜はもとより",
+      meaning: "Not to mention ~ / Let alone ~",
+      structure: "Noun + はもちろん（のこと）／はもとより",
+      explanation: "Used to state that the first item is obvious, and then to add another, often more surprising or extreme, item to it. 'はもとより' is more formal.",
+      examples: [
+        { jp: "彼は英語はもちろん、フランス語も話せる。", en: "He can speak French, not to mention English." },
+        { jp: "結果はもとより、その過程も重要だ。", en: "The process is important, let alone the result." }
+      ]
+    },
+    {
+      id: "19-3",
+      title: "〜をめぐって／〜をめぐる",
+      meaning: "Concerning / Over / Regarding (a dispute or discussion)",
+      structure: "Noun + をめぐって / Noun + をめぐる + Noun",
+      explanation: "Used when multiple people are arguing, discussing, or competing 'over' or 'concerning' a central issue. It is used in news or formal contexts.",
+      examples: [
+        { jp: "新しい法律をめぐって、激しい議論が交わされている。", en: "Intense debates are being exchanged over the new law." },
+        { jp: "遺産をめぐる争いが起きた。", en: "A dispute over the inheritance occurred." }
+      ]
+    }
+  ],
+  20: [
+    {
+      id: "20-1",
+      title: "〜を通して／〜を通じて",
+      meaning: "Through / Via / Throughout",
+      structure: "Noun + を通して／を通じて (をとおして / をつうじて)",
+      explanation: "Has two meanings: 1) To do something 'through' an intermediary (a person, experience, medium). 2) A state continuing 'throughout' a period of time.",
+      examples: [
+        { jp: "インターネットを通して、世界中の人と友達になれる。", en: "Through the internet, you can become friends with people all over the world." },
+        { jp: "この地域は一年を通じて暖かい。", en: "This region is warm throughout the year." }
+      ]
+    },
+    {
+      id: "20-2",
+      title: "〜からいうと／〜からいえば／〜からいって",
+      meaning: "Judging from / From the standpoint of",
+      structure: "Noun + からいうと／からいえば／からいって",
+      explanation: "Used to make a judgment or evaluation based on a specific standpoint, symptom, or piece of evidence.",
+      examples: [
+        { jp: "現状からいうと、計画の変更は避けられない。", en: "Judging from the current situation, a change of plans is unavoidable." },
+        { jp: "消費者の立場からいえば、値段は安いほうがいい。", en: "From the standpoint of consumers, cheaper prices are better." }
+      ]
+    },
+    {
+      id: "20-3",
+      title: "〜とともに",
+      meaning: "Together with / Along with / As ~",
+      structure: "Noun / Verb (Dictionary form) + とともに",
+      explanation: "Has two meanings: 1) Doing something 'together with' someone/something else (similar to と一緒に). 2) As one thing changes, another thing changes 'along with' it.",
+      examples: [
+        { jp: "家族とともに、海外へ引っ越すことになった。", en: "I am going to move overseas together with my family." },
+        { jp: "年をとるとともに、体力が落ちてきた。", en: "Along with getting older, my physical strength has declined." }
+      ]
+    }
+  ],
+  21: [
+    {
+      id: "21-1",
+      title: "〜もせずに",
+      meaning: "Without even doing ~",
+      structure: "Verb (ます stem) + もせずに",
+      explanation: "An archaic or formal expression meaning 'not doing something that one would naturally expect to be done.' It emphasizes the lack of an expected action.",
+      examples: [
+        { jp: "父は具合が悪いのに、医者に行きもせずに仕事を続けている。", en: "Even though my father doesn't feel very well, he won't even go to see a doctor but just carries on working." },
+        { jp: "彼は上司の許可を得もせずに、新しいプロジェクトを進めた。", en: "He went ahead with a new project without even getting permission from his boss." }
+      ]
+    },
+    {
+      id: "21-2",
+      title: "〜といえども",
+      meaning: "Even if / However ~",
+      structure: "Noun / Plain form + といえども",
+      explanation: "An archaic/formal expression meaning '〜といっても' or '〜ではあるが'. Used to state that despite a fact or condition, something else holds true.",
+      examples: [
+        { jp: "どんな大金持ちといえども、お金で解決できない悩みがあるはずだ。", en: "However rich one might be, there are bound to be some problems that money can't solve." },
+        { jp: "名医といえども、すべての患者を救うことはできない。", en: "However skillful a doctor might be, she cannot save all her patients." }
+      ]
+    },
+    {
+      id: "21-3",
+      title: "N ＋ に基づいて",
+      meaning: "Based on N",
+      structure: "Noun + に基づいて / に基づいた + Noun",
+      explanation: "Means 'based on ~'. When modifying a noun directly, it takes the form '〜に基づいた'.",
+      examples: [
+        { jp: "この映画は、事実に基づいて作られている。", en: "This film is based on true facts." },
+        { jp: "デパートでは、調査結果に基づいた新しいサービスを導入した。", en: "The department store introduced some new services based on the results of a survey." }
+      ]
+    },
+    {
+      id: "21-4",
+      title: "〜が、一方で",
+      meaning: "But, at the same time / On the other hand",
+      structure: "Plain form + が、一方で",
+      explanation: "Used to introduce a statement that contrasts with a preceding statement.",
+      examples: [
+        { jp: "日本は技術が進んだ国だが、一方で古い伝統文化も大切にしている。", en: "Japan is a technologically-advanced country, but at the same time it cherishes its traditional culture." }
+      ]
+    }
+  ],
+  22: [
+    {
+      id: "22-1",
+      title: "〜次第だ / 〜次第で",
+      meaning: "For that reason / Depending on",
+      structure: "Verb (て-form / た-form) + 次第です",
+      explanation: "When ending with '次第です', it means 'for this reason, I did ~'. It's a formal way to explain circumstances. When used as '次第で', it means 'depending on'.",
+      examples: [
+        { jp: "関係者が情報を共有すべきだと考え、皆様にお知らせした次第です。", en: "We let everyone involved know about it because we believed the information should be shared." },
+        { jp: "私どもだけではどうしようもなく、こうしてお願いに参った次第でございます。", en: "There's no way we can manage it by ourselves, so this is why we have come to ask you for a favor like this." }
+      ]
+    },
+    {
+      id: "22-2",
+      title: "〜をもって…とする",
+      meaning: "Regarded as / On the basis of",
+      structure: "Noun + をもって…とする / とされている",
+      explanation: "Indicates '〜を…と見なす' (is regarded as). This is a highly formal written expression.",
+      examples: [
+        { jp: "出席率、授業中の発表、レポートをもって、評価とします。", en: "Students are evaluated on the basis of attendance rate, presentations during classes, and reports." },
+        { jp: "拍手をもって、賛成をいただいたものといたします。", en: "Based on your applause, I shall take it that I have received your endorsement." }
+      ]
+    },
+    {
+      id: "22-3",
+      title: "〜におきましては",
+      meaning: "As for / In (formal)",
+      structure: "Noun + においては / におきましては",
+      explanation: "An expression that defines the extent of something, and is an even more formal way of saying '〜では'. Often used in formal writing or speeches.",
+      examples: [
+        { jp: "経済成長期の日本においては、収入が2〜3年で倍になることもあった。", en: "In Japan during its rapid economic growth period, some people's incomes doubled within two to three years." },
+        { jp: "小社におきましては、目下『私の死亡記事』というネクロロジー集を編集中です。", en: "At our company, we are currently compiling a collection of obituaries entitled 'My Obituary'." }
+      ]
+    }
+  ],
+  23: [
+    {
+      id: "23-1",
+      title: "〜に及ぶ",
+      meaning: "Extends as far as / Reaches",
+      structure: "Noun + に及ぶ",
+      explanation: "Indicates that what is expressed as the subject of the sentence extends as far as the stated scope, area, or time.",
+      examples: [
+        { jp: "害虫による松の被害は県内全域に及んでおり、回復には時間がかかるだろう。", en: "Insect damage to pine trees extends to all parts of the prefecture, and it will take time to recover." },
+        { jp: "議論は国内問題にとどまらず国際問題にまで及び、実りのあるものとなった。", en: "The discussion was not confined to domestic issues but broadened out to include international ones, making it fruitful." }
+      ]
+    },
+    {
+      id: "23-2",
+      title: "〜可能性がある",
+      meaning: "There is a possibility that ~",
+      structure: "Plain form + 可能性がある",
+      explanation: "Means 'Pが起きる可能性がある' (there is a possibility that P will occur or is true). Used similarly to English.",
+      examples: [
+        { jp: "あの学生は基礎的な学力があるし、努力家だから、これから大きく伸びる可能性がある。", en: "That student has basic academic ability and is a hard worker, so he has the potential to develop greatly in the future." },
+        { jp: "携帯電話は非常に便利だが、場所によってはかからなくなる可能性もある。", en: "Mobiles are very handy, but it is also possible that they will not work in certain locations." }
+      ]
+    },
+    {
+      id: "23-3",
+      title: "この ＋ N",
+      meaning: "This (previously mentioned term)",
+      structure: "この + Noun (言葉、表現、言い方 etc.)",
+      explanation: "When talking about a word or sentence that has just been mentioned, giving it a new appellation, 'この' is used rather than 'その'. It designates something that itself contains information.",
+      examples: [
+        { jp: "「コモンズの悲劇」という有名な言葉がある。この言葉は地球の環境を考える上で重要だ。", en: "There is a famous saying, 'The tragedy of the commons.' This saying is very important when considering the global environment." }
+      ]
+    }
+  ],
+  24: [
+    {
+      id: "24-1",
+      title: "V-ない ＋ ざる N",
+      meaning: "The Un- / Without ~ing",
+      structure: "Verb (ない-form, drop ない) + ざる + Noun",
+      explanation: "An archaic form used when modifying a noun with 'Vない'. Since archaic forms remain only in stock expressions, their use is limited (e.g., 知られざる, 見ざる).",
+      examples: [
+        { jp: "歴史にはまだ知られざる事実があるはずだ。", en: "Many historical facts must still be unknown (facts that are not known)." },
+        { jp: "「見ざる、聞かざる、言わざる」は一つの生き方を示している。", en: "'See nothing, hear nothing, say nothing' points to one way of living one's life." }
+      ]
+    },
+    {
+      id: "24-2",
+      title: "〜から〜に至るまで",
+      meaning: "From ~ all the way to ~",
+      structure: "Noun 1 + から + Noun 2 + に至るまで (にいたるまで)",
+      explanation: "By citing items at either extreme of a group, it indicates that something applies to absolutely everything in that group.",
+      examples: [
+        { jp: "自転車のねじから人工衛星の部品に至るまで、どれもこの工場で作っています。", en: "We make everything in this factory from automobile screws to satellite components." },
+        { jp: "クラシックからJ-popに至るまで、当店ではどんなジャンルの音楽でもご用意しております。", en: "We offer all kinds of music in this shop, from classical to J-pop." }
+      ]
+    },
+    {
+      id: "24-3",
+      title: "V-ます ＋ きる",
+      meaning: "Do ~ completely / To the end",
+      structure: "Verb (ます-stem) + きる",
+      explanation: "Means '完全に〜する' (do completely) or, with motion verbs, '最初から最後まで〜する' (do from beginning to end).",
+      examples: [
+        { jp: "彼はマラソンで42.195kmを走りきった。", en: "He completed (ran the entire distance) 42.195 km in the marathon." },
+        { jp: "山本さんは疲れきった顔で座り込んでいる。", en: "Mr. Yamamoto is slumped in a chair looking completely exhausted." }
+      ]
+    }
+  ]
+};
+
+export default function App() {
+  const [activeLesson, setActiveLesson] = useState(1);
+  const [showTranslations, setShowTranslations] = useState(true);
+
+  const [generatedExamples, setGeneratedExamples] = useState({});
+  const [loadingExamples, setLoadingExamples] = useState({});
+  const [aiExplanations, setAiExplanations] = useState({});
+  const [loadingExplanations, setLoadingExplanations] = useState({});
+
+  const handleGenerateExamples = async (grammar) => {
+    setLoadingExamples(prev => ({ ...prev, [grammar.id]: true }));
+    try {
+      const payload = {
+        contents: [{
+          parts: [{ text: `Generate 2 new, unique Japanese example sentences for the JLPT grammar point: ${grammar.title} (Meaning: ${grammar.meaning}). Structure: ${grammar.structure}. Make them intermediate level. Return them as a JSON array with 'jp' and 'en' properties.` }]
+        }],
+        generationConfig: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: "ARRAY",
+            items: {
+              type: "OBJECT",
+              properties: {
+                "jp": { "type": "STRING" },
+                "en": { "type": "STRING" }
+              },
+              "propertyOrdering": ["jp", "en"]
+            }
+          }
+        }
+      };
+
+      const apiKey = "";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+      if (result.candidates && result.candidates.length > 0) {
+        const jsonText = result.candidates[0].content.parts[0].text;
+        const newExamples = JSON.parse(jsonText);
+        setGeneratedExamples(prev => ({
+          ...prev,
+          [grammar.id]: [...(prev[grammar.id] || []), ...newExamples]
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to generate examples:", error);
+    } finally {
+      setLoadingExamples(prev => ({ ...prev, [grammar.id]: false }));
+    }
+  };
+
+  const handleExplainNuance = async (grammar) => {
+    setLoadingExplanations(prev => ({ ...prev, [grammar.id]: true }));
+    try {
+      const payload = {
+        contents: [{
+          parts: [{ text: `Act as an expert Japanese linguist. Briefly explain the subtle conversational nuances, common mistakes, or typical real-world contexts for the grammar point "${grammar.title}" (${grammar.meaning}). Keep it to one concise, insightful paragraph.` }]
+        }],
+      };
+
+      const apiKey = "";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+      if (result.candidates && result.candidates.length > 0) {
+        const text = result.candidates[0].content.parts[0].text;
+        setAiExplanations(prev => ({
+          ...prev,
+          [grammar.id]: text
+        }));
+      }
+    } catch (error) {
+      console.error("Failed to fetch explanation:", error);
+    } finally {
+      setLoadingExplanations(prev => ({ ...prev, [grammar.id]: false }));
+    }
+  };
+
+  const currentContent = grammarData[activeLesson];
+  const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+
+      {/* Header */}
+      <header className="bg-indigo-600 text-white p-6 shadow-md sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+            <BookOpen size={28} />
+            <h1 className="text-2xl font-bold tracking-wide">
+              Minna no Nihongo <span className="font-light">Grammar (1-24)</span>
+            </h1>
+          </div>
+          <button
+            onClick={() => setShowTranslations(!showTranslations)}
+            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-4 py-2 rounded-full text-sm font-medium border border-indigo-400 shadow-sm"
+          >
+            {showTranslations ? <EyeOff size={18} /> : <Eye size={18} />}
+            {showTranslations ? "Study Mode: Hide English" : "Show English Translations"}
+          </button>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+        {/* Sidebar / Lesson Selection */}
+        <div className="lg:col-span-1">
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden lg:sticky lg:top-24">
+            <div className="p-4 bg-slate-100 border-b border-slate-200 flex items-center gap-2">
+              <LayoutTemplate size={20} className="text-indigo-600" />
+              <h2 className="font-semibold text-slate-700">Lessons (1-24)</h2>
+            </div>
+            <ul className="flex flex-row lg:flex-col p-2 gap-2 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-indigo-200">
+              {totalLessons.map((lesson) => (
+                <li key={lesson} className="min-w-fit">
+                  <button
+                    onClick={() => setActiveLesson(lesson)}
+                    className={`w-full flex items-center justify-between text-left px-4 py-3 rounded-lg transition-all ${activeLesson === lesson
+                        ? 'bg-indigo-600 text-white shadow-md font-medium'
+                        : 'text-slate-600 hover:bg-indigo-50'
+                      }`}
+                  >
+                    <span>Lesson {lesson}</span>
+                    {activeLesson === lesson && <ArrowRight size={16} className="hidden lg:block" />}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Main Content Area */}
+        <div className="lg:col-span-3 space-y-6">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-800 border-b-4 border-indigo-500 pb-2 inline-block">
+                Lesson {activeLesson}
+              </h2>
+              <p className="text-slate-500 mt-2">
+                Grammar structures and explanations.
+              </p>
+            </div>
+            <div className="mt-4 md:mt-0 px-4 py-2 bg-indigo-50 rounded-lg border border-indigo-100 text-indigo-700 font-medium text-sm">
+              {currentContent.length} Grammar Points
+            </div>
+          </div>
+
+          {currentContent.map((item, index) => {
+            return (
+              <div key={item.id} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div className="bg-gradient-to-r from-indigo-50 to-white p-5 border-b border-indigo-100">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-indigo-900">{item.title}</h3>
+                      <p className="text-indigo-600 font-medium mt-1 text-lg flex items-center gap-2">
+                        <CheckCircle size={18} /> {item.meaning}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-5 md:p-7 space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 h-full">
+                      <h4 className="font-semibold text-slate-700 mb-2 flex items-center gap-2">
+                        <Info size={18} className="text-indigo-500" /> Structure
+                      </h4>
+                      <p className="font-mono text-sm md:text-base text-slate-800 bg-white p-2 border border-slate-200 rounded">
+                        {item.structure}
+                      </p>
+                    </div>
+                    <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 h-full">
+                      <h4 className="font-semibold text-slate-700 mb-2 flex items-center gap-2">
+                        <MessageCircle size={18} className="text-indigo-500" /> Explanation
+                      </h4>
+                      <p className="text-sm md:text-base text-slate-700 leading-relaxed">
+                        {item.explanation}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-slate-700 mb-4 border-b border-slate-200 pb-2">
+                      Examples
+                    </h4>
+                    <ul className="space-y-4">
+                      {[...item.examples, ...(generatedExamples[item.id] || [])].map((ex, i) => (
+                        <li key={i} className="flex gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group">
+                          <div className="text-indigo-400 font-bold mt-1">
+                            {i >= item.examples.length ? <Sparkles size={16} className="text-amber-500" /> : `${String.fromCharCode(65 + i)}.`}
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-lg text-slate-900 font-medium tracking-wide">
+                              {ex.jp}
+                            </p>
+                            {showTranslations ? (
+                              <p className="text-slate-600 mt-1">
+                                {ex.en}
+                              </p>
+                            ) : (
+                              <div className="mt-2 h-6 w-full md:w-3/4 bg-slate-200 rounded opacity-50 group-hover:opacity-100 transition-opacity flex items-center px-2 text-xs text-slate-400">
+                                Translation hidden (Hover to toggle mental check)
+                              </div>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-6 flex flex-wrap gap-3 border-t border-slate-200 pt-4">
+                      <button
+                        onClick={() => handleGenerateExamples(item)}
+                        disabled={loadingExamples[item.id]}
+                        className="flex items-center gap-2 px-4 py-2 bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg text-sm font-medium transition-colors border border-amber-200 disabled:opacity-50"
+                      >
+                        {loadingExamples[item.id] ? <Loader2 className="animate-spin" size={16} /> : <Sparkles size={16} />}
+                        {loadingExamples[item.id] ? 'Generating...' : 'AI: More Examples'}
+                      </button>
+
+                      <button
+                        onClick={() => handleExplainNuance(item)}
+                        disabled={loadingExplanations[item.id] || aiExplanations[item.id]}
+                        className="flex items-center gap-2 px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-sm font-medium transition-colors border border-indigo-200 disabled:opacity-50"
+                      >
+                        {loadingExplanations[item.id] ? <Loader2 className="animate-spin" size={16} /> : <Lightbulb size={16} />}
+                        {loadingExplanations[item.id] ? 'Analyzing...' : aiExplanations[item.id] ? 'Nuances Explained' : 'AI: Explain Nuances'}
+                      </button>
+                    </div>
+
+                    {aiExplanations[item.id] && (
+                      <div className="mt-4 bg-gradient-to-r from-indigo-50 to-slate-50 p-5 rounded-lg border border-indigo-100 text-slate-700 text-sm md:text-base leading-relaxed shadow-sm">
+                        <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-800">
+                          <Lightbulb size={18} className="text-amber-500" />
+                          Linguist's Note
+                        </h5>
+                        {aiExplanations[item.id]}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </main>
+    </div>
+  );
+}
