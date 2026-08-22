@@ -1,5 +1,9 @@
 # Nihongo — Japanese Study Portal 🇯🇵
 
+[![Live Site](https://img.shields.io/badge/Live_Site-GitHub_Pages-4f46e5?style=for-the-badge&logo=github)](https://nskurat.github.io/Nihongo/)
+
+🔗 **Live Site**: [https://nskurat.github.io/Nihongo/](https://nskurat.github.io/Nihongo/)
+
 An interactive Japanese study hub for **Minna no Nihongo** (JLPT N3/N4 Level), featuring interactive grammar reference guides, structural formula breakdowns, nuance explanations, and AI-assisted dynamic example generation.
 
 ---
