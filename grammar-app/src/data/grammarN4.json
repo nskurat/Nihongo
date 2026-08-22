@@ -1,0 +1,240 @@
+{
+  "26": [
+    {
+      "id": "26-1",
+      "title": "〜んです / 〜のです",
+      "meaning": "Expressing explanation, curiosity, or emphasis",
+      "structure": "Verb/Adj/Noun (Plain form) + んです (※Na-Adj/Noun: な + んです)",
+      "explanation": "Used to provide background explanation for a situation, give reasons, or ask for explanations with interest. In polite written speech, 'のです' is used.",
+      "examples": [
+        { "jp": "頭が痛いんです。", "en": "The thing is, I have a headache (explaining reason)." },
+        { "jp": "どうして遅れたんですか。", "en": "Why were you late? (Seeking explanation)" }
+      ]
+    },
+    {
+      "id": "26-2",
+      "title": "V-て いただけませんか",
+      "meaning": "Could you please do ~ (Polite request)",
+      "structure": "Verb (て-form) + いただけませんか",
+      "explanation": "A polite way to request someone to do something. More polite than '〜てください' or '〜てくれませんか'.",
+      "examples": [
+        { "jp": "日本語を教えていただけませんか。", "en": "Could you please teach me Japanese?" },
+        { "jp": "写真を撮っていただけませんか。", "en": "Would you mind taking a photo for me?" }
+      ]
+    },
+    {
+      "id": "26-3",
+      "title": "〜たら いいですか",
+      "meaning": "What should I do? / Advice seeking",
+      "structure": "Question word + Verb (たら-form) + いいですか",
+      "explanation": "Used when asking the listener for advice, recommendations, or instructions on what to do.",
+      "examples": [
+        { "jp": "どこで切符を買ったらいいですか。", "en": "Where should I buy tickets?" },
+        { "jp": "誰に相談したらいいですか。", "en": "Who should I consult?" }
+      ]
+    }
+  ],
+  "27": [
+    {
+      "id": "27-1",
+      "title": "可能形 (Potential Form)",
+      "meaning": "Can do / Able to do",
+      "structure": "Group 1: u -> eru | Group 2: ru -> rareru | Group 3: dekiru / korareru",
+      "explanation": "Indicates ability to do something or possibility under circumstances. The object of the potential verb is usually marked with 'が' instead of 'を'.",
+      "examples": [
+        { "jp": "日本語の新聞が読めます。", "en": "I can read Japanese newspapers." },
+        { "jp": "刺身が食べられますか。", "en": "Can you eat sashimi?" }
+      ]
+    },
+    {
+      "id": "27-2",
+      "title": "見えます / 聞こえます vs 見られます / 聞けます",
+      "meaning": "Spontaneous perception vs. intentional ability",
+      "structure": "Noun が 見える / 聞こえる",
+      "explanation": "'見えます/聞こえます' means something enters your eyes/ears naturally without effort. '見られます/聞けます' means you have the ability or opportunity to intentionally view/listen.",
+      "examples": [
+        { "jp": "部屋の窓から富士山が見えます。", "en": "Mt. Fuji can be seen from the room window (spontaneous view)." },
+        { "jp": "忙しくて映画が見られませんでした。", "en": "I was busy so I couldn't watch the movie." }
+      ]
+    },
+    {
+      "id": "27-3",
+      "title": "〜しか〜ない",
+      "meaning": "Only / Nothing other than",
+      "structure": "Noun + しか + Verb (Negative)",
+      "explanation": "Emphasizes that there is nothing other than the stated item, carrying a feeling of insufficiency or limitation. Always used with a negative verb.",
+      "examples": [
+        { "jp": "財布に100円しかありません。", "en": "I have only 100 yen in my wallet." },
+        { "jp": "ひらがなしか書けません。", "en": "I can only write Hiragana." }
+      ]
+    }
+  ],
+  "28": [
+    {
+      "id": "28-1",
+      "title": "V-ながら",
+      "meaning": "While doing ~ (Simultaneous actions)",
+      "structure": "Verb (ます-stem) + ながら + Main Action",
+      "explanation": "Indicates that the subject is performing two actions simultaneously. The second verb represents the main action.",
+      "examples": [
+        { "jp": "音楽を聞きながら勉強します。", "en": "I study while listening to music." },
+        { "jp": "コーヒーを飲みながら話しましょう。", "en": "Let's talk while drinking coffee." }
+      ]
+    },
+    {
+      "id": "28-2",
+      "title": "〜し、〜し",
+      "meaning": "Listing multiple reasons / qualities",
+      "structure": "Plain form + し、Plain form + し",
+      "explanation": "Used to list multiple reasons leading to a conclusion or opinion, or to enumerate qualities of someone or something.",
+      "examples": [
+        { "jp": "この店は安いし、おいしいし、いつも混んでいます。", "en": "This restaurant is cheap and delicious, so it is always crowded." },
+        { "jp": "熱もあるし、頭も痛いので、今日は休みます。", "en": "I have a fever and my head hurts, so I will take a rest today." }
+      ]
+    }
+  ],
+  "29": [
+    {
+      "id": "29-1",
+      "title": "V-て います (Resulting State)",
+      "meaning": "State remaining after an action (Intransitive)",
+      "structure": "Intransitive Verb (て-form) + います",
+      "explanation": "Describes the continuous state that remains after an intransitive action has taken place (e.g., the window is open / broken).",
+      "examples": [
+        { "jp": "ドアが開いています。", "en": "The door is open." },
+        { "jp": "電車に傘を忘れてしまいました。", "en": "I ended up forgetting my umbrella on the train." }
+      ]
+    },
+    {
+      "id": "29-2",
+      "title": "V-て しまいました / しまう",
+      "meaning": "Completed action / Regret, unintentional mistake",
+      "structure": "Verb (て-form) + しまいました",
+      "explanation": "Expresses completion of an action or speaker's regret/sorrow over an unintended or unfortunate event.",
+      "examples": [
+        { "jp": "宿題を全部やってしまいました。", "en": "I finished doing all my homework completely." },
+        { "jp": "パスポートをなくしてしまいました。", "en": "I unfortunately lost my passport." }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "id": "30-1",
+      "title": "V-て あります",
+      "meaning": "State resulting from intentional action (Transitive)",
+      "structure": "Transitive Verb (て-form) + あります",
+      "explanation": "Describes a state that exists as a result of someone intentionally performing an action for a specific purpose.",
+      "examples": [
+        { "jp": "壁にカレンダーが掛けてあります。", "en": "A calendar has been hung on the wall." },
+        { "jp": "机の上にメモが置いてあります。", "en": "A note has been placed on the desk." }
+      ]
+    },
+    {
+      "id": "30-2",
+      "title": "V-て おきます",
+      "meaning": "Doing something in preparation / Leaving as is",
+      "structure": "Verb (て-form) + おきます",
+      "explanation": "Indicates doing an action in advance in preparation for future need, or leaving a situation as it is.",
+      "examples": [
+        { "jp": "旅行の前にホテルを予約しておきます。", "en": "I will book a hotel in advance before the trip." },
+        { "jp": "使った後は片付けておいてください。", "en": "Please put things away in readiness after using them." }
+      ]
+    }
+  ],
+  "31": [
+    {
+      "id": "31-1",
+      "title": "意向形 (Volitional Form) + と思う",
+      "meaning": "I think I will / Planning to do",
+      "structure": "Verb (Volitional Form) + と思っています / と思う",
+      "explanation": "Expresses the speaker's intention or plan. '〜と思っています' indicates a settled intention formed earlier.",
+      "examples": [
+        { "jp": "週末は映画を見ようと思っています。", "en": "I am planning to watch a movie this weekend." },
+        { "jp": "将来、自分の会社を作ろうと思います。", "en": "I intend to start my own company in the future." }
+      ]
+    },
+    {
+      "id": "31-2",
+      "title": "〜予定です",
+      "meaning": "Scheduled to / Plan to",
+      "structure": "Verb (Dictionary form) / Noun の + 予定です",
+      "explanation": "States a fixed schedule or objective arrangement.",
+      "examples": [
+        { "jp": "来週出張する予定です。", "en": "I am scheduled to go on a business trip next week." }
+      ]
+    }
+  ],
+  "32": [
+    {
+      "id": "32-1",
+      "title": "〜ほうが いいです",
+      "meaning": "It is better to / You had better (Advice)",
+      "structure": "Verb (た-form / ない-form) + ほうが いいです",
+      "explanation": "Used to give direct advice or recommendations to someone.",
+      "examples": [
+        { "jp": "早く病院へ行ったほうがいいですよ。", "en": "You had better go to the hospital soon." },
+        { "jp": "無理をしないほうがいいです。", "en": "It's better not to push yourself too hard." }
+      ]
+    },
+    {
+      "id": "32-2",
+      "title": "〜でしょう / 〜かもしれません",
+      "meaning": "Probably / Might, May",
+      "structure": "Plain form + でしょう / かもしれません",
+      "explanation": "'でしょう' expresses probability (~70-80%). 'かもしれません' expresses possibility (~50% or less).",
+      "examples": [
+        { "jp": "明日は雨が降るでしょう。", "en": "It will probably rain tomorrow." },
+        { "jp": "約束の時間に間に合わないかもしれません。", "en": "I might not make it in time for the appointment." }
+      ]
+    }
+  ],
+  "33": [
+    {
+      "id": "33-1",
+      "title": "命令形 / 禁止形 (Imperative / Prohibitive)",
+      "meaning": "Commands and Prohibitions",
+      "structure": "Imperative: Group 1 (e), Group 2 (ro), Group 3 (koi/shiro) | Prohibitive: Dictionary form + な",
+      "explanation": "Used for direct, strong commands or prohibitions (mostly used in traffic signs, emergency instructions, or by males in rough speech).",
+      "examples": [
+        { "jp": "止まれ (Sign)", "en": "Stop." },
+        { "jp": "触るな (Sign)", "en": "Do not touch." }
+      ]
+    }
+  ],
+  "34": [
+    {
+      "id": "34-1",
+      "title": "〜とおりに",
+      "meaning": "In the same way as / Exactly according to",
+      "structure": "Verb (Dictionary/た-form) / Noun の + とおりに",
+      "explanation": "Indicates doing an action following the exact manner or instruction of something else.",
+      "examples": [
+        { "jp": "説明書のとおりに組み立てました。", "en": "I assembled it exactly according to the instruction manual." },
+        { "jp": "私が言うとおりに書いてください。", "en": "Please write exactly as I say." }
+      ]
+    },
+    {
+      "id": "34-2",
+      "title": "〜あとで",
+      "meaning": "After doing ~",
+      "structure": "Verb (た-form) / Noun の + あとで",
+      "explanation": "Expresses temporal succession: doing an action after something has finished.",
+      "examples": [
+        { "jp": "仕事が終わったあとで、飲みに行きましょう。", "en": "After work finishes, let's go for a drink." }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "id": "35-1",
+      "title": "条件形 (Conditional 〜ば)",
+      "meaning": "If / When (Condition)",
+      "structure": "Group 1: u -> eba | Group 2: ru -> reba | Group 3: kureba / sureba | い-Adj: kereba | な-Adj/Noun: なら",
+      "explanation": "Presents a general condition, hypothetical situation, or requirement for a result.",
+      "examples": [
+        { "jp": "ボタンを押せば、切符が出ます。", "en": "If you press the button, the ticket comes out." },
+        { "jp": "安ければ、買いたいです。", "en": "If it's cheap, I want to buy it." }
+      ]
+    }
+  ]
+}
