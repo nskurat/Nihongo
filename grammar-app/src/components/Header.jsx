@@ -1,5 +1,6 @@
 import React from 'react';
-import { BookOpen, BookText, Sparkles, Eye, EyeOff, Key, GraduationCap, Languages } from 'lucide-react';
+import { BookOpen, BookText, Sparkles, Eye, EyeOff, Key, GraduationCap, Languages, Bot } from 'lucide-react';
+import { getActiveProviderId, getProvider, getStoredApiKey } from '../services/ai/registry';
 
 export default function Header({
   activeLevel,
@@ -8,7 +9,6 @@ export default function Header({
   setActiveSection,
   showTranslations,
   setShowTranslations,
-  apiKey,
   onOpenKeyModal,
 }) {
   const levels = [
@@ -21,6 +21,9 @@ export default function Header({
     { id: 'vocab', label: 'Vocabulary', icon: BookText },
     { id: 'kanji', label: 'Kanji', icon: Languages },
   ];
+
+  const provider = getProvider(getActiveProviderId());
+  const hasKey = !provider.requiresKey || !!getStoredApiKey(provider.id);
 
   return (
     <header className="bg-indigo-600 text-white shadow-lg sticky top-0 z-20 transition-all">
@@ -64,15 +67,15 @@ export default function Header({
         <div className="flex items-center gap-2 w-full md:w-auto justify-end">
           <button
             onClick={onOpenKeyModal}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all ${
-              apiKey
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all ${
+              hasKey
                 ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
                 : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 border-amber-400'
             }`}
-            title="Configure Gemini API Key"
+            title="Configure AI Provider & API Keys"
           >
-            <Key size={14} />
-            <span>{apiKey ? 'AI Ready' : 'Set Gemini Key'}</span>
+            <Bot size={14} />
+            <span>{hasKey ? `${provider.name} Ready` : `Set ${provider.name} Key`}</span>
           </button>
 
           <button
