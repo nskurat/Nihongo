@@ -194,15 +194,16 @@ export default function KanjiSection({
                       </div>
                     </div>
                   </div>
-                  {item.url && (
+                  {(item.strokeOrderLink || item.kanji) && (
                     <a
-                      href={item.url}
+                      href={item.strokeOrderLink || `https://jisho.org/search/${encodeURIComponent(item.kanji)}%23kanji`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 text-slate-400 hover:text-amber-600 hover:bg-white rounded-lg transition-colors border border-transparent hover:border-amber-200"
-                      title="View on Jisho.org"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-amber-800 bg-white hover:bg-amber-50 rounded-lg border border-amber-200 transition-all shadow-2xs group/link"
+                      title="View Stroke Order & Dictionary on Jisho.org"
                     >
-                      <ExternalLink size={16} />
+                      <span>Stroke Order</span>
+                      <ExternalLink size={12} className="text-amber-600 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                     </a>
                   )}
                 </div>
