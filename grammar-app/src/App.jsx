@@ -5,15 +5,26 @@ import VocabSection from './components/VocabSection';
 import KanjiSection from './components/KanjiSection';
 import ApiKeyModal from './components/ApiKeyModal';
 
-// JSON Datasets
-import grammarN3 from './data/grammarN3.json';
-import grammarN4 from './data/grammarN4.json';
-import vocabData from './data/vocabData.json';
-import kanjiData from './data/kanjiData.json';
+// JSON Datasets by Level
+import grammarN3 from './data/n3/grammar.json';
+import vocabN3 from './data/n3/vocab.json';
+import kanjiN3 from './data/n3/kanji.json';
 
-const grammarDataByLevel = {
-  N3: grammarN3,
-  N4: grammarN4,
+import grammarN4 from './data/n4/grammar.json';
+import vocabN4 from './data/n4/vocab.json';
+import kanjiN4 from './data/n4/kanji.json';
+
+const studyData = {
+  N3: {
+    grammar: grammarN3,
+    vocab: vocabN3,
+    kanji: kanjiN3,
+  },
+  N4: {
+    grammar: grammarN4,
+    vocab: vocabN4,
+    kanji: kanjiN4,
+  },
 };
 
 export default function App() {
@@ -243,7 +254,7 @@ export default function App() {
     }
   };
 
-  const currentGrammarData = grammarDataByLevel[activeLevel] || {};
+  const currentData = studyData[activeLevel] || {};
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans flex flex-col justify-between">
@@ -263,7 +274,7 @@ export default function App() {
         {/* Dynamic Section View */}
         {activeSection === 'grammar' && (
           <GrammarSection
-            grammarData={currentGrammarData}
+            grammarData={currentData.grammar || {}}
             activeLesson={activeLesson}
             setActiveLesson={setActiveLesson}
             showTranslations={showTranslations}
@@ -279,7 +290,7 @@ export default function App() {
 
         {activeSection === 'vocab' && (
           <VocabSection
-            vocabData={vocabData}
+            vocabData={currentData.vocab || {}}
             activeLesson={activeLesson}
             setActiveLesson={setActiveLesson}
             showTranslations={showTranslations}
@@ -292,7 +303,7 @@ export default function App() {
 
         {activeSection === 'kanji' && (
           <KanjiSection
-            kanjiData={kanjiData}
+            kanjiData={currentData.kanji || []}
             activeLevel={activeLevel}
             showTranslations={showTranslations}
             onGenerateKanjiMnemonic={handleGenerateKanjiMnemonic}

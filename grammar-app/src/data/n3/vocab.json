@@ -1,0 +1,108 @@
+{
+  "1": [
+    {
+      "id": "n3-v-1-1",
+      "word": "合格",
+      "reading": "ごうかく",
+      "romaji": "goukaku",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Passing an exam, qualification, success",
+      "exampleJp": "N3の日本語能力試験に合格しました。",
+      "exampleEn": "I passed the JLPT N3 examination."
+    },
+    {
+      "id": "n3-v-1-2",
+      "word": "徹夜",
+      "reading": "てつや",
+      "romaji": "tetsuya",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Staying up all night, night vigil",
+      "exampleJp": "試験の前日に徹夜して勉強した。",
+      "exampleEn": "I stayed up all night studying the day before the test."
+    },
+    {
+      "id": "n3-v-1-3",
+      "word": "延期",
+      "reading": "えんき",
+      "romaji": "enki",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Postponement, deferment",
+      "exampleJp": "雨のため、試合は来週に延期された。",
+      "exampleEn": "Due to rain, the match was postponed until next week."
+    },
+    {
+      "id": "n3-v-1-4",
+      "word": "習慣",
+      "reading": "しゅうかん",
+      "romaji": "shuukan",
+      "pos": "Noun",
+      "meaning": "Habit, custom, practice",
+      "exampleJp": "毎朝散歩する習慣があります。",
+      "exampleEn": "I have a habit of taking a walk every morning."
+    },
+    {
+      "id": "n3-v-1-5",
+      "word": "確認",
+      "reading": "かくにん",
+      "romaji": "kakunin",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Confirmation, verification",
+      "exampleJp": "飛行機の時間をもう一度確認してください。",
+      "exampleEn": "Please confirm the flight time once again."
+    }
+  ],
+  "2": [
+    {
+      "id": "n3-v-2-1",
+      "word": "協力",
+      "reading": "きょうりょく",
+      "romaji": "kyouryoku",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Cooperation, collaboration",
+      "exampleJp": "皆様のご協力をお願いします。",
+      "exampleEn": "We ask for everyone's kind cooperation."
+    },
+    {
+      "id": "n3-v-2-2",
+      "word": "遠慮",
+      "reading": "えんりょ",
+      "romaji": "enryo",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Reserve, constraint, holding back",
+      "exampleJp": "どうぞ遠慮しないで食べてください。",
+      "exampleEn": "Please eat without holding back (help yourself)."
+    },
+    {
+      "id": "n3-v-2-3",
+      "word": "解決",
+      "reading": "かいけつ",
+      "romaji": "kaiketsu",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Settlement, solution, resolution",
+      "exampleJp": "話し合いによって問題が解決した。",
+      "exampleEn": "The issue was resolved through discussion."
+    }
+  ],
+  "3": [
+    {
+      "id": "n3-v-3-1",
+      "word": "発展",
+      "reading": "はってん",
+      "romaji": "hatten",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Development, expansion, growth",
+      "exampleJp": "この町は急速に発展しています。",
+      "exampleEn": "This town is developing rapidly."
+    },
+    {
+      "id": "n3-v-3-2",
+      "word": "環境",
+      "reading": "かんきょう",
+      "romaji": "kankyou",
+      "pos": "Noun",
+      "meaning": "Environment, surroundings",
+      "exampleJp": "自然環境を守ることが大切です。",
+      "exampleEn": "It is important to protect the natural environment."
+    }
+  ]
+}

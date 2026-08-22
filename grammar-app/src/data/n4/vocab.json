@@ -1,0 +1,78 @@
+{
+  "26": [
+    {
+      "id": "n4-v-26-1",
+      "word": "都合",
+      "reading": "つごう",
+      "romaji": "tsugou",
+      "pos": "Noun",
+      "meaning": "Convenience, circumstances, schedule",
+      "exampleJp": "明日は都合が悪いです。",
+      "exampleEn": "Tomorrow is inconvenient for my schedule."
+    },
+    {
+      "id": "n4-v-26-2",
+      "word": "気分",
+      "reading": "きぶん",
+      "romaji": "kibun",
+      "pos": "Noun",
+      "meaning": "Feeling, mood, physical condition",
+      "exampleJp": "少し気分が悪いです。",
+      "exampleEn": "I feel a bit sick."
+    },
+    {
+      "id": "n4-v-26-3",
+      "word": "案内する",
+      "reading": "あんないする",
+      "romaji": "annaisuru",
+      "pos": "Suru Verb",
+      "meaning": "To guide, show around",
+      "exampleJp": "東京の街をご案内します。",
+      "exampleEn": "I will show you around the city of Tokyo."
+    }
+  ],
+  "27": [
+    {
+      "id": "n4-v-27-1",
+      "word": "修理",
+      "reading": "しゅうり",
+      "romaji": "shuuri",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Repairing, mending, servicing",
+      "exampleJp": "自転車を修理してもらいました。",
+      "exampleEn": "I had my bicycle repaired."
+    },
+    {
+      "id": "n4-v-27-2",
+      "word": "予約",
+      "reading": "よやく",
+      "romaji": "yoyaku",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Reservation, appointment, booking",
+      "exampleJp": "レストランを予約しました。",
+      "exampleEn": "I made a reservation at the restaurant."
+    }
+  ],
+  "28": [
+    {
+      "id": "n4-v-28-1",
+      "word": "経験",
+      "reading": "けいけん",
+      "romaji": "keiken",
+      "pos": "Noun, Suru Verb",
+      "meaning": "Experience",
+      "exampleJp": "日本で色々な経験をしました。",
+      "exampleEn": "I had various experiences in Japan."
+    },
+    {
+      "id": "n4-v-28-2",
+      "word": "熱心",
+      "reading": "ねっしん",
+      "romaji": "nesshin",
+      "pos": "Na-Adjective",
+      "meaning": "Enthusiastic, eager, earnest",
+      "exampleJp": "彼はとても熱心に勉強しています。",
+      "exampleEn": "He is studying very enthusiastically."
+    }
+  ]
+}

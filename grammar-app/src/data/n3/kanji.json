@@ -1,0 +1,107 @@
+[
+  {
+    "id": "n3-k-1",
+    "kanji": "漢",
+    "onyomi": ["カン"],
+    "kunyomi": [],
+    "meaning": "China, Sino-, Han",
+    "strokes": 13,
+    "radical": "氵 (water)",
+    "compounds": [
+      { "word": "漢字", "reading": "かんじ", "meaning": "Chinese character / Kanji" },
+      { "word": "漢方薬", "reading": "かんぽうやく", "meaning": "Chinese herbal medicine" }
+    ]
+  },
+  {
+    "id": "n3-k-2",
+    "kanji": "字",
+    "onyomi": ["ジ"],
+    "kunyomi": ["あざ", "あざな"],
+    "meaning": "Character, letter, word",
+    "strokes": 6,
+    "radical": "子 (child)",
+    "compounds": [
+      { "word": "文字", "reading": "もじ", "meaning": "Letter, character, writing" },
+      { "word": "数字", "reading": "すうじ", "meaning": "Number, figure, numeral" }
+    ]
+  },
+  {
+    "id": "n3-k-3",
+    "kanji": "練",
+    "onyomi": ["レン"],
+    "kunyomi": ["ね・る"],
+    "meaning": "Practice, train, drill, polish",
+    "strokes": 14,
+    "radical": "糸 (silk)",
+    "compounds": [
+      { "word": "練習", "reading": "れんしゅう", "meaning": "Practice, training" },
+      { "word": "訓練", "reading": "くんれん", "meaning": "Discipline, drill, training" }
+    ]
+  },
+  {
+    "id": "n3-k-4",
+    "kanji": "習",
+    "onyomi": ["シュウ"],
+    "kunyomi": ["なら・う"],
+    "meaning": "Learn, study, custom",
+    "strokes": 11,
+    "radical": "羽 (feather)",
+    "compounds": [
+      { "word": "予習", "reading": "よしゅう", "meaning": "Preparation (for lessons)" },
+      { "word": "復習", "reading": "ふくしゅう", "meaning": "Review, revision" },
+      { "word": "習慣", "reading": "しゅうかん", "meaning": "Custom, habit" }
+    ]
+  },
+  {
+    "id": "n3-k-5",
+    "kanji": "勉",
+    "onyomi": ["ベン"],
+    "kunyomi": ["つと・める"],
+    "meaning": "Exertion, endeavor, encourage",
+    "strokes": 10,
+    "radical": "力 (power)",
+    "compounds": [
+      { "word": "勉強", "reading": "べんきょう", "meaning": "Study, diligence" },
+      { "word": "勤勉", "reading": "きんべん", "meaning": "Diligent, industrious" }
+    ]
+  },
+  {
+    "id": "n3-k-6",
+    "kanji": "強",
+    "onyomi": ["キョウ", "ゴウ"],
+    "kunyomi": ["つよ・い", "つよ・まる", "し・いる"],
+    "meaning": "Strong, powerful, force",
+    "strokes": 11,
+    "radical": "弓 (bow)",
+    "compounds": [
+      { "word": "強力", "reading": "きょうりょく", "meaning": "Powerful, strong" },
+      { "word": "強調", "reading": "きょうちょう", "meaning": "Emphasis, stress" }
+    ]
+  },
+  {
+    "id": "n3-k-7",
+    "kanji": "情",
+    "onyomi": ["ジョウ", "セイ"],
+    "kunyomi": ["なさ・け"],
+    "meaning": "Feelings, emotion, circumstances, information",
+    "strokes": 11,
+    "radical": "忄 (heart)",
+    "compounds": [
+      { "word": "情報", "reading": "じょうほう", "meaning": "Information, news" },
+      { "word": "感情", "reading": "かんじょう", "meaning": "Emotion, feelings" }
+    ]
+  },
+  {
+    "id": "n3-k-8",
+    "kanji": "報",
+    "onyomi": ["ホウ"],
+    "kunyomi": ["むく・いる"],
+    "meaning": "Report, news, reward, tell",
+    "strokes": 12,
+    "radical": "土 (earth)",
+    "compounds": [
+      { "word": "報告", "reading": "ほうこく", "meaning": "Report, briefing" },
+      { "word": "予報", "reading": "よほう", "meaning": "Forecast, prediction" }
+    ]
+  }
+]

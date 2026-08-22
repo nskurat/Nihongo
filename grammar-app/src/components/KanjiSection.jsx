@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, Sparkles, Loader2, Info, Layers, Hash } from 'lucide-react';
 
 export default function KanjiSection({
-  kanjiData,
+  kanjiData = [],
   activeLevel,
   showTranslations,
   onGenerateKanjiMnemonic,
@@ -12,7 +12,7 @@ export default function KanjiSection({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStroke, setSelectedStroke] = useState('all');
 
-  const kanjiList = kanjiData[activeLevel] || [];
+  const kanjiList = kanjiData || [];
 
   // Stroke count options from active data
   const strokeOptions = Array.from(new Set(kanjiList.map((k) => k.strokes))).sort((a, b) => a - b);

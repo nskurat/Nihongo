@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BookText, ArrowRight, Sparkles, Loader2, Search, Info, Volume2, Tag, Bookmark } from 'lucide-react';
 
 export default function VocabSection({
-  vocabData,
+  vocabData = {},
   activeLesson,
   setActiveLesson,
   showTranslations,
@@ -14,9 +14,8 @@ export default function VocabSection({
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState('cards'); // 'cards' | 'table'
 
-  const levelVocab = vocabData[activeLevel] || {};
-  const totalLessons = Object.keys(levelVocab).map(Number).sort((a, b) => a - b);
-  const currentVocabList = levelVocab[activeLesson] || [];
+  const totalLessons = Object.keys(vocabData).map(Number).sort((a, b) => a - b);
+  const currentVocabList = vocabData[activeLesson] || [];
 
   // Filter vocabulary by search query
   const filteredVocab = searchQuery.trim()
