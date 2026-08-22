@@ -1028,41 +1028,28 @@ export default function App() {
       throw new Error('MISSING_KEY');
     }
 
-    // Try primary model (gemini-3.6-flash) and fallbacks
-    const models = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
-    let lastErr = null;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`;
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
 
-    for (const model of models) {
-      try {
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        const result = await response.json();
-        if (response.ok && result.candidates && result.candidates.length > 0) {
-          return result;
-        }
-
-        if (result.error) {
-          lastErr = new Error(result.error.message || `API Error: ${response.status}`);
-          if (result.error.status === 'INVALID_ARGUMENT' || result.error.message?.includes('API key')) {
-            // Key is invalid
-            setShowKeyModal(true);
-            setApiError('Invalid Gemini API Key. Please check your key.');
-            throw lastErr;
-          }
-        }
-      } catch (err) {
-        lastErr = err;
-        if (err.message === 'MISSING_KEY' || err.message?.includes('Invalid Gemini API Key')) {
-          throw err;
-        }
-      }
+    const result = await response.json();
+    if (response.ok && result.candidates && result.candidates.length > 0) {
+      setApiError('');
+      return result;
     }
-    throw lastErr || new Error('Failed to reach Gemini API.');
+
+    if (result.error) {
+      const msg = result.error.message || `API Error: ${response.status}`;
+      setApiError(msg);
+      if (result.error.status === 'INVALID_ARGUMENT' || msg.toLowerCase().includes('api key')) {
+        setShowKeyModal(true);
+      }
+      throw new Error(msg);
+    }
+    throw new Error('Failed to fetch from Gemini API.');
   };
 
   const handleGenerateExamples = async (grammar) => {
