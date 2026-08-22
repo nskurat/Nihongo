@@ -1028,7 +1028,7 @@ export default function App() {
       throw new Error('MISSING_KEY');
     }
 
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${key}`;
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1140,11 +1140,10 @@ export default function App() {
                 setTempKeyInput(apiKey);
                 setShowKeyModal(true);
               }}
-              className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs font-medium border shadow-sm transition-colors ${
-                apiKey
+              className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs font-medium border shadow-sm transition-colors ${apiKey
                   ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
                   : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 border-amber-400'
-              }`}
+                }`}
               title="Configure Gemini API Key"
             >
               <Key size={16} />
@@ -1237,8 +1236,8 @@ export default function App() {
                   <button
                     onClick={() => setActiveLesson(lesson)}
                     className={`w-full flex items-center justify-between text-left px-4 py-3 rounded-lg transition-all ${activeLesson === lesson
-                        ? 'bg-indigo-600 text-white shadow-md font-medium'
-                        : 'text-slate-600 hover:bg-indigo-50'
+                      ? 'bg-indigo-600 text-white shadow-md font-medium'
+                      : 'text-slate-600 hover:bg-indigo-50'
                       }`}
                   >
                     <span>Lesson {lesson}</span>
