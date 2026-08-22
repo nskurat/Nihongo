@@ -32,6 +32,7 @@ jobs:
       - name: Build site
         run: |
           npm ci
+          npm ci --prefix grammar-app
           npm run build
 
       - name: Setup Pages
