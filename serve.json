@@ -1,0 +1,12 @@
+{
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/grammar", "destination": "/grammar/index.html" },
+    { "source": "/grammar/**", "destination": "/grammar/index.html" },
+    { "source": "/vocab", "destination": "/vocab/index.html" },
+    { "source": "/vocab/**", "destination": "/vocab/index.html" },
+    { "source": "/kanji", "destination": "/kanji/index.html" },
+    { "source": "/kanji/**", "destination": "/kanji/index.html" }
+  ]
+}

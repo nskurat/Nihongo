@@ -1,81 +1,87 @@
-[
-  {
-    "id": "n4-k-1",
-    "kanji": "会",
-    "onyomi": ["カイ", "エ"],
-    "kunyomi": ["あ・う"],
-    "meaning": "Meeting, assemble, meet",
-    "strokes": 6,
-    "radical": "人 (human)",
-    "compounds": [
-      { "word": "会社", "reading": "かいしゃ", "meaning": "Company" },
-      { "word": "会話", "reading": "かいわ", "meaning": "Conversation" }
-    ]
-  },
-  {
-    "id": "n4-k-2",
-    "kanji": "社",
-    "onyomi": ["シャ"],
-    "kunyomi": ["やしろ"],
-    "meaning": "Company, firm, shrine, society",
-    "strokes": 7,
-    "radical": "礻 (altar)",
-    "compounds": [
-      { "word": "社会", "reading": "しゃかい", "meaning": "Society, public" },
-      { "word": "社長", "reading": "しゃちょう", "meaning": "Company president" }
-    ]
-  },
-  {
-    "id": "n4-k-3",
-    "kanji": "電",
-    "onyomi": ["デン"],
-    "kunyomi": [],
-    "meaning": "Electricity, electric powered",
-    "strokes": 13,
-    "radical": "雨 (rain)",
-    "compounds": [
-      { "word": "電車", "reading": "でんしゃ", "meaning": "Train" },
-      { "word": "電話", "reading": "でんわ", "meaning": "Telephone" },
-      { "word": "電気", "reading": "でんき", "meaning": "Electricity / Light" }
-    ]
-  },
-  {
-    "id": "n4-k-4",
-    "kanji": "車",
-    "onyomi": ["シャ"],
-    "kunyomi": ["くるま"],
-    "meaning": "Car, automobile, vehicle, wheel",
-    "strokes": 7,
-    "radical": "車 (cart)",
-    "compounds": [
-      { "word": "自動車", "reading": "じどうしゃ", "meaning": "Automobile, car" },
-      { "word": "自転車", "reading": "じてんしゃ", "meaning": "Bicycle" }
-    ]
-  },
-  {
-    "id": "n4-k-5",
-    "kanji": "病",
-    "onyomi": ["ビョウ", "ヘイ"],
-    "kunyomi": ["や・む", "やまい"],
-    "meaning": "Ill, sick, disease",
-    "strokes": 10,
-    "radical": "疒 (sickness)",
-    "compounds": [
-      { "word": "病院", "reading": "びょういん", "meaning": "Hospital" },
-      { "word": "病気", "reading": "びょうき", "meaning": "Illness, sickness" }
-    ]
-  },
-  {
-    "id": "n4-k-6",
-    "kanji": "院",
-    "onyomi": ["イン"],
-    "kunyomi": [],
-    "meaning": "Institution, temple, mansion, school",
-    "strokes": 10,
-    "radical": "阝 (mound)",
-    "compounds": [
-      { "word": "大学院", "reading": "だいがくいん", "meaning": "Graduate school" },
-      { "word": "入院", "reading": "にゅういん", "meaning": "Hospitalization" }
-    ]
-  }
-]
+{
+  "26": [
+    {
+      "id": "n4-k-1",
+      "kanji": "会",
+      "onyomi": ["カイ", "エ"],
+      "kunyomi": ["あ・う"],
+      "meaning": "Meeting, assemble, meet",
+      "strokes": 6,
+      "radical": "人 (human)",
+      "compounds": [
+        { "word": "会社", "reading": "かいしゃ", "meaning": "Company" },
+        { "word": "会話", "reading": "かいわ", "meaning": "Conversation" }
+      ]
+    },
+    {
+      "id": "n4-k-2",
+      "kanji": "社",
+      "onyomi": ["シャ"],
+      "kunyomi": ["やしろ"],
+      "meaning": "Company, firm, shrine, society",
+      "strokes": 7,
+      "radical": "礻 (altar)",
+      "compounds": [
+        { "word": "社会", "reading": "しゃかい", "meaning": "Society, public" },
+        { "word": "社長", "reading": "しゃちょう", "meaning": "Company president" }
+      ]
+    }
+  ],
+  "27": [
+    {
+      "id": "n4-k-3",
+      "kanji": "電",
+      "onyomi": ["デン"],
+      "kunyomi": [],
+      "meaning": "Electricity, electric powered",
+      "strokes": 13,
+      "radical": "雨 (rain)",
+      "compounds": [
+        { "word": "電車", "reading": "でんしゃ", "meaning": "Train" },
+        { "word": "電話", "reading": "でんわ", "meaning": "Telephone" },
+        { "word": "電気", "reading": "でんき", "meaning": "Electricity / Light" }
+      ]
+    },
+    {
+      "id": "n4-k-4",
+      "kanji": "車",
+      "onyomi": ["シャ"],
+      "kunyomi": ["くるま"],
+      "meaning": "Car, automobile, vehicle, wheel",
+      "strokes": 7,
+      "radical": "車 (cart)",
+      "compounds": [
+        { "word": "自動車", "reading": "じどうしゃ", "meaning": "Automobile, car" },
+        { "word": "自転車", "reading": "じてんしゃ", "meaning": "Bicycle" }
+      ]
+    }
+  ],
+  "28": [
+    {
+      "id": "n4-k-5",
+      "kanji": "病",
+      "onyomi": ["ビョウ", "ヘイ"],
+      "kunyomi": ["や・む", "やまい"],
+      "meaning": "Ill, sick, disease",
+      "strokes": 10,
+      "radical": "疒 (sickness)",
+      "compounds": [
+        { "word": "病院", "reading": "びょういん", "meaning": "Hospital" },
+        { "word": "病気", "reading": "びょうき", "meaning": "Illness, sickness" }
+      ]
+    },
+    {
+      "id": "n4-k-6",
+      "kanji": "院",
+      "onyomi": ["イン"],
+      "kunyomi": [],
+      "meaning": "Institution, temple, mansion, school",
+      "strokes": 10,
+      "radical": "阝 (mound)",
+      "compounds": [
+        { "word": "大学院", "reading": "だいがくいん", "meaning": "Graduate school" },
+        { "word": "入院", "reading": "にゅういん", "meaning": "Hospitalization" }
+      ]
+    }
+  ]
+}

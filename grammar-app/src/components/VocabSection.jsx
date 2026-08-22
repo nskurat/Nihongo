@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BookText, ArrowRight, Sparkles, Loader2, Search, Info, Volume2, Tag, Bookmark } from 'lucide-react';
 
 export default function VocabSection({
@@ -15,6 +15,14 @@ export default function VocabSection({
   const [viewMode, setViewMode] = useState('cards'); // 'cards' | 'table'
 
   const totalLessons = Object.keys(vocabData).map(Number).sort((a, b) => a - b);
+
+  // If current active lesson has no vocabulary for this level, select first available
+  useEffect(() => {
+    if (totalLessons.length > 0 && !vocabData[activeLesson]) {
+      setActiveLesson(totalLessons[0]);
+    }
+  }, [vocabData, activeLesson, totalLessons.length, setActiveLesson]);
+
   const currentVocabList = vocabData[activeLesson] || [];
 
   // Filter vocabulary by search query
@@ -48,7 +56,7 @@ export default function VocabSection({
           <ul className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-indigo-200">
             {totalLessons.length > 0 ? (
               totalLessons.map((lesson) => {
-                const count = (levelVocab[lesson] || []).length;
+                const count = (vocabData[lesson] || []).length;
                 return (
                   <li key={lesson} className="min-w-fit">
                     <button

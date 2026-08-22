@@ -27,21 +27,64 @@ const studyData = {
   },
 };
 
+// Helper to parse URL path/params/hash on load
+const getInitialState = () => {
+  try {
+    const pathname = window.location.pathname.toLowerCase();
+    const params = new URLSearchParams(window.location.search);
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+
+    let level = params.get('level')?.toUpperCase();
+    if (level !== 'N3' && level !== 'N4') level = 'N3';
+
+    let section = 'grammar';
+    if (pathname.includes('/vocab') || params.get('section') === 'vocab' || hash === 'vocab') {
+      section = 'vocab';
+    } else if (pathname.includes('/kanji') || params.get('section') === 'kanji' || hash === 'kanji') {
+      section = 'kanji';
+    } else if (pathname.includes('/grammar') || params.get('section') === 'grammar' || hash === 'grammar') {
+      section = 'grammar';
+    }
+
+    let lesson = parseInt(params.get('lesson'), 10);
+    if (isNaN(lesson)) lesson = level === 'N4' ? 26 : 1;
+
+    return { level, section, lesson };
+  } catch {
+    return { level: 'N3', section: 'grammar', lesson: 1 };
+  }
+};
+
 export default function App() {
+  const initial = getInitialState();
+
   // Navigation & Level State
-  const [activeLevel, setActiveLevel] = useState('N3'); // 'N3' | 'N4'
-  const [activeSection, setActiveSection] = useState('grammar'); // 'grammar' | 'vocab' | 'kanji'
-  const [activeLesson, setActiveLesson] = useState(1);
+  const [activeLevel, setActiveLevel] = useState(initial.level); // 'N3' | 'N4'
+  const [activeSection, setActiveSection] = useState(initial.section); // 'grammar' | 'vocab' | 'kanji'
+  const [activeLesson, setActiveLesson] = useState(initial.lesson);
   const [showTranslations, setShowTranslations] = useState(true);
 
   // Synchronize active lesson when level changes
   useEffect(() => {
-    if (activeLevel === 'N4') {
+    if (activeLevel === 'N4' && activeLesson < 26) {
       setActiveLesson(26);
-    } else {
+    } else if (activeLevel === 'N3' && activeLesson > 24) {
       setActiveLesson(1);
     }
   }, [activeLevel]);
+
+  // Sync state to URL params for clean bookmarking & sharing
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('level', activeLevel);
+      url.searchParams.set('section', activeSection);
+      url.searchParams.set('lesson', activeLesson);
+      window.history.replaceState(null, '', url.toString());
+    } catch (e) {
+      // Ignore if in restricted environment
+    }
+  }, [activeLevel, activeSection, activeLesson]);
 
   // AI & Generation States
   const [generatedExamples, setGeneratedExamples] = useState({});
@@ -303,7 +346,9 @@ export default function App() {
 
         {activeSection === 'kanji' && (
           <KanjiSection
-            kanjiData={currentData.kanji || []}
+            kanjiData={currentData.kanji || {}}
+            activeLesson={activeLesson}
+            setActiveLesson={setActiveLesson}
             activeLevel={activeLevel}
             showTranslations={showTranslations}
             onGenerateKanjiMnemonic={handleGenerateKanjiMnemonic}
