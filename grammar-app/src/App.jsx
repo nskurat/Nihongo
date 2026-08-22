@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, CheckCircle, Info, MessageCircle, Eye, EyeOff, LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2 } from 'lucide-react';
+import { BookOpen, CheckCircle, Info, MessageCircle, Eye, EyeOff, LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, Key, X, Settings } from 'lucide-react';
 
 // Comprehensive Data for Minna No Nihongo Intermediate I
 const grammarData = {
@@ -997,6 +997,74 @@ export default function App() {
   const [aiExplanations, setAiExplanations] = useState({});
   const [loadingExplanations, setLoadingExplanations] = useState({});
 
+  const [apiKey, setApiKey] = useState(() => {
+    return localStorage.getItem('gemini_api_key') || (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) || '';
+  });
+  const [showKeyModal, setShowKeyModal] = useState(false);
+  const [tempKeyInput, setTempKeyInput] = useState('');
+  const [apiError, setApiError] = useState('');
+
+  const saveApiKey = (key) => {
+    const trimmed = key.trim();
+    setApiKey(trimmed);
+    if (trimmed) {
+      localStorage.setItem('gemini_api_key', trimmed);
+    } else {
+      localStorage.removeItem('gemini_api_key');
+    }
+    setShowKeyModal(false);
+    setApiError('');
+  };
+
+  const getEffectiveApiKey = () => {
+    return apiKey || localStorage.getItem('gemini_api_key') || (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) || '';
+  };
+
+  const callGeminiApi = async (payload) => {
+    const key = getEffectiveApiKey();
+    if (!key) {
+      setTempKeyInput('');
+      setShowKeyModal(true);
+      throw new Error('MISSING_KEY');
+    }
+
+    // Try primary model (gemini-2.5-flash) and fallback to gemini-1.5-flash
+    const models = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    let lastErr = null;
+
+    for (const model of models) {
+      try {
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+        if (response.ok && result.candidates && result.candidates.length > 0) {
+          return result;
+        }
+
+        if (result.error) {
+          lastErr = new Error(result.error.message || `API Error: ${response.status}`);
+          if (result.error.status === 'INVALID_ARGUMENT' || result.error.message?.includes('API key')) {
+            // Key is invalid
+            setShowKeyModal(true);
+            setApiError('Invalid Gemini API Key. Please check your key.');
+            throw lastErr;
+          }
+        }
+      } catch (err) {
+        lastErr = err;
+        if (err.message === 'MISSING_KEY' || err.message?.includes('Invalid Gemini API Key')) {
+          throw err;
+        }
+      }
+    }
+    throw lastErr || new Error('Failed to reach Gemini API.');
+  };
+
   const handleGenerateExamples = async (grammar) => {
     setLoadingExamples(prev => ({ ...prev, [grammar.id]: true }));
     try {
@@ -1020,16 +1088,7 @@ export default function App() {
         }
       };
 
-      const apiKey = "";
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const result = await response.json();
+      const result = await callGeminiApi(payload);
       if (result.candidates && result.candidates.length > 0) {
         const jsonText = result.candidates[0].content.parts[0].text;
         const newExamples = JSON.parse(jsonText);
@@ -1039,7 +1098,9 @@ export default function App() {
         }));
       }
     } catch (error) {
-      console.error("Failed to generate examples:", error);
+      if (error.message !== 'MISSING_KEY') {
+        console.error("Failed to generate examples:", error);
+      }
     } finally {
       setLoadingExamples(prev => ({ ...prev, [grammar.id]: false }));
     }
@@ -1054,16 +1115,7 @@ export default function App() {
         }],
       };
 
-      const apiKey = "";
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const result = await response.json();
+      const result = await callGeminiApi(payload);
       if (result.candidates && result.candidates.length > 0) {
         const text = result.candidates[0].content.parts[0].text;
         setAiExplanations(prev => ({
@@ -1072,7 +1124,9 @@ export default function App() {
         }));
       }
     } catch (error) {
-      console.error("Failed to fetch explanation:", error);
+      if (error.message !== 'MISSING_KEY') {
+        console.error("Failed to fetch explanation:", error);
+      }
     } finally {
       setLoadingExplanations(prev => ({ ...prev, [grammar.id]: false }));
     }
@@ -1093,15 +1147,93 @@ export default function App() {
               Minna no Nihongo <span className="font-light">Grammar (1-24)</span>
             </h1>
           </div>
-          <button
-            onClick={() => setShowTranslations(!showTranslations)}
-            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-4 py-2 rounded-full text-sm font-medium border border-indigo-400 shadow-sm"
-          >
-            {showTranslations ? <EyeOff size={18} /> : <Eye size={18} />}
-            {showTranslations ? "Study Mode: Hide English" : "Show English Translations"}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => {
+                setTempKeyInput(apiKey);
+                setShowKeyModal(true);
+              }}
+              className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs font-medium border shadow-sm transition-colors ${
+                apiKey
+                  ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
+                  : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 border-amber-400'
+              }`}
+              title="Configure Gemini API Key"
+            >
+              <Key size={16} />
+              <span>{apiKey ? 'AI Ready' : 'Set Gemini Key'}</span>
+            </button>
+            <button
+              onClick={() => setShowTranslations(!showTranslations)}
+              className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-4 py-2 rounded-full text-sm font-medium border border-indigo-400 shadow-sm"
+            >
+              {showTranslations ? <EyeOff size={18} /> : <Eye size={18} />}
+              {showTranslations ? "Hide English" : "Show English"}
+            </button>
+          </div>
         </div>
       </header>
+
+      {/* API Key Modal */}
+      {showKeyModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 border border-slate-200">
+            <div className="flex justify-between items-center mb-4 border-b pb-3">
+              <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2">
+                <Key className="text-indigo-600" size={20} />
+                Gemini API Key
+              </h3>
+              <button
+                onClick={() => setShowKeyModal(false)}
+                className="text-slate-400 hover:text-slate-600 transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+              To enable dynamic AI example generation and nuance explanations on GitHub Pages, please provide your free Google Gemini API Key.
+            </p>
+            {apiError && (
+              <div className="mb-4 p-3 bg-red-50 text-red-700 text-xs rounded-lg border border-red-200">
+                {apiError}
+              </div>
+            )}
+            <input
+              type="password"
+              placeholder="AIzaSy..."
+              value={tempKeyInput}
+              onChange={(e) => setTempKeyInput(e.target.value)}
+              className="w-full p-3 border border-slate-300 rounded-lg text-sm mb-4 focus:ring-2 focus:ring-indigo-500 focus:outline-none font-mono"
+            />
+            <div className="flex justify-between items-center">
+              <a
+                href="https://aistudio.google.com/app/apikey"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs text-indigo-600 hover:underline font-medium"
+              >
+                Get a free key at Google AI Studio &rarr;
+              </a>
+              <div className="flex gap-2">
+                {apiKey && (
+                  <button
+                    onClick={() => saveApiKey('')}
+                    className="px-3 py-2 text-xs font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                  >
+                    Clear
+                  </button>
+                )}
+                <button
+                  onClick={() => saveApiKey(tempKeyInput)}
+                  className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors shadow-sm"
+                >
+                  Save Key
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
 
