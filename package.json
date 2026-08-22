@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/ && npm run build --prefix grammar-app",
+    "serve": "npx serve dist"
+  },
   "devDependencies": {
     "autoprefixer": "^10.5.4",
     "postcss": "^8.5.26",

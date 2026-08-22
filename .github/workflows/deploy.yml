@@ -29,9 +29,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build grammar-app
+      - name: Build site
         run: |
-          cd grammar-app
           npm ci
           npm run build
 
@@ -41,7 +40,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'dist'
 
       - name: Deploy to GitHub Pages
         id: deployment

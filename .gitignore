@@ -18,7 +18,6 @@ dist-ssr/
 build/
 out/
 _site/
-grammar/
 
 # Local env files
 .env

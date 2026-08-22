@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   base: './',
   build: {
-    outDir: '../grammar',
+    outDir: '../dist/grammar',
     emptyOutDir: true,
   },
 })
