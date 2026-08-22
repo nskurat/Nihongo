@@ -1028,8 +1028,8 @@ export default function App() {
       throw new Error('MISSING_KEY');
     }
 
-    // Try primary model (gemini-2.5-flash) and fallback to gemini-1.5-flash
-    const models = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    // Try primary model (gemini-3.6-flash) and fallbacks
+    const models = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
     let lastErr = null;
 
     for (const model of models) {
