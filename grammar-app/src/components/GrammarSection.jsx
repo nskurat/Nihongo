@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { LayoutTemplate, ArrowRight, CheckCircle, Info, MessageCircle, Sparkles, Lightbulb, Loader2, Search } from 'lucide-react';
+import { LayoutTemplate, ArrowRight, CheckCircle, Info, MessageCircle, Sparkles, Lightbulb, Loader2, Search, Table2, BookOpen } from 'lucide-react';
+import GrammarDetailModal from './GrammarDetailModal';
 
 export default function GrammarSection({
   grammarData,
@@ -15,6 +16,7 @@ export default function GrammarSection({
   activeLevel,
 }) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDetailItem, setSelectedDetailItem] = useState(null);
 
   const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
   const currentContent = grammarData[activeLesson] || [];
@@ -82,37 +84,37 @@ export default function GrammarSection({
 
       {/* Main Content Area */}
       <div className="lg:col-span-3 space-y-6">
-        {/* Lesson Banner */}
+        {/* Banner */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 text-xs font-bold rounded-md uppercase tracking-wide">
-                {activeLevel} Grammar
+                {activeLevel} Level
               </span>
-              <span className="text-xs text-slate-400">• Minna no Nihongo</span>
+              <span className="text-xs text-slate-400">• Minna no Nihongo Reference</span>
             </div>
             <h2 className="text-3xl font-extrabold text-slate-800 border-b-4 border-indigo-500 pb-1 inline-block mt-2">
               Lesson {activeLesson}
             </h2>
             <p className="text-slate-500 text-sm mt-1">
-              Grammar structures, explanations, and usage guidelines.
+              Explore grammar patterns, conjugation formulas, nuances, and AI-powered examples.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
-            {/* Search filter within lesson */}
+            {/* Search input */}
             <div className="relative">
               <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search grammar..."
+                placeholder="Search grammar, title, formula..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-48"
+                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-56"
               />
             </div>
             <div className="px-3.5 py-1.5 bg-indigo-50 rounded-lg border border-indigo-100 text-indigo-700 font-semibold text-xs text-center whitespace-nowrap">
-              {currentContent.length} Grammar Points
+              {currentContent.length} Patterns
             </div>
           </div>
         </div>
@@ -121,11 +123,11 @@ export default function GrammarSection({
         {filteredContent.length === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
             <Info size={36} className="mx-auto text-slate-400" />
-            <h4 className="text-lg font-bold text-slate-700">No grammar points found</h4>
+            <h4 className="text-lg font-bold text-slate-700">No grammar patterns found</h4>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
               {searchQuery
-                ? `No grammar matches "${searchQuery}" in Lesson ${activeLesson}. Try searching another keyword.`
-                : `Content for Lesson ${activeLesson} is being prepared. You can browse other lessons in the sidebar.`}
+                ? `No results match your search "${searchQuery}" in Lesson ${activeLesson}.`
+                : `Grammar patterns for Lesson ${activeLesson} are currently being prepared.`}
             </p>
           </div>
         )}
@@ -137,7 +139,7 @@ export default function GrammarSection({
             className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-slate-300"
           >
             {/* Card Header */}
-            <div className="bg-gradient-to-r from-indigo-50/80 via-white to-slate-50 p-5 border-b border-indigo-100">
+            <div className="bg-gradient-to-r from-indigo-50/80 via-white to-slate-50 p-5 border-b border-indigo-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="flex items-start gap-3">
                 <div className="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-0.5 shadow-sm text-sm">
                   {index + 1}
@@ -149,6 +151,16 @@ export default function GrammarSection({
                   </p>
                 </div>
               </div>
+
+              {/* Deep Dive Action Button */}
+              <button
+                onClick={() => setSelectedDetailItem(item)}
+                className="self-start sm:self-center inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-all shadow-2xs hover:shadow-sm"
+                title="View full explanation and conjugation tables"
+              >
+                <Table2 size={14} />
+                <span>{item.details ? 'Deep Dive & Tables' : 'Full Explanation'}</span>
+              </button>
             </div>
 
             {/* Card Body */}
@@ -163,13 +175,25 @@ export default function GrammarSection({
                   </p>
                 </div>
 
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 h-full">
-                  <h4 className="font-semibold text-slate-700 mb-2 text-sm flex items-center gap-2">
-                    <MessageCircle size={16} className="text-indigo-500" /> Explanation
-                  </h4>
-                  <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
-                    {item.explanation}
-                  </p>
+                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 h-full flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-semibold text-slate-700 mb-2 text-sm flex items-center gap-2">
+                      <MessageCircle size={16} className="text-indigo-500" /> Explanation
+                    </h4>
+                    <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
+                      {item.summary || item.explanation}
+                    </p>
+                  </div>
+
+                  {item.details && (
+                    <button
+                      onClick={() => setSelectedDetailItem(item)}
+                      className="mt-3 text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1 self-start"
+                    >
+                      <span>View breakdown tables & rules</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  )}
                 </div>
               </div>
 
@@ -257,6 +281,20 @@ export default function GrammarSection({
           </div>
         ))}
       </div>
+
+      {/* Deep Dive Breakdown Modal */}
+      {selectedDetailItem && (
+        <GrammarDetailModal
+          isOpen={!!selectedDetailItem}
+          onClose={() => setSelectedDetailItem(null)}
+          item={selectedDetailItem}
+          activeLevel={activeLevel}
+          showTranslations={showTranslations}
+          onGenerateExplanation={onExplainNuance}
+          loadingExplanation={loadingExplanations}
+          aiExplanation={aiExplanations}
+        />
+      )}
     </main>
   );
 }

@@ -1,1 +1,123 @@
 @import "tailwindcss";
+
+/* Markdown Prose Styling */
+.markdown-prose {
+  color: #334155;
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.markdown-prose h1,
+.markdown-prose h2,
+.markdown-prose h3,
+.markdown-prose h4 {
+  color: #0f172a;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-prose h1 { font-size: 1.25rem; }
+.markdown-prose h2 { font-size: 1.125rem; }
+.markdown-prose h3 { font-size: 1rem; color: #4338ca; }
+.markdown-prose h4 { font-size: 0.875rem; }
+
+.markdown-prose p {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-prose ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.markdown-prose ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.markdown-prose li {
+  margin-bottom: 0.125rem;
+}
+
+.markdown-prose strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.markdown-prose blockquote {
+  border-left: 4px solid #6366f1;
+  background-color: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 0.75rem 0;
+  color: #475569;
+  font-style: italic;
+}
+
+.markdown-prose hr {
+  border-color: #e2e8f0;
+  margin: 1.25rem 0;
+}
+
+.markdown-prose code {
+  background-color: #f1f5f9;
+  color: #4338ca;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+/* Responsive GFM Tables */
+.markdown-prose table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: 0.8125rem;
+}
+
+.markdown-prose th {
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  color: #1e293b;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid #cbd5e1;
+  border-right: 1px solid #e2e8f0;
+}
+
+.markdown-prose th:last-child {
+  border-right: none;
+}
+
+.markdown-prose td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.markdown-prose td:last-child {
+  border-right: none;
+}
+
+.markdown-prose tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+.markdown-prose tr:hover td {
+  background-color: #eff6ff;
+}

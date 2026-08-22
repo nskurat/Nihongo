@@ -69,7 +69,9 @@
       "structure": "Potential verbs — formation",
       "meaning": "All potential verbs conjugate as Group II verbs (dictionary form ends in -る).",
       "explanation": "All potential verbs conjugate as Group II verbs (dictionary form ends in -る). \n      Group I: change the final -u sound to the -e sound + る (かきます→かける, かいます→かえる) \n      Group II: ます-stem + られる (たべます→たべられる) \n      Group III: きます→こられます／します→できます \n      Note: わかる already contains the meaning of possibility, so it has no separate potential form.",
-      "examples": []
+      "examples": [],
+      "summary": "Expresses ability or situational possibility ('can do'). All potential verbs conjugate as Group II verbs.",
+      "details": "### Potential Verb Conjugation (可能形の作り方)\n\nAll potential verbs express capability or possibility and conjugate as **Group II verbs** (dictionary form ends in `-る`).\n\n| Verb Group | Conjugation Rule | Dictionary / Polite Form | Potential Form | Meaning |\n| :--- | :--- | :--- | :--- | :--- |\n| **Group I (五段)** | Final `-u` sound → `-e sound + る`<br>(`-imasu` → `-emasu`) | 書く (かきます)<br>泳ぐ (およぎます)<br>話す (はなします)<br>待つ (まちます)<br>飲む (のみます)<br>買う (かいます) | **書ける** (かけます)<br>**泳げる** (およげます)<br>**話せる** (はなせます)<br>**待てる** (まてます)<br>**飲める** (のめます)<br>**買える** (かえます) | Can write<br>Can swim<br>Can speak<br>Can wait<br>Can drink<br>Can buy |\n| **Group II (一段)** | Drop `-る` → `+ られる`<br>(ます-stem `+ られ・ます`) | 食べる (たべます)<br>見る (みます)<br>起きる (おきます) | **食べられる** (たべられます)<br>**見られる** (みられます)<br>**起きられる** (おきられます) | Can eat<br>Can see / watch<br>Can get up |\n| **Group III (不規則)** | Irregular Transformation | 来る (きます)<br>する (します) | **来られる** (こられます)<br>**できる** (できます) | Can come<br>Can do |\n\n---\n\n### Important Rules & Exceptions\n\n1. **All Potential Verbs become Group II (一段)**:\n   - Dictionary: 書ける (かけ・る)\n   - Negative: 書けない (かけ・ない)\n   - Past: 書けた (かけ・た)\n   - Te-form: 書けて (かけ・て)\n\n2. **分かる (わかる) Exception**:\n   - **わかる** already means \"to comprehend / be able to understand\", so it **never** takes a potential form (*わかられる is incorrect*)."
     },
     {
       "id": "27-2",
@@ -86,7 +88,9 @@
           "jp": "ミラーさんは漢字が読めます。／この銀行でドルが換えられます。",
           "en": "Mr. Miller can read kanji. / You can change dollars at this bank."
         }
-      ]
+      ],
+      "summary": "In potential sentences, the direct object switches from を to が because potential verbs describe a state of ability.",
+      "details": "### Particle Shift: を → が in Potential Sentences\n\nBecause potential verbs describe a **state** of capability rather than an active action, the direct object of a transitive verb is marked with **が** instead of **を**.\n\n| Normal Action Sentence (`を`) | Potential State Sentence (`が`) | English Meaning |\n| :--- | :--- | :--- |\n| 日本語**を**話します | 日本語**が**話せます | I can speak Japanese. |\n| 漢字**を**読みます | 漢字**が**読めます | I can read Kanji. |\n| 車**を**運転します | 車**が**運転できます | I can drive a car. |\n| お酒**を**飲みます | お酒**が**飲めます | I can drink alcohol. |\n\n> **Note on Other Particles:**\n> Particles like **に**, **へ**, **で**, **から**, **まで** do NOT change:\n> - 一人で病院**へ**行けます。 (I can go to the hospital alone.)\n> - プール**で**泳げます。 (I can swim in the pool.)"
     },
     {
       "id": "27-3",
@@ -99,7 +103,9 @@
           "jp": "新幹線から富士山が見えます。／ラジオの音が聞こえます。",
           "en": "Mt. Fuji can be seen from the Shinkansen. / The sound of a radio can be heard."
         }
-      ]
+      ],
+      "summary": "見えます / 聞こえます describe natural sensory perception without intentional effort, whereas 見られます / 聞けます describe intentional ability or situational permission.",
+      "details": "### Comparison: Spontaneous Perception vs. Potential Ability\n\nJapanese distinguishes between what enters your eyes/ears naturally versus what you have the ability or opportunity to see/hear.\n\n| Category | Verb | Meaning & Nuance | Example Sentence |\n| :--- | :--- | :--- | :--- |\n| **Spontaneous Sight** | **見えます** (みえます) | Enters the field of vision naturally, without effort | 新幹線から富士山が**見えます**。<br>*(Mt. Fuji is visible from the Shinkansen.)* |\n| **Intentional Potential** | **見られます** (みられます) | Have the opportunity/ability/ticket to watch | 日本で歌舞伎が**見られます**。<br>*(You can watch Kabuki in Japan.)* |\n| **Spontaneous Sound** | **聞こえます** (きこえます) | Sound reaches the ears naturally | 鳥の声が**聞こえます**。<br>*(Bird song can be heard.)* |\n| **Intentional Potential** | **聞けます** (きけます) | Can listen intentionally (audio, radio, music) | インターネットで日本のラジオが**聞けます**。<br>*(You can listen to Japanese radio on the internet.)* |"
     },
     {
       "id": "27-4",
@@ -235,7 +241,9 @@
           "jp": "けさは道が込んでいました。",
           "en": "The road was crowded this morning."
         }
-      ]
+      ],
+      "summary": "Intransitive verbs (自動詞) describe spontaneous states with が, while Transitive verbs (他動詞) describe deliberate actions with を.",
+      "details": "### Transitive (他動詞) vs. Intransitive (自動詞) Pairs\n\n| Action / Actor (`他動詞 + を`) | Resulting State (`自動詞 + が + ています`) | English Meaning |\n| :--- | :--- | :--- |\n| ドア**を**開けます (あけます) | ドア**が**開いています (あいています) | Open the door / The door is open |\n| ドア**を**閉めます (しめます) | ドア**が**閉まっています (しまっています) | Close the door / The door is closed |\n| 電気**を**つけます | 電気**が**ついています | Turn on the light / The light is on |\n| 電気**を**消します (けします) | 電気**が**消えています (きえています) | Turn off light / The light is off |\n| コップ**を**割ります (わります) | コップ**が**割れています (われています) | Break a glass / The glass is broken |\n| 車**を**止めます (とめます) | 車**が**止まっています (とまっています) | Park a car / The car is parked |\n| ボタン**を**外します (はずします) | ボタン**が**外れています (はずれています) | Undo button / The button is undone |\n| 鍵**を**掛けます (かけます) | 鍵**が**掛かっています (かかっています) | Lock key / The key is locked |"
     },
     {
       "id": "29-2",
@@ -353,7 +361,9 @@
       "structure": "Volitional form — formation",
       "meaning": "Group I: replace the last sound of the ます-form with the equivalent お-line sound and attach う (かきます→かこう).",
       "explanation": "Group I: replace the last sound of the ます-form with the equivalent お-line sound and attach う (かきます→かこう). Group II: attach よう to the ます-form (たべます→たべよう). Group III: します→しよう, きます→こよう.",
-      "examples": []
+      "examples": [],
+      "summary": "The casual equivalent of 〜ましょう, used for invitations ('Let's...') or expressing determination ('I will...').",
+      "details": "### Volitional Form Conjugation (意向形の作り方)\n\nThe Volitional form is the plain/casual equivalent of **〜ましょう** (Let's do...).\n\n| Verb Group | Transformation Rule | Dictionary Form | Volitional Form | Meaning |\n| :--- | :--- | :--- | :--- | :--- |\n| **Group I (五段)** | Final `-u` sound → `-ō sound`<br>(`-imasu` → `-ou`) | 行く (いきます)<br>飲む (のみます)<br>話す (はなします)<br>待つ (まちます)<br>買う (かいます) | **行こう** (いこう)<br>**飲もう** (のもう)<br>**話そう** (はなそう)<br>**待とう** (まとう)<br>**買おう** (かおう) | Let's go<br>Let's drink<br>Let's speak<br>Let's wait<br>Let's buy |\n| **Group II (一段)** | Drop `-る` → `+ よう`<br>(ます-stem `+ よう`) | 食べる (たべます)<br>見る (みます)<br>寝る (ねます) | **食べよう** (たべよう)<br>**見よう** (みよう)<br>**寝よう** (ねよう) | Let's eat<br>Let's watch<br>Let's sleep |\n| **Group III (不規則)** | Irregular | 来る (きます)<br>する (します) | **来よう** (こよう)<br>**しよう** (しよう) | Let's come<br>Let's do |\n\n---\n\n### Common Sentence Patterns\n\n- **V-volitional + と思っています** (I am thinking of doing...):\n  - 週末、映画を**見に行こうと思っています**。 *(I'm thinking of going to see a movie this weekend.)*\n- **V-volitional + か** (Shall we...? casual):\n  - ちょっと**休もうか**。 *(Shall we take a short break?)*"
     },
     {
       "id": "31-2",
@@ -498,7 +508,9 @@
       "structure": "Imperative and prohibitive forms",
       "meaning": "Imperative — Group I: change the last sound of the ます-form to the え-line sound (かきます→かけ); Group II: attach ろ to the ます-form (たべます→たべろ); Group III: します→しろ, きます→こい.",
       "explanation": "Imperative — Group I: change the last sound of the ます-form to the え-line sound (かきます→かけ); Group II: attach ろ to the ます-form (たべます→たべろ); Group III: します→しろ, きます→こい. Non-volitional verbs like わかる, できる, ある have no imperative form. Prohibitive: attach な to the dictionary form of any verb (使うな \"don't use\").",
-      "examples": []
+      "examples": [],
+      "summary": "Imperative (command: 'Do it!') and Prohibitive (prohibition: 'Don't do it!'). Strong expressions used in emergencies, traffic signs, and sports cheering.",
+      "details": "### Imperative (命令形) & Prohibitive (禁止形) Conjugation\n\n| Verb Group | Dictionary Form | Imperative (命令形) | Prohibitive (禁止形) | Meaning |\n| :--- | :--- | :--- | :--- | :--- |\n| **Group I (五段)** | 走る (はしる)<br>止まる (とまる)<br>書く (かく)<br>話す (はなす) | **走れ** (はしれ)<br>**止まれ** (とまれ)<br>**書け** (かけ)<br>**話せ** (はなせ) | **走るな** (はしるな)<br>**止まるな** (とまるな)<br>**書くな** (かくな)<br>**話すな** (はなすな) | Run! / Don't run!<br>Stop! / Don't stop!<br>Write! / Don't write!<br>Speak! / Don't speak! |\n| **Group II (一段)** | 食べる (たべる)<br>見る (みる)<br>逃げる (にげる) | **食べろ** (たべろ)<br>**見ろ** (みろ)<br>**逃げろ** (にげろ) | **食べるな** (たべるな)<br>**見るな** (みるな)<br>**逃げるな** (にげるな) | Eat! / Don't eat!<br>Look! / Don't look!<br>Escape! / Don't run away! |\n| **Group III (不規則)** | 来る (くる)<br>する (する) | **来い** (こい)<br>**しろ / せよ** | **来るな** (くるな)<br>**するな** | Come! / Don't come!<br>Do it! / Don't do it! |\n\n> **When is this used?**\n> 1. **Signs & Notices**: 止まれ (STOP), 入るな (DO NOT ENTER).\n> 2. **Sports Cheering**: 頑張れ！ (Go for it!), 走れ！ (Run!).\n> 3. **Emergencies**: 逃げろ！ (Run away!), 伏せろ！ (Get down!)."
     },
     {
       "id": "33-2",
@@ -627,7 +639,9 @@
           "jp": "高い→高ければ　静か（な）→静かなら",
           "en": "(if it's) expensive → たかければ　(if it's) quiet → 静かなら"
         }
-      ]
+      ],
+      "summary": "The 〜ば conditional expresses general conditions, requirements, or logical consequences ('if / when').",
+      "details": "### Conditional 〜ば Form Conjugation\n\n| Category | Conjugation Rule | Plain Form | ば-Conditional Form | Example |\n| :--- | :--- | :--- | :--- | :--- |\n| **Group I Verbs** | Final `-u` sound → `-e sound + ば` | 飲む (のむ)<br>行く (いく) | **飲めば** (のめば)<br>**行けば** (いけば) | 安ければ (やすければ) |\n| **Group II Verbs** | Drop `-る` → `+ れば` | 食べる (たべる)<br>見る (みる) | **食べれば** (たべれば)<br>**見れば** (みれば) | — |\n| **Group III Verbs** | Irregular | 来る (くる)<br>する (する) | **来れば** (くれば)<br>**すれば** (すれば) | — |\n| **い-Adjectives** | Drop `-い` → `+ ければ` | 安い (やすい)<br>いい (good) | **安ければ**<br>**よければ** | — |\n| **な-Adjectives** | `+ なら [ば]` | 暇 (ひま) | **暇なら [ば]** | — |\n| **Nouns** | `+ なら [ば]` | 雨 (あめ) | **雨なら [ば]** | — |\n\n---\n\n### Comparison of the 4 Conditionals\n\n| Conditional | Best Used For | Restriction | Example |\n| :--- | :--- | :--- | :--- |\n| **〜と** | Natural results, machine operations, street directions | **No** requests/commands in 2nd clause | ボタンを押す**と**、切符が出ます。 |\n| **〜たら** | Most versatile conversational conditional; time sequence | Past fact or hypothetical | 雨が降っ**たら**、行きません。 |\n| **〜ば** | Logical conditions, advice, general rules | Formal / written nuance | 安けれ**ば**、買います。 |\n| **〜なら** | Contextual topic ('If you are talking about X...') | Follows nouns or plain forms | 温泉**なら**、白馬がいいですよ。 |"
     },
     {
       "id": "35-2",
@@ -761,7 +775,9 @@
           "jp": "書く→書かれる　褒める→褒められる　来る→来られる　する→される",
           "en": "write → be written　praise → be praised　come → (used when someone's coming affects me)　do → be done"
         }
-      ]
+      ],
+      "summary": "Passive voice describes actions received from another person (marked with に). All passive verbs conjugate as Group II verbs.",
+      "details": "### Passive Voice Conjugation (受身形の作り方)\n\nAll passive verbs conjugate as **Group II verbs** (dictionary form ends in `-る`).\n\n| Verb Group | Conjugation Rule | Active Form | Passive Form | Meaning |\n| :--- | :--- | :--- | :--- | :--- |\n| **Group I (五段)** | Final `-u` sound → `-a sound + れる`<br>(`-imasu` → `-aremasu`) | 褒める (ほめます)<br>叱る (しかります)<br>頼む (たのみます)<br>踏む (ふみます) | **褒められる** (ほめられます)<br>**叱られる** (しかられます)<br>**頼まれる** (たのまれます)<br>**踏まれる** (ふまれます) | Be praised<br>Be scolded<br>Be requested<br>Be stepped on |\n| **Group II (一段)** | Drop `-る` → `+ られる` | 食べる (たべます)<br>見る (みます) | **食べられる** (たべられます)<br>**見られる** (みられます) | Be eaten<br>Be watched |\n| **Group III (不規則)** | Irregular | 来る (きます)<br>する (します) | **来られる** (こられます)<br>**される** (されます) | Be visited (suffering)<br>Be done |\n\n---\n\n### Core Sentence Patterns\n\n1. **Direct Passive (Person A は Person B に V-passive)**:\n   - わたしは先生**に褒められました**。 *(I was praised by the teacher.)*\n2. **Suffering Passive on Object (Person A は Person B に Noun を V-passive)**:\n   - わたしは弟**にパソコンを壊されました**。 *(My computer was broken by my younger brother.)*\n3. **Invention / Creation (Object は Creator によって V-passive)**:\n   - 電話はベル**によって発明されました**。 *(The telephone was invented by Bell.)*"
     },
     {
       "id": "37-2",
@@ -1487,7 +1503,9 @@
           "jp": "そんけいご describes the listener or the person referred to, and their actions.",
           "en": "Respectful expressions are used for the listener/referent and their actions — never for the speaker's own."
         }
-      ]
+      ],
+      "summary": "Respectful language (尊敬語) elevates the actions of the listener or superior. Uses special honorific verbs or お〜になります.",
+      "details": "### Respectful Keigo (尊敬語) Summary Table\n\nUsed exclusively for the actions of superiors, customers, or business partners.\n\n| Plain / Polite Verb | Special Respectful Verb (尊敬語) | Regular Form (`お + stem + になります`) |\n| :--- | :--- | :--- |\n| 行きます / 来ます / います | **いらっしゃいます** / **おいでになります** | — |\n| 食べます / 飲みます | **召し上がります** (めしあがります) | — |\n| 言います | **おっしゃいます** | — |\n| 知っています | **ご存じです** (ごぞんじです) | — |\n| 見ます | **ご覧になります** (ごらんになります) | — |\n| します | **なさいます** | — |\n| くれます | **くださいます** | — |\n| 書きます | — | **お書きになります** |\n| 読みます | — | **お読みになります** |\n| 帰ります | — | **お帰りになります** |"
     },
     {
       "id": "49-2",
@@ -1580,7 +1598,9 @@
           "jp": "お荷物、お持ちしましょうか。",
           "en": "It looks heavy. Shall I carry it for you?"
         }
-      ]
+      ],
+      "summary": "Humble language (謙譲語) lowers the speaker's own actions out of respect for the listener. Uses special humble verbs or お〜します.",
+      "details": "### Humble Keigo (謙譲語) Summary Table\n\nUsed exclusively for the speaker's own actions when interacting with or doing something for a superior.\n\n| Plain / Polite Verb | Special Humble Verb (謙譲語) | Regular Form (`お + stem + します`) |\n| :--- | :--- | :--- |\n| 行きます / 来ます | **参ります** (まいります) | — |\n| います | **おります** | — |\n| 食べます / 飲みます / もらいます | **いただきます** | — |\n| 言います | **申します** (もうします) / **申し上げます** | — |\n| します | **いたします** | — |\n| 見ます | **拝見します** (はいけんします) | — |\n| 知りません / わかりません | **存じません** (ぞんじません) | — |\n| 会います | **お目にかかります** | — |\n| 聞きます / 訪問します | **伺います** (うかがいます) | — |\n| 持ちます | — | **お持ちします** |\n| 案内します | — | **ご案内します** |"
     },
     {
       "id": "50-2",
