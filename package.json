@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "mkdir -p dist/grammar dist/vocab dist/kanji && cp index.html serve.json dist/ && npm run build --prefix grammar-app && cp dist/grammar/index.html dist/vocab/index.html && cp dist/grammar/index.html dist/kanji/index.html && cp dist/grammar/index.html dist/404.html",
+    "build": "mkdir -p dist/grammar dist/vocab dist/kanji dist/reading && cp index.html serve.json dist/ && npm run build --prefix grammar-app && cp dist/grammar/index.html dist/vocab/index.html && cp dist/grammar/index.html dist/kanji/index.html && cp dist/grammar/index.html dist/reading/index.html && cp dist/grammar/index.html dist/404.html",
     "serve": "npx serve dist"
   },
   "devDependencies": {

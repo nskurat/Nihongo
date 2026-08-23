@@ -147,16 +147,22 @@ export async function executeAiPrompt(prompt, options = {}) {
 // -------------------------------------------------------------
 // High-Level Domain Prompts
 // -------------------------------------------------------------
+import {
+  getGrammarExamplesPrompt,
+  getGrammarNuancePrompt,
+  getVocabHelpPrompt,
+  getKanjiMnemonicPrompt,
+} from './prompts';
+import { buildReadingPracticePrompt } from './promptBuilder';
+import { parseReadingResponse } from './readingParser';
 
 export async function generateGrammarExamples({ grammar, level }) {
-  const prompt = `Generate 2 new, natural Japanese example sentences for the JLPT ${level} grammar point: "${grammar.title}" (Meaning: ${grammar.meaning}). Structure: ${grammar.structure}.
-
-CRITICAL: Return ONLY a valid JSON array of objects with "jp" and "en" keys. Do NOT include markdown code fences or conversational text.
-Example format:
-[
-  {"jp": "...", "en": "..."},
-  {"jp": "...", "en": "..."}
-]`;
+  const prompt = getGrammarExamplesPrompt({
+    title: grammar.title,
+    meaning: grammar.meaning,
+    structure: grammar.structure,
+    level,
+  });
 
   const text = await executeAiPrompt(prompt, { responseFormat: 'json' });
 
@@ -171,13 +177,22 @@ Example format:
 }
 
 export async function generateGrammarNuance({ grammar, level }) {
-  const prompt = `Act as an expert Japanese linguist. Briefly explain subtle nuances, typical conversational contexts, and common learner traps for "${grammar.title}" (${grammar.meaning}) at ${level} level. Keep it to one clear, insightful paragraph.`;
+  const prompt = getGrammarNuancePrompt({
+    title: grammar.title,
+    meaning: grammar.meaning,
+    level,
+  });
 
   return await executeAiPrompt(prompt, { responseFormat: 'text' });
 }
 
 export async function generateVocabHelp({ vocab, level }) {
-  const prompt = `Explain practical usage, common collocations, or register nuances for the Japanese word "${vocab.word}" (${vocab.reading}, meaning: "${vocab.meaning}") for a JLPT ${level} learner. Keep it to 1-2 concise sentences with 1 extra natural sample sentence.`;
+  const prompt = getVocabHelpPrompt({
+    word: vocab.word,
+    reading: vocab.reading,
+    meaning: vocab.meaning,
+    level,
+  });
 
   return await executeAiPrompt(prompt, { responseFormat: 'text' });
 }
@@ -188,7 +203,33 @@ export async function generateKanjiMnemonic({ kanji, level }) {
     kanji.kunyomi?.length ? `Kun: ${kanji.kunyomi.join(', ')}` : '',
   ].filter(Boolean).join(' | ');
 
-  const prompt = `Create a vivid, easy-to-remember mnemonic story or visual breakdown for the JLPT ${level} Kanji "${kanji.kanji}" (Meaning: "${kanji.meaning}", ${readings}). Radical: "${kanji.radical || 'none'}". Keep the mnemonic hook to 2-3 engaging, memorable sentences.`;
+  const prompt = getKanjiMnemonicPrompt({
+    kanji: kanji.kanji,
+    meaning: kanji.meaning,
+    radical: kanji.radical,
+    readings,
+    level,
+  });
 
   return await executeAiPrompt(prompt, { responseFormat: 'text' });
 }
+
+export async function generateReadingPractice({
+  level = 'N4',
+  lesson = null,
+  topic = 'Daily Life & Culture',
+  grammarList = [],
+  vocabList = [],
+}) {
+  const prompt = buildReadingPracticePrompt({
+    level,
+    lesson,
+    topic,
+    grammarList,
+    vocabList,
+  });
+
+  const rawText = await executeAiPrompt(prompt, { responseFormat: 'json' });
+  return parseReadingResponse(rawText);
+}
+

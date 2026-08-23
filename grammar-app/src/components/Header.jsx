@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, BookText, Sparkles, Eye, EyeOff, Key, GraduationCap, Languages, Bot } from 'lucide-react';
+import { BookOpen, BookText, Sparkles, Eye, EyeOff, Key, GraduationCap, Languages, Bot, BookOpenCheck } from 'lucide-react';
 import { getActiveProviderId, getProvider, getStoredApiKey } from '../services/ai/registry';
 
 export default function Header({
@@ -20,6 +20,7 @@ export default function Header({
     { id: 'grammar', label: 'Grammar', icon: BookOpen },
     { id: 'vocab', label: 'Vocabulary', icon: BookText },
     { id: 'kanji', label: 'Kanji', icon: Languages },
+    { id: 'reading', label: 'Reading Practice', icon: BookOpenCheck },
   ];
 
   const provider = getProvider(getActiveProviderId());

@@ -3,6 +3,7 @@ import Header from './components/Header';
 import GrammarSection from './components/GrammarSection';
 import VocabSection from './components/VocabSection';
 import KanjiSection from './components/KanjiSection';
+import ReadingSection from './components/ReadingSection';
 import AiSettingsModal from './components/AiSettingsModal';
 import {
   generateGrammarExamples,
@@ -46,6 +47,8 @@ const getInitialState = () => {
       section = 'vocab';
     } else if (pathname.includes('/kanji') || params.get('section') === 'kanji' || hash === 'kanji') {
       section = 'kanji';
+    } else if (pathname.includes('/reading') || params.get('section') === 'reading' || hash === 'reading') {
+      section = 'reading';
     } else if (pathname.includes('/grammar') || params.get('section') === 'grammar' || hash === 'grammar') {
       section = 'grammar';
     }
@@ -256,6 +259,15 @@ export default function App() {
             onGenerateKanjiMnemonic={handleGenerateKanjiMnemonic}
             loadingKanjiAi={loadingKanjiAi}
             aiKanjiMnemonics={aiKanjiMnemonics}
+          />
+        )}
+
+        {activeSection === 'reading' && (
+          <ReadingSection
+            activeLevel={activeLevel}
+            grammarData={currentData.grammar || {}}
+            vocabData={currentData.vocab || {}}
+            onOpenKeyModal={() => setShowKeyModal(true)}
           />
         )}
       </div>

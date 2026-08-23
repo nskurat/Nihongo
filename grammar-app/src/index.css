@@ -121,3 +121,38 @@
 .markdown-prose tr:hover td {
   background-color: #eff6ff;
 }
+
+/* Furigana Native Ruby Text Styling */
+.furigana-wrapper {
+  line-height: 2.2;
+}
+
+.furigana-wrapper ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+
+.furigana-wrapper ruby rt {
+  font-size: 0.55em;
+  font-weight: 600;
+  color: #4f46e5;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Hover Mode: Furigana hidden by default, reveals on hover or tap */
+.furigana-mode-hover ruby rt {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.furigana-mode-hover ruby:hover rt,
+.furigana-mode-hover ruby:focus rt,
+.furigana-mode-hover ruby:active rt {
+  opacity: 1;
+}
+
+/* Off Mode: Furigana completely hidden */
+.furigana-mode-off ruby rt {
+  display: none !important;
+}
