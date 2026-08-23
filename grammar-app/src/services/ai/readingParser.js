@@ -120,13 +120,18 @@ export function parseReadingResponse(rawResponse) {
       correctIndex = 0;
     }
 
+    const rawExplanation = q.explanation ? String(q.explanation).trim() : '';
+    const explanationJp = q.explanationJp ? String(q.explanationJp).trim() : rawExplanation;
+    const explanationEn = q.explanationEn ? String(q.explanationEn).trim() : '';
+
     return {
       id: q.id || idx + 1,
       question: q.question.trim(),
-      questionEn: q.questionEn ? q.questionEn.trim() : '',
       options: q.options.map((opt) => String(opt).trim()),
       correctIndex: correctIndex,
-      explanation: q.explanation ? String(q.explanation).trim() : 'No explanation provided.',
+      explanationJp: explanationJp || '解説がありません。',
+      explanationEn: explanationEn,
+      explanation: rawExplanation || explanationJp,
     };
   });
 

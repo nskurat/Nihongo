@@ -37,10 +37,10 @@ export default function Header({
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight flex items-center gap-2">
-                Nihongo Portal <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
+                Minna no Nihongo Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
               </h1>
               <p className="text-indigo-200 text-xs font-medium">
-                Minna no Nihongo Reference & Practice
+                JLPT N4 & N3 Interactive Reference & AI Practice
               </p>
             </div>
           </div>

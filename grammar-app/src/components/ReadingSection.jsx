@@ -78,6 +78,8 @@ export default function ReadingSection({
   // Quiz state for studio
   const [userAnswers, setUserAnswers] = useState({}); // { [questionId]: selectedIndex }
   const [showExplanations, setShowExplanations] = useState({}); // { [questionId]: boolean }
+  const [showExplanationEn, setShowExplanationEn] = useState({}); // { [questionId]: boolean }
+  const [modalShowExplanationEn, setModalShowExplanationEn] = useState({});
 
   const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
   const activeProvider = getProvider(getActiveProviderId());
@@ -617,13 +619,46 @@ export default function ReadingSection({
                           })}
                         </div>
 
-                        {/* Explanation reveal upon answering */}
+                        {/* Explanation reveal upon answering with Furigana and toggleable English */}
                         {isAnswered && showExplanations[q.id] && (
-                          <div className="mt-4 p-3.5 bg-white rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1 animate-fade-in">
-                            <div className="flex items-center gap-1.5 font-bold text-indigo-900 mb-0.5">
-                              <HelpCircle size={13} className="text-indigo-600" /> Explanation & Evidence:
+                          <div className="mt-4 p-4 bg-slate-50/80 rounded-xl border border-slate-200 text-xs space-y-2 animate-fade-in">
+                            <div className="flex items-center justify-between gap-2">
+                              <div className="flex items-center gap-1.5 font-bold text-indigo-950 text-xs">
+                                <HelpCircle size={14} className="text-indigo-600 shrink-0" />
+                                <span>解説 • Explanation & Evidence:</span>
+                              </div>
+
+                              {q.explanationEn && (
+                                <button
+                                  onClick={() =>
+                                    setShowExplanationEn((prev) => ({
+                                      ...prev,
+                                      [q.id]: !prev[q.id],
+                                    }))
+                                  }
+                                  className={`px-2 py-0.5 rounded-md text-[10px] font-semibold transition-all border flex items-center gap-1 cursor-pointer ${
+                                    showExplanationEn[q.id]
+                                      ? 'bg-indigo-100 border-indigo-300 text-indigo-800'
+                                      : 'bg-white hover:bg-slate-100 border-slate-300 text-slate-600'
+                                  }`}
+                                >
+                                  {showExplanationEn[q.id] ? <EyeOff size={11} /> : <Eye size={11} />}
+                                  <span>{showExplanationEn[q.id] ? 'Hide English' : 'English Translation'}</span>
+                                </button>
+                              )}
                             </div>
-                            <p className="leading-relaxed">{q.explanation}</p>
+
+                            {/* Japanese Explanation with Furigana */}
+                            <div className="text-slate-800 text-sm leading-relaxed">
+                              <FuriganaText text={q.explanationJp || q.explanation} mode={furiganaMode} />
+                            </div>
+
+                            {/* English Translation Callout */}
+                            {showExplanationEn[q.id] && q.explanationEn && (
+                              <div className="p-2.5 bg-white rounded-lg border border-slate-200 text-xs text-slate-600 leading-relaxed italic animate-fade-in">
+                                {q.explanationEn}
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
@@ -920,8 +955,38 @@ export default function ReadingSection({
                         </div>
 
                         {isAns && (
-                          <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-700">
-                            <strong>Explanation:</strong> {q.explanation}
+                          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-2">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="font-bold text-indigo-950 text-xs">解説 • Explanation:</span>
+                              {q.explanationEn && (
+                                <button
+                                  onClick={() =>
+                                    setModalShowExplanationEn((prev) => ({
+                                      ...prev,
+                                      [q.id]: !prev[q.id],
+                                    }))
+                                  }
+                                  className={`px-2 py-0.5 rounded-md text-[10px] font-semibold transition-all border flex items-center gap-1 cursor-pointer ${
+                                    modalShowExplanationEn[q.id]
+                                      ? 'bg-indigo-100 border-indigo-300 text-indigo-800'
+                                      : 'bg-white hover:bg-slate-100 border-slate-300 text-slate-600'
+                                  }`}
+                                >
+                                  {modalShowExplanationEn[q.id] ? <EyeOff size={11} /> : <Eye size={11} />}
+                                  <span>{modalShowExplanationEn[q.id] ? 'Hide English' : 'English'}</span>
+                                </button>
+                              )}
+                            </div>
+
+                            <div className="text-slate-800 text-xs leading-relaxed">
+                              <FuriganaText text={q.explanationJp || q.explanation} mode="always" />
+                            </div>
+
+                            {modalShowExplanationEn[q.id] && q.explanationEn && (
+                              <div className="p-2 bg-white rounded-lg border border-slate-200 text-xs text-slate-600 italic animate-fade-in">
+                                {q.explanationEn}
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>

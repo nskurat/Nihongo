@@ -28,7 +28,8 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
         "Option 4 in Japanese"
       ],
       "correctIndex": 1,
-      "explanation": "Clear explanation in Japanese and English explaining why this option is correct."
+      "explanationJp": "Japanese explanation with bracketed furigana for kanji, citing passage evidence.",
+      "explanationEn": "Clear English translation explaining why this answer is correct."
     }
   ]
 }`;
@@ -38,7 +39,7 @@ export const READING_PRACTICE_RULES = [
   '2. Furigana Notation: For all Kanji, write the reading in brackets directly after the kanji, like this: 漢字[かんじ] or 京都[きょうと]へ行[い]きました. Do not add brackets to pure Hiragana/Katakana words.',
   '3. Comprehension Questions: Exactly 5 multiple-choice questions testing reading comprehension, main idea, and specific details. Questions and options must be strictly in Japanese with NO English translations (true immersion).',
   '4. Each question must have exactly 4 options (A, B, C, D) and specify the 0-based "correctIndex" (0, 1, 2, or 3).',
-  '5. Provide a clear bilingual explanation for why the answer is correct (for post-answer feedback when answered).',
+  '5. Explanations: Provide a Japanese explanation with bracketed furigana in "explanationJp", and its clear English translation in "explanationEn".',
 ].join('\n');
 
 /**
