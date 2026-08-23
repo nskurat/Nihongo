@@ -7,6 +7,7 @@
     "dev": "vite grammar-app",
     "build": "vite build && mkdir -p dist/vocab dist/kanji dist/reading && cp index.html serve.json dist/ && cp dist/grammar/index.html dist/vocab/index.html && cp dist/grammar/index.html dist/kanji/index.html && cp dist/grammar/index.html dist/reading/index.html && cp dist/grammar/index.html dist/404.html",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint grammar-app",
     "serve": "npx serve dist"
   },
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.13.9",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
@@ -29,6 +31,7 @@
     "globals": "^17.7.0",
     "postcss": "^8.5.26",
     "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.3",
     "vite": "^8.2.0",
     "vite-plugin-singlefile": "^2.3.3",
     "vitest": "^4.1.11"

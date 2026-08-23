@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, Sparkles, Loader2, Info, Layers, Hash, Languages, ArrowRight, ExternalLink } from 'lucide-react';
 import MarkdownViewer from './MarkdownViewer';
+import { KanjiItem, LevelType } from '../types/japanese';
+
+interface KanjiSectionProps {
+  kanjiData?: Record<number, KanjiItem[]>;
+  activeLesson: number;
+  setActiveLesson: (lesson: number) => void;
+  activeLevel: LevelType;
+  showTranslations: boolean;
+  onGenerateKanjiMnemonic: (item: KanjiItem) => void;
+  loadingKanjiAi: Record<string | number, boolean>;
+  aiKanjiMnemonics: Record<string | number, string>;
+}
 
 export default function KanjiSection({
   kanjiData = {},
@@ -11,7 +23,7 @@ export default function KanjiSection({
   onGenerateKanjiMnemonic,
   loadingKanjiAi,
   aiKanjiMnemonics,
-}) {
+}: KanjiSectionProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStroke, setSelectedStroke] = useState('all');
 
@@ -22,7 +34,7 @@ export default function KanjiSection({
     if (totalLessons.length > 0 && !kanjiData[activeLesson]) {
       setActiveLesson(totalLessons[0]);
     }
-  }, [kanjiData, activeLesson, totalLessons.length, setActiveLesson]);
+  }, [kanjiData, activeLesson, totalLessons, setActiveLesson]);
 
   const currentKanjiList = kanjiData[activeLesson] || [];
 
@@ -68,7 +80,7 @@ export default function KanjiSection({
                   <li key={lesson} className="min-w-fit">
                     <button
                       onClick={() => setActiveLesson(lesson)}
-                      className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm ${
+                      className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
                         activeLesson === lesson
                           ? 'bg-amber-600 text-white shadow-md font-semibold'
                           : 'text-slate-600 hover:bg-amber-50 hover:text-amber-900'
@@ -100,53 +112,53 @@ export default function KanjiSection({
 
       {/* Main Content Area */}
       <div className="lg:col-span-3 space-y-6">
-        {/* Banner & Control Bar */}
+        {/* Banner */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 text-xs font-bold rounded-md uppercase tracking-wide">
                 {activeLevel} Kanji
               </span>
-              <span className="text-xs text-slate-400">• Character & Reading Mastery</span>
+              <span className="text-xs text-slate-400">• Minna no Nihongo</span>
             </div>
             <h2 className="text-3xl font-extrabold text-slate-800 border-b-4 border-amber-500 pb-1 inline-block mt-2">
               Lesson {activeLesson}
             </h2>
             <p className="text-slate-500 text-sm mt-1">
-              Browse essential kanji characters, Onyomi/Kunyomi readings, stroke counts, and high-frequency compounds.
+              Master stroke counts, on/kun readings, radicals, compounds, and AI mnemonic stories.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-            {/* Search bar */}
-            <div className="relative flex-1 md:w-48">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
+            {/* Search Input */}
+            <div className="relative">
               <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search kanji..."
+                placeholder="Search kanji, reading, meaning..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 w-full"
+                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 w-full sm:w-56"
               />
             </div>
 
-            {/* Stroke count filter */}
-            {strokeOptions.length > 1 && (
+            {/* Stroke Count Filter */}
+            {strokeOptions.length > 0 && (
               <select
                 value={selectedStroke}
                 onChange={(e) => setSelectedStroke(e.target.value)}
-                className="px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-700 font-medium"
+                className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-amber-500 text-slate-700 font-medium cursor-pointer"
               >
                 <option value="all">All Strokes</option>
-                {strokeOptions.map((st) => (
-                  <option key={st} value={st}>
-                    {st} Strokes
+                {strokeOptions.map((stroke) => (
+                  <option key={stroke} value={stroke}>
+                    {stroke} Strokes
                   </option>
                 ))}
               </select>
             )}
 
-            <div className="px-3.5 py-1.5 bg-amber-50 rounded-lg border border-amber-200 text-amber-800 font-semibold text-xs text-center whitespace-nowrap">
+            <div className="px-3.5 py-1.5 bg-amber-50 rounded-lg border border-amber-100 text-amber-700 font-semibold text-xs text-center whitespace-nowrap">
               {currentKanjiList.length} Kanji
             </div>
           </div>
@@ -156,27 +168,27 @@ export default function KanjiSection({
         {filteredKanji.length === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
             <Info size={36} className="mx-auto text-slate-400" />
-            <h4 className="text-lg font-bold text-slate-700">No Kanji found</h4>
+            <h4 className="text-lg font-bold text-slate-700">No Kanji Found</h4>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
-              {searchQuery
-                ? `No kanji matched your search query "${searchQuery}" in Lesson ${activeLesson}.`
-                : `Kanji content for Lesson ${activeLesson} is being prepared. You can explore other lessons in the sidebar.`}
+              {searchQuery || selectedStroke !== 'all'
+                ? `No kanji match your criteria in Lesson ${activeLesson}.`
+                : `Kanji curriculum for Lesson ${activeLesson} is being prepared.`}
             </p>
           </div>
         )}
 
-        {/* Kanji Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* Kanji Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredKanji.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-amber-300 hover:shadow-md transition-all flex flex-col justify-between group"
+              className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-all group"
             >
               <div>
-                {/* Header Box */}
-                <div className="bg-gradient-to-br from-amber-50/50 via-white to-slate-50 p-5 border-b border-amber-100 flex items-start justify-between">
+                {/* Top Section: Kanji glyph + Core Meaning */}
+                <div className="p-5 bg-gradient-to-r from-amber-50/50 via-white to-slate-50 border-b border-amber-100/80 flex items-start justify-between gap-3">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-white rounded-xl shadow-inner border border-amber-200 flex items-center justify-center text-4xl font-serif font-black text-slate-900 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-3xl font-extrabold text-amber-950 font-serif shadow-inner">
                       {item.kanji}
                     </div>
                     <div>
@@ -200,7 +212,7 @@ export default function KanjiSection({
                       href={item.strokeOrderLink || `https://jisho.org/search/${encodeURIComponent(item.kanji)}%23kanji`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-amber-800 bg-white hover:bg-amber-50 rounded-lg border border-amber-200 transition-all shadow-2xs group/link"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-amber-800 bg-white hover:bg-amber-50 rounded-lg border border-amber-200 transition-all shadow-2xs group/link cursor-pointer"
                       title="View Stroke Order & Dictionary on Jisho.org"
                     >
                       <span>Stroke Order</span>
@@ -268,7 +280,7 @@ export default function KanjiSection({
                 <button
                   onClick={() => onGenerateKanjiMnemonic(item)}
                   disabled={loadingKanjiAi[item.id]}
-                  className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 bg-white hover:bg-amber-50 text-amber-800 text-xs font-semibold rounded-lg border border-amber-200/80 transition-colors shadow-2xs disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 bg-white hover:bg-amber-50 text-amber-800 text-xs font-semibold rounded-lg border border-amber-200/80 transition-colors shadow-2xs disabled:opacity-50 cursor-pointer"
                 >
                   {loadingKanjiAi[item.id] ? (
                     <Loader2 className="animate-spin" size={13} />

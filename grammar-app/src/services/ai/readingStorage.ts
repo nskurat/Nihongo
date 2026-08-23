@@ -1,60 +1,51 @@
-/**
- * Reading Storage Adapter Architecture
- *
- * Provides an asynchronous Storage Adapter interface allowing seamless swapping
- * between LocalStorage, Firebase Firestore, Supabase, or REST backends.
- */
+import {
+  ReadingPracticeData,
+  ReadingHistoryEntry,
+  SaveHistoryParams,
+} from '../../types/ai';
 
 export const ACTIVE_STORAGE_KEY = 'nihongo_reading_active';
 export const HISTORY_STORAGE_KEY = 'nihongo_reading_history';
 
+export interface StorageLike {
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+  removeItem(key: string): void;
+}
+
 /**
  * Base Abstract Adapter (Contract Interface)
  */
-export class BaseReadingStorageAdapter {
-  async getActiveReading() {
-    throw new Error('getActiveReading() not implemented');
-  }
-
-  async setActiveReading(reading) {
-    throw new Error('setActiveReading() not implemented');
-  }
-
-  async getHistory() {
-    throw new Error('getHistory() not implemented');
-  }
-
-  async saveToHistory({ reading, level, lesson, topic, maxItems }) {
-    throw new Error('saveToHistory() not implemented');
-  }
-
-  async deleteFromHistory(id) {
-    throw new Error('deleteFromHistory() not implemented');
-  }
-
-  async clearHistory() {
-    throw new Error('clearHistory() not implemented');
-  }
+export abstract class BaseReadingStorageAdapter {
+  abstract getActiveReading(): Promise<ReadingPracticeData | null>;
+  abstract setActiveReading(reading: ReadingPracticeData | null): Promise<void>;
+  abstract getHistory(): Promise<ReadingHistoryEntry[]>;
+  abstract saveToHistory(params: SaveHistoryParams): Promise<ReadingHistoryEntry[]>;
+  abstract deleteFromHistory(id: string): Promise<ReadingHistoryEntry[]>;
+  abstract clearHistory(): Promise<ReadingHistoryEntry[]>;
 }
 
 /**
  * LocalStorage Implementation of the Reading Storage Adapter
  */
 export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
-  constructor(storage = typeof window !== 'undefined' ? window.localStorage : null) {
+  private storage: StorageLike | null;
+  private memoryStore: Map<string, string>;
+
+  constructor(storage: StorageLike | null = typeof window !== 'undefined' ? window.localStorage : null) {
     super();
     this.storage = storage;
-    this.memoryStore = new Map(); // Fallback when localStorage is unavailable
+    this.memoryStore = new Map();
   }
 
-  _getItem(key) {
+  private _getItem(key: string): string | null {
     if (this.storage) {
       return this.storage.getItem(key);
     }
     return this.memoryStore.get(key) || null;
   }
 
-  _setItem(key, value) {
+  private _setItem(key: string, value: string): void {
     if (this.storage) {
       this.storage.setItem(key, value);
     } else {
@@ -62,7 +53,7 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  _removeItem(key) {
+  private _removeItem(key: string): void {
     if (this.storage) {
       this.storage.removeItem(key);
     } else {
@@ -70,17 +61,17 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  async getActiveReading() {
+  async getActiveReading(): Promise<ReadingPracticeData | null> {
     try {
       const raw = this._getItem(ACTIVE_STORAGE_KEY);
-      return raw ? JSON.parse(raw) : null;
+      return raw ? (JSON.parse(raw) as ReadingPracticeData) : null;
     } catch (e) {
       console.error('LocalStorageAdapter: failed to get active reading', e);
       return null;
     }
   }
 
-  async setActiveReading(reading) {
+  async setActiveReading(reading: ReadingPracticeData | null): Promise<void> {
     try {
       if (reading) {
         this._setItem(ACTIVE_STORAGE_KEY, JSON.stringify(reading));
@@ -92,22 +83,28 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  async getHistory() {
+  async getHistory(): Promise<ReadingHistoryEntry[]> {
     try {
       const raw = this._getItem(HISTORY_STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
+      return raw ? (JSON.parse(raw) as ReadingHistoryEntry[]) : [];
     } catch (e) {
       console.error('LocalStorageAdapter: failed to get history', e);
       return [];
     }
   }
 
-  async saveToHistory({ reading, level = 'N4', lesson = null, topic = '', maxItems = 30 }) {
+  async saveToHistory({
+    reading,
+    level = 'N4',
+    lesson = null,
+    topic = '',
+    maxItems = 30,
+  }: SaveHistoryParams): Promise<ReadingHistoryEntry[]> {
     if (!reading || !reading.title) return await this.getHistory();
 
     try {
       const current = await this.getHistory();
-      const entry = {
+      const entry: ReadingHistoryEntry = {
         id: `reading_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
         timestamp: new Date().toISOString(),
         level,
@@ -128,7 +125,7 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  async deleteFromHistory(id) {
+  async deleteFromHistory(id: string): Promise<ReadingHistoryEntry[]> {
     try {
       const current = await this.getHistory();
       const updated = current.filter((item) => item.id !== id);
@@ -140,7 +137,7 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  async clearHistory() {
+  async clearHistory(): Promise<ReadingHistoryEntry[]> {
     try {
       this._removeItem(HISTORY_STORAGE_KEY);
       return [];
@@ -151,41 +148,20 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
   }
 }
 
-/**
- * Example Firebase / Cloud DB Adapter Blueprint
- * (Ready to be populated when Firebase Firestore is connected)
- *
- * ```javascript
- * import { doc, getDoc, setDoc, collection, getDocs, ... } from 'firebase/firestore';
- *
- * export class FirebaseReadingAdapter extends BaseReadingStorageAdapter {
- *   constructor(db, userId) {
- *     super();
- *     this.db = db;
- *     this.userId = userId;
- *   }
- *   async getActiveReading() { ... }
- *   async setActiveReading(reading) { ... }
- *   async getHistory() { ... }
- *   async saveToHistory(...) { ... }
- * }
- * ```
- */
-
 // Singleton Storage Facade
-let currentAdapter = new LocalStorageReadingAdapter();
+let currentAdapter: BaseReadingStorageAdapter = new LocalStorageReadingAdapter();
 
 /**
  * Get active storage adapter instance.
  */
-export function getReadingStorageAdapter() {
+export function getReadingStorageAdapter(): BaseReadingStorageAdapter {
   return currentAdapter;
 }
 
 /**
  * Swap storage adapter (e.g. to a FirebaseReadingAdapter or custom cloud backend).
  */
-export function setReadingStorageAdapter(adapter) {
+export function setReadingStorageAdapter(adapter: BaseReadingStorageAdapter): void {
   if (!(adapter instanceof BaseReadingStorageAdapter)) {
     throw new Error('Adapter must inherit from BaseReadingStorageAdapter');
   }
@@ -197,9 +173,9 @@ export function setReadingStorageAdapter(adapter) {
  */
 export const readingRepository = {
   getActiveReading: () => currentAdapter.getActiveReading(),
-  setActiveReading: (reading) => currentAdapter.setActiveReading(reading),
+  setActiveReading: (reading: ReadingPracticeData | null) => currentAdapter.setActiveReading(reading),
   getHistory: () => currentAdapter.getHistory(),
-  saveToHistory: (params) => currentAdapter.saveToHistory(params),
-  deleteFromHistory: (id) => currentAdapter.deleteFromHistory(id),
+  saveToHistory: (params: SaveHistoryParams) => currentAdapter.saveToHistory(params),
+  deleteFromHistory: (id: string) => currentAdapter.deleteFromHistory(id),
   clearHistory: () => currentAdapter.clearHistory(),
 };

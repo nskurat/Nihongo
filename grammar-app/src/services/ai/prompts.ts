@@ -1,3 +1,5 @@
+import { LevelType } from '../../types/japanese';
+
 /**
  * Static Prompt Templates and JSON Schemas for AI Services
  */
@@ -45,7 +47,17 @@ export const READING_PRACTICE_RULES = [
 /**
  * Grammar Example Sentences Prompt Template
  */
-export function getGrammarExamplesPrompt({ title, meaning, structure, level }) {
+export function getGrammarExamplesPrompt({
+  title,
+  meaning,
+  structure,
+  level,
+}: {
+  title: string;
+  meaning: string;
+  structure: string;
+  level: LevelType;
+}) {
   return `Generate 2 new, natural Japanese example sentences for the JLPT ${level} grammar point: "${title}" (Meaning: ${meaning}). Structure: ${structure}.
 
 CRITICAL: Return ONLY a valid JSON array of objects with "jp" and "en" keys. Do NOT include markdown code fences or conversational text.
@@ -59,20 +71,50 @@ Example format:
 /**
  * Grammar Nuance Explanation Prompt Template
  */
-export function getGrammarNuancePrompt({ title, meaning, level }) {
+export function getGrammarNuancePrompt({
+  title,
+  meaning,
+  level,
+}: {
+  title: string;
+  meaning: string;
+  level: LevelType;
+}) {
   return `Act as an expert Japanese linguist. Briefly explain subtle nuances, typical conversational contexts, and common learner traps for "${title}" (${meaning}) at ${level} level. Keep it to one clear, insightful paragraph.`;
 }
 
 /**
  * Vocabulary Usage Help Prompt Template
  */
-export function getVocabHelpPrompt({ word, reading, meaning, level }) {
+export function getVocabHelpPrompt({
+  word,
+  reading,
+  meaning,
+  level,
+}: {
+  word: string;
+  reading: string;
+  meaning: string;
+  level: LevelType;
+}) {
   return `Explain practical usage, common collocations, or register nuances for the Japanese word "${word}" (${reading}, meaning: "${meaning}") for a JLPT ${level} learner. Keep it to 1-2 concise sentences with 1 extra natural sample sentence.`;
 }
 
 /**
  * Kanji Mnemonic Story Prompt Template
  */
-export function getKanjiMnemonicPrompt({ kanji, meaning, radical, readings, level }) {
+export function getKanjiMnemonicPrompt({
+  kanji,
+  meaning,
+  radical,
+  readings,
+  level,
+}: {
+  kanji: string;
+  meaning: string;
+  radical?: string;
+  readings: string;
+  level: LevelType;
+}) {
   return `Create a vivid, easy-to-remember mnemonic story or visual breakdown for the JLPT ${level} Kanji "${kanji}" (Meaning: "${meaning}", ${readings}). Radical: "${radical || 'none'}". Keep the mnemonic hook to 2-3 engaging, memorable sentences.`;
 }

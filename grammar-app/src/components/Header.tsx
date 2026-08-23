@@ -1,6 +1,17 @@
 import React from 'react';
-import { BookOpen, BookText, Sparkles, Eye, EyeOff, Key, GraduationCap, Languages, Bot, BookOpenCheck } from 'lucide-react';
+import { BookOpen, BookText, Eye, EyeOff, GraduationCap, Languages, Bot, BookOpenCheck } from 'lucide-react';
 import { getActiveProviderId, getProvider, getStoredApiKey } from '../services/ai/registry';
+import { LevelType, SectionType } from '../types/japanese';
+
+interface HeaderProps {
+  activeLevel: LevelType;
+  setActiveLevel: (level: LevelType) => void;
+  activeSection: SectionType;
+  setActiveSection: (section: SectionType) => void;
+  showTranslations: boolean;
+  setShowTranslations: (show: boolean) => void;
+  onOpenKeyModal: () => void;
+}
 
 export default function Header({
   activeLevel,
@@ -10,13 +21,13 @@ export default function Header({
   showTranslations,
   setShowTranslations,
   onOpenKeyModal,
-}) {
-  const levels = [
+}: HeaderProps) {
+  const levels: Array<{ id: LevelType; label: string; desc: string }> = [
     { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
     { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
   ];
 
-  const sections = [
+  const sections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
     { id: 'grammar', label: 'Grammar', icon: BookOpen },
     { id: 'vocab', label: 'Vocabulary', icon: BookText },
     { id: 'kanji', label: 'Kanji', icon: Languages },
@@ -51,7 +62,7 @@ export default function Header({
               <button
                 key={lvl.id}
                 onClick={() => setActiveLevel(lvl.id)}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeLevel === lvl.id
                     ? 'bg-white text-indigo-700 shadow-md transform scale-105'
                     : 'text-indigo-200 hover:text-white hover:bg-white/10'
@@ -68,7 +79,7 @@ export default function Header({
         <div className="flex items-center gap-2 w-full md:w-auto justify-end">
           <button
             onClick={onOpenKeyModal}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all cursor-pointer ${
               hasKey
                 ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
                 : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 border-amber-400'
@@ -81,7 +92,7 @@ export default function Header({
 
           <button
             onClick={() => setShowTranslations(!showTranslations)}
-            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-400 shadow-sm"
+            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-400 shadow-sm cursor-pointer"
           >
             {showTranslations ? <EyeOff size={14} /> : <Eye size={14} />}
             <span>{showTranslations ? 'Hide English' : 'Show English'}</span>

@@ -1,17 +1,20 @@
+import { FuriganaToken } from '../../types/japanese';
+import { ReadingPracticeData, ReadingQuestion } from '../../types/ai';
+
 /**
  * Parse bracketed furigana syntax (e.g. 漢字[かんじ] or [漢字](かんじ)) into tokens.
  * Tokens are either { type: 'text', content: '...' } or { type: 'ruby', base: '...', ruby: '...' }
  */
-export function parseFuriganaTokens(text = '') {
+export function parseFuriganaTokens(text = ''): FuriganaToken[] {
   if (!text) return [];
 
   // Match Kanji/Base followed by [furigana] or {base|ruby} or [base](ruby)
   // Standard format: 漢字[かんじ]
   const regex = /([\u4E00-\u9FAF\u3400-\u4DBF々ヶ]+)\[([^\s\]]+)\]|\[([\u4E00-\u9FAF\u3400-\u4DBF々ヶ\w\s]+)\]\(([^)]+)\)|\{([^|]+)\|([^}]+)\}/g;
 
-  const tokens = [];
+  const tokens: FuriganaToken[] = [];
   let lastIndex = 0;
-  let match;
+  let match: RegExpExecArray | null;
 
   while ((match = regex.exec(text)) !== null) {
     // Leading plain text
@@ -51,7 +54,7 @@ export function parseFuriganaTokens(text = '') {
  * Clean and extract JSON string from raw LLM output.
  * Handles code fences (```json ... ```), preambles, and trailing commas.
  */
-export function cleanJsonString(rawText = '') {
+export function cleanJsonString(rawText: string = ''): string {
   if (!rawText || typeof rawText !== 'string') {
     throw new Error('Empty or invalid response from AI model');
   }
@@ -78,20 +81,41 @@ export function cleanJsonString(rawText = '') {
   return text;
 }
 
+interface RawQuestion {
+  id?: number;
+  question?: string;
+  options?: string[];
+  correctIndex?: number | string;
+  explanationJp?: string;
+  explanationEn?: string;
+  explanation?: string;
+}
+
+interface RawReadingResponse {
+  title?: string;
+  titleEn?: string;
+  japaneseText?: string;
+  englishTranslation?: string;
+  vocabulary?: Array<{ word: string; reading: string; meaning: string }>;
+  grammarUsed?: Array<{ pattern: string; note: string }>;
+  questions?: RawQuestion[];
+}
+
 /**
  * Validate and normalize reading practice JSON schema.
  */
-export function parseReadingResponse(rawResponse) {
-  let parsed;
+export function parseReadingResponse(rawResponse: string | RawReadingResponse): ReadingPracticeData {
+  let parsed: RawReadingResponse;
 
   if (typeof rawResponse === 'object' && rawResponse !== null) {
-    parsed = rawResponse;
+    parsed = rawResponse as RawReadingResponse;
   } else {
     const cleanedJson = cleanJsonString(rawResponse);
     try {
       parsed = JSON.parse(cleanedJson);
-    } catch (err) {
-      throw new Error(`Failed to parse AI JSON response: ${err.message}`);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      throw new Error(`Failed to parse AI JSON response: ${message}`);
     }
   }
 
@@ -105,7 +129,7 @@ export function parseReadingResponse(rawResponse) {
     throw new Error('Invalid reading material: "questions" array is missing or empty.');
   }
 
-  const validatedQuestions = parsed.questions.slice(0, 5).map((q, idx) => {
+  const validatedQuestions: ReadingQuestion[] = parsed.questions.slice(0, 5).map((q, idx) => {
     if (!q.question || typeof q.question !== 'string') {
       throw new Error(`Question #${idx + 1} is missing a question prompt.`);
     }
@@ -116,7 +140,6 @@ export function parseReadingResponse(rawResponse) {
 
     let correctIndex = Number(q.correctIndex);
     if (isNaN(correctIndex) || correctIndex < 0 || correctIndex >= q.options.length) {
-      // Fallback to 0 if out of bounds
       correctIndex = 0;
     }
 

@@ -1,7 +1,23 @@
-import React, { useState } from 'react';
-import { LayoutTemplate, ArrowRight, CheckCircle, Info, MessageCircle, Sparkles, Lightbulb, Loader2, Search, Table2, BookOpen } from 'lucide-react';
+import { useState } from 'react';
+import { LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, Search, BookOpen, Layers } from 'lucide-react';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from './MarkdownViewer';
+import { GrammarItem, LevelType } from '../types/japanese';
+import { GrammarExampleSentence } from '../services/ai/registry';
+
+interface GrammarSectionProps {
+  grammarData: Record<number, GrammarItem[]>;
+  activeLesson: number;
+  setActiveLesson: (lesson: number) => void;
+  showTranslations: boolean;
+  onGenerateExamples: (item: GrammarItem) => void;
+  onExplainNuance: (item: GrammarItem) => void;
+  loadingExamples: Record<string | number, boolean>;
+  loadingExplanations: Record<string | number, boolean>;
+  generatedExamples: Record<string | number, GrammarExampleSentence[]>;
+  aiExplanations: Record<string | number, string>;
+  activeLevel: LevelType;
+}
 
 export default function GrammarSection({
   grammarData,
@@ -15,9 +31,9 @@ export default function GrammarSection({
   generatedExamples,
   aiExplanations,
   activeLevel,
-}) {
+}: GrammarSectionProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDetailItem, setSelectedDetailItem] = useState(null);
+  const [selectedDetailItem, setSelectedDetailItem] = useState<GrammarItem | null>(null);
 
   const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
   const currentContent = grammarData[activeLesson] || [];
@@ -56,7 +72,7 @@ export default function GrammarSection({
                 <li key={lesson} className="min-w-fit">
                   <button
                     onClick={() => setActiveLesson(lesson)}
-                    className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm ${
+                    className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
                       activeLesson === lesson
                         ? 'bg-indigo-600 text-white shadow-md font-semibold'
                         : 'text-slate-600 hover:bg-indigo-50 hover:text-indigo-900'
@@ -123,7 +139,6 @@ export default function GrammarSection({
         {/* Empty State */}
         {filteredContent.length === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
-            <Info size={36} className="mx-auto text-slate-400" />
             <h4 className="text-lg font-bold text-slate-700">No grammar patterns found</h4>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
               {searchQuery
@@ -148,136 +163,115 @@ export default function GrammarSection({
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-indigo-950">{item.title}</h3>
                   <p className="text-indigo-600 font-medium mt-1 text-base flex items-center gap-1.5">
-                    <CheckCircle size={16} /> {item.meaning}
+                    {showTranslations ? item.meaning : '••••••••••••'}
                   </p>
                 </div>
               </div>
 
-              {/* Deep Dive Action Button */}
+              {/* View Deep Dive breakdown button */}
               <button
                 onClick={() => setSelectedDetailItem(item)}
-                className="self-start sm:self-center inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-all shadow-2xs hover:shadow-sm"
-                title="View full explanation and conjugation tables"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-lg border border-indigo-200 shadow-2xs transition-all cursor-pointer shrink-0"
               >
-                <Table2 size={14} />
-                <span>{item.details ? 'Deep Dive & Tables' : 'Full Explanation'}</span>
+                <Layers size={14} />
+                <span>Deep Dive</span>
               </button>
             </div>
 
             {/* Card Body */}
-            <div className="p-5 md:p-7 space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 h-full">
-                  <h4 className="font-semibold text-slate-700 mb-2 text-sm flex items-center gap-2">
-                    <Info size={16} className="text-indigo-500" /> Structure / Formula
+            <div className="p-5 space-y-4">
+              {/* Structure Formula */}
+              <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-200/60 px-2 py-0.5 rounded">
+                  Structure
+                </span>
+                <code className="text-sm text-indigo-900 font-bold font-mono tracking-tight">
+                  {item.structure}
+                </code>
+              </div>
+
+              {/* Formatted Markdown Explanation */}
+              <div className="text-slate-600 text-sm leading-relaxed">
+                <MarkdownViewer content={item.details || item.explanation} />
+              </div>
+
+              {/* Static Example Sentences */}
+              {item.examples && item.examples.length > 0 && (
+                <div className="space-y-2 pt-2 border-t border-slate-100">
+                  <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1">
+                    <BookOpen size={13} className="text-indigo-600" /> Examples
                   </h4>
-                  <p className="font-mono text-xs md:text-sm text-slate-900 bg-white p-2.5 border border-slate-200 rounded-lg shadow-2xs">
-                    {item.structure}
-                  </p>
-                </div>
-
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 h-full flex flex-col justify-between">
-                  <div>
-                    <h4 className="font-semibold text-slate-700 mb-2 text-sm flex items-center gap-2">
-                      <MessageCircle size={16} className="text-indigo-500" /> Explanation
-                    </h4>
-                    <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
-                      {item.summary || item.explanation}
-                    </p>
+                  <div className="space-y-2">
+                    {item.examples.map((ex, idx) => (
+                      <div key={idx} className="bg-slate-50/60 p-2.5 rounded-lg border border-slate-100">
+                        <div className="font-bold text-slate-800 text-sm">{ex.jp}</div>
+                        {showTranslations && <div className="text-slate-600 text-xs mt-0.5">{ex.en}</div>}
+                      </div>
+                    ))}
                   </div>
+                </div>
+              )}
 
-                  {item.details && (
-                    <button
-                      onClick={() => setSelectedDetailItem(item)}
-                      className="mt-3 text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1 self-start"
-                    >
-                      <span>View breakdown tables & rules</span>
-                      <ArrowRight size={13} />
-                    </button>
+              {/* AI Generated Sentences if generated */}
+              {generatedExamples[item.id] && generatedExamples[item.id].length > 0 && (
+                <div className="space-y-2 pt-2 border-t border-amber-100 animate-fade-in">
+                  <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider flex items-center gap-1">
+                    <Sparkles size={13} /> AI Practice Examples
+                  </h4>
+                  <div className="space-y-2">
+                    {generatedExamples[item.id].map((ex, idx) => (
+                      <div key={idx} className="bg-amber-50/50 p-2.5 rounded-lg border border-amber-100">
+                        <div className="font-bold text-slate-900 text-sm">{ex.jp}</div>
+                        {showTranslations && <div className="text-slate-600 text-xs mt-0.5">{ex.en}</div>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* AI Controls */}
+              <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => onGenerateExamples(item)}
+                  disabled={loadingExamples[item.id]}
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
+                >
+                  {loadingExamples[item.id] ? (
+                    <Loader2 className="animate-spin" size={14} />
+                  ) : (
+                    <Sparkles size={14} />
                   )}
-                </div>
+                  {loadingExamples[item.id] ? 'Generating...' : 'AI: More Examples'}
+                </button>
+
+                <button
+                  onClick={() => onExplainNuance(item)}
+                  disabled={loadingExplanations[item.id] || !!aiExplanations[item.id]}
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
+                >
+                  {loadingExplanations[item.id] ? (
+                    <Loader2 className="animate-spin" size={14} />
+                  ) : (
+                    <Lightbulb size={14} />
+                  )}
+                  {loadingExplanations[item.id]
+                    ? 'Analyzing...'
+                    : aiExplanations[item.id]
+                    ? 'Nuance Explained'
+                    : 'AI: Explain Nuances'}
+                </button>
               </div>
 
-              {/* Examples */}
-              <div>
-                <h4 className="font-semibold text-slate-800 text-sm mb-3 border-b border-slate-100 pb-2">
-                  Example Sentences
-                </h4>
-                <ul className="space-y-3">
-                  {[...item.examples, ...(generatedExamples[item.id] || [])].map((ex, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-3 p-3.5 hover:bg-slate-50/80 rounded-xl transition-colors group border border-transparent hover:border-slate-200"
-                    >
-                      <div className="text-indigo-400 font-bold mt-0.5 text-xs">
-                        {i >= item.examples.length ? (
-                          <Sparkles size={16} className="text-amber-500" />
-                        ) : (
-                          `${String.fromCharCode(65 + i)}.`
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-base text-slate-900 font-medium tracking-wide">
-                          {ex.jp}
-                        </p>
-                        {showTranslations ? (
-                          <p className="text-slate-600 text-xs md:text-sm mt-1">
-                            {ex.en}
-                          </p>
-                        ) : (
-                          <div className="mt-1.5 h-6 w-full md:w-3/4 bg-slate-100 rounded-md opacity-40 group-hover:opacity-100 transition-opacity flex items-center px-2 text-xs text-slate-400 italic">
-                            Translation hidden (hover to check)
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* AI Interaction Buttons */}
-                <div className="mt-6 flex flex-wrap gap-2.5 border-t border-slate-100 pt-4">
-                  <button
-                    onClick={() => onGenerateExamples(item)}
-                    disabled={loadingExamples[item.id]}
-                    className="flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50"
-                  >
-                    {loadingExamples[item.id] ? (
-                      <Loader2 className="animate-spin" size={14} />
-                    ) : (
-                      <Sparkles size={14} />
-                    )}
-                    {loadingExamples[item.id] ? 'Generating...' : 'AI: More Examples'}
-                  </button>
-
-                  <button
-                    onClick={() => onExplainNuance(item)}
-                    disabled={loadingExplanations[item.id] || aiExplanations[item.id]}
-                    className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50"
-                  >
-                    {loadingExplanations[item.id] ? (
-                      <Loader2 className="animate-spin" size={14} />
-                    ) : (
-                      <Lightbulb size={14} />
-                    )}
-                    {loadingExplanations[item.id]
-                      ? 'Analyzing...'
-                      : aiExplanations[item.id]
-                      ? 'Nuance Explained'
-                      : 'AI: Explain Nuances'}
-                  </button>
+              {/* AI Nuance Explanation Box */}
+              {aiExplanations[item.id] && (
+                <div className="mt-4 bg-gradient-to-r from-indigo-50/70 to-slate-50 p-4 md:p-5 rounded-xl border border-indigo-100 text-slate-700 text-xs md:text-sm leading-relaxed shadow-xs">
+                  <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-900 text-sm">
+                    <Lightbulb size={16} className="text-amber-500" />
+                    Linguist's Note & Nuance
+                  </h5>
+                  <MarkdownViewer content={aiExplanations[item.id]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
                 </div>
-
-                {/* AI Nuance Explanation Box */}
-                {aiExplanations[item.id] && (
-                  <div className="mt-4 bg-gradient-to-r from-indigo-50/70 to-slate-50 p-4 md:p-5 rounded-xl border border-indigo-100 text-slate-700 text-xs md:text-sm leading-relaxed shadow-xs">
-                    <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-900 text-sm">
-                      <Lightbulb size={16} className="text-amber-500" />
-                      Linguist's Note & Nuance
-                    </h5>
-                    <MarkdownViewer content={aiExplanations[item.id]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
-                  </div>
-                )}
-              </div>
+              )}
             </div>
           </div>
         ))}

@@ -1,20 +1,32 @@
-import React, { useEffect } from 'react';
-import { X, BookOpen, Sparkles, Loader2, Info, Lightbulb, Code2 } from 'lucide-react';
+import { useEffect } from 'react';
+import { X, BookOpen, Sparkles, Loader2, Lightbulb, Code2 } from 'lucide-react';
 import MarkdownViewer from './MarkdownViewer';
+import { GrammarItem, LevelType } from '../types/japanese';
+
+interface GrammarDetailModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  item: GrammarItem | null;
+  activeLevel?: LevelType;
+  showTranslations?: boolean;
+  onGenerateExplanation?: (item: GrammarItem) => void;
+  loadingExplanation?: Record<string | number, boolean>;
+  aiExplanation?: Record<string | number, string>;
+}
 
 export default function GrammarDetailModal({
   isOpen,
   onClose,
   item,
-  activeLevel,
+  activeLevel = 'N4',
   showTranslations = true,
   onGenerateExplanation,
-  loadingExplanation,
-  aiExplanation,
-}) {
+  loadingExplanation = {},
+  aiExplanation = {},
+}: GrammarDetailModalProps) {
   // Close on Escape key
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     if (isOpen) {
@@ -39,7 +51,7 @@ export default function GrammarDetailModal({
         <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 relative border-b border-indigo-900/50">
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
+            className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer"
             title="Close modal"
           >
             <X size={18} />
@@ -99,52 +111,43 @@ export default function GrammarDetailModal({
             </div>
           )}
 
-          {/* Note Callout */}
-          {item.note && (
-            <div className="p-4 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
-              <Info size={16} className="text-amber-600 shrink-0 mt-0.5" />
-              <div>
-                <span className="font-bold block mb-0.5">Study Note:</span>
-                {item.note}
-              </div>
+          {/* AI Insights & Nuance in Modal */}
+          {onGenerateExplanation && (
+            <div className="pt-4 border-t border-slate-200">
+              <button
+                onClick={() => onGenerateExplanation(item)}
+                disabled={loadingExplanation[item.id]}
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-xl border border-indigo-200 transition-colors disabled:opacity-50 cursor-pointer"
+              >
+                {loadingExplanation[item.id] ? (
+                  <Loader2 className="animate-spin" size={14} />
+                ) : (
+                  <Sparkles size={14} className="text-indigo-600" />
+                )}
+                {loadingExplanation[item.id]
+                  ? 'Generating AI Nuance & Extra Sentences...'
+                  : aiExplanation[item.id]
+                  ? 'Regenerate AI Nuance Notes'
+                  : 'Ask AI: Explain Nuance & Give Practice Sentences'}
+              </button>
+
+              {aiExplanation[item.id] && (
+                <div className="mt-3 p-4 bg-indigo-50/70 rounded-xl border border-indigo-200/80 text-xs text-indigo-950 space-y-1.5 animate-fade-in leading-relaxed">
+                  <div className="flex items-center gap-1.5 font-bold text-indigo-900 mb-1">
+                    <Lightbulb size={14} className="text-amber-500" /> AI Linguistic Breakdown:
+                  </div>
+                  <MarkdownViewer content={aiExplanation[item.id]} className="text-xs text-indigo-950 leading-relaxed" />
+                </div>
+              )}
             </div>
           )}
-
-          {/* AI Insights & Nuance in Modal */}
-          <div className="pt-4 border-t border-slate-200">
-            <button
-              onClick={() => onGenerateExplanation(item)}
-              disabled={loadingExplanation[item.id]}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-xl border border-indigo-200 transition-colors disabled:opacity-50"
-            >
-              {loadingExplanation[item.id] ? (
-                <Loader2 className="animate-spin" size={14} />
-              ) : (
-                <Sparkles size={14} className="text-indigo-600" />
-              )}
-              {loadingExplanation[item.id]
-                ? 'Generating AI Nuance & Extra Sentences...'
-                : aiExplanation[item.id]
-                ? 'Regenerate AI Nuance Notes'
-                : 'Ask AI: Explain Nuance & Give Practice Sentences'}
-            </button>
-
-            {aiExplanation[item.id] && (
-              <div className="mt-3 p-4 bg-indigo-50/70 rounded-xl border border-indigo-200/80 text-xs text-indigo-950 space-y-1.5 animate-fade-in leading-relaxed">
-                <div className="flex items-center gap-1.5 font-bold text-indigo-900 mb-1">
-                  <Lightbulb size={14} className="text-amber-500" /> AI Linguistic Breakdown:
-                </div>
-                <div className="whitespace-pre-wrap">{aiExplanation[item.id]}</div>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Modal Footer */}
         <div className="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white font-medium text-xs rounded-lg transition-colors"
+            className="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white font-medium text-xs rounded-lg transition-colors cursor-pointer"
           >
             Close Breakdown
           </button>

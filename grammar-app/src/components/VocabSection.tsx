@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { BookText, ArrowRight, Sparkles, Loader2, Search, Info, Volume2, Tag, Bookmark } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { BookText, ArrowRight, Sparkles, Loader2, Search, Info } from 'lucide-react';
 import MarkdownViewer from './MarkdownViewer';
+import { VocabItem, LevelType } from '../types/japanese';
+
+interface VocabSectionProps {
+  vocabData?: Record<number, VocabItem[]>;
+  activeLesson: number;
+  setActiveLesson: (lesson: number) => void;
+  showTranslations: boolean;
+  activeLevel: LevelType;
+  onGenerateVocabHelp: (item: VocabItem) => void;
+  loadingVocabAi: Record<string | number, boolean>;
+  aiVocabNotes: Record<string | number, string>;
+}
 
 export default function VocabSection({
   vocabData = {},
@@ -11,9 +23,8 @@ export default function VocabSection({
   onGenerateVocabHelp,
   loadingVocabAi,
   aiVocabNotes,
-}) {
+}: VocabSectionProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState('cards'); // 'cards' | 'table'
 
   const totalLessons = Object.keys(vocabData).map(Number).sort((a, b) => a - b);
 
@@ -22,7 +33,7 @@ export default function VocabSection({
     if (totalLessons.length > 0 && !vocabData[activeLesson]) {
       setActiveLesson(totalLessons[0]);
     }
-  }, [vocabData, activeLesson, totalLessons.length, setActiveLesson]);
+  }, [vocabData, activeLesson, totalLessons, setActiveLesson]);
 
   const currentVocabList = vocabData[activeLesson] || [];
 
@@ -62,7 +73,7 @@ export default function VocabSection({
                   <li key={lesson} className="min-w-fit">
                     <button
                       onClick={() => setActiveLesson(lesson)}
-                      className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm ${
+                      className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
                         activeLesson === lesson
                           ? 'bg-indigo-600 text-white shadow-md font-semibold'
                           : 'text-slate-600 hover:bg-indigo-50 hover:text-indigo-900'
@@ -137,7 +148,7 @@ export default function VocabSection({
             <p className="text-sm text-slate-500 max-w-md mx-auto">
               {searchQuery
                 ? `No vocabulary matches "${searchQuery}" in Lesson ${activeLesson}.`
-                : `Vocabulary content for Lesson ${activeLesson} is being prepared. Structure is in place and will be updated soon.`}
+                : `Vocabulary content for Lesson ${activeLesson} is being prepared.`}
             </p>
           </div>
         )}
@@ -192,7 +203,7 @@ export default function VocabSection({
                 <button
                   onClick={() => onGenerateVocabHelp(item)}
                   disabled={loadingVocabAi[item.id]}
-                  className="flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-colors border border-emerald-200/60 disabled:opacity-50"
+                  className="flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-colors border border-emerald-200/60 disabled:opacity-50 cursor-pointer"
                 >
                   {loadingVocabAi[item.id] ? (
                     <Loader2 className="animate-spin" size={13} />

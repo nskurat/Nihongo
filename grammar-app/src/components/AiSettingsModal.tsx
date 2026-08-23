@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { KeyRound, ExternalLink, X, ShieldCheck, Sparkles, Check, ChevronRight, Cpu, Bot, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { KeyRound, ExternalLink, X, ShieldCheck, Sparkles, Check, Cpu, Bot, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import {
-  getProviders,
+  getRegisteredProviders,
   getActiveProviderId,
   setActiveProviderId,
   getStoredApiKey,
@@ -10,14 +10,25 @@ import {
   setStoredModel,
   executeAiPrompt,
 } from '../services/ai/registry';
+import { AiProviderId } from '../types/ai';
 
-export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) {
-  const providers = getProviders();
-  const [activeProvider, setActiveProvider] = useState(getActiveProviderId());
-  const [apiKeys, setApiKeys] = useState({});
-  const [selectedModels, setSelectedModels] = useState({});
+interface AiSettingsModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  initialError?: string;
+}
+
+export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: AiSettingsModalProps) {
+  const providers = getRegisteredProviders();
+  const [activeProvider, setActiveProvider] = useState<AiProviderId>(getActiveProviderId());
+  const [apiKeys, setApiKeys] = useState<Record<string, string>>({});
+  const [selectedModels, setSelectedModels] = useState<Record<string, string>>({});
   const [savedSuccess, setSavedSuccess] = useState(false);
-  const [testingStatus, setTestingStatus] = useState({ loading: false, success: null, error: '' });
+  const [testingStatus, setTestingStatus] = useState<{ loading: boolean; success: boolean | null; error: string }>({
+    loading: false,
+    success: null,
+    error: '',
+  });
 
   // Load stored settings on open
   useEffect(() => {
@@ -25,8 +36,8 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
       const currentActive = getActiveProviderId();
       setActiveProvider(currentActive);
 
-      const keys = {};
-      const models = {};
+      const keys: Record<string, string> = {};
+      const models: Record<string, string> = {};
       providers.forEach((p) => {
         keys[p.id] = getStoredApiKey(p.id);
         models[p.id] = getStoredModel(p.id);
@@ -42,15 +53,15 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
 
   const currentProviderConfig = providers.find((p) => p.id === activeProvider) || providers[0];
   const currentKey = apiKeys[activeProvider] || '';
-  const currentModel = selectedModels[activeProvider] || currentProviderConfig.defaultModel;
+  const currentModel = selectedModels[activeProvider] || currentProviderConfig?.models[0]?.id || '';
 
-  const handleKeyChange = (val) => {
+  const handleKeyChange = (val: string) => {
     setApiKeys((prev) => ({ ...prev, [activeProvider]: val }));
     setSavedSuccess(false);
     setTestingStatus({ loading: false, success: null, error: '' });
   };
 
-  const handleModelChange = (val) => {
+  const handleModelChange = (val: string) => {
     setSelectedModels((prev) => ({ ...prev, [activeProvider]: val }));
     setStoredModel(activeProvider, val);
   };
@@ -69,12 +80,10 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
   const handleTestConnection = async () => {
     setTestingStatus({ loading: true, success: null, error: '' });
     try {
-      // Save temporarily to test
       setStoredApiKey(activeProvider, currentKey);
       setStoredModel(activeProvider, currentModel);
 
       const res = await executeAiPrompt('Respond with the word "OK".', {
-        providerId: activeProvider,
         apiKey: currentKey,
         model: currentModel,
       });
@@ -82,11 +91,12 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
       if (res) {
         setTestingStatus({ loading: false, success: true, error: '' });
       }
-    } catch (err) {
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
       setTestingStatus({
         loading: false,
         success: false,
-        error: err.message === 'MISSING_KEY' ? 'Please enter an API key first.' : err.message,
+        error: msg === 'MISSING_KEY' ? 'Please enter an API key first.' : msg,
       });
     }
   };
@@ -114,7 +124,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
           </div>
           <button
             onClick={onClose}
-            className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+            className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -138,7 +148,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
                       setActiveProvider(p.id);
                       setTestingStatus({ loading: false, success: null, error: '' });
                     }}
-                    className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all relative ${
+                    className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all relative cursor-pointer ${
                       isSelected
                         ? 'border-indigo-600 bg-indigo-50/60 shadow-xs ring-2 ring-indigo-600/20'
                         : 'border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50'
@@ -150,7 +160,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
                         <span className="w-2 h-2 rounded-full bg-emerald-500" title="Key configured" />
                       )}
                     </div>
-                    <span className="text-[10px] text-slate-500 line-clamp-1">{p.badge}</span>
+                    <span className="text-[10px] text-slate-500 line-clamp-1">{p.description}</span>
                   </button>
                 );
               })}
@@ -163,21 +173,18 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
               <div>
                 <div className="flex items-center gap-2">
                   <h4 className="font-bold text-slate-900 text-sm">{currentProviderConfig.name}</h4>
-                  <span className="px-2 py-0.5 bg-indigo-100 text-indigo-800 text-[10px] font-semibold rounded-md">
-                    {currentProviderConfig.badge}
-                  </span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                   {currentProviderConfig.description}
                 </p>
               </div>
 
-              {currentProviderConfig.helpUrl && (
+              {currentProviderConfig.website && (
                 <a
-                  href={currentProviderConfig.helpUrl}
+                  href={currentProviderConfig.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600 hover:text-indigo-800 whitespace-nowrap bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-2xs shrink-0"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600 hover:text-indigo-800 whitespace-nowrap bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-2xs shrink-0 cursor-pointer"
                 >
                   <span>Get API Key</span>
                   <ExternalLink size={12} />
@@ -194,7 +201,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
                 <select
                   value={currentModel}
                   onChange={(e) => handleModelChange(e.target.value)}
-                  className="w-full text-xs font-medium bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full text-xs font-medium bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                 >
                   {currentProviderConfig.models.map((m) => (
                     <option key={m.id} value={m.id}>
@@ -215,13 +222,13 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
                   type="password"
                   value={currentKey}
                   onChange={(e) => handleKeyChange(e.target.value)}
-                  placeholder={currentProviderConfig.keyPlaceholder}
+                  placeholder="Paste your API key here..."
                   className="w-full text-xs font-mono bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
             ) : (
               <div className="p-3 bg-emerald-50 rounded-lg border border-emerald-200 text-xs text-emerald-800 font-medium">
-                ✓ No API key required. Connects directly to your local endpoint ({currentProviderConfig.models[0]?.name}).
+                ✓ No API key required. Connects directly.
               </div>
             )}
 
@@ -231,7 +238,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
                 type="button"
                 onClick={handleTestConnection}
                 disabled={testingStatus.loading || (currentProviderConfig.requiresKey && !currentKey)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-300 transition-colors disabled:opacity-40"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-300 transition-colors disabled:opacity-40 cursor-pointer"
               >
                 {testingStatus.loading ? (
                   <Loader2 size={13} className="animate-spin text-indigo-600" />
@@ -272,7 +279,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
               handleKeyChange('');
               setStoredApiKey(activeProvider, '');
             }}
-            className="text-xs text-slate-500 hover:text-rose-600 font-medium px-2 py-1 transition-colors"
+            className="text-xs text-slate-500 hover:text-rose-600 font-medium px-2 py-1 transition-colors cursor-pointer"
           >
             Clear Active Key
           </button>
@@ -280,13 +287,13 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }) 
           <div className="flex gap-2.5">
             <button
               onClick={onClose}
-              className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-medium text-xs rounded-lg border border-slate-200 transition-colors"
+              className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-medium text-xs rounded-lg border border-slate-200 transition-colors cursor-pointer"
             >
               Cancel
             </button>
             <button
               onClick={handleSave}
-              className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg shadow-sm transition-all flex items-center gap-1.5"
+              className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg shadow-sm transition-all flex items-center gap-1.5 cursor-pointer"
             >
               {savedSuccess ? <Check size={14} /> : null}
               {savedSuccess ? 'Saved!' : 'Save & Activate'}

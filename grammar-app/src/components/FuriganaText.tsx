@@ -1,15 +1,17 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { parseFuriganaTokens } from '../services/ai/readingParser';
+
+interface FuriganaTextProps {
+  text?: string;
+  mode?: 'always' | 'hover' | 'off';
+  className?: string;
+}
 
 /**
  * Renders Japanese text with native Furigana Ruby annotations.
  * Keeps Kanji and Kana perfectly aligned on the exact same baseline.
- *
- * @param {string} text - Japanese text containing bracketed readings, e.g. 漢字[かんじ]
- * @param {'always' | 'hover' | 'off'} mode - Furigana display mode
- * @param {string} className - Additional CSS classes
  */
-export default function FuriganaText({ text = '', mode = 'always', className = '' }) {
+export default function FuriganaText({ text = '', mode = 'always', className = '' }: FuriganaTextProps) {
   const tokens = useMemo(() => parseFuriganaTokens(text), [text]);
 
   return (

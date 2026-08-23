@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import GrammarSection from './components/GrammarSection';
 import VocabSection from './components/VocabSection';
@@ -10,7 +10,10 @@ import {
   generateGrammarNuance,
   generateVocabHelp,
   generateKanjiMnemonic,
+  GrammarExampleSentence,
 } from './services/ai/registry';
+import { LevelType, SectionType, GrammarItem, VocabItem, KanjiItem, StudyDataSet } from './types/japanese';
+
 import grammarN3 from './data/n3/grammar.json';
 import vocabN3 from './data/n3/vocab.json';
 import kanjiN3 from './data/n3/kanji.json';
@@ -19,30 +22,30 @@ import grammarN4 from './data/n4/grammar.json';
 import vocabN4 from './data/n4/vocab.json';
 import kanjiN4 from './data/n4/kanji.json';
 
-const studyData = {
+const studyData: Record<LevelType, StudyDataSet> = {
   N3: {
-    grammar: grammarN3,
-    vocab: vocabN3,
-    kanji: kanjiN3,
+    grammar: grammarN3 as unknown as Record<number, GrammarItem[]>,
+    vocab: vocabN3 as unknown as Record<number, VocabItem[]>,
+    kanji: kanjiN3 as unknown as Record<number, KanjiItem[]>,
   },
   N4: {
-    grammar: grammarN4,
-    vocab: vocabN4,
-    kanji: kanjiN4,
+    grammar: grammarN4 as unknown as Record<number, GrammarItem[]>,
+    vocab: vocabN4 as unknown as Record<number, VocabItem[]>,
+    kanji: kanjiN4 as unknown as Record<number, KanjiItem[]>,
   },
 };
 
 // Helper to parse URL path/params/hash on load
-const getInitialState = () => {
+const getInitialState = (): { level: LevelType; section: SectionType; lesson: number } => {
   try {
     const pathname = window.location.pathname.toLowerCase();
     const params = new URLSearchParams(window.location.search);
     const hash = window.location.hash.replace('#', '').toLowerCase();
 
-    let level = params.get('level')?.toUpperCase();
+    let level: LevelType = (params.get('level')?.toUpperCase() as LevelType) || 'N3';
     if (level !== 'N3' && level !== 'N4') level = 'N3';
 
-    let section = 'grammar';
+    let section: SectionType = 'grammar';
     if (pathname.includes('/vocab') || params.get('section') === 'vocab' || hash === 'vocab') {
       section = 'vocab';
     } else if (pathname.includes('/kanji') || params.get('section') === 'kanji' || hash === 'kanji') {
@@ -53,7 +56,7 @@ const getInitialState = () => {
       section = 'grammar';
     }
 
-    let lesson = parseInt(params.get('lesson'), 10);
+    let lesson = parseInt(params.get('lesson') || '', 10);
     if (isNaN(lesson)) lesson = level === 'N4' ? 26 : 1;
 
     return { level, section, lesson };
@@ -66,10 +69,10 @@ export default function App() {
   const initial = getInitialState();
 
   // Navigation & Level State
-  const [activeLevel, setActiveLevel] = useState(initial.level); // 'N3' | 'N4'
-  const [activeSection, setActiveSection] = useState(initial.section); // 'grammar' | 'vocab' | 'kanji'
-  const [activeLesson, setActiveLesson] = useState(initial.lesson);
-  const [showTranslations, setShowTranslations] = useState(true);
+  const [activeLevel, setActiveLevel] = useState<LevelType>(initial.level);
+  const [activeSection, setActiveSection] = useState<SectionType>(initial.section);
+  const [activeLesson, setActiveLesson] = useState<number>(initial.lesson);
+  const [showTranslations, setShowTranslations] = useState<boolean>(true);
 
   // Synchronize active lesson when level changes
   useEffect(() => {
@@ -78,7 +81,7 @@ export default function App() {
     } else if (activeLevel === 'N3' && activeLesson > 24) {
       setActiveLesson(1);
     }
-  }, [activeLevel]);
+  }, [activeLevel, activeLesson]);
 
   // Sync state to URL params for clean bookmarking & sharing
   useEffect(() => {
@@ -86,29 +89,29 @@ export default function App() {
       const url = new URL(window.location.href);
       url.searchParams.set('level', activeLevel);
       url.searchParams.set('section', activeSection);
-      url.searchParams.set('lesson', activeLesson);
+      url.searchParams.set('lesson', String(activeLesson));
       window.history.replaceState(null, '', url.toString());
-    } catch (e) {
+    } catch {
       // Ignore if in restricted environment
     }
   }, [activeLevel, activeSection, activeLesson]);
 
   // AI & Generation States
-  const [generatedExamples, setGeneratedExamples] = useState({});
-  const [loadingExamples, setLoadingExamples] = useState({});
-  const [aiExplanations, setAiExplanations] = useState({});
-  const [loadingExplanations, setLoadingExplanations] = useState({});
-  const [loadingVocabAi, setLoadingVocabAi] = useState({});
-  const [aiVocabNotes, setAiVocabNotes] = useState({});
-  const [loadingKanjiAi, setLoadingKanjiAi] = useState({});
-  const [aiKanjiMnemonics, setAiKanjiMnemonics] = useState({});
+  const [generatedExamples, setGeneratedExamples] = useState<Record<string | number, GrammarExampleSentence[]>>({});
+  const [loadingExamples, setLoadingExamples] = useState<Record<string | number, boolean>>({});
+  const [aiExplanations, setAiExplanations] = useState<Record<string | number, string>>({});
+  const [loadingExplanations, setLoadingExplanations] = useState<Record<string | number, boolean>>({});
+  const [loadingVocabAi, setLoadingVocabAi] = useState<Record<string | number, boolean>>({});
+  const [aiVocabNotes, setAiVocabNotes] = useState<Record<string | number, string>>({});
+  const [loadingKanjiAi, setLoadingKanjiAi] = useState<Record<string | number, boolean>>({});
+  const [aiKanjiMnemonics, setAiKanjiMnemonics] = useState<Record<string | number, string>>({});
 
   // AI Settings Modal & Error State
-  const [showKeyModal, setShowKeyModal] = useState(false);
-  const [apiError, setApiError] = useState('');
+  const [showKeyModal, setShowKeyModal] = useState<boolean>(false);
+  const [apiError, setApiError] = useState<string>('');
 
   // AI Handler: Grammar Examples
-  const handleGenerateExamples = async (grammar) => {
+  const handleGenerateExamples = async (grammar: GrammarItem) => {
     setLoadingExamples((prev) => ({ ...prev, [grammar.id]: true }));
     try {
       const newExamples = await generateGrammarExamples({ grammar, level: activeLevel });
@@ -119,11 +122,12 @@ export default function App() {
         }));
         setApiError('');
       }
-    } catch (error) {
-      if (error.message === 'MISSING_KEY') {
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : String(error);
+      if (msg === 'MISSING_KEY') {
         setShowKeyModal(true);
       } else {
-        setApiError(error.message);
+        setApiError(msg);
         console.error('Failed to generate examples:', error);
       }
     } finally {
@@ -132,7 +136,7 @@ export default function App() {
   };
 
   // AI Handler: Grammar Nuance
-  const handleExplainNuance = async (grammar) => {
+  const handleExplainNuance = async (grammar: GrammarItem) => {
     setLoadingExplanations((prev) => ({ ...prev, [grammar.id]: true }));
     try {
       const text = await generateGrammarNuance({ grammar, level: activeLevel });
@@ -143,11 +147,12 @@ export default function App() {
         }));
         setApiError('');
       }
-    } catch (error) {
-      if (error.message === 'MISSING_KEY') {
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : String(error);
+      if (msg === 'MISSING_KEY') {
         setShowKeyModal(true);
       } else {
-        setApiError(error.message);
+        setApiError(msg);
         console.error('Failed to fetch explanation:', error);
       }
     } finally {
@@ -156,7 +161,7 @@ export default function App() {
   };
 
   // AI Handler: Vocabulary Usage Note
-  const handleGenerateVocabHelp = async (vocab) => {
+  const handleGenerateVocabHelp = async (vocab: VocabItem) => {
     setLoadingVocabAi((prev) => ({ ...prev, [vocab.id]: true }));
     try {
       const text = await generateVocabHelp({ vocab, level: activeLevel });
@@ -167,11 +172,12 @@ export default function App() {
         }));
         setApiError('');
       }
-    } catch (error) {
-      if (error.message === 'MISSING_KEY') {
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : String(error);
+      if (msg === 'MISSING_KEY') {
         setShowKeyModal(true);
       } else {
-        setApiError(error.message);
+        setApiError(msg);
         console.error('Failed to generate vocab help:', error);
       }
     } finally {
@@ -180,7 +186,7 @@ export default function App() {
   };
 
   // AI Handler: Kanji Mnemonic
-  const handleGenerateKanjiMnemonic = async (kanjiItem) => {
+  const handleGenerateKanjiMnemonic = async (kanjiItem: KanjiItem) => {
     setLoadingKanjiAi((prev) => ({ ...prev, [kanjiItem.id]: true }));
     try {
       const text = await generateKanjiMnemonic({ kanji: kanjiItem, level: activeLevel });
@@ -191,11 +197,12 @@ export default function App() {
         }));
         setApiError('');
       }
-    } catch (error) {
-      if (error.message === 'MISSING_KEY') {
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : String(error);
+      if (msg === 'MISSING_KEY') {
         setShowKeyModal(true);
       } else {
-        setApiError(error.message);
+        setApiError(msg);
         console.error('Failed to generate kanji mnemonic:', error);
       }
     } finally {

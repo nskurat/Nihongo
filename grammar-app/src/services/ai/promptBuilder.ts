@@ -1,3 +1,4 @@
+import { LevelType, GrammarItem, VocabItem } from '../../types/japanese';
 import {
   READING_PRACTICE_SYSTEM_PROMPT,
   READING_PRACTICE_RULES,
@@ -7,7 +8,12 @@ import {
 /**
  * Builds the contextual instruction section for a specific lesson or general level.
  */
-function buildContextBlock(level, lesson, grammarList, vocabList) {
+function buildContextBlock(
+  level: LevelType,
+  lesson: number | null,
+  grammarList: GrammarItem[],
+  vocabList: VocabItem[]
+): string {
   if (!lesson) {
     return `TARGET LEVEL: JLPT ${level} General Reading Practice\n- Keep sentence structures, vocabulary, and kanji aligned with JLPT ${level} proficiency.`;
   }
@@ -29,6 +35,14 @@ function buildContextBlock(level, lesson, grammarList, vocabList) {
   ].join('\n');
 }
 
+export interface BuildReadingPromptParams {
+  level?: LevelType;
+  lesson?: number | null;
+  topic?: string;
+  grammarList?: GrammarItem[];
+  vocabList?: VocabItem[];
+}
+
 /**
  * Assembles the full structured prompt for reading practice generation.
  */
@@ -38,7 +52,7 @@ export function buildReadingPracticePrompt({
   topic = 'Daily Life & Culture',
   grammarList = [],
   vocabList = [],
-}) {
+}: BuildReadingPromptParams): string {
   const context = buildContextBlock(level, lesson, grammarList, vocabList);
 
   return [
