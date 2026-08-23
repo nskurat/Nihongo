@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LayoutTemplate, ArrowRight, CheckCircle, Info, MessageCircle, Sparkles, Lightbulb, Loader2, Search, Table2, BookOpen } from 'lucide-react';
 import GrammarDetailModal from './GrammarDetailModal';
+import MarkdownViewer from './MarkdownViewer';
 
 export default function GrammarSection({
   grammarData,
@@ -269,11 +270,11 @@ export default function GrammarSection({
                 {/* AI Nuance Explanation Box */}
                 {aiExplanations[item.id] && (
                   <div className="mt-4 bg-gradient-to-r from-indigo-50/70 to-slate-50 p-4 md:p-5 rounded-xl border border-indigo-100 text-slate-700 text-xs md:text-sm leading-relaxed shadow-xs">
-                    <h5 className="font-bold flex items-center gap-2 mb-1.5 text-indigo-900 text-sm">
+                    <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-900 text-sm">
                       <Lightbulb size={16} className="text-amber-500" />
                       Linguist's Note & Nuance
                     </h5>
-                    {aiExplanations[item.id]}
+                    <MarkdownViewer content={aiExplanations[item.id]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
                   </div>
                 )}
               </div>

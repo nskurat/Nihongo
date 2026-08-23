@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BookText, ArrowRight, Sparkles, Loader2, Search, Info, Volume2, Tag, Bookmark } from 'lucide-react';
+import MarkdownViewer from './MarkdownViewer';
 
 export default function VocabSection({
   vocabData = {},
@@ -203,9 +204,9 @@ export default function VocabSection({
               </div>
 
               {aiVocabNotes[item.id] && (
-                <div className="mt-3 bg-emerald-50/70 p-3 rounded-lg border border-emerald-100 text-xs text-slate-700 leading-relaxed animate-fade-in">
+                <div className="mt-3 bg-emerald-50/70 p-3.5 rounded-lg border border-emerald-100 text-xs text-slate-700 leading-relaxed animate-fade-in">
                   <span className="font-bold text-emerald-900 block mb-1">AI Note:</span>
-                  {aiVocabNotes[item.id]}
+                  <MarkdownViewer content={aiVocabNotes[item.id]} className="text-xs text-slate-700 leading-relaxed" />
                 </div>
               )}
             </div>

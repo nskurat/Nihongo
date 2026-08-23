@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Sparkles, Loader2, Info, Layers, Hash, Languages, ArrowRight, ExternalLink } from 'lucide-react';
+import MarkdownViewer from './MarkdownViewer';
 
 export default function KanjiSection({
   kanjiData = {},
@@ -282,9 +283,9 @@ export default function KanjiSection({
                 </button>
 
                 {aiKanjiMnemonics[item.id] && (
-                  <div className="mt-3 bg-amber-50 p-3 rounded-lg border border-amber-200/70 text-xs text-amber-900 leading-relaxed animate-fade-in">
-                    <span className="font-bold block mb-1">Mnemonic Hook:</span>
-                    {aiKanjiMnemonics[item.id]}
+                  <div className="mt-3 bg-amber-50 p-3.5 rounded-lg border border-amber-200/70 text-xs text-amber-900 leading-relaxed animate-fade-in">
+                    <span className="font-bold block mb-1 text-amber-950">Mnemonic Hook:</span>
+                    <MarkdownViewer content={aiKanjiMnemonics[item.id]} className="text-xs text-amber-900 leading-relaxed" />
                   </div>
                 )}
               </div>
