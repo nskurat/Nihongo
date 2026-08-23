@@ -1,27 +1,30 @@
 import React from 'react';
 import { BookOpen, BookText, Eye, EyeOff, GraduationCap, Languages, Bot, BookOpenCheck } from 'lucide-react';
-import { getActiveProviderId, getProvider, getStoredApiKey } from '../services/ai/registry';
-import { LevelType, SectionType } from '../types/japanese';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getActiveProviderId, getProvider, getStoredApiKey } from '../../services/ai/registry';
+import { LevelType, SectionType } from '../../types/japanese';
+import { useAppStore } from '../../store/useAppStore';
+import { useAiUiStore } from '../../store/useAiStore';
 
-interface HeaderProps {
-  activeLevel: LevelType;
-  setActiveLevel: (level: LevelType) => void;
-  activeSection: SectionType;
-  setActiveSection: (section: SectionType) => void;
-  showTranslations: boolean;
-  setShowTranslations: (show: boolean) => void;
-  onOpenKeyModal: () => void;
-}
+export default function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const { showTranslations, setShowTranslations } = useAppStore();
+  const { setShowKeyModal } = useAiUiStore();
 
-export default function Header({
-  activeLevel,
-  setActiveLevel,
-  activeSection,
-  setActiveSection,
-  showTranslations,
-  setShowTranslations,
-  onOpenKeyModal,
-}: HeaderProps) {
+  // Extract route parameters directly from location.pathname
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const rawLevel = pathSegments[0]?.toUpperCase();
+  const rawSection = pathSegments[1]?.toLowerCase();
+  const rawLesson = pathSegments[2];
+
+  const activeLevel: LevelType = rawLevel === 'N4' ? 'N4' : 'N3';
+  const activeSection: SectionType = (['grammar', 'vocab', 'kanji', 'reading'].includes(rawSection)
+    ? rawSection
+    : 'grammar') as SectionType;
+  const activeLesson = rawLesson || (activeLevel === 'N4' ? '26' : '1');
+
   const levels: Array<{ id: LevelType; label: string; desc: string }> = [
     { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
     { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
@@ -36,6 +39,19 @@ export default function Header({
 
   const provider = getProvider(getActiveProviderId());
   const hasKey = !provider.requiresKey || !!getStoredApiKey(provider.id);
+
+  const handleLevelChange = (newLevel: LevelType) => {
+    // When switching levels, default to their starting lesson if current isn't valid for new level
+    let newLesson = parseInt(activeLesson, 10);
+    if (newLevel === 'N4' && newLesson < 26) newLesson = 26;
+    if (newLevel === 'N3' && newLesson > 24) newLesson = 1;
+    
+    navigate(`/${newLevel.toLowerCase()}/${activeSection}/${newLesson}`);
+  };
+
+  const handleSectionChange = (newSection: SectionType) => {
+    navigate(`/${activeLevel.toLowerCase()}/${newSection}/${activeLesson}`);
+  };
 
   return (
     <header className="bg-indigo-600 text-white shadow-lg sticky top-0 z-20 transition-all">
@@ -61,7 +77,7 @@ export default function Header({
             {levels.map((lvl) => (
               <button
                 key={lvl.id}
-                onClick={() => setActiveLevel(lvl.id)}
+                onClick={() => handleLevelChange(lvl.id)}
                 className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeLevel === lvl.id
                     ? 'bg-white text-indigo-700 shadow-md transform scale-105'
@@ -78,7 +94,7 @@ export default function Header({
         {/* Action Controls */}
         <div className="flex items-center gap-2 w-full md:w-auto justify-end">
           <button
-            onClick={onOpenKeyModal}
+            onClick={() => setShowKeyModal(true)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all cursor-pointer ${
               hasKey
                 ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
@@ -108,7 +124,7 @@ export default function Header({
           return (
             <button
               key={sec.id}
-              onClick={() => setActiveSection(sec.id)}
+              onClick={() => handleSectionChange(sec.id)}
               className={`flex items-center gap-2 px-5 py-2.5 font-semibold text-sm border-b-2 transition-all cursor-pointer whitespace-nowrap ${
                 isActive
                   ? 'border-white text-white bg-white/10 rounded-t-lg'

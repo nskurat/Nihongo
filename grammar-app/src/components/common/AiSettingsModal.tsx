@@ -9,8 +9,8 @@ import {
   getStoredModel,
   setStoredModel,
   executeAiPrompt,
-} from '../services/ai/registry';
-import { AiProviderId } from '../types/ai';
+} from '../../services/ai/registry';
+import { AiProvider, AiProviderId } from '../../types/ai';
 
 interface AiSettingsModalProps {
   isOpen: boolean;
@@ -38,7 +38,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
 
       const keys: Record<string, string> = {};
       const models: Record<string, string> = {};
-      providers.forEach((p) => {
+      providers.forEach((p: AiProvider) => {
         keys[p.id] = getStoredApiKey(p.id);
         models[p.id] = getStoredModel(p.id);
       });
@@ -138,7 +138,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
               Select Active AI Provider
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-              {providers.map((p) => {
+              {providers.map((p: AiProvider) => {
                 const isSelected = activeProvider === p.id;
                 const hasKey = !!apiKeys[p.id] || !p.requiresKey;
                 return (
@@ -203,7 +203,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
                   onChange={(e) => handleModelChange(e.target.value)}
                   className="w-full text-xs font-medium bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                 >
-                  {currentProviderConfig.models.map((m) => (
+                  {currentProviderConfig.models.map((m: any) => (
                     <option key={m.id} value={m.id}>
                       {m.name}
                     </option>

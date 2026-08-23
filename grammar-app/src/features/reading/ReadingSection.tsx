@@ -25,11 +25,13 @@ import {
   BookMarked,
   BookOpen,
 } from 'lucide-react';
-import FuriganaText from './FuriganaText';
-import { generateReadingPractice, getActiveProviderId, getProvider } from '../services/ai/registry';
-import { readingRepository } from '../services/ai/readingStorage';
-import { GrammarItem, VocabItem, LevelType } from '../types/japanese';
-import { ReadingPracticeData, ReadingHistoryEntry } from '../types/ai';
+import FuriganaText from '../../components/common/FuriganaText';
+import { generateReadingPractice, getActiveProviderId, getProvider } from '../../services/ai/registry';
+import { readingRepository } from '../../services/ai/readingStorage';
+import { stripFurigana } from '../../services/ai/readingParser';
+import { GrammarItem, VocabItem, LevelType } from '../../types/japanese';
+import { ReadingPracticeData, ReadingHistoryEntry } from '../../types/ai';
+import { useAiUiStore } from '../../store/useAiStore';
 
 const PRESET_TOPICS = [
   { id: 'daily', label: '☕ Daily Life & Routine', value: 'Daily Life, Morning Routine, and Hobbies in Japan' },
@@ -44,15 +46,14 @@ interface ReadingSectionProps {
   activeLevel?: LevelType;
   grammarData?: Record<number, GrammarItem[]>;
   vocabData?: Record<number, VocabItem[]>;
-  onOpenKeyModal: () => void;
 }
 
 export default function ReadingSection({
   activeLevel = 'N4',
   grammarData = {},
   vocabData = {},
-  onOpenKeyModal,
 }: ReadingSectionProps) {
+  const { setShowKeyModal } = useAiUiStore();
   // Navigation tabs inside reading section: 'studio' | 'library'
   const [activeTab, setActiveTab] = useState<'studio' | 'library'>('studio');
 
@@ -176,7 +177,7 @@ export default function ReadingSection({
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       if (msg === 'MISSING_KEY') {
-        onOpenKeyModal();
+        setShowKeyModal(true);
       } else {
         setError(msg || 'Failed to generate reading practice.');
       }
@@ -207,7 +208,7 @@ export default function ReadingSection({
   // Score computation for Studio
   const questions = readingData?.questions || [];
   const answeredCount = Object.keys(userAnswers).length;
-  const correctCount = questions.filter((q) => userAnswers[q.id] === q.correctIndex).length;
+  const correctCount = questions.filter((q: any) => userAnswers[q.id] === q.correctIndex).length;
 
   // Filtered Library calculation
   const filteredLibrary = savedHistory.filter((item) => {
@@ -497,7 +498,7 @@ export default function ReadingSection({
                               <Tag size={13} className="text-emerald-600" /> Key Vocabulary
                             </h5>
                             <div className="space-y-1.5">
-                              {readingData.vocabulary.map((voc, idx) => (
+                              {readingData.vocabulary.map((voc: any, idx: number) => (
                                 <div
                                   key={idx}
                                   className="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-200 text-xs"
@@ -520,7 +521,7 @@ export default function ReadingSection({
                               <Layers size={13} className="text-indigo-600" /> Grammar In Use
                             </h5>
                             <div className="space-y-1.5">
-                              {readingData.grammarUsed.map((g, idx) => (
+                              {readingData.grammarUsed.map((g: any, idx: number) => (
                                 <div
                                   key={idx}
                                   className="bg-white p-2.5 rounded-lg border border-slate-200 text-xs space-y-0.5"
@@ -561,7 +562,7 @@ export default function ReadingSection({
                 </div>
 
                 <div className="space-y-6">
-                  {questions.map((q, qIdx) => {
+                  {questions.map((q: any, qIdx: number) => {
                     const chosenOption = userAnswers[q.id];
                     const isAnswered = chosenOption !== undefined;
                     const isCorrect = chosenOption === q.correctIndex;
@@ -591,7 +592,7 @@ export default function ReadingSection({
 
                         {/* Options */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                          {q.options.map((opt, optIdx) => {
+                          {q.options.map((opt: string, optIdx: number) => {
                             const isChosen = chosenOption === optIdx;
                             const isThisCorrect = optIdx === q.correctIndex;
 
@@ -797,75 +798,97 @@ export default function ReadingSection({
 
           {/* Story Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filteredLibrary.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setModalStory(item)}
-                className="bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all p-5 flex flex-col justify-between cursor-pointer group relative overflow-hidden"
-              >
-                <div className="space-y-3">
-                  {/* Card Header & Badges */}
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 text-[10px] font-bold rounded-md uppercase">
-                        {item.level}
-                      </span>
-                      {item.lesson && (
-                        <span className="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-semibold rounded-md">
-                          Lesson {item.lesson}
+            {filteredLibrary.map((item) => {
+              const cleanJpTitle = stripFurigana(item.data?.title) || '日本語の物語';
+              const cleanSnippet = stripFurigana(item.data?.japaneseText || '').slice(0, 110);
+
+              return (
+                <div
+                  key={item.id}
+                  onClick={() => setModalStory(item)}
+                  className="bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all p-5 flex flex-col justify-between cursor-pointer group relative"
+                >
+                  <div className="space-y-3.5">
+                    {/* Header & Badges */}
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <span
+                          className={`px-2.5 py-0.5 text-xs font-bold rounded-lg ${
+                            item.level === 'N3'
+                              ? 'bg-purple-100 text-purple-800 border border-purple-200/80'
+                              : 'bg-indigo-100 text-indigo-800 border border-indigo-200/80'
+                          }`}
+                        >
+                          JLPT {item.level}
                         </span>
-                      )}
+                        {item.lesson ? (
+                          <span className="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">
+                            Lesson {item.lesson}
+                          </span>
+                        ) : (
+                          <span className="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs font-medium rounded-lg">
+                            General
+                          </span>
+                        )}
+                      </div>
+
+                      <button
+                        onClick={(e) => handleDeleteHistoryItem(item.id, e)}
+                        className="text-slate-300 hover:text-rose-600 hover:bg-rose-50 p-1.5 rounded-lg transition-colors cursor-pointer"
+                        title="Delete Story"
+                      >
+                        <Trash2 size={15} />
+                      </button>
                     </div>
 
-                    <button
-                      onClick={(e) => handleDeleteHistoryItem(item.id, e)}
-                      className="text-slate-300 hover:text-rose-600 p-1 rounded-lg transition-colors cursor-pointer"
-                      title="Delete Story"
-                    >
-                      <Trash2 size={13} />
-                    </button>
-                  </div>
+                    {/* Titles: Japanese & English */}
+                    <div className="space-y-1">
+                      <h4 className="font-extrabold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors leading-snug tracking-tight">
+                        {cleanJpTitle}
+                      </h4>
 
-                  {/* Title & Preview */}
-                  <div>
-                    <h4 className="font-extrabold text-slate-900 text-base group-hover:text-indigo-600 transition-colors line-clamp-2 leading-snug">
-                      <FuriganaText text={item.data?.title} mode="always" />
-                    </h4>
-                    {item.data?.titleEn && (
-                      <p className="text-xs text-slate-400 mt-1 italic line-clamp-1">
-                        {item.data.titleEn}
+                      {item.data?.titleEn ? (
+                        <p className="text-xs font-semibold text-indigo-700 bg-indigo-50/80 px-2.5 py-1 rounded-lg border border-indigo-100/80 inline-block">
+                          {item.data.titleEn}
+                        </p>
+                      ) : item.topic ? (
+                        <p className="text-xs font-medium text-slate-500 italic line-clamp-1">
+                          {item.topic}
+                        </p>
+                      ) : null}
+                    </div>
+
+                    {/* Clean Japanese Snippet */}
+                    <div className="bg-slate-50/80 p-3 rounded-xl border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                      <p className="line-clamp-3">
+                        {cleanSnippet}...
                       </p>
-                    )}
+                    </div>
                   </div>
 
-                  {/* Snippet */}
-                  <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
-                    <FuriganaText text={item.data?.japaneseText?.slice(0, 120) + '...'} mode="always" />
-                  </p>
-                </div>
+                  {/* Footer Metadata & Actions */}
+                  <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <div className="flex items-center gap-1.5 text-slate-400 font-medium text-[11px]">
+                      <Clock size={12} />
+                      <span>{new Date(item.timestamp).toLocaleDateString()}</span>
+                    </div>
 
-                {/* Footer Metadata & CTA */}
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1 text-[11px] text-slate-400">
-                    <Clock size={11} />
-                    <span>{new Date(item.timestamp).toLocaleDateString()}</span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleLoadIntoStudio(item);
-                      }}
-                      className="px-2.5 py-1 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-[11px] rounded-lg transition-colors cursor-pointer"
-                      title="Load into Studio for full interactive practice & quiz"
-                    >
-                      Practice in Studio
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleLoadIntoStudio(item);
+                        }}
+                        className="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-xs rounded-xl border border-indigo-200 hover:border-indigo-600 transition-all cursor-pointer shadow-2xs"
+                        title="Load into Studio for full interactive practice & quiz"
+                      >
+                        Practice in Studio
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
@@ -939,7 +962,7 @@ export default function ReadingSection({
                 </h4>
 
                 <div className="space-y-4">
-                  {modalStory.data?.questions?.map((q, idx) => {
+                  {modalStory.data?.questions?.map((q: any, idx: number) => {
                     const sel = modalUserAnswers[q.id];
                     const isAns = sel !== undefined;
                     const isCorr = sel === q.correctIndex;
@@ -956,7 +979,7 @@ export default function ReadingSection({
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {q.options.map((opt, optI) => {
+                          {q.options.map((opt: string, optI: number) => {
                             let style = 'bg-slate-50 border-slate-200 hover:bg-indigo-50 text-slate-800';
                             if (isAns) {
                               if (optI === q.correctIndex) style = 'bg-emerald-100 border-emerald-500 text-emerald-950 font-bold';

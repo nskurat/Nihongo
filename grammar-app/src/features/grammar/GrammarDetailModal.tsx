@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { X, BookOpen, Sparkles, Loader2, Lightbulb, Code2 } from 'lucide-react';
-import MarkdownViewer from './MarkdownViewer';
-import { GrammarItem, LevelType } from '../types/japanese';
+import MarkdownViewer from '../../components/common/MarkdownViewer';
+import { GrammarItem, LevelType } from '../../types/japanese';
 
 interface GrammarDetailModalProps {
   isOpen: boolean;
@@ -96,7 +96,7 @@ export default function GrammarDetailModal({
                 <BookOpen size={14} className="text-indigo-600" /> Contextual Examples
               </h4>
               <div className="space-y-2.5">
-                {item.examples.map((ex, idx) => (
+                {item.examples.map((ex: { jp: string; en: string }, idx: number) => (
                   <div
                     key={idx}
                     className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 space-y-1"

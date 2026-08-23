@@ -1,52 +1,36 @@
-import { useState } from 'react';
 import { LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, Search, BookOpen, Layers } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
-import MarkdownViewer from './MarkdownViewer';
-import { GrammarItem, LevelType } from '../types/japanese';
-import { GrammarExampleSentence } from '../services/ai/registry';
+import MarkdownViewer from '../../components/common/MarkdownViewer';
+import { LevelType } from '../../types/japanese';
+import { useGrammar } from './useGrammar';
+import { useAppStore } from '../../store/useAppStore';
 
 interface GrammarSectionProps {
-  grammarData: Record<number, GrammarItem[]>;
-  activeLesson: number;
-  setActiveLesson: (lesson: number) => void;
-  showTranslations: boolean;
-  onGenerateExamples: (item: GrammarItem) => void;
-  onExplainNuance: (item: GrammarItem) => void;
-  loadingExamples: Record<string | number, boolean>;
-  loadingExplanations: Record<string | number, boolean>;
-  generatedExamples: Record<string | number, GrammarExampleSentence[]>;
-  aiExplanations: Record<string | number, string>;
   activeLevel: LevelType;
+  activeLesson: number;
 }
 
-export default function GrammarSection({
-  grammarData,
-  activeLesson,
-  setActiveLesson,
-  showTranslations,
-  onGenerateExamples,
-  onExplainNuance,
-  loadingExamples,
-  loadingExplanations,
-  generatedExamples,
-  aiExplanations,
-  activeLevel,
-}: GrammarSectionProps) {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDetailItem, setSelectedDetailItem] = useState<GrammarItem | null>(null);
-
-  const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
-  const currentContent = grammarData[activeLesson] || [];
-
-  // Filter grammar points if search is active
-  const filteredContent = searchQuery.trim()
-    ? currentContent.filter(
-        (item) =>
-          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.meaning.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.structure.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : currentContent;
+export default function GrammarSection({ activeLevel, activeLesson }: GrammarSectionProps) {
+  const navigate = useNavigate();
+  const { showTranslations } = useAppStore();
+  
+  const {
+    searchQuery,
+    setSearchQuery,
+    selectedDetailItem,
+    setSelectedDetailItem,
+    totalLessons,
+    currentLevelData,
+    filteredContent,
+    currentContent,
+    handleGenerateExamples,
+    handleExplainNuance,
+    generatedExamples,
+    aiExplanations,
+    loadingExamples,
+    loadingExplanations,
+  } = useGrammar(activeLevel, activeLesson);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in">
@@ -67,11 +51,11 @@ export default function GrammarSection({
 
           <ul className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-indigo-200">
             {totalLessons.map((lesson) => {
-              const count = (grammarData[lesson] || []).length;
+              const count = (currentLevelData[lesson] || []).length;
               return (
                 <li key={lesson} className="min-w-fit">
                   <button
-                    onClick={() => setActiveLesson(lesson)}
+                    onClick={() => navigate(`/${activeLevel.toLowerCase()}/grammar/${lesson}`)}
                     className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
                       activeLesson === lesson
                         ? 'bg-indigo-600 text-white shadow-md font-semibold'
@@ -232,7 +216,7 @@ export default function GrammarSection({
               {/* AI Controls */}
               <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
                 <button
-                  onClick={() => onGenerateExamples(item)}
+                  onClick={() => handleGenerateExamples(item)}
                   disabled={loadingExamples[item.id]}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
                 >
@@ -245,7 +229,7 @@ export default function GrammarSection({
                 </button>
 
                 <button
-                  onClick={() => onExplainNuance(item)}
+                  onClick={() => handleExplainNuance(item)}
                   disabled={loadingExplanations[item.id] || !!aiExplanations[item.id]}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
                 >
@@ -285,7 +269,7 @@ export default function GrammarSection({
           item={selectedDetailItem}
           activeLevel={activeLevel}
           showTranslations={showTranslations}
-          onGenerateExplanation={onExplainNuance}
+          onGenerateExplanation={handleExplainNuance}
           loadingExplanation={loadingExplanations}
           aiExplanation={aiExplanations}
         />

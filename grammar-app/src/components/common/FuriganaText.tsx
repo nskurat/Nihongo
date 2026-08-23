@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { parseFuriganaTokens } from '../services/ai/readingParser';
+import { parseFuriganaTokens } from '../../services/ai/readingParser';
+import { FuriganaToken } from '../../types/japanese';
 
 interface FuriganaTextProps {
   text?: string;
@@ -16,7 +17,7 @@ export default function FuriganaText({ text = '', mode = 'always', className = '
 
   return (
     <span className={`furigana-wrapper furigana-mode-${mode} ${className}`}>
-      {tokens.map((token, idx) => {
+      {tokens.map((token: FuriganaToken, idx: number) => {
         if (token.type === 'ruby') {
           return (
             <ruby key={idx}>

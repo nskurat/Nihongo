@@ -51,6 +51,18 @@ export function parseFuriganaTokens(text = ''): FuriganaToken[] {
 }
 
 /**
+ * Strips bracketed furigana annotations to return clean Japanese text.
+ * E.g. 朝[あさ]の習慣[しゅうかん] -> 朝の習慣
+ */
+export function stripFurigana(text = ''): string {
+  if (!text) return '';
+  return text
+    .replace(/([\u4E00-\u9FAF\u3400-\u4DBF々ヶ]+)\[([^\s\]]+)\]/g, '$1')
+    .replace(/\[([\u4E00-\u9FAF\u3400-\u4DBF々ヶ\w\s]+)\]\(([^)]+)\)/g, '$1')
+    .replace(/\{([^|]+)\|([^}]+)\}/g, '$1');
+}
+
+/**
  * Clean and extract JSON string from raw LLM output.
  * Handles code fences (```json ... ```), preambles, and trailing commas.
  */

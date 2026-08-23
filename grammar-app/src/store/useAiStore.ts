@@ -1,0 +1,110 @@
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { GrammarExampleSentence } from '../services/ai/registry';
+
+// State that should be persisted across sessions (so we don't spam the API)
+interface AiCacheState {
+  generatedExamples: Record<string | number, GrammarExampleSentence[]>;
+  aiExplanations: Record<string | number, string>;
+  aiVocabNotes: Record<string | number, string>;
+  aiKanjiMnemonics: Record<string | number, string>;
+
+  // Actions
+  addExamples: (id: string | number, examples: GrammarExampleSentence[]) => void;
+  setExplanation: (id: string | number, explanation: string) => void;
+  setVocabNote: (id: string | number, note: string) => void;
+  setKanjiMnemonic: (id: string | number, mnemonic: string) => void;
+}
+
+export const useAiCacheStore = create<AiCacheState>()(
+  persist(
+    (set) => ({
+      generatedExamples: {},
+      aiExplanations: {},
+      aiVocabNotes: {},
+      aiKanjiMnemonics: {},
+
+      addExamples: (id, newExamples) =>
+        set((state) => ({
+          generatedExamples: {
+            ...state.generatedExamples,
+            [id]: [...(state.generatedExamples[id] || []), ...newExamples],
+          },
+        })),
+
+      setExplanation: (id, explanation) =>
+        set((state) => ({
+          aiExplanations: { ...state.aiExplanations, [id]: explanation },
+        })),
+
+      setVocabNote: (id, note) =>
+        set((state) => ({
+          aiVocabNotes: { ...state.aiVocabNotes, [id]: note },
+        })),
+
+      setKanjiMnemonic: (id, mnemonic) =>
+        set((state) => ({
+          aiKanjiMnemonics: { ...state.aiKanjiMnemonics, [id]: mnemonic },
+        })),
+    }),
+    {
+      name: 'ai-generation-cache', // unique name for localStorage
+    }
+  )
+);
+
+// State for ephemeral data like loading indicators and modal toggles
+interface AiUiState {
+  loadingExamples: Record<string | number, boolean>;
+  loadingExplanations: Record<string | number, boolean>;
+  loadingVocabAi: Record<string | number, boolean>;
+  loadingKanjiAi: Record<string | number, boolean>;
+  
+  showKeyModal: boolean;
+  apiError: string;
+
+  // Actions
+  setLoadingExamples: (id: string | number, loading: boolean) => void;
+  setLoadingExplanations: (id: string | number, loading: boolean) => void;
+  setLoadingVocabAi: (id: string | number, loading: boolean) => void;
+  setLoadingKanjiAi: (id: string | number, loading: boolean) => void;
+  
+  setShowKeyModal: (show: boolean) => void;
+  setApiError: (error: string) => void;
+  handleApiError: (error: unknown) => void;
+}
+
+export const useAiUiStore = create<AiUiState>((set) => ({
+  loadingExamples: {},
+  loadingExplanations: {},
+  loadingVocabAi: {},
+  loadingKanjiAi: {},
+  showKeyModal: false,
+  apiError: '',
+
+  setLoadingExamples: (id, loading) =>
+    set((state) => ({ loadingExamples: { ...state.loadingExamples, [id]: loading } })),
+  
+  setLoadingExplanations: (id, loading) =>
+    set((state) => ({ loadingExplanations: { ...state.loadingExplanations, [id]: loading } })),
+  
+  setLoadingVocabAi: (id, loading) =>
+    set((state) => ({ loadingVocabAi: { ...state.loadingVocabAi, [id]: loading } })),
+  
+  setLoadingKanjiAi: (id, loading) =>
+    set((state) => ({ loadingKanjiAi: { ...state.loadingKanjiAi, [id]: loading } })),
+
+  setShowKeyModal: (show) => set({ showKeyModal: show }),
+  setApiError: (error) => set({ apiError: error }),
+  
+  // Centralized error handler
+  handleApiError: (error: unknown) => {
+    const msg = error instanceof Error ? error.message : String(error);
+    if (msg === 'MISSING_KEY') {
+      set({ showKeyModal: true, apiError: '' });
+    } else {
+      set({ apiError: msg });
+      console.error('AI Error:', error);
+    }
+  },
+}));

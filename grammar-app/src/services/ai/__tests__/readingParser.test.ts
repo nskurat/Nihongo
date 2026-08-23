@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   parseFuriganaTokens,
+  stripFurigana,
   cleanJsonString,
   parseReadingResponse,
 } from '../readingParser';
@@ -34,6 +35,23 @@ describe('Reading Parser & Furigana Tokenizer', () => {
         { type: 'text', content: 'の' },
         { type: 'ruby', base: '紅葉', ruby: 'こうよう' },
       ]);
+    });
+  });
+
+  describe('stripFurigana', () => {
+    it('should strip ruby brackets leaving plain Japanese text', () => {
+      const text = '朝[あさ]の習慣[しゅうかん]と趣味[しゅみ]の時間[じかん]';
+      expect(stripFurigana(text)).toBe('朝の習慣と趣味の時間');
+    });
+
+    it('should strip markdown notation [漢字](かんじ)', () => {
+      const text = '[京都](きょうと)の[紅葉](こうよう)';
+      expect(stripFurigana(text)).toBe('京都の紅葉');
+    });
+
+    it('should handle plain text without changes', () => {
+      const text = 'こんにちは世界';
+      expect(stripFurigana(text)).toBe('こんにちは世界');
     });
   });
 
