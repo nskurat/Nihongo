@@ -2,13 +2,29 @@ import { useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
+import { getTagMeta } from '../../utils/tags';
 
 import grammarN3 from '../../data/n3/grammar.json';
 import grammarN4 from '../../data/n4/grammar.json';
 
+function stampItems(
+  raw: Record<number, GrammarItem[]>,
+  level: LevelType
+): Record<number, GrammarItem[]> {
+  const stamped: Record<number, GrammarItem[]> = {};
+  for (const [lesson, items] of Object.entries(raw)) {
+    stamped[Number(lesson)] = items.map(item => ({
+      ...item,
+      level,
+      lesson: Number(lesson),
+    }));
+  }
+  return stamped;
+}
+
 const grammarData: Record<LevelType, Record<number, GrammarItem[]>> = {
-  N3: grammarN3 as unknown as Record<number, GrammarItem[]>,
-  N4: grammarN4 as unknown as Record<number, GrammarItem[]>,
+  N3: stampItems(grammarN3 as unknown as Record<number, GrammarItem[]>, 'N3'),
+  N4: stampItems(grammarN4 as unknown as Record<number, GrammarItem[]>, 'N4'),
 };
 
 export function useGrammar(activeLevel: LevelType, activeLesson: number) {
@@ -22,12 +38,18 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
 
   // Filter grammar points if search is active
   const filteredContent = searchQuery.trim()
-    ? currentContent.filter(
-        (item) =>
-          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.meaning.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.structure.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? currentContent.filter(item => {
+        const q = searchQuery.toLowerCase();
+        return (
+          item.title.toLowerCase().includes(q) ||
+          item.meaning.toLowerCase().includes(q) ||
+          item.structure.toLowerCase().includes(q) ||
+          (item.tags || []).some(tagId => {
+            const meta = getTagMeta(tagId);
+            return tagId.includes(q) || (meta?.label.toLowerCase().includes(q) ?? false);
+          })
+        );
+      })
     : currentContent;
 
   // AI State

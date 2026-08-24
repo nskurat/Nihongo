@@ -5,89 +5,299 @@
   "facets": {
     "function": {
       "label": "Function / Meaning",
+      "color": "indigo",
       "description": "What the grammar point communicatively does. The primary facet — most points get 1-2 of these.",
       "tags": {
-        "cause-reason": "Marks the reason/cause behind a following statement or result.",
-        "purpose": "Expresses a goal or intention behind an action (in order to / for the sake of).",
-        "result-consequence": "Marks a resulting state or consequence.",
-        "conditional": "Hypothetical or conditional clauses (if/when X, then Y).",
-        "concession-contrast": "Despite/although X, Y — a contrastive or concessive relationship.",
-        "comparison": "Comparing two things by degree, similarity, or preference.",
-        "degree-extent": "Expresses degree, extent, or a scale (how much / to what extent).",
-        "similarity-appearance": "Describes how something looks/resembles/seems (visual or general resemblance).",
-        "hearsay": "Reporting information obtained from another source (I heard that...).",
-        "conjecture-inference": "The speaker's own guess/inference/supposition, based on reasoning or observation.",
-        "certainty-expectation": "Strong conviction that something is/should be the case (はず, に違いない).",
-        "possibility": "Expresses that something may or may not be the case.",
-        "obligation-necessity": "Must/have to do something; no choice but to.",
-        "prohibition": "Forbidding an action.",
-        "permission": "Granting or asking for permission.",
-        "advice-suggestion": "Giving or requesting advice/suggestions on the best course of action.",
-        "request": "Asking someone (politely or directly) to do something.",
-        "passive": "Passive voice — an action done to the subject.",
-        "causative": "Making or letting someone do something.",
-        "causative-passive": "Being made/forced to do something by someone else.",
-        "potential": "Ability or possibility of doing something.",
-        "volitional-intention": "The speaker's will, plan, or intention to do something.",
-        "decision-outcome": "A decision reached, or an outcome that has been decided/settled.",
-        "experience": "Past experience of having done something.",
-        "change-of-state": "A shift from one state/condition to another over time.",
-        "habit-effort": "Ongoing habits, customary actions, or deliberate effort to form one.",
-        "giving-receiving": "Giving/receiving verbs (あげる・くれる・もらう family and their honorific forms).",
-        "quotation": "Quoting or reporting what was said, named, or written.",
-        "nominalizer": "Turns a clause/verb into a noun phrase (の／こと).",
-        "listing-examples": "Listing representative examples out of a larger, unstated set.",
-        "time-relative": "Marks a point or span in time relative to an action or event.",
-        "frequency": "How often something happens.",
-        "state-continuation": "A state that persists or continues, often as the result of a prior action.",
-        "attempt": "Trying an action to see what happens.",
-        "preparation": "Doing something in advance / getting something ready.",
-        "completion": "An action finished fully, or finishing an action.",
-        "excessive-degree": "Doing/being something to an excessive degree.",
-        "ease-difficulty": "How easy or difficult it is to do/handle something.",
-        "emphasis-limitation": "Emphasizing, restricting, or limiting scope (only, even, at least).",
-        "viewpoint-standpoint": "Framing a statement from a particular standpoint, role, or perspective.",
-        "explanation": "Framing a statement as an explanation that follows from context (んです family).",
-        "spontaneous-perception": "A sensory perception or spontaneous occurrence, not a deliberate action.",
-        "creation-completion": "Something coming into being, being made, or being completed.",
-        "simultaneous-action": "Two actions/states happening at the same time.",
-        "command": "Direct imperative commands.",
-        "manner-accordance": "Doing something exactly in accordance with/as instructed.",
-        "alternative-choice": "Choosing one course of action over another / instead of.",
-        "emotion-expression": "Describing a third person's apparent emotional state.",
-        "negative-manner": "Doing one thing without doing another (ずに／ないで family).",
-        "partial-negation": "Softening a negation — doesn't necessarily mean / isn't quite the case that.",
-        "definition-meaning": "Defining or classifying what something means or is.",
-        "demonstrative": "こ/そ/あ-series demonstrative usage.",
-        "direction-movement": "Physical or metaphorical direction of movement.",
-        "existence-location": "Existence or location of something.",
-        "acknowledgment": "A short response registering that the speaker has received/understood new information (そうですか family).",
-        "confirmation-seeking": "Sentence-final ね/よね, inviting the listener's agreement or confirming shared understanding.",
-        "emphasis-assertion": "Sentence-final よ, asserting information the listener doesn't know or stating the speaker's judgment firmly."
+        "cause-reason": {
+          "label": "Reason / Cause",
+          "description": "Marks the reason/cause behind a following statement or result."
+        },
+        "purpose": {
+          "label": "Purpose",
+          "description": "Expresses a goal or intention behind an action (in order to / for the sake of)."
+        },
+        "result-consequence": {
+          "label": "Result / Consequence",
+          "description": "Marks a resulting state or consequence."
+        },
+        "conditional": {
+          "label": "Conditional",
+          "description": "Hypothetical or conditional clauses (if/when X, then Y)."
+        },
+        "concession-contrast": {
+          "label": "Concession / Contrast",
+          "description": "Despite/although X, Y — a contrastive or concessive relationship."
+        },
+        "comparison": {
+          "label": "Comparison",
+          "description": "Comparing two things by degree, similarity, or preference."
+        },
+        "degree-extent": {
+          "label": "Degree / Extent",
+          "description": "Expresses degree, extent, or a scale (how much / to what extent)."
+        },
+        "similarity-appearance": {
+          "label": "Similarity / Appearance",
+          "description": "Describes how something looks/resembles/seems (visual or general resemblance)."
+        },
+        "hearsay": {
+          "label": "Hearsay",
+          "description": "Reporting information obtained from another source (I heard that...)."
+        },
+        "conjecture-inference": {
+          "label": "Conjecture / Inference",
+          "description": "The speaker's own guess/inference/supposition, based on reasoning or observation."
+        },
+        "certainty-expectation": {
+          "label": "Certainty / Expectation",
+          "description": "Strong conviction that something is/should be the case (はず, に違いない)."
+        },
+        "possibility": {
+          "label": "Possibility",
+          "description": "Expresses that something may or may not be the case."
+        },
+        "obligation-necessity": {
+          "label": "Obligation / Necessity",
+          "description": "Must/have to do something; no choice but to."
+        },
+        "prohibition": {
+          "label": "Prohibition",
+          "description": "Forbidding an action."
+        },
+        "permission": {
+          "label": "Permission",
+          "description": "Granting or asking for permission."
+        },
+        "advice-suggestion": {
+          "label": "Advice / Suggestion",
+          "description": "Giving or requesting advice/suggestions on the best course of action."
+        },
+        "request": {
+          "label": "Request",
+          "description": "Asking someone (politely or directly) to do something."
+        },
+        "passive": {
+          "label": "Passive",
+          "description": "Passive voice — an action done to the subject."
+        },
+        "causative": {
+          "label": "Causative",
+          "description": "Making or letting someone do something."
+        },
+        "causative-passive": {
+          "label": "Causative-Passive",
+          "description": "Being made/forced to do something by someone else."
+        },
+        "potential": {
+          "label": "Potential",
+          "description": "Ability or possibility of doing something."
+        },
+        "volitional-intention": {
+          "label": "Volition / Intention",
+          "description": "The speaker's will, plan, or intention to do something."
+        },
+        "decision-outcome": {
+          "label": "Decision / Outcome",
+          "description": "A decision reached, or an outcome that has been decided/settled."
+        },
+        "experience": {
+          "label": "Experience",
+          "description": "Past experience of having done something."
+        },
+        "change-of-state": {
+          "label": "Change of State",
+          "description": "A shift from one state/condition to another over time."
+        },
+        "habit-effort": {
+          "label": "Habit / Effort",
+          "description": "Ongoing habits, customary actions, or deliberate effort to form one."
+        },
+        "giving-receiving": {
+          "label": "Giving / Receiving",
+          "description": "Giving/receiving verbs (あげる・くれる・もらう family and their honorific forms)."
+        },
+        "quotation": {
+          "label": "Quotation",
+          "description": "Quoting or reporting what was said, named, or written."
+        },
+        "nominalizer": {
+          "label": "Nominalizer",
+          "description": "Turns a clause/verb into a noun phrase (の／こと)."
+        },
+        "listing-examples": {
+          "label": "Listing Examples",
+          "description": "Listing representative examples out of a larger, unstated set."
+        },
+        "time-relative": {
+          "label": "Relative Time",
+          "description": "Marks a point or span in time relative to an action or event."
+        },
+        "frequency": {
+          "label": "Frequency",
+          "description": "How often something happens."
+        },
+        "state-continuation": {
+          "label": "State Continuation",
+          "description": "A state that persists or continues, often as the result of a prior action."
+        },
+        "attempt": {
+          "label": "Attempt",
+          "description": "Trying an action to see what happens."
+        },
+        "preparation": {
+          "label": "Preparation",
+          "description": "Doing something in advance / getting something ready."
+        },
+        "completion": {
+          "label": "Completion",
+          "description": "An action finished fully, or finishing an action."
+        },
+        "excessive-degree": {
+          "label": "Excessive Degree",
+          "description": "Doing/being something to an excessive degree."
+        },
+        "ease-difficulty": {
+          "label": "Ease / Difficulty",
+          "description": "How easy or difficult it is to do/handle something."
+        },
+        "emphasis-limitation": {
+          "label": "Emphasis / Limitation",
+          "description": "Emphasizing, restricting, or limiting scope (only, even, at least)."
+        },
+        "viewpoint-standpoint": {
+          "label": "Viewpoint / Standpoint",
+          "description": "Framing a statement from a particular standpoint, role, or perspective."
+        },
+        "explanation": {
+          "label": "Explanation",
+          "description": "Framing a statement as an explanation that follows from context (んです family)."
+        },
+        "spontaneous-perception": {
+          "label": "Spontaneous Perception",
+          "description": "A sensory perception or spontaneous occurrence, not a deliberate action."
+        },
+        "creation-completion": {
+          "label": "Creation / Completion",
+          "description": "Something coming into being, being made, or being completed."
+        },
+        "simultaneous-action": {
+          "label": "Simultaneous Action",
+          "description": "Two actions/states happening at the same time."
+        },
+        "command": {
+          "label": "Command",
+          "description": "Direct imperative commands."
+        },
+        "manner-accordance": {
+          "label": "Manner / Accordance",
+          "description": "Doing something exactly in accordance with/as instructed."
+        },
+        "alternative-choice": {
+          "label": "Alternative / Choice",
+          "description": "Choosing one course of action over another / instead of."
+        },
+        "emotion-expression": {
+          "label": "Emotion Expression",
+          "description": "Describing a third person's apparent emotional state."
+        },
+        "negative-manner": {
+          "label": "Negative Manner",
+          "description": "Doing one thing without doing another (ずに／ないで family)."
+        },
+        "partial-negation": {
+          "label": "Partial Negation",
+          "description": "Softening a negation — doesn't necessarily mean / isn't quite the case that."
+        },
+        "definition-meaning": {
+          "label": "Definition / Meaning",
+          "description": "Defining or classifying what something means or is."
+        },
+        "demonstrative": {
+          "label": "Demonstrative",
+          "description": "こ/そ/あ-series demonstrative usage."
+        },
+        "direction-movement": {
+          "label": "Direction / Movement",
+          "description": "Physical or metaphorical direction of movement."
+        },
+        "existence-location": {
+          "label": "Existence / Location",
+          "description": "Existence or location of something."
+        },
+        "acknowledgment": {
+          "label": "Acknowledgment",
+          "description": "A short response registering that the speaker has received/understood new information (そうですか family)."
+        },
+        "confirmation-seeking": {
+          "label": "Confirmation Seeking",
+          "description": "Sentence-final ね/よね, inviting the listener's agreement or confirming shared understanding."
+        },
+        "emphasis-assertion": {
+          "label": "Emphasis / Assertion",
+          "description": "Sentence-final よ, asserting information the listener doesn't know or stating the speaker's judgment firmly."
+        }
       }
     },
     "register": {
       "label": "Register / Formality",
+      "color": "amber",
       "description": "Where the grammar point sits on the casual-to-formal spectrum, or which keigo tier it belongs to. Useful for filtering 'show me only stiff/written N3 patterns' or 'show me keigo'.",
       "tags": {
-        "formal-written": "Stiff, formal register typical of writing, news, speeches, or business Japanese.",
-        "colloquial": "Casual, spoken-register expression.",
-        "keigo-respectful": "尊敬語 — elevating the listener/referent's actions.",
-        "keigo-humble": "謙譲語 — lowering the speaker's own actions.",
-        "keigo-polite": "丁寧語 — general politeness, independent of relative status."
+        "formal-written": {
+          "label": "Formal / Written",
+          "description": "Stiff, formal register typical of writing, news, speeches, or business Japanese."
+        },
+        "colloquial": {
+          "label": "Colloquial",
+          "description": "Casual, spoken-register expression."
+        },
+        "keigo-respectful": {
+          "label": "Keigo: Respectful",
+          "description": "尊敬語 — elevating the listener/referent's actions."
+        },
+        "keigo-humble": {
+          "label": "Keigo: Humble",
+          "description": "謙譲語 — lowering the speaker's own actions."
+        },
+        "keigo-polite": {
+          "label": "Keigo: Polite",
+          "description": "丁寧語 — general politeness, independent of relative status."
+        }
       }
     },
     "structure": {
       "label": "Structure Type",
+      "color": "emerald",
       "description": "What kind of grammatical unit this is, independent of meaning — useful for filters like 'just show me particles' or 'hide meta/formation entries'.",
       "tags": {
-        "meta-conjugation": "Teaches how to form/conjugate a verb group (potential, passive, causative, etc.) rather than a new meaning.",
-        "particle-usage": "A specific case-particle nuance or usage point not covered by a more specific function tag.",
-        "topic-focus-particle": "Particle usage for marking topic/focus (は, が, も, etc.).",
-        "nominalizer": "Turns a clause/verb into a noun phrase (の／こと).",
-        "connective": "A sentence-initial conjunction linking to the previous sentence.",
-        "demonstrative": "こ/そ/あ-series demonstrative usage.",
-        "question-embedding": "Embedding a question inside a larger sentence."
+        "meta-conjugation": {
+          "label": "Conjugation Pattern",
+          "description": "Teaches how to form/conjugate a verb group (potential, passive, causative, etc.) rather than a new meaning."
+        },
+        "particle-usage": {
+          "label": "Particle Usage",
+          "description": "A specific case-particle nuance or usage point not covered by a more specific function tag."
+        },
+        "topic-focus-particle": {
+          "label": "Topic / Focus Particle",
+          "description": "Particle usage for marking topic/focus (は, が, も, etc.)."
+        },
+        "nominalizer": {
+          "label": "Nominalizer",
+          "description": "Turns a clause/verb into a noun phrase (の／こと)."
+        },
+        "connective": {
+          "label": "Connective",
+          "description": "A sentence-initial conjunction linking to the previous sentence."
+        },
+        "demonstrative": {
+          "label": "Demonstrative",
+          "description": "こ/そ/あ-series demonstrative usage."
+        },
+        "question-embedding": {
+          "label": "Question Embedding",
+          "description": "Embedding a question inside a larger sentence."
+        }
       }
     }
   },

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { X, BookOpen, Sparkles, Loader2, Lightbulb, Code2 } from 'lucide-react';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import { GrammarItem, LevelType } from '../../types/japanese';
+import { getTagMeta } from '../../utils/tags';
 
 interface GrammarDetailModalProps {
   isOpen: boolean;
@@ -84,6 +85,30 @@ export default function GrammarDetailModal({
 
         {/* Modal Body / Scrollable Content */}
         <div className="p-6 overflow-y-auto space-y-6 flex-1 max-h-[calc(90vh-180px)] scrollbar-thin scrollbar-thumb-slate-300">
+          {/* Grammatical Profile */}
+          {item.tags && item.tags.length > 0 && (
+            <div className="space-y-2">
+              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                Grammatical Profile
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map(tagId => {
+                  const meta = getTagMeta(tagId);
+                  if (!meta) return null;
+                  return (
+                    <div
+                      key={tagId}
+                      className="flex items-baseline gap-1.5 px-3 py-1.5 bg-slate-50 rounded-lg border border-slate-200/80 text-xs"
+                    >
+                      <span className="font-semibold text-slate-800">{meta.label}</span>
+                      <span className="text-slate-500">{meta.description}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Formatted Markdown Content / Tables */}
           <div>
             <MarkdownViewer content={item.details || item.explanation} />

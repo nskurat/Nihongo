@@ -8,11 +8,31 @@ export interface GrammarItem {
   meaning: string;
   structure: string;
   explanation: string;
+  summary?: string;
   details?: string;
+  tags?: string[];
+  level?: LevelType;
+  lesson?: number;
   examples?: Array<{
     jp: string;
     en: string;
   }>;
+}
+
+export interface TagDefinition {
+  label: string;
+  description: string;
+}
+
+export interface FacetDefinition {
+  label: string;
+  color: string;
+  description: string;
+  tags: Record<string, TagDefinition>;
+}
+
+export interface TagTaxonomy {
+  facets: Record<string, FacetDefinition>;
 }
 
 export interface VocabItem {

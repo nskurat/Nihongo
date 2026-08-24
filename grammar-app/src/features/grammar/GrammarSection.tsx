@@ -2,6 +2,7 @@ import { LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, Search, BookO
 import { useNavigate } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
+import TagBadge from '../../components/common/TagBadge';
 import { LevelType } from '../../types/japanese';
 import { useGrammar } from './useGrammar';
 import { useAppStore } from '../../store/useAppStore';
@@ -149,6 +150,14 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                   <p className="text-indigo-600 font-medium mt-1 text-base flex items-center gap-1.5">
                     {showTranslations ? item.meaning : '••••••••••••'}
                   </p>
+                  {/* Tag Badges */}
+                  {item.tags && item.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {item.tags.map(tagId => (
+                        <TagBadge key={tagId} tagId={tagId} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
