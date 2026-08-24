@@ -6,6 +6,7 @@ import { getTagMeta } from '../../utils/tags';
 
 import grammarN3 from '../../data/n3/grammar.json';
 import grammarN4 from '../../data/n4/grammar.json';
+import grammarN5 from '../../data/n5/grammar.json';
 
 function stampItems(
   raw: Record<number, GrammarItem[]>,
@@ -23,8 +24,9 @@ function stampItems(
 }
 
 const grammarData: Record<LevelType, Record<number, GrammarItem[]>> = {
-  N3: stampItems(grammarN3 as unknown as Record<number, GrammarItem[]>, 'N3'),
+  N5: stampItems(grammarN5 as unknown as Record<number, GrammarItem[]>, 'N5'),
   N4: stampItems(grammarN4 as unknown as Record<number, GrammarItem[]>, 'N4'),
+  N3: stampItems(grammarN3 as unknown as Record<number, GrammarItem[]>, 'N3'),
 };
 
 export function useGrammar(activeLevel: LevelType, activeLesson: number) {

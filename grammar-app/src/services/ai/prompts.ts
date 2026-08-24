@@ -4,7 +4,7 @@ import { LevelType } from '../../types/japanese';
  * Static Prompt Templates and JSON Schemas for AI Services
  */
 
-export const READING_PRACTICE_SYSTEM_PROMPT = `You are an expert Japanese language educator specializing in JLPT N4 and N3 reading comprehension.
+export const READING_PRACTICE_SYSTEM_PROMPT = `You are an expert Japanese language educator specializing in JLPT N5, N4, and N3 reading comprehension.
 
 Generate a captivating, natural Japanese reading passage and a 5-question multiple choice reading comprehension test.`;
 

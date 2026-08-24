@@ -5,10 +5,12 @@ import { generateKanjiMnemonic } from '../../services/ai/registry';
 
 import kanjiN3 from '../../data/n3/kanji.json';
 import kanjiN4 from '../../data/n4/kanji.json';
+import kanjiN5 from '../../data/n5/kanji.json';
 
 const kanjiData: Record<LevelType, Record<number, KanjiItem[]>> = {
-  N3: kanjiN3 as unknown as Record<number, KanjiItem[]>,
+  N5: kanjiN5 as unknown as Record<number, KanjiItem[]>,
   N4: kanjiN4 as unknown as Record<number, KanjiItem[]>,
+  N3: kanjiN3 as unknown as Record<number, KanjiItem[]>,
 };
 
 export function useKanji(activeLevel: LevelType, activeLesson: number) {

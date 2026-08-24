@@ -1,4 +1,4 @@
-export type LevelType = 'N4' | 'N3';
+export type LevelType = 'N5' | 'N4' | 'N3';
 
 export type SectionType = 'grammar' | 'vocab' | 'kanji' | 'reading';
 

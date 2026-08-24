@@ -5,10 +5,12 @@ import { generateVocabHelp } from '../../services/ai/registry';
 
 import vocabN3 from '../../data/n3/vocab.json';
 import vocabN4 from '../../data/n4/vocab.json';
+import vocabN5 from '../../data/n5/vocab.json';
 
 const vocabData: Record<LevelType, Record<number, VocabItem[]>> = {
-  N3: vocabN3 as unknown as Record<number, VocabItem[]>,
+  N5: vocabN5 as unknown as Record<number, VocabItem[]>,
   N4: vocabN4 as unknown as Record<number, VocabItem[]>,
+  N3: vocabN3 as unknown as Record<number, VocabItem[]>,
 };
 
 export function useVocab(activeLevel: LevelType, activeLesson: number) {

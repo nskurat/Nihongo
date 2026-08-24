@@ -5,6 +5,7 @@ import { getActiveProviderId, getProvider, getStoredApiKey } from '../../service
 import { LevelType, SectionType } from '../../types/japanese';
 import { useAppStore } from '../../store/useAppStore';
 import { useAiUiStore } from '../../store/useAiStore';
+import { parseLevel, getDefaultLesson, clampLessonForLevel } from '../../utils/levels';
 
 export default function Header() {
   const location = useLocation();
@@ -19,13 +20,14 @@ export default function Header() {
   const rawSection = pathSegments[1]?.toLowerCase();
   const rawLesson = pathSegments[2];
 
-  const activeLevel: LevelType = rawLevel === 'N4' ? 'N4' : 'N3';
+  const activeLevel: LevelType = parseLevel(rawLevel);
   const activeSection: SectionType = (['grammar', 'vocab', 'kanji', 'reading'].includes(rawSection)
     ? rawSection
     : 'grammar') as SectionType;
-  const activeLesson = rawLesson || (activeLevel === 'N4' ? '26' : '1');
+  const activeLesson = rawLesson || String(getDefaultLesson(activeLevel));
 
   const levels: Array<{ id: LevelType; label: string; desc: string }> = [
+    { id: 'N5', label: 'JLPT N5', desc: 'Beginner I' },
     { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
     { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
   ];
@@ -42,10 +44,8 @@ export default function Header() {
 
   const handleLevelChange = (newLevel: LevelType) => {
     // When switching levels, default to their starting lesson if current isn't valid for new level
-    let newLesson = parseInt(activeLesson, 10);
-    if (newLevel === 'N4' && newLesson < 26) newLesson = 26;
-    if (newLevel === 'N3' && newLesson > 24) newLesson = 1;
-    
+    const newLesson = clampLessonForLevel(newLevel, parseInt(activeLesson, 10));
+
     navigate(`/${newLevel.toLowerCase()}/${activeSection}/${newLesson}`);
   };
 
@@ -67,7 +67,7 @@ export default function Header() {
                 Minna no Nihongo Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
               </h1>
               <p className="text-indigo-200 text-xs font-medium">
-                JLPT N4 & N3 Interactive Reference & AI Practice
+                JLPT N5, N4 & N3 Interactive Reference & AI Practice
               </p>
             </div>
           </div>
