@@ -1,0 +1,2141 @@
+{
+  "1": [
+    {
+      "id": "1-1",
+      "title": "N1は N2です",
+      "structure": "N1は N2です",
+      "meaning": "States that N1 is/equals N2 — the basic Japanese sentence of identification.",
+      "explanation": "The particle は marks N1 as the topic of the sentence (read わ, not は). です is the copula: it attaches to a noun to make a polite statement/assertion. Together, N1は N2です means \"As for N1, it is N2\" — used to state who or what someone/something is.",
+      "examples": [
+        {
+          "jp": "わたしはマイク・ミラーです。",
+          "en": "I am Mike Miller."
+        },
+        {
+          "jp": "わたしはエンジニアです。",
+          "en": "I am an engineer."
+        }
+      ],
+      "summary": "The foundational identification sentence: topic marked by は, followed by a noun predicate closed with the polite copula です.",
+      "details": "### は vs です\n\n| Part | Job |\n| :--- | :--- |\n| **は** | Marks what the sentence is *about* (the topic). Pronounced わ. |\n| **です** | Politely asserts the predicate that follows は. Changes for negative (1-2) and past tense (Lesson 12, not yet covered). |\n\nThis is the pattern every noun-sentence in the book builds on — the negative (1-2), question (1-3), and topic-shift with も (1-4) versions all reuse this same N1は…です frame.",
+      "tags": [
+        "topic-focus-particle",
+        "definition-meaning"
+      ]
+    },
+    {
+      "id": "1-2",
+      "title": "N1は N2じゃ ありません",
+      "structure": "N1は N2じゃ ありません",
+      "meaning": "The negative of N1は N2です — states that N1 is not N2.",
+      "explanation": "じゃ ありません is the negative form of です, used in everyday conversation. In formal speech or writing, では ありません is used instead (は here is also read わ).",
+      "examples": [
+        {
+          "jp": "サントスさんは学生じゃありません。",
+          "en": "Mr. Santos is not a student."
+        }
+      ],
+      "summary": "Negates a です statement; casual じゃ ありません vs formal では ありません.",
+      "details": "Swap です for じゃ ありません (casual/spoken) or では ありません (formal/written) to negate the N1は N2です pattern from 1-1. Both are grammatically \"non-past\" — past-tense negative (じゃ ありませんでした) isn't introduced until Lesson 12.",
+      "tags": [
+        "topic-focus-particle",
+        "definition-meaning"
+      ]
+    },
+    {
+      "id": "1-3",
+      "title": "Sか",
+      "structure": "S + か",
+      "meaning": "Turns a statement into a yes/no or wh-question by adding か to the end.",
+      "explanation": "The particle か expresses the speaker's doubt, question, or uncertainty, and is added straight onto the end of a sentence — no word-order change. A yes/no question (answered with はい or いいえ) and a question built around an interrogative word (だれ, どなた, etc., which replaces the part being asked about) both work this way.",
+      "examples": [
+        {
+          "jp": "ミラーさんはアメリカ人ですか。…はい、アメリカ人です。",
+          "en": "Is Mr. Miller an American? — Yes, he is."
+        },
+        {
+          "jp": "ミラーさんは先生ですか。…いいえ、先生じゃありません。",
+          "en": "Is Mr. Miller a teacher? — No, he is not."
+        },
+        {
+          "jp": "あの方はどなたですか。…ミラーさんです。",
+          "en": "Who is that person? — That's Mr. Miller."
+        }
+      ],
+      "summary": "Sentence-final か turns any statement into a question, whether yes/no or built around an interrogative.",
+      "details": "Two question shapes share this one particle:\n1. **Confirmation question** — adds か to a plain statement; answer starts はい or いいえ.\n2. **Interrogative question** — an interrogative word (だれ, どなた, なん, どこ...) sits where the unknown information goes, and か still closes the sentence; the word order never changes, unlike English inversion.",
+      "tags": [
+        "question-embedding",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "1-4",
+      "title": "Nも",
+      "structure": "N1は N2です。 N3も N2です。",
+      "meaning": "Marks that the same thing said about the previous topic is also true of a new topic — \"also.\"",
+      "explanation": "も replaces は after a topic when the statement about it is the same as the statement just made about the previous topic.",
+      "examples": [
+        {
+          "jp": "ミラーさんは会社員です。グプタさんも会社員です。",
+          "en": "Mr. Miller is a company employee. Mr. Gupta is also a company employee."
+        }
+      ],
+      "summary": "も stands in for は to add \"also\" onto a second topic that shares the same predicate as the first.",
+      "note": "も replaces は — you never see はも together on the same noun.",
+      "details": "も is a topic-marking particle that competes directly with は: whichever noun the sentence is really about takes one or the other, never both. Later (5-2) も resurfaces in a totally different role — attached to an interrogative (どこも, 何も, だれも) plus a negative verb, meaning \"not anywhere/anything/anyone\" — so don't assume every も you see means \"also.\"",
+      "tags": [
+        "topic-focus-particle",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "1-5",
+      "title": "N1の N2",
+      "structure": "N1の N2",
+      "meaning": "の connects two nouns, with N1 modifying N2 — here, N1 is an organization/group N2 belongs to.",
+      "explanation": "の links N1 and N2 into one noun phrase, with N1 describing N2. In this lesson, N1 is an organization or group, and N2 is a person who belongs to it.",
+      "examples": [
+        {
+          "jp": "ミラーさんはIMCの社員です。",
+          "en": "Mr. Miller is an IMC employee."
+        }
+      ],
+      "summary": "の glues two nouns together, N1 describing/modifying N2 — here specifically \"N2 belonging to organization N1.\"",
+      "details": "の is one of the most overloaded particles in the book — this lesson only covers the \"belongs to this organization\" sense. Lesson 2 (2-5) adds two more: \"N2 is about N1\" and \"N2 is owned by N1.\" Watch for the pattern across lessons rather than trying to memorize one fixed translation for の.",
+      "tags": [
+        "particle-usage",
+        "definition-meaning"
+      ]
+    },
+    {
+      "id": "1-6",
+      "title": "~さん",
+      "structure": "Name + さん",
+      "meaning": "A respectful title added to a name — roughly \"Mr./Ms.\"",
+      "explanation": "さん is added to the name of the listener or a third person to show the speaker's respect. It should never be attached to the speaker's own name. When addressing a listener directly, あなた is uncommonly used if their name is known — the listener's family name + さん is used instead.",
+      "examples": [
+        {
+          "jp": "あの方はミラーさんです。",
+          "en": "That's Mr. Miller."
+        },
+        {
+          "jp": "鈴木：ミラーさんは学生ですか。ミラー：いいえ、会社員です。",
+          "en": "Suzuki: Are you a student, Mr. Miller? Miller: No, I'm a company employee."
+        }
+      ],
+      "summary": "さん politely names the listener or a third party; never attach it to your own name, and prefer name+さん over あなた when you know who you're addressing.",
+      "note": "Common beginner mistake: never say わたしは〜さんです about yourself — さん is other-directed only.",
+      "details": "さん is the neutral, always-safe title. Later material replaces it in specific contexts: ちゃん for children, 君(くん) for boys/junior colleagues (both mentioned in this lesson's vocabulary), and the fuller 敬語/謙譲語 register (N4 Lessons 49-50) for formal situations. For now, さん covers essentially every polite reference to someone else.",
+      "tags": [
+        "keigo-polite"
+      ]
+    }
+  ],
+  "2": [
+    {
+      "id": "2-1",
+      "title": "これ／それ／あれ",
+      "structure": "これ／それ／あれ",
+      "meaning": "\"This/that/that (over there)\" — pronouns standing in for a thing, not modifying a noun.",
+      "explanation": "これ, それ and あれ are demonstrative pronouns. これ refers to a thing near the speaker, それ to a thing near the listener, and あれ to a thing far from both speaker and listener.",
+      "examples": [
+        {
+          "jp": "それは辞書ですか。",
+          "en": "Is that a dictionary?"
+        },
+        {
+          "jp": "これをください。",
+          "en": "I'll take this. (lit. Please give me this.)"
+        }
+      ],
+      "summary": "これ/それ/あれ are stand-alone \"this/that/that-over-there\" pronouns, distinguished by distance from speaker and listener.",
+      "details": "Contrast with 2-2 (この／その／あの): これ/それ/あれ *replace* a noun (\"this [thing]\"), while この/その/あの *modify* a following noun (\"this [book]\"). Also compare Lesson 3's ここ/そこ/あそこ, which use the same speaker/listener-distance logic but for *places* instead of *things* — see the full grid at 3-5.",
+      "tags": [
+        "demonstrative"
+      ]
+    },
+    {
+      "id": "2-2",
+      "title": "この N／その N／あの N",
+      "structure": "この／その／あの + N",
+      "meaning": "\"This/that/that (over there) N\" — demonstratives that modify a following noun.",
+      "explanation": "この, その and あの modify nouns rather than standing alone. この N refers to a thing/person near the speaker, その N near the listener, and あの N far from both.",
+      "examples": [
+        {
+          "jp": "この本はわたしのです。",
+          "en": "This book is mine."
+        },
+        {
+          "jp": "あの方はどなたですか。",
+          "en": "Who is that [person]?"
+        }
+      ],
+      "summary": "この/その/あの always come attached to a noun (\"this N\"), unlike これ/それ/あれ which stand alone.",
+      "note": "これ/それ/あれ (2-1) can never directly precede a noun — 「これ本」is wrong; it must be 「この本」.",
+      "details": "この/その/あの never stand alone and never inflect — they sit directly in front of the noun they modify, like a determiner in English (\"this,\" \"that\"). Compare 2-1's これ/それ/あれ, which are full pronouns that replace the noun entirely.",
+      "tags": [
+        "demonstrative"
+      ]
+    },
+    {
+      "id": "2-3",
+      "title": "そうです／そうじゃ ありません",
+      "structure": "はい、そうです。／いいえ、そうじゃ ありません。",
+      "meaning": "\"Yes, that's right\" / \"No, that's not right\" — used to confirm or deny a noun-sentence question.",
+      "explanation": "For a noun-sentence question, そう stands in for the whole predicate just asked about. はい、そうです is the affirmative answer, いいえ、そうじゃ ありません the negative. The verb 違います (lit. \"to differ\") can also be used to mean そうじゃ ありません.",
+      "examples": [
+        {
+          "jp": "それはテレホンカードですか。…はい、そうです。",
+          "en": "Is that a telephone card? — Yes, it is."
+        },
+        {
+          "jp": "それはテレホンカードですか。…いいえ、そうじゃありません。",
+          "en": "Is that a telephone card? — No, it isn't."
+        },
+        {
+          "jp": "それはテレホンカードですか。…いいえ、違います。",
+          "en": "Is that a telephone card? — No, it isn't."
+        }
+      ],
+      "summary": "そうです/そうじゃありません confirm or deny an entire noun-sentence question at once, without repeating the noun; 違います works as an alternative negative.",
+      "details": "This only works for noun-sentence yes/no questions (です-type). Once verb sentences appear (Lesson 4), そうです/そうじゃありません can no longer be used to answer — the verb itself must be repeated instead (see 4-3).",
+      "tags": [
+        "definition-meaning",
+        "acknowledgment"
+      ]
+    },
+    {
+      "id": "2-4",
+      "title": "S1か、S2か",
+      "structure": "S1か、S2か",
+      "meaning": "\"Is it S1, or is it S2?\" — asks the listener to choose between two alternatives.",
+      "explanation": "This asks the listener to pick between alternatives S1 and S2. The answer restates whichever sentence was chosen — neither はい nor いいえ is used.",
+      "examples": [
+        {
+          "jp": "これは「9」ですか、「7」ですか。…「9」です。",
+          "en": "Is this a \"9\" or a \"7\"? — It's a \"9\"."
+        }
+      ],
+      "summary": "An alternative question offering two choices, each marked with か; answered by naming the correct choice, never with はい/いいえ.",
+      "details": "Structurally this is just 1-3's Sか doubled up — か marks each candidate answer rather than closing a single yes/no question. Because the question itself already names both options, はい/いいえ would be meaningless here; the listener always answers by restating their pick.",
+      "tags": [
+        "question-embedding"
+      ]
+    },
+    {
+      "id": "2-5",
+      "title": "N1の N2（説明／所有）",
+      "structure": "N1の N2",
+      "meaning": "の used to say what N2 is about, or who N2 belongs to.",
+      "explanation": "Building on Lesson 1's の (\"N2 belongs to organization N1\"), this lesson adds two more uses: (1) N1 explains what N2 is about/of, and (2) N1 explains who owns N2. N2 can be dropped when it's obvious from context, but not when N2 refers to a person.",
+      "examples": [
+        {
+          "jp": "これはコンピューターの本です。",
+          "en": "This is a book on computers."
+        },
+        {
+          "jp": "これはわたしの本です。",
+          "en": "This is my book."
+        },
+        {
+          "jp": "あれはだれのかばんですか。…佐藤さんのです。",
+          "en": "Whose bag is that? — It's Ms. Sato's."
+        },
+        {
+          "jp": "このかばんはあなたのですか。…いいえ、わたしのじゃありません。",
+          "en": "Is this bag yours? — No, it's not mine."
+        },
+        {
+          "jp": "ミラーさんはIMCの社員ですか。…はい、IMCの社員です。",
+          "en": "Is Mr. Miller an employee of IMC? — Yes, he is."
+        }
+      ],
+      "summary": "の keeps doing the same modifying job as 1-5, now covering \"about N1\" and \"belongs to N1\" alongside the earlier \"member of N1.\"",
+      "details": "の's growing job list across these first two lessons:\n\n| Lesson | Use | Example |\n| :--- | :--- | :--- |\n| 1-5 | N2 belongs to organization N1 | IMCの社員 |\n| 2-5 | N2 is about/of N1 | コンピューターの本 |\n| 2-5 | N2 is owned by N1 | わたしの本 |\n\nWhen N2 is a thing and obvious from context, it can be dropped (これはわたしの[本]です → これはわたしのです), but never when N2 is a person.",
+      "tags": [
+        "particle-usage",
+        "definition-meaning"
+      ]
+    },
+    {
+      "id": "2-6",
+      "title": "そうですか",
+      "structure": "そうですか。",
+      "meaning": "\"I see.\" / \"Is that so?\" — shows the speaker has received and registered new information.",
+      "explanation": "This expression is used when the speaker receives new information and shows that he or she understands/registers it.",
+      "examples": [
+        {
+          "jp": "この傘はあなたのですか。…いいえ、違います。シュミットさんのです。そうですか。",
+          "en": "Is this umbrella yours? — No, it's not mine. It's Mr. Schmidt's. — I see."
+        }
+      ],
+      "summary": "A short acknowledgment phrase that registers new information the speaker just learned — not a question in practice, despite the か.",
+      "note": "Don't confuse this with そうですか as an actual question (2-3's affirmative-check use) — context (falling vs rising intonation) tells them apart.",
+      "details": "Same surface form as the affirmative-check use in 2-3, but a completely different job: here it's a filler-like acknowledgment (spoken with falling intonation), not a request for confirmation (which would rise). This split personality of そうですか is common in beginner listening practice.",
+      "tags": [
+        "acknowledgment"
+      ]
+    }
+  ],
+  "3": [
+    {
+      "id": "3-1",
+      "title": "ここ／そこ／あそこ／こちら／そちら／あちら",
+      "structure": "ここ／そこ／あそこ／こちら／そちら／あちら",
+      "meaning": "\"Here / there / over there\" (place), and their more polite direction-word equivalents.",
+      "explanation": "Just like これ/それ/あれ (Lesson 2) refer to a thing, ここ、そこ and あそこ refer to a place — ここ is where the speaker is, そこ is where the listener is, and あそこ is far from both. こちら、そちら and あちら are demonstratives for direction, and are also used for place, in which case they are politer than ここ/そこ/あそこ.",
+      "examples": [
+        {
+          "jp": "あそこは事務所です。",
+          "en": "That (over there) is the office."
+        },
+        {
+          "jp": "こちらは会議室です。",
+          "en": "This (way) is the conference room."
+        }
+      ],
+      "summary": "ここ/そこ/あそこ name a place using the same speaker/listener-distance logic as これ/それ/あれ for things; こちら/そちら/あちら are the politer direction/place equivalents.",
+      "details": "[Note] When the speaker treats the listener as sharing their territory, the shared place is called ここ; そこ then marks somewhere a little further off, and あそこ somewhere further still. See 3-5 for the full grid mapping these onto これ/この/どれ, etc.",
+      "tags": [
+        "demonstrative"
+      ]
+    },
+    {
+      "id": "3-2",
+      "title": "N1は N2(place)です",
+      "structure": "N1は N2(place)です",
+      "meaning": "States where a place, thing, or person is.",
+      "explanation": "This sentence pattern is used to explain where a place, a thing, or a person is, by putting a place word directly after は…です.",
+      "examples": [
+        {
+          "jp": "お手洗いはあそこです。",
+          "en": "The rest room is there."
+        },
+        {
+          "jp": "電話は2階です。",
+          "en": "The telephone is on the second floor."
+        },
+        {
+          "jp": "山田さんは事務所です。",
+          "en": "Mr. Yamada is in the office."
+        }
+      ],
+      "summary": "The N1は N2です pattern from Lesson 1 reused with a place word as the predicate, to state location.",
+      "details": "No new grammar here — it's 1-1's N1は N2です with N2 restricted to a place word. This is the book's simplest way to state location, well before the existence verbs あります/います (introduced much later) that let you also state *what exists* somewhere rather than just *where someone/something is*.",
+      "tags": [
+        "existence-location",
+        "topic-focus-particle"
+      ]
+    },
+    {
+      "id": "3-3",
+      "title": "どこ／どちら",
+      "structure": "どこ／どちら",
+      "meaning": "\"Where\" — an interrogative asking for a place, organization, or affiliation.",
+      "explanation": "どこ means \"where,\" and どちら also means \"where\" but is politer. どこ/どちら is also used to ask the name of a country, company, school, or any organization a person belongs to — なん cannot be used for this.",
+      "examples": [
+        {
+          "jp": "お手洗いはどこですか。…あそこです。",
+          "en": "Where's the rest room? — It's there."
+        },
+        {
+          "jp": "エレベーターはどちらですか。…あちらです。",
+          "en": "Where's the elevator? — It's in that direction. (It's there.)"
+        },
+        {
+          "jp": "学校はどこですか。",
+          "en": "What's the name of your school?"
+        },
+        {
+          "jp": "会社はどちらですか。",
+          "en": "What company do you work for?"
+        }
+      ],
+      "summary": "どこ/どちら ask \"where,\" with どちら as the politer form; both can also ask what organization someone belongs to.",
+      "details": "Same politeness relationship as ここ/こちら or そこ/そちら in 3-1: the plain form and the polite form ask exactly the same question, so the choice is about register, not meaning. Note the special extended use — asking 会社はどちらですか doesn't literally ask \"in what direction is your company,\" it asks \"what company do you work for,\" which trips up learners translating too literally.",
+      "tags": [
+        "question-embedding",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "3-4",
+      "title": "N1の N2（made in／by）",
+      "structure": "N1の N2",
+      "meaning": "N1の N2 where N1 is a country or company and N2 is a product — \"N2 made in/by N1.\"",
+      "explanation": "When N1 is the name of a country and N2 is a product, it means N2 is made in that country; when N1 is a company, it means N2 is made by that company. どこ is used to ask where or by whom N2 is made.",
+      "examples": [
+        {
+          "jp": "これはどこのコンピューターですか。…日本のコンピューターです。／IMCのコンピューターです。",
+          "en": "Where is this computer made? / Who is the maker of this computer? — It's made in Japan. / IMC is."
+        }
+      ],
+      "summary": "の keeps extending: here N1 names the country or company that made product N2 — the fourth use of の across Lessons 1-3.",
+      "details": "By this point の has picked up four distinct jobs (see the table on 2-5): member-of-organization, about/of, owned-by, and now made-in/by. All four share the same surface form N1の N2 — only context tells them apart, which is exactly why they're worth tracking as a set rather than memorizing each in isolation.",
+      "tags": [
+        "particle-usage",
+        "definition-meaning"
+      ]
+    },
+    {
+      "id": "3-5",
+      "title": "The こ／そ／あ／ど System of Demonstrative Words",
+      "structure": "こ〜／そ〜／あ〜／ど〜",
+      "meaning": "A reference summary of every demonstrative series introduced so far (and two still to come).",
+      "explanation": "The こ/そ/あ series (near speaker / near listener / far from both) recurs across five different grammatical categories: things (これ/それ/あれ), modifying a noun (この N/その N/あの N), place (ここ/そこ/あそこ), and direction/polite place (こちら/そちら/あちら) — plus person (どの N) and thing (どれ), both introduced later in Lesson 8/16.",
+      "examples": [
+        {
+          "jp": "これ／この本／ここ／こちら",
+          "en": "this thing / this book / here / this way (all こ-series)"
+        },
+        {
+          "jp": "それ／その本／そこ／そちら",
+          "en": "that thing / that book / there / that way (all そ-series, near listener)"
+        }
+      ],
+      "summary": "A one-glance grid tying together every これ/この/ここ/こちら-style demonstrative introduced so far, organized by what they refer to (thing, modifier, place, direction) and by distance (near speaker / near listener / far from both / unknown).",
+      "details": "### The Full Grid\n\n| | こ-series (near speaker) | そ-series (near listener) | あ-series (far from both) | ど-series (question) |\n| :--- | :--- | :--- | :--- | :--- |\n| **thing** | これ | それ | あれ | どれ (L.8) |\n| **thing/person modifier** | この N | その N | あの N | どの N (L.16) |\n| **place** | ここ | そこ | あそこ | どこ |\n| **direction / polite place** | こちら | そちら | あちら | どちら |\n\nMemorize the row logic once (thing vs modifier vs place vs direction) and the column logic once (near me / near you / far from both / which one) — every new word in this family is just those two axes combined.",
+      "tags": [
+        "demonstrative",
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "3-6",
+      "title": "お国",
+      "structure": "お + N",
+      "meaning": "The honorific prefix お attached to a word concerning the listener or a third person.",
+      "explanation": "The prefix お is added to a word concerning the listener or a third person, in order to express the speaker's respect toward that person.",
+      "examples": [
+        {
+          "jp": "［お］国はどちらですか。",
+          "en": "Where are you from?"
+        }
+      ],
+      "summary": "お is a respect-marking prefix attached to nouns belonging to the listener or a third party — never to the speaker's own things.",
+      "note": "This is an early, very light preview of the honorific register that gets fully systematized much later (N4 Lessons 49-50, 敬語/謙譲語).",
+      "details": "The brackets in ［お］国 signal お is optional here — dropping it isn't wrong, just less polite. This single-word prefix is the seed of a much bigger system: full 尊敬語 (respectful language, elevating others) and 謙譲語 (humble language, lowering yourself) aren't taught until much later, but they both grow out of exactly this instinct — marking whose thing you're talking about.",
+      "tags": [
+        "keigo-respectful"
+      ]
+    }
+  ],
+  "4": [
+    {
+      "id": "4-1",
+      "title": "今 -時-分です",
+      "structure": "今 -時-分です",
+      "meaning": "States the current time, using the counters 時 (o'clock) and 分 (minutes).",
+      "explanation": "To express time, the counter suffixes 時 (o'clock) and 分 (minutes) follow a number. 分 is read ふん after 2, 5, 7 or 9, and ぷん after 1, 3, 4, 6, 8 or 10 (1, 6, 8 and 10 become いっ, ろっ, はっ and じゅっ/じゅっ before ぷん). The interrogative なん combines with a counter (なんじ, なんぷん) to ask for the time. は can mark a geographical location as the topic, to ask the time somewhere else.",
+      "examples": [
+        {
+          "jp": "今何時ですか。…7時10分です。",
+          "en": "What time is it now? — It's seven ten."
+        },
+        {
+          "jp": "ニューヨークは今何時ですか。…午前4時です。",
+          "en": "In New York what time is it now? — It's 4 a.m."
+        }
+      ],
+      "summary": "時/分 are the o'clock/minute counters used to state and ask the time; a place name can be topicalized with は to ask the time elsewhere.",
+      "details": "The 分 reading split (ふん after 2/5/7/9, ぷん after 1/3/4/6/8/10, with 1/6/8/10 further contracting to いっ/ろっ/はっ/じゅっ before ぷん) is one of the first sound-change rules learners hit — it's worth drilling out loud rather than just reading, since the written numeral gives no clue which reading applies.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "id": "4-2",
+      "title": "Vます",
+      "structure": "Vます",
+      "meaning": "Introduces the polite non-past verb form, working as the sentence's predicate.",
+      "explanation": "A verb ending in ます works as a predicate, the same role です plays for nouns/adjectives. ます makes the sentence polite.",
+      "examples": [
+        {
+          "jp": "わたしは毎日勉強します。",
+          "en": "I study every day."
+        }
+      ],
+      "summary": "ます is the polite predicate ending for verbs, parallel to です for nouns — this lesson's first appearance of a true verb sentence.",
+      "details": "This is the doorway into an entirely new sentence type. Every grammar point up through Lesson 3 built noun-sentences (N1は N2です); from here on, verb-sentences take over, and 4-3 immediately lays out the full conjugation this ます form belongs to.",
+      "tags": [
+        "habit-effort",
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "4-3",
+      "title": "Vます／Vません／Vました／Vませんでした",
+      "structure": "Vます (non-past aff.) ／Vません (non-past neg.) ／Vました (past aff.) ／Vませんでした (past neg.)",
+      "meaning": "The four-way polite conjugation of a verb: non-past/past crossed with affirmative/negative.",
+      "explanation": "ます is used when a sentence expresses a habitual action or a general truth, and also when a sentence expresses something that will occur in the future. The negative and past-tense forms are shown in the table below. Question forms keep the same word order as noun-sentences (か added at the end), and the same verb form is repeated in the answer — そうです/そうじゃ ありません (Lesson 2) cannot be used with verbs.",
+      "examples": [
+        {
+          "jp": "毎朝6時に起きます。",
+          "en": "I get up at six every morning."
+        },
+        {
+          "jp": "あした6時に起きます。",
+          "en": "I'll get up at six tomorrow morning."
+        },
+        {
+          "jp": "けさ6時に起きました。",
+          "en": "I got up at six this morning."
+        },
+        {
+          "jp": "きのう勉強しましたか。…はい、勉強しました。…いいえ、勉強しませんでした。",
+          "en": "Did you study yesterday? — Yes, I did. / No, I didn't."
+        },
+        {
+          "jp": "毎朝何時に起きますか。…6時に起きます。",
+          "en": "What time do you get up every morning? — I get up at six."
+        }
+      ],
+      "summary": "The full ます-form paradigm — non-past/past × affirmative/negative — is the backbone every verb sentence in the book will use.",
+      "details": "### The ます-form Paradigm\n\n| | non-past (future/present) | past |\n| :--- | :--- | :--- |\n| **affirmative** | (おき)ます | (おき)ました |\n| **negative** | (おき)ません | (おき)ませんでした |\n\nUnlike noun/adjective questions (2-3), verb-sentence questions can't be answered with そうです/そうじゃありません — the verb itself is repeated in the answer.",
+      "tags": [
+        "meta-conjugation",
+        "habit-effort"
+      ]
+    },
+    {
+      "id": "4-4",
+      "title": "N(time)に V",
+      "structure": "N(time)に V",
+      "meaning": "Marks the specific point in time when a momentary action or movement occurs.",
+      "explanation": "When a verb denotes a momentary action or movement, the time when it occurs is marked with the particle に. に is added when the time noun uses a numeral (6時に, 7月2日に); it can also attach to days of the week, though there it's optional. に is not added when the time word doesn't use a numeral (きのう, けさ, etc. — see the vocabulary of Lesson 4).",
+      "examples": [
+        {
+          "jp": "6時半に起きます。",
+          "en": "I get up at six thirty."
+        },
+        {
+          "jp": "7月2日に日本へ来ました。",
+          "en": "I came to Japan on July 2nd."
+        },
+        {
+          "jp": "日曜日［に］奈良へ行きます。",
+          "en": "I'm going to Nara on Sunday."
+        },
+        {
+          "jp": "きのう勉強しました。",
+          "en": "I studied yesterday."
+        }
+      ],
+      "summary": "に pins a momentary action to a specific numbered point in time; relative time words like きのう never take に.",
+      "note": "Easy trap for beginners: きのう6時にVs. きのうにV — きのう never takes に, but the numbered clock/date time inside the same sentence still does.",
+      "details": "The rule of thumb: if the time word is a number/date (6時, 7月2日) it takes に; if it's a relative day word without a number (きのう, きょう, あした, けさ) it doesn't. Days of the week (日曜日) sit in between — に is grammatically optional there, though most learners include it early on for consistency.",
+      "tags": [
+        "particle-usage",
+        "time-relative"
+      ]
+    },
+    {
+      "id": "4-5",
+      "title": "N1から N2まで",
+      "structure": "N1から N2まで",
+      "meaning": "\"From N1 to N2\" — marks a starting and finishing time or place.",
+      "explanation": "から indicates the starting time or place, and まで indicates the finishing time or place. They aren't always used together — either can appear alone. です can attach directly after から, まで, or から〜まで.",
+      "examples": [
+        {
+          "jp": "9時から5時まで働きます。",
+          "en": "I work from nine to five."
+        },
+        {
+          "jp": "大阪から東京まで3時間かかります。",
+          "en": "It takes three hours from Osaka to Tokyo."
+        },
+        {
+          "jp": "9時から働きます。",
+          "en": "I work from nine."
+        },
+        {
+          "jp": "銀行は9時から3時までです。",
+          "en": "The bank is open from nine to three."
+        },
+        {
+          "jp": "昼休みは12時からです。",
+          "en": "Lunchtime starts at twelve."
+        }
+      ],
+      "summary": "から/まで mark start/end points of a time or place span; either can stand alone, and です can attach directly after them.",
+      "details": "から/まで aren't limited to time — the same pair marks a starting/finishing *place* too (大阪から東京まで, \"from Osaka to Tokyo\"), which is the same job へ (5-1) does for destination alone. から/まで frame the whole span; へ just marks where you're headed.",
+      "tags": [
+        "time-relative",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "4-6",
+      "title": "N1と N2",
+      "structure": "N1と N2",
+      "meaning": "\"N1 and N2\" — connects two nouns in a coordinate (equal) relationship.",
+      "explanation": "The particle と connects two nouns in a coordinate relation, like English \"and\" between two nouns.",
+      "examples": [
+        {
+          "jp": "銀行の休みは土曜日と日曜日です。",
+          "en": "The bank is closed on Saturdays and Sundays."
+        }
+      ],
+      "summary": "と is the plain noun-and-noun connector — reserved for nouns, not clauses or verbs.",
+      "details": "Don't confuse this noun-connecting と with the companion-marking と of 5-4 (家族と行きます, \"go with family\") — same particle, two different jobs, distinguished by whether it's joining two nouns of equal status or marking who you're doing an action with.",
+      "tags": [
+        "listing-examples",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "4-7",
+      "title": "Sね",
+      "structure": "S + ね",
+      "meaning": "A sentence-final particle adding sympathy, or seeking the listener's agreement/confirmation.",
+      "explanation": "ね is attached to the end of a sentence to add feeling to what the speaker says. It shows the speaker's sympathy, or an expectation that the listener will agree — in the latter use, it's often used to confirm something.",
+      "examples": [
+        {
+          "jp": "毎日10時ごろまで勉強します。…大変ですね。",
+          "en": "I study till about ten every day. — That must be hard."
+        },
+        {
+          "jp": "山田さんの電話番号は871の6813です。…871の6813ですね。",
+          "en": "Mr. Yamada's telephone number is 871-6813. — 871-6813, right?"
+        }
+      ],
+      "summary": "Sentence-final ね softens a statement into a shared feeling, or invites the listener to confirm what was just said.",
+      "details": "See 5-6 for the direct comparison with よ, the other major sentence-final feeling particle introduced in this unit — ね leans on shared ground with the listener, while よ asserts something the listener doesn't already know.",
+      "tags": [
+        "confirmation-seeking"
+      ]
+    }
+  ],
+  "5": [
+    {
+      "id": "5-1",
+      "title": "N(place)へ 行きます／来ます／帰ります",
+      "structure": "N(place)へ 行きます／来ます／帰ります",
+      "meaning": "Marks the destination of a movement verb (go/come/return) with へ.",
+      "explanation": "When a verb indicates movement to a certain place, the particle へ is put after the place noun to show the direction of the move. [Note] The particle へ is read え.",
+      "examples": [
+        {
+          "jp": "京都へ行きます。",
+          "en": "I will go to Kyoto."
+        },
+        {
+          "jp": "日本へ来ました。",
+          "en": "I came to Japan."
+        },
+        {
+          "jp": "うちへ帰ります。",
+          "en": "I will go home."
+        }
+      ],
+      "summary": "へ (read え) marks the destination of 行きます/来ます/帰ります — the core \"go/come/return to\" pattern.",
+      "details": "This lesson's three movement verbs (行きます/来ます/帰ります) all share this へ-marked destination slot, and 5-3/5-4 add two more particle slots onto the exact same verbs: で for the vehicle, と for a companion. A single sentence can stack all three: 家族と電車で東京へ行きます (\"I'll go to Tokyo by train with my family\").",
+      "tags": [
+        "direction-movement",
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "5-2",
+      "title": "どこ［へ］も 行きません／行きませんでした",
+      "structure": "Interrogative + も + negative V",
+      "meaning": "\"Not... anywhere/anything/anybody\" — total negation built from an interrogative + も + a negative verb.",
+      "explanation": "When an interrogative (どこ, なに, だれ, etc.) takes the particle も and the verb following it is negative, everything the interrogative could represent is denied at once.",
+      "examples": [
+        {
+          "jp": "どこ［へ］も行きません。",
+          "en": "I don't go anywhere."
+        },
+        {
+          "jp": "何も食べません。",
+          "en": "I don't eat anything."
+        },
+        {
+          "jp": "だれもいません。",
+          "en": "Nobody is there."
+        }
+      ],
+      "summary": "Interrogative + も + negative verb = total negation (\"not anywhere/anything/anyone\") — a different job for も than the \"also\" use in 1-4.",
+      "note": "Don't confuse this も with the \"also\" も from 1-4 — here it combines with an interrogative and a negative verb to mean total denial, not addition.",
+      "details": "The pattern always needs three pieces together: an interrogative (どこ, 何, だれ), the particle も, and a negative verb. Drop any one of the three and the meaning changes completely — どこも行きます isn't a sentence, and どこへ行きません is just ungrammatical. へ itself is optional inside the pattern (どこも／どこへも both work), but も and the negative verb are not.",
+      "tags": [
+        "emphasis-limitation",
+        "negative-manner"
+      ]
+    },
+    {
+      "id": "5-3",
+      "title": "N(vehicle)で 行きます／来ます／帰ります",
+      "structure": "N(vehicle)で 行きます／来ます／帰ります",
+      "meaning": "Marks the means of transportation used with a movement verb.",
+      "explanation": "The particle で indicates a means or method. When verbs denoting movement (行きます, 来ます, 帰ります, etc.) are used with で, で indicates a means of transportation, and the noun before で is a vehicle. When you walk somewhere, you use あるいて instead, and で is not used.",
+      "examples": [
+        {
+          "jp": "電車で行きます。",
+          "en": "I'll go by train."
+        },
+        {
+          "jp": "タクシーで来ました。",
+          "en": "I came by taxi."
+        },
+        {
+          "jp": "駅から歩いて帰りました。",
+          "en": "I walked home from the station."
+        }
+      ],
+      "summary": "で marks the vehicle used for a movement verb (\"go by train\"); 歩いて (\"on foot\") replaces で+vehicle entirely rather than combining with it.",
+      "details": "で here is the \"means/method\" particle — the same underlying job it plays elsewhere (writing で pen, paying で cash), just specialized to vehicles alongside a movement verb. 歩いて is the one exception: since walking isn't a vehicle, で never attaches to it — the て-form of 歩きます simply stands in for the whole で-phrase.",
+      "tags": [
+        "particle-usage",
+        "direction-movement"
+      ]
+    },
+    {
+      "id": "5-4",
+      "title": "N(person/animal)と V",
+      "structure": "N(person/animal)と V",
+      "meaning": "Marks the companion someone does an action with; ひとりで marks doing something alone.",
+      "explanation": "When you do something with a person (or an animal), the person/animal is marked with the particle と. If you do something alone, the expression ひとりで is used instead, and と is not used.",
+      "examples": [
+        {
+          "jp": "家族と日本へ来ました。",
+          "en": "I came to Japan with my family."
+        },
+        {
+          "jp": "一人で東京へ行きます。",
+          "en": "I'll go to Tokyo alone."
+        }
+      ],
+      "summary": "と marks a companion (\"with N\"); ひとりで (\"alone\") is the mutually-exclusive alternative when there's no companion at all.",
+      "details": "This is a different と from 4-6's noun-connecting と (\"N1 and N2\") — here と follows a single person/animal and means \"together with,\" attaching to a verb rather than joining two nouns. If there's no companion at all, swap the と-phrase out entirely for ひとりで rather than trying to negate it.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "5-5",
+      "title": "いつ",
+      "structure": "いつ",
+      "meaning": "\"When\" — an interrogative asking about time, used without any particle.",
+      "explanation": "To ask about time, the なん-based interrogatives (なんじ, なんようび, なんがつなんにち) are used for specific counters. Otherwise, the interrogative いつ (\"when\") asks when something will happen/happened. いつ never takes the particle に.",
+      "examples": [
+        {
+          "jp": "いつ日本へ来ましたか。…3月25日に来ました。",
+          "en": "When did you come to Japan? — I came on March 25th."
+        },
+        {
+          "jp": "いつ広島へ行きますか。…来週行きます。",
+          "en": "When will you go to Hiroshima? — I'll go there next week."
+        }
+      ],
+      "summary": "いつ asks \"when\" in general (as opposed to a specific なん+counter question) and is one of the rare time words that never takes に.",
+      "note": "Contrast with 4-4: numbered time words take に (6時に, 3月25日に), but いつ itself never does.",
+      "details": "いつ behaves like きのう/きょう/あした from 4-4's relative-time-word group — no numeral, so no に — even though the answer to an いつ question is often a numbered date that *would* take に (3月25日に来ました). The question word and its answer don't have to follow the same rule.",
+      "tags": [
+        "question-embedding",
+        "time-relative"
+      ]
+    },
+    {
+      "id": "5-6",
+      "title": "Sよ",
+      "structure": "S + よ",
+      "meaning": "A sentence-final particle emphasizing information the listener doesn't know, or asserting the speaker's judgment.",
+      "explanation": "よ is placed at the end of a sentence. It's used to emphasize information which the listener does not know, or to show that the speaker is giving their judgment or view assertively.",
+      "examples": [
+        {
+          "jp": "この電車は甲子園へ行きますか。…いいえ、行きません。次の普通ですよ。",
+          "en": "Does this train go to Koshien? — No, it doesn't. The next local train does."
+        },
+        {
+          "jp": "無理なダイエットは体によくないですよ。",
+          "en": "Excessive dieting is bad for your health."
+        }
+      ],
+      "summary": "Sentence-final よ asserts new information or the speaker's own judgment — the mirror image of ね (4-7), which instead seeks the listener's agreement.",
+      "details": "**ね vs よ, at a glance:**\n\n| Particle | Job |\n| :--- | :--- |\n| **ね** (4-7) | Invites agreement / shares a feeling — assumes the listener already knows or will agree. |\n| **よ** (5-6) | Asserts something the listener *doesn't* know, or states the speaker's own judgment firmly. |\n\nBoth attach to the very end of a sentence and never combine with か.",
+      "tags": [
+        "emphasis-assertion"
+      ]
+    }
+  ],
+  "6": [
+    {
+      "id": "6-1",
+      "title": "N を V (transitive)",
+      "structure": "N を V",
+      "meaning": "Marks the direct object of a transitive verb.",
+      "explanation": "を marks the direct object that a transitive verb acts on. Note: を and お are pronounced identically; を is used only for this particle in writing.",
+      "examples": [
+        {
+          "jp": "ジュースを 飲みます。",
+          "en": "I drink juice."
+        }
+      ],
+      "summary": "を marks the direct object of a transitive verb.",
+      "details": "This is the core transitive-verb pattern: N(object)を V. It pairs with the new transitive verbs introduced in this lesson's vocabulary (食べます, 飲みます, 見ます, 聞きます, 読みます, 書きます, 買います, 撮ります, します) — nearly all of L6's example sentences plug a noun into this frame before the verb.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "6-2",
+      "title": "N を します",
+      "structure": "N を します",
+      "meaning": "します performs the action denoted by the noun before を — covers playing sports/games, holding gatherings, and doing tasks.",
+      "explanation": "The nouns used as objects of します cover a fairly wide range: 1) playing sports or games (サッカーを します, トランプを します), 2) holding gatherings (パーティーを します, 会議を します), 3) doing something (宿題を します, 仕事を します).",
+      "examples": [
+        {
+          "jp": "宿題を します。",
+          "en": "I do homework."
+        },
+        {
+          "jp": "サッカーを します。",
+          "en": "I play football."
+        }
+      ],
+      "summary": "します turns an action-noun into a verb phrase: 'do N' — covering sports, gatherings, and tasks.",
+      "details": "This is the same します you saw as the Group III verb suffix pattern (noun + します) — here the focus is specifically on which nouns pair naturally with it. It reappears constantly afterward (宿題をします in L9's example sentences, 買い物します/食事します/散歩します as single Group III verbs in L13).",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "6-3",
+      "title": "何を しますか",
+      "structure": "何を しますか",
+      "meaning": "Asks what someone does/will do; a time word can become the topic by adding は.",
+      "explanation": "This is a question asking what someone does. Adding は to a time word (e.g. 月曜日は) makes that time word the sentence topic.",
+      "examples": [
+        {
+          "jp": "月曜日 何を しますか。…京都へ 行きます。",
+          "en": "What will you do on Monday? …I'll go to Kyoto."
+        },
+        {
+          "jp": "月曜日は 何を しますか。…京都へ 行きます。",
+          "en": "On Monday what will you do? …I'll go to Kyoto."
+        }
+      ],
+      "summary": "何を しますか asks what someone does; は can topicalize a time expression in front of it.",
+      "details": "Combines 6-1's をV pattern with the question word 何. The [Note] about は marking a time word as topic previews how は will keep attaching to time/place words to topicalize them (seen again with 週末は in later lessons).",
+      "tags": [
+        "topic-focus-particle"
+      ]
+    },
+    {
+      "id": "6-4",
+      "title": "なに and なん",
+      "structure": "なに / なん",
+      "meaning": "Both mean 'what' — なん is used before た/だ/な-row sounds or before a counter suffix; なに is used everywhere else.",
+      "explanation": "1) なん is used (1) when it precedes a word whose first mora is in the た, だ, or な row (それは 何ですか, 何の 本ですか), and (2) when followed by a counter suffix (何歳ですか). 2) なに is used in all other cases (何を 買いますか).",
+      "examples": [
+        {
+          "jp": "それは 何ですか。",
+          "en": "What is that?"
+        },
+        {
+          "jp": "何を 買いますか。",
+          "en": "What will you buy?"
+        }
+      ],
+      "summary": "何 is read なん before た/だ/な-row sounds or a counter, and なに otherwise.",
+      "details": "This reading rule needs to be internalized because 何 appears constantly from here on — 何を しますか (6-3) is read なにを, but 何人 (L11, a counter) and 何時 (L4) are read なん. Mixing the two readings up is a very common beginner slip worth being quizzed on.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "6-5",
+      "title": "N(place)で V",
+      "structure": "N(place)で V",
+      "meaning": "で marks the place where an action occurs.",
+      "explanation": "When added after a noun denoting a place, で indicates the place where an action occurs.",
+      "examples": [
+        {
+          "jp": "駅で 新聞を 買います。",
+          "en": "I buy the newspaper at the station."
+        }
+      ],
+      "summary": "で after a place noun marks where an action takes place.",
+      "details": "Contrast this with に, which marks a location of existence (あります/います, from L10) rather than where an action happens. This で(place-of-action) vs に(place-of-existence) distinction is a classic point of confusion worth drilling once L10 is reviewed.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "6-6",
+      "title": "V ませんか",
+      "structure": "Vません か",
+      "note": "Invitation form.",
+      "meaning": "Invites someone to do something together.",
+      "explanation": "When you want to invite someone to do something, this expression is used.",
+      "examples": [
+        {
+          "jp": "いっしょに 京都へ 行きませんか。…ええ、いいですね。",
+          "en": "Won't you come to Kyoto with us? …That's a nice idea."
+        }
+      ],
+      "summary": "V ませんか politely invites someone to join in doing something.",
+      "details": "Compare directly with 6-7's Vましょう: ませんか is a more considerate, open invitation (leaves room to decline), while ましょう is a more direct positive proposal or an enthusiastic acceptance of an invitation. The [Note] under 6-7 states this explicitly.",
+      "tags": [
+        "request"
+      ]
+    },
+    {
+      "id": "6-7",
+      "title": "V ましょう",
+      "structure": "V ましょう",
+      "note": "More direct than ませんか; also used to accept an invitation.",
+      "meaning": "Proposes doing something together with the listener, or accepts an invitation positively.",
+      "explanation": "This expression is used when a speaker is positively inviting the listener to do something with the speaker. It is also used when responding positively to an invitation. An invitation using Vませんか shows more consideration to the listener's will than that using Vましょう.",
+      "examples": [
+        {
+          "jp": "ちょっと 休みましょう。",
+          "en": "Let's have a break."
+        },
+        {
+          "jp": "いっしょに 昼ごはんを 食べませんか。…ええ、食べましょう。",
+          "en": "Won't you have lunch with me? …Yes, let's go and eat."
+        }
+      ],
+      "summary": "Vましょう proposes an action together, or accepts an invitation made with ませんか.",
+      "details": "See 6-6 for the direct comparison: ませんか invites (softer), ましょう proposes/accepts (more direct). The two are often drilled as a matched pair — expect to be asked to pick the right one in context.",
+      "tags": [
+        "volitional-intention"
+      ]
+    },
+    {
+      "id": "6-8",
+      "title": "お〜",
+      "structure": "お + N",
+      "note": "Politeness prefix; some words always take お with no honorific meaning.",
+      "meaning": "A prefix attached to words to show politeness, or (as learned in L3) respect toward the listener/the person referred to.",
+      "explanation": "お is attached to words regarding the listener or the person being referred to, to show respect (お国 = your country). お is also attached to other words simply when the speaker is speaking politely (お酒 alcohol, お花見 cherry-blossom viewing). Some words are usually used with お without meaning respect or politeness at all (おちゃ tea, おかね money).",
+      "examples": [
+        {
+          "jp": "[お]さけ",
+          "en": "alcohol, Japanese rice wine"
+        },
+        {
+          "jp": "[お]はなみ",
+          "en": "[o]hanami, cherry-blossom viewing"
+        }
+      ],
+      "summary": "お is a politeness/respect prefix; some words (おちゃ, おかね) simply always carry it, without a distinct honorific meaning.",
+      "details": "Builds on L3's お (お国 = 'your country' for the listener). Here the scope widens: お can just be a marker of polite speech, or even lexicalized onto a word with no honorific force left at all. Good to remember which N5 vocabulary items are 'always お' (おちゃ, おかね, おさけ, おはなみ) vs. optionally polite.",
+      "tags": [
+        "keigo-polite"
+      ]
+    }
+  ],
+  "7": [
+    {
+      "id": "7-1",
+      "title": "N(tool/means)で V",
+      "structure": "N(tool/means)で V",
+      "meaning": "で marks the tool or means used to perform an action.",
+      "explanation": "The particle で indicates a method or a means used for an action.",
+      "examples": [
+        {
+          "jp": "はしで 食べます。",
+          "en": "I eat with chopsticks."
+        },
+        {
+          "jp": "日本語で レポートを 書きます。",
+          "en": "I write a report in Japanese."
+        }
+      ],
+      "summary": "で after a tool/language/method noun marks the means by which an action is done.",
+      "details": "This is a second job for で, distinct from 6-5's で(place of action). Both share the same particle but very different roles — with practice this becomes automatic from context (place noun vs. tool/means noun), but it's worth being asked to distinguish them directly.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "7-2",
+      "title": "\"Word/Sentence\" は 〜語で 何ですか",
+      "structure": "\"W\" は 〜語で 何ですか",
+      "meaning": "Asks how to say a word or sentence in another language.",
+      "explanation": "This question is used to ask how to say a word or a sentence in other languages.",
+      "examples": [
+        {
+          "jp": "「ありがとう」は 英語で 何ですか。…「Thank you」です。",
+          "en": "What's 'ありがとう' in English? …It's 'Thank you.'"
+        }
+      ],
+      "summary": "Combines で(means, 7-1) — 語で 'in [language]' — with 何ですか to ask for a translation.",
+      "details": "Directly reuses 7-1's で(means): 英語で 何ですか literally means 'by means of English, what is it' i.e. 'what is it in English.' A clean example of how the tool/means で from grammar point 1 gets applied to languages specifically.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "7-3",
+      "title": "N(person)に あげます、etc.",
+      "structure": "N(person)に あげます／かします／おしえます",
+      "meaning": "Marks the recipient of giving-type verbs (あげます, かします, おしえます) with に.",
+      "explanation": "Verbs like あげます (give), かします (lend), おしえます (teach), etc., need persons to whom you give, lend, teach, etc. The persons are marked with に. [Note] With verbs like おくります, でんわを かけます, place nouns can be used instead of N(person); in this case, へ is sometimes used instead of に.",
+      "examples": [
+        {
+          "jp": "山田さんは 木村さんに 花を あげました。",
+          "en": "Mr. Yamada gave flowers to Ms. Kimura."
+        },
+        {
+          "jp": "太郎君に 英語を 教えます。",
+          "en": "I teach Taro English."
+        },
+        {
+          "jp": "会社に 電話を かけます。（へ）",
+          "en": "I'll call my office."
+        }
+      ],
+      "summary": "に marks the recipient with giving-direction verbs (あげます, かします, おしえます, おくります, 電話をかけます); へ can substitute for に with place-like recipients.",
+      "details": "This is the 'giving' half of the giving/receiving pair completed by 7-4's もらいます group. Note the direction: the giver is the subject, に marks who receives. Compare carefully against 7-4, where に marks the source instead.",
+      "tags": [
+        "giving-receiving"
+      ]
+    },
+    {
+      "id": "7-4",
+      "title": "N(person)に もらいます、etc.",
+      "structure": "N(person)に／から もらいます／かります／ならいます",
+      "meaning": "Marks the source a receiving-type action (もらいます, かります, ならいます) comes from, with に or から.",
+      "explanation": "Verbs like もらいます (receive), かります (borrow) and ならいます (learn) express actions from the receiving side. The persons from whom you receive those actions are marked with に. から is sometimes used instead of に in this sentence pattern. When you receive something from an organization like a school or a company, only から is used.",
+      "examples": [
+        {
+          "jp": "木村さんは 山田さんに 花を もらいました。",
+          "en": "Ms. Kimura received flowers from Mr. Yamada."
+        },
+        {
+          "jp": "カリナさんに CDを 借りました。",
+          "en": "I borrowed a CD from Ms. Karina."
+        },
+        {
+          "jp": "銀行から お金を 借りました。",
+          "en": "I borrowed some money from the bank."
+        }
+      ],
+      "summary": "に or から marks the source with receiving-direction verbs (もらいます, かります, ならいます); から is required when the source is an organization.",
+      "details": "The mirror image of 7-3: here に (or から) marks where the action comes FROM, not where it goes to. も らいます/かします and かります/かします look similar and are commonly mixed up — かします = lend (I am the giver), かります = borrow (I am the receiver) — worth a targeted drill.",
+      "tags": [
+        "giving-receiving"
+      ]
+    },
+    {
+      "id": "7-5",
+      "title": "もう Vました",
+      "structure": "もう Vました",
+      "meaning": "'Already' + past tense — indicates the action has already been finished.",
+      "explanation": "もう means 'already' and is used with Vました, meaning that the action has been finished. The answer to もうVましたか is はい、もうVました or いいえ、まだです. In giving a negative answer, you should not use Vませんでした, as this means you did not do the specified task rather than that you have not done it yet.",
+      "examples": [
+        {
+          "jp": "もう 荷物を 送りましたか。…はい、[もう] 送りました。",
+          "en": "Have you sent the parcel yet? …Yes, I have [already sent it]."
+        },
+        {
+          "jp": "もう 荷物を 送りましたか。…いいえ、まだです。",
+          "en": "Have you sent the parcel yet? …No, not yet."
+        }
+      ],
+      "summary": "もう + Vました asks/states whether something has already been done; answer negatively with まだです, never Vませんでした.",
+      "details": "This is a subtle but important trap: Vませんでした ('did not do X') is a flat denial of a past action, while まだです ('not yet') leaves the action pending. Using the wrong one changes the meaning from 'I'm not going to' to 'not yet, but I will' — a good one to be quizzed on repeatedly.",
+      "tags": [
+        "completion"
+      ]
+    }
+  ],
+  "8": [
+    {
+      "id": "8-1",
+      "title": "Adjectives (い-adjectives and な-adjectives)",
+      "structure": "い-adjective / な-adjective",
+      "meaning": "Introduces Japan's two adjective classes, used as predicates and as noun modifiers.",
+      "explanation": "Adjectives are used as 1) predicates and 2) noun modifiers. They inflect and are divided into two groups, い-adjectives and な-adjectives, according to the inflection.",
+      "examples": [
+        {
+          "jp": "親切です。",
+          "en": "(is) kind — な-adjective."
+        },
+        {
+          "jp": "高いです。",
+          "en": "(is) expensive — い-adjective."
+        }
+      ],
+      "summary": "Japanese adjectives split into two conjugation classes: い-adjectives (end in い) and な-adjectives (need な before a noun).",
+      "details": "This is the foundational category that all of L8's other grammar points (8-2 through 8-4) build directly on top of — every subsequent rule in this lesson differs depending on whether the adjective is い-type or な-type.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "8-2",
+      "title": "N は な-adj[な]です／い-adj(〜い)です",
+      "structure": "N は な-adj[な]です／い-adj(〜い)です",
+      "meaning": "Predicate adjective sentences, and their negative forms.",
+      "explanation": "です at the end of an adjective sentence shows the speaker's polite attitude. An い-adjective with い at the end comes before です, whereas a な-adjective without [な] comes before です — です is used when the sentence is non-past and affirmative. Negative of な-adj: な-adj[な]じゃ ありません (formal: では ありません). Negative of い-adjective: い is changed to くない (よい → よくない, an irregular case).",
+      "examples": [
+        {
+          "jp": "ワット先生は 親切です。",
+          "en": "Mr. Watt is kind."
+        },
+        {
+          "jp": "富士山は 高いです。",
+          "en": "Mt. Fuji is high."
+        },
+        {
+          "jp": "あそこは 静かじゃ ありません。",
+          "en": "It's not quiet there."
+        },
+        {
+          "jp": "この 本は おもしろくないです。",
+          "en": "This book is not interesting."
+        }
+      ],
+      "summary": "な-adjectives drop な before です (negative: じゃ ありません); い-adjectives keep い before です (negative: い→くない). Questions repeat the adjective — never そうです／そうじゃありません.",
+      "details": "Two different negation mechanics for the two adjective classes established in 8-1: な-adjective negative works exactly like a noun-sentence negative (N じゃ ありません, cf. Lesson 1's N1はN2じゃありません), while い-adjective negative is a unique conjugation (い→くない) with no です/じゃありません swap at all. いい is irregular: its negative uses the old form よい → よくないです, not いくないです.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "8-3",
+      "title": "な-adj な N／い-adj(〜い) N",
+      "structure": "な-adjな N／い-adj(〜い) N",
+      "meaning": "Puts an adjective before a noun to modify it — a な-adjective needs な before the noun.",
+      "explanation": "An adjective is put before a noun to modify it. A な-adjective needs な before a noun.",
+      "examples": [
+        {
+          "jp": "ワット先生は 親切な 先生です。",
+          "en": "Mr. Watt is a kind teacher."
+        },
+        {
+          "jp": "富士山は 高い 山です。",
+          "en": "Mt. Fuji is a high mountain."
+        }
+      ],
+      "summary": "な-adjectives insert な before the noun they modify; い-adjectives attach directly with no change.",
+      "details": "This is the noun-modifying use of the same two adjective classes from 8-1/8-2 — な-adjectives need the な that gives them their name specifically in this position (親切な先生), while い-adjectives just sit directly in front of the noun unchanged (高い山).",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "8-4",
+      "title": "とても／あまり",
+      "structure": "とても／あまり + adjective",
+      "meaning": "Degree adverbs: とても ('very') with affirmatives, あまり ('not very') with negatives.",
+      "explanation": "とても and あまり are adverbs of degree. Both come before the adjectives they modify. とても is used in affirmative sentences and means 'very.' あまり is used in negative sentences; あまり + negative means 'not very.'",
+      "examples": [
+        {
+          "jp": "ペキンは とても 寒いです。",
+          "en": "Beijing is very cold."
+        },
+        {
+          "jp": "シャンハイは あまり 寒くないです。",
+          "en": "Shanghai is not very cold."
+        }
+      ],
+      "summary": "とても (very) pairs with affirmative predicates, あまり (not very) pairs with negative predicates.",
+      "details": "Directly reuses the negative forms from 8-2 (い-adj くない / な-adj じゃありません) — あまり always needs one of those negative shapes to follow it. Using あまり with an affirmative sentence is a very common beginner mistake worth flagging if it comes up in exercises.",
+      "tags": [
+        "degree-extent"
+      ]
+    },
+    {
+      "id": "8-5",
+      "title": "N は どうですか",
+      "structure": "N は どうですか",
+      "meaning": "Asks for an impression or opinion about something the listener has experienced.",
+      "explanation": "This question is used to ask an impression or an opinion about a thing, place or person, etc., that the listener has experienced, visited or met.",
+      "examples": [
+        {
+          "jp": "日本の 生活は どうですか。…楽しいです。",
+          "en": "How is the life in Japan? …It's enjoyable."
+        }
+      ],
+      "summary": "どうですか asks for the listener's general impression/opinion of something they've experienced.",
+      "details": "Contrast with 8-6's どんな N ですか, which asks for a description/category rather than a subjective impression — どうですか gets an adjective answer (楽しいです), どんな gets a noun-phrase answer (古い町です).",
+      "tags": [
+        "viewpoint-standpoint"
+      ]
+    },
+    {
+      "id": "8-6",
+      "title": "N1は どんな N2ですか",
+      "structure": "N1は どんな N2ですか",
+      "meaning": "Asks the listener to describe N1, where N2 is the category N1 belongs to.",
+      "explanation": "When the speaker wants the listener to describe or explain N1, this question pattern is used. N2 denotes the category N1 belongs to. The interrogative どんな is always followed by a noun.",
+      "examples": [
+        {
+          "jp": "奈良は どんな 町ですか。…古い 町です。",
+          "en": "What kind of town is Nara? …It's an old town."
+        }
+      ],
+      "summary": "どんな N asks for a descriptive category answer (an adjective+noun phrase), unlike どうですか's impression answer.",
+      "details": "See 8-5 for the direct contrast. Also links forward to L9's second usage of どんな (どんな スポーツが 好きですか), which asks the listener to name one item from a group rather than describe a single topic — same question word, two distinct jobs.",
+      "tags": [
+        "question-embedding"
+      ]
+    },
+    {
+      "id": "8-7",
+      "title": "S1が、S2",
+      "structure": "S1が、S2",
+      "note": "が as a conjunctive particle meaning 'but'.",
+      "meaning": "Links two sentences with a contrastive 'but' relationship.",
+      "explanation": "が is a conjunctive particle, meaning 'but.' It is used to link sentences.",
+      "examples": [
+        {
+          "jp": "日本の 食べ物は おいしいですが、高いです。",
+          "en": "Japanese food is good, but expensive."
+        }
+      ],
+      "summary": "が links two clauses as 'S1, but S2.'",
+      "details": "This が is unrelated to the subject-marking が seen elsewhere (e.g. 好きです/わかります in L9) — here it's purely a connective conjunction. L14 revisits this が again in a weakened, non-contrastive 'softening' role (すみませんが…), so it's worth tracking が's several distinct jobs across lessons.",
+      "tags": [
+        "concession-contrast"
+      ]
+    },
+    {
+      "id": "8-8",
+      "title": "どれ",
+      "structure": "どれ",
+      "meaning": "Asks the listener to choose/designate one out of three or more concrete things.",
+      "explanation": "This interrogative is used to ask the listener to choose or designate one from more than two things concretely shown or named.",
+      "examples": [
+        {
+          "jp": "ミラーさんの 傘は どれですか。…あの 青い 傘です。",
+          "en": "Which is Mr. Miller's umbrella? …That blue one is."
+        }
+      ],
+      "summary": "どれ asks 'which one' among three-or-more concrete choices.",
+      "details": "Part of the こ/そ/あ/ど demonstrative-series family started in Lessons 1-3 (これ/それ/あれ/どれ). Contrast with L12's どちら, which is used specifically when choosing between exactly two items — どれ needs three or more options.",
+      "tags": [
+        "demonstrative"
+      ]
+    }
+  ],
+  "9": [
+    {
+      "id": "9-1",
+      "title": "N が あります／わかります／好きです／嫌いです／上手です／下手です",
+      "structure": "N が あります／わかります／好きです etc.",
+      "meaning": "が (not を) marks the object of verbs/adjectives describing existence, understanding, preference, or ability.",
+      "explanation": "The object of a transitive verb is marked with を. However, objects of the verbs あります and わかります are marked with が. Such adjectives as すきです、きらいです、じょうずです and へたです require objects, and these are marked with が, too. The verbs and adjectives whose objects are marked with が are those kinds that describe preference, ability, possession and the like.",
+      "examples": [
+        {
+          "jp": "わたしは イタリア料理が 好きです。",
+          "en": "I like Italian food."
+        },
+        {
+          "jp": "わたしは 日本語が わかります。",
+          "en": "I understand Japanese."
+        },
+        {
+          "jp": "わたしは 車が あります。",
+          "en": "I have a car."
+        }
+      ],
+      "summary": "が, not を, marks the object with あります/わかります and preference/ability adjectives (好き, 嫌い, 上手, 下手).",
+      "details": "This is a significant departure from 6-1's N をV pattern for ordinary transitive verbs — が here signals that the sentence describes a state (existence, comprehension, liking, skill) rather than a deliberate transitive action. This が-object pattern will reappear with ほしいです in L13 (N が ほしいです) — the same underlying logic of が marking objects of desire/state verbs.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "9-2",
+      "title": "どんな N",
+      "structure": "どんな N",
+      "note": "Second usage of どんな, distinct from L8.",
+      "meaning": "Asks the listener to name one item from the group the following noun denotes.",
+      "explanation": "Other than the usage you learned in Lesson 8, どんな is also used to ask the listener to name one from a group which the noun after どんな denotes.",
+      "examples": [
+        {
+          "jp": "どんな スポーツが 好きですか。…サッカーが 好きです。",
+          "en": "What sports do you like? …I like football."
+        }
+      ],
+      "summary": "Here どんな asks the listener to pick/name an item from a category, unlike L8's どんな which asked for a description of one specific thing.",
+      "details": "Direct callback to 8-6 — same question word, different function: L8's どんな asked 'describe N1, which belongs to category N2' (どんな町ですか→古い町です), while this L9 usage asks 'name something from category N' (どんなスポーツが好きですか→サッカー). Worth reviewing both together since the surface form looks identical.",
+      "tags": [
+        "question-embedding"
+      ]
+    },
+    {
+      "id": "9-3",
+      "title": "よく／だいたい／たくさん／少し／あまり／全然",
+      "structure": "adverb + V",
+      "meaning": "A scale of degree/amount adverbs placed before verbs they modify.",
+      "explanation": "These adverbs are put before verbs when they modify them. Degree (high→low): よく わかります, だいたい わかります, すこし わかります, あまり わかりません, ぜんぜん わかりません. Amount (large→small): たくさん あります, すこし あります, あまり ありません, ぜんぜん ありません. すこし and ぜんぜん can also modify adjectives.",
+      "examples": [
+        {
+          "jp": "英語が よく わかります。",
+          "en": "I understand English very well."
+        },
+        {
+          "jp": "お金が 全然 ありません。",
+          "en": "I don't have any money."
+        },
+        {
+          "jp": "ここは 少し 寒いです。",
+          "en": "It's a little cold here."
+        }
+      ],
+      "summary": "よく/だいたい/すこし scale degree or amount in affirmative sentences; あまり/ぜんぜん require a negative predicate.",
+      "details": "あまり here is the same word from 8-4 (あまり + negative adjective = 'not very'), now extended to verbs too (あまりわかりません). ぜんぜん behaves the same way as あまり — both require a negative ending, unlike よく/だいたい/たくさん/すこし which pair with affirmatives.",
+      "tags": [
+        "degree-extent"
+      ]
+    },
+    {
+      "id": "9-4",
+      "title": "S1から、S2",
+      "structure": "S1から、S2",
+      "note": "から states a reason; S1 is the cause of S2.",
+      "meaning": "から connects two sentences to show a causal relationship, with S1 as the reason for S2.",
+      "explanation": "から connects two sentences together to denote a causal relationship. S1 is the reason for S2. You can also state S2 first and add the reason after it.",
+      "examples": [
+        {
+          "jp": "時間が ありませんから、新聞を 読みません。",
+          "en": "Because I don't have time, I don't read the newspaper."
+        },
+        {
+          "jp": "毎朝 新聞を 読みますか。…いいえ、読みません。時間が ありませんから。",
+          "en": "Do you read a newspaper every morning? …No, I don't. Because I have no time."
+        }
+      ],
+      "summary": "Vから marks a clause as the reason for the following (or preceding) statement — 'because S1, S2.'",
+      "details": "から attaches directly to the plain predicate of S1 (ありません+から). This is the first cause-and-reason connective in the course and will contrast later with より-comparisons and different conjunctions — for now, note that から can also trail at the end of an answer, standing alone as 'because...'",
+      "tags": [
+        "cause-reason"
+      ]
+    },
+    {
+      "id": "9-5",
+      "title": "どうして",
+      "structure": "どうして",
+      "note": "Answer requires から at the end.",
+      "meaning": "Asks for a reason ('why').",
+      "explanation": "The interrogative どうして is used to ask a reason. The answer needs から at the end. The question どうしてですか is also used to ask the reason for what the other person has said.",
+      "examples": [
+        {
+          "jp": "どうして 朝 新聞を 読みませんか。…時間が ありませんから。",
+          "en": "Why don't you read a newspaper in the morning? …Because I don't have time."
+        },
+        {
+          "jp": "きょうは 早く 帰ります。…どうしてですか。子どもの 誕生日ですから。",
+          "en": "I'll go home early today. …Why? …Because today's my child's birthday."
+        }
+      ],
+      "summary": "どうして asks 'why'; the reply must end in から (9-4), matching the reason-clause pattern.",
+      "details": "This is the question form that pairs directly with 9-4's から answer — the two are taught together for a reason: every どうして question demands a から-ending response, so they should be drilled as a matched question/answer set.",
+      "tags": [
+        "cause-reason"
+      ]
+    }
+  ],
+  "10": [
+    {
+      "id": "10-1",
+      "title": "N が あります／います",
+      "structure": "N が あります／います",
+      "meaning": "States the existence/presence of something or someone — います for animate, あります for inanimate.",
+      "explanation": "This sentence pattern indicates the existence or presence of a thing(s) or person(s), marked with が. あります is used when what is present is inanimate or doesn't move by itself (things, plants, places). います is used when what is present is animate and moves by itself (people, animals).",
+      "examples": [
+        {
+          "jp": "コンピューターが あります。",
+          "en": "There is a computer."
+        },
+        {
+          "jp": "男の 人が います。",
+          "en": "There is a man."
+        }
+      ],
+      "summary": "あります = existence of inanimate things/plants/places; います = existence of animate people/animals — both marked with が.",
+      "details": "Note that あります and います are also the two existence verbs from 9-1's が-object pattern (車があります = 'I have a car'), but here they take on their more literal existence meaning. This lesson establishes the animate/inanimate split that carries through every 'there is/are' sentence from here on.",
+      "tags": [
+        "existence-location"
+      ]
+    },
+    {
+      "id": "10-2",
+      "title": "N1(place)に N2が あります／います",
+      "structure": "N1(place)に N2が あります／います",
+      "meaning": "に marks the place where N2 is present; asks what/who is there with 何 (things) or だれ (people).",
+      "explanation": "The place where N2 is present is indicated by the particle に. You can ask what or who is present at/in the place using this pattern. The interrogative なに is used for things and だれ is used for persons.",
+      "examples": [
+        {
+          "jp": "わたしの 部屋に 机が あります。",
+          "en": "There is a desk in my room."
+        },
+        {
+          "jp": "事務所に ミラーさんが います。",
+          "en": "Mr. Miller is in the office."
+        },
+        {
+          "jp": "受付に だれが いますか。…木村さんが います。",
+          "en": "Who is at the reception desk? …Ms. Kimura is there."
+        }
+      ],
+      "summary": "Place+に + N+が + あります/います states where something/someone exists; なにが/だれが ask what/who is there.",
+      "details": "Contrast this に(place of existence) with 6-5's で(place of action) — a classic point of confusion: に is used with static existence verbs (あります/います), で is used with action verbs (買います, 食べます, etc.). Worth being quizzed on this distinction directly.",
+      "tags": [
+        "existence-location"
+      ]
+    },
+    {
+      "id": "10-3",
+      "title": "N1は N2(place)に あります／います",
+      "structure": "N1は N2(place)に あります／います",
+      "meaning": "Topicalizes N1 (something both speaker and listener already know) and states where it is; です can replace あります／います when the predicate is contextually obvious.",
+      "explanation": "The speaker picks up N1 as the topic, and explains where it is. The topic should be something or someone that both the speaker and the listener know about. The particle attached to N1 is not が (which marks the subject) but は (which marks the topic). [Note] です is sometimes used to replace a verb predicate when the predicate is obvious — N1は N2(place)です.",
+      "examples": [
+        {
+          "jp": "東京ディズニーランドは 千葉県に あります。",
+          "en": "Tokyo Disneyland is in Chiba Prefecture."
+        },
+        {
+          "jp": "ミラーさんは どこに いますか。…事務所に います。",
+          "en": "Where is Mr. Miller? …He's in the office."
+        },
+        {
+          "jp": "東京ディズニーランドは どこに ありますか。…千葉県です。",
+          "en": "Where is Tokyo Disneyland? …It's in Chiba Prefecture."
+        }
+      ],
+      "summary": "は(topic)+place+に+あります/います states where a known thing is; です can stand in for the verb when context makes it obvious.",
+      "details": "This flips 10-2's が(new information, 'what/who is there') into は(topic, 'where is the known thing'), the same が-vs-は logic that first appeared back in Lesson 1. The です-substitution note also echoes L3's N1はN2(place)です identification pattern — the two turn out to be near-equivalent when the predicate is a location.",
+      "tags": [
+        "topic-focus-particle",
+        "existence-location"
+      ]
+    },
+    {
+      "id": "10-4",
+      "title": "N1(thing/person/place)の N2(position)",
+      "structure": "N1の 上／下／前／うしろ／右／左／中／外／隣／近く／間",
+      "meaning": "Position nouns (上,下,前,うしろ,みぎ,ひだり,中,そと,となり,ちかく,あいだ) combine with の to pinpoint location relative to N1.",
+      "explanation": "うえ、した、まえ、うしろ、みぎ、ひだり、なか、そと、となり、ちかく and あいだ are nouns denoting position. [Note] As these are place nouns, not only に but also particles like で can come after them.",
+      "examples": [
+        {
+          "jp": "机の 上に 写真が あります。",
+          "en": "There is a picture on the desk."
+        },
+        {
+          "jp": "郵便局は 銀行の 隣に あります。",
+          "en": "The post office is next to the bank."
+        },
+        {
+          "jp": "駅の 近くで 友達に 会いました。",
+          "en": "I met a friend near the station."
+        }
+      ],
+      "summary": "Position nouns + の + place noun (机の上, 銀行の隣) pinpoint a location, and can take に (existence) or で (action) depending on context.",
+      "details": "This confirms that position nouns behave exactly like ordinary place nouns — they can take に from 10-2/10-3 for existence, or で from 6-5 for action (駅の近くで会いました), unifying the two で/に patterns learned so far into one consistent noun-position system.",
+      "tags": [
+        "existence-location"
+      ]
+    },
+    {
+      "id": "10-5",
+      "title": "N1 や N2",
+      "structure": "N1 や N2［など］",
+      "meaning": "Connects nouns in a non-exhaustive list ('N1, N2, and so on') — contrast と, which lists everything.",
+      "explanation": "Nouns are connected in coordinate relation by the particle や. While と enumerates all the items, や shows a few representative items. Sometimes など is put after the last noun to explicitly express that there are also other things of the kind.",
+      "examples": [
+        {
+          "jp": "箱の 中に 手紙や 写真が あります。",
+          "en": "There are letters, pictures and so on in the box."
+        },
+        {
+          "jp": "箱の 中に 手紙や 写真などが あります。",
+          "en": "There are letters, pictures and so on in the box."
+        }
+      ],
+      "summary": "や lists a few representative items out of a larger unstated set ('X, Y, etc.'), optionally closed with など; と would list every item exhaustively.",
+      "details": "Direct contrast with と (used since L1 for exhaustive lists like これとそれ, though と hasn't been formally taught as a listing particle yet) — や signals the list is incomplete/representative, while と implies the list is complete. など is optional and just makes the 'etc.' explicit.",
+      "tags": [
+        "listing-examples"
+      ]
+    },
+    {
+      "id": "10-6",
+      "title": "Word(s) ですか",
+      "structure": "Word(s) ですか",
+      "note": "か used for confirmation.",
+      "meaning": "Confirms a word or phrase the speaker wants to make sure of, by repeating it with ですか.",
+      "explanation": "The particle か has the function to confirm. The speaker picks up a word or words he/she wants to confirm and confirms it (them) using this pattern.",
+      "examples": [
+        {
+          "jp": "すみません。ユニューヤ・ストアは どこですか。…ユニューヤ・ストアですか。あの ビルの 中です。",
+          "en": "Excuse me, but where is Yunyu-ya Store? …Yunyu-ya Store? It's in that building."
+        }
+      ],
+      "summary": "Repeating a word/phrase with ですか confirms/echoes back what the listener just said before answering.",
+      "details": "This is a conversational confirmation strategy rather than a new sentence pattern to build from scratch — useful to practice in the Conversation-style drills and roleplay, since it's exactly the kind of natural back-channeling a listening/speaking exercise should target.",
+      "tags": [
+        "confirmation-seeking"
+      ]
+    },
+    {
+      "id": "10-7",
+      "title": "チリソースは ありませんか",
+      "structure": "N は ありませんか",
+      "note": "Negative question form, used to be polite/indirect.",
+      "meaning": "Uses the negative form ありませんか instead of ありますか to ask indirectly and politely, anticipating a possible negative answer.",
+      "explanation": "The expression チリソースは ありませんか is found in the conversation of this lesson. By using the negative form ありませんか instead of ありますか, you can be indirect and polite, showing that you are prepared for a negative answer.",
+      "examples": [
+        {
+          "jp": "チリソースは ありませんか。",
+          "en": "Do you have chili sauce in this store?"
+        }
+      ],
+      "summary": "A negative question (ありませんか) is a politer, more indirect way to ask 'do you have...?' than the plain ありますか.",
+      "details": "This softening-via-negative-question strategy will reappear in more grammaticalized form later (e.g. L15's もいいですか permission asking softens similarly) — for now it's just a pragmatic/politeness note layered on top of 10-1's plain あります.",
+      "tags": [
+        "confirmation-seeking"
+      ]
+    }
+  ],
+  "11": [
+    {
+      "id": "11-1",
+      "title": "Saying numbers",
+      "structure": "ひとつ、ふたつ…とお／counter suffixes",
+      "meaning": "Native Japanese counting words 1-10 (ひとつ〜とお), plus counter suffixes (-人, -台, -枚, -回, -分, -時間, -日, -週間, -か月, -年).",
+      "explanation": "ひとつ、ふたつ……とお are used to count things up to ten; eleven and higher use the numbers themselves. Counter suffixes attach after numbers when counting sorts of things: -人 (people, except ひとり/ふたり for 1/2, よにん for 4), -台 (machines/vehicles), -枚 (thin flat things), -回 (times), -分 (minutes), -時間 (hours), -日 (days, irregular from 2-10), -週間 (weeks), -か月 (months), -年 (years). Quantifiers are usually put before the verb they modify (though not always for length of time). いくつ asks 'how many' for ひとつ-style counting; 何+counter asks 'how many' with a counter; どのくらい asks length of time.",
+      "examples": [
+        {
+          "jp": "りんごを 4つ 買いました。",
+          "en": "We bought four apples."
+        },
+        {
+          "jp": "国で 2か月 日本語を 勉強しました。",
+          "en": "I studied Japanese for two months in my country."
+        },
+        {
+          "jp": "みかんを いくつ 買いましたか。…8つ 買いました。",
+          "en": "How many mandarin oranges did you buy? …I bought eight."
+        },
+        {
+          "jp": "この 会社に 外国人が 何人 いますか。…5人 います。",
+          "en": "How many foreigners are there in this company? …There are five."
+        },
+        {
+          "jp": "大阪から 東京まで どのくらい かかりますか。…新幹線で 2時間半 かかります。",
+          "en": "How long does it take from Osaka to Tokyo? …It takes two and a half hours by Shinkansen."
+        }
+      ],
+      "summary": "Native counting words (ひとつ〜とお) plus a family of counter suffixes (人/台/枚/回/分/時間/日/週間/か月/年) — quantifiers usually precede the verb; いくつ/なん+counter/どのくらい are the matching question words.",
+      "details": "This is a large, dense grammar point covering the full N5 counting system at once. -人 is irregular for 1 and 2 (ひとり/ふたり, not いちにん/ににん) and for 4 (よにん, not よんにん) — these irregular forms are worth extra drilling since they're exceptions to an otherwise regular pattern. -日 (days) is also irregular from 2-10, reusing the date-counting words.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "11-2",
+      "title": "Quantifier(period)に 一回 V",
+      "structure": "Quantifier(period)に 一回 V",
+      "meaning": "States how often something is done, using a time-period + に + frequency-count.",
+      "explanation": "With this expression you can say how often you do something.",
+      "examples": [
+        {
+          "jp": "1か月に 2回 映画を 見ます。",
+          "en": "I go to see movies twice a month."
+        }
+      ],
+      "summary": "[period]に[count]回 V expresses frequency: 'X times per [period].'",
+      "details": "This に is a distinct job from all the previous には we've seen (topic-marking は vs. this に marking a rate/ratio 'per') — worth flagging as yet another use of に, similar to how で and に have each accumulated multiple jobs across lessons.",
+      "tags": [
+        "frequency"
+      ]
+    },
+    {
+      "id": "11-3",
+      "title": "Quantifier だけ／N だけ",
+      "structure": "Quantifier だけ／N だけ",
+      "meaning": "だけ means 'only' — attached after quantifiers or nouns to express there is no more/nothing else.",
+      "explanation": "だけ means 'only.' It is added after quantifiers or nouns to express that there is no more or nothing (no one) else.",
+      "examples": [
+        {
+          "jp": "パワー電気に 外国人の 社員が 1人だけ います。",
+          "en": "There is only one foreign employee in Power Electric."
+        },
+        {
+          "jp": "休みは 日曜日だけです。",
+          "en": "I only have Sundays off."
+        }
+      ],
+      "summary": "だけ ('only') attaches after a quantifier or noun to limit/restrict to exactly that amount or item.",
+      "details": "First appearance of a limiting particle in the course — pairs naturally with the counters from 11-1 (1人だけ) but also works on plain nouns (日曜日だけ). Good building block to compare later against other restriction/emphasis expressions as they're introduced in future lessons.",
+      "tags": [
+        "emphasis-limitation"
+      ]
+    }
+  ],
+  "12": [
+    {
+      "id": "12-1",
+      "title": "Past tense of noun sentences and な-adjective sentences",
+      "structure": "N／な-adjでした／じゃありませんでした",
+      "meaning": "The past-tense forms of noun and な-adjective predicates: でした (affirmative) and じゃありませんでした (negative).",
+      "explanation": "Non-past affirmative です becomes past でした; non-past negative じゃ ありません becomes past じゃ ありませんでした.",
+      "examples": [
+        {
+          "jp": "きのうは 雨でした。",
+          "en": "It was rainy yesterday."
+        },
+        {
+          "jp": "きのうの 試験は 簡単じゃ ありませんでした。",
+          "en": "Yesterday's exam was not easy."
+        }
+      ],
+      "summary": "でした = past of です; じゃありませんでした = past of じゃありません — for both noun-sentences and な-adjective sentences.",
+      "details": "This is the past-tense counterpart of 8-2's non-past です/じゃありません pattern — な-adjectives conjugate exactly like nouns (both just swap です→でした), which is one of the defining features that separates them from い-adjectives (see 12-2).",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "12-2",
+      "title": "Past tense of い-adjective sentences",
+      "structure": "い-adj(〜い)です→〜かったです／〜くなかったです",
+      "meaning": "い-adjectives form their own past tense by changing い to かった (affirmative) or くなかった (negative) before です.",
+      "explanation": "Non-past affirmative あついです becomes past あつかったです; non-past negative あつくないです becomes past あつくなかったです.",
+      "examples": [
+        {
+          "jp": "きのうは 暑かったです。",
+          "en": "It was hot yesterday."
+        },
+        {
+          "jp": "きのうの パーティーは あまり 楽しくなかったです。",
+          "en": "I didn't enjoy yesterday's party very much."
+        }
+      ],
+      "summary": "い-adjectives never use でした — instead い→かった (past affirmative) or くない→くなかった (past negative), keeping です unchanged at the end.",
+      "details": "This confirms the split first flagged in 8-1: unlike な-adjectives (12-1), which just swap です↔でした like nouns, い-adjectives conjugate the adjective stem itself (い→かった/くなかった) and です stays fixed at the end. A frequent beginner error is saying たかいでした instead of たかかったです — worth quizzing directly.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "12-3",
+      "title": "N1は N2より adjective です",
+      "structure": "N1は N2より adjective です",
+      "meaning": "Describes N1's quality/state compared with N2, using より ('than').",
+      "explanation": "This sentence pattern describes the quality and/or state of N1 in comparison with N2.",
+      "examples": [
+        {
+          "jp": "この 車は あの 車より 大きいです。",
+          "en": "This car is bigger than that car."
+        }
+      ],
+      "summary": "N1は N2より adjective です = 'N1 is more [adjective] than N2.'",
+      "details": "The first comparison structure in the course — より marks the standard being compared against. Immediately followed by 12-4's どちら-question pattern, which is the natural question this statement answers.",
+      "tags": [
+        "comparison"
+      ]
+    },
+    {
+      "id": "12-4",
+      "title": "N1と N2と どちらが adjective ですか",
+      "structure": "N1と N2と どちらが adjective ですか …N1／N2の ほうが adjective です",
+      "meaning": "Asks the listener to choose between exactly two items using どちら; answered with N のほうが adjective です.",
+      "explanation": "The question asks the listener to choose between two items (N1 and N2). The interrogative used is always どちら if the comparison is made between two items. [Note] When the subject is an interrogative, the particle が is used.",
+      "examples": [
+        {
+          "jp": "サッカーと 野球と どちらが おもしろいですか。…サッカーの ほうが おもしろいです。",
+          "en": "Which is more interesting, soccer or baseball? …Soccer is."
+        },
+        {
+          "jp": "北海道と 大阪と どちらが 涼しいですか。",
+          "en": "Which is cooler, Hokkaido or Osaka?"
+        }
+      ],
+      "summary": "どちら always means 'which of these two' — answered with [N]のほうが adjective です ('N is more...').",
+      "details": "Directly builds on 12-3's より comparison. Note どちら here vs. L8's どれ (8-8): どれ is for three-or-more concrete choices, どちら is specifically for exactly two. This どちら/どれ distinction is a natural quiz pairing across L8 and L12.",
+      "tags": [
+        "comparison"
+      ]
+    },
+    {
+      "id": "12-5",
+      "title": "N1[の中]で 何／どこ／だれ／いつが いちばん adjective ですか",
+      "structure": "N1[の中]で 何／どこ／だれ／いつが いちばん adjective ですか …N2が いちばん adjective です",
+      "meaning": "Asks the listener to pick the most [adjective] item out of a category N1, using いちばん ('the most').",
+      "explanation": "This question pattern is used to ask the listener to choose something that is the most 'adjective.' The choice is made from the group or category denoted by N1. The interrogative used is decided by the kind of category from which the choice is made (何 for things, どこ for places, だれ for people, いつ for time).",
+      "examples": [
+        {
+          "jp": "日本料理[の中]で 何が いちばん おいしいですか。…てんぷらが いちばん おいしいです。",
+          "en": "Among Japanese dishes, what is the most delicious? …Tempura is."
+        },
+        {
+          "jp": "家族で だれが いちばん 背が 高いですか。…弟が いちばん 背が 高いです。",
+          "en": "Who is the tallest of your family? …My younger brother is."
+        }
+      ],
+      "summary": "[category]で + 何／どこ／だれ／いつ + が + いちばん + adjective ですか asks for the single best/most item within a group of three or more.",
+      "details": "This extends the two-item comparison of 12-3/12-4 into an unlimited-group superlative — どちら (exactly 2 items) escalates to いちばん (3+ items, any category via 何/どこ/だれ/いつ). All three comparison patterns (より, どちら, いちばん) are best reviewed together as one family.",
+      "tags": [
+        "comparison",
+        "degree-extent"
+      ]
+    }
+  ],
+  "13": [
+    {
+      "id": "13-1",
+      "title": "N が 欲しいです",
+      "structure": "N が 欲しいです",
+      "meaning": "Expresses the speaker's desire to possess/have an object, marked with が. ほしい is an い-adjective.",
+      "explanation": "This sentence pattern is used to express the speaker's desire to possess or have an object. It can also be used to ask what the listener wants. The object is marked with the particle が. ほしい is an い-adjective. [Note 1] ほしいです or 〜たいです cannot be used to describe the third person's desire.",
+      "examples": [
+        {
+          "jp": "わたしは 友達が 欲しいです。",
+          "en": "I want a friend."
+        },
+        {
+          "jp": "今 何が いちばん 欲しいですか。…車が 欲しいです。",
+          "en": "What do you want most now? …I want a car most."
+        }
+      ],
+      "summary": "Nが欲しいです expresses 'I want N' — が marks the desired object, and ほしい conjugates as an い-adjective; restricted to first-person (or question) use.",
+      "details": "This が-object marking is the same pattern flagged back in 9-1 (preference/state verbs take が, not を) — ほしい slots into that same family. Note the important restriction shared with 13-2: neither ほしいです nor 〜たいです can describe what a third person wants, only the speaker's own desire (or a direct question to the listener).",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "13-2",
+      "title": "V ます-form たいです",
+      "structure": "Vます-form たいです",
+      "meaning": "Expresses the speaker's desire to do something; たい conjugates as an い-adjective, and its direct object can take が instead of を.",
+      "explanation": "The form of a verb used with ます is called the ます-form. Vます-form たいです expresses the speaker's desire to do something. It is also used to ask what the listener wants to do. The particle が can replace を. たい inflects as an い-adjective. [Note 2] Neither ほしいですか nor Vます-formたいですか can be used to offer something or invite someone — use いかがですか or Vませんか instead.",
+      "examples": [
+        {
+          "jp": "わたしは 沖縄へ 行きたいです。",
+          "en": "I want to go to Okinawa."
+        },
+        {
+          "jp": "わたしは てんぷらを（が） 食べたいです。",
+          "en": "I want to eat tempura."
+        },
+        {
+          "jp": "おなかが 痛いですから、何も 食べたくないです。",
+          "en": "Because I have a stomachache, I don't want to eat anything."
+        }
+      ],
+      "summary": "Vます-form + たいです = 'I want to V'; を can optionally become が; never used to offer something to the listener (use いかがですか/Vませんか instead).",
+      "details": "Pairs directly with 13-1 (both are い-adjective-based desire expressions with the same first-person/question-only restriction). The [Note 2] warning is important: offering coffee with コーヒーがほしいですか or コーヒーを飲みたいですか is wrong — that calls back to 6-6's Vませんか and the standalone いかがですか as the correct offering forms.",
+      "tags": [
+        "volitional-intention"
+      ]
+    },
+    {
+      "id": "13-3",
+      "title": "N(place)へ Vます-form／N に 行きます／来ます／帰ります",
+      "structure": "N(place)へ｛Vます-form／N｝に 行きます／来ます／帰ります",
+      "meaning": "Expresses the purpose of going/coming/returning, marked with に, before いきます/きます/かえります.",
+      "explanation": "The purpose for いきます、きます or かえります is expressed using this pattern. The purpose is marked with the particle に. A noun used before に is of the kind denoting an action. [Note] You can also use nouns denoting events such as festivals and concerts before に — the speaker's purpose is to see or enjoy the event.",
+      "examples": [
+        {
+          "jp": "神戸へ インド料理を 食べに 行きます。",
+          "en": "I'm going to Kobe to eat Indian food."
+        },
+        {
+          "jp": "神戸へ 買い物に 行きます。",
+          "en": "I'm going to Kobe for shopping."
+        },
+        {
+          "jp": "あした 京都の お祭りに 行きます。",
+          "en": "I'll go to the festival in Kyoto tomorrow."
+        }
+      ],
+      "summary": "[Vます-form／action-noun]+に, placed before 行きます/来ます/帰ります, expresses the purpose of the trip.",
+      "details": "This に(purpose) is yet another job for に, distinct from 10-2's に(place of existence) and 11-2's に(frequency rate) — purpose-に specifically precedes only the three motion verbs 行きます/来ます/帰ります. Worth tracking all of に's separate jobs together as a review exercise once more lessons accumulate.",
+      "tags": [
+        "purpose"
+      ]
+    },
+    {
+      "id": "13-4",
+      "title": "N に V／N を V",
+      "structure": "N に V(はいります、のります) ／ N を V(でます、おります)",
+      "meaning": "に marks the goal with verbs like はいります/のります (enter/get on); を marks the starting point with verbs like でます/おります (exit/get off).",
+      "explanation": "The particle に marks the goal when used with verbs like はいります, のります (get on; see Lesson 16), etc. The particle を marks the starting point or place when used with verbs like でます, おります (get off; see Lesson 16), etc.",
+      "examples": [
+        {
+          "jp": "あの 喫茶店に 入りましょう。",
+          "en": "Let's go in that coffee shop."
+        },
+        {
+          "jp": "7時に うちを 出ます。",
+          "en": "I leave my house at 7 o'clock."
+        }
+      ],
+      "summary": "に marks a goal (入ります into, のります onto); を marks a starting point (出ます out of, おります off of) — despite を's usual 'direct object' role.",
+      "details": "Note that this を is NOT the transitive-object を from 6-1 — here it marks the point of departure with motion verbs, a genuinely separate function. This is worth flagging explicitly since students often assume を always marks a direct object.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "13-5",
+      "title": "どこか／何か",
+      "structure": "どこか／何か",
+      "meaning": "どこか = 'anywhere/somewhere'; 何か = 'anything/something' — the particles へ and を can be omitted after them.",
+      "explanation": "どこか means anywhere or somewhere. なにか means anything or something. The particles へ and を can be omitted.",
+      "examples": [
+        {
+          "jp": "冬休みは どこか[へ] 行きましたか。…はい、行きました。",
+          "en": "Did you go anywhere in the winter vacation? …Yes, I did."
+        },
+        {
+          "jp": "のどが かわきましたから、何か[を] 飲みたいです。",
+          "en": "I'm thirsty. I want to drink something."
+        }
+      ],
+      "summary": "どこか ('somewhere/anywhere') and 何か ('something/anything') are indefinite pronouns that often drop the following へ/を.",
+      "details": "Compare with the concrete question words どこ/なに they're built from (なん/なに from 6-4, どこ used throughout) — adding か turns a question word into an indefinite pronoun, a pattern that generalizes (だれか 'someone' works the same way, though not yet introduced).",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "13-6",
+      "title": "ご注文",
+      "structure": "ご + N",
+      "note": "ご is another respect prefix, like お.",
+      "meaning": "ご is a prefix added to some words to express respect.",
+      "explanation": "ご is a prefix added to some words to express respect.",
+      "examples": [
+        {
+          "jp": "ご注文は？",
+          "en": "May I have your order?"
+        }
+      ],
+      "summary": "ご is a second honorific prefix (alongside お from 6-8), attached to certain (often Sino-Japanese) nouns.",
+      "details": "Direct counterpart to 6-8's お — both are politeness/respect prefixes, but they attach to different sets of words (お tends toward native Japanese words, ご toward Sino-Japanese/kanji-compound words like 注文, though this rule of thumb isn't stated explicitly in the text). Worth noting both together as 'honorific prefixes' for review.",
+      "tags": [
+        "keigo-polite"
+      ]
+    }
+  ],
+  "14": [
+    {
+      "id": "14-1",
+      "title": "Verb conjugation",
+      "structure": "Group I / Group II / Group III",
+      "meaning": "Introduces that Japanese verbs conjugate, dividing them into three conjugation groups.",
+      "explanation": "Verbs in Japanese change their forms, i.e., they conjugate, and they are divided into three groups according to the type of conjugation. Depending on the following phrases, you can make sentences with various meanings.",
+      "examples": [
+        {
+          "jp": "かきます",
+          "en": "write — Group I"
+        },
+        {
+          "jp": "たべます",
+          "en": "eat — Group II"
+        }
+      ],
+      "summary": "Japanese verbs conjugate and fall into three groups (I, II, III) — the foundation for the て-form and everything built on it from here on.",
+      "details": "This is a pivotal structural lesson: everything from this point in the course (て-form requests, ています progressive, and all later potential/passive/causative forms) depends on correctly identifying a verb's group. Worth treating as a milestone to review thoroughly before moving on.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "14-2",
+      "title": "Verb groups (Group I / II / III)",
+      "structure": "Group I: 〜います,〜きます,etc. (い-row) / Group II: 〜えます,〜います (え-row, some い-row) / Group III: します, きます",
+      "meaning": "Group I verbs end their ます-form in an い-row sound; most Group II verbs end in an え-row sound (a few in い-row); Group III is the irregular します/来ます and noun+します compounds.",
+      "explanation": "1) Group I verbs: the last sound of the ます-form is that of the い-line (かきます write, のみます drink). 2) Group II verbs: in most verbs of this group, the last sound of the ます-form is that of the え-line, but in some verbs it's the い-line (たべます eat, みせます show, みます see). 3) Group III verbs: include します and 'noun denoting an action + します,' as well as きます.",
+      "examples": [
+        {
+          "jp": "かきます／のみます",
+          "en": "Group I: write / drink"
+        },
+        {
+          "jp": "たべます／みせます／みます",
+          "en": "Group II: eat / show / see"
+        },
+        {
+          "jp": "します／きます",
+          "en": "Group III: do / come"
+        }
+      ],
+      "summary": "Group I = い-row ます-stem; Group II = mostly え-row ます-stem (a few exceptions like みます end in い-row too); Group III = irregular します/来ます and noun+します.",
+      "details": "This is the practical classification rule for 14-1's three groups. Group II's い-row exceptions (みます, います, できます-type verbs) are worth memorizing as a short list since they look like they should be Group I by the え/い rule but aren't.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "14-3",
+      "title": "Verb て-form",
+      "structure": "V(て-form)",
+      "note": "Formation rule depends on the verb's group (see Main Textbook L14 練習A1).",
+      "meaning": "The verb form ending in て or で, foundational for many following grammar patterns.",
+      "explanation": "The verb form which ends with て or で is called the て-form. How to make the て-form of a verb depends on which group the verb belongs to. Group I: depends on the last sound of the ます-form, following a form table (いきます→いって is an exception). Group II: attach て to the ます-stem. Group III: attach て to the ます-stem.",
+      "examples": [
+        {
+          "jp": "かいて",
+          "en": "write (て-form)"
+        },
+        {
+          "jp": "たべて",
+          "en": "eat (て-form)"
+        },
+        {
+          "jp": "きて",
+          "en": "come (て-form)"
+        }
+      ],
+      "summary": "The て-form is the connective/request verb form; its formation differs by conjugation group, with いきます→いって as Group I's one irregular case.",
+      "details": "This is the single most important new verb form in the whole book — used immediately in 14-4 (てください), 14-5 (ています), and reused constantly through L15-25. Getting the Group I sound changes right (く→いて, む/ぶ/ぬ→んで, す→して, つ/る/う→って) is worth dedicated conjugation drilling before moving forward.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "14-4",
+      "title": "V て-form ください",
+      "structure": "Vて-form ください",
+      "note": "Politer with すみませんが added before it.",
+      "meaning": "Asks, instructs, or encourages the listener to do something. Not used toward a superior.",
+      "explanation": "This sentence pattern is used to ask, instruct or encourage the listener to do something. Naturally, if the listener is one's superior, this expression cannot be used for giving instructions to him/her. When asking the listener to do something, すみませんが is often added before Vて-form ください, which is politer than only saying Vて-form ください.",
+      "examples": [
+        {
+          "jp": "すみませんが、この 漢字の 読み方を 教えて ください。",
+          "en": "Excuse me, could you tell me how to read this kanji, please?"
+        },
+        {
+          "jp": "ここに 住所と 名前を 書いて ください。",
+          "en": "Please write your name and address here."
+        }
+      ],
+      "summary": "Vて-form + ください is a request/instruction ('please do...'); すみませんが softens it further and is not used to instruct a superior.",
+      "details": "First practical application of 14-3's て-form — this is the pattern students will use constantly to make requests from here on. The すみませんが softener directly reuses 8-7's が as a connective (here in its weakened, non-contrastive 'softening remark' role, distinct from 8-7's true 'but').",
+      "tags": [
+        "request"
+      ]
+    },
+    {
+      "id": "14-5",
+      "title": "V て-form います (be V-ing)",
+      "structure": "Vて-form います",
+      "meaning": "Indicates a certain action/motion is in progress — 'be V-ing.'",
+      "explanation": "This sentence pattern indicates that a certain action or motion is in progress.",
+      "examples": [
+        {
+          "jp": "ミラーさんは 今 電話を かけて います。",
+          "en": "Mr. Miller is making a phone call now."
+        },
+        {
+          "jp": "今 雨が 降って いますか。…はい、降って います。",
+          "en": "Is it raining now? …Yes, it is."
+        }
+      ],
+      "summary": "Vて-form + います describes an action currently in progress ('is V-ing').",
+      "details": "Second major use of 14-3's て-form. Note this is only one of several jobs ています will pick up: L15 (13-3 in this doc's numbering) adds a continuing-state meaning (結婚しています = 'I am married') and a habitual/occupational meaning (フィルムを 売って います = 'sells film [as a business]') — all sharing the same surface form but different meanings, worth reviewing as a set once L15 is covered.",
+      "tags": [
+        "state-continuation"
+      ]
+    },
+    {
+      "id": "14-6",
+      "title": "V ます-form ましょうか (Shall I...?)",
+      "structure": "Vます-form ましょうか",
+      "meaning": "Used when the speaker offers to do something for the listener.",
+      "explanation": "This expression is used when the speaker is offering to do something for the listener.",
+      "examples": [
+        {
+          "jp": "傘を 貸しましょうか。…すみません。お願いします。",
+          "en": "Shall I lend you an umbrella? …Yes, please."
+        },
+        {
+          "jp": "荷物を 持ちましょうか。…いいえ、けっこうです。",
+          "en": "Shall I carry your parcel? …No, thank you."
+        }
+      ],
+      "summary": "Vます-form + ましょうか offers to do something for the listener ('shall I...?').",
+      "details": "Distinct from 6-7's Vましょう (proposing to do something TOGETHER) — ましょうか offers to do something FOR the listener, who isn't necessarily participating. Easy to conflate the two ましょう forms; worth a direct comparison drill.",
+      "tags": [
+        "request"
+      ]
+    },
+    {
+      "id": "14-7",
+      "title": "S1が、S2 …, but…",
+      "structure": "S1が、S2",
+      "note": "が used here as a light connective, not strictly contrastive.",
+      "meaning": "が, having lost its original contrastive meaning, is used to lightly connect two sentences as an introductory remark.",
+      "explanation": "You learned the conjunctive particle が in Lesson 8. In expressions such as しつれいですが or すみませんが, which are used as introductory remarks when speaking to someone, が, losing its original meaning, is used to connect two sentences lightly.",
+      "examples": [
+        {
+          "jp": "失礼ですが、お名前は？",
+          "en": "Excuse me, but may I have your name?"
+        },
+        {
+          "jp": "すみませんが、塩を 取って ください。",
+          "en": "Excuse me, but please pass me the salt."
+        }
+      ],
+      "summary": "が in set openers like しつれいですが／すみませんが is a soft connective cushion, not the true 'but' contrast from 8-7.",
+      "details": "Direct follow-up to 8-7 (S1が、S2 = 'but'), clarifying that が has weakened here into a purely pragmatic cushioning device with essentially no contrastive meaning left. This is the same が seen attached in front of 14-4's Vてください requests.",
+      "tags": [
+        "concession-contrast"
+      ]
+    },
+    {
+      "id": "14-8",
+      "title": "N が V",
+      "structure": "N が V",
+      "note": "Natural phenomena take が as subject marker.",
+      "meaning": "When describing a natural phenomenon, the subject is marked with が.",
+      "explanation": "When describing a natural phenomenon, the subject is indicated by the particle が.",
+      "examples": [
+        {
+          "jp": "雨が 降って います。",
+          "en": "It is raining."
+        }
+      ],
+      "summary": "が marks the subject of natural-phenomenon sentences (雨が降ります, weather verbs).",
+      "details": "Another が-as-subject-marker context, joining the growing list from 9-1 (preference/ability/existence verbs) — natural phenomena are simply another category where が, not は, marks what's happening, since there's no 'topic' being discussed, just an event occurring.",
+      "tags": [
+        "spontaneous-perception"
+      ]
+    }
+  ],
+  "15": [
+    {
+      "id": "15-1",
+      "title": "V て-form も いいです (You may do...)",
+      "structure": "Vて-form も いいです／いいですか",
+      "meaning": "Grants permission — 'you may do...'; the question form asks for permission.",
+      "explanation": "This expression is used to grant permission. To ask for permission, the question form of this sentence is used. Note that an euphemistic answer is given when permission is not granted.",
+      "examples": [
+        {
+          "jp": "写真を 撮っても いいです。",
+          "en": "You may take pictures."
+        },
+        {
+          "jp": "このカタログを もらっても いいですか。…ええ、いいですよ。どうぞ。",
+          "en": "May I have this catalogue? …Yes. Here you are."
+        },
+        {
+          "jp": "…すみません。ちょっと。",
+          "en": "…Sorry. I'm afraid not."
+        }
+      ],
+      "summary": "Vて-form も いいです grants permission ('you may...'); Vて-form も いいですか asks for it; a refusal is often softened to すみません、ちょっと… rather than a flat no.",
+      "details": "Builds directly on 14-3's て-form. Compare with 15-2's はいけません (prohibition) as the negative counterpart — もいいです is the 'go ahead' side, はいけません is the 'don't' side, and both attach to the same て-form.",
+      "tags": [
+        "permission"
+      ]
+    },
+    {
+      "id": "15-2",
+      "title": "V て-form は いけません (You must not do...)",
+      "structure": "Vて-form は いけません",
+      "meaning": "Expresses prohibition — 'you must not do...'",
+      "explanation": "This sentence pattern is used to express prohibition. When you strongly wish to refuse permission to questions using the expression Vて-form も いいですか, you answer いいえ、いけません, omitting Vて-form は. This expression cannot be used by an inferior to a superior.",
+      "examples": [
+        {
+          "jp": "ここで たばこを 吸っては いけません。禁煙ですから。",
+          "en": "You must not smoke here. Because this is a no-smoking area."
+        },
+        {
+          "jp": "先生、ここで 遊んでも いいですか。…いいえ、いけません。",
+          "en": "May we play here, Ma'am? …No, you must not."
+        }
+      ],
+      "summary": "Vて-form + は + いけません forbids an action ('must not'); a strong refusal can shorten to just いいえ、いけません; not used from a subordinate to a superior.",
+      "details": "The negative-permission counterpart to 15-1. Note the register restriction — like 14-4's Vてくださいへの superior-restriction, this can't be directed upward at a superior either, since it's a fairly blunt prohibition. Best learned as a matched pair with 15-1.",
+      "tags": [
+        "prohibition"
+      ]
+    },
+    {
+      "id": "15-3",
+      "title": "V て-form います (continuing state)",
+      "structure": "Vて-form います",
+      "note": "Third use of ています, after progressive (L14) — describes a resulting continuing state.",
+      "meaning": "Describes a continuing state resulting from a past action — e.g. being married, knowing someone, living somewhere, possessing something.",
+      "explanation": "In addition to the usage you learned in Lesson 14 (action in progress), Vて-form います is also used to describe a certain continuing state which resulted from a certain action in the past. もって います means 'be holding' and 'possess' as well.",
+      "examples": [
+        {
+          "jp": "わたしは 結婚して います。",
+          "en": "I'm married."
+        },
+        {
+          "jp": "わたしは 田中さんを 知って います。",
+          "en": "I know Mr. Tanaka."
+        },
+        {
+          "jp": "わたしは 大阪に 住んで います。",
+          "en": "I live in Osaka."
+        },
+        {
+          "jp": "わたしは カメラを 持って います。",
+          "en": "I have a camera."
+        }
+      ],
+      "summary": "Vて-form います can also describe a resulting ongoing state (結婚しています='I'm married', 知っています='I know', 住んでいます='I live', 持っています='I have/hold') rather than an action currently unfolding.",
+      "details": "This is the second of ています's three meanings introduced across L14-15 (see 14-5's note): progressive action (L14) vs. resulting state (here) vs. habitual/occupational (15-4) — all identical in form, disambiguated only by the verb's inherent meaning and context. A key cross-reference: 知っています behaves specially — see 15-5 for its irregular negative.",
+      "tags": [
+        "state-continuation"
+      ]
+    },
+    {
+      "id": "15-4",
+      "title": "V て-form います (habitual action)",
+      "structure": "Vて-form います",
+      "note": "Fourth grammar sub-point but same て-form います surface pattern — habitual/occupational use.",
+      "meaning": "Describes a habitual or repeated action performed over a period of time — including describing one's occupation.",
+      "explanation": "Vて-form います is also used in describing a habitual action; that is, when the same action is repeatedly performed over a period of time. Therefore, one's occupation can be expressed by this sentence pattern. If the question おしごとは なんですか is asked, this sentence pattern can be used to answer it.",
+      "examples": [
+        {
+          "jp": "IMCは コンピューターソフトを 作って います。",
+          "en": "IMC makes computer software."
+        },
+        {
+          "jp": "スーパーで フィルムを 売って います。",
+          "en": "Supermarkets sell films."
+        },
+        {
+          "jp": "ミラーさんは IMCで 働いて います。",
+          "en": "Mr. Miller works for IMC."
+        },
+        {
+          "jp": "妹は 大学で 勉強して います。",
+          "en": "My younger sister is studying at university."
+        }
+      ],
+      "summary": "Vて-form います also expresses a habitual/repeated action, most commonly used to describe someone's job or field of study.",
+      "details": "The third and final meaning of ています covered in L14-15 (see 14-5 and 15-3 for the other two) — this habitual-action reading is specifically how Japanese states one's occupation (IMCで働いています = 'I work for IMC'), a very practical, frequently-used construction worth its own speaking drill.",
+      "tags": [
+        "habit-effort"
+      ]
+    },
+    {
+      "id": "15-5",
+      "title": "知りません",
+      "structure": "知って います → 知りません (negative)",
+      "note": "Irregular negative: not 知って いません.",
+      "meaning": "The negative form of 知って います ('know') is the irregular 知りません, not 知って いません.",
+      "explanation": "The negative form of しって います is しりません.",
+      "examples": [
+        {
+          "jp": "市役所の 電話番号を 知って いますか。…はい、知って います。…いいえ、知りません。",
+          "en": "Do you know the telephone number of the city hall? …Yes, I do. …No, I don't."
+        }
+      ],
+      "summary": "知っています ('know') has an irregular negative — 知りません, never 知っていません.",
+      "details": "A direct, important exception to 15-3's general continuing-state ています pattern: while every other verb in that family negates regularly (結婚していません, 住んでいません are both fine), 知る is the one exception where the plain negative ます-form (知りません) is used instead of the て-form いません negative. Worth flagging clearly since it breaks the otherwise-consistent pattern just established.",
+      "tags": [
+        "state-continuation"
+      ]
+    }
+  ]
+}

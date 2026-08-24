@@ -1,0 +1,99 @@
+{
+  "$schema": "grammar-app tag taxonomy — reference for filtering/sorting grammar points by their `tags` array",
+  "version": 2,
+  "notes": "Each grammar point can carry 1-4 tags. Tags are drawn from this fixed vocabulary so the UI can offer a stable filter list instead of free text. Grouped into facets below purely for UI organization (e.g. separate filter sections) — the tags themselves live in one flat `tags` array on each grammar point, facet membership is not stored per-item.",
+  "facets": {
+    "function": {
+      "label": "Function / Meaning",
+      "description": "What the grammar point communicatively does. The primary facet — most points get 1-2 of these.",
+      "tags": {
+        "cause-reason": "Marks the reason/cause behind a following statement or result.",
+        "purpose": "Expresses a goal or intention behind an action (in order to / for the sake of).",
+        "result-consequence": "Marks a resulting state or consequence.",
+        "conditional": "Hypothetical or conditional clauses (if/when X, then Y).",
+        "concession-contrast": "Despite/although X, Y — a contrastive or concessive relationship.",
+        "comparison": "Comparing two things by degree, similarity, or preference.",
+        "degree-extent": "Expresses degree, extent, or a scale (how much / to what extent).",
+        "similarity-appearance": "Describes how something looks/resembles/seems (visual or general resemblance).",
+        "hearsay": "Reporting information obtained from another source (I heard that...).",
+        "conjecture-inference": "The speaker's own guess/inference/supposition, based on reasoning or observation.",
+        "certainty-expectation": "Strong conviction that something is/should be the case (はず, に違いない).",
+        "possibility": "Expresses that something may or may not be the case.",
+        "obligation-necessity": "Must/have to do something; no choice but to.",
+        "prohibition": "Forbidding an action.",
+        "permission": "Granting or asking for permission.",
+        "advice-suggestion": "Giving or requesting advice/suggestions on the best course of action.",
+        "request": "Asking someone (politely or directly) to do something.",
+        "passive": "Passive voice — an action done to the subject.",
+        "causative": "Making or letting someone do something.",
+        "causative-passive": "Being made/forced to do something by someone else.",
+        "potential": "Ability or possibility of doing something.",
+        "volitional-intention": "The speaker's will, plan, or intention to do something.",
+        "decision-outcome": "A decision reached, or an outcome that has been decided/settled.",
+        "experience": "Past experience of having done something.",
+        "change-of-state": "A shift from one state/condition to another over time.",
+        "habit-effort": "Ongoing habits, customary actions, or deliberate effort to form one.",
+        "giving-receiving": "Giving/receiving verbs (あげる・くれる・もらう family and their honorific forms).",
+        "quotation": "Quoting or reporting what was said, named, or written.",
+        "nominalizer": "Turns a clause/verb into a noun phrase (の／こと).",
+        "listing-examples": "Listing representative examples out of a larger, unstated set.",
+        "time-relative": "Marks a point or span in time relative to an action or event.",
+        "frequency": "How often something happens.",
+        "state-continuation": "A state that persists or continues, often as the result of a prior action.",
+        "attempt": "Trying an action to see what happens.",
+        "preparation": "Doing something in advance / getting something ready.",
+        "completion": "An action finished fully, or finishing an action.",
+        "excessive-degree": "Doing/being something to an excessive degree.",
+        "ease-difficulty": "How easy or difficult it is to do/handle something.",
+        "emphasis-limitation": "Emphasizing, restricting, or limiting scope (only, even, at least).",
+        "viewpoint-standpoint": "Framing a statement from a particular standpoint, role, or perspective.",
+        "explanation": "Framing a statement as an explanation that follows from context (んです family).",
+        "spontaneous-perception": "A sensory perception or spontaneous occurrence, not a deliberate action.",
+        "creation-completion": "Something coming into being, being made, or being completed.",
+        "simultaneous-action": "Two actions/states happening at the same time.",
+        "command": "Direct imperative commands.",
+        "manner-accordance": "Doing something exactly in accordance with/as instructed.",
+        "alternative-choice": "Choosing one course of action over another / instead of.",
+        "emotion-expression": "Describing a third person's apparent emotional state.",
+        "negative-manner": "Doing one thing without doing another (ずに／ないで family).",
+        "partial-negation": "Softening a negation — doesn't necessarily mean / isn't quite the case that.",
+        "definition-meaning": "Defining or classifying what something means or is.",
+        "demonstrative": "こ/そ/あ-series demonstrative usage.",
+        "direction-movement": "Physical or metaphorical direction of movement.",
+        "existence-location": "Existence or location of something.",
+        "acknowledgment": "A short response registering that the speaker has received/understood new information (そうですか family).",
+        "confirmation-seeking": "Sentence-final ね/よね, inviting the listener's agreement or confirming shared understanding.",
+        "emphasis-assertion": "Sentence-final よ, asserting information the listener doesn't know or stating the speaker's judgment firmly."
+      }
+    },
+    "register": {
+      "label": "Register / Formality",
+      "description": "Where the grammar point sits on the casual-to-formal spectrum, or which keigo tier it belongs to. Useful for filtering 'show me only stiff/written N3 patterns' or 'show me keigo'.",
+      "tags": {
+        "formal-written": "Stiff, formal register typical of writing, news, speeches, or business Japanese.",
+        "colloquial": "Casual, spoken-register expression.",
+        "keigo-respectful": "尊敬語 — elevating the listener/referent's actions.",
+        "keigo-humble": "謙譲語 — lowering the speaker's own actions.",
+        "keigo-polite": "丁寧語 — general politeness, independent of relative status."
+      }
+    },
+    "structure": {
+      "label": "Structure Type",
+      "description": "What kind of grammatical unit this is, independent of meaning — useful for filters like 'just show me particles' or 'hide meta/formation entries'.",
+      "tags": {
+        "meta-conjugation": "Teaches how to form/conjugate a verb group (potential, passive, causative, etc.) rather than a new meaning.",
+        "particle-usage": "A specific case-particle nuance or usage point not covered by a more specific function tag.",
+        "topic-focus-particle": "Particle usage for marking topic/focus (は, が, も, etc.).",
+        "nominalizer": "Turns a clause/verb into a noun phrase (の／こと).",
+        "connective": "A sentence-initial conjunction linking to the previous sentence.",
+        "demonstrative": "こ/そ/あ-series demonstrative usage.",
+        "question-embedding": "Embedding a question inside a larger sentence."
+      }
+    }
+  },
+  "usage_guidance": {
+    "ambiguous_points": "Some points genuinely span multiple functions (e.g. はず carries both certainty-expectation and, loosely, conjecture-inference — it was tagged with just certainty-expectation to keep the certainty scale distinct and filterable from the looser conjecture family: でしょう/かもしれない/ようです/らしい). When a point is ambiguous, prefer the tag that groups it with the points it is most often confused with or drilled against, since that's the filtering use case that matters most for review.",
+    "adding_new_tags": "Only add a new tag to this taxonomy if 2+ existing tags genuinely don't fit — reusing tags across points is what makes filtering/grouping useful. Keep tag names in this kebab-case, function-first style.",
+    "max_tags_per_point": "Aim for 1-3 tags per grammar point (rarely 4). More than that stops being a useful filter signal."
+  }
+}

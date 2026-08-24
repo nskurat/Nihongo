@@ -1,0 +1,1622 @@
+{
+  "1": [
+    {
+      "id": "n5-v-1-1",
+      "word": "わたし",
+      "reading": "わたし",
+      "romaji": "watashi",
+      "pos": "Pronoun",
+      "meaning": "I, me",
+      "exampleJp": "わたしはマイク・ミラーです。",
+      "exampleEn": "I am Mike Miller."
+    },
+    {
+      "id": "n5-v-1-2",
+      "word": "あなた",
+      "reading": "あなた",
+      "romaji": "anata",
+      "pos": "Pronoun",
+      "meaning": "you",
+      "exampleJp": "あなたは学生ですか。",
+      "exampleEn": "Are you a student?"
+    },
+    {
+      "id": "n5-v-1-3",
+      "word": "あの人",
+      "reading": "あのひと",
+      "romaji": "ano hito",
+      "pos": "Pronoun",
+      "meaning": "that person, he, she (あのかた is the polite equivalent)",
+      "exampleJp": "あの人はだれですか。",
+      "exampleEn": "Who is that person?"
+    },
+    {
+      "id": "n5-v-1-4",
+      "word": "〜さん",
+      "reading": "〜さん",
+      "romaji": "~san",
+      "pos": "Suffix",
+      "meaning": "Mr., Ms. (title of respect added to a name — never to your own)",
+      "exampleJp": "山田さんは会社員です。",
+      "exampleEn": "Mr. Yamada is a company employee."
+    },
+    {
+      "id": "n5-v-1-5",
+      "word": "先生",
+      "reading": "せんせい",
+      "romaji": "sensei",
+      "pos": "Noun",
+      "meaning": "teacher, instructor (not used when referring to one's own job)",
+      "exampleJp": "ワットさんは先生です。",
+      "exampleEn": "Mr. Watt is a teacher."
+    },
+    {
+      "id": "n5-v-1-6",
+      "word": "会社員",
+      "reading": "かいしゃいん",
+      "romaji": "kaishain",
+      "pos": "Noun",
+      "meaning": "company employee",
+      "exampleJp": "サントスさんは会社員です。",
+      "exampleEn": "Mr. Santos is a company employee."
+    },
+    {
+      "id": "n5-v-1-7",
+      "word": "医者",
+      "reading": "いしゃ",
+      "romaji": "isha",
+      "pos": "Noun",
+      "meaning": "medical doctor",
+      "exampleJp": "ワンさんは医者です。",
+      "exampleEn": "Mr. Wang is a doctor."
+    },
+    {
+      "id": "n5-v-1-8",
+      "word": "何歳",
+      "reading": "なんさい",
+      "romaji": "nansai",
+      "pos": "Noun (interrogative)",
+      "meaning": "how old (おいくつ is the polite equivalent)",
+      "exampleJp": "テレサちゃんは何歳ですか。",
+      "exampleEn": "How old is Teresa?"
+    },
+    {
+      "id": "n5-v-1-9",
+      "word": "初めまして",
+      "reading": "はじめまして",
+      "romaji": "hajimemashite",
+      "pos": "Expression",
+      "meaning": "How do you do? (used as the first phrase when introducing oneself)",
+      "exampleJp": "初めまして。マイク・ミラーです。",
+      "exampleEn": "How do you do? I am Mike Miller."
+    },
+    {
+      "id": "n5-v-1-10",
+      "word": "どうぞよろしく[お願いします]",
+      "reading": "どうぞよろしく[おねがいします]",
+      "romaji": "douzo yoroshiku [onegaishimasu]",
+      "pos": "Expression",
+      "meaning": "Pleased to meet you (used at the end of a self-introduction)",
+      "exampleJp": "サントスです。どうぞよろしくお願いします。",
+      "exampleEn": "I am Santos. Pleased to meet you."
+    }
+  ],
+  "2": [
+    {
+      "id": "n5-v-2-1",
+      "word": "これ／それ／あれ",
+      "reading": "これ／それ／あれ",
+      "romaji": "kore / sore / are",
+      "pos": "Pronoun",
+      "meaning": "this / that / that over there (things)",
+      "exampleJp": "それは辞書ですか。",
+      "exampleEn": "Is that a dictionary?"
+    },
+    {
+      "id": "n5-v-2-2",
+      "word": "この／その／あの〜",
+      "reading": "この／その／あの〜",
+      "romaji": "kono / sono / ano ~",
+      "pos": "Determiner",
+      "meaning": "this / that / that over there ~ (modifying a noun)",
+      "exampleJp": "この本はわたしのです。",
+      "exampleEn": "This book is mine."
+    },
+    {
+      "id": "n5-v-2-3",
+      "word": "辞書",
+      "reading": "じしょ",
+      "romaji": "jisho",
+      "pos": "Noun",
+      "meaning": "dictionary",
+      "exampleJp": "これはわたしの辞書です。",
+      "exampleEn": "This is my dictionary."
+    },
+    {
+      "id": "n5-v-2-4",
+      "word": "雑誌",
+      "reading": "ざっし",
+      "romaji": "zasshi",
+      "pos": "Noun",
+      "meaning": "magazine",
+      "exampleJp": "それはコンピューターの雑誌です。",
+      "exampleEn": "That is a magazine on computers."
+    },
+    {
+      "id": "n5-v-2-5",
+      "word": "新聞",
+      "reading": "しんぶん",
+      "romaji": "shinbun",
+      "pos": "Noun",
+      "meaning": "newspaper",
+      "exampleJp": "あれは日本の新聞です。",
+      "exampleEn": "That over there is a Japanese newspaper."
+    },
+    {
+      "id": "n5-v-2-6",
+      "word": "名刺",
+      "reading": "めいし",
+      "romaji": "meishi",
+      "pos": "Noun",
+      "meaning": "business card",
+      "exampleJp": "これは佐藤さんの名刺です。",
+      "exampleEn": "This is Ms. Sato's business card."
+    },
+    {
+      "id": "n5-v-2-7",
+      "word": "かばん",
+      "reading": "かばん",
+      "romaji": "kaban",
+      "pos": "Noun",
+      "meaning": "bag, briefcase",
+      "exampleJp": "そのかばんはあなたのですか。",
+      "exampleEn": "Is that bag yours?"
+    },
+    {
+      "id": "n5-v-2-8",
+      "word": "違います",
+      "reading": "ちがいます",
+      "romaji": "chigaimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "to be wrong, to differ (= そうじゃありません)",
+      "exampleJp": "いいえ、違います。",
+      "exampleEn": "No, that's not right."
+    },
+    {
+      "id": "n5-v-2-9",
+      "word": "そうですか",
+      "reading": "そうですか",
+      "romaji": "sou desu ka",
+      "pos": "Expression",
+      "meaning": "I see, is that so? (shows the speaker registers new information)",
+      "exampleJp": "これはシュミットさんのです。…そうですか。",
+      "exampleEn": "This is Mr. Schmidt's. — I see."
+    },
+    {
+      "id": "n5-v-2-10",
+      "word": "[どうも]ありがとう[ございます]",
+      "reading": "[どうも]ありがとう[ございます]",
+      "romaji": "[doumo] arigatou [gozaimasu]",
+      "pos": "Expression",
+      "meaning": "Thank you [very much]",
+      "exampleJp": "どうもありがとうございます。",
+      "exampleEn": "Thank you very much."
+    }
+  ],
+  "3": [
+    {
+      "id": "n5-v-3-1",
+      "word": "ここ／そこ／あそこ",
+      "reading": "ここ／そこ／あそこ",
+      "romaji": "koko / soko / asoko",
+      "pos": "Pronoun",
+      "meaning": "here / there / over there (places)",
+      "exampleJp": "教室はここです。",
+      "exampleEn": "The classroom is here."
+    },
+    {
+      "id": "n5-v-3-2",
+      "word": "教室",
+      "reading": "きょうしつ",
+      "romaji": "kyoushitsu",
+      "pos": "Noun",
+      "meaning": "classroom",
+      "exampleJp": "学生は教室にいます。",
+      "exampleEn": "The students are in the classroom."
+    },
+    {
+      "id": "n5-v-3-3",
+      "word": "事務所",
+      "reading": "じむしょ",
+      "romaji": "jimusho",
+      "pos": "Noun",
+      "meaning": "office",
+      "exampleJp": "山田さんは事務所です。",
+      "exampleEn": "Mr. Yamada is in the office."
+    },
+    {
+      "id": "n5-v-3-4",
+      "word": "受付",
+      "reading": "うけつけ",
+      "romaji": "uketsuke",
+      "pos": "Noun",
+      "meaning": "reception desk",
+      "exampleJp": "受付はあちらです。",
+      "exampleEn": "The reception desk is that way."
+    },
+    {
+      "id": "n5-v-3-5",
+      "word": "お手洗い",
+      "reading": "おてあらい",
+      "romaji": "otearai",
+      "pos": "Noun",
+      "meaning": "toilet, rest room",
+      "exampleJp": "お手洗いはどこですか。",
+      "exampleEn": "Where is the rest room?"
+    },
+    {
+      "id": "n5-v-3-6",
+      "word": "会社",
+      "reading": "かいしゃ",
+      "romaji": "kaisha",
+      "pos": "Noun",
+      "meaning": "company",
+      "exampleJp": "会社はどちらですか。",
+      "exampleEn": "What company do you work for?"
+    },
+    {
+      "id": "n5-v-3-7",
+      "word": "いくら",
+      "reading": "いくら",
+      "romaji": "ikura",
+      "pos": "Pronoun (interrogative)",
+      "meaning": "how much",
+      "exampleJp": "この時計はいくらですか。",
+      "exampleEn": "How much is this watch?"
+    },
+    {
+      "id": "n5-v-3-8",
+      "word": "すみません",
+      "reading": "すみません",
+      "romaji": "sumimasen",
+      "pos": "Expression",
+      "meaning": "Excuse me",
+      "exampleJp": "すみません。お手洗いはどこですか。",
+      "exampleEn": "Excuse me. Where's the rest room?"
+    },
+    {
+      "id": "n5-v-3-9",
+      "word": "[〜を]見せてください",
+      "reading": "[〜を]みせてください",
+      "romaji": "[~o] misete kudasai",
+      "pos": "Verb (Group II) (phrase)",
+      "meaning": "Please show me [~]",
+      "exampleJp": "その時計を見せてください。",
+      "exampleEn": "Please show me that watch."
+    },
+    {
+      "id": "n5-v-3-10",
+      "word": "[〜を]ください",
+      "reading": "[〜を]ください",
+      "romaji": "[~o] kudasai",
+      "pos": "Verb (Group I) (phrase)",
+      "meaning": "Give me [~], please",
+      "exampleJp": "これをください。",
+      "exampleEn": "I'll take this, please."
+    }
+  ],
+  "4": [
+    {
+      "id": "n5-v-4-1",
+      "word": "起きます",
+      "reading": "おきます",
+      "romaji": "okimasu",
+      "pos": "Verb (Group II)",
+      "meaning": "get up, wake up",
+      "exampleJp": "毎朝6時に起きます。",
+      "exampleEn": "I get up at six every morning."
+    },
+    {
+      "id": "n5-v-4-2",
+      "word": "寝ます",
+      "reading": "ねます",
+      "romaji": "nemasu",
+      "pos": "Verb (Group II)",
+      "meaning": "sleep, go to bed",
+      "exampleJp": "毎晩11時に寝ます。",
+      "exampleEn": "I go to bed at eleven every night."
+    },
+    {
+      "id": "n5-v-4-3",
+      "word": "働きます",
+      "reading": "はたらきます",
+      "romaji": "hatarakimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "work",
+      "exampleJp": "9時から5時まで働きます。",
+      "exampleEn": "I work from nine to five."
+    },
+    {
+      "id": "n5-v-4-4",
+      "word": "休みます",
+      "reading": "やすみます",
+      "romaji": "yasumimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "take a rest, take a holiday",
+      "exampleJp": "土曜日と日曜日は休みます。",
+      "exampleEn": "I take Saturdays and Sundays off."
+    },
+    {
+      "id": "n5-v-4-5",
+      "word": "勉強します",
+      "reading": "べんきょうします",
+      "romaji": "benkyoushimasu",
+      "pos": "Verb (Group III)",
+      "meaning": "study",
+      "exampleJp": "わたしは毎日日本語を勉強します。",
+      "exampleEn": "I study Japanese every day."
+    },
+    {
+      "id": "n5-v-4-6",
+      "word": "終わります",
+      "reading": "おわります",
+      "romaji": "owarimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "finish",
+      "exampleJp": "仕事は6時に終わります。",
+      "exampleEn": "Work finishes at six."
+    },
+    {
+      "id": "n5-v-4-7",
+      "word": "今",
+      "reading": "いま",
+      "romaji": "ima",
+      "pos": "Noun",
+      "meaning": "now",
+      "exampleJp": "今何時ですか。",
+      "exampleEn": "What time is it now?"
+    },
+    {
+      "id": "n5-v-4-8",
+      "word": "何時",
+      "reading": "なんじ",
+      "romaji": "nanji",
+      "pos": "Noun (interrogative)",
+      "meaning": "what time",
+      "exampleJp": "今何時ですか。",
+      "exampleEn": "What time is it now?"
+    },
+    {
+      "id": "n5-v-4-9",
+      "word": "毎日",
+      "reading": "まいにち",
+      "romaji": "mainichi",
+      "pos": "Adverb",
+      "meaning": "every day",
+      "exampleJp": "毎日勉強します。",
+      "exampleEn": "I study every day."
+    },
+    {
+      "id": "n5-v-4-10",
+      "word": "何曜日",
+      "reading": "なんようび",
+      "romaji": "nan youbi",
+      "pos": "Noun (interrogative)",
+      "meaning": "what day of the week",
+      "exampleJp": "きょうは何曜日ですか。",
+      "exampleEn": "What day of the week is it today?"
+    },
+    {
+      "id": "n5-v-4-11",
+      "word": "大変ですね",
+      "reading": "たいへんですね",
+      "romaji": "taihen desu ne",
+      "pos": "Expression",
+      "meaning": "That's tough, isn't it? (used to express sympathy)",
+      "exampleJp": "毎日10時まで働きます。…大変ですね。",
+      "exampleEn": "I work until ten every day. — That's tough, isn't it?"
+    }
+  ],
+  "5": [
+    {
+      "id": "n5-v-5-1",
+      "word": "行きます",
+      "reading": "いきます",
+      "romaji": "ikimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "go",
+      "exampleJp": "あした京都へ行きます。",
+      "exampleEn": "I will go to Kyoto tomorrow."
+    },
+    {
+      "id": "n5-v-5-2",
+      "word": "来ます",
+      "reading": "きます",
+      "romaji": "kimasu",
+      "pos": "Verb (Group III)",
+      "meaning": "come",
+      "exampleJp": "日本へ来ました。",
+      "exampleEn": "I came to Japan."
+    },
+    {
+      "id": "n5-v-5-3",
+      "word": "帰ります",
+      "reading": "かえります",
+      "romaji": "kaerimasu",
+      "pos": "Verb (Group I)",
+      "meaning": "go home, return",
+      "exampleJp": "うちへ帰ります。",
+      "exampleEn": "I will go home."
+    },
+    {
+      "id": "n5-v-5-4",
+      "word": "駅",
+      "reading": "えき",
+      "romaji": "eki",
+      "pos": "Noun",
+      "meaning": "station",
+      "exampleJp": "駅から歩いて帰りました。",
+      "exampleEn": "I walked home from the station."
+    },
+    {
+      "id": "n5-v-5-5",
+      "word": "飛行機",
+      "reading": "ひこうき",
+      "romaji": "hikouki",
+      "pos": "Noun",
+      "meaning": "airplane",
+      "exampleJp": "飛行機で日本へ来ました。",
+      "exampleEn": "I came to Japan by plane."
+    },
+    {
+      "id": "n5-v-5-6",
+      "word": "電車",
+      "reading": "でんしゃ",
+      "romaji": "densha",
+      "pos": "Noun",
+      "meaning": "electric train",
+      "exampleJp": "電車で行きます。",
+      "exampleEn": "I'll go by train."
+    },
+    {
+      "id": "n5-v-5-7",
+      "word": "歩いて",
+      "reading": "あるいて",
+      "romaji": "aruite",
+      "pos": "Adverb (phrase)",
+      "meaning": "on foot, by walking",
+      "exampleJp": "駅まで歩いて行きます。",
+      "exampleEn": "I'll walk to the station."
+    },
+    {
+      "id": "n5-v-5-8",
+      "word": "一人で",
+      "reading": "ひとりで",
+      "romaji": "hitori de",
+      "pos": "Adverb (phrase)",
+      "meaning": "alone, by oneself",
+      "exampleJp": "一人で東京へ行きます。",
+      "exampleEn": "I'll go to Tokyo alone."
+    },
+    {
+      "id": "n5-v-5-9",
+      "word": "いつ",
+      "reading": "いつ",
+      "romaji": "itsu",
+      "pos": "Adverb (interrogative)",
+      "meaning": "when",
+      "exampleJp": "いつ日本へ来ましたか。",
+      "exampleEn": "When did you come to Japan?"
+    },
+    {
+      "id": "n5-v-5-10",
+      "word": "誕生日",
+      "reading": "たんじょうび",
+      "romaji": "tanjoubi",
+      "pos": "Noun",
+      "meaning": "birthday",
+      "exampleJp": "誕生日はいつですか。",
+      "exampleEn": "When is your birthday?"
+    },
+    {
+      "id": "n5-v-5-11",
+      "word": "どういたしまして",
+      "reading": "どういたしまして",
+      "romaji": "dou itashimashite",
+      "pos": "Expression",
+      "meaning": "You're welcome, don't mention it",
+      "exampleJp": "ありがとうございます。…どういたしまして。",
+      "exampleEn": "Thank you. — You're welcome."
+    }
+  ],
+  "6": [
+    {
+      "id": "n5-v-6-1",
+      "word": "食べます",
+      "reading": "たべます",
+      "romaji": "tabemasu",
+      "pos": "verb",
+      "meaning": "eat",
+      "exampleJp": "朝ごはんを 食べます。",
+      "exampleEn": "I eat breakfast."
+    },
+    {
+      "id": "n5-v-6-2",
+      "word": "飲みます",
+      "reading": "のみます",
+      "romaji": "nomimasu",
+      "pos": "verb",
+      "meaning": "drink",
+      "exampleJp": "ジュースを 飲みます。",
+      "exampleEn": "I drink juice."
+    },
+    {
+      "id": "n5-v-6-3",
+      "word": "見ます",
+      "reading": "みます",
+      "romaji": "mimasu",
+      "pos": "verb",
+      "meaning": "see, look at, watch",
+      "exampleJp": "映画を 見ます。",
+      "exampleEn": "I watch a movie."
+    },
+    {
+      "id": "n5-v-6-4",
+      "word": "読みます",
+      "reading": "よみます",
+      "romaji": "yomimasu",
+      "pos": "verb",
+      "meaning": "read",
+      "exampleJp": "新聞を 読みます。",
+      "exampleEn": "I read the newspaper."
+    },
+    {
+      "id": "n5-v-6-5",
+      "word": "書きます",
+      "reading": "かきます",
+      "romaji": "kakimasu",
+      "pos": "verb",
+      "meaning": "write, draw, paint",
+      "exampleJp": "手紙を 書きます。",
+      "exampleEn": "I write a letter."
+    },
+    {
+      "id": "n5-v-6-6",
+      "word": "買います",
+      "reading": "かいます",
+      "romaji": "kaimasu",
+      "pos": "verb",
+      "meaning": "buy",
+      "exampleJp": "駅で 新聞を 買います。",
+      "exampleEn": "I buy the newspaper at the station."
+    },
+    {
+      "id": "n5-v-6-7",
+      "word": "撮ります",
+      "reading": "とります",
+      "romaji": "torimasu",
+      "pos": "verb",
+      "meaning": "take [a photograph]",
+      "exampleJp": "写真を 撮ります。",
+      "exampleEn": "I take a photograph."
+    },
+    {
+      "id": "n5-v-6-8",
+      "word": "会います",
+      "reading": "あいます",
+      "romaji": "aimasu",
+      "pos": "verb",
+      "meaning": "meet [a friend]",
+      "exampleJp": "友達に 会います。",
+      "exampleEn": "I meet a friend."
+    },
+    {
+      "id": "n5-v-6-9",
+      "word": "ごはん",
+      "reading": "ごはん",
+      "romaji": "gohan",
+      "pos": "noun",
+      "meaning": "a meal, cooked rice",
+      "exampleJp": "晩ごはんを 食べます。",
+      "exampleEn": "I eat supper."
+    },
+    {
+      "id": "n5-v-6-10",
+      "word": "お酒",
+      "reading": "おさけ",
+      "romaji": "osake",
+      "pos": "noun",
+      "meaning": "alcohol, Japanese rice wine",
+      "exampleJp": "いっしょに お酒を 飲みませんか。",
+      "exampleEn": "Won't you drink some alcohol with me?"
+    },
+    {
+      "id": "n5-v-6-11",
+      "word": "宿題",
+      "reading": "しゅくだい",
+      "romaji": "shukudai",
+      "pos": "noun",
+      "meaning": "homework",
+      "exampleJp": "宿題を します。",
+      "exampleEn": "I do homework."
+    },
+    {
+      "id": "n5-v-6-12",
+      "word": "[お]花見",
+      "reading": "[お]はなみ",
+      "romaji": "[o]hanami",
+      "pos": "noun",
+      "meaning": "cherry-blossom viewing",
+      "exampleJp": "あした 花見を します。",
+      "exampleEn": "I'm going cherry-blossom viewing tomorrow."
+    }
+  ],
+  "7": [
+    {
+      "id": "n5-v-7-1",
+      "word": "送ります",
+      "reading": "おくります",
+      "romaji": "okurimasu",
+      "pos": "verb",
+      "meaning": "send",
+      "exampleJp": "手紙を 送ります。",
+      "exampleEn": "I send a letter."
+    },
+    {
+      "id": "n5-v-7-2",
+      "word": "あげます",
+      "reading": "あげます",
+      "romaji": "agemasu",
+      "pos": "verb",
+      "meaning": "give",
+      "exampleJp": "木村さんに 花を あげます。",
+      "exampleEn": "I give flowers to Ms. Kimura."
+    },
+    {
+      "id": "n5-v-7-3",
+      "word": "もらいます",
+      "reading": "もらいます",
+      "romaji": "moraimasu",
+      "pos": "verb",
+      "meaning": "receive",
+      "exampleJp": "山田さんに CDを もらいました。",
+      "exampleEn": "I received a CD from Mr. Yamada."
+    },
+    {
+      "id": "n5-v-7-4",
+      "word": "貸します",
+      "reading": "かします",
+      "romaji": "kashimasu",
+      "pos": "verb",
+      "meaning": "lend",
+      "exampleJp": "友達に 本を 貸します。",
+      "exampleEn": "I lend a book to my friend."
+    },
+    {
+      "id": "n5-v-7-5",
+      "word": "借ります",
+      "reading": "かります",
+      "romaji": "karimasu",
+      "pos": "verb",
+      "meaning": "borrow",
+      "exampleJp": "銀行から お金を 借ります。",
+      "exampleEn": "I borrow money from the bank."
+    },
+    {
+      "id": "n5-v-7-6",
+      "word": "教えます",
+      "reading": "おしえます",
+      "romaji": "oshiemasu",
+      "pos": "verb",
+      "meaning": "teach",
+      "exampleJp": "太郎君に 英語を 教えます。",
+      "exampleEn": "I teach Taro English."
+    },
+    {
+      "id": "n5-v-7-7",
+      "word": "習います",
+      "reading": "ならいます",
+      "romaji": "naraimasu",
+      "pos": "verb",
+      "meaning": "learn",
+      "exampleJp": "ワンさんに 中国語を 習います。",
+      "exampleEn": "I learn Chinese from Mr. Wang."
+    },
+    {
+      "id": "n5-v-7-8",
+      "word": "かけます",
+      "reading": "かけます",
+      "romaji": "kakemasu",
+      "pos": "verb",
+      "meaning": "make [a telephone call]",
+      "exampleJp": "会社に 電話を かけます。",
+      "exampleEn": "I'll call my office."
+    },
+    {
+      "id": "n5-v-7-9",
+      "word": "荷物",
+      "reading": "にもつ",
+      "romaji": "nimotsu",
+      "pos": "noun",
+      "meaning": "baggage, parcel",
+      "exampleJp": "もう 荷物を 送りましたか。",
+      "exampleEn": "Have you sent the parcel yet?"
+    },
+    {
+      "id": "n5-v-7-10",
+      "word": "お金",
+      "reading": "おかね",
+      "romaji": "okane",
+      "pos": "noun",
+      "meaning": "money",
+      "exampleJp": "銀行から お金を 借りました。",
+      "exampleEn": "I borrowed some money from the bank."
+    },
+    {
+      "id": "n5-v-7-11",
+      "word": "もう／まだ",
+      "reading": "もう／まだ",
+      "romaji": "mou / mada",
+      "pos": "adverb",
+      "meaning": "already / not yet",
+      "exampleJp": "もう 昼ごはんを 食べましたか。…いいえ、まだです。",
+      "exampleEn": "Have you finished lunch? …No, not yet."
+    }
+  ],
+  "8": [
+    {
+      "id": "n5-v-8-1",
+      "word": "きれい[な]",
+      "reading": "きれい[な]",
+      "romaji": "kirei[na]",
+      "pos": "な-adjective",
+      "meaning": "beautiful, clean",
+      "exampleJp": "琵琶湖の 水は きれいですか。",
+      "exampleEn": "Is the water of Lake Biwa clean?"
+    },
+    {
+      "id": "n5-v-8-2",
+      "word": "親切[な]",
+      "reading": "しんせつ[な]",
+      "romaji": "shinsetsu[na]",
+      "pos": "な-adjective",
+      "meaning": "kind",
+      "exampleJp": "ワット先生は 親切です。",
+      "exampleEn": "Mr. Watt is kind."
+    },
+    {
+      "id": "n5-v-8-3",
+      "word": "有名[な]",
+      "reading": "ゆうめい[な]",
+      "romaji": "yuumei[na]",
+      "pos": "な-adjective",
+      "meaning": "famous",
+      "exampleJp": "これは とても 有名な 映画です。",
+      "exampleEn": "This is a very famous movie."
+    },
+    {
+      "id": "n5-v-8-4",
+      "word": "便利[な]",
+      "reading": "べんり[な]",
+      "romaji": "benri[na]",
+      "pos": "な-adjective",
+      "meaning": "convenient",
+      "exampleJp": "東京の 地下鉄は 便利です。",
+      "exampleEn": "The subway in Tokyo is convenient."
+    },
+    {
+      "id": "n5-v-8-5",
+      "word": "大きい",
+      "reading": "おおきい",
+      "romaji": "ookii",
+      "pos": "い-adjective",
+      "meaning": "big, large",
+      "exampleJp": "富士山は 大きい 山です。",
+      "exampleEn": "Mt. Fuji is a big mountain."
+    },
+    {
+      "id": "n5-v-8-6",
+      "word": "新しい",
+      "reading": "あたらしい",
+      "romaji": "atarashii",
+      "pos": "い-adjective",
+      "meaning": "new",
+      "exampleJp": "新しい 車を 買いました。",
+      "exampleEn": "I bought a new car."
+    },
+    {
+      "id": "n5-v-8-7",
+      "word": "高い",
+      "reading": "たかい",
+      "romaji": "takai",
+      "pos": "い-adjective",
+      "meaning": "expensive, tall, high",
+      "exampleJp": "日本の 食べ物は おいしいですが、高いです。",
+      "exampleEn": "Japanese food is good, but expensive."
+    },
+    {
+      "id": "n5-v-8-8",
+      "word": "難しい",
+      "reading": "むずかしい",
+      "romaji": "muzukashii",
+      "pos": "い-adjective",
+      "meaning": "difficult",
+      "exampleJp": "この 試験は 難しいです。",
+      "exampleEn": "This exam is difficult."
+    },
+    {
+      "id": "n5-v-8-9",
+      "word": "忙しい",
+      "reading": "いそがしい",
+      "romaji": "isogashii",
+      "pos": "い-adjective",
+      "meaning": "busy",
+      "exampleJp": "仕事は 忙しいですが、おもしろいです。",
+      "exampleEn": "Work is busy, but interesting."
+    },
+    {
+      "id": "n5-v-8-10",
+      "word": "おいしい",
+      "reading": "おいしい",
+      "romaji": "oishii",
+      "pos": "い-adjective",
+      "meaning": "delicious, tasty",
+      "exampleJp": "この 料理は おいしいです。",
+      "exampleEn": "This dish is delicious."
+    },
+    {
+      "id": "n5-v-8-11",
+      "word": "どんな〜",
+      "reading": "どんな〜",
+      "romaji": "donna~",
+      "pos": "interrogative",
+      "meaning": "what kind of 〜",
+      "exampleJp": "奈良は どんな 町ですか。",
+      "exampleEn": "What kind of town is Nara?"
+    },
+    {
+      "id": "n5-v-8-12",
+      "word": "どれ",
+      "reading": "どれ",
+      "romaji": "dore",
+      "pos": "pronoun",
+      "meaning": "which one (of three or more)",
+      "exampleJp": "ミラーさんの 傘は どれですか。",
+      "exampleEn": "Which is Mr. Miller's umbrella?"
+    }
+  ],
+  "9": [
+    {
+      "id": "n5-v-9-1",
+      "word": "わかります",
+      "reading": "わかります",
+      "romaji": "wakarimasu",
+      "pos": "verb",
+      "meaning": "understand",
+      "exampleJp": "日本語が わかります。",
+      "exampleEn": "I understand Japanese."
+    },
+    {
+      "id": "n5-v-9-2",
+      "word": "あります",
+      "reading": "あります",
+      "romaji": "arimasu",
+      "pos": "verb",
+      "meaning": "have",
+      "exampleJp": "車が あります。",
+      "exampleEn": "I have a car."
+    },
+    {
+      "id": "n5-v-9-3",
+      "word": "好き[な]",
+      "reading": "すき[な]",
+      "romaji": "suki[na]",
+      "pos": "な-adjective",
+      "meaning": "like",
+      "exampleJp": "イタリア料理が 好きです。",
+      "exampleEn": "I like Italian food."
+    },
+    {
+      "id": "n5-v-9-4",
+      "word": "嫌い[な]",
+      "reading": "きらい[な]",
+      "romaji": "kirai[na]",
+      "pos": "な-adjective",
+      "meaning": "dislike",
+      "exampleJp": "お酒が 嫌いです。",
+      "exampleEn": "I dislike alcohol."
+    },
+    {
+      "id": "n5-v-9-5",
+      "word": "上手[な]",
+      "reading": "じょうず[な]",
+      "romaji": "jouzu[na]",
+      "pos": "な-adjective",
+      "meaning": "good at",
+      "exampleJp": "カリナさんは 絵が 上手です。",
+      "exampleEn": "Ms. Karina is good at drawing pictures."
+    },
+    {
+      "id": "n5-v-9-6",
+      "word": "下手[な]",
+      "reading": "へた[な]",
+      "romaji": "heta[na]",
+      "pos": "な-adjective",
+      "meaning": "poor at",
+      "exampleJp": "わたしは 料理が 下手です。",
+      "exampleEn": "I'm poor at cooking."
+    },
+    {
+      "id": "n5-v-9-7",
+      "word": "料理",
+      "reading": "りょうり",
+      "romaji": "ryouri",
+      "pos": "noun",
+      "meaning": "dish (cooked food), cooking",
+      "exampleJp": "イタリア料理が 好きです。",
+      "exampleEn": "I like Italian food."
+    },
+    {
+      "id": "n5-v-9-8",
+      "word": "音楽",
+      "reading": "おんがく",
+      "romaji": "ongaku",
+      "pos": "noun",
+      "meaning": "music",
+      "exampleJp": "どんな 音楽が 好きですか。",
+      "exampleEn": "What kind of music do you like?"
+    },
+    {
+      "id": "n5-v-9-9",
+      "word": "時間",
+      "reading": "じかん",
+      "romaji": "jikan",
+      "pos": "noun",
+      "meaning": "time",
+      "exampleJp": "時間が ありませんから、新聞を 読みません。",
+      "exampleEn": "Because I don't have time, I don't read the newspaper."
+    },
+    {
+      "id": "n5-v-9-10",
+      "word": "約束",
+      "reading": "やくそく",
+      "romaji": "yakusoku",
+      "pos": "noun",
+      "meaning": "appointment, promise",
+      "exampleJp": "友達と 約束が あります。",
+      "exampleEn": "I have an appointment with a friend."
+    },
+    {
+      "id": "n5-v-9-11",
+      "word": "どうして",
+      "reading": "どうして",
+      "romaji": "doushite",
+      "pos": "interrogative",
+      "meaning": "why",
+      "exampleJp": "どうして 早く 帰りましたか。",
+      "exampleEn": "Why did you go home early?"
+    }
+  ],
+  "10": [
+    {
+      "id": "n5-v-10-1",
+      "word": "います",
+      "reading": "います",
+      "romaji": "imasu",
+      "pos": "verb",
+      "meaning": "exist, be (animate things)",
+      "exampleJp": "事務所に ミラーさんが います。",
+      "exampleEn": "Mr. Miller is in the office."
+    },
+    {
+      "id": "n5-v-10-2",
+      "word": "いろいろ[な]",
+      "reading": "いろいろ[な]",
+      "romaji": "iroiro[na]",
+      "pos": "な-adjective",
+      "meaning": "various",
+      "exampleJp": "箱の 中に いろいろな 物が あります。",
+      "exampleEn": "There are various things in the box."
+    },
+    {
+      "id": "n5-v-10-3",
+      "word": "男の人／女の人",
+      "reading": "おとこのひと／おんなのひと",
+      "romaji": "otoko no hito / onna no hito",
+      "pos": "noun",
+      "meaning": "man / woman",
+      "exampleJp": "あそこに 男の 人が います。",
+      "exampleEn": "There is a man over there."
+    },
+    {
+      "id": "n5-v-10-4",
+      "word": "犬／猫",
+      "reading": "いぬ／ねこ",
+      "romaji": "inu / neko",
+      "pos": "noun",
+      "meaning": "dog / cat",
+      "exampleJp": "庭に 犬が います。",
+      "exampleEn": "There is a dog in the garden."
+    },
+    {
+      "id": "n5-v-10-5",
+      "word": "木",
+      "reading": "き",
+      "romaji": "ki",
+      "pos": "noun",
+      "meaning": "tree, wood",
+      "exampleJp": "公園に 木が あります。",
+      "exampleEn": "There are trees in the park."
+    },
+    {
+      "id": "n5-v-10-6",
+      "word": "本屋",
+      "reading": "ほんや",
+      "romaji": "hon'ya",
+      "pos": "noun",
+      "meaning": "bookstore",
+      "exampleJp": "本屋は 駅の 隣に あります。",
+      "exampleEn": "The bookstore is next to the station."
+    },
+    {
+      "id": "n5-v-10-7",
+      "word": "上／下",
+      "reading": "うえ／した",
+      "romaji": "ue / shita",
+      "pos": "noun",
+      "meaning": "on, above / under, below",
+      "exampleJp": "机の 上に 写真が あります。",
+      "exampleEn": "There is a picture on the desk."
+    },
+    {
+      "id": "n5-v-10-8",
+      "word": "前／うしろ",
+      "reading": "まえ／うしろ",
+      "romaji": "mae / ushiro",
+      "pos": "noun",
+      "meaning": "front, before / back, behind",
+      "exampleJp": "銀行は 郵便局の 前に あります。",
+      "exampleEn": "The bank is in front of the post office."
+    },
+    {
+      "id": "n5-v-10-9",
+      "word": "隣",
+      "reading": "となり",
+      "romaji": "tonari",
+      "pos": "noun",
+      "meaning": "next, next door",
+      "exampleJp": "郵便局は 銀行の 隣に あります。",
+      "exampleEn": "The post office is next to the bank."
+    },
+    {
+      "id": "n5-v-10-10",
+      "word": "近く",
+      "reading": "ちかく",
+      "romaji": "chikaku",
+      "pos": "noun",
+      "meaning": "near, vicinity",
+      "exampleJp": "駅の 近くで 友達に 会いました。",
+      "exampleEn": "I met a friend near the station."
+    },
+    {
+      "id": "n5-v-10-11",
+      "word": "いちばん〜",
+      "reading": "いちばん〜",
+      "romaji": "ichiban~",
+      "pos": "adverb",
+      "meaning": "the most 〜",
+      "exampleJp": "いちばん 上に 何が ありますか。",
+      "exampleEn": "What is at the top?"
+    }
+  ],
+  "11": [
+    {
+      "id": "n5-v-11-1",
+      "word": "かかります",
+      "reading": "かかります",
+      "romaji": "kakarimasu",
+      "pos": "verb",
+      "meaning": "take (time or money)",
+      "exampleJp": "大阪から 東京まで 2時間半 かかります。",
+      "exampleEn": "It takes two and a half hours from Osaka to Tokyo."
+    },
+    {
+      "id": "n5-v-11-2",
+      "word": "休みます",
+      "reading": "やすみます",
+      "romaji": "yasumimasu",
+      "pos": "verb",
+      "meaning": "take a day off [work]",
+      "exampleJp": "あした 会社を 休みます。",
+      "exampleEn": "I'll take tomorrow off work."
+    },
+    {
+      "id": "n5-v-11-3",
+      "word": "いくつ",
+      "reading": "いくつ",
+      "romaji": "ikutsu",
+      "pos": "interrogative",
+      "meaning": "how many",
+      "exampleJp": "みかんを いくつ 買いましたか。",
+      "exampleEn": "How many mandarin oranges did you buy?"
+    },
+    {
+      "id": "n5-v-11-4",
+      "word": "どのくらい",
+      "reading": "どのくらい",
+      "romaji": "dono kurai",
+      "pos": "interrogative",
+      "meaning": "how long",
+      "exampleJp": "どのくらい 日本語を 勉強しましたか。",
+      "exampleEn": "How long did you study Japanese?"
+    },
+    {
+      "id": "n5-v-11-5",
+      "word": "〜ぐらい",
+      "reading": "〜ぐらい",
+      "romaji": "~gurai",
+      "pos": "particle",
+      "meaning": "about 〜",
+      "exampleJp": "学校に 先生が 30人ぐらい います。",
+      "exampleEn": "There are about thirty teachers in our school."
+    },
+    {
+      "id": "n5-v-11-6",
+      "word": "切手",
+      "reading": "きって",
+      "romaji": "kitte",
+      "pos": "noun",
+      "meaning": "postage stamp",
+      "exampleJp": "80円の 切手を 5枚 ください。",
+      "exampleEn": "Give me five 80-yen stamps, please."
+    },
+    {
+      "id": "n5-v-11-7",
+      "word": "兄弟",
+      "reading": "きょうだい",
+      "romaji": "kyoudai",
+      "pos": "noun",
+      "meaning": "brothers and sisters",
+      "exampleJp": "兄弟が 何人 いますか。",
+      "exampleEn": "How many brothers and sisters do you have?"
+    },
+    {
+      "id": "n5-v-11-8",
+      "word": "〜だけ",
+      "reading": "〜だけ",
+      "romaji": "~dake",
+      "pos": "particle",
+      "meaning": "only 〜",
+      "exampleJp": "休みは 日曜日だけです。",
+      "exampleEn": "I only have Sundays off."
+    },
+    {
+      "id": "n5-v-11-9",
+      "word": "全部で",
+      "reading": "ぜんぶで",
+      "romaji": "zenbu de",
+      "pos": "adverb",
+      "meaning": "in total",
+      "exampleJp": "全部で 500円です。",
+      "exampleEn": "That's 500 yen in all."
+    }
+  ],
+  "12": [
+    {
+      "id": "n5-v-12-1",
+      "word": "近い／遠い",
+      "reading": "ちかい／とおい",
+      "romaji": "chikai / tooi",
+      "pos": "い-adjective",
+      "meaning": "near / far",
+      "exampleJp": "駅は 近いですが、銀行は 遠いです。",
+      "exampleEn": "The station is near, but the bank is far."
+    },
+    {
+      "id": "n5-v-12-2",
+      "word": "多い／少ない",
+      "reading": "おおい／すくない",
+      "romaji": "ooi / sukunai",
+      "pos": "い-adjective",
+      "meaning": "many [people] / few [people]",
+      "exampleJp": "東京は 人が 多いです。",
+      "exampleEn": "There are many people in Tokyo."
+    },
+    {
+      "id": "n5-v-12-3",
+      "word": "暖かい／涼しい",
+      "reading": "あたたかい／すずしい",
+      "romaji": "atatakai / suzushii",
+      "pos": "い-adjective",
+      "meaning": "warm / cool",
+      "exampleJp": "北海道と 大阪と どちらが 涼しいですか。",
+      "exampleEn": "Which is cooler, Hokkaido or Osaka?"
+    },
+    {
+      "id": "n5-v-12-4",
+      "word": "重い／軽い",
+      "reading": "おもい／かるい",
+      "romaji": "omoi / karui",
+      "pos": "い-adjective",
+      "meaning": "heavy / light",
+      "exampleJp": "この 荷物は 重いです。",
+      "exampleEn": "This baggage is heavy."
+    },
+    {
+      "id": "n5-v-12-5",
+      "word": "季節",
+      "reading": "きせつ",
+      "romaji": "kisetsu",
+      "pos": "noun",
+      "meaning": "season",
+      "exampleJp": "1年で どの 季節が いちばん 好きですか。",
+      "exampleEn": "Which season do you like best of the year?"
+    },
+    {
+      "id": "n5-v-12-6",
+      "word": "天気",
+      "reading": "てんき",
+      "romaji": "tenki",
+      "pos": "noun",
+      "meaning": "weather",
+      "exampleJp": "きのうの 天気は どうでしたか。",
+      "exampleEn": "How was the weather yesterday?"
+    },
+    {
+      "id": "n5-v-12-7",
+      "word": "世界",
+      "reading": "せかい",
+      "romaji": "sekai",
+      "pos": "noun",
+      "meaning": "world",
+      "exampleJp": "世界で どこが いちばん よかったですか。",
+      "exampleEn": "In the world, where did you like best?"
+    },
+    {
+      "id": "n5-v-12-8",
+      "word": "[お]祭り",
+      "reading": "[お]まつり",
+      "romaji": "[o]matsuri",
+      "pos": "noun",
+      "meaning": "festival",
+      "exampleJp": "祇園祭は 京都で いちばん 有名な 祭りです。",
+      "exampleEn": "The Gion Festival is the most famous festival in Kyoto."
+    },
+    {
+      "id": "n5-v-12-9",
+      "word": "どちら",
+      "reading": "どちら",
+      "romaji": "dochira",
+      "pos": "interrogative",
+      "meaning": "which one (between two things)",
+      "exampleJp": "海と 山と どちらが 好きですか。",
+      "exampleEn": "Which do you prefer, the sea or the mountains?"
+    },
+    {
+      "id": "n5-v-12-10",
+      "word": "初めて",
+      "reading": "はじめて",
+      "romaji": "hajimete",
+      "pos": "adverb",
+      "meaning": "for the first time",
+      "exampleJp": "初めて 祇園祭を 見ました。",
+      "exampleEn": "I saw the Gion Festival for the first time."
+    }
+  ],
+  "13": [
+    {
+      "id": "n5-v-13-1",
+      "word": "遊びます",
+      "reading": "あそびます",
+      "romaji": "asobimasu",
+      "pos": "verb",
+      "meaning": "enjoy oneself, play",
+      "exampleJp": "公園で 遊びます。",
+      "exampleEn": "I play in the park."
+    },
+    {
+      "id": "n5-v-13-2",
+      "word": "疲れます",
+      "reading": "つかれます",
+      "romaji": "tsukaremasu",
+      "pos": "verb",
+      "meaning": "get tired",
+      "exampleJp": "今日は 疲れました。",
+      "exampleEn": "I got tired today."
+    },
+    {
+      "id": "n5-v-13-3",
+      "word": "入ります／出ます",
+      "reading": "はいります／でます",
+      "romaji": "hairimasu / demasu",
+      "pos": "verb",
+      "meaning": "enter / go out [of a coffee shop]",
+      "exampleJp": "あの 喫茶店に 入りましょう。",
+      "exampleEn": "Let's go in that coffee shop."
+    },
+    {
+      "id": "n5-v-13-4",
+      "word": "結婚します",
+      "reading": "けっこんします",
+      "romaji": "kekkon shimasu",
+      "pos": "verb",
+      "meaning": "marry, get married",
+      "exampleJp": "来年 結婚します。",
+      "exampleEn": "I'll get married next year."
+    },
+    {
+      "id": "n5-v-13-5",
+      "word": "散歩します",
+      "reading": "さんぽします",
+      "romaji": "sanpo shimasu",
+      "pos": "verb",
+      "meaning": "take a walk [in a park]",
+      "exampleJp": "公園を 散歩します。",
+      "exampleEn": "I take a walk in the park."
+    },
+    {
+      "id": "n5-v-13-6",
+      "word": "欲しい",
+      "reading": "ほしい",
+      "romaji": "hoshii",
+      "pos": "い-adjective",
+      "meaning": "want (something)",
+      "exampleJp": "今 何が いちばん 欲しいですか。",
+      "exampleEn": "What do you want most now?"
+    },
+    {
+      "id": "n5-v-13-7",
+      "word": "広い／狭い",
+      "reading": "ひろい／せまい",
+      "romaji": "hiroi / semai",
+      "pos": "い-adjective",
+      "meaning": "wide, spacious / narrow, small (room)",
+      "exampleJp": "わたしの 部屋は 狭いです。",
+      "exampleEn": "My room is small."
+    },
+    {
+      "id": "n5-v-13-8",
+      "word": "週末",
+      "reading": "しゅうまつ",
+      "romaji": "shuumatsu",
+      "pos": "noun",
+      "meaning": "weekend",
+      "exampleJp": "週末は 何を しますか。",
+      "exampleEn": "What will you do this weekend?"
+    },
+    {
+      "id": "n5-v-13-9",
+      "word": "おなかが すきました",
+      "reading": "おなかが すきました",
+      "romaji": "onaka ga sukimashita",
+      "pos": "expression",
+      "meaning": "(I'm) hungry",
+      "exampleJp": "おなかが すきましたね。",
+      "exampleEn": "I'm hungry, aren't you?"
+    },
+    {
+      "id": "n5-v-13-10",
+      "word": "のどが かわきました",
+      "reading": "のどが かわきました",
+      "romaji": "nodo ga kawakimashita",
+      "pos": "expression",
+      "meaning": "(I'm) thirsty",
+      "exampleJp": "のどが かわきましたから、何か 飲みたいです。",
+      "exampleEn": "I'm thirsty. I want to drink something."
+    }
+  ],
+  "14": [
+    {
+      "id": "n5-v-14-1",
+      "word": "つけます／消します",
+      "reading": "つけます／けします",
+      "romaji": "tsukemasu / keshimasu",
+      "pos": "verb",
+      "meaning": "turn on / turn off",
+      "exampleJp": "エアコンを つけて ください。",
+      "exampleEn": "Please turn on the air conditioner."
+    },
+    {
+      "id": "n5-v-14-2",
+      "word": "開けます／閉めます",
+      "reading": "あけます／しめます",
+      "romaji": "akemasu / shimemasu",
+      "pos": "verb",
+      "meaning": "open / close, shut",
+      "exampleJp": "窓を 開けましょうか。",
+      "exampleEn": "Shall I open the window?"
+    },
+    {
+      "id": "n5-v-14-3",
+      "word": "急ぎます",
+      "reading": "いそぎます",
+      "romaji": "isogimasu",
+      "pos": "verb",
+      "meaning": "hurry",
+      "exampleJp": "急いで ください。",
+      "exampleEn": "Please hurry."
+    },
+    {
+      "id": "n5-v-14-4",
+      "word": "待ちます",
+      "reading": "まちます",
+      "romaji": "machimasu",
+      "pos": "verb",
+      "meaning": "wait",
+      "exampleJp": "少々 お待ちください。",
+      "exampleEn": "Please wait a moment."
+    },
+    {
+      "id": "n5-v-14-5",
+      "word": "曲がります",
+      "reading": "まがります",
+      "romaji": "magarimasu",
+      "pos": "verb",
+      "meaning": "turn [to the right]",
+      "exampleJp": "信号を 右へ 曲がって ください。",
+      "exampleEn": "Turn to the right at the signal."
+    },
+    {
+      "id": "n5-v-14-6",
+      "word": "手伝います",
+      "reading": "てつだいます",
+      "romaji": "tetsudaimasu",
+      "pos": "verb",
+      "meaning": "help (with a task)",
+      "exampleJp": "仕事を 手伝って ください。",
+      "exampleEn": "Please help me with my work."
+    },
+    {
+      "id": "n5-v-14-7",
+      "word": "話します",
+      "reading": "はなします",
+      "romaji": "hanashimasu",
+      "pos": "verb",
+      "meaning": "speak, talk",
+      "exampleJp": "ミラーさんは 松本さんと 話して います。",
+      "exampleEn": "Mr. Miller is talking with Mr. Matsumoto."
+    },
+    {
+      "id": "n5-v-14-8",
+      "word": "見せます",
+      "reading": "みせます",
+      "romaji": "misemasu",
+      "pos": "verb",
+      "meaning": "show",
+      "exampleJp": "そのシャツを 見せて ください。",
+      "exampleEn": "Please show me that shirt."
+    },
+    {
+      "id": "n5-v-14-9",
+      "word": "住所",
+      "reading": "じゅうしょ",
+      "romaji": "juusho",
+      "pos": "noun",
+      "meaning": "address",
+      "exampleJp": "ここに 住所と 名前を 書いて ください。",
+      "exampleEn": "Please write your name and address here."
+    },
+    {
+      "id": "n5-v-14-10",
+      "word": "読み方",
+      "reading": "よみかた",
+      "romaji": "yomikata",
+      "pos": "noun",
+      "meaning": "how to read, way of reading",
+      "exampleJp": "この 漢字の 読み方を 教えて ください。",
+      "exampleEn": "Please tell me how to read this kanji."
+    },
+    {
+      "id": "n5-v-14-11",
+      "word": "ゆっくり",
+      "reading": "ゆっくり",
+      "romaji": "yukkuri",
+      "pos": "adverb",
+      "meaning": "slowly, leisurely",
+      "exampleJp": "もう 少し ゆっくり 話して ください。",
+      "exampleEn": "Please speak a little more slowly."
+    },
+    {
+      "id": "n5-v-14-12",
+      "word": "まっすぐ",
+      "reading": "まっすぐ",
+      "romaji": "massugu",
+      "pos": "adverb",
+      "meaning": "straight",
+      "exampleJp": "まっすぐ 行って ください。",
+      "exampleEn": "Please go straight."
+    }
+  ],
+  "15": [
+    {
+      "id": "n5-v-15-1",
+      "word": "使います",
+      "reading": "つかいます",
+      "romaji": "tsukaimasu",
+      "pos": "verb",
+      "meaning": "use",
+      "exampleJp": "辞書を 使っても いいですか。",
+      "exampleEn": "May I use the dictionary?"
+    },
+    {
+      "id": "n5-v-15-2",
+      "word": "作ります",
+      "reading": "つくります",
+      "romaji": "tsukurimasu",
+      "pos": "verb",
+      "meaning": "make, produce",
+      "exampleJp": "IMCは コンピューターソフトを 作って います。",
+      "exampleEn": "IMC makes computer software."
+    },
+    {
+      "id": "n5-v-15-3",
+      "word": "売ります",
+      "reading": "うります",
+      "romaji": "urimasu",
+      "pos": "verb",
+      "meaning": "sell",
+      "exampleJp": "スーパーで フィルムを 売って います。",
+      "exampleEn": "Supermarkets sell films."
+    },
+    {
+      "id": "n5-v-15-4",
+      "word": "知ります／知っています",
+      "reading": "しります／しって います",
+      "romaji": "shirimasu / shitte imasu",
+      "pos": "verb",
+      "meaning": "get to know / know",
+      "exampleJp": "田中さんを 知って いますか。…いいえ、知りません。",
+      "exampleEn": "Do you know Mr. Tanaka? …No, I don't."
+    },
+    {
+      "id": "n5-v-15-5",
+      "word": "住んでいます",
+      "reading": "すんで います",
+      "romaji": "sunde imasu",
+      "pos": "verb",
+      "meaning": "live [in Osaka]",
+      "exampleJp": "大阪に 住んで います。",
+      "exampleEn": "I live in Osaka."
+    },
+    {
+      "id": "n5-v-15-6",
+      "word": "研究します",
+      "reading": "けんきゅうします",
+      "romaji": "kenkyuu shimasu",
+      "pos": "verb",
+      "meaning": "do research",
+      "exampleJp": "大学で 経済を 研究して います。",
+      "exampleEn": "I do research on economics at university."
+    },
+    {
+      "id": "n5-v-15-7",
+      "word": "専門",
+      "reading": "せんもん",
+      "romaji": "senmon",
+      "pos": "noun",
+      "meaning": "speciality, field of study",
+      "exampleJp": "ご専門は 何ですか。…日本の 美術です。",
+      "exampleEn": "What is your speciality? …It's Japanese fine art."
+    },
+    {
+      "id": "n5-v-15-8",
+      "word": "独身",
+      "reading": "どくしん",
+      "romaji": "dokushin",
+      "pos": "noun",
+      "meaning": "single, unmarried",
+      "exampleJp": "ワンさんは 独身ですか。…いいえ、結婚して います。",
+      "exampleEn": "Is Mr. Wang single? …No, he is married."
+    },
+    {
+      "id": "n5-v-15-9",
+      "word": "特に",
+      "reading": "とくに",
+      "romaji": "tokuni",
+      "pos": "adverb",
+      "meaning": "especially",
+      "exampleJp": "お父さんが 特に よかったですね。",
+      "exampleEn": "The father was particularly good, wasn't he?"
+    }
+  ]
+}
