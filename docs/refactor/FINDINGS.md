@@ -7,6 +7,8 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
 
 ## Open
 
+### Content (need real data, not code changes)
+
 - `src/data/n3/kanji.json` — `strokes: 0` and empty `radical` throughout the file;
   needs a real kanji data source, not a code fix.
 - `src/data/n3/kanji.json` — 迷 has `"meaning": "I lost my way."`, its example sentence
@@ -18,6 +20,31 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   validator). No runtime risk today — `KanjiSection.tsx` never renders
   `compound.reading`, and `compound.meaning` renders as nothing when `null` — but
   needs real content to fill in. Full list in the auto-generated section below.
+
+### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
+
+Found reviewing the merged Phase 0–2 work, 2026-08-25.
+
+- `features/{grammar,vocab,kanji}/use*.ts` + `features/reading/useReadingData.ts` — the
+  `listLessons` / `Promise.all` calls have no `.catch`. A failed chunk leaves the sidebar
+  permanently empty and logs an unhandled rejection, while the main area *does* show an
+  error via `useContentQuery`. Half-visible failure.
+- Same four files — `lessons` / `data` state is not reset when `activeLevel` changes, so
+  a first (uncached) level switch briefly renders the previous level's lesson list and a
+  wrong range in the header, e.g. `N4 Lessons (1–25)`. `useContentQuery` already solves
+  this with key-comparison; the pattern was not applied to the sibling effects.
+- `types/japanese.ts` — `KanjiCompound.reading` / `.meaning` are typed `string`, but 150
+  entries are `null` at runtime and the zod schema in `validate-content.ts` already models
+  them as nullable. No crash today (React renders `null` as nothing) but it is one
+  `.toLowerCase()` away from one — and `StaticContentSource.search()` already lowercases
+  string values.
+- `services/content/StaticContentSource.ts` — `getContentSource()` is exported and never
+  called. `contentRepository.search()` is called only from its own test; it should be kept
+  for Phase 6 (decks are queries over `ContentSource`) but needs a comment saying so.
+- `services/content/ContentSource.ts` — doc comment claims `getItem` never rejects; it
+  awaits `loadChunk`, which rejects on a missing or failed chunk.
+- `AGENTS.md` — layout map has no `services/content/` entry, and the adapter convention
+  still points only at `services/ai/readingStorage.ts`.
 
 ## Resolved
 

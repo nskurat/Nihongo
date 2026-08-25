@@ -1,9 +1,9 @@
 # Phase 3 — Test harness and characterization tests
 
-There is currently no way to render a component in a test. Phase 4 splits a 1,061-line
+There is currently no way to render a component in a test. Phase 4 splits a 1,066-line
 component into five; without this phase, nothing proves behaviour survived.
 
-**Branch:** `refactor/phase-3-test-harness` · **Prereq:** Phase 2 merged
+**Branch:** `refactor/phase-3-test-harness` · **Prereq:** Phase 2b merged
 
 ## Task 1 — Two test projects
 
@@ -12,9 +12,12 @@ component into five; without this phase, nothing proves behaviour survived.
 - Convert to Vitest projects: `node` (existing `services/**` and `utils/**` tests, stays
   fast and dependency-free) and `jsdom` (component tests under `features/**` and
   `components/**`).
-- Add `@testing-library/react`, `@testing-library/jest-dom`, `jsdom`.
+- Add `@testing-library/react`, `@testing-library/jest-dom`, `jsdom`, and
+  `@vitest/coverage-v8` (the Acceptance section below requires a coverage number and
+  Vitest cannot produce one without a provider installed).
 - Add a setup file registering jest-dom matchers and clearing `localStorage` between tests.
-- `npm test` runs both; `npm run test:node` runs only the fast project.
+- `npm test` runs both; `npm run test:node` runs only the fast project;
+  `npm run test:coverage` reports coverage.
 
 ## Task 2 — Test doubles, not network
 

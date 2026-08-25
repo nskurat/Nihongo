@@ -7,10 +7,11 @@
 
 ## Intent
 
-Three sections duplicate the lesson sidebar, search banner, count badge and empty state,
-differing only by icon and an accent colour spelled out in literal Tailwind classes.
-`ReadingSection.tsx` is 1,061 lines with 15 `useState` hooks and renders its question list
-twice — inline and in the modal — with duplicated answer state.
+Three sections duplicate the lesson sidebar, search banner, count badge and — since
+Phase 2 — the loading skeleton and error/retry panel too, differing only by icon and an
+accent colour spelled out in literal Tailwind classes. `ReadingSection.tsx` is 1,066
+lines with ~20 `useState` hooks and renders its question list twice — inline and in the
+modal — with duplicated answer state.
 
 ## Scope sketch
 
