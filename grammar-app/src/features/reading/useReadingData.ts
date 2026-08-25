@@ -1,33 +1,51 @@
+import { useEffect, useState } from 'react';
 import { LevelType, GrammarItem, VocabItem } from '../../types/japanese';
+import { StudyItem } from '../../types/content';
+import { contentRepository } from '../../services/content/StaticContentSource';
 
-import grammarN3 from '../../data/n3/grammar.json';
-import grammarN4 from '../../data/n4/grammar.json';
-import grammarN5 from '../../data/n5/grammar.json';
-import vocabN3 from '../../data/n3/vocab.json';
-import vocabN4 from '../../data/n4/vocab.json';
-import vocabN5 from '../../data/n5/vocab.json';
+interface ReadingContentData {
+  grammarData: Record<number, GrammarItem[]>;
+  vocabData: Record<number, VocabItem[]>;
+}
 
-const grammarByLevel: Record<LevelType, Record<number, GrammarItem[]>> = {
-  N5: grammarN5 as unknown as Record<number, GrammarItem[]>,
-  N4: grammarN4 as unknown as Record<number, GrammarItem[]>,
-  N3: grammarN3 as unknown as Record<number, GrammarItem[]>,
-};
+const EMPTY: ReadingContentData = { grammarData: {}, vocabData: {} };
 
-const vocabByLevel: Record<LevelType, Record<number, VocabItem[]>> = {
-  N5: vocabN5 as unknown as Record<number, VocabItem[]>,
-  N4: vocabN4 as unknown as Record<number, VocabItem[]>,
-  N3: vocabN3 as unknown as Record<number, VocabItem[]>,
-};
+async function loadLevelData<T extends StudyItem>(
+  level: LevelType,
+  section: 'grammar' | 'vocab'
+): Promise<Record<number, T[]>> {
+  const lessons = await contentRepository.listLessons(level, section);
+  const entries = await Promise.all(
+    lessons.map(async ({ lesson }) => [lesson, await contentRepository.getItems<T>(level, section, lesson)] as const)
+  );
+  return Object.fromEntries(entries);
+}
 
 /**
  * Lesson-keyed grammar and vocab data for the given level, so Reading Studio
  * can target its AI-generated passages at real lesson content instead of
- * falling back to generic practice. Superseded by the shared content
- * repository in Phase 2.
+ * falling back to generic practice. Loaded through the content repository
+ * (one lazy chunk per level+section, shared with useGrammar/useVocab's cache)
+ * rather than a static per-level import, and only while Reading Studio is
+ * actually mounted.
  */
-export function useReadingData(level: LevelType) {
-  return {
-    grammarData: grammarByLevel[level] || {},
-    vocabData: vocabByLevel[level] || {},
-  };
+export function useReadingData(level: LevelType): ReadingContentData {
+  const [data, setData] = useState<ReadingContentData>(EMPTY);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    Promise.all([
+      loadLevelData<GrammarItem>(level, 'grammar'),
+      loadLevelData<VocabItem>(level, 'vocab'),
+    ]).then(([grammarData, vocabData]) => {
+      if (!cancelled) setData({ grammarData, vocabData });
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [level]);
+
+  return data;
 }

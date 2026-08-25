@@ -29,7 +29,7 @@ import FuriganaText from '../../components/common/FuriganaText';
 import { generateReadingPractice, getActiveProviderId, getProvider } from '../../services/ai/registry';
 import { readingRepository } from '../../services/ai/readingStorage';
 import { stripFurigana } from '../../services/ai/readingParser';
-import { GrammarItem, VocabItem, LevelType } from '../../types/japanese';
+import { LevelType } from '../../types/japanese';
 import {
   ReadingPracticeData,
   ReadingHistoryEntry,
@@ -38,6 +38,7 @@ import {
   ReadingGrammarNote,
 } from '../../types/ai';
 import { useAiUiStore } from '../../store/useAiStore';
+import { useReadingData } from './useReadingData';
 
 const PRESET_TOPICS = [
   { id: 'daily', label: '☕ Daily Life & Routine', value: 'Daily Life, Morning Routine, and Hobbies in Japan' },
@@ -50,16 +51,11 @@ const PRESET_TOPICS = [
 
 interface ReadingSectionProps {
   activeLevel?: LevelType;
-  grammarData?: Record<number, GrammarItem[]>;
-  vocabData?: Record<number, VocabItem[]>;
 }
 
-export default function ReadingSection({
-  activeLevel = 'N4',
-  grammarData = {},
-  vocabData = {},
-}: ReadingSectionProps) {
+export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionProps) {
   const { setShowKeyModal } = useAiUiStore();
+  const { grammarData, vocabData } = useReadingData(activeLevel);
   // Navigation tabs inside reading section: 'studio' | 'library'
   const [activeTab, setActiveTab] = useState<'studio' | 'library'>('studio');
 

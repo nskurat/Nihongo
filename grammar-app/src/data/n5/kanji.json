@@ -5,7 +5,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-1",
       "kanji": "日",
       "onyomi": [
         "ニチ",
@@ -67,7 +66,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-2",
       "kanji": "月",
       "onyomi": [
         "ゲツ",
@@ -128,7 +126,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-3",
       "kanji": "火",
       "onyomi": [
         "カ"
@@ -164,7 +161,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-4",
       "kanji": "水",
       "onyomi": [
         "スイ"
@@ -199,7 +195,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-5",
       "kanji": "木",
       "onyomi": [
         "モク",
@@ -231,7 +226,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-6",
       "kanji": "金",
       "onyomi": [
         "キン",
@@ -268,7 +262,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-7",
       "kanji": "土",
       "onyomi": [
         "ド",
@@ -304,7 +297,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-8",
       "kanji": "山",
       "onyomi": [
         "サン"
@@ -339,7 +331,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-9",
       "kanji": "川",
       "onyomi": [
         "セン"
@@ -374,7 +365,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 1,
-      "id": "1-k-10",
       "kanji": "田",
       "onyomi": [
         "デン"
@@ -411,7 +401,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-1",
       "kanji": "一",
       "onyomi": [
         "イチ",
@@ -467,7 +456,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-2",
       "kanji": "二",
       "onyomi": [
         "ニ"
@@ -512,7 +500,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-3",
       "kanji": "三",
       "onyomi": [
         "サン"
@@ -547,7 +534,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-4",
       "kanji": "四",
       "onyomi": [
         "シ"
@@ -583,7 +569,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-5",
       "kanji": "五",
       "onyomi": [
         "ゴ"
@@ -618,7 +603,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-6",
       "kanji": "六",
       "onyomi": [
         "ロク"
@@ -654,7 +638,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-7",
       "kanji": "七",
       "onyomi": [
         "シチ"
@@ -690,7 +673,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-8",
       "kanji": "八",
       "onyomi": [
         "ハチ"
@@ -726,7 +708,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-9",
       "kanji": "九",
       "onyomi": [
         "キュウ",
@@ -762,7 +743,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-10",
       "kanji": "十",
       "onyomi": [
         "ジュウ"
@@ -803,7 +783,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-11",
       "kanji": "百",
       "onyomi": [
         "ヒャク"
@@ -836,7 +815,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-12",
       "kanji": "千",
       "onyomi": [
         "セン"
@@ -871,7 +849,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-13",
       "kanji": "万",
       "onyomi": [
         "マン",
@@ -905,7 +882,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 2,
-      "id": "2-k-14",
       "kanji": "円",
       "onyomi": [
         "エン"
@@ -942,7 +918,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-1",
       "kanji": "学",
       "onyomi": [
         "ガク"
@@ -992,7 +967,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-2",
       "kanji": "生",
       "onyomi": [
         "セイ",
@@ -1041,7 +1015,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-3",
       "kanji": "先",
       "onyomi": [
         "セン"
@@ -1076,7 +1049,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-4",
       "kanji": "会",
       "onyomi": [
         "カイ",
@@ -1112,7 +1084,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-5",
       "kanji": "社",
       "onyomi": [
         "シャ"
@@ -1142,7 +1113,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-6",
       "kanji": "員",
       "onyomi": [
         "イン"
@@ -1170,7 +1140,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-7",
       "kanji": "医",
       "onyomi": [
         "イ"
@@ -1193,7 +1162,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-8",
       "kanji": "者",
       "onyomi": [
         "シャ"
@@ -1218,7 +1186,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-9",
       "kanji": "本",
       "onyomi": [
         "ホン"
@@ -1248,7 +1215,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-10",
       "kanji": "中",
       "onyomi": [
         "チュウ"
@@ -1308,7 +1274,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-11",
       "kanji": "国",
       "onyomi": [
         "コク"
@@ -1343,7 +1308,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-12",
       "kanji": "人",
       "onyomi": [
         "ジン",
@@ -1414,7 +1378,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-13",
       "kanji": "今",
       "onyomi": [
         "コン",
@@ -1460,7 +1423,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-14",
       "kanji": "朝",
       "onyomi": [
         "チョウ"
@@ -1500,7 +1462,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-15",
       "kanji": "昼",
       "onyomi": [
         "チュウ"
@@ -1535,7 +1496,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 3,
-      "id": "3-k-16",
       "kanji": "晩",
       "onyomi": [
         "バン"
@@ -1575,7 +1535,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-1",
       "kanji": "時",
       "onyomi": [
         "ジ"
@@ -1625,7 +1584,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-2",
       "kanji": "分",
       "onyomi": [
         "フン",
@@ -1662,7 +1620,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-3",
       "kanji": "半",
       "onyomi": [
         "ハン"
@@ -1697,7 +1654,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-4",
       "kanji": "午",
       "onyomi": [
         "ゴ"
@@ -1725,7 +1681,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-5",
       "kanji": "前",
       "onyomi": [
         "ゼン"
@@ -1765,7 +1720,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-6",
       "kanji": "後",
       "onyomi": [
         "ゴ",
@@ -1797,7 +1751,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-7",
       "kanji": "休",
       "onyomi": [
         "キュウ"
@@ -1847,7 +1800,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-8",
       "kanji": "毎",
       "onyomi": [
         "マイ"
@@ -1895,7 +1847,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-9",
       "kanji": "何",
       "onyomi": [
         "カ"
@@ -1926,7 +1877,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-10",
       "kanji": "行",
       "onyomi": [
         "コウ",
@@ -1973,7 +1923,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-11",
       "kanji": "来",
       "onyomi": [
         "ライ"
@@ -2014,7 +1963,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 4,
-      "id": "4-k-12",
       "kanji": "校",
       "onyomi": [
         "コウ"
@@ -2059,7 +2007,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-1",
       "kanji": "週",
       "onyomi": [
         "シュウ"
@@ -2102,7 +2049,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-2",
       "kanji": "去",
       "onyomi": [
         "キョ",
@@ -2128,7 +2074,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-3",
       "kanji": "年",
       "onyomi": [
         "ネン"
@@ -2178,7 +2123,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-4",
       "kanji": "駅",
       "onyomi": [
         "エキ"
@@ -2211,7 +2155,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-5",
       "kanji": "電",
       "onyomi": [
         "デン"
@@ -2249,7 +2192,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-6",
       "kanji": "車",
       "onyomi": [
         "シャ"
@@ -2289,7 +2231,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-7",
       "kanji": "自",
       "onyomi": [
         "ジ",
@@ -2325,7 +2266,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-8",
       "kanji": "転",
       "onyomi": [
         "テン"
@@ -2360,7 +2300,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 5,
-      "id": "5-k-9",
       "kanji": "動",
       "onyomi": [
         "ドウ"
@@ -2397,7 +2336,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-1",
       "kanji": "高",
       "onyomi": [
         "コウ"
@@ -2440,7 +2378,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-2",
       "kanji": "安",
       "onyomi": [
         "アン"
@@ -2470,7 +2407,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-3",
       "kanji": "大",
       "onyomi": [
         "ダイ",
@@ -2532,7 +2468,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-4",
       "kanji": "小",
       "onyomi": [
         "ショウ"
@@ -2569,7 +2504,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-5",
       "kanji": "新",
       "onyomi": [
         "シン"
@@ -2601,7 +2535,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-6",
       "kanji": "古",
       "onyomi": [
         "コ"
@@ -2632,7 +2565,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-7",
       "kanji": "青",
       "onyomi": [
         "セイ",
@@ -2664,7 +2596,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-8",
       "kanji": "白",
       "onyomi": [
         "ハク",
@@ -2697,7 +2628,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-9",
       "kanji": "赤",
       "onyomi": [
         "セキ",
@@ -2731,7 +2661,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 6,
-      "id": "6-k-10",
       "kanji": "黒",
       "onyomi": [
         "コク"
@@ -2764,7 +2693,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-1",
       "kanji": "上",
       "onyomi": [
         "ジョウ",
@@ -2805,7 +2733,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-2",
       "kanji": "下",
       "onyomi": [
         "カ",
@@ -2862,7 +2789,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-3",
       "kanji": "父",
       "onyomi": [
         "フ"
@@ -2892,7 +2818,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-4",
       "kanji": "母",
       "onyomi": [
         "ボ"
@@ -2922,7 +2847,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-5",
       "kanji": "子",
       "onyomi": [
         "シ",
@@ -2958,7 +2882,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-6",
       "kanji": "手",
       "onyomi": [
         "シュ"
@@ -3014,7 +2937,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-7",
       "kanji": "好",
       "onyomi": [
         "コウ"
@@ -3045,7 +2967,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-8",
       "kanji": "主",
       "onyomi": [
         "シュ",
@@ -3077,7 +2998,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-9",
       "kanji": "肉",
       "onyomi": [
         "ニク"
@@ -3100,7 +3020,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-10",
       "kanji": "魚",
       "onyomi": [
         "ギョ"
@@ -3126,7 +3045,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-11",
       "kanji": "食",
       "onyomi": [
         "ショク",
@@ -3169,7 +3087,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-12",
       "kanji": "飲",
       "onyomi": [
         "イン"
@@ -3199,7 +3116,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 7,
-      "id": "7-k-13",
       "kanji": "物",
       "onyomi": [
         "ブツ",
@@ -3262,7 +3178,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-1",
       "kanji": "近",
       "onyomi": [
         "キン"
@@ -3302,7 +3217,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-2",
       "kanji": "間",
       "onyomi": [
         "カン",
@@ -3349,7 +3263,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-3",
       "kanji": "右",
       "onyomi": [
         "ウ",
@@ -3385,7 +3298,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-4",
       "kanji": "左",
       "onyomi": [
         "サ"
@@ -3420,7 +3332,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-5",
       "kanji": "外",
       "onyomi": [
         "ガイ",
@@ -3469,7 +3380,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-6",
       "kanji": "男",
       "onyomi": [
         "ダン",
@@ -3500,7 +3410,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-7",
       "kanji": "女",
       "onyomi": [
         "ジョ",
@@ -3533,7 +3442,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 8,
-      "id": "8-k-8",
       "kanji": "犬",
       "onyomi": [
         "ケン"
@@ -3560,7 +3468,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-1",
       "kanji": "書",
       "onyomi": [
         "ショ"
@@ -3595,7 +3502,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-2",
       "kanji": "聞",
       "onyomi": [
         "ブン",
@@ -3632,7 +3538,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-3",
       "kanji": "読",
       "onyomi": [
         "ドク",
@@ -3664,7 +3569,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-4",
       "kanji": "見",
       "onyomi": [
         "ケン"
@@ -3706,7 +3610,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-5",
       "kanji": "話",
       "onyomi": [
         "ワ"
@@ -3757,7 +3660,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-6",
       "kanji": "買",
       "onyomi": [
         "バイ"
@@ -3792,7 +3694,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-7",
       "kanji": "起",
       "onyomi": [
         "キ"
@@ -3819,7 +3720,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-8",
       "kanji": "帰",
       "onyomi": [
         "キ"
@@ -3850,7 +3750,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-9",
       "kanji": "友",
       "onyomi": [
         "ユウ"
@@ -3875,7 +3774,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 9,
-      "id": "9-k-10",
       "kanji": "達",
       "onyomi": [
         "タツ"
@@ -3900,7 +3798,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-1",
       "kanji": "茶",
       "onyomi": [
         "チャ",
@@ -3934,7 +3831,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-2",
       "kanji": "酒",
       "onyomi": [
         "シュ"
@@ -3960,7 +3856,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-3",
       "kanji": "写",
       "onyomi": [
         "シャ"
@@ -3986,7 +3881,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-4",
       "kanji": "真",
       "onyomi": [
         "シン"
@@ -4011,7 +3905,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-5",
       "kanji": "紙",
       "onyomi": [
         "シ"
@@ -4041,7 +3934,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-6",
       "kanji": "映",
       "onyomi": [
         "エイ"
@@ -4073,7 +3965,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-7",
       "kanji": "画",
       "onyomi": [
         "ガ",
@@ -4107,7 +3998,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-8",
       "kanji": "店",
       "onyomi": [
         "テン"
@@ -4142,7 +4032,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-9",
       "kanji": "英",
       "onyomi": [
         "エイ"
@@ -4165,7 +4054,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-10",
       "kanji": "語",
       "onyomi": [
         "ゴ"
@@ -4216,7 +4104,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 10,
-      "id": "10-k-11",
       "kanji": "送",
       "onyomi": [
         "ソウ"
@@ -4243,7 +4130,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 11,
-      "id": "11-k-1",
       "kanji": "切",
       "onyomi": [
         "セツ",
@@ -4284,7 +4170,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 11,
-      "id": "11-k-2",
       "kanji": "貸",
       "onyomi": [
         "タイ"
@@ -4309,7 +4194,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 11,
-      "id": "11-k-3",
       "kanji": "借",
       "onyomi": [
         "シャク"
@@ -4334,7 +4218,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 11,
-      "id": "11-k-4",
       "kanji": "旅",
       "onyomi": [
         "リョ"
@@ -4371,7 +4254,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 12,
-      "id": "12-k-1",
       "kanji": "雨",
       "onyomi": [
         "ウ"
@@ -4402,7 +4284,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 12,
-      "id": "12-k-2",
       "kanji": "花",
       "onyomi": [
         "カ"
@@ -4437,7 +4318,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 12,
-      "id": "12-k-3",
       "kanji": "勉",
       "onyomi": [
         "ベン"
@@ -4465,7 +4345,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 12,
-      "id": "12-k-4",
       "kanji": "強",
       "onyomi": [
         "キョウ",
@@ -4506,7 +4385,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 13,
-      "id": "13-k-1",
       "kanji": "入",
       "onyomi": [
         "ニュウ"
@@ -4543,7 +4421,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 13,
-      "id": "13-k-2",
       "kanji": "出",
       "onyomi": [
         "シュツ",
@@ -4585,7 +4462,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 13,
-      "id": "13-k-3",
       "kanji": "歩",
       "onyomi": [
         "ホ",
@@ -4625,7 +4501,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 14,
-      "id": "14-k-1",
       "kanji": "待",
       "onyomi": [
         "タイ"
@@ -4650,7 +4525,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 14,
-      "id": "14-k-2",
       "kanji": "教",
       "onyomi": [
         "キョウ"
@@ -4706,7 +4580,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 14,
-      "id": "14-k-3",
       "kanji": "止",
       "onyomi": [
         "シ"
@@ -4737,7 +4610,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 14,
-      "id": "14-k-4",
       "kanji": "習",
       "onyomi": [
         "シュウ"
@@ -4764,7 +4636,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 15,
-      "id": "15-k-1",
       "kanji": "使",
       "onyomi": [
         "シ"
@@ -4799,7 +4670,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 15,
-      "id": "15-k-2",
       "kanji": "作",
       "onyomi": [
         "サク",
@@ -4830,7 +4700,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 15,
-      "id": "15-k-3",
       "kanji": "立",
       "onyomi": [
         "リツ",
@@ -4877,7 +4746,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 15,
-      "id": "15-k-4",
       "kanji": "売",
       "onyomi": [
         "バイ"
@@ -4910,7 +4778,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-1",
       "kanji": "明",
       "onyomi": [
         "メイ",
@@ -4941,7 +4808,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-2",
       "kanji": "暗",
       "onyomi": [
         "アン"
@@ -4966,7 +4832,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-3",
       "kanji": "長",
       "onyomi": [
         "チョウ"
@@ -5016,7 +4881,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-4",
       "kanji": "短",
       "onyomi": [
         "タン"
@@ -5041,7 +4905,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-5",
       "kanji": "目",
       "onyomi": [
         "モク",
@@ -5068,7 +4931,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 16,
-      "id": "16-k-6",
       "kanji": "足",
       "onyomi": [
         "ソク"
@@ -5113,7 +4975,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-1",
       "kanji": "広",
       "onyomi": [
         "コウ"
@@ -5142,7 +5003,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-2",
       "kanji": "多",
       "onyomi": [
         "タ"
@@ -5167,7 +5027,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-3",
       "kanji": "少",
       "onyomi": [
         "ショウ"
@@ -5198,7 +5057,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-4",
       "kanji": "悪",
       "onyomi": [
         "アク",
@@ -5224,7 +5082,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-5",
       "kanji": "重",
       "onyomi": [
         "ジュウ",
@@ -5252,7 +5109,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-6",
       "kanji": "軽",
       "onyomi": [
         "ケイ"
@@ -5278,7 +5134,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 17,
-      "id": "17-k-7",
       "kanji": "早",
       "onyomi": [
         "ソウ",
@@ -5313,7 +5168,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-1",
       "kanji": "便",
       "onyomi": [
         "ベン",
@@ -5344,7 +5198,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-2",
       "kanji": "利",
       "onyomi": [
         "リ"
@@ -5369,7 +5222,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-3",
       "kanji": "元",
       "onyomi": [
         "ゲン",
@@ -5395,7 +5247,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-4",
       "kanji": "気",
       "onyomi": [
         "キ",
@@ -5439,7 +5290,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-5",
       "kanji": "親",
       "onyomi": [
         "シン"
@@ -5476,7 +5326,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-6",
       "kanji": "有",
       "onyomi": [
         "ユウ",
@@ -5502,7 +5351,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 18,
-      "id": "18-k-7",
       "kanji": "名",
       "onyomi": [
         "メイ",
@@ -5535,7 +5383,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-1",
       "kanji": "地",
       "onyomi": [
         "チ",
@@ -5584,7 +5431,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-2",
       "kanji": "鉄",
       "onyomi": [
         "テツ"
@@ -5612,7 +5458,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-3",
       "kanji": "仕",
       "onyomi": [
         "シ",
@@ -5638,7 +5483,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-4",
       "kanji": "事",
       "onyomi": [
         "ジ",
@@ -5679,7 +5523,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-5",
       "kanji": "東",
       "onyomi": [
         "トウ"
@@ -5729,7 +5572,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-6",
       "kanji": "西",
       "onyomi": [
         "セイ",
@@ -5760,7 +5602,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 19,
-      "id": "19-k-7",
       "kanji": "南",
       "onyomi": [
         "ナン",
@@ -5798,7 +5639,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-1",
       "kanji": "北",
       "onyomi": [
         "ホク"
@@ -5838,7 +5678,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-2",
       "kanji": "京",
       "onyomi": [
         "キョウ",
@@ -5867,7 +5706,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-3",
       "kanji": "夜",
       "onyomi": [
         "ヤ"
@@ -5893,7 +5731,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-4",
       "kanji": "料",
       "onyomi": [
         "リョウ"
@@ -5916,7 +5753,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-5",
       "kanji": "理",
       "onyomi": [
         "リ"
@@ -5939,7 +5775,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-6",
       "kanji": "口",
       "onyomi": [
         "コウ",
@@ -5975,7 +5810,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 20,
-      "id": "20-k-7",
       "kanji": "曜",
       "onyomi": [
         "ヨウ"
@@ -6000,7 +5834,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-1",
       "kanji": "降",
       "onyomi": [
         "コウ"
@@ -6037,7 +5870,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-2",
       "kanji": "思",
       "onyomi": [
         "シ"
@@ -6062,7 +5894,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-3",
       "kanji": "寝",
       "onyomi": [
         "シン"
@@ -6088,7 +5919,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-4",
       "kanji": "終",
       "onyomi": [
         "シュウ"
@@ -6114,7 +5944,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-5",
       "kanji": "言",
       "onyomi": [
         "ゲン",
@@ -6141,7 +5970,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-6",
       "kanji": "知",
       "onyomi": [
         "チ"
@@ -6171,7 +5999,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-7",
       "kanji": "同",
       "onyomi": [
         "ドウ"
@@ -6196,7 +6023,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-8",
       "kanji": "漢",
       "onyomi": [
         "カン"
@@ -6219,7 +6045,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-9",
       "kanji": "字",
       "onyomi": [
         "ジ"
@@ -6254,7 +6079,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 21,
-      "id": "21-k-10",
       "kanji": "方",
       "onyomi": [
         "ホウ"
@@ -6311,7 +6135,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-1",
       "kanji": "図",
       "onyomi": [
         "ズ",
@@ -6342,7 +6165,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-2",
       "kanji": "館",
       "onyomi": [
         "カン"
@@ -6380,7 +6202,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-3",
       "kanji": "銀",
       "onyomi": [
         "ギン"
@@ -6413,7 +6234,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-4",
       "kanji": "町",
       "onyomi": [
         "チョウ"
@@ -6438,7 +6258,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-5",
       "kanji": "住",
       "onyomi": [
         "ジュウ"
@@ -6464,7 +6283,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-6",
       "kanji": "度",
       "onyomi": [
         "ド",
@@ -6506,7 +6324,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-7",
       "kanji": "服",
       "onyomi": [
         "フク"
@@ -6529,7 +6346,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-8",
       "kanji": "着",
       "onyomi": [
         "チャク",
@@ -6583,7 +6399,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-9",
       "kanji": "音",
       "onyomi": [
         "オン",
@@ -6615,7 +6430,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-10",
       "kanji": "楽",
       "onyomi": [
         "ガク",
@@ -6652,7 +6466,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 22,
-      "id": "22-k-11",
       "kanji": "持",
       "onyomi": [
         "ジ"
@@ -6684,7 +6497,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-1",
       "kanji": "春",
       "onyomi": [
         "シュン"
@@ -6714,7 +6526,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-2",
       "kanji": "夏",
       "onyomi": [
         "カ",
@@ -6745,7 +6556,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-3",
       "kanji": "秋",
       "onyomi": [
         "シュウ"
@@ -6770,7 +6580,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-4",
       "kanji": "冬",
       "onyomi": [
         "トウ"
@@ -6800,7 +6609,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-5",
       "kanji": "道",
       "onyomi": [
         "ドウ",
@@ -6846,7 +6654,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-6",
       "kanji": "堂",
       "onyomi": [
         "ドウ"
@@ -6869,7 +6676,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-7",
       "kanji": "建",
       "onyomi": [
         "ケン",
@@ -6896,7 +6702,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-8",
       "kanji": "病",
       "onyomi": [
         "ビョウ",
@@ -6938,7 +6743,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-9",
       "kanji": "院",
       "onyomi": [
         "イン"
@@ -6961,7 +6765,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-10",
       "kanji": "体",
       "onyomi": [
         "タイ",
@@ -6987,7 +6790,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-11",
       "kanji": "運",
       "onyomi": [
         "ウン"
@@ -7022,7 +6824,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 23,
-      "id": "23-k-12",
       "kanji": "乗",
       "onyomi": [
         "ジョウ"
@@ -7050,7 +6851,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-1",
       "kanji": "家",
       "onyomi": [
         "カ",
@@ -7097,7 +6897,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-2",
       "kanji": "内",
       "onyomi": [
         "ナイ",
@@ -7128,7 +6927,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-3",
       "kanji": "族",
       "onyomi": [
         "ゾク"
@@ -7151,7 +6949,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-4",
       "kanji": "兄",
       "onyomi": [
         "ケイ",
@@ -7187,7 +6984,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-5",
       "kanji": "弟",
       "onyomi": [
         "テイ",
@@ -7224,7 +7020,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-6",
       "kanji": "奥",
       "onyomi": [
         "オウ"
@@ -7254,7 +7049,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-7",
       "kanji": "姉",
       "onyomi": [
         "シ"
@@ -7284,7 +7078,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-8",
       "kanji": "妹",
       "onyomi": [
         "マイ"
@@ -7314,7 +7107,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-9",
       "kanji": "海",
       "onyomi": [
         "カイ"
@@ -7344,7 +7136,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 24,
-      "id": "24-k-10",
       "kanji": "計",
       "onyomi": [
         "ケイ"
@@ -7377,7 +7168,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-1",
       "kanji": "部",
       "onyomi": [
         "ブ"
@@ -7400,7 +7190,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-2",
       "kanji": "屋",
       "onyomi": [
         "オク"
@@ -7435,7 +7224,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-3",
       "kanji": "室",
       "onyomi": [
         "シツ"
@@ -7465,7 +7253,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-4",
       "kanji": "窓",
       "onyomi": [
         "ソウ"
@@ -7490,7 +7277,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-5",
       "kanji": "開",
       "onyomi": [
         "カイ"
@@ -7523,7 +7309,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-6",
       "kanji": "閉",
       "onyomi": [
         "ヘイ"
@@ -7556,7 +7341,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-7",
       "kanji": "歌",
       "onyomi": [
         "カ"
@@ -7587,7 +7371,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-8",
       "kanji": "意",
       "onyomi": [
         "イ"
@@ -7615,7 +7398,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-9",
       "kanji": "味",
       "onyomi": [
         "ミ"
@@ -7641,7 +7423,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-10",
       "kanji": "天",
       "onyomi": [
         "テン"
@@ -7667,7 +7448,6 @@
       "level": "N5",
       "section": "kanji",
       "lesson": 25,
-      "id": "25-k-11",
       "kanji": "考",
       "onyomi": [
         "コウ"

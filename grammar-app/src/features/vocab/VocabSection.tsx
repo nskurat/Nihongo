@@ -18,9 +18,12 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
     searchQuery,
     setSearchQuery,
     totalLessons,
-    currentLevelData,
+    lessonCounts,
     filteredContent,
     currentContent,
+    loading,
+    error,
+    retry,
     handleGenerateVocabHelp,
     aiVocabNotes,
     loadingVocabAi,
@@ -42,7 +45,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
 
           <ul className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-emerald-200">
             {totalLessons.map((lesson) => {
-              const count = (currentLevelData[lesson] || []).length;
+              const count = lessonCounts[lesson] || 0;
               return (
                 <li key={lesson} className="min-w-fit">
                   <button
@@ -108,8 +111,33 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
           </div>
         </div>
 
+        {/* Loading Skeleton */}
+        {loading && (
+          <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3 animate-pulse">
+            <h4 className="text-lg font-bold text-slate-700">Loading Lesson {activeLesson}…</h4>
+          </div>
+        )}
+
+        {/* Error State */}
+        {!loading && error && (
+          <div className="bg-white p-12 rounded-xl border border-dashed border-red-300 text-center space-y-3">
+            <h4 className="text-lg font-bold text-red-700">Couldn't load this lesson</h4>
+            <p className="text-sm text-slate-500 max-w-md mx-auto">
+              {error.kind === 'not-found'
+                ? `Lesson ${activeLesson} wasn't found.`
+                : 'Something went wrong loading this content.'}
+            </p>
+            <button
+              onClick={retry}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs rounded-lg border border-emerald-200 cursor-pointer"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
         {/* Empty State */}
-        {filteredContent.length === 0 && (
+        {!loading && !error && filteredContent.length === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
             <h4 className="text-lg font-bold text-slate-700">No vocabulary found</h4>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
@@ -144,13 +172,23 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                   {showTranslations ? item.meaning : '••••••••••••'}
                 </p>
 
+                {/* Example Sentence */}
+                {item.exampleJp && (
+                  <div className="mt-3 bg-slate-50/60 p-2.5 rounded-lg border border-slate-100">
+                    <div className="font-bold text-slate-800 text-sm">{item.exampleJp}</div>
+                    {showTranslations && item.exampleEn && (
+                      <div className="text-slate-600 text-xs mt-0.5">{item.exampleEn}</div>
+                    )}
+                  </div>
+                )}
+
                 {/* AI Explanation Note if it exists */}
-                {aiVocabNotes[item.id!] && (
+                {aiVocabNotes[item.uid] && (
                   <div className="mt-4 bg-emerald-50/50 p-3 rounded-lg border border-emerald-100 text-xs text-slate-700 animate-fade-in">
                     <div className="font-bold text-emerald-800 mb-1 flex items-center gap-1">
                       <Info size={14} /> Usage Note
                     </div>
-                    <MarkdownViewer content={aiVocabNotes[item.id!]} />
+                    <MarkdownViewer content={aiVocabNotes[item.uid]} />
                   </div>
                 )}
               </div>
@@ -159,17 +197,17 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
               <div className="bg-slate-50/80 px-4 py-2.5 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => handleGenerateVocabHelp(item)}
-                  disabled={loadingVocabAi[item.id!] || !!aiVocabNotes[item.id!]}
+                  disabled={loadingVocabAi[item.uid] || !!aiVocabNotes[item.uid]}
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold transition-colors border border-slate-200 hover:border-emerald-200 disabled:opacity-50 cursor-pointer shadow-2xs"
                 >
-                  {loadingVocabAi[item.id!] ? (
+                  {loadingVocabAi[item.uid] ? (
                     <Loader2 className="animate-spin" size={13} />
                   ) : (
                     <Sparkles size={13} />
                   )}
-                  {loadingVocabAi[item.id!]
+                  {loadingVocabAi[item.uid]
                     ? 'Thinking...'
-                    : aiVocabNotes[item.id!]
+                    : aiVocabNotes[item.uid]
                     ? 'Note Generated'
                     : 'AI: Explain Usage'}
                 </button>

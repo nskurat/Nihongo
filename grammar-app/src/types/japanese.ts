@@ -5,8 +5,6 @@ export type LevelType = Level;
 export type SectionType = 'grammar' | 'vocab' | 'kanji' | 'reading';
 
 export interface GrammarItem extends StudyItem {
-  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
-  id?: string | number;
   title: string;
   meaning: string;
   structure: string;
@@ -37,8 +35,6 @@ export interface TagTaxonomy {
 }
 
 export interface VocabItem extends StudyItem {
-  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
-  id?: string | number;
   word: string;
   reading: string;
   romaji?: string;
@@ -55,8 +51,6 @@ export interface KanjiCompound {
 }
 
 export interface KanjiItem extends StudyItem {
-  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
-  id?: string | number;
   kanji: string;
   meaning: string;
   onyomi?: string[];

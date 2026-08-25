@@ -23,7 +23,7 @@ Phases are dependency-ordered. Do not start one before its predecessor has lande
 |---|---|---|---|---|---|
 | 0 | Triage — fix what's broken in production | `phase-0-triage.md` | ½ d | Yes | Merged (#1) |
 | 1 | Item identity + content schema | `phase-1-identity.md` | 1 d | Yes | Merged (#2) |
-| 2 | Content repository + lazy loading | `phase-2-content-layer.md` | 1–2 d | Yes | In progress |
+| 2 | Content repository + lazy loading | `phase-2-content-layer.md` | 1–2 d | Yes | PR open |
 | 3 | Test harness + characterization tests | `phase-3-test-harness.md` | ½ d | Yes | Not started |
 | 4 | UI consolidation | `phase-4-ui.md` | 1–2 d | Spec after 3 | Not started |
 | 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Spec after 3 | Not started |

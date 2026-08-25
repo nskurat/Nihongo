@@ -21,11 +21,15 @@ const FILES: FileTarget[] = LEVELS.flatMap((level) =>
   }))
 );
 
+const dropLegacyId = process.argv.includes('--drop-legacy-id');
+
 /**
  * Stamps every item in a content file with `uid`, `level`, `section` and
  * `lesson` as its first fields. `uid` is `{level}-{section}-{lesson}-{n}`,
  * where `n` is the item's 1-based position within its lesson's array -
- * deterministic from position alone, so re-running is a no-op.
+ * deterministic from position alone, so re-running is a no-op. With
+ * `--drop-legacy-id`, also strips the superseded `id` field each item was
+ * originally stamped with - a one-time migration, not the default behavior.
  */
 function addUids(target: FileTarget): void {
   const filePath = resolve(process.cwd(), target.path);
@@ -35,13 +39,18 @@ function addUids(target: FileTarget): void {
   const stamped: Record<string, Record<string, unknown>[]> = {};
   for (const lessonKey of Object.keys(data)) {
     const lesson = Number(lessonKey);
-    stamped[lessonKey] = data[lessonKey].map((item, index) => ({
-      uid: `${target.level.toLowerCase()}-${target.section}-${lesson}-${index + 1}`,
-      level: target.level,
-      section: target.section,
-      lesson,
-      ...item,
-    }));
+    stamped[lessonKey] = data[lessonKey].map((item, index) => {
+      const rest = dropLegacyId
+        ? Object.fromEntries(Object.entries(item).filter(([key]) => key !== 'id'))
+        : item;
+      return {
+        uid: `${target.level.toLowerCase()}-${target.section}-${lesson}-${index + 1}`,
+        level: target.level,
+        section: target.section,
+        lesson,
+        ...rest,
+      };
+    });
   }
 
   writeFileSync(filePath, `${JSON.stringify(stamped, null, 2)}\n`, 'utf-8');

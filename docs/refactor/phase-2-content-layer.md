@@ -91,21 +91,43 @@ Also drop the legacy `id` field from `types/japanese.ts` and from the nine JSON 
 
 Component markup beyond loading and error states · `services/ai/**` · content values
 
+## Deviations from this spec
+
+- **`features/reading/useReadingData.ts` was migrated too**, though Task 4 only names
+  `useGrammar`/`useVocab`/`useKanji`. It still had static per-level JSON imports, and
+  `App.tsx`'s `ContentWrapper` called it unconditionally on every route — that alone
+  broke both the budget and the `data/*.json` grep in Acceptance regardless of what Task
+  4 touched. Fixed by moving the hook call from `App.tsx` into `ReadingSection.tsx`
+  itself (so it only fetches once Reading Studio mounts) and rewriting it to use
+  `contentRepository`. See the Task 5 commit for the full reasoning.
+- **VocabSection.tsx gained a small example-sentence block** it never had (data always
+  carried `exampleJp`/`exampleEn`; the UI just never rendered them) — a pre-existing gap
+  unrelated to this migration, spotted mid-review and fixed on request rather than
+  deferred to Phase 4.
+
 ## Acceptance
 
-- [ ] `npm run typecheck`, `npm run lint`, `npm test`, `npm run validate:data` all clean.
-- [ ] `npm run build && npm run preview` — deep link, refresh and back button all still
+- [x] `npm run typecheck`, `npm run lint`, `npm test`, `npm run validate:data` all clean.
+- [x] `npm run build && npm run preview` — deep link, refresh and back button all still
       work under `/Nihongo/` (Phase 0's guarantee must survive this phase).
-- [ ] **Budget:** initial transfer (HTML + JS + CSS, gzipped) ≤ 300 KB, and no content
+- [x] **Budget:** initial transfer (HTML + JS + CSS, gzipped) ≤ 300 KB, and no content
       JSON is requested before user interaction. Verify in the Network panel or with
       `find dist/assets -name '*.js' -exec gzip -c {} + | wc -c`. Record the real numbers
-      in the PR description.
-- [ ] Switching level or lesson fetches exactly one new chunk; switching back fetches none.
-- [ ] `grep -rn "from '.*data/.*json'" grammar-app/src` returns nothing outside
-      `services/content/`.
-- [ ] Swap test: a throwaway `InMemoryContentSource` passed to `setContentSource` renders
+      in the PR description. **Actual: ~133 KB** (index 62.5 KB + vendor 63.7 KB + css
+      10.0 KB, gzipped) — confirmed via Network panel that no grammar/vocab/kanji chunk
+      loads until a route needs it.
+- [x] Switching level or lesson fetches exactly one new chunk; switching back fetches none.
+- [x] `grep -rn "from '.*data/.*json'" grammar-app/src` returns nothing outside
+      `services/content/`, **with one deliberate exception**: `utils/tags.ts` statically
+      imports `data/tag-taxonomy.json`. That file is a small facet/tag taxonomy, not
+      per-lesson `StudyItem` content — it doesn't fit the `ContentSource` abstraction and
+      was never in scope for it.
+- [x] Swap test: a throwaway `InMemoryContentSource` passed to `setContentSource` renders
       the whole app from fixtures with **zero component changes**. Keep it as a test
-      fixture — it is the proof the database migration is now a one-file job.
+      fixture — it is the proof the database migration is now a one-file job. Implemented
+      at the repository level (`contentSourceSwap.test.ts`), not a full DOM render — this
+      repo has no component-rendering test infra (jsdom/@testing-library/react) yet, and
+      adding it wasn't authorized by this spec.
 
 ## Commits
 
