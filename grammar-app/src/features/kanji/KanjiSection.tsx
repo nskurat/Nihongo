@@ -18,9 +18,12 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
     searchQuery,
     setSearchQuery,
     totalLessons,
-    currentLevelData,
+    lessonCounts,
     filteredContent,
     currentContent,
+    loading,
+    error,
+    retry,
     handleGenerateKanjiMnemonic,
     aiKanjiMnemonics,
     loadingKanjiAi,
@@ -42,7 +45,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
 
           <ul className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-rose-200">
             {totalLessons.map((lesson) => {
-              const count = (currentLevelData[lesson] || []).length;
+              const count = lessonCounts[lesson] || 0;
               return (
                 <li key={lesson} className="min-w-fit">
                   <button
@@ -108,8 +111,33 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
           </div>
         </div>
 
+        {/* Loading Skeleton */}
+        {loading && (
+          <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3 animate-pulse">
+            <h4 className="text-lg font-bold text-slate-700">Loading Lesson {activeLesson}…</h4>
+          </div>
+        )}
+
+        {/* Error State */}
+        {!loading && error && (
+          <div className="bg-white p-12 rounded-xl border border-dashed border-red-300 text-center space-y-3">
+            <h4 className="text-lg font-bold text-red-700">Couldn't load this lesson</h4>
+            <p className="text-sm text-slate-500 max-w-md mx-auto">
+              {error.kind === 'not-found'
+                ? `Lesson ${activeLesson} wasn't found.`
+                : 'Something went wrong loading this content.'}
+            </p>
+            <button
+              onClick={retry}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-xs rounded-lg border border-rose-200 cursor-pointer"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
         {/* Empty State */}
-        {filteredContent.length === 0 && (
+        {!loading && !error && filteredContent.length === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
             <h4 className="text-lg font-bold text-slate-700">No kanji found</h4>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
@@ -178,12 +206,12 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                   </div>
 
                   {/* AI Generated Mnemonic */}
-                  {aiKanjiMnemonics[item.id!] && (
+                  {aiKanjiMnemonics[item.uid] && (
                     <div className="mt-2 bg-rose-50/50 p-3.5 rounded-lg border border-rose-100 text-sm text-slate-700 animate-fade-in shadow-xs mb-4">
                       <div className="font-bold text-rose-800 mb-1.5 flex items-center gap-1.5 text-xs uppercase tracking-wider">
                         <Info size={14} className="text-rose-500" /> Story / Mnemonic Hook
                       </div>
-                      <MarkdownViewer content={aiKanjiMnemonics[item.id!]} />
+                      <MarkdownViewer content={aiKanjiMnemonics[item.uid]} />
                     </div>
                   )}
                 </div>
@@ -192,17 +220,17 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                 <div className="pt-3 border-t border-slate-100 mt-auto flex items-center justify-between">
                   <button
                     onClick={() => handleGenerateKanjiMnemonic(item)}
-                    disabled={loadingKanjiAi[item.id!] || !!aiKanjiMnemonics[item.id!]}
+                    disabled={loadingKanjiAi[item.uid] || !!aiKanjiMnemonics[item.uid]}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg text-xs font-semibold transition-colors border border-rose-200/80 disabled:opacity-50 cursor-pointer shadow-2xs"
                   >
-                    {loadingKanjiAi[item.id!] ? (
+                    {loadingKanjiAi[item.uid] ? (
                       <Loader2 className="animate-spin" size={14} />
                     ) : (
                       <Sparkles size={14} />
                     )}
-                    {loadingKanjiAi[item.id!]
+                    {loadingKanjiAi[item.uid]
                       ? 'Creating Story...'
-                      : aiKanjiMnemonics[item.id!]
+                      : aiKanjiMnemonics[item.uid]
                       ? 'Mnemonic Saved'
                       : 'AI: Create Mnemonic Story'}
                   </button>

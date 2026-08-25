@@ -1,39 +1,39 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
 import { getTagMeta } from '../../utils/tags';
-import { remapCacheToIds } from '../../utils/uid';
-
-import grammarN3 from '../../data/n3/grammar.json';
-import grammarN4 from '../../data/n4/grammar.json';
-import grammarN5 from '../../data/n5/grammar.json';
-
-// level/lesson/uid now live in the data itself (scripts/add-uids.ts), so no more
-// runtime stamping - each file already reads as Record<number, GrammarItem[]>.
-const grammarData: Record<LevelType, Record<number, GrammarItem[]>> = {
-  N5: grammarN5 as unknown as Record<number, GrammarItem[]>,
-  N4: grammarN4 as unknown as Record<number, GrammarItem[]>,
-  N3: grammarN3 as unknown as Record<number, GrammarItem[]>,
-};
+import { useContentQuery } from '../useContentQuery';
+import { contentRepository } from '../../services/content/StaticContentSource';
+import { LessonSummary } from '../../services/content/ContentSource';
 
 export function useGrammar(activeLevel: LevelType, activeLesson: number) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDetailItem, setSelectedDetailItem] = useState<GrammarItem | null>(null);
+  const [lessons, setLessons] = useState<LessonSummary[]>([]);
 
-  // Data
-  // No `|| {}` fallback: grammarData is a Record<LevelType, ...> populated for all
-  // three levels, so this is always defined - a fallback here would materialize a
-  // fresh object every render and defeat the memoization below.
-  const currentLevelData = grammarData[activeLevel];
-  const totalLessons = Object.keys(currentLevelData).map(Number).sort((a, b) => a - b);
-  // Memoized so its reference is stable across renders when level/lesson don't change -
-  // the `|| []` fallback would otherwise be a fresh array every render, defeating the
-  // useMemo hooks below that depend on it.
-  const currentContent = useMemo(
-    () => currentLevelData[activeLesson] || [],
-    [currentLevelData, activeLesson]
+  useEffect(() => {
+    let cancelled = false;
+    contentRepository.listLessons(activeLevel, 'grammar').then((summaries) => {
+      if (!cancelled) setLessons(summaries);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [activeLevel]);
+
+  const totalLessons = useMemo(() => lessons.map((l) => l.lesson), [lessons]);
+  const lessonCounts = useMemo(
+    () => Object.fromEntries(lessons.map((l) => [l.lesson, l.count])),
+    [lessons]
   );
+
+  const {
+    items: currentContent,
+    loading,
+    error,
+    retry,
+  } = useContentQuery<GrammarItem>(activeLevel, 'grammar', activeLesson);
 
   // Filter grammar points if search is active
   const filteredContent = searchQuery.trim()
@@ -51,29 +51,10 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
       })
     : currentContent;
 
-  // AI State - the store is keyed by a level/lesson-scoped uid (see utils/uid.ts),
-  // because grammar item ids collide across levels (N5 and N3 both start at "1-1").
-  // These raw stores are remapped back to id-keyed lookups below so the UI, which
-  // reads by item.id, can stay untouched and still never see another level's data.
-  const { generatedExamples: generatedExamplesByUid, aiExplanations: aiExplanationsByUid, addExamples, setExplanation } = useAiCacheStore();
-  const { loadingExamples: loadingExamplesByUid, loadingExplanations: loadingExplanationsByUid, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
-
-  const generatedExamples = useMemo(
-    () => remapCacheToIds(currentContent, generatedExamplesByUid),
-    [currentContent, generatedExamplesByUid]
-  );
-  const aiExplanations = useMemo(
-    () => remapCacheToIds(currentContent, aiExplanationsByUid),
-    [currentContent, aiExplanationsByUid]
-  );
-  const loadingExamples = useMemo(
-    () => remapCacheToIds(currentContent, loadingExamplesByUid),
-    [currentContent, loadingExamplesByUid]
-  );
-  const loadingExplanations = useMemo(
-    () => remapCacheToIds(currentContent, loadingExplanationsByUid),
-    [currentContent, loadingExplanationsByUid]
-  );
+  // AI State - the store is keyed by each item's own uid, which is globally
+  // unique, so it's read directly with no remapping.
+  const { generatedExamples, aiExplanations, addExamples, setExplanation } = useAiCacheStore();
+  const { loadingExamples, loadingExplanations, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
 
   const handleGenerateExamples = async (grammar: GrammarItem) => {
     const uid = grammar.uid;
@@ -111,9 +92,12 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
     selectedDetailItem,
     setSelectedDetailItem,
     totalLessons,
-    currentLevelData,
+    lessonCounts,
     filteredContent,
     currentContent,
+    loading,
+    error,
+    retry,
     // AI functions
     handleGenerateExamples,
     handleExplainNuance,

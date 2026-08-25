@@ -4,16 +4,16 @@ import { GrammarExampleSentence } from '../services/ai/registry';
 
 // State that should be persisted across sessions (so we don't spam the API)
 interface AiCacheState {
-  generatedExamples: Record<string | number, GrammarExampleSentence[]>;
-  aiExplanations: Record<string | number, string>;
-  aiVocabNotes: Record<string | number, string>;
-  aiKanjiMnemonics: Record<string | number, string>;
+  generatedExamples: Record<string, GrammarExampleSentence[]>;
+  aiExplanations: Record<string, string>;
+  aiVocabNotes: Record<string, string>;
+  aiKanjiMnemonics: Record<string, string>;
 
   // Actions
-  addExamples: (id: string | number, examples: GrammarExampleSentence[]) => void;
-  setExplanation: (id: string | number, explanation: string) => void;
-  setVocabNote: (id: string | number, note: string) => void;
-  setKanjiMnemonic: (id: string | number, mnemonic: string) => void;
+  addExamples: (id: string, examples: GrammarExampleSentence[]) => void;
+  setExplanation: (id: string, explanation: string) => void;
+  setVocabNote: (id: string, note: string) => void;
+  setKanjiMnemonic: (id: string, mnemonic: string) => void;
 }
 
 export const useAiCacheStore = create<AiCacheState>()(
@@ -67,19 +67,19 @@ export const useAiCacheStore = create<AiCacheState>()(
 
 // State for ephemeral data like loading indicators and modal toggles
 interface AiUiState {
-  loadingExamples: Record<string | number, boolean>;
-  loadingExplanations: Record<string | number, boolean>;
-  loadingVocabAi: Record<string | number, boolean>;
-  loadingKanjiAi: Record<string | number, boolean>;
+  loadingExamples: Record<string, boolean>;
+  loadingExplanations: Record<string, boolean>;
+  loadingVocabAi: Record<string, boolean>;
+  loadingKanjiAi: Record<string, boolean>;
   
   showKeyModal: boolean;
   apiError: string;
 
   // Actions
-  setLoadingExamples: (id: string | number, loading: boolean) => void;
-  setLoadingExplanations: (id: string | number, loading: boolean) => void;
-  setLoadingVocabAi: (id: string | number, loading: boolean) => void;
-  setLoadingKanjiAi: (id: string | number, loading: boolean) => void;
+  setLoadingExamples: (id: string, loading: boolean) => void;
+  setLoadingExplanations: (id: string, loading: boolean) => void;
+  setLoadingVocabAi: (id: string, loading: boolean) => void;
+  setLoadingKanjiAi: (id: string, loading: boolean) => void;
   
   setShowKeyModal: (show: boolean) => void;
   setApiError: (error: string) => void;
