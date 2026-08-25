@@ -1,9 +1,12 @@
-export type LevelType = 'N5' | 'N4' | 'N3';
+import { Level, StudyItem } from './content';
+
+export type LevelType = Level;
 
 export type SectionType = 'grammar' | 'vocab' | 'kanji' | 'reading';
 
-export interface GrammarItem {
-  id: string | number;
+export interface GrammarItem extends StudyItem {
+  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
+  id?: string | number;
   title: string;
   meaning: string;
   structure: string;
@@ -11,8 +14,6 @@ export interface GrammarItem {
   summary?: string;
   details?: string;
   tags?: string[];
-  level?: LevelType;
-  lesson?: number;
   examples?: Array<{
     jp: string;
     en: string;
@@ -35,8 +36,9 @@ export interface TagTaxonomy {
   facets: Record<string, FacetDefinition>;
 }
 
-export interface VocabItem {
-  id: string | number;
+export interface VocabItem extends StudyItem {
+  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
+  id?: string | number;
   word: string;
   reading: string;
   romaji?: string;
@@ -52,8 +54,9 @@ export interface KanjiCompound {
   meaning: string;
 }
 
-export interface KanjiItem {
-  id: string | number;
+export interface KanjiItem extends StudyItem {
+  /** @deprecated superseded by `uid`; kept until Phase 2 removes it */
+  id?: string | number;
   kanji: string;
   meaning: string;
   onyomi?: string[];
