@@ -9,7 +9,6 @@ import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
 import { parseLevel, clampLessonForLevel } from './utils/levels';
 import { parseLegacyUrl } from './utils/legacyUrl';
-import { useReadingData } from './features/reading/useReadingData';
 
 const DEFAULT_ROUTE = '/n3/grammar/1';
 
@@ -22,7 +21,6 @@ function ContentWrapper() {
 
   // Default to each level's starting lesson if unspecified, and guard against out-of-range lessons
   const parsedLesson = clampLessonForLevel(parsedLevel, parseInt(lesson || '', 10));
-  const { grammarData, vocabData } = useReadingData(parsedLevel);
 
   // We use this component to render the appropriate section based on the URL
   return (
@@ -36,9 +34,7 @@ function ContentWrapper() {
       {parsedSection === 'kanji' && (
         <KanjiSection activeLevel={parsedLevel} activeLesson={parsedLesson} />
       )}
-      {parsedSection === 'reading' && (
-        <ReadingSection activeLevel={parsedLevel} grammarData={grammarData} vocabData={vocabData} />
-      )}
+      {parsedSection === 'reading' && <ReadingSection activeLevel={parsedLevel} />}
     </>
   );
 }
