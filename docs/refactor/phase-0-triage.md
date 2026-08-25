@@ -100,17 +100,17 @@ the three `Section.tsx` components' markup · `readingStorage.ts`
 
 Each item is verified by running the command, not by reading the diff.
 
-- [ ] `npm run typecheck` clean.
-- [ ] `npm run lint` exits 0.
-- [ ] `npm test` passes; new tests cover `parseLegacyUrl`.
-- [ ] `npm run build && npm run preview`, then hard-refresh
+- [x] `npm run typecheck` clean.
+- [x] `npm run lint` exits 0.
+- [x] `npm test` passes; new tests cover `parseLegacyUrl`.
+- [x] `npm run build && npm run preview`, then hard-refresh
       `http://localhost:4173/Nihongo/n3/grammar/5` → lesson 5 renders, URL unchanged.
-- [ ] In preview, `/Nihongo/` redirects to `/Nihongo/n3/grammar/1` and stays under
+- [x] In preview, `/Nihongo/` redirects to `/Nihongo/n3/grammar/1` and stays under
       `/Nihongo/`. Browser back button works.
-- [ ] Reading Studio's lesson dropdown lists real lessons; on N4 it starts at 26.
-- [ ] Generate AI text for N5 grammar `1-1`, then open N3 grammar `1-1`: no shared text.
-- [ ] An AI explanation renders with headings, lists and bold styled.
-- [ ] `grep -rn "prose prose-slate\|font-awesome\|App.css" grammar-app/src grammar-app/index.html`
+- [x] Reading Studio's lesson dropdown lists real lessons; on N4 it starts at 26.
+- [x] Generate AI text for N5 grammar `1-1`, then open N3 grammar `1-1`: no shared text.
+- [x] An AI explanation renders with headings, lists and bold styled.
+- [x] `grep -rn "prose prose-slate\|font-awesome\|App.css" grammar-app/src grammar-app/index.html`
       returns nothing.
 
 ## Commits

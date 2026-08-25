@@ -80,15 +80,15 @@ Content *values* in `src/data/**` (structure only, via the script) ·
 
 ## Acceptance
 
-- [ ] `npm run typecheck` clean; `npm run lint` exits 0; `npm test` passes.
-- [ ] `npm run validate:data` exits 0 and prints the warning list.
-- [ ] `npx tsx scripts/add-uids.ts && git diff --exit-code` — second run is a no-op.
-- [ ] `grep -c '"uid"' src/data/*/*.json` — every file non-zero, and the total equals the
+- [x] `npm run typecheck` clean; `npm run lint` exits 0; `npm test` passes.
+- [x] `npm run validate:data` exits 0 and prints the warning list.
+- [x] `npx tsx scripts/add-uids.ts && git diff --exit-code` — second run is a no-op.
+- [x] `grep -c '"uid"' src/data/*/*.json` — every file non-zero, and the total equals the
       row count reported by the validator.
-- [ ] No duplicate uid: the validator proves this; it must fail if you deliberately
+- [x] No duplicate uid: the validator proves this; it must fail if you deliberately
       duplicate one, so test that once before finishing.
-- [ ] App still renders all three sections at all three levels, N4 lessons 26–50 included.
-- [ ] AI generation on an N5 item and its N3 ID-twin produce independent results.
+- [x] App still renders all three sections at all three levels, N4 lessons 26–50 included.
+- [x] AI generation on an N5 item and its N3 ID-twin produce independent results.
 
 ## Commits
 

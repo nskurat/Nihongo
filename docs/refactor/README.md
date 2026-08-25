@@ -19,16 +19,16 @@ Full reasoning and evidence behind this plan: the architecture review artifact
 
 Phases are dependency-ordered. Do not start one before its predecessor has landed.
 
-| # | Phase | Spec | Effort | Ready to offload |
-|---|---|---|---|---|
-| 0 | Triage — fix what's broken in production | `phase-0-triage.md` | ½ d | Yes |
-| 1 | Item identity + content schema | `phase-1-identity.md` | 1 d | Yes |
-| 2 | Content repository + lazy loading | `phase-2-content-layer.md` | 1–2 d | Yes |
-| 3 | Test harness + characterization tests | `phase-3-test-harness.md` | ½ d | Yes |
-| 4 | UI consolidation | `phase-4-ui.md` | 1–2 d | Spec after 3 |
-| 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Spec after 3 |
-| 6 | Flashcards + quizzes | `phase-6-features.md` | 2–3 d | Design first |
-| 7 | CI + accessibility gates | `phase-7-gates.md` | ½–1 d | Spec after 4 |
+| # | Phase | Spec | Effort | Ready to offload | Status |
+|---|---|---|---|---|---|
+| 0 | Triage — fix what's broken in production | `phase-0-triage.md` | ½ d | Yes | Merged (#1) |
+| 1 | Item identity + content schema | `phase-1-identity.md` | 1 d | Yes | Merged (#2) |
+| 2 | Content repository + lazy loading | `phase-2-content-layer.md` | 1–2 d | Yes | In progress |
+| 3 | Test harness + characterization tests | `phase-3-test-harness.md` | ½ d | Yes | Not started |
+| 4 | UI consolidation | `phase-4-ui.md` | 1–2 d | Spec after 3 | Not started |
+| 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Spec after 3 | Not started |
+| 6 | Flashcards + quizzes | `phase-6-features.md` | 2–3 d | Design first | Not started |
+| 7 | CI + accessibility gates | `phase-7-gates.md` | ½–1 d | Spec after 4 | Not started |
 
 Phase 3 sits before the UI work on purpose: phase 4 splits a 1,061-line component and
 there is currently no way to prove behaviour survived it.

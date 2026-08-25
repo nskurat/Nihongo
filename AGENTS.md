@@ -20,7 +20,8 @@ Run from the repo root (`Nihongo/`). There is no nested `package.json`.
 | `npm run build` | Builds into `dist/` |
 | `npm test` | Vitest, run once |
 | `npm run typecheck` | `tsc --noEmit` — must stay clean |
-| `npm run lint` | ESLint (broken until Phase 0; see below) |
+| `npm run lint` | ESLint — must stay clean |
+| `npm run validate:data` | Zod-validates the nine content JSON files; warnings auto-log to `docs/refactor/FINDINGS.md` |
 
 ## Layout
 
@@ -54,8 +55,9 @@ grammar-app/
 
 ## Constraints
 
-- **Lesson ranges differ per level**: N5 = 1–15, N4 = 26–50 (Book II numbering),
-  N3 = 1–24. Never assume lessons start at 1. Source of truth: `utils/levels.ts`.
+- **Lesson ranges differ per level**: N5 = 1–25, N4 = 26–50 (Book II numbering),
+  N3 = 1–24. Never assume lessons start at 1. Source of truth: `utils/levels.ts`
+  (`LESSON_RANGES`, also the single source `scripts/validate-content.ts` mirrors).
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or
   tests pass. Schema changes go through `scripts/` migrations.
 - **AI calls cost the user money.** Never invoke a provider from a test, a script, or
@@ -64,12 +66,6 @@ grammar-app/
   telemetry, proxies or key transmission of any kind without being asked.
 - The app is served from the `/Nihongo/` sub-path. Paths must never be hardcoded —
   derive from `import.meta.env.BASE_URL`.
-
-## Known broken (do not treat as your bug)
-
-Deep links 404 on refresh, Reading Studio receives no lesson data, AI cache collides
-across levels, markdown renders unstyled, and `npm run lint` matches zero files.
-All five are Phase 0 work. If you are not doing Phase 0, work around them.
 
 ## Refactor in progress
 
