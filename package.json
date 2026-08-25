@@ -9,6 +9,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint grammar-app",
+    "preview": "vite preview",
     "serve": "npx serve dist",
     "start": "npx serve dist"
   },

@@ -8,7 +8,7 @@ const rootEl = document.getElementById('root');
 if (rootEl) {
   ReactDOM.createRoot(rootEl).render(
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.VITE_APP_BASENAME}>
         <App />
       </BrowserRouter>
     </React.StrictMode>
