@@ -35,20 +35,24 @@ export interface ReadingQuestion {
   explanation?: string;
 }
 
+export interface ReadingVocabEntry {
+  word: string;
+  reading: string;
+  meaning: string;
+}
+
+export interface ReadingGrammarNote {
+  pattern: string;
+  note: string;
+}
+
 export interface ReadingPracticeData {
   title: string;
   titleEn?: string;
   japaneseText: string;
   englishTranslation?: string;
-  vocabulary?: Array<{
-    word: string;
-    reading: string;
-    meaning: string;
-  }>;
-  grammarUsed?: Array<{
-    pattern: string;
-    note: string;
-  }>;
+  vocabulary?: ReadingVocabEntry[];
+  grammarUsed?: ReadingGrammarNote[];
   questions: ReadingQuestion[];
 }
 

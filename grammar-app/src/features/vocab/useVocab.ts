@@ -18,9 +18,15 @@ export function useVocab(activeLevel: LevelType, activeLesson: number) {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Data
-  const currentLevelData = vocabData[activeLevel] || {};
+  // No `|| {}` fallback - see useGrammar.ts for why.
+  const currentLevelData = vocabData[activeLevel];
   const totalLessons = Object.keys(currentLevelData).map(Number).sort((a, b) => a - b);
-  const currentContent = currentLevelData[activeLesson] || [];
+  // Memoized so its reference is stable across renders when level/lesson don't change -
+  // see useGrammar.ts for why.
+  const currentContent = useMemo(
+    () => currentLevelData[activeLesson] || [],
+    [currentLevelData, activeLesson]
+  );
 
   const filteredContent = searchQuery.trim()
     ? currentContent.filter(

@@ -35,9 +35,18 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
   const [selectedDetailItem, setSelectedDetailItem] = useState<GrammarItem | null>(null);
 
   // Data
-  const currentLevelData = grammarData[activeLevel] || {};
+  // No `|| {}` fallback: grammarData is a Record<LevelType, ...> populated for all
+  // three levels, so this is always defined - a fallback here would materialize a
+  // fresh object every render and defeat the memoization below.
+  const currentLevelData = grammarData[activeLevel];
   const totalLessons = Object.keys(currentLevelData).map(Number).sort((a, b) => a - b);
-  const currentContent = currentLevelData[activeLesson] || [];
+  // Memoized so its reference is stable across renders when level/lesson don't change -
+  // the `|| []` fallback would otherwise be a fresh array every render, defeating the
+  // useMemo hooks below that depend on it.
+  const currentContent = useMemo(
+    () => currentLevelData[activeLesson] || [],
+    [currentLevelData, activeLesson]
+  );
 
   // Filter grammar points if search is active
   const filteredContent = searchQuery.trim()
