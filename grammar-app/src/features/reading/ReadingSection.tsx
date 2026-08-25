@@ -30,7 +30,13 @@ import { generateReadingPractice, getActiveProviderId, getProvider } from '../..
 import { readingRepository } from '../../services/ai/readingStorage';
 import { stripFurigana } from '../../services/ai/readingParser';
 import { GrammarItem, VocabItem, LevelType } from '../../types/japanese';
-import { ReadingPracticeData, ReadingHistoryEntry } from '../../types/ai';
+import {
+  ReadingPracticeData,
+  ReadingHistoryEntry,
+  ReadingQuestion,
+  ReadingVocabEntry,
+  ReadingGrammarNote,
+} from '../../types/ai';
 import { useAiUiStore } from '../../store/useAiStore';
 
 const PRESET_TOPICS = [
@@ -59,6 +65,13 @@ export default function ReadingSection({
 
   // Generator configuration
   const [selectedLesson, setSelectedLesson] = useState<string>('all');
+  // Tracks the level a lesson selection was made for, so it can reset when the level
+  // changes without an effect - adjusting state during render, per React's docs.
+  const [selectedLessonLevel, setSelectedLessonLevel] = useState<LevelType>(activeLevel);
+  if (activeLevel !== selectedLessonLevel) {
+    setSelectedLessonLevel(activeLevel);
+    setSelectedLesson('all');
+  }
   const [selectedTopic, setSelectedTopic] = useState<string>(PRESET_TOPICS[0].value);
   const [customTopic, setCustomTopic] = useState<string>('');
 
@@ -114,10 +127,6 @@ export default function ReadingSection({
     }
   }, [readingData]);
 
-  // Reset lesson selection if level changes
-  useEffect(() => {
-    setSelectedLesson('all');
-  }, [activeLevel]);
 
   const handleClearHistory = async () => {
     if (window.confirm('Are you sure you want to clear your saved reading library?')) {
@@ -208,7 +217,7 @@ export default function ReadingSection({
   // Score computation for Studio
   const questions = readingData?.questions || [];
   const answeredCount = Object.keys(userAnswers).length;
-  const correctCount = questions.filter((q: any) => userAnswers[q.id] === q.correctIndex).length;
+  const correctCount = questions.filter((q: ReadingQuestion) => userAnswers[q.id] === q.correctIndex).length;
 
   // Filtered Library calculation
   const filteredLibrary = savedHistory.filter((item) => {
@@ -498,7 +507,7 @@ export default function ReadingSection({
                               <Tag size={13} className="text-emerald-600" /> Key Vocabulary
                             </h5>
                             <div className="space-y-1.5">
-                              {readingData.vocabulary.map((voc: any, idx: number) => (
+                              {readingData.vocabulary.map((voc: ReadingVocabEntry, idx: number) => (
                                 <div
                                   key={idx}
                                   className="flex justify-between items-center bg-white p-2.5 rounded-lg border border-slate-200 text-xs"
@@ -521,7 +530,7 @@ export default function ReadingSection({
                               <Layers size={13} className="text-indigo-600" /> Grammar In Use
                             </h5>
                             <div className="space-y-1.5">
-                              {readingData.grammarUsed.map((g: any, idx: number) => (
+                              {readingData.grammarUsed.map((g: ReadingGrammarNote, idx: number) => (
                                 <div
                                   key={idx}
                                   className="bg-white p-2.5 rounded-lg border border-slate-200 text-xs space-y-0.5"
@@ -562,7 +571,7 @@ export default function ReadingSection({
                 </div>
 
                 <div className="space-y-6">
-                  {questions.map((q: any, qIdx: number) => {
+                  {questions.map((q: ReadingQuestion, qIdx: number) => {
                     const chosenOption = userAnswers[q.id];
                     const isAnswered = chosenOption !== undefined;
                     const isCorrect = chosenOption === q.correctIndex;
@@ -964,7 +973,7 @@ export default function ReadingSection({
                 </h4>
 
                 <div className="space-y-4">
-                  {modalStory.data?.questions?.map((q: any, idx: number) => {
+                  {modalStory.data?.questions?.map((q: ReadingQuestion, idx: number) => {
                     const sel = modalUserAnswers[q.id];
                     const isAns = sel !== undefined;
                     const isCorr = sel === q.correctIndex;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { KeyRound, ExternalLink, X, ShieldCheck, Sparkles, Check, Cpu, Bot, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import {
   getRegisteredProviders,
@@ -10,7 +10,7 @@ import {
   setStoredModel,
   executeAiPrompt,
 } from '../../services/ai/registry';
-import { AiProvider, AiProviderId } from '../../types/ai';
+import { AiProvider, AiProviderId, AiModelOption } from '../../types/ai';
 
 interface AiSettingsModalProps {
   isOpen: boolean;
@@ -19,7 +19,9 @@ interface AiSettingsModalProps {
 }
 
 export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: AiSettingsModalProps) {
-  const providers = getRegisteredProviders();
+  // getRegisteredProviders() returns Object.values() of a static registry - a new
+  // array reference every call even though the providers themselves never change.
+  const providers = useMemo(() => getRegisteredProviders(), []);
   const [activeProvider, setActiveProvider] = useState<AiProviderId>(getActiveProviderId());
   const [apiKeys, setApiKeys] = useState<Record<string, string>>({});
   const [selectedModels, setSelectedModels] = useState<Record<string, string>>({});
@@ -30,10 +32,13 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
     error: '',
   });
 
-  // Load stored settings on open
+  // Load stored settings on open. This re-syncs the form from localStorage (an
+  // external system) each time the modal opens, rather than adjusting state from a
+  // prop change - a legitimate effect, but the lint rule can't tell the two apart.
   useEffect(() => {
     if (isOpen) {
       const currentActive = getActiveProviderId();
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- see comment above
       setActiveProvider(currentActive);
 
       const keys: Record<string, string> = {};
@@ -47,7 +52,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
       setSavedSuccess(false);
       setTestingStatus({ loading: false, success: null, error: initialError });
     }
-  }, [isOpen, initialError]);
+  }, [isOpen, initialError, providers]);
 
   if (!isOpen) return null;
 
@@ -203,7 +208,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
                   onChange={(e) => handleModelChange(e.target.value)}
                   className="w-full text-xs font-medium bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                 >
-                  {currentProviderConfig.models.map((m: any) => (
+                  {currentProviderConfig.models.map((m: AiModelOption) => (
                     <option key={m.id} value={m.id}>
                       {m.name}
                     </option>

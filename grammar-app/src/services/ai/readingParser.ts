@@ -127,7 +127,7 @@ export function parseReadingResponse(rawResponse: string | RawReadingResponse): 
       parsed = JSON.parse(cleanedJson);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
-      throw new Error(`Failed to parse AI JSON response: ${message}`);
+      throw new Error(`Failed to parse AI JSON response: ${message}`, { cause: err });
     }
   }
 

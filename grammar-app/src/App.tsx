@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { Routes, Route, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import Header from './components/common/Header';
 import GrammarSection from './features/grammar/GrammarSection';
 import VocabSection from './features/vocab/VocabSection';
@@ -9,6 +8,10 @@ import AiSettingsModal from './components/common/AiSettingsModal';
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
 import { parseLevel, clampLessonForLevel } from './utils/levels';
+import { parseLegacyUrl } from './utils/legacyUrl';
+import { useReadingData } from './features/reading/useReadingData';
+
+const DEFAULT_ROUTE = '/n3/grammar/1';
 
 // Wrap the route contents to extract URL params and sync with UI
 function ContentWrapper() {
@@ -19,6 +22,7 @@ function ContentWrapper() {
 
   // Default to each level's starting lesson if unspecified, and guard against out-of-range lessons
   const parsedLesson = clampLessonForLevel(parsedLevel, parseInt(lesson || '', 10));
+  const { grammarData, vocabData } = useReadingData(parsedLevel);
 
   // We use this component to render the appropriate section based on the URL
   return (
@@ -33,37 +37,25 @@ function ContentWrapper() {
         <KanjiSection activeLevel={parsedLevel} activeLesson={parsedLesson} />
       )}
       {parsedSection === 'reading' && (
-        <ReadingSection activeLevel={parsedLevel} />
+        <ReadingSection activeLevel={parsedLevel} grammarData={grammarData} vocabData={vocabData} />
       )}
     </>
   );
 }
 
+// Redirects root and unmatched paths, honoring legacy ?level=&section=&lesson=
+// query params and #section hash shortcuts from before the router existed.
+function LegacyRedirect() {
+  const location = useLocation();
+  const target = parseLegacyUrl(location.search, location.hash);
+  const to = target
+    ? `/${target.level.toLowerCase()}/${target.section}/${target.lesson}`
+    : DEFAULT_ROUTE;
+  return <Navigate to={to} replace />;
+}
+
 export default function App() {
   const { showKeyModal, setShowKeyModal, apiError } = useAiUiStore();
-  
-  // Sync legacy URLs to new router format
-  const location = useLocation();
-  const navigate = useNavigate();
-  
-  useEffect(() => {
-    // If we land on root or old hash-based URLs, redirect them cleanly
-    if (location.pathname === '/') {
-      const params = new URLSearchParams(window.location.search);
-      const hash = window.location.hash.replace('#', '').toLowerCase();
-      
-      let level = params.get('level')?.toLowerCase() || 'n3';
-      if (!['n5', 'n4', 'n3'].includes(level)) level = 'n3';
-
-      let section = params.get('section') || hash || 'grammar';
-      if (!['grammar', 'vocab', 'kanji', 'reading'].includes(section)) section = 'grammar';
-
-      const parsedLevel = parseLevel(level);
-      const lesson = clampLessonForLevel(parsedLevel, parseInt(params.get('lesson') || '', 10));
-
-      navigate(`/${level}/${section}/${lesson}`, { replace: true });
-    }
-  }, [location, navigate]);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans flex flex-col justify-between">
@@ -73,8 +65,8 @@ export default function App() {
         <Routes>
           <Route path="/:level/:section/:lesson" element={<ContentWrapper />} />
           <Route path="/:level/:section" element={<ContentWrapper />} />
-          <Route path="/" element={<Navigate to="/n3/grammar/1" replace />} />
-          <Route path="*" element={<Navigate to="/n3/grammar/1" replace />} />
+          <Route path="/" element={<LegacyRedirect />} />
+          <Route path="*" element={<LegacyRedirect />} />
         </Routes>
       </div>
 

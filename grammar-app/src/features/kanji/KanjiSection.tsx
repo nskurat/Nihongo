@@ -1,7 +1,7 @@
 import { Search, Sparkles, Loader2, Info, Layers, Hash, Languages, ArrowRight, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
-import { LevelType } from '../../types/japanese';
+import { LevelType, KanjiCompound } from '../../types/japanese';
 import { useKanji } from './useKanji';
 import { useAppStore } from '../../store/useAppStore';
 
@@ -164,7 +164,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                           <Hash size={12} /> Compounds
                         </div>
                         <ul className="space-y-1.5">
-                          {item.compounds.slice(0, 3).map((ex: any, idx: number) => (
+                          {item.compounds.slice(0, 3).map((ex: KanjiCompound, idx: number) => (
                             <li key={idx} className="flex justify-between items-center text-sm border-b border-slate-200/50 last:border-0 pb-1.5 last:pb-0">
                               <span className="font-bold text-slate-700">{ex.word}</span>
                               <span className="text-slate-500 text-xs">

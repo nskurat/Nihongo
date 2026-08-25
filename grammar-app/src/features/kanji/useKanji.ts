@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, KanjiItem } from '../../types/japanese';
 import { generateKanjiMnemonic } from '../../services/ai/registry';
+import { buildUid, remapCacheToIds } from '../../utils/uid';
 
 import kanjiN3 from '../../data/n3/kanji.json';
 import kanjiN4 from '../../data/n4/kanji.json';
@@ -17,9 +18,15 @@ export function useKanji(activeLevel: LevelType, activeLesson: number) {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Data
-  const currentLevelData = kanjiData[activeLevel] || {};
+  // No `|| {}` fallback - see useGrammar.ts for why.
+  const currentLevelData = kanjiData[activeLevel];
   const totalLessons = Object.keys(currentLevelData).map(Number).sort((a, b) => a - b);
-  const currentContent = currentLevelData[activeLesson] || [];
+  // Memoized so its reference is stable across renders when level/lesson don't change -
+  // see useGrammar.ts for why.
+  const currentContent = useMemo(
+    () => currentLevelData[activeLesson] || [],
+    [currentLevelData, activeLesson]
+  );
 
   const filteredContent = searchQuery.trim()
     ? currentContent.filter(
@@ -31,21 +38,31 @@ export function useKanji(activeLevel: LevelType, activeLesson: number) {
       )
     : currentContent;
 
-  // AI State
-  const { aiKanjiMnemonics, setKanjiMnemonic } = useAiCacheStore();
-  const { loadingKanjiAi, setLoadingKanjiAi, handleApiError } = useAiUiStore();
+  // AI State - keyed by a level/lesson-scoped uid; see useGrammar.ts for why.
+  const { aiKanjiMnemonics: aiKanjiMnemonicsByUid, setKanjiMnemonic } = useAiCacheStore();
+  const { loadingKanjiAi: loadingKanjiAiByUid, setLoadingKanjiAi, handleApiError } = useAiUiStore();
+
+  const aiKanjiMnemonics = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'kanji', activeLesson, aiKanjiMnemonicsByUid),
+    [currentContent, activeLevel, activeLesson, aiKanjiMnemonicsByUid]
+  );
+  const loadingKanjiAi = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'kanji', activeLesson, loadingKanjiAiByUid),
+    [currentContent, activeLevel, activeLesson, loadingKanjiAiByUid]
+  );
 
   const handleGenerateKanjiMnemonic = async (kanjiItem: KanjiItem) => {
-    setLoadingKanjiAi(kanjiItem.id, true);
+    const uid = buildUid(activeLevel, 'kanji', activeLesson, currentContent.indexOf(kanjiItem) + 1);
+    setLoadingKanjiAi(uid, true);
     try {
       const text = await generateKanjiMnemonic({ kanji: kanjiItem, level: activeLevel });
       if (text) {
-        setKanjiMnemonic(kanjiItem.id, text);
+        setKanjiMnemonic(uid, text);
       }
     } catch (error) {
       handleApiError(error);
     } finally {
-      setLoadingKanjiAi(kanjiItem.id, false);
+      setLoadingKanjiAi(uid, false);
     }
   };
 
