@@ -1,6 +1,10 @@
 {
   "1": [
     {
+      "uid": "n5-kanji-1-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-1",
       "kanji": "日",
       "onyomi": [
@@ -59,6 +63,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%97%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-1-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-2",
       "kanji": "月",
       "onyomi": [
@@ -116,6 +124,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%88%23kanji"
     },
     {
+      "uid": "n5-kanji-1-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-3",
       "kanji": "火",
       "onyomi": [
@@ -148,6 +160,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%81%AB%23kanji"
     },
     {
+      "uid": "n5-kanji-1-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-4",
       "kanji": "水",
       "onyomi": [
@@ -179,6 +195,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%B0%B4%23kanji"
     },
     {
+      "uid": "n5-kanji-1-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-5",
       "kanji": "木",
       "onyomi": [
@@ -207,6 +227,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%A8%23kanji"
     },
     {
+      "uid": "n5-kanji-1-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-6",
       "kanji": "金",
       "onyomi": [
@@ -240,6 +264,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%87%91%23kanji"
     },
     {
+      "uid": "n5-kanji-1-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-7",
       "kanji": "土",
       "onyomi": [
@@ -272,6 +300,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%9C%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-1-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-8",
       "kanji": "山",
       "onyomi": [
@@ -303,6 +335,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B1%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-1-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-9",
       "kanji": "川",
       "onyomi": [
@@ -334,6 +370,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B7%9D%23kanji"
     },
     {
+      "uid": "n5-kanji-1-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 1,
       "id": "1-k-10",
       "kanji": "田",
       "onyomi": [
@@ -367,6 +407,10 @@
   ],
   "2": [
     {
+      "uid": "n5-kanji-2-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-1",
       "kanji": "一",
       "onyomi": [
@@ -419,6 +463,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%80%23kanji"
     },
     {
+      "uid": "n5-kanji-2-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-2",
       "kanji": "二",
       "onyomi": [
@@ -460,6 +508,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%8C%23kanji"
     },
     {
+      "uid": "n5-kanji-2-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-3",
       "kanji": "三",
       "onyomi": [
@@ -491,6 +543,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%89%23kanji"
     },
     {
+      "uid": "n5-kanji-2-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-4",
       "kanji": "四",
       "onyomi": [
@@ -523,6 +579,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%9B%9B%23kanji"
     },
     {
+      "uid": "n5-kanji-2-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-5",
       "kanji": "五",
       "onyomi": [
@@ -554,6 +614,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%94%23kanji"
     },
     {
+      "uid": "n5-kanji-2-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-6",
       "kanji": "六",
       "onyomi": [
@@ -586,6 +650,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%AD%23kanji"
     },
     {
+      "uid": "n5-kanji-2-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-7",
       "kanji": "七",
       "onyomi": [
@@ -618,6 +686,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%83%23kanji"
     },
     {
+      "uid": "n5-kanji-2-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-8",
       "kanji": "八",
       "onyomi": [
@@ -650,6 +722,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%AB%23kanji"
     },
     {
+      "uid": "n5-kanji-2-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-9",
       "kanji": "九",
       "onyomi": [
@@ -682,6 +758,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B9%9D%23kanji"
     },
     {
+      "uid": "n5-kanji-2-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-10",
       "kanji": "十",
       "onyomi": [
@@ -719,6 +799,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%81%23kanji"
     },
     {
+      "uid": "n5-kanji-2-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-11",
       "kanji": "百",
       "onyomi": [
@@ -748,6 +832,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%99%BE%23kanji"
     },
     {
+      "uid": "n5-kanji-2-12",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-12",
       "kanji": "千",
       "onyomi": [
@@ -779,6 +867,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%83%23kanji"
     },
     {
+      "uid": "n5-kanji-2-13",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-13",
       "kanji": "万",
       "onyomi": [
@@ -809,6 +901,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%87%23kanji"
     },
     {
+      "uid": "n5-kanji-2-14",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 2,
       "id": "2-k-14",
       "kanji": "円",
       "onyomi": [
@@ -842,6 +938,10 @@
   ],
   "3": [
     {
+      "uid": "n5-kanji-3-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-1",
       "kanji": "学",
       "onyomi": [
@@ -888,6 +988,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AD%A6%23kanji"
     },
     {
+      "uid": "n5-kanji-3-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-2",
       "kanji": "生",
       "onyomi": [
@@ -933,6 +1037,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%94%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-3-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-3",
       "kanji": "先",
       "onyomi": [
@@ -964,6 +1072,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%88%23kanji"
     },
     {
+      "uid": "n5-kanji-3-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-4",
       "kanji": "会",
       "onyomi": [
@@ -996,6 +1108,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BC%9A%23kanji"
     },
     {
+      "uid": "n5-kanji-3-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-5",
       "kanji": "社",
       "onyomi": [
@@ -1022,6 +1138,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%A4%BE%23kanji"
     },
     {
+      "uid": "n5-kanji-3-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-6",
       "kanji": "員",
       "onyomi": [
@@ -1046,6 +1166,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%93%A1%23kanji"
     },
     {
+      "uid": "n5-kanji-3-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-7",
       "kanji": "医",
       "onyomi": [
@@ -1065,6 +1189,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8C%BB%23kanji"
     },
     {
+      "uid": "n5-kanji-3-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-8",
       "kanji": "者",
       "onyomi": [
@@ -1086,6 +1214,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%80%85%23kanji"
     },
     {
+      "uid": "n5-kanji-3-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-9",
       "kanji": "本",
       "onyomi": [
@@ -1112,6 +1244,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%AC%23kanji"
     },
     {
+      "uid": "n5-kanji-3-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-10",
       "kanji": "中",
       "onyomi": [
@@ -1168,6 +1304,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%AD%23kanji"
     },
     {
+      "uid": "n5-kanji-3-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-11",
       "kanji": "国",
       "onyomi": [
@@ -1199,6 +1339,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%9B%BD%23kanji"
     },
     {
+      "uid": "n5-kanji-3-12",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-12",
       "kanji": "人",
       "onyomi": [
@@ -1266,6 +1410,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%BA%23kanji"
     },
     {
+      "uid": "n5-kanji-3-13",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-13",
       "kanji": "今",
       "onyomi": [
@@ -1308,6 +1456,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BB%8A%23kanji"
     },
     {
+      "uid": "n5-kanji-3-14",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-14",
       "kanji": "朝",
       "onyomi": [
@@ -1344,6 +1496,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%9D%23kanji"
     },
     {
+      "uid": "n5-kanji-3-15",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-15",
       "kanji": "昼",
       "onyomi": [
@@ -1375,6 +1531,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%98%BC%23kanji"
     },
     {
+      "uid": "n5-kanji-3-16",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 3,
       "id": "3-k-16",
       "kanji": "晩",
       "onyomi": [
@@ -1411,6 +1571,10 @@
   ],
   "4": [
     {
+      "uid": "n5-kanji-4-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-1",
       "kanji": "時",
       "onyomi": [
@@ -1457,6 +1621,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%99%82%23kanji"
     },
     {
+      "uid": "n5-kanji-4-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-2",
       "kanji": "分",
       "onyomi": [
@@ -1490,6 +1658,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%88%86%23kanji"
     },
     {
+      "uid": "n5-kanji-4-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-3",
       "kanji": "半",
       "onyomi": [
@@ -1521,6 +1693,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%8A%23kanji"
     },
     {
+      "uid": "n5-kanji-4-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-4",
       "kanji": "午",
       "onyomi": [
@@ -1545,6 +1721,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%88%23kanji"
     },
     {
+      "uid": "n5-kanji-4-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-5",
       "kanji": "前",
       "onyomi": [
@@ -1581,6 +1761,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%89%8D%23kanji"
     },
     {
+      "uid": "n5-kanji-4-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-6",
       "kanji": "後",
       "onyomi": [
@@ -1609,6 +1793,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BE%8C%23kanji"
     },
     {
+      "uid": "n5-kanji-4-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-7",
       "kanji": "休",
       "onyomi": [
@@ -1655,6 +1843,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BC%91%23kanji"
     },
     {
+      "uid": "n5-kanji-4-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-8",
       "kanji": "毎",
       "onyomi": [
@@ -1699,6 +1891,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%AF%8E%23kanji"
     },
     {
+      "uid": "n5-kanji-4-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-9",
       "kanji": "何",
       "onyomi": [
@@ -1726,6 +1922,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%95%23kanji"
     },
     {
+      "uid": "n5-kanji-4-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-10",
       "kanji": "行",
       "onyomi": [
@@ -1769,6 +1969,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A1%8C%23kanji"
     },
     {
+      "uid": "n5-kanji-4-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-11",
       "kanji": "来",
       "onyomi": [
@@ -1806,6 +2010,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9D%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-4-12",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 4,
       "id": "4-k-12",
       "kanji": "校",
       "onyomi": [
@@ -1847,6 +2055,10 @@
   ],
   "5": [
     {
+      "uid": "n5-kanji-5-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-1",
       "kanji": "週",
       "onyomi": [
@@ -1886,6 +2098,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%80%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-5-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-2",
       "kanji": "去",
       "onyomi": [
@@ -1908,6 +2124,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8E%BB%23kanji"
     },
     {
+      "uid": "n5-kanji-5-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-3",
       "kanji": "年",
       "onyomi": [
@@ -1954,6 +2174,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B9%B4%23kanji"
     },
     {
+      "uid": "n5-kanji-5-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-4",
       "kanji": "駅",
       "onyomi": [
@@ -1983,6 +2207,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%A7%85%23kanji"
     },
     {
+      "uid": "n5-kanji-5-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-5",
       "kanji": "電",
       "onyomi": [
@@ -2017,6 +2245,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%9B%BB%23kanji"
     },
     {
+      "uid": "n5-kanji-5-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-6",
       "kanji": "車",
       "onyomi": [
@@ -2053,6 +2285,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%BB%8A%23kanji"
     },
     {
+      "uid": "n5-kanji-5-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-7",
       "kanji": "自",
       "onyomi": [
@@ -2085,6 +2321,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%87%AA%23kanji"
     },
     {
+      "uid": "n5-kanji-5-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-8",
       "kanji": "転",
       "onyomi": [
@@ -2116,6 +2356,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%BB%A2%23kanji"
     },
     {
+      "uid": "n5-kanji-5-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 5,
       "id": "5-k-9",
       "kanji": "動",
       "onyomi": [
@@ -2149,6 +2393,10 @@
   ],
   "6": [
     {
+      "uid": "n5-kanji-6-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-1",
       "kanji": "高",
       "onyomi": [
@@ -2188,6 +2436,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%AB%98%23kanji"
     },
     {
+      "uid": "n5-kanji-6-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-2",
       "kanji": "安",
       "onyomi": [
@@ -2214,6 +2466,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AE%89%23kanji"
     },
     {
+      "uid": "n5-kanji-6-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-3",
       "kanji": "大",
       "onyomi": [
@@ -2272,6 +2528,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%A7%23kanji"
     },
     {
+      "uid": "n5-kanji-6-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-4",
       "kanji": "小",
       "onyomi": [
@@ -2305,6 +2565,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B0%8F%23kanji"
     },
     {
+      "uid": "n5-kanji-6-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-5",
       "kanji": "新",
       "onyomi": [
@@ -2333,6 +2597,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%96%B0%23kanji"
     },
     {
+      "uid": "n5-kanji-6-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-6",
       "kanji": "古",
       "onyomi": [
@@ -2360,6 +2628,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%A4%23kanji"
     },
     {
+      "uid": "n5-kanji-6-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-7",
       "kanji": "青",
       "onyomi": [
@@ -2388,6 +2660,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%9D%92%23kanji"
     },
     {
+      "uid": "n5-kanji-6-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-8",
       "kanji": "白",
       "onyomi": [
@@ -2417,6 +2693,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%99%BD%23kanji"
     },
     {
+      "uid": "n5-kanji-6-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-9",
       "kanji": "赤",
       "onyomi": [
@@ -2447,6 +2727,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%B5%A4%23kanji"
     },
     {
+      "uid": "n5-kanji-6-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 6,
       "id": "6-k-10",
       "kanji": "黒",
       "onyomi": [
@@ -2476,6 +2760,10 @@
   ],
   "7": [
     {
+      "uid": "n5-kanji-7-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-1",
       "kanji": "上",
       "onyomi": [
@@ -2513,6 +2801,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%8A%23kanji"
     },
     {
+      "uid": "n5-kanji-7-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-2",
       "kanji": "下",
       "onyomi": [
@@ -2566,6 +2858,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-7-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-3",
       "kanji": "父",
       "onyomi": [
@@ -2592,6 +2888,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%88%B6%23kanji"
     },
     {
+      "uid": "n5-kanji-7-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-4",
       "kanji": "母",
       "onyomi": [
@@ -2618,6 +2918,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%AF%8D%23kanji"
     },
     {
+      "uid": "n5-kanji-7-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-5",
       "kanji": "子",
       "onyomi": [
@@ -2650,6 +2954,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AD%90%23kanji"
     },
     {
+      "uid": "n5-kanji-7-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-6",
       "kanji": "手",
       "onyomi": [
@@ -2702,6 +3010,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%89%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-7-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-7",
       "kanji": "好",
       "onyomi": [
@@ -2729,6 +3041,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A5%BD%23kanji"
     },
     {
+      "uid": "n5-kanji-7-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-8",
       "kanji": "主",
       "onyomi": [
@@ -2757,6 +3073,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%BB%23kanji"
     },
     {
+      "uid": "n5-kanji-7-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-9",
       "kanji": "肉",
       "onyomi": [
@@ -2776,6 +3096,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%82%89%23kanji"
     },
     {
+      "uid": "n5-kanji-7-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-10",
       "kanji": "魚",
       "onyomi": [
@@ -2798,6 +3122,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%AD%9A%23kanji"
     },
     {
+      "uid": "n5-kanji-7-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-11",
       "kanji": "食",
       "onyomi": [
@@ -2837,6 +3165,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%A3%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-7-12",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-12",
       "kanji": "飲",
       "onyomi": [
@@ -2863,6 +3195,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%A3%B2%23kanji"
     },
     {
+      "uid": "n5-kanji-7-13",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 7,
       "id": "7-k-13",
       "kanji": "物",
       "onyomi": [
@@ -2922,6 +3258,10 @@
   ],
   "8": [
     {
+      "uid": "n5-kanji-8-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-1",
       "kanji": "近",
       "onyomi": [
@@ -2958,6 +3298,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%BF%91%23kanji"
     },
     {
+      "uid": "n5-kanji-8-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-2",
       "kanji": "間",
       "onyomi": [
@@ -3001,6 +3345,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%96%93%23kanji"
     },
     {
+      "uid": "n5-kanji-8-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-3",
       "kanji": "右",
       "onyomi": [
@@ -3033,6 +3381,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%B3%23kanji"
     },
     {
+      "uid": "n5-kanji-8-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-4",
       "kanji": "左",
       "onyomi": [
@@ -3064,6 +3416,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B7%A6%23kanji"
     },
     {
+      "uid": "n5-kanji-8-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-5",
       "kanji": "外",
       "onyomi": [
@@ -3109,6 +3465,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%96%23kanji"
     },
     {
+      "uid": "n5-kanji-8-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-6",
       "kanji": "男",
       "onyomi": [
@@ -3136,6 +3496,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%94%B7%23kanji"
     },
     {
+      "uid": "n5-kanji-8-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-7",
       "kanji": "女",
       "onyomi": [
@@ -3165,6 +3529,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A5%B3%23kanji"
     },
     {
+      "uid": "n5-kanji-8-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 8,
       "id": "8-k-8",
       "kanji": "犬",
       "onyomi": [
@@ -3188,6 +3556,10 @@
   ],
   "9": [
     {
+      "uid": "n5-kanji-9-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-1",
       "kanji": "書",
       "onyomi": [
@@ -3219,6 +3591,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9B%B8%23kanji"
     },
     {
+      "uid": "n5-kanji-9-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-2",
       "kanji": "聞",
       "onyomi": [
@@ -3252,6 +3628,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%81%9E%23kanji"
     },
     {
+      "uid": "n5-kanji-9-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-3",
       "kanji": "読",
       "onyomi": [
@@ -3280,6 +3660,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%AA%AD%23kanji"
     },
     {
+      "uid": "n5-kanji-9-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-4",
       "kanji": "見",
       "onyomi": [
@@ -3318,6 +3702,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A6%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-9-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-5",
       "kanji": "話",
       "onyomi": [
@@ -3365,6 +3753,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A9%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-9-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-6",
       "kanji": "買",
       "onyomi": [
@@ -3396,6 +3788,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%B2%B7%23kanji"
     },
     {
+      "uid": "n5-kanji-9-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-7",
       "kanji": "起",
       "onyomi": [
@@ -3419,6 +3815,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%B5%B7%23kanji"
     },
     {
+      "uid": "n5-kanji-9-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-8",
       "kanji": "帰",
       "onyomi": [
@@ -3446,6 +3846,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B8%B0%23kanji"
     },
     {
+      "uid": "n5-kanji-9-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-9",
       "kanji": "友",
       "onyomi": [
@@ -3467,6 +3871,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-9-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 9,
       "id": "9-k-10",
       "kanji": "達",
       "onyomi": [
@@ -3488,6 +3896,10 @@
   ],
   "10": [
     {
+      "uid": "n5-kanji-10-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-1",
       "kanji": "茶",
       "onyomi": [
@@ -3518,6 +3930,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%8C%B6%23kanji"
     },
     {
+      "uid": "n5-kanji-10-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-2",
       "kanji": "酒",
       "onyomi": [
@@ -3540,6 +3956,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%85%92%23kanji"
     },
     {
+      "uid": "n5-kanji-10-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-3",
       "kanji": "写",
       "onyomi": [
@@ -3562,6 +3982,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%86%99%23kanji"
     },
     {
+      "uid": "n5-kanji-10-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-4",
       "kanji": "真",
       "onyomi": [
@@ -3583,6 +4007,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%9C%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-10-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-5",
       "kanji": "紙",
       "onyomi": [
@@ -3609,6 +4037,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%B4%99%23kanji"
     },
     {
+      "uid": "n5-kanji-10-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-6",
       "kanji": "映",
       "onyomi": [
@@ -3637,6 +4069,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%98%A0%23kanji"
     },
     {
+      "uid": "n5-kanji-10-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-7",
       "kanji": "画",
       "onyomi": [
@@ -3667,6 +4103,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%94%BB%23kanji"
     },
     {
+      "uid": "n5-kanji-10-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-8",
       "kanji": "店",
       "onyomi": [
@@ -3698,6 +4138,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BA%97%23kanji"
     },
     {
+      "uid": "n5-kanji-10-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-9",
       "kanji": "英",
       "onyomi": [
@@ -3717,6 +4161,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%8B%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-10-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-10",
       "kanji": "語",
       "onyomi": [
@@ -3764,6 +4212,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%AA%9E%23kanji"
     },
     {
+      "uid": "n5-kanji-10-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 10,
       "id": "10-k-11",
       "kanji": "送",
       "onyomi": [
@@ -3787,6 +4239,10 @@
   ],
   "11": [
     {
+      "uid": "n5-kanji-11-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 11,
       "id": "11-k-1",
       "kanji": "切",
       "onyomi": [
@@ -3824,6 +4280,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%88%87%23kanji"
     },
     {
+      "uid": "n5-kanji-11-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 11,
       "id": "11-k-2",
       "kanji": "貸",
       "onyomi": [
@@ -3845,6 +4305,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%B2%B8%23kanji"
     },
     {
+      "uid": "n5-kanji-11-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 11,
       "id": "11-k-3",
       "kanji": "借",
       "onyomi": [
@@ -3866,6 +4330,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%80%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-11-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 11,
       "id": "11-k-4",
       "kanji": "旅",
       "onyomi": [
@@ -3899,6 +4367,10 @@
   ],
   "12": [
     {
+      "uid": "n5-kanji-12-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 12,
       "id": "12-k-1",
       "kanji": "雨",
       "onyomi": [
@@ -3926,6 +4398,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%9B%A8%23kanji"
     },
     {
+      "uid": "n5-kanji-12-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 12,
       "id": "12-k-2",
       "kanji": "花",
       "onyomi": [
@@ -3957,6 +4433,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%8A%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-12-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 12,
       "id": "12-k-3",
       "kanji": "勉",
       "onyomi": [
@@ -3981,6 +4461,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8B%89%23kanji"
     },
     {
+      "uid": "n5-kanji-12-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 12,
       "id": "12-k-4",
       "kanji": "強",
       "onyomi": [
@@ -4018,6 +4502,10 @@
   ],
   "13": [
     {
+      "uid": "n5-kanji-13-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 13,
       "id": "13-k-1",
       "kanji": "入",
       "onyomi": [
@@ -4051,6 +4539,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-13-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 13,
       "id": "13-k-2",
       "kanji": "出",
       "onyomi": [
@@ -4089,6 +4581,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%87%BA%23kanji"
     },
     {
+      "uid": "n5-kanji-13-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 13,
       "id": "13-k-3",
       "kanji": "歩",
       "onyomi": [
@@ -4125,6 +4621,10 @@
   ],
   "14": [
     {
+      "uid": "n5-kanji-14-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 14,
       "id": "14-k-1",
       "kanji": "待",
       "onyomi": [
@@ -4146,6 +4646,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BE%85%23kanji"
     },
     {
+      "uid": "n5-kanji-14-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 14,
       "id": "14-k-2",
       "kanji": "教",
       "onyomi": [
@@ -4198,6 +4702,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%95%99%23kanji"
     },
     {
+      "uid": "n5-kanji-14-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 14,
       "id": "14-k-3",
       "kanji": "止",
       "onyomi": [
@@ -4225,6 +4733,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%AD%A2%23kanji"
     },
     {
+      "uid": "n5-kanji-14-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 14,
       "id": "14-k-4",
       "kanji": "習",
       "onyomi": [
@@ -4248,6 +4760,10 @@
   ],
   "15": [
     {
+      "uid": "n5-kanji-15-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 15,
       "id": "15-k-1",
       "kanji": "使",
       "onyomi": [
@@ -4279,6 +4795,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%BF%23kanji"
     },
     {
+      "uid": "n5-kanji-15-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 15,
       "id": "15-k-2",
       "kanji": "作",
       "onyomi": [
@@ -4306,6 +4826,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%9C%23kanji"
     },
     {
+      "uid": "n5-kanji-15-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 15,
       "id": "15-k-3",
       "kanji": "立",
       "onyomi": [
@@ -4349,6 +4873,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%AB%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-15-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 15,
       "id": "15-k-4",
       "kanji": "売",
       "onyomi": [
@@ -4378,6 +4906,10 @@
   ],
   "16": [
     {
+      "uid": "n5-kanji-16-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-1",
       "kanji": "明",
       "onyomi": [
@@ -4405,6 +4937,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%98%8E%23kanji"
     },
     {
+      "uid": "n5-kanji-16-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-2",
       "kanji": "暗",
       "onyomi": [
@@ -4426,6 +4962,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9A%97%23kanji"
     },
     {
+      "uid": "n5-kanji-16-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-3",
       "kanji": "長",
       "onyomi": [
@@ -4472,6 +5012,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%95%B7%23kanji"
     },
     {
+      "uid": "n5-kanji-16-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-4",
       "kanji": "短",
       "onyomi": [
@@ -4493,6 +5037,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%9F%AD%23kanji"
     },
     {
+      "uid": "n5-kanji-16-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-5",
       "kanji": "目",
       "onyomi": [
@@ -4516,6 +5064,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%9B%AE%23kanji"
     },
     {
+      "uid": "n5-kanji-16-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 16,
       "id": "16-k-6",
       "kanji": "足",
       "onyomi": [
@@ -4557,6 +5109,10 @@
   ],
   "17": [
     {
+      "uid": "n5-kanji-17-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-1",
       "kanji": "広",
       "onyomi": [
@@ -4582,6 +5138,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BA%83%23kanji"
     },
     {
+      "uid": "n5-kanji-17-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-2",
       "kanji": "多",
       "onyomi": [
@@ -4603,6 +5163,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%9A%23kanji"
     },
     {
+      "uid": "n5-kanji-17-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-3",
       "kanji": "少",
       "onyomi": [
@@ -4630,6 +5194,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B0%91%23kanji"
     },
     {
+      "uid": "n5-kanji-17-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-4",
       "kanji": "悪",
       "onyomi": [
@@ -4652,6 +5220,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%82%AA%23kanji"
     },
     {
+      "uid": "n5-kanji-17-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-5",
       "kanji": "重",
       "onyomi": [
@@ -4676,6 +5248,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%87%8D%23kanji"
     },
     {
+      "uid": "n5-kanji-17-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-6",
       "kanji": "軽",
       "onyomi": [
@@ -4698,6 +5274,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%BB%BD%23kanji"
     },
     {
+      "uid": "n5-kanji-17-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 17,
       "id": "17-k-7",
       "kanji": "早",
       "onyomi": [
@@ -4729,6 +5309,10 @@
   ],
   "18": [
     {
+      "uid": "n5-kanji-18-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-1",
       "kanji": "便",
       "onyomi": [
@@ -4756,6 +5340,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BE%BF%23kanji"
     },
     {
+      "uid": "n5-kanji-18-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-2",
       "kanji": "利",
       "onyomi": [
@@ -4777,6 +5365,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%88%A9%23kanji"
     },
     {
+      "uid": "n5-kanji-18-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-3",
       "kanji": "元",
       "onyomi": [
@@ -4799,6 +5391,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%83%23kanji"
     },
     {
+      "uid": "n5-kanji-18-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-4",
       "kanji": "気",
       "onyomi": [
@@ -4839,6 +5435,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%B0%97%23kanji"
     },
     {
+      "uid": "n5-kanji-18-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-5",
       "kanji": "親",
       "onyomi": [
@@ -4872,6 +5472,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A6%AA%23kanji"
     },
     {
+      "uid": "n5-kanji-18-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-6",
       "kanji": "有",
       "onyomi": [
@@ -4894,6 +5498,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%89%23kanji"
     },
     {
+      "uid": "n5-kanji-18-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 18,
       "id": "18-k-7",
       "kanji": "名",
       "onyomi": [
@@ -4923,6 +5531,10 @@
   ],
   "19": [
     {
+      "uid": "n5-kanji-19-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-1",
       "kanji": "地",
       "onyomi": [
@@ -4968,6 +5580,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%9C%B0%23kanji"
     },
     {
+      "uid": "n5-kanji-19-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-2",
       "kanji": "鉄",
       "onyomi": [
@@ -4992,6 +5608,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%89%84%23kanji"
     },
     {
+      "uid": "n5-kanji-19-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-3",
       "kanji": "仕",
       "onyomi": [
@@ -5014,6 +5634,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BB%95%23kanji"
     },
     {
+      "uid": "n5-kanji-19-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-4",
       "kanji": "事",
       "onyomi": [
@@ -5051,6 +5675,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-19-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-5",
       "kanji": "東",
       "onyomi": [
@@ -5097,6 +5725,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9D%B1%23kanji"
     },
     {
+      "uid": "n5-kanji-19-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-6",
       "kanji": "西",
       "onyomi": [
@@ -5124,6 +5756,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A5%BF%23kanji"
     },
     {
+      "uid": "n5-kanji-19-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 19,
       "id": "19-k-7",
       "kanji": "南",
       "onyomi": [
@@ -5158,6 +5794,10 @@
   ],
   "20": [
     {
+      "uid": "n5-kanji-20-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-1",
       "kanji": "北",
       "onyomi": [
@@ -5194,6 +5834,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8C%97%23kanji"
     },
     {
+      "uid": "n5-kanji-20-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-2",
       "kanji": "京",
       "onyomi": [
@@ -5219,6 +5863,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%AC%23kanji"
     },
     {
+      "uid": "n5-kanji-20-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-3",
       "kanji": "夜",
       "onyomi": [
@@ -5241,6 +5889,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%9C%23kanji"
     },
     {
+      "uid": "n5-kanji-20-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-4",
       "kanji": "料",
       "onyomi": [
@@ -5260,6 +5912,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%96%99%23kanji"
     },
     {
+      "uid": "n5-kanji-20-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-5",
       "kanji": "理",
       "onyomi": [
@@ -5279,6 +5935,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%90%86%23kanji"
     },
     {
+      "uid": "n5-kanji-20-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-6",
       "kanji": "口",
       "onyomi": [
@@ -5311,6 +5971,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%A3%23kanji"
     },
     {
+      "uid": "n5-kanji-20-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 20,
       "id": "20-k-7",
       "kanji": "曜",
       "onyomi": [
@@ -5332,6 +5996,10 @@
   ],
   "21": [
     {
+      "uid": "n5-kanji-21-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-1",
       "kanji": "降",
       "onyomi": [
@@ -5365,6 +6033,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%99%8D%23kanji"
     },
     {
+      "uid": "n5-kanji-21-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-2",
       "kanji": "思",
       "onyomi": [
@@ -5386,6 +6058,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%80%9D%23kanji"
     },
     {
+      "uid": "n5-kanji-21-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-3",
       "kanji": "寝",
       "onyomi": [
@@ -5408,6 +6084,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AF%9D%23kanji"
     },
     {
+      "uid": "n5-kanji-21-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-4",
       "kanji": "終",
       "onyomi": [
@@ -5430,6 +6110,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%B5%82%23kanji"
     },
     {
+      "uid": "n5-kanji-21-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-5",
       "kanji": "言",
       "onyomi": [
@@ -5453,6 +6137,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E8%A8%80%23kanji"
     },
     {
+      "uid": "n5-kanji-21-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-6",
       "kanji": "知",
       "onyomi": [
@@ -5479,6 +6167,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%9F%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-21-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-7",
       "kanji": "同",
       "onyomi": [
@@ -5500,6 +6192,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%90%8C%23kanji"
     },
     {
+      "uid": "n5-kanji-21-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-8",
       "kanji": "漢",
       "onyomi": [
@@ -5519,6 +6215,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%BC%A2%23kanji"
     },
     {
+      "uid": "n5-kanji-21-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-9",
       "kanji": "字",
       "onyomi": [
@@ -5550,6 +6250,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AD%97%23kanji"
     },
     {
+      "uid": "n5-kanji-21-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 21,
       "id": "21-k-10",
       "kanji": "方",
       "onyomi": [
@@ -5603,6 +6307,10 @@
   ],
   "22": [
     {
+      "uid": "n5-kanji-22-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-1",
       "kanji": "図",
       "onyomi": [
@@ -5630,6 +6338,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%9B%B3%23kanji"
     },
     {
+      "uid": "n5-kanji-22-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-2",
       "kanji": "館",
       "onyomi": [
@@ -5664,6 +6376,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%A4%A8%23kanji"
     },
     {
+      "uid": "n5-kanji-22-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-3",
       "kanji": "銀",
       "onyomi": [
@@ -5693,6 +6409,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%8A%80%23kanji"
     },
     {
+      "uid": "n5-kanji-22-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-4",
       "kanji": "町",
       "onyomi": [
@@ -5714,6 +6434,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%94%BA%23kanji"
     },
     {
+      "uid": "n5-kanji-22-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-5",
       "kanji": "住",
       "onyomi": [
@@ -5736,6 +6460,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%8F%23kanji"
     },
     {
+      "uid": "n5-kanji-22-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-6",
       "kanji": "度",
       "onyomi": [
@@ -5774,6 +6502,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BA%A6%23kanji"
     },
     {
+      "uid": "n5-kanji-22-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-7",
       "kanji": "服",
       "onyomi": [
@@ -5793,6 +6525,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%9C%8D%23kanji"
     },
     {
+      "uid": "n5-kanji-22-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-8",
       "kanji": "着",
       "onyomi": [
@@ -5843,6 +6579,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%9D%80%23kanji"
     },
     {
+      "uid": "n5-kanji-22-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-9",
       "kanji": "音",
       "onyomi": [
@@ -5871,6 +6611,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%9F%B3%23kanji"
     },
     {
+      "uid": "n5-kanji-22-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-10",
       "kanji": "楽",
       "onyomi": [
@@ -5904,6 +6648,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%A5%BD%23kanji"
     },
     {
+      "uid": "n5-kanji-22-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 22,
       "id": "22-k-11",
       "kanji": "持",
       "onyomi": [
@@ -5932,6 +6680,10 @@
   ],
   "23": [
     {
+      "uid": "n5-kanji-23-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-1",
       "kanji": "春",
       "onyomi": [
@@ -5958,6 +6710,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%98%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-23-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-2",
       "kanji": "夏",
       "onyomi": [
@@ -5985,6 +6741,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%8F%23kanji"
     },
     {
+      "uid": "n5-kanji-23-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-3",
       "kanji": "秋",
       "onyomi": [
@@ -6006,6 +6766,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%A7%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-23-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-4",
       "kanji": "冬",
       "onyomi": [
@@ -6032,6 +6796,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%86%AC%23kanji"
     },
     {
+      "uid": "n5-kanji-23-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-5",
       "kanji": "道",
       "onyomi": [
@@ -6074,6 +6842,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%81%93%23kanji"
     },
     {
+      "uid": "n5-kanji-23-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-6",
       "kanji": "堂",
       "onyomi": [
@@ -6093,6 +6865,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A0%82%23kanji"
     },
     {
+      "uid": "n5-kanji-23-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-7",
       "kanji": "建",
       "onyomi": [
@@ -6116,6 +6892,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BB%BA%23kanji"
     },
     {
+      "uid": "n5-kanji-23-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-8",
       "kanji": "病",
       "onyomi": [
@@ -6154,6 +6934,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%97%85%23kanji"
     },
     {
+      "uid": "n5-kanji-23-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-9",
       "kanji": "院",
       "onyomi": [
@@ -6173,6 +6957,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%99%A2%23kanji"
     },
     {
+      "uid": "n5-kanji-23-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-10",
       "kanji": "体",
       "onyomi": [
@@ -6195,6 +6983,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%93%23kanji"
     },
     {
+      "uid": "n5-kanji-23-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-11",
       "kanji": "運",
       "onyomi": [
@@ -6226,6 +7018,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%81%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-23-12",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 23,
       "id": "23-k-12",
       "kanji": "乗",
       "onyomi": [
@@ -6250,6 +7046,10 @@
   ],
   "24": [
     {
+      "uid": "n5-kanji-24-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-1",
       "kanji": "家",
       "onyomi": [
@@ -6293,6 +7093,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AE%B6%23kanji"
     },
     {
+      "uid": "n5-kanji-24-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-2",
       "kanji": "内",
       "onyomi": [
@@ -6320,6 +7124,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%86%85%23kanji"
     },
     {
+      "uid": "n5-kanji-24-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-3",
       "kanji": "族",
       "onyomi": [
@@ -6339,6 +7147,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%97%8F%23kanji"
     },
     {
+      "uid": "n5-kanji-24-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-4",
       "kanji": "兄",
       "onyomi": [
@@ -6371,6 +7183,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%85%84%23kanji"
     },
     {
+      "uid": "n5-kanji-24-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-5",
       "kanji": "弟",
       "onyomi": [
@@ -6404,6 +7220,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%BC%9F%23kanji"
     },
     {
+      "uid": "n5-kanji-24-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-6",
       "kanji": "奥",
       "onyomi": [
@@ -6430,6 +7250,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A5%A5%23kanji"
     },
     {
+      "uid": "n5-kanji-24-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-7",
       "kanji": "姉",
       "onyomi": [
@@ -6456,6 +7280,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A7%89%23kanji"
     },
     {
+      "uid": "n5-kanji-24-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-8",
       "kanji": "妹",
       "onyomi": [
@@ -6482,6 +7310,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A6%B9%23kanji"
     },
     {
+      "uid": "n5-kanji-24-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-9",
       "kanji": "海",
       "onyomi": [
@@ -6508,6 +7340,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%B5%B7%23kanji"
     },
     {
+      "uid": "n5-kanji-24-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 24,
       "id": "24-k-10",
       "kanji": "計",
       "onyomi": [
@@ -6537,6 +7373,10 @@
   ],
   "25": [
     {
+      "uid": "n5-kanji-25-1",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-1",
       "kanji": "部",
       "onyomi": [
@@ -6556,6 +7396,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%83%A8%23kanji"
     },
     {
+      "uid": "n5-kanji-25-2",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-2",
       "kanji": "屋",
       "onyomi": [
@@ -6587,6 +7431,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%B1%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-25-3",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-3",
       "kanji": "室",
       "onyomi": [
@@ -6613,6 +7461,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%AE%A4%23kanji"
     },
     {
+      "uid": "n5-kanji-25-4",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-4",
       "kanji": "窓",
       "onyomi": [
@@ -6634,6 +7486,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E7%AA%93%23kanji"
     },
     {
+      "uid": "n5-kanji-25-5",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-5",
       "kanji": "開",
       "onyomi": [
@@ -6663,6 +7519,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%96%8B%23kanji"
     },
     {
+      "uid": "n5-kanji-25-6",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-6",
       "kanji": "閉",
       "onyomi": [
@@ -6692,6 +7552,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E9%96%89%23kanji"
     },
     {
+      "uid": "n5-kanji-25-7",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-7",
       "kanji": "歌",
       "onyomi": [
@@ -6719,6 +7583,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%AD%8C%23kanji"
     },
     {
+      "uid": "n5-kanji-25-8",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-8",
       "kanji": "意",
       "onyomi": [
@@ -6743,6 +7611,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E6%84%8F%23kanji"
     },
     {
+      "uid": "n5-kanji-25-9",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-9",
       "kanji": "味",
       "onyomi": [
@@ -6765,6 +7637,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%91%B3%23kanji"
     },
     {
+      "uid": "n5-kanji-25-10",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-10",
       "kanji": "天",
       "onyomi": [
@@ -6787,6 +7663,10 @@
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%A9%23kanji"
     },
     {
+      "uid": "n5-kanji-25-11",
+      "level": "N5",
+      "section": "kanji",
+      "lesson": 25,
       "id": "25-k-11",
       "kanji": "考",
       "onyomi": [
