@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 interface MarkdownViewerProps {
   content?: string;
@@ -10,15 +11,16 @@ export default function MarkdownViewer({ content = '', className = '' }: Markdow
   const html = useMemo(() => {
     if (!content) return '';
     try {
-      return marked.parse(content, { async: false }) as string;
+      const parsed = marked.parse(content, { async: false }) as string;
+      return DOMPurify.sanitize(parsed);
     } catch {
-      return content;
+      return DOMPurify.sanitize(content);
     }
   }, [content]);
 
   return (
     <div
-      className={`prose prose-slate prose-xs max-w-none prose-p:leading-relaxed prose-headings:font-bold prose-code:text-indigo-600 prose-code:bg-indigo-50/70 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none ${className}`}
+      className={`markdown-prose ${className}`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
