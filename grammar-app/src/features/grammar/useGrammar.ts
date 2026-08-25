@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
 import { getTagMeta } from '../../utils/tags';
+import { buildUid, remapCacheToIds } from '../../utils/uid';
 
 import grammarN3 from '../../data/n3/grammar.json';
 import grammarN4 from '../../data/n4/grammar.json';
@@ -54,35 +55,60 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
       })
     : currentContent;
 
-  // AI State
-  const { generatedExamples, aiExplanations, addExamples, setExplanation } = useAiCacheStore();
-  const { loadingExamples, loadingExplanations, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
+  // AI State - the store is keyed by a level/lesson-scoped uid (see utils/uid.ts),
+  // because grammar item ids collide across levels (N5 and N3 both start at "1-1").
+  // These raw stores are remapped back to id-keyed lookups below so the UI, which
+  // reads by item.id, can stay untouched and still never see another level's data.
+  const { generatedExamples: generatedExamplesByUid, aiExplanations: aiExplanationsByUid, addExamples, setExplanation } = useAiCacheStore();
+  const { loadingExamples: loadingExamplesByUid, loadingExplanations: loadingExplanationsByUid, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
+
+  const generatedExamples = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, generatedExamplesByUid),
+    [currentContent, activeLevel, activeLesson, generatedExamplesByUid]
+  );
+  const aiExplanations = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, aiExplanationsByUid),
+    [currentContent, activeLevel, activeLesson, aiExplanationsByUid]
+  );
+  const loadingExamples = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, loadingExamplesByUid),
+    [currentContent, activeLevel, activeLesson, loadingExamplesByUid]
+  );
+  const loadingExplanations = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, loadingExplanationsByUid),
+    [currentContent, activeLevel, activeLesson, loadingExplanationsByUid]
+  );
+
+  const uidFor = (grammar: GrammarItem) =>
+    buildUid(activeLevel, 'grammar', activeLesson, currentContent.indexOf(grammar) + 1);
 
   const handleGenerateExamples = async (grammar: GrammarItem) => {
-    setLoadingExamples(grammar.id, true);
+    const uid = uidFor(grammar);
+    setLoadingExamples(uid, true);
     try {
       const newExamples = await generateGrammarExamples({ grammar, level: activeLevel });
       if (newExamples && newExamples.length > 0) {
-        addExamples(grammar.id, newExamples);
+        addExamples(uid, newExamples);
       }
     } catch (error) {
       handleApiError(error);
     } finally {
-      setLoadingExamples(grammar.id, false);
+      setLoadingExamples(uid, false);
     }
   };
 
   const handleExplainNuance = async (grammar: GrammarItem) => {
-    setLoadingExplanations(grammar.id, true);
+    const uid = uidFor(grammar);
+    setLoadingExplanations(uid, true);
     try {
       const text = await generateGrammarNuance({ grammar, level: activeLevel });
       if (text) {
-        setExplanation(grammar.id, text);
+        setExplanation(uid, text);
       }
     } catch (error) {
       handleApiError(error);
     } finally {
-      setLoadingExplanations(grammar.id, false);
+      setLoadingExplanations(uid, false);
     }
   };
 

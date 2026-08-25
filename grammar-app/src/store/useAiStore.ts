@@ -49,6 +49,18 @@ export const useAiCacheStore = create<AiCacheState>()(
     }),
     {
       name: 'ai-generation-cache', // unique name for localStorage
+      // v1 cached entries by the data's own id, which collides across levels
+      // (N5 and N3 grammar both start at "1-1") - see utils/uid.ts. Cached
+      // text isn't worth migrating; v2 keys are shaped differently anyway,
+      // so a version bump with no old-shape entries just starts empty.
+      version: 2,
+      migrate: () =>
+        ({
+          generatedExamples: {},
+          aiExplanations: {},
+          aiVocabNotes: {},
+          aiKanjiMnemonics: {},
+        }) as AiCacheState,
     }
   )
 );

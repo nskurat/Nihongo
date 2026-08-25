@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, VocabItem } from '../../types/japanese';
 import { generateVocabHelp } from '../../services/ai/registry';
+import { buildUid, remapCacheToIds } from '../../utils/uid';
 
 import vocabN3 from '../../data/n3/vocab.json';
 import vocabN4 from '../../data/n4/vocab.json';
@@ -30,21 +31,31 @@ export function useVocab(activeLevel: LevelType, activeLesson: number) {
       )
     : currentContent;
 
-  // AI State
-  const { aiVocabNotes, setVocabNote } = useAiCacheStore();
-  const { loadingVocabAi, setLoadingVocabAi, handleApiError } = useAiUiStore();
+  // AI State - keyed by a level/lesson-scoped uid; see useGrammar.ts for why.
+  const { aiVocabNotes: aiVocabNotesByUid, setVocabNote } = useAiCacheStore();
+  const { loadingVocabAi: loadingVocabAiByUid, setLoadingVocabAi, handleApiError } = useAiUiStore();
+
+  const aiVocabNotes = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'vocab', activeLesson, aiVocabNotesByUid),
+    [currentContent, activeLevel, activeLesson, aiVocabNotesByUid]
+  );
+  const loadingVocabAi = useMemo(
+    () => remapCacheToIds(currentContent, activeLevel, 'vocab', activeLesson, loadingVocabAiByUid),
+    [currentContent, activeLevel, activeLesson, loadingVocabAiByUid]
+  );
 
   const handleGenerateVocabHelp = async (vocab: VocabItem) => {
-    setLoadingVocabAi(vocab.id, true);
+    const uid = buildUid(activeLevel, 'vocab', activeLesson, currentContent.indexOf(vocab) + 1);
+    setLoadingVocabAi(uid, true);
     try {
       const text = await generateVocabHelp({ vocab, level: activeLevel });
       if (text) {
-        setVocabNote(vocab.id, text);
+        setVocabNote(uid, text);
       }
     } catch (error) {
       handleApiError(error);
     } finally {
-      setLoadingVocabAi(vocab.id, false);
+      setLoadingVocabAi(uid, false);
     }
   };
 
