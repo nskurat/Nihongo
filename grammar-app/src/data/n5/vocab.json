@@ -1618,5 +1618,1025 @@
       "exampleJp": "お父さんが 特に よかったですね。",
       "exampleEn": "The father was particularly good, wasn't he?"
     }
+  ],
+  "16": [
+    {
+      "id": "n5-v-16-1",
+      "word": "乗ります／降ります",
+      "reading": "のります／おります",
+      "romaji": "norimasu / orimasu",
+      "pos": "verb",
+      "meaning": "ride, get on [a train] / get off [a train]",
+      "exampleJp": "京都駅から バスに 乗って、大学前で 降ります。",
+      "exampleEn": "I take a bus from Kyoto Station and get off at Daigaku-mae."
+    },
+    {
+      "id": "n5-v-16-2",
+      "word": "乗り換えます",
+      "reading": "のりかえます",
+      "romaji": "norikaemasu",
+      "pos": "verb",
+      "meaning": "change (trains, etc.)",
+      "exampleJp": "京都駅で 乗り換えます。",
+      "exampleEn": "I change trains at Kyoto Station."
+    },
+    {
+      "id": "n5-v-16-3",
+      "word": "入れます／出します",
+      "reading": "いれます／だします",
+      "romaji": "iremasu / dashimasu",
+      "pos": "verb",
+      "meaning": "put in, insert / take out, withdraw",
+      "exampleJp": "カードを 入れて、暗証番号を 入れます。",
+      "exampleEn": "Insert the card and enter the code number."
+    },
+    {
+      "id": "n5-v-16-4",
+      "word": "入ります／出ます",
+      "reading": "はいります／でます",
+      "romaji": "hairimasu / demasu",
+      "pos": "verb",
+      "meaning": "enter [university] / graduate from [university]",
+      "exampleJp": "大学に 入ります。",
+      "exampleEn": "I enter university."
+    },
+    {
+      "id": "n5-v-16-5",
+      "word": "若い",
+      "reading": "わかい",
+      "romaji": "wakai",
+      "pos": "い-adjective",
+      "meaning": "young",
+      "exampleJp": "ミラーさんは 若くて、元気です。",
+      "exampleEn": "Mr. Miller is young and lively."
+    },
+    {
+      "id": "n5-v-16-6",
+      "word": "背が高い",
+      "reading": "せがたかい",
+      "romaji": "se ga takai",
+      "pos": "expression",
+      "meaning": "tall (referring to person)",
+      "exampleJp": "あの 背が 高い 人は だれですか。",
+      "exampleEn": "Who is that tall person?"
+    },
+    {
+      "id": "n5-v-16-7",
+      "word": "体",
+      "reading": "からだ",
+      "romaji": "karada",
+      "pos": "noun",
+      "meaning": "body",
+      "exampleJp": "体が だるいです。",
+      "exampleEn": "My body feels weary."
+    },
+    {
+      "id": "n5-v-16-8",
+      "word": "頭",
+      "reading": "あたま",
+      "romaji": "atama",
+      "pos": "noun",
+      "meaning": "head",
+      "exampleJp": "頭が いいですね。",
+      "exampleEn": "You're clever, aren't you."
+    },
+    {
+      "id": "n5-v-16-9",
+      "word": "留学生",
+      "reading": "りゅうがくせい",
+      "romaji": "ryuugakusei",
+      "pos": "noun",
+      "meaning": "foreign student",
+      "exampleJp": "カリナさんは 京都大学の 留学生です。",
+      "exampleEn": "Ms. Karina is a foreign student at Kyoto University."
+    },
+    {
+      "id": "n5-v-16-10",
+      "word": "どうやって",
+      "reading": "どうやって",
+      "romaji": "douyatte",
+      "pos": "interrogative",
+      "meaning": "in what way, how",
+      "exampleJp": "大学まで どうやって 行きますか。",
+      "exampleEn": "How do you go to your university?"
+    }
+  ],
+  "17": [
+    {
+      "id": "n5-v-17-1",
+      "word": "忘れます",
+      "reading": "わすれます",
+      "romaji": "wasuremasu",
+      "pos": "verb",
+      "meaning": "forget",
+      "exampleJp": "約束を 忘れました。",
+      "exampleEn": "I forgot the appointment."
+    },
+    {
+      "id": "n5-v-17-2",
+      "word": "払います",
+      "reading": "はらいます",
+      "romaji": "haraimasu",
+      "pos": "verb",
+      "meaning": "pay",
+      "exampleJp": "カードで 払っても いいですか。",
+      "exampleEn": "Can I pay by credit card?"
+    },
+    {
+      "id": "n5-v-17-3",
+      "word": "返します",
+      "reading": "かえします",
+      "romaji": "kaeshimasu",
+      "pos": "verb",
+      "meaning": "give back, return",
+      "exampleJp": "土曜日までに 本を 返さなければ なりません。",
+      "exampleEn": "I must return the book by Saturday."
+    },
+    {
+      "id": "n5-v-17-4",
+      "word": "心配します",
+      "reading": "しんぱいします",
+      "romaji": "shinpai shimasu",
+      "pos": "verb",
+      "meaning": "worry",
+      "exampleJp": "心配しないで ください。",
+      "exampleEn": "Please don't worry."
+    },
+    {
+      "id": "n5-v-17-5",
+      "word": "危ない",
+      "reading": "あぶない",
+      "romaji": "abunai",
+      "pos": "い-adjective",
+      "meaning": "dangerous",
+      "exampleJp": "ここで 遊ぶのは 危ないです。",
+      "exampleEn": "It's dangerous to play here."
+    },
+    {
+      "id": "n5-v-17-6",
+      "word": "大丈夫[な]",
+      "reading": "だいじょうぶ[な]",
+      "romaji": "daijoubu[na]",
+      "pos": "な-adjective",
+      "meaning": "all right",
+      "exampleJp": "心配しないで ください。大丈夫です。",
+      "exampleEn": "Please don't worry. It's all right."
+    },
+    {
+      "id": "n5-v-17-7",
+      "word": "問題",
+      "reading": "もんだい",
+      "romaji": "mondai",
+      "pos": "noun",
+      "meaning": "question, problem, trouble",
+      "exampleJp": "どう しましたか。",
+      "exampleEn": "What seems to be the problem?"
+    },
+    {
+      "id": "n5-v-17-8",
+      "word": "病気",
+      "reading": "びょうき",
+      "romaji": "byouki",
+      "pos": "noun",
+      "meaning": "illness, disease",
+      "exampleJp": "病気ですから、休みます。",
+      "exampleEn": "I'll take a day off because I'm sick."
+    },
+    {
+      "id": "n5-v-17-9",
+      "word": "薬",
+      "reading": "くすり",
+      "romaji": "kusuri",
+      "pos": "noun",
+      "meaning": "medicine",
+      "exampleJp": "薬を 飲まなければ なりません。",
+      "exampleEn": "I must take medicine."
+    },
+    {
+      "id": "n5-v-17-10",
+      "word": "お大事に",
+      "reading": "おだいじに",
+      "romaji": "odaijini",
+      "pos": "expression",
+      "meaning": "Take care of yourself.",
+      "exampleJp": "お大事に。",
+      "exampleEn": "Take care of yourself."
+    }
+  ],
+  "18": [
+    {
+      "id": "n5-v-18-1",
+      "word": "できます",
+      "reading": "できます",
+      "romaji": "dekimasu",
+      "pos": "verb",
+      "meaning": "be able to, can",
+      "exampleJp": "ミラーさんは 日本語が できます。",
+      "exampleEn": "Mr. Miller can speak Japanese."
+    },
+    {
+      "id": "n5-v-18-2",
+      "word": "弾きます",
+      "reading": "ひきます",
+      "romaji": "hikimasu",
+      "pos": "verb",
+      "meaning": "play (a stringed instrument or piano)",
+      "exampleJp": "ピアノを 弾く ことが できます。",
+      "exampleEn": "I can play the piano."
+    },
+    {
+      "id": "n5-v-18-3",
+      "word": "歌います",
+      "reading": "うたいます",
+      "romaji": "utaimasu",
+      "pos": "verb",
+      "meaning": "sing",
+      "exampleJp": "カラオケで 歌を 歌います。",
+      "exampleEn": "I sing songs at karaoke."
+    },
+    {
+      "id": "n5-v-18-4",
+      "word": "集めます／捨てます",
+      "reading": "あつめます／すてます",
+      "romaji": "atsumemasu / sutemasu",
+      "pos": "verb",
+      "meaning": "collect, gather / throw away",
+      "exampleJp": "趣味は 古い 時計を 集める ことです。",
+      "exampleEn": "My hobby is collecting old clocks."
+    },
+    {
+      "id": "n5-v-18-5",
+      "word": "運転します",
+      "reading": "うんてんします",
+      "romaji": "unten shimasu",
+      "pos": "verb",
+      "meaning": "drive",
+      "exampleJp": "車を 運転する ことが できますか。",
+      "exampleEn": "Can you drive a car?"
+    },
+    {
+      "id": "n5-v-18-6",
+      "word": "予約します",
+      "reading": "よやくします",
+      "romaji": "yoyaku shimasu",
+      "pos": "verb",
+      "meaning": "reserve, book",
+      "exampleJp": "レストランを 予約します。",
+      "exampleEn": "I'll reserve a restaurant."
+    },
+    {
+      "id": "n5-v-18-7",
+      "word": "趣味",
+      "reading": "しゅみ",
+      "romaji": "shumi",
+      "pos": "noun",
+      "meaning": "hobby",
+      "exampleJp": "わたしの 趣味は 音楽を 聞く ことです。",
+      "exampleEn": "My hobby is listening to music."
+    },
+    {
+      "id": "n5-v-18-8",
+      "word": "日記",
+      "reading": "にっき",
+      "romaji": "nikki",
+      "pos": "noun",
+      "meaning": "diary",
+      "exampleJp": "寝る まえに、日記を 書きます。",
+      "exampleEn": "I write in my diary before I go to bed."
+    },
+    {
+      "id": "n5-v-18-9",
+      "word": "現金",
+      "reading": "げんきん",
+      "romaji": "genkin",
+      "pos": "noun",
+      "meaning": "cash",
+      "exampleJp": "現金で 払って ください。",
+      "exampleEn": "Please pay in cash."
+    },
+    {
+      "id": "n5-v-18-10",
+      "word": "なかなか",
+      "reading": "なかなか",
+      "romaji": "nakanaka",
+      "pos": "adverb",
+      "meaning": "not easily (used with negatives)",
+      "exampleJp": "日本では なかなか 馬を 見る ことが できません。",
+      "exampleEn": "In Japan we can rarely see horses."
+    },
+    {
+      "id": "n5-v-18-11",
+      "word": "ぜひ",
+      "reading": "ぜひ",
+      "romaji": "zehi",
+      "pos": "adverb",
+      "meaning": "by all means",
+      "exampleJp": "ぜひ 北海道へ 行きたいです。",
+      "exampleEn": "I want to go to Hokkaido very much."
+    }
+  ],
+  "19": [
+    {
+      "id": "n5-v-19-1",
+      "word": "登ります",
+      "reading": "のぼります",
+      "romaji": "noborimasu",
+      "pos": "verb",
+      "meaning": "climb [a mountain]",
+      "exampleJp": "富士山に 登った ことが あります。",
+      "exampleEn": "I have climbed Mt. Fuji."
+    },
+    {
+      "id": "n5-v-19-2",
+      "word": "泊まります",
+      "reading": "とまります",
+      "romaji": "tomarimasu",
+      "pos": "verb",
+      "meaning": "stay [at a hotel]",
+      "exampleJp": "ホテルに 泊まります。",
+      "exampleEn": "I'll stay at a hotel."
+    },
+    {
+      "id": "n5-v-19-3",
+      "word": "掃除します／洗濯します",
+      "reading": "そうじします／せんたくします",
+      "romaji": "souji shimasu / sentaku shimasu",
+      "pos": "verb",
+      "meaning": "clean (a room) / wash (clothes)",
+      "exampleJp": "休みの日は 掃除したり、洗濯したり します。",
+      "exampleEn": "On my days off I clean, do the laundry, and so on."
+    },
+    {
+      "id": "n5-v-19-4",
+      "word": "練習します",
+      "reading": "れんしゅうします",
+      "romaji": "renshuu shimasu",
+      "pos": "verb",
+      "meaning": "practice",
+      "exampleJp": "毎日 日本語を 練習します。",
+      "exampleEn": "I practice Japanese every day."
+    },
+    {
+      "id": "n5-v-19-5",
+      "word": "なります",
+      "reading": "なります",
+      "romaji": "narimasu",
+      "pos": "verb",
+      "meaning": "become",
+      "exampleJp": "寒く なりましたね。",
+      "exampleEn": "It's got cold, hasn't it?"
+    },
+    {
+      "id": "n5-v-19-6",
+      "word": "眠い",
+      "reading": "ねむい",
+      "romaji": "nemui",
+      "pos": "い-adjective",
+      "meaning": "sleepy",
+      "exampleJp": "眠いですから、コーヒーを 飲みます。",
+      "exampleEn": "I'm sleepy, so I'll drink coffee."
+    },
+    {
+      "id": "n5-v-19-7",
+      "word": "強い／弱い",
+      "reading": "つよい／よわい",
+      "romaji": "tsuyoi / yowai",
+      "pos": "い-adjective",
+      "meaning": "strong / weak",
+      "exampleJp": "調子が いいですか、悪いですか。",
+      "exampleEn": "Are you in good condition or bad condition?"
+    },
+    {
+      "id": "n5-v-19-8",
+      "word": "調子",
+      "reading": "ちょうし",
+      "romaji": "choushi",
+      "pos": "noun",
+      "meaning": "condition",
+      "exampleJp": "調子が わるいです。",
+      "exampleEn": "I'm in bad condition."
+    },
+    {
+      "id": "n5-v-19-9",
+      "word": "一度／一度も",
+      "reading": "いちど／いちども",
+      "romaji": "ichido / ichido mo",
+      "pos": "adverb",
+      "meaning": "once / not once, never",
+      "exampleJp": "馬に 乗った ことが 一度も ありません。",
+      "exampleEn": "I have never ridden a horse."
+    },
+    {
+      "id": "n5-v-19-10",
+      "word": "だんだん",
+      "reading": "だんだん",
+      "romaji": "dandan",
+      "pos": "adverb",
+      "meaning": "gradually",
+      "exampleJp": "だんだん 暑く なります。",
+      "exampleEn": "It's going to get hotter and hotter."
+    }
+  ],
+  "20": [
+    {
+      "id": "n5-v-20-1",
+      "word": "要ります",
+      "reading": "いります",
+      "romaji": "irimasu",
+      "pos": "verb",
+      "meaning": "need, require [a visa]",
+      "exampleJp": "ビザが 要りますか。",
+      "exampleEn": "Do I need a visa?"
+    },
+    {
+      "id": "n5-v-20-2",
+      "word": "調べます",
+      "reading": "しらべます",
+      "romaji": "shirabemasu",
+      "pos": "verb",
+      "meaning": "check, investigate",
+      "exampleJp": "いろいろ 調べて、電話します。",
+      "exampleEn": "I will check up on various things and call you."
+    },
+    {
+      "id": "n5-v-20-3",
+      "word": "直します／修理します",
+      "reading": "なおします／しゅうりします",
+      "romaji": "naoshimasu / shuuri shimasu",
+      "pos": "verb",
+      "meaning": "repair, correct / repair",
+      "exampleJp": "時計を 修理します。",
+      "exampleEn": "I'll repair the watch."
+    },
+    {
+      "id": "n5-v-20-4",
+      "word": "ぼく／きみ",
+      "reading": "ぼく／きみ",
+      "romaji": "boku / kimi",
+      "pos": "pronoun",
+      "meaning": "I (used by men) / you (informal)",
+      "exampleJp": "僕は 学生だ。",
+      "exampleEn": "I'm a student."
+    },
+    {
+      "id": "n5-v-20-5",
+      "word": "サラリーマン",
+      "reading": "サラリーマン",
+      "romaji": "sarariiman",
+      "pos": "noun",
+      "meaning": "salaried worker, office worker",
+      "exampleJp": "兄は サラリーマンです。",
+      "exampleEn": "My brother is an office worker."
+    },
+    {
+      "id": "n5-v-20-6",
+      "word": "物価",
+      "reading": "ぶっか",
+      "romaji": "bukka",
+      "pos": "noun",
+      "meaning": "commodity prices",
+      "exampleJp": "日本は 物価が 高いです。",
+      "exampleEn": "Things are expensive in Japan."
+    },
+    {
+      "id": "n5-v-20-7",
+      "word": "ビザ",
+      "reading": "ビザ",
+      "romaji": "biza",
+      "pos": "noun",
+      "meaning": "visa",
+      "exampleJp": "ビザが 要りますか。",
+      "exampleEn": "Do I need a visa?"
+    },
+    {
+      "id": "n5-v-20-8",
+      "word": "この間",
+      "reading": "このあいだ",
+      "romaji": "kono aida",
+      "pos": "expression",
+      "meaning": "the other day",
+      "exampleJp": "この間、ミラーさんに 会いました。",
+      "exampleEn": "I met Mr. Miller the other day."
+    },
+    {
+      "id": "n5-v-20-9",
+      "word": "みんなで",
+      "reading": "みんなで",
+      "romaji": "minna de",
+      "pos": "adverb",
+      "meaning": "all together",
+      "exampleJp": "あした みんなで 京都へ 行きませんか。",
+      "exampleEn": "Shall we go to Kyoto all together tomorrow?"
+    },
+    {
+      "id": "n5-v-20-10",
+      "word": "〜けど",
+      "reading": "〜けど",
+      "romaji": "~kedo",
+      "pos": "particle",
+      "meaning": "〜, but (informal equivalent of が)",
+      "exampleJp": "辛いけど、おいしい。",
+      "exampleEn": "It's hot but tasty."
+    }
+  ],
+  "21": [
+    {
+      "id": "n5-v-21-1",
+      "word": "勝ちます／負けます",
+      "reading": "かちます／まけます",
+      "romaji": "kachimasu / makemasu",
+      "pos": "verb",
+      "meaning": "win / lose, be beaten",
+      "exampleJp": "日本が 勝つと 思いますか。",
+      "exampleEn": "Do you think Japan will win?"
+    },
+    {
+      "id": "n5-v-21-2",
+      "word": "役に立ちます",
+      "reading": "やくにたちます",
+      "romaji": "yaku ni tachimasu",
+      "pos": "verb",
+      "meaning": "be useful",
+      "exampleJp": "この 辞書は 役に 立ちます。",
+      "exampleEn": "This dictionary is useful."
+    },
+    {
+      "id": "n5-v-21-3",
+      "word": "同じ",
+      "reading": "おなじ",
+      "romaji": "onaji",
+      "pos": "noun/adjective",
+      "meaning": "the same",
+      "exampleJp": "わたしも 同じ 意見です。",
+      "exampleEn": "I have the same opinion."
+    },
+    {
+      "id": "n5-v-21-4",
+      "word": "すごい",
+      "reading": "すごい",
+      "romaji": "sugoi",
+      "pos": "い-adjective",
+      "meaning": "awful, great",
+      "exampleJp": "すごいですね。",
+      "exampleEn": "That's amazing, isn't it."
+    },
+    {
+      "id": "n5-v-21-5",
+      "word": "政治",
+      "reading": "せいじ",
+      "romaji": "seiji",
+      "pos": "noun",
+      "meaning": "politics",
+      "exampleJp": "政治に ついて どう 思いますか。",
+      "exampleEn": "What do you think about politics?"
+    },
+    {
+      "id": "n5-v-21-6",
+      "word": "試合",
+      "reading": "しあい",
+      "romaji": "shiai",
+      "pos": "noun",
+      "meaning": "game, match",
+      "exampleJp": "東京で サッカーの 試合が あります。",
+      "exampleEn": "There will be a football game in Tokyo."
+    },
+    {
+      "id": "n5-v-21-7",
+      "word": "意見",
+      "reading": "いけん",
+      "romaji": "iken",
+      "pos": "noun",
+      "meaning": "opinion",
+      "exampleJp": "会議で 意見を 言いました。",
+      "exampleEn": "I gave my opinion at the meeting."
+    },
+    {
+      "id": "n5-v-21-8",
+      "word": "交通",
+      "reading": "こうつう",
+      "romaji": "koutsuu",
+      "pos": "noun",
+      "meaning": "transportation, traffic",
+      "exampleJp": "ここは 交通が 不便です。",
+      "exampleEn": "The access here is not convenient."
+    },
+    {
+      "id": "n5-v-21-9",
+      "word": "〜について",
+      "reading": "〜について",
+      "romaji": "~ni tsuite",
+      "pos": "expression",
+      "meaning": "about 〜, concerning 〜",
+      "exampleJp": "政治に ついて 話します。",
+      "exampleEn": "I'll talk about politics."
+    },
+    {
+      "id": "n5-v-21-10",
+      "word": "しかたが ありません",
+      "reading": "しかたが ありません",
+      "romaji": "shikata ga arimasen",
+      "pos": "expression",
+      "meaning": "There is no other choice. / It can't be helped.",
+      "exampleJp": "しかたが ありません。",
+      "exampleEn": "It can't be helped."
+    }
+  ],
+  "22": [
+    {
+      "id": "n5-v-22-1",
+      "word": "着ます",
+      "reading": "きます",
+      "romaji": "kimasu",
+      "pos": "verb",
+      "meaning": "put on [a shirt, etc.]",
+      "exampleJp": "コートを 着ます。",
+      "exampleEn": "I put on a coat."
+    },
+    {
+      "id": "n5-v-22-2",
+      "word": "はきます",
+      "reading": "はきます",
+      "romaji": "hakimasu",
+      "pos": "verb",
+      "meaning": "put on [shoes, trousers, etc.]",
+      "exampleJp": "靴を はきます。",
+      "exampleEn": "I put on shoes."
+    },
+    {
+      "id": "n5-v-22-3",
+      "word": "かぶります",
+      "reading": "かぶります",
+      "romaji": "kaburimasu",
+      "pos": "verb",
+      "meaning": "put on [a hat, etc.]",
+      "exampleJp": "帽子を かぶります。",
+      "exampleEn": "I put on a hat."
+    },
+    {
+      "id": "n5-v-22-4",
+      "word": "かけます",
+      "reading": "かけます",
+      "romaji": "kakemasu",
+      "pos": "verb",
+      "meaning": "put on [glasses]",
+      "exampleJp": "眼鏡を かけます。",
+      "exampleEn": "I put on glasses."
+    },
+    {
+      "id": "n5-v-22-5",
+      "word": "生まれます",
+      "reading": "うまれます",
+      "romaji": "umaremasu",
+      "pos": "verb",
+      "meaning": "be born",
+      "exampleJp": "彼が 生まれた 所を 知って いますか。",
+      "exampleEn": "Do you know the place where he was born?"
+    },
+    {
+      "id": "n5-v-22-6",
+      "word": "コート／セーター",
+      "reading": "コート／セーター",
+      "romaji": "kooto / seetaa",
+      "pos": "noun",
+      "meaning": "coat / sweater",
+      "exampleJp": "母は セーターを 送って くれました。",
+      "exampleEn": "My mother sent me a sweater."
+    },
+    {
+      "id": "n5-v-22-7",
+      "word": "帽子／眼鏡",
+      "reading": "ぼうし／めがね",
+      "romaji": "boushi / megane",
+      "pos": "noun",
+      "meaning": "hat, cap / glasses",
+      "exampleJp": "帽子を かぶって いる 人は だれですか。",
+      "exampleEn": "Who is the person wearing a hat?"
+    },
+    {
+      "id": "n5-v-22-8",
+      "word": "家賃",
+      "reading": "やちん",
+      "romaji": "yachin",
+      "pos": "noun",
+      "meaning": "house rent",
+      "exampleJp": "この アパートの 家賃は 8万円です。",
+      "exampleEn": "The rent of this apartment is 80,000 yen."
+    },
+    {
+      "id": "n5-v-22-9",
+      "word": "アパート",
+      "reading": "アパート",
+      "romaji": "apaato",
+      "pos": "noun",
+      "meaning": "apartment",
+      "exampleJp": "駅から 近い アパートが いいです。",
+      "exampleEn": "I'd like an apartment close to the station."
+    },
+    {
+      "id": "n5-v-22-10",
+      "word": "おめでとう ございます",
+      "reading": "おめでとう ございます",
+      "romaji": "omedetou gozaimasu",
+      "pos": "expression",
+      "meaning": "Congratulations.",
+      "exampleJp": "お誕生日 おめでとう ございます。",
+      "exampleEn": "Happy birthday."
+    }
+  ],
+  "23": [
+    {
+      "id": "n5-v-23-1",
+      "word": "回します",
+      "reading": "まわします",
+      "romaji": "mawashimasu",
+      "pos": "verb",
+      "meaning": "turn",
+      "exampleJp": "これを 回すと、音が 大きく なります。",
+      "exampleEn": "Turn this, and the volume will go up."
+    },
+    {
+      "id": "n5-v-23-2",
+      "word": "引きます",
+      "reading": "ひきます",
+      "romaji": "hikimasu",
+      "pos": "verb",
+      "meaning": "pull",
+      "exampleJp": "このドアを 引いて ください。",
+      "exampleEn": "Please pull this door."
+    },
+    {
+      "id": "n5-v-23-3",
+      "word": "変えます",
+      "reading": "かえます",
+      "romaji": "kaemasu",
+      "pos": "verb",
+      "meaning": "change",
+      "exampleJp": "お金を 円に 変えます。",
+      "exampleEn": "I change money into yen."
+    },
+    {
+      "id": "n5-v-23-4",
+      "word": "動きます",
+      "reading": "うごきます",
+      "romaji": "ugokimasu",
+      "pos": "verb",
+      "meaning": "[a watch] move, work",
+      "exampleJp": "時計が 動きません。",
+      "exampleEn": "The watch doesn't work."
+    },
+    {
+      "id": "n5-v-23-5",
+      "word": "渡ります",
+      "reading": "わたります",
+      "romaji": "watarimasu",
+      "pos": "verb",
+      "meaning": "cross [a bridge]",
+      "exampleJp": "道を 渡ります。",
+      "exampleEn": "I cross the road."
+    },
+    {
+      "id": "n5-v-23-6",
+      "word": "気を つけます",
+      "reading": "きを つけます",
+      "romaji": "ki wo tsukemasu",
+      "pos": "verb",
+      "meaning": "pay attention [to cars], take care",
+      "exampleJp": "車に 気を つけて ください。",
+      "exampleEn": "Please watch out for cars."
+    },
+    {
+      "id": "n5-v-23-7",
+      "word": "道",
+      "reading": "みち",
+      "romaji": "michi",
+      "pos": "noun",
+      "meaning": "road, way",
+      "exampleJp": "道を 渡ります。",
+      "exampleEn": "I cross the road."
+    },
+    {
+      "id": "n5-v-23-8",
+      "word": "信号",
+      "reading": "しんごう",
+      "romaji": "shingou",
+      "pos": "noun",
+      "meaning": "traffic light",
+      "exampleJp": "信号を 右へ 曲がって ください。",
+      "exampleEn": "Turn to the right at the signal."
+    },
+    {
+      "id": "n5-v-23-9",
+      "word": "角",
+      "reading": "かど",
+      "romaji": "kado",
+      "pos": "noun",
+      "meaning": "corner",
+      "exampleJp": "あの 角を 曲がります。",
+      "exampleEn": "I turn at that corner."
+    },
+    {
+      "id": "n5-v-23-10",
+      "word": "橋",
+      "reading": "はし",
+      "romaji": "hashi",
+      "pos": "noun",
+      "meaning": "bridge",
+      "exampleJp": "橋を 渡ります。",
+      "exampleEn": "I cross the bridge."
+    }
+  ],
+  "24": [
+    {
+      "id": "n5-v-24-1",
+      "word": "くれます",
+      "reading": "くれます",
+      "romaji": "kuremasu",
+      "pos": "verb",
+      "meaning": "give (me)",
+      "exampleJp": "佐藤さんは わたしに 花を くれました。",
+      "exampleEn": "Ms. Sato gave me flowers."
+    },
+    {
+      "id": "n5-v-24-2",
+      "word": "連れて 行きます／連れて 来ます",
+      "reading": "つれて いきます／つれて きます",
+      "romaji": "tsurete ikimasu / tsurete kimasu",
+      "pos": "verb",
+      "meaning": "take (someone) / bring (someone)",
+      "exampleJp": "子どもを 動物園へ 連れて 行きます。",
+      "exampleEn": "I'll take my child to the zoo."
+    },
+    {
+      "id": "n5-v-24-3",
+      "word": "紹介します",
+      "reading": "しょうかいします",
+      "romaji": "shoukai shimasu",
+      "pos": "verb",
+      "meaning": "introduce",
+      "exampleJp": "友達を 紹介します。",
+      "exampleEn": "I'll introduce my friend."
+    },
+    {
+      "id": "n5-v-24-4",
+      "word": "案内します／説明します",
+      "reading": "あんないします／せつめいします",
+      "romaji": "annai shimasu / setsumei shimasu",
+      "pos": "verb",
+      "meaning": "show around / explain",
+      "exampleJp": "京都を 案内します。",
+      "exampleEn": "I'll show you around Kyoto."
+    },
+    {
+      "id": "n5-v-24-5",
+      "word": "おじいさん／おばあさん",
+      "reading": "おじいさん／おばあさん",
+      "romaji": "ojiisan / obaasan",
+      "pos": "noun",
+      "meaning": "grandfather / grandmother",
+      "exampleJp": "おじいさんは 元気ですか。",
+      "exampleEn": "Is your grandfather doing well?"
+    },
+    {
+      "id": "n5-v-24-6",
+      "word": "準備",
+      "reading": "じゅんび",
+      "romaji": "junbi",
+      "pos": "noun",
+      "meaning": "preparation",
+      "exampleJp": "パーティーの 準備を します。",
+      "exampleEn": "I'll prepare for the party."
+    },
+    {
+      "id": "n5-v-24-7",
+      "word": "意味",
+      "reading": "いみ",
+      "romaji": "imi",
+      "pos": "noun",
+      "meaning": "meaning",
+      "exampleJp": "この 言葉の 意味が わかりません。",
+      "exampleEn": "I don't understand the meaning of this word."
+    },
+    {
+      "id": "n5-v-24-8",
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "romaji": "zenbu",
+      "pos": "noun",
+      "meaning": "all",
+      "exampleJp": "全部 自分で 作りましたか。",
+      "exampleEn": "Did you make all of it by yourself?"
+    },
+    {
+      "id": "n5-v-24-9",
+      "word": "自分で",
+      "reading": "じぶんで",
+      "romaji": "jibun de",
+      "pos": "adverb",
+      "meaning": "by oneself",
+      "exampleJp": "全部 自分で 作りました。",
+      "exampleEn": "I made it all by myself."
+    }
+  ],
+  "25": [
+    {
+      "id": "n5-v-25-1",
+      "word": "考えます",
+      "reading": "かんがえます",
+      "romaji": "kangaemasu",
+      "pos": "verb",
+      "meaning": "think, consider",
+      "exampleJp": "いくら 考えても、わかりません。",
+      "exampleEn": "No matter how much I think, I can't understand this."
+    },
+    {
+      "id": "n5-v-25-2",
+      "word": "着きます",
+      "reading": "つきます",
+      "romaji": "tsukimasu",
+      "pos": "verb",
+      "meaning": "arrive [at the station]",
+      "exampleJp": "駅に 着いたら、電話します。",
+      "exampleEn": "I'll call you when I arrive at the station."
+    },
+    {
+      "id": "n5-v-25-3",
+      "word": "留学します",
+      "reading": "りゅうがくします",
+      "romaji": "ryuugaku shimasu",
+      "pos": "verb",
+      "meaning": "study abroad",
+      "exampleJp": "アメリカへ 留学したいです。",
+      "exampleEn": "I want to study abroad in America."
+    },
+    {
+      "id": "n5-v-25-4",
+      "word": "田舎",
+      "reading": "いなか",
+      "romaji": "inaka",
+      "pos": "noun",
+      "meaning": "countryside, hometown",
+      "exampleJp": "夏休みは 田舎へ 帰ります。",
+      "exampleEn": "I'll go back to my hometown for the summer vacation."
+    },
+    {
+      "id": "n5-v-25-5",
+      "word": "大使館",
+      "reading": "たいしかん",
+      "romaji": "taishikan",
+      "pos": "noun",
+      "meaning": "embassy",
+      "exampleJp": "大使館で ビザを もらいます。",
+      "exampleEn": "I'll get a visa at the embassy."
+    },
+    {
+      "id": "n5-v-25-6",
+      "word": "チャンス",
+      "reading": "チャンス",
+      "romaji": "chansu",
+      "pos": "noun",
+      "meaning": "chance",
+      "exampleJp": "いい チャンスですね。",
+      "exampleEn": "That's a good chance, isn't it."
+    },
+    {
+      "id": "n5-v-25-7",
+      "word": "もし〜たら",
+      "reading": "もし〜たら",
+      "romaji": "moshi ~tara",
+      "pos": "expression",
+      "meaning": "if 〜",
+      "exampleJp": "もし 1億円 あったら、何を したいですか。",
+      "exampleEn": "If you had 100 million yen, what would you like to do?"
+    },
+    {
+      "id": "n5-v-25-8",
+      "word": "いくら〜ても",
+      "reading": "いくら〜ても",
+      "romaji": "ikura ~temo",
+      "pos": "expression",
+      "meaning": "however 〜, even if 〜",
+      "exampleJp": "いくら 高くても、買います。",
+      "exampleEn": "No matter how expensive it is, I will buy it."
+    },
+    {
+      "id": "n5-v-25-9",
+      "word": "頑張ります",
+      "reading": "がんばります",
+      "romaji": "ganbarimasu",
+      "pos": "verb",
+      "meaning": "do one's best",
+      "exampleJp": "頑張ります。",
+      "exampleEn": "I'll do my best."
+    },
+    {
+      "id": "n5-v-25-10",
+      "word": "どうぞ お元気で。",
+      "reading": "どうぞ おげんきで。",
+      "romaji": "douzo ogenki de",
+      "pos": "expression",
+      "meaning": "Best of luck. (said before a long separation)",
+      "exampleJp": "どうぞ お元気で。",
+      "exampleEn": "Best of luck."
+    }
   ]
 }

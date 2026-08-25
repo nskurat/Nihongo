@@ -2137,5 +2137,1266 @@
         "state-continuation"
       ]
     }
+  ],
+  "16": [
+    {
+      "id": "16-1",
+      "title": "Vて-form、[Vて-form]、〜",
+      "structure": "Vて-form、[Vて-form]、〜",
+      "meaning": "Connects two or more verb sentences in the order the actions occur; tense is determined by the last verb.",
+      "explanation": "To connect verb sentences, the て-form is used. When two or more actions take place in succession, the actions are mentioned in the order of occurrence by using the て-form. The tense of the sentence is determined by the tense form of the last verb in the sentence.",
+      "examples": [
+        {
+          "jp": "朝 ジョギングを して、シャワーを 浴びて、会社へ 行きます。",
+          "en": "In the morning, I jog, take a shower and go to the office."
+        },
+        {
+          "jp": "神戸へ 行って、映画を 見て、お茶を 飲みました。",
+          "en": "I went to Kobe, saw a movie and drank tea."
+        }
+      ],
+      "summary": "Chaining て-forms lists actions in the order they happen; only the final verb's tense governs the whole sentence.",
+      "details": "This extends 14-3's て-form beyond the two uses seen in L14-15 (request, progressive/state/habitual) into a third job: connecting a sequence of actions. Since only the last verb carries tense, き ました/ます must be judged from context for the earlier verbs — a good comprehension check point.",
+      "tags": [
+        "simultaneous-action"
+      ]
+    },
+    {
+      "id": "16-2",
+      "title": "い-adj(〜い)→〜くて、〜",
+      "structure": "い-adj(〜い)→〜くて、〜",
+      "meaning": "Joins an い-adjective sentence to another sentence by dropping い and attaching くて ('and').",
+      "explanation": "When joining an い-adjective sentence to another sentence, take away the い from the い-adjective and attach くて. Exception: いい→よくて.",
+      "examples": [
+        {
+          "jp": "ミラーさんは 若くて、元気です。",
+          "en": "Mr. Miller is young and lively."
+        },
+        {
+          "jp": "きのうは 天気が よくて、暑かったです。",
+          "en": "Yesterday it was fine and hot."
+        }
+      ],
+      "summary": "い-adjective + くて links it to a following clause as 'and' — いい is irregular, becoming よくて.",
+      "details": "This mirrors 16-1's て-form chaining, but for い-adjective predicates rather than verbs — くて is the い-adjective's own connective form, parallel to 16-3's で for nouns/な-adjectives. The いい→よくて irregularity echoes the same exception already seen in 8-2's past-tense よくなかったです.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "16-3",
+      "title": "N／な-adj[な]で、〜",
+      "structure": "N／な-adj[な]で、〜",
+      "meaning": "Joins noun sentences or な-adjective sentences by changing です to で.",
+      "explanation": "When joining noun sentences or な-adjective sentences, です is changed to で. [Note 1] Can connect sentences with different topics too. [Note 2] This method cannot connect sentences of contradictory notion — が is used instead (see Lesson 8, 7).",
+      "examples": [
+        {
+          "jp": "カリナさんは インドネシア人で、京都大学の 留学生です。",
+          "en": "Ms. Karina is an Indonesian and a student of Kyoto University."
+        },
+        {
+          "jp": "ミラーさんは ハンサムで、親切です。",
+          "en": "Mr. Miller is handsome and kind."
+        },
+        {
+          "jp": "カリナさんは 学生で、マリアさんは 主婦です。",
+          "en": "Ms. Karina is a student and Maria is a housewife."
+        }
+      ],
+      "summary": "N／な-adjective + で joins as 'and' (です→で); for contradictory/contrastive ideas, use が (8-7) instead, never で.",
+      "details": "Completes the three-way connective family started by 16-1 (verbs, て-form) and 16-2 (い-adjectives, くて): nouns and な-adjectives use で. The critical warning is Note 2 — で only works for compatible/additive facts; a contrast (狭いですが、きれいです) must revert to 8-7's が, since で cannot carry contradiction.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "16-4",
+      "title": "V1て-formから、V2",
+      "structure": "V1て-formから、V2",
+      "meaning": "States that V2 is conducted upon completion of V1's action — 'after doing V1.'",
+      "explanation": "This sentence pattern indicates that upon completion of the action denoted by V1, the action of V2 is to be conducted. The tense of the sentence is determined by the tense form of the last verb. [Note] The subject of a subordinate clause is indicated by が.",
+      "examples": [
+        {
+          "jp": "国へ 帰ってから、父の 会社で 働きます。",
+          "en": "I will work for my father's company after going back to my country."
+        },
+        {
+          "jp": "コンサートが 終わってから、レストランで 食事しました。",
+          "en": "We dined at a restaurant after the concert was over."
+        }
+      ],
+      "summary": "Vて-form + から + V2 = 'after doing V1, V2' — a stronger, explicitly sequential 'after' than plain て-form chaining.",
+      "details": "This is a second job for から, distinct from 9-4's から(reason) — here it attaches to a て-form to mean 'after,' not 'because.' The subordinate-clause-subject-が note previews a rule that will recur with とき (23-1) and other subordinate clauses later in the course.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "id": "16-5",
+      "title": "N1は N2が adjective",
+      "structure": "N1は N2が adjective",
+      "meaning": "Describes an attribute of N1 (the topic) via N2 (the subject of the adjective description).",
+      "explanation": "This sentence pattern is used to describe an attribute of a thing or a person. The topic of the sentence is denoted by は. N1 is the topic of the sentence. N2 is the subject of the adjective's description.",
+      "examples": [
+        {
+          "jp": "大阪は 食べ物が おいしいです。",
+          "en": "Food is tasty in Osaka."
+        },
+        {
+          "jp": "マリアさんは 髪が 長いです。",
+          "en": "Maria has long hair."
+        }
+      ],
+      "summary": "N1は N2が adjective describes N1's attribute by naming a part/aspect (N2) and an adjective about that part.",
+      "details": "A double-marking pattern that layers は(topic, from L1) over が(subject-of-description, familiar from 9-1's preference/ability sentences) within a single sentence — useful for describing people/places by a specific feature (髪が長い, 食べ物がおいしい) rather than the whole topic directly.",
+      "tags": [
+        "topic-focus-particle"
+      ]
+    },
+    {
+      "id": "16-6",
+      "title": "どうやって",
+      "structure": "どうやって",
+      "meaning": "Asks the way or method of doing something; answered using the て-form chaining pattern from 16-1.",
+      "explanation": "どうやって is used to ask the way or the method of doing something. To answer such a question, the pattern learned in 1. is used.",
+      "examples": [
+        {
+          "jp": "大学まで どうやって 行きますか。…京都駅から 16番の バスに 乗って、大学前で 降ります。",
+          "en": "How do you go to your university? …I take a No.16 bus from Kyoto Station and get off at Daigaku-mae."
+        }
+      ],
+      "summary": "どうやって asks 'by what method/how,' typically answered with a chain of て-form verbs (16-1) describing the steps.",
+      "details": "Directly built to be answered using 16-1's Vて-form chaining — the two grammar points in this lesson work as a matched question/answer pair, much like 9-4/9-5's から/どうして pairing.",
+      "tags": [
+        "question-embedding"
+      ]
+    },
+    {
+      "id": "16-7",
+      "title": "どの N",
+      "structure": "どの N",
+      "meaning": "Asks the listener to define one among more than two things concretely presented, modifying the following noun.",
+      "explanation": "You learned in Lesson 2 that この、その and あの modify nouns. The interrogative word used in this system is どの. どの is used to ask the listener to define one among more than two which are concretely presented.",
+      "examples": [
+        {
+          "jp": "サントスさんは どの 人ですか。…あの 背が 高くて、髪が 黒い 人です。",
+          "en": "Which one is Mr. Santos? …That tall man with black hair is."
+        }
+      ],
+      "summary": "どの N completes the この/その/あの/どの demonstrative-modifier series from L2, asking the listener to pick out one specific item from several shown.",
+      "details": "Completes the こ/そ/あ/ど demonstrative family alongside 8-8's どれ (pronoun, stands alone) — どの must be followed by a noun (どの人 'which person'), while どれ stands alone ('which one'). The answer example also reuses 16-2's くて-chaining (背が高くて、髪が黒い).",
+      "tags": [
+        "demonstrative"
+      ]
+    }
+  ],
+  "17": [
+    {
+      "id": "17-1",
+      "title": "Verb ない-form",
+      "structure": "Vない-form",
+      "meaning": "The verb form used with ない — the negative dictionary-style base for a family of new negative expressions.",
+      "explanation": "The verb form used with ない is called the ない-form. Group I: replace the final い-line sound of the ます-form with the corresponding あ-line sound (exceptions: 買います/会います use わ, not あ). Group II: same as the ます-form (たべ-ない, み-ない). Group III: します→しない; きます→こない.",
+      "examples": [
+        {
+          "jp": "かきます → かかない",
+          "en": "write → nai-form"
+        },
+        {
+          "jp": "たべます → たべない",
+          "en": "eat → nai-form"
+        },
+        {
+          "jp": "きます → こない",
+          "en": "come → nai-form"
+        }
+      ],
+      "summary": "The ない-form is the negative base verb form; Group I swaps ます-stem い-row→あ-row (買う/会う are exceptions, using わ), Group II matches the ます-stem exactly, Group III is irregular (しない, こない).",
+      "details": "A new conjugation base joining 14-3's て-form and 19-1's た-form as the third foundational verb form in the course — 17-2 through 17-4 all build directly on this base, so getting Group I's い→あ shift (and the かいます/あいます わ-exception) right is essential before moving further into this lesson.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "17-2",
+      "title": "Vない-formないで ください",
+      "structure": "Vない-formないで ください",
+      "note": "Please don't...",
+      "meaning": "Asks or instructs someone not to do something.",
+      "explanation": "This expression is used to ask or instruct someone not to do something.",
+      "examples": [
+        {
+          "jp": "わたしは 元気ですから、心配しないで ください。",
+          "en": "I am fine, so please don't worry about me."
+        },
+        {
+          "jp": "ここで 写真を 撮らないで ください。",
+          "en": "Please don't take pictures here."
+        }
+      ],
+      "summary": "Vない-form + ないで + ください is the negative counterpart of 14-4's Vてくださいへ — a polite 'please don't.'",
+      "details": "Directly mirrors 14-4's Vてください (please do), now negated using 17-1's ない-form as the base instead of the て-form — worth pairing the two ください patterns together for review as opposites.",
+      "tags": [
+        "prohibition"
+      ]
+    },
+    {
+      "id": "17-3",
+      "title": "Vない-formなければ なりません",
+      "structure": "Vない-formなければ なりません",
+      "note": "Must...; no negative meaning despite the negative-looking form.",
+      "meaning": "Expresses that something has to be done regardless of the actor's will.",
+      "explanation": "This expression means something has to be done regardless of the will of the actor. Note that this doesn't have a negative meaning.",
+      "examples": [
+        {
+          "jp": "薬を 飲まなければ なりません。",
+          "en": "I must take medicine."
+        }
+      ],
+      "summary": "Vない-form + なければ + なりません means 'must do,' despite being built on the negative ない-form — a double-negative-reads-as-positive obligation pattern.",
+      "details": "A classic trap: this looks negative (ない-form + なりません, itself negative) but the overall meaning is a strong positive obligation ('must'). Worth flagging clearly and contrasting with 17-2's genuinely negative ないでください.",
+      "tags": [
+        "obligation-necessity"
+      ]
+    },
+    {
+      "id": "17-4",
+      "title": "Vない-formなくても いいです",
+      "structure": "Vない-formなくても いいです",
+      "note": "Need not...",
+      "meaning": "Indicates that the action described by the verb does not have to be done.",
+      "explanation": "This sentence pattern indicates that the action described by the verb does not have to be done.",
+      "examples": [
+        {
+          "jp": "あした 来なくても いいです。",
+          "en": "You don't have to come tomorrow."
+        }
+      ],
+      "summary": "Vない-form + なくても + いいです = 'you don't have to' — the true negation/absence-of-obligation counterpart to 17-3's なければなりません.",
+      "details": "Together, 17-3 (must) and 17-4 (need not) form a complete obligation pair from the ない-form, echoing the permission/prohibition pair もいいです/はいけません from 15-1/15-2 — worth drilling all four side by side since the sentence shapes are easy to conflate.",
+      "tags": [
+        "obligation-necessity"
+      ]
+    },
+    {
+      "id": "17-5",
+      "title": "N(object)は",
+      "structure": "N(object)は",
+      "meaning": "Replaces を with は to make a direct object the topic of the sentence.",
+      "explanation": "You learned in Lesson 6 that the particle を is attached to the direct object of verbs. Here you learn that the object is made a topic by replacing を with は.",
+      "examples": [
+        {
+          "jp": "荷物を ここに 置かないで ください。",
+          "en": "Please don't put parcels here."
+        },
+        {
+          "jp": "荷物は ここに 置かないで ください。",
+          "en": "As for parcels, don't put them here."
+        },
+        {
+          "jp": "昼ごはんは 会社の 食堂で 食べます。",
+          "en": "As for lunch, I have it in the company cafeteria."
+        }
+      ],
+      "summary": "Swapping を for は turns a direct object into the sentence's topic — 'as for [object], ...'",
+      "details": "Directly builds on 6-1's N を V — this is the object-topicalization counterpart to how time words could take は back in 6-3. A useful general rule worth remembering: は can replace both が and を when the marked item becomes the topic (compare with が-marked subjects, which also topicalize with は starting from L1's core pattern).",
+      "tags": [
+        "topic-focus-particle"
+      ]
+    },
+    {
+      "id": "17-6",
+      "title": "N(time)までに V",
+      "structure": "N(time)までに V",
+      "meaning": "までに marks the time limit by which an action is to be completed.",
+      "explanation": "The point in time indicated by までに is the time limit by which an action is to be done. [Note] Make sure you do not confuse までに with the particle まで.",
+      "examples": [
+        {
+          "jp": "会議は 5時までに 終わります。",
+          "en": "The meeting will be over by five."
+        },
+        {
+          "jp": "土曜日までに 本を 返さなければ なりません。",
+          "en": "I must return the book by Saturday."
+        },
+        {
+          "jp": "5時まで 働きます。",
+          "en": "I work until five. (L.4, plain まで, for contrast)"
+        }
+      ],
+      "summary": "までに means 'by [time]' (a deadline for a one-time completed action), distinct from plain まで, which means 'until [time]' (a continuous action's endpoint, from L4).",
+      "details": "Direct contrast with L4's まで (5時まで働きます = 'work until 5') — までに adds に to shift the meaning from a continuous duration's endpoint to a deadline for a single completed action. This までに/まで pair is worth quizzing directly since the forms are nearly identical.",
+      "tags": [
+        "time-relative"
+      ]
+    }
+  ],
+  "18": [
+    {
+      "id": "18-1",
+      "title": "Verb dictionary form",
+      "structure": "V dictionary form",
+      "meaning": "The basic form of a verb, as listed in dictionaries.",
+      "explanation": "This form is the basic form of a verb. Verbs are given in this form in the dictionary, hence the name. Group I: replace the final い-line sound of the ます-form with the corresponding う-line sound. Group II: attach る to the ます-form. Group III: します becomes する; きます becomes くる.",
+      "examples": [
+        {
+          "jp": "かきます → かく",
+          "en": "write → dictionary form"
+        },
+        {
+          "jp": "たべます → たべる",
+          "en": "eat → dictionary form"
+        },
+        {
+          "jp": "します → する、きます → くる",
+          "en": "do/come → dictionary form"
+        }
+      ],
+      "summary": "The dictionary form is the plain non-past verb form found in dictionaries — Group I swaps the ます-stem's い-row for う-row, Group II adds る, Group III is irregular (する, くる).",
+      "details": "This is the fourth verb form introduced in the course, after ます-form, て-form (14-3), and ない-form (17-1) — all four forms are built from the same Group I/II/III classification (14-1/14-2), so a clear verb-group table across all four forms is worth building as a study aid at this point.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "18-2",
+      "title": "N／V dictionary form こと が できます",
+      "structure": "N／V dictionary form こと が できます",
+      "meaning": "Expresses ability or possibility — 'can do'; verbs must be nominalized with こと before が できます.",
+      "explanation": "できます is the verb which expresses ability or possibility. A noun and V dictionary form こと before が indicates the content of ability or possibility. Nouns placed before が are mostly nouns which express actions (driving, shopping, skiing, dancing); nouns associated with an action (にほんご with はなす, ピアノ with ひく) can also be used directly.",
+      "examples": [
+        {
+          "jp": "ミラーさんは 日本語が できます。",
+          "en": "Mr. Miller can speak Japanese."
+        },
+        {
+          "jp": "ミラーさんは 漢字を 読む ことが できます。",
+          "en": "Mr. Miller can read Kanji."
+        },
+        {
+          "jp": "カードで 払う ことが できます。",
+          "en": "You can pay by credit card."
+        }
+      ],
+      "summary": "できます (can/be able to) takes が; a bare action-noun can precede it directly, but a verb must first be nominalized into V dictionary form + こと.",
+      "details": "This is the first practical use of 18-1's dictionary form: turning a verb into a noun phrase via こと so it can slot into the が-object pattern already familiar from 9-1 (preference/ability verbs take が). This こと-nominalizer will be reused throughout the rest of the book (18-3, 19-2) as a general tool for turning verb clauses into nouns.",
+      "tags": [
+        "potential",
+        "nominalizer"
+      ]
+    },
+    {
+      "id": "18-3",
+      "title": "わたしの 趣味は N／V dictionary form こと です",
+      "structure": "わたしの 趣味は {N／V dictionary form こと} です",
+      "meaning": "States a hobby, optionally expressed as a full verb phrase nominalized with こと.",
+      "explanation": "V dictionary form こと can express the content of hobbies more concretely than the noun alone can do.",
+      "examples": [
+        {
+          "jp": "わたしの 趣味は 音楽です。",
+          "en": "My hobby is music."
+        },
+        {
+          "jp": "わたしの 趣味は 音楽を 聞く ことです。",
+          "en": "My hobby is listening to music."
+        }
+      ],
+      "summary": "趣味は…こと です applies 18-2's こと-nominalizer to state a hobby as a full verb phrase, not just a bare noun.",
+      "details": "A direct practical application of 18-2's こと-nominalizer pattern to a new sentence frame (趣味は…です) — reinforces that こと's job is simply 'turn any verb phrase into something a です-sentence or が-clause can hold.'",
+      "tags": [
+        "nominalizer"
+      ]
+    },
+    {
+      "id": "18-4",
+      "title": "V1 dictionary form／Nの／Quantifier(period) まえに、V2",
+      "structure": "{V1 dictionary form／Nの／Quantifier(period)} まえに、V2",
+      "meaning": "States that V2 happens before V1 (or before a noun-implied action, or a given period of time) — V1 stays in dictionary form regardless of V2's tense.",
+      "explanation": "This sentence pattern indicates that the action of V2 occurs before the action of V1 takes place. Even when the tense of V2 is in the past or future tense, V1 is always in the dictionary form. When まえに comes after a noun, の is inserted (only for nouns implying actions). When まえに comes after a quantifier (period), の is unnecessary.",
+      "examples": [
+        {
+          "jp": "日本へ 来る まえに、日本語を 勉強しました。",
+          "en": "I studied Japanese before I came to Japan."
+        },
+        {
+          "jp": "食事の まえに、手を 洗います。",
+          "en": "I wash my hands before eating."
+        },
+        {
+          "jp": "田中さんは 1時間まえに、出かけました。",
+          "en": "Mr. Tanaka left an hour ago."
+        }
+      ],
+      "summary": "[V1 dictionary form／Nの／period]+まえに, V2 = 'before V1, V2' — V1 always stays in the dictionary (non-past) form no matter what tense V2 is in.",
+      "details": "This is the second major use of 18-1's dictionary form after 18-2/18-3's こと-nominalizer — here the dictionary form itself (not nominalized) attaches directly to まえに. The tense-invariance rule (V1 is ALWAYS dictionary form) is worth emphasizing, since students may want to match V1's tense to V2's.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "id": "18-5",
+      "title": "なかなか",
+      "structure": "なかなか + negative",
+      "meaning": "When accompanied by a negative expression, means 'not easily' or 'not as expected.'",
+      "explanation": "When なかなか is accompanied by a negative expression, it means 'not easily' or 'not as expected.' [Note] は is sometimes attached to a place phrase (via で) to emphasize the location or area under discussion.",
+      "examples": [
+        {
+          "jp": "日本では なかなか 馬を 見る ことが できません。",
+          "en": "In Japan we can rarely see horses."
+        }
+      ],
+      "summary": "なかなか + negative = 'not easily, not as expected' (rarely, hardly) — always paired with a negative predicate.",
+      "details": "Joins the family of degree adverbs that require a negative ending, alongside 9-3's あまり and ぜんぜん — worth grouping all three (あまり/ぜんぜん/なかなか + negative) together as 'degree adverbs that need a negative partner.'",
+      "tags": [
+        "degree-extent"
+      ]
+    },
+    {
+      "id": "18-6",
+      "title": "ぜひ",
+      "structure": "ぜひ",
+      "meaning": "Used with expressions of hope and request (ほしいです, Vたいです, Vてください) to emphasize the meaning.",
+      "explanation": "ぜひ is used with expressions of hope and request such as ほしいです, Vます-form たいです and Vて-form ください and emphasizes the meaning of the expressions.",
+      "examples": [
+        {
+          "jp": "ぜひ 北海道へ 行きたいです。",
+          "en": "I want to go to Hokkaido very much."
+        },
+        {
+          "jp": "ぜひ 遊びに 来て ください。",
+          "en": "Please come to my place. (L.25)"
+        }
+      ],
+      "summary": "ぜひ intensifies desire/request expressions (ほしい, たいです, てください) — 'by all means, really, very much.'",
+      "details": "A pure emphasis adverb that plugs into three previously-learned expressions at once (13-1's ほしい, 13-2's たいです, 14-4's てください) — a good moment to review all three request/desire patterns together since ぜひ works with all of them identically.",
+      "tags": [
+        "emphasis-limitation"
+      ]
+    }
+  ],
+  "19": [
+    {
+      "id": "19-1",
+      "title": "Verb た-form",
+      "structure": "V た-form",
+      "meaning": "Formed by changing the て-form's て/で to た/だ respectively.",
+      "explanation": "The た-form is made by changing て and で of the て-form into た and だ respectively.",
+      "examples": [
+        {
+          "jp": "かいて → かいた",
+          "en": "write (て-form → た-form)"
+        },
+        {
+          "jp": "のんで → のんだ",
+          "en": "drink (て-form → た-form)"
+        },
+        {
+          "jp": "たべて → たべた",
+          "en": "eat (て-form → た-form)"
+        }
+      ],
+      "summary": "The た-form (plain past) is derived mechanically from the て-form by swapping て/で for た/だ — the fifth and final basic verb form in the course.",
+      "details": "Completes the full set of core verb forms alongside ます-form, て-form (14-3), ない-form (17-1), and dictionary form (18-1) — since it's built directly from the て-form students already know, it's the easiest of the five to produce once て-form is solid.",
+      "tags": [
+        "meta-conjugation"
+      ]
+    },
+    {
+      "id": "19-2",
+      "title": "Vた-form ことが あります",
+      "structure": "Vた-form ことが あります",
+      "note": "Have the experience of V-ing.",
+      "meaning": "Describes what one has experienced in the past, distinct from simply stating a past fact.",
+      "explanation": "This sentence pattern is used to describe what one has experienced in the past. This is basically the same sentence as わたしは Nが あります which you learned in Lesson 9. The content of one's experience is expressed by the nominalized phrase Vた-form こと.",
+      "examples": [
+        {
+          "jp": "馬に 乗った ことが あります。",
+          "en": "I have ridden a horse."
+        },
+        {
+          "jp": "去年 北海道で 馬に 乗りました。",
+          "en": "I rode a horse in Hokkaido last year. (plain past fact, for contrast)"
+        }
+      ],
+      "summary": "Vた-form + ことが あります states 'I have the experience of having done X' — distinct from a plain past-tense statement of a single occurrence (Vました).",
+      "details": "Combines 19-1's た-form with the こと-nominalizer first introduced in 18-2, slotted into the が あります pattern from 9-1/10-1 — a clean example of how these building blocks recombine. The contrast example makes clear this is about lifetime experience, not a single dated event.",
+      "tags": [
+        "experience",
+        "nominalizer"
+      ]
+    },
+    {
+      "id": "19-3",
+      "title": "Vた-formり、Vた-formり します",
+      "structure": "Vた-formり、Vた-formり します",
+      "meaning": "Lists a few representative actions out of many, without implying a fixed time order between them.",
+      "explanation": "You learned an expression for referring to a few things and persons among many (〜や〜[など]) in Lesson 10. The sentences learned here are used in referring to some actions among many other actions. The tense of this sentence pattern is shown at the end of the sentence.",
+      "examples": [
+        {
+          "jp": "日曜日は テニスを したり、映画を 見たり します。",
+          "en": "On Sundays I play tennis, see a movie and so on."
+        },
+        {
+          "jp": "日曜日は テニスを して、映画を 見ました。",
+          "en": "Last Sunday I played tennis and then saw a movie. (contrast with plain て-form: implies sequence)"
+        }
+      ],
+      "summary": "Vた-form+り、Vた-form+り+します lists representative actions (no fixed order implied), just as や does for nouns (L10) — contrast with plain て-form chaining (16-1), which does imply sequence.",
+      "details": "Directly parallels 10-5's や (representative nouns) but for verbs — and explicitly contrasts with 16-1's て-form chaining, which DOES imply a time sequence. This たり／たり construction breaks that sequence implication, listing activities as loose examples instead.",
+      "tags": [
+        "listing-examples"
+      ]
+    },
+    {
+      "id": "19-4",
+      "title": "い-adj(〜い)→〜く／な-adj[な]→に／N に なります",
+      "structure": "{い-adj(〜い)→〜く／な-adj[な]→に／Nに} なります",
+      "note": "Become...",
+      "meaning": "なります means 'become' and indicates changes in a state or condition.",
+      "explanation": "なります means 'become' and indicates changes in a state or condition.",
+      "examples": [
+        {
+          "jp": "寒い → 寒く なります",
+          "en": "get cold"
+        },
+        {
+          "jp": "元気[な] → 元気に なります",
+          "en": "get well"
+        },
+        {
+          "jp": "25歳 → 25歳に なります",
+          "en": "become 25 years old"
+        }
+      ],
+      "summary": "い-adjective→く, な-adjective/noun→に, both + なります express a change of state ('become cold/well/25 years old').",
+      "details": "This introduces a third adverbial-conversion suffix pattern for adjectives: く for い-adjectives (echoing とても/あまり's degree modification role, but here converting to an adverbial-of-change) and に for な-adjectives/nouns (paralleling でform's で). A clean three-way split worth comparing with 16-2/16-3's くて/で connectives, which use the same い→く / な・N→(に/で) split for a different purpose.",
+      "tags": [
+        "change-of-state"
+      ]
+    },
+    {
+      "id": "19-5",
+      "title": "そうですね",
+      "structure": "そうですね",
+      "note": "Contrast with そうですか (falling intonation) from L2/6.",
+      "meaning": "Used to agree or sympathize with what your conversation partner said.",
+      "explanation": "そうですね is used when you agree or sympathize with what your partner in conversation said. そうですか with a falling intonation is a similar expression to this, but is an expression of one's conviction or exclamation after getting information which was unknown to you, while そうですね is used to express one's agreement or sympathy with one's partner when he/she refers to something you agree with or already know.",
+      "examples": [
+        {
+          "jp": "寒く なりましたね。…そうですね。",
+          "en": "It's got cold, hasn't it? …Yes, it has."
+        }
+      ],
+      "summary": "そうですね agrees/sympathizes with something the listener already shares/knows; そうですか(falling tone) instead marks newly-learned information — a subtle but important pragmatic distinction.",
+      "details": "Directly contrasts with the そうですか covered back in the acknowledgment tag territory (L6-ish そうですか, 'I see') — そうですね requires shared/agreed information, そうですか(↘) marks brand-new information just received. Good candidate for a listening-discrimination drill since intonation is the only surface difference from そうですか(↗)'s confirming-question use.",
+      "tags": [
+        "acknowledgment",
+        "confirmation-seeking"
+      ]
+    }
+  ],
+  "20": [
+    {
+      "id": "20-1",
+      "title": "Polite style and plain style",
+      "structure": "polite style (です／ます) vs. plain style (だ／dictionary, た-form, ない-form)",
+      "meaning": "Japanese has two speech styles: predicates ending in です/ます are the polite style; their plain equivalents are the plain style.",
+      "explanation": "Japanese language has two styles of speech: polite style and plain style. The predicates which are used in polite style sentences and accompanied by either です or ます are called the polite form, while the predicates used in plain style sentences are called the plain form.",
+      "examples": [
+        {
+          "jp": "あした 東京へ 行きます。／あした 東京へ 行く。",
+          "en": "I will go to Tokyo tomorrow. (polite / plain)"
+        },
+        {
+          "jp": "相撲が 好きです。／相撲が 好きだ。",
+          "en": "I like sumo. (polite / plain)"
+        },
+        {
+          "jp": "ドイツへ 行った ことが ありません。／ドイツへ 行った ことが ない。",
+          "en": "I have never been to Germany. (polite / plain)"
+        }
+      ],
+      "summary": "Every sentence has a polite form (です／ます) and a plain form (だ／dictionary-ない-た-forms) — the plain forms are exactly the verb/adjective forms already learned (dictionary form 18-1, ない-form 17-1, た-form 19-1) used as sentence-final predicates instead of building blocks.",
+      "details": "This lesson reveals that all four 'building block' verb forms learned so far (dictionary, ない, て, た) are actually the plain-style equivalents of ます/ました/ません/ませんでした — they were being taught as connectors first, and only now get explicitly named as the plain predicate style. A genuine 'aha' moment worth highlighting.",
+      "tags": [
+        "meta-conjugation",
+        "colloquial"
+      ]
+    },
+    {
+      "id": "20-2",
+      "title": "Proper use of the polite style or the plain style",
+      "structure": "(register selection, no fixed grammar pattern)",
+      "meaning": "The polite style is used with strangers, superiors, and people not close to you; the plain style is used with close friends, colleagues, and family, and is standard in most written work.",
+      "explanation": "The polite style can be used at anytime in any place and to anybody — used most commonly between adults who are not close friends, when talking to someone met for the first time, to superiors, or to people not very close even in a similar age group. The plain style is used with close friends, colleagues and family members. If unsure, it is safer to use the polite style. The plain style is common in written work (newspapers, books, theses, diaries); most letters are written in the polite style.",
+      "examples": [
+        {
+          "jp": "（会話）友達に：元気？　…うん、元気。",
+          "en": "(casual, to a close friend) How are you? …Fine."
+        }
+      ],
+      "summary": "Choose polite style by default (safe with strangers/superiors/not-close acquaintances); reserve plain style for close friends/family, and expect it in most written Japanese except letters.",
+      "details": "A sociolinguistic/register point rather than a new sentence pattern — directly informs when to actually deploy 20-1's plain forms and 20-3's plain-style conversation habits. The 'when in doubt, use polite' guidance is worth remembering as a safety default.",
+      "tags": [
+        "colloquial"
+      ]
+    },
+    {
+      "id": "20-3",
+      "title": "Conversation in the plain style",
+      "structure": "various particle-dropping rules",
+      "note": "Multiple sub-rules: か dropped with rising intonation; だ dropped/softened; other particles often dropped; いる's い often dropped; けど as a casual が.",
+      "meaning": "A set of conversational habits that mark casual plain-style speech: omitting か (using rising intonation instead), omitting/softening だ, dropping certain particles when context is clear, dropping い from ている/でいる, and using けど as a casual equivalent of が.",
+      "explanation": "1) Questions in the plain style generally omit か and end with rising intonation. 2) In noun/な-adjective questions, だ (the plain form of です) is omitted; in an affirmative answer だ can be omitted or softened with a sentence-final particle — women seldom use だ. 3) Particles are often omitted if the meaning is clear from context, but で、に、から、まで、と are not omitted. 4) い of Vて-form いる is often dropped. 5) けど has the same function as が (connecting two sentences, from L8/L14) and is common in conversation.",
+      "examples": [
+        {
+          "jp": "コーヒーを 飲む？（ノ）…うん、飲む。（ゝ）",
+          "en": "Do you want a coffee? …Yes, I do."
+        },
+        {
+          "jp": "ごはん[を] 食べる？",
+          "en": "Will you take a meal?"
+        },
+        {
+          "jp": "辞書、持って[い]る？…うん、持って[い]る。",
+          "en": "Do you have a dictionary? …Yes, I do."
+        },
+        {
+          "jp": "そのカレーライス[は] おいしい？…うん、辛いけど、おいしい。",
+          "en": "Is that curry and rice tasty? …Yes, it's hot but tasty."
+        }
+      ],
+      "summary": "Casual plain-style conversation drops か (rising tone instead), often drops だ, drops most particles except で/に/から/まで/と, drops い from ている, and uses けど as a casual が.",
+      "details": "This ties together several threads: だ is 20-1's plain copula; けど reuses が's connective job from 8-7/14-7 in a more colloquial register; the ている→てる contraction (dropping い) is a very common real-world speech feature. Together, 20-1 through 20-3 form one cohesive 'register' lesson worth reviewing as a unit rather than as separate grammar points.",
+      "tags": [
+        "colloquial"
+      ]
+    }
+  ],
+  "21": [
+    {
+      "id": "21-1",
+      "title": "plain form と 思います",
+      "structure": "plain form と 思います",
+      "note": "I think that...",
+      "meaning": "Indicates the speaker's conjecture or opinion, with と marking the content of the thought.",
+      "explanation": "The ideas or information expressed with おもいます are indicated by the particle と. When expressing conjecture: if the content is negative in nature, make the sentence before と negative. When expressing one's opinion: 〜について どう おもいますか asks someone's opinion (と is not necessary after どう).",
+      "examples": [
+        {
+          "jp": "あした 雨が 降ると 思います。",
+          "en": "I think it will rain tomorrow."
+        },
+        {
+          "jp": "ミラーさんは この ニュースを 知って いますか。…いいえ、たぶん 知らないと 思います。",
+          "en": "Does Mr. Miller know this news? …No, I don't think he does."
+        },
+        {
+          "jp": "新しい 空港に ついて どう 思いますか。…きれいですが、ちょっと 交通が 不便だと 思います。",
+          "en": "What do you think of the new airport? …I think that it is clean but the access to it is not easy."
+        }
+      ],
+      "summary": "Plain form + と + 思います states the speaker's own conjecture/opinion; negative conjecture is expressed by negating the clause before と (not 思いません), and 〜についてどう思いますか asks someone's opinion.",
+      "details": "First major use of the plain form (established in 20-1) inside a larger sentence rather than as a stand-alone predicate — と here marks quoted/reported thought content, foreshadowing 21-2's と言います for quoted speech. Note the important 'negate before と, not the whole sentence' rule for negative conjecture.",
+      "tags": [
+        "conjecture-inference"
+      ]
+    },
+    {
+      "id": "21-2",
+      "title": "\"S\" plain form と 言います",
+      "structure": "\"S\" plain form と 言います",
+      "note": "Say that...",
+      "meaning": "States what someone says/said — と marks quoted content, direct or indirect.",
+      "explanation": "The content expressed with いいます is indicated by the particle と. When quoting directly, repeat exactly what they say (in quotation marks). When quoting indirectly, the plain form is used before と; the tense of the quoted sentence is not affected by the tense of the main sentence.",
+      "examples": [
+        {
+          "jp": "寝る まえに 「お休みなさい」と 言います。",
+          "en": "We say 'Good night' before going to bed."
+        },
+        {
+          "jp": "ミラーさんは 「来週 東京へ 出張します」と 言いました。",
+          "en": "Mr. Miller said 'I will go to Tokyo on a business trip next week.' (direct quote)"
+        },
+        {
+          "jp": "ミラーさんは 来週 東京へ 出張すると 言いました。",
+          "en": "Mr. Miller said that he would go to Tokyo on a business trip next week. (indirect quote)"
+        }
+      ],
+      "summary": "と 言います reports speech — directly (with quotation marks, exact words) or indirectly (plain form before と, tense unaffected by the main sentence's tense).",
+      "details": "Parallels 21-1's と 思います exactly, but for reported speech instead of thought — both use と to mark content before a verb of mental/verbal activity. The direct-vs-indirect quotation distinction is a genuinely new idea worth practicing with both styles side by side.",
+      "tags": [
+        "quotation"
+      ]
+    },
+    {
+      "id": "21-3",
+      "title": "V／い-adj／な-adj／N plain form でしょう？",
+      "structure": "{V／い-adj／な-adj／N} plain form でしょう？",
+      "note": "Rising intonation, confirming shared knowledge.",
+      "meaning": "Used when the speaker expects the listener to share some knowledge and agree with the speaker's view.",
+      "explanation": "When the speaker expects that the listener has some knowledge on the topic being discussed and that the listener will agree with the speaker's view, でしょう is said with a rising intonation to confirm the listener's agreement.",
+      "examples": [
+        {
+          "jp": "あした パーティーに 行くでしょう？…ええ、行きます。",
+          "en": "You are going to the party tomorrow, aren't you? …Yes, I am."
+        },
+        {
+          "jp": "北海道は 寒かったでしょう？…いいえ、そんなに 寒くなかったです。",
+          "en": "It was cold in Hokkaido, wasn't it? …No, it wasn't that cold."
+        }
+      ],
+      "summary": "Plain form + でしょう？(rising tone) seeks the listener's agreement/confirmation on something the speaker assumes they already know — 'right?' / 'wasn't it?'",
+      "details": "This でしょう builds on plain forms (20-1) and functions much like English tag questions ('..., isn't it?'). Distinct from the plain でしょう statement (falling tone, meaning 'probably') that appears without a question mark elsewhere — intonation alone distinguishes the confirmation-seeking use here.",
+      "tags": [
+        "confirmation-seeking"
+      ]
+    },
+    {
+      "id": "21-4",
+      "title": "N1(place)で N2が あります",
+      "structure": "N1(place)で N2が あります",
+      "meaning": "で marks the place where an event (party, concert, festival, incident, disaster) takes place, when N2 means 'to be held/take place.'",
+      "explanation": "When N2 expresses such events as a party, concert, festival, incident, disaster and so on, あります means 'to take place' or 'to be held.'",
+      "examples": [
+        {
+          "jp": "東京で 日本と ブラジルの サッカーの 試合が あります。",
+          "en": "A football game between Japan and Brazil will be held in Tokyo."
+        }
+      ],
+      "summary": "N1(place)で N2(event)が あります states that an event is held/takes place at a location — a special event-related meaning of あります distinct from its plain existence meaning (10-1).",
+      "details": "Reuses で as place-of-action (established in 6-5, contrasted with に as place-of-existence in 10-2) — here で marks where an event happens, and あります itself takes on the special 'be held/take place' sense rather than its usual 'exist' meaning from 10-1.",
+      "tags": [
+        "existence-location"
+      ]
+    },
+    {
+      "id": "21-5",
+      "title": "N(occasion)で",
+      "structure": "N(occasion)で",
+      "meaning": "で marks the occasion on which some action takes place.",
+      "explanation": "When some action takes place on a certain occasion, that occasion is followed by で.",
+      "examples": [
+        {
+          "jp": "会議で 何か 意見を 言いましたか。",
+          "en": "Did you give your opinion at the meeting?"
+        }
+      ],
+      "summary": "で after an occasion-noun (会議で, パーティーで) marks the setting/occasion in which an action occurs.",
+      "details": "Yet another job for で, alongside place-of-action (6-5) and tool/means (7-1) — で keeps accumulating uses across the course; worth maintaining a running list of で's jobs (place, means, occasion, and connective from 16-3) as a single reference.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "21-6",
+      "title": "N でも V",
+      "structure": "N でも V",
+      "meaning": "でも gives an example out of things of the same kind, used when encouraging, advising, or suggesting.",
+      "explanation": "でも is used to give an example out of things of the same kind (drinks, in the example) when one encourages or advises someone to do something or when one makes a suggestion.",
+      "examples": [
+        {
+          "jp": "ちょっと ビールでも 飲みませんか。",
+          "en": "Shall we drink beer or something?"
+        }
+      ],
+      "summary": "Nでも V softens a suggestion by presenting N as just one example from a category ('beer or something'), rather than a strict demand.",
+      "details": "A pragmatically softening use of でも, distinct from its more common 'even' meaning — worth flagging since でも here doesn't mean 'even beer' but rather 'beer, for example (among other options).'",
+      "tags": [
+        "listing-examples"
+      ]
+    },
+    {
+      "id": "21-7",
+      "title": "Vない-formないと……",
+      "structure": "Vない-formないと……",
+      "note": "Abbreviated form of ないといけません; similar to なければなりません (17-3).",
+      "meaning": "An abbreviated obligation expression, formed by omitting いけません from Vない-formないといけません.",
+      "explanation": "This expression is made by omitting いけません from Vない-form ないと いけません. Vない-form ないと いけません is similar to Vない-form なければ なりません which you learned in Lesson 17.",
+      "examples": [
+        {
+          "jp": "もう 帰らないと……。",
+          "en": "I have to go home now."
+        }
+      ],
+      "summary": "Vない-form + ないと (trailing off, いけません omitted) is a casual, abbreviated way of saying 'must,' equivalent in meaning to 17-3's なければなりません.",
+      "details": "A colloquial shortening that reuses 17-1's ない-form and echoes 17-3's なければなりません obligation meaning — the sentence is left deliberately incomplete (trailing with ……), a natural conversational habit worth noting as distinct from a grammatical error.",
+      "tags": [
+        "obligation-necessity",
+        "colloquial"
+      ]
+    }
+  ],
+  "22": [
+    {
+      "id": "22-1",
+      "title": "Noun modification",
+      "structure": "modifier + N",
+      "note": "Review: single word/phrase modifiers, from L2 and L8.",
+      "meaning": "Recaps that whatever modifies a noun — word or sentence — always precedes it in Japanese.",
+      "explanation": "You learned how to modify nouns in Lesson 2 (ミラーさんの うち) and Lesson 8 (新しい うち, きれいな うち). In Japanese, whatever modifies a word, whether it's a word or a sentence, always comes before the word to be modified.",
+      "examples": [
+        {
+          "jp": "ミラーさんの うち",
+          "en": "Mr. Miller's house"
+        },
+        {
+          "jp": "新しい うち",
+          "en": "a new house"
+        },
+        {
+          "jp": "きれいな うち",
+          "en": "a beautiful house"
+        }
+      ],
+      "summary": "Simple noun modification (N の N, い-adjective N, な-adjective な N) always places the modifier before the noun — this lesson extends the principle to whole sentences (22-2).",
+      "details": "A deliberate recap tying together 8-3 (adjective+noun) and the possessive の from L2, setting up 22-2's much bigger leap: a full sentence, not just a word, modifying a noun the same way.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "22-2",
+      "title": "Noun modification by sentences",
+      "structure": "[sentence, plain form] + N",
+      "meaning": "A relative clause (whole sentence in plain form) can modify a noun, just like a single adjective — な-adjective だ→な, noun だ→の in this position.",
+      "explanation": "The predicate of the sentence which modifies a noun is in the plain form. In the case of な-adjective sentences, 〜だ becomes 〜な; in noun sentences 〜だ becomes 〜の. Nouns which are elements of the sentence (object, place, indirect object) can also be modified by relativizing around them — the particles を、で、に attached to them become unnecessary. The noun modified by such a sentence can be used in various parts of a larger sentence.",
+      "examples": [
+        {
+          "jp": "京都へ 行った 人",
+          "en": "a person who went to Kyoto"
+        },
+        {
+          "jp": "背が 高くて、髪が 黒い 人",
+          "en": "a person who is tall and has black hair"
+        },
+        {
+          "jp": "わたしは 先週 映画を 見ました → わたしが 先週 見た 映画",
+          "en": "I saw a movie last week → the movie that I saw last week"
+        },
+        {
+          "jp": "これは ミラーさんが 住んで いた うちです。",
+          "en": "This is the house where Mr. Miller lived."
+        }
+      ],
+      "summary": "A whole clause in plain form can precede and modify a noun like a relative clause ('the movie [that] I saw', 'the house where Mr. Miller lived'); な-adjective/noun predicates take な/の instead of だ, and the relativized noun's original particle (を/で/に) is dropped.",
+      "details": "This is the single biggest new structure in Book 1 — relative clauses. It directly depends on the plain forms established in 20-1 (だ→な/の adjustment for nouns/な-adjectives) and reuses 22-3's が for the subject inside the modifying clause. Worth extensive drilling since English speakers instinctively want a relative pronoun (like 'that'/'which') that Japanese simply omits.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "22-3",
+      "title": "Nが (subject of a modifying sentence)",
+      "structure": "Nが V／adjective, inside a noun-modifying clause",
+      "meaning": "When a sentence modifies a noun, the subject within that modifying sentence is marked with が (not は).",
+      "explanation": "When a sentence modifies a noun, the subject in the sentence is indicated by が.",
+      "examples": [
+        {
+          "jp": "ミラーさんは ケーキを 作りました。→ これは ミラーさんが 作った ケーキです。",
+          "en": "Mr. Miller baked a cake. → This is the cake which Mr. Miller baked."
+        },
+        {
+          "jp": "わたしは カリナさんが かいた 絵が 好きです。",
+          "en": "I like the picture that Ms. Karina drew."
+        },
+        {
+          "jp": "[あなたは] 彼が 生まれた 所を 知って いますか。",
+          "en": "Do you know the place where he was born?"
+        }
+      ],
+      "summary": "Inside a relative (noun-modifying) clause, the subject always takes が, even though it would take は as the topic of a standalone sentence.",
+      "details": "This is a critical companion rule to 22-2: when a full sentence like ミラーさんは…作りました becomes a modifier (ミラーさんが作った), は switches to が. This は→が shift inside subordinate clauses echoes the same subject-marking rule already seen for subordinate clauses with から (16-4) and will recur with とき (23-1) and other conditionals.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "22-4",
+      "title": "V dictionary form 時間／約束／用事",
+      "structure": "V dictionary form + 時間／約束／用事",
+      "meaning": "Puts the dictionary form of an action before じかん/やくそく/ようじ to express the time for, arrangement for, or thing to do regarding that action.",
+      "explanation": "When expressing the time for doing some activity, put the dictionary form of the action before じかん. You can also say the content of the arrangement (appointment) by putting the dictionary form of that action before やくそく, etc.",
+      "examples": [
+        {
+          "jp": "わたしは 朝ごはんを 食べる 時間が ありません。",
+          "en": "I have no time to eat breakfast."
+        },
+        {
+          "jp": "わたしは 友達と 映画を 見る 約束が あります。",
+          "en": "I have an arrangement to see a movie with a friend of mine."
+        },
+        {
+          "jp": "きょうは 市役所へ 行く 用事が あります。",
+          "en": "I have something to do at the city hall today."
+        }
+      ],
+      "summary": "V dictionary form directly modifies 時間/約束/用事 (time/appointment/errand) as a noun-modifying clause, specifying what the time/appointment/errand is for.",
+      "details": "A specific, very useful application of 22-2's noun-modification-by-sentence pattern — this is exactly the same relative-clause mechanism, just restricted to a small set of practical nouns (時間, 約束, 用事) that describe scheduled activities.",
+      "tags": [
+        "particle-usage"
+      ]
+    }
+  ],
+  "23": [
+    {
+      "id": "23-1",
+      "title": "V dictionary form／Vない-form／い-adj／な-adjな／Nの とき、〜",
+      "structure": "{V dictionary form／Vない-form／い-adj(〜い)／な-adjな／Nの} とき、〜",
+      "note": "When..., ...",
+      "meaning": "とき connects two sentences, expressing the time when the state or action in the main sentence exists/occurs; the modifying forms match noun-modification rules.",
+      "explanation": "とき connects two sentences and expresses the time when the state or action described in the main sentence exists or occurs. As shown in noun-modification rules, the forms of verbs, い-adjectives, な-adjectives and nouns connected to とき are the same as the forms when modifying nouns. The tense of adjective sentences and noun sentences which modify とき is not affected by the tense of the main sentence.",
+      "examples": [
+        {
+          "jp": "図書館で 本を 借りる とき、カードが 要ります。",
+          "en": "When you borrow books from the library, you need a card."
+        },
+        {
+          "jp": "暇な とき、うちへ 遊びに 来ませんか。",
+          "en": "Won't you come to my place when you are free?"
+        },
+        {
+          "jp": "子どもの とき、よく 川で 泳ぎました。",
+          "en": "I used to swim in a river when I was a child."
+        }
+      ],
+      "summary": "とき ('when') attaches after the same plain/modifying forms used for noun modification (22-2) — い-adjective plain, な-adjective+な, noun+の, verb dictionary/ない-form — and its own tense is independent of the main clause's tense for adjective/noun とき-clauses.",
+      "details": "This directly reuses the noun-modification forms just established in 22-1/22-2 (だ→な/の for nouns and な-adjectives) — とき is essentially treated as a noun being modified by the preceding clause ('at the time that...'), which is why the same modification rules apply.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "id": "23-2",
+      "title": "V dictionary form／Vた-form とき、〜",
+      "structure": "{V dictionary form／Vた-form} とき、〜",
+      "note": "Dictionary form = not yet completed; た-form = already completed.",
+      "meaning": "Whether とき is preceded by the dictionary form or the た-form of a verb changes whether the action is non-completed or completed at the time referred to.",
+      "explanation": "When the dictionary form of the predicate is put before とき it indicates the non-completion of the action, and when the た-form of the predicate is put before とき it indicates the completion of the action.",
+      "examples": [
+        {
+          "jp": "国へ 帰る とき、かばんを 買いました。",
+          "en": "I bought a bag when I went back to my country. (before returning — bought abroad)"
+        },
+        {
+          "jp": "国へ 帰った とき、かばんを 買いました。",
+          "en": "I bought a bag when I went back to my country. (after returning — bought at home)"
+        }
+      ],
+      "summary": "Vとき uses dictionary form when the とき-verb's action is NOT YET completed at the reference time, and た-form when it IS already completed — the same verb pair can produce two different real-world meanings.",
+      "details": "A subtle but important refinement of 23-1's とき for verbs specifically — this dictionary-form/た-form contrast doesn't exist for adjectives or nouns in とき-clauses (per 23-1's note that those aren't tense-sensitive), making verb-とき uniquely two-directional. Worth a dedicated comprehension exercise contrasting both readings of the identical example sentence.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "id": "23-3",
+      "title": "V dictionary form と、〜",
+      "structure": "V dictionary form と、〜",
+      "note": "..., then (inevitably)...",
+      "meaning": "Connects sentences where, as a result of a certain action, another action or matter inevitably happens; will/hope/invitation/request cannot follow.",
+      "explanation": "When expressing the situation where, as a result of a certain action, another action or matter inevitably happens, と is used to connect the sentences. Expressions of one's will, hope, invitation or request cannot be used in the sentence which follows 〜と (use 〜たら, Lesson 25, instead).",
+      "examples": [
+        {
+          "jp": "このボタンを 押すと、お釣りが 出ます。",
+          "en": "Press this button, and the change will come out."
+        },
+        {
+          "jp": "これを 回すと、音が 大きく なります。",
+          "en": "Turn this, and the volume will go up."
+        },
+        {
+          "jp": "右へ 曲がると、郵便局が あります。",
+          "en": "Turn to the right, and you will find the post office."
+        }
+      ],
+      "summary": "V dictionary form + と, ~ states an inevitable/mechanical result ('if/when you do X, Y automatically follows') — cannot be followed by will, hope, invitation, or request (use たら from L25 for those instead).",
+      "details": "This is a different と from 21-1/21-2's quotation-marking と — here と functions as a conditional connective for mechanical/inevitable cause-effect. The restriction against will/hope/invitation/request previews 25-1's たら, which will be needed for exactly those cases — worth flagging this forward reference clearly since it's easy to reach for と in the wrong context.",
+      "tags": [
+        "conditional"
+      ]
+    },
+    {
+      "id": "23-4",
+      "title": "Nが adjective／V (state or scene as it is)",
+      "structure": "Nが adjective／V",
+      "note": "Extends the natural-phenomenon が rule (14-8) to any state/scene description.",
+      "meaning": "When describing a state or scene as it is (not just natural phenomena), the subject is also indicated by が.",
+      "explanation": "You learned in Lesson 14 that the subject is indicated by が when describing a natural phenomenon. When describing a state or a scene as it is, the subject is also indicated by が.",
+      "examples": [
+        {
+          "jp": "音が 小さいです。",
+          "en": "The volume is low."
+        },
+        {
+          "jp": "電気が 明るく なりました。",
+          "en": "The light became brighter."
+        },
+        {
+          "jp": "このボタンを 押すと、切符が 出ます。",
+          "en": "Press this button, and a ticket will come out."
+        }
+      ],
+      "summary": "が marks the subject not only for natural phenomena (14-8) but for any plain description of a state or scene as it presents itself — a broadening of the same underlying rule.",
+      "details": "Direct extension of 14-8 (雨が降っています) — the rule generalizes from weather specifically to any observed state/scene (音が小さい, 電気が明るくなりました), reinforcing が's role for 'new information being reported/observed' rather than は's role for 'topic already under discussion.'",
+      "tags": [
+        "spontaneous-perception"
+      ]
+    },
+    {
+      "id": "23-5",
+      "title": "N(place)を V(verb of movement)",
+      "structure": "N(place)を V(verb of movement)",
+      "meaning": "を marks the place a person or thing passes through/along, used with verbs of movement (さんぽします, わたります, あるきます, etc.).",
+      "explanation": "The particle を is used to denote the place where a person or a thing passes. The verb of movement such as さんぽします、わたります、あるきます、etc. are used in this pattern.",
+      "examples": [
+        {
+          "jp": "公園を 散歩します。",
+          "en": "I take a walk in the park. (L.13)"
+        },
+        {
+          "jp": "道を 渡ります。",
+          "en": "I cross the road."
+        },
+        {
+          "jp": "交差点を 右へ 曲がります。",
+          "en": "I turn to the right at the intersection."
+        }
+      ],
+      "summary": "を after a place noun, with a movement verb (歩く, 渡る, 散歩する, 曲がる), marks the path/route being traversed — a third role for を beyond direct object (6-1) and departure point (13-4).",
+      "details": "This is yet another job for を, joining 6-1 (direct object) and 13-4 (departure point, でます/おります) — を's overall pattern across the book is: direct object, point of departure, and now path traversed. Good candidate for a summary review of を's several distinct roles.",
+      "tags": [
+        "particle-usage",
+        "direction-movement"
+      ]
+    }
+  ],
+  "24": [
+    {
+      "id": "24-1",
+      "title": "くれます",
+      "structure": "くれます",
+      "meaning": "Used when somebody else gives something to the speaker or the speaker's family — あげます cannot be used in this direction.",
+      "explanation": "You learned that あげます means 'give' in Lesson 7. This verb cannot be used when somebody else gives something to the speaker or the speaker's family, etc. (×さとうさんは わたしに クリスマスカードを あげました is wrong). In this case くれます is used.",
+      "examples": [
+        {
+          "jp": "わたしは 佐藤さんに 花を あげました。",
+          "en": "I gave flowers to Ms. Sato."
+        },
+        {
+          "jp": "佐藤さんは わたしに クリスマスカードを くれました。",
+          "en": "Ms. Sato gave me a Christmas card."
+        },
+        {
+          "jp": "佐藤さんは 妹に お菓子を くれました。",
+          "en": "Ms. Sato gave candies to my younger sister."
+        }
+      ],
+      "summary": "くれます means 'give,' used specifically when someone else gives something TO the speaker (or the speaker's in-group) — あげます (7-3) cannot be used in that direction.",
+      "details": "Completes the giving/receiving verb family alongside 7-3's あげます (I give to others) and 7-4's もらいます (I receive from others) — くれます fills the missing direction: someone else gives to me. The three verbs together (あげる/もらう/くれる) form the core of Japanese's perspective-sensitive giving-verb system.",
+      "tags": [
+        "giving-receiving"
+      ]
+    },
+    {
+      "id": "24-2",
+      "title": "Vて-form あげます／もらいます／くれます",
+      "structure": "Vて-form {あげます／もらいます／くれます}",
+      "meaning": "Extends the giving/receiving verbs to actions (not just things) — 'do something for someone,' with a sense of goodwill or gratitude, and different subject/register implications per verb.",
+      "explanation": "あげます、もらいます and くれます also refer to giving and receiving of actions, indicating who is doing the act for whom, expressing goodwill or gratitude. Vて-form あげます: the speaker does something for somebody with goodwill — but can sound patronizing directed at someone not close/senior, so Vます-form ましょうか (14-6) is preferred there. Vて-form もらいます: conveys gratitude from the receiver's viewpoint (the receiver is the subject). Vて-form くれます: conveys gratitude too, but the actor (subject) voluntarily takes the action — often the speaker is the (omitted) receiver.",
+      "examples": [
+        {
+          "jp": "わたしは 木村さんに 本を 貸して あげました。",
+          "en": "I lent Ms. Kimura a book."
+        },
+        {
+          "jp": "わたしは 山田さんに 図書館の 電話番号を 教えて もらいました。",
+          "en": "Mr. Yamada told me the telephone number of the library."
+        },
+        {
+          "jp": "母は [わたしに] セーターを 送って くれました。",
+          "en": "My mother sent me a sweater."
+        }
+      ],
+      "summary": "Vて-form + あげます/もらいます/くれます extends giving-verb logic to actions done for someone: あげます (I act for someone — avoid with non-close/superiors, prefer ましょうか instead), もらいます (I receive an action, gratitude from receiver's view), くれます (someone else voluntarily acts for me, often with わたしに omitted).",
+      "details": "This directly extends 24-1's くれます (and 7-3/7-4's あげます/もらいます) from concrete objects to abstract actions via the て-form — the register warning about あげます sounding patronizing is an important pragmatic note, tying back to 14-6's ましょうか as the safer alternative in that situation.",
+      "tags": [
+        "giving-receiving"
+      ]
+    },
+    {
+      "id": "24-3",
+      "title": "N(person)が V",
+      "structure": "N(person)が V",
+      "note": "が introduces new information about who did something, in response to a topic already raised.",
+      "meaning": "The subject of a sentence giving new information (in response to a raised topic) is indicated by が.",
+      "explanation": "You present a topic (e.g. commenting on a tie); your partner's response gives a piece of information on the topic which is unknown to you — the subject of the sentence giving that new information is indicated by が.",
+      "examples": [
+        {
+          "jp": "すてきな ネクタイですね。…ええ、佐藤さんが くれました。",
+          "en": "That's a nice tie, isn't it? …Yes. Ms. Sato gave it to me."
+        }
+      ],
+      "summary": "When a response supplies new information about who did something (in reply to an observation/topic already raised), that subject takes が, not は.",
+      "details": "Reinforces the recurring theme across the course that が marks new/unknown information while は marks an established topic — this specific conversational pattern (comment → が-marked answer revealing the actor) is a natural, frequent real-life usage worth roleplaying.",
+      "tags": [
+        "particle-usage"
+      ]
+    },
+    {
+      "id": "24-4",
+      "title": "Interrogative が V",
+      "structure": "Interrogative が V",
+      "meaning": "When the subject of a verb sentence is questioned, it is marked with が, same as for あります/います (L10) and adjective sentences (L12).",
+      "explanation": "You learned that when the subject is questioned, it is indicated by が in あります/います sentences (Lesson 10) and adjective sentences (Lesson 12). This is also the case for verb sentences.",
+      "examples": [
+        {
+          "jp": "だれが 手伝いに 行きますか。…カリナさんが 行きます。",
+          "en": "Who will go to give him a hand? …Ms. Karina will."
+        }
+      ],
+      "summary": "An interrogative subject (だれが, 何が) always takes が, whether the sentence is あります/います (10-2), an adjective sentence (12-5), or, as confirmed here, an ordinary verb sentence.",
+      "details": "A tidy closing generalization: this rule was introduced piecemeal in 10-2 (existence) and 12-5 (superlative/adjective) and is now confirmed to apply universally to verb sentences too — good to state explicitly as 'interrogative subjects always take が' as a single memorizable rule covering all three cases.",
+      "tags": [
+        "particle-usage"
+      ]
+    }
+  ],
+  "25": [
+    {
+      "id": "25-1",
+      "title": "plain past form ら、〜",
+      "structure": "plain past form + ら、〜",
+      "note": "If...",
+      "meaning": "Attaching ら to the past tense plain form changes the preceding clause into a conditional expression, used for opinion/situation/request.",
+      "explanation": "When ら is attached to the past tense plain form of verbs, adjectives, etc., it changes the preceding clause into a conditional expression. When a speaker wants to state his opinion, situation, request, etc., in the conditional, this pattern is used.",
+      "examples": [
+        {
+          "jp": "お金が あったら、旅行します。",
+          "en": "If I had money, I would travel."
+        },
+        {
+          "jp": "時間が なかったら、テレビを 見ません。",
+          "en": "If I don't have time, I will not watch TV."
+        },
+        {
+          "jp": "暇だったら、手伝って ください。",
+          "en": "If you are free, please give me a hand."
+        }
+      ],
+      "summary": "Plain past form + ら creates a conditional ('if...') usable for hypotheticals, real conditions, and requests — a general-purpose conditional distinct from 23-3's と.",
+      "details": "This is the たら-conditional promised as the alternative back in 23-3, specifically for cases と cannot handle: will, hope, invitation, and request. Formed from the plain past (た/だった) + ら, it reuses 19-1's た-form and 20-1's plain forms as its base.",
+      "tags": [
+        "conditional"
+      ]
+    },
+    {
+      "id": "25-2",
+      "title": "Vた-formら、〜",
+      "structure": "Vた-formら、〜",
+      "note": "When.../After...",
+      "meaning": "Expresses that an action will be done, or a situation will appear, once a matter/action/state that is sure to happen has been completed — the main sentence is always present tense.",
+      "explanation": "This pattern is used to express that a certain action will be done or a certain situation will appear when a matter, action or state which is sure to happen in the future has been completed or achieved. The main sentence is always in the present tense.",
+      "examples": [
+        {
+          "jp": "10時に なったら、出かけましょう。",
+          "en": "Let's go out when it gets to ten."
+        },
+        {
+          "jp": "うちへ 帰ったら、すぐ シャワーを 浴びます。",
+          "en": "I take a shower soon after I return home."
+        }
+      ],
+      "summary": "Vた-form + ら ('when/after...') describes a certain-to-happen future trigger before the main (always present-tense) action — a second job for the same たら form as 25-1's hypothetical 'if.'",
+      "details": "Same surface form as 25-1 but a different flavor: 25-1 is used for genuinely uncertain hypotheticals (if I had money...), while this usage assumes the triggering event WILL happen and just marks its sequencing (when it happens, then...) — closer to 16-4's てから (after completing X) but usable with future/certain events specifically.",
+      "tags": [
+        "conditional",
+        "time-relative"
+      ]
+    },
+    {
+      "id": "25-3",
+      "title": "Vて-form／い-adj(〜い)→〜くて／な-adj[な]→で／Nで も、〜",
+      "structure": "{Vて-form／い-adjくて／な-adjで／Nで} も、〜",
+      "note": "Even if...",
+      "meaning": "Presents a reverse condition — an action/event expected to happen naturally doesn't materialize, or something turns out opposite to what's socially expected.",
+      "explanation": "This expression is used to present a reverse condition. Contrary to plain past form ら、〜, this expression is used when an action which is expected to be taken or an event which is expected to happen naturally under the given circumstances does not materialize, or a thing turns out in a way opposite to a socially accepted idea.",
+      "examples": [
+        {
+          "jp": "雨が 降っても、洗濯します。",
+          "en": "Even if it rains, I'll do the laundry."
+        },
+        {
+          "jp": "安くても、わたしは グループ旅行が 嫌いです。",
+          "en": "Even if group tours are inexpensive, I don't like them."
+        },
+        {
+          "jp": "便利でも、パソコンを 使いません。",
+          "en": "Even if a personal computer is useful, I won't use it."
+        },
+        {
+          "jp": "日曜日でも、働きます。",
+          "en": "Even if it is Sunday, I will work."
+        }
+      ],
+      "summary": "Vて-form／い-adjくて／な-adjで／Nで + も = 'even if/even though' — a reverse-condition counterpart to 25-1's たら, using the て-form/くて/で connectives from 16-1/16-2/16-3 plus も.",
+      "details": "Directly reuses the three connective forms taught in 16-1 (て-form), 16-2 (くて), and 16-3 (で) — simply adding も converts 'and' into 'even if/even though.' A clean payoff for having learned those three connectives earlier, and a natural point to review them as a set.",
+      "tags": [
+        "concession-contrast"
+      ]
+    },
+    {
+      "id": "25-4",
+      "title": "もし and いくら",
+      "structure": "もし + [〜たら] ／ いくら + [〜ても]",
+      "meaning": "もし signals in advance that the sentence will present a たら-condition, emphasizing the speaker's supposition; いくら signals in advance a ても-condition, emphasizing the degree of conditionality.",
+      "explanation": "もし is used in a sentence in the plain past form to indicate beforehand that the sentence is going to present a condition, while いくら is used with 〜ても(〜でも) to do the same. もし implies that an emphasis is on the speaker's supposition while いくら is meant to stress the degree of conditionality.",
+      "examples": [
+        {
+          "jp": "もし 1億円 あったら、いろいろな 国を 旅行したいです。",
+          "en": "If I had 100 million yen, I would want to travel in various countries."
+        },
+        {
+          "jp": "いくら 考えても、わかりません。",
+          "en": "No matter how much I think, I can't understand this."
+        },
+        {
+          "jp": "いくら 高くても、買います。",
+          "en": "No matter how expensive it is, I will buy it."
+        }
+      ],
+      "summary": "もし pairs with 25-1's たら to flag a hypothetical supposition up front ('if, hypothetically...'); いくら pairs with 25-3's ても to flag an extreme-degree concession up front ('no matter how much...').",
+      "details": "These are forward-signaling adverbs for the two conditional forms just taught (25-1's たら and 25-3's ても) — もし+たら and いくら+ても are essentially fixed collocations worth memorizing as pairs rather than separately.",
+      "tags": [
+        "conditional",
+        "degree-extent"
+      ]
+    },
+    {
+      "id": "25-5",
+      "title": "Nが (subject of a subordinate clause)",
+      "structure": "Nが, inside a たら／ても／とき／まえに-clause",
+      "note": "Generalizes the subordinate-clause-subject-が rule across から(16-4)、とき(23-1)、たら/ても(25-1/3).",
+      "meaning": "The subject of a subordinate clause is indicated by が, as established for から back in Lesson 16.",
+      "explanation": "As mentioned in Lesson 16, 4 [Note], the subject of a subordinate clause is indicated by が. In subordinate clauses using たら、ても、とき、と、まえに、etc., in addition to から, the subject is indicated by が, as shown below.",
+      "examples": [
+        {
+          "jp": "友達が 来る まえに、部屋を 掃除します。",
+          "en": "I will clean my room before my friends come. (L.18)"
+        },
+        {
+          "jp": "妻が 病気の とき、会社を 休みます。",
+          "en": "When my wife is sick, I take a day off work. (L.23)"
+        },
+        {
+          "jp": "友達が 約束の 時間に 来なかったら、どう しますか。",
+          "en": "If your friend doesn't come on time, what will you do? (L.25)"
+        }
+      ],
+      "summary": "が marks the subject inside ANY subordinate clause — から(16-4), とき(23-1), と(23-3), まえに(18-4), たら/ても(25-1/25-3) — a single unifying rule for a pattern seen piecemeal across many lessons.",
+      "details": "This is the course's own explicit summary of a rule that has been quietly appearing since 16-4 — a good final checkpoint to consolidate: whenever a clause is subordinate (attached before から/とき/と/まえに/たら/ても), its subject takes が even if the same sentence standing alone would use は.",
+      "tags": [
+        "particle-usage"
+      ]
+    }
   ]
 }

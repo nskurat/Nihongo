@@ -4375,5 +4375,2437 @@
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A3%B2%23kanji"
     }
+  ],
+  "16": [
+    {
+      "id": "16-k-1",
+      "kanji": "明",
+      "onyomi": [
+        "メイ",
+        "ミョウ"
+      ],
+      "kunyomi": [
+        "あか.るい",
+        "あき.らか",
+        "あ.ける",
+        "あ.く",
+        "あ.くる",
+        "あ.かす"
+      ],
+      "meaning": "bright, light, clear",
+      "strokes": 8,
+      "radical": "日 (sun)",
+      "compounds": [
+        {
+          "word": "明るい",
+          "reading": "あかるい",
+          "meaning": "bright, light, clear"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%98%8E%23kanji"
+    },
+    {
+      "id": "16-k-2",
+      "kanji": "暗",
+      "onyomi": [
+        "アン"
+      ],
+      "kunyomi": [
+        "くら.い"
+      ],
+      "meaning": "dark, dim",
+      "strokes": 13,
+      "radical": "日 (sun)",
+      "compounds": [
+        {
+          "word": "暗い",
+          "reading": "くらい",
+          "meaning": "dark, dim"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%9A%97%23kanji"
+    },
+    {
+      "id": "16-k-3",
+      "kanji": "長",
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "なが.い"
+      ],
+      "meaning": "long; chief, head",
+      "strokes": 8,
+      "radical": "長 (long)",
+      "compounds": [
+        {
+          "word": "長い",
+          "reading": "ながい",
+          "meaning": "long"
+        },
+        {
+          "word": "社長",
+          "reading": "しゃちょう",
+          "meaning": "president of a company"
+        },
+        {
+          "word": "部長",
+          "reading": "ぶちょう",
+          "meaning": "manager, department chief"
+        },
+        {
+          "word": "学長",
+          "reading": "がくちょう",
+          "meaning": "president of a university"
+        },
+        {
+          "word": "校長",
+          "reading": "こうちょう",
+          "meaning": "principal"
+        },
+        {
+          "word": "駅長",
+          "reading": "えきちょう",
+          "meaning": "station master"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%95%B7%23kanji"
+    },
+    {
+      "id": "16-k-4",
+      "kanji": "短",
+      "onyomi": [
+        "タン"
+      ],
+      "kunyomi": [
+        "みじか.い"
+      ],
+      "meaning": "short",
+      "strokes": 12,
+      "radical": "矢 (arrow)",
+      "compounds": [
+        {
+          "word": "短い",
+          "reading": "みじかい",
+          "meaning": "short"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%9F%AD%23kanji"
+    },
+    {
+      "id": "16-k-5",
+      "kanji": "目",
+      "onyomi": [
+        "モク",
+        "ボク"
+      ],
+      "kunyomi": [
+        "め",
+        "ま"
+      ],
+      "meaning": "eye",
+      "strokes": 5,
+      "radical": "目 (eye)",
+      "compounds": [
+        {
+          "word": "目",
+          "reading": "め",
+          "meaning": "eye"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%9B%AE%23kanji"
+    },
+    {
+      "id": "16-k-6",
+      "kanji": "足",
+      "onyomi": [
+        "ソク"
+      ],
+      "kunyomi": [
+        "あし",
+        "た.りる",
+        "た.る",
+        "た.す"
+      ],
+      "meaning": "leg, foot; to be sufficient",
+      "strokes": 7,
+      "radical": "足 (foot)",
+      "compounds": [
+        {
+          "word": "足",
+          "reading": "あし",
+          "meaning": "foot, leg"
+        },
+        {
+          "word": "右足",
+          "reading": "みぎあし",
+          "meaning": "right foot/leg"
+        },
+        {
+          "word": "左足",
+          "reading": "ひだりあし",
+          "meaning": "left foot/leg"
+        },
+        {
+          "word": "足ります",
+          "reading": "たります",
+          "meaning": "be sufficient"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%B6%B3%23kanji"
+    }
+  ],
+  "17": [
+    {
+      "id": "17-k-1",
+      "kanji": "広",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [
+        "ひろ.い",
+        "ひろ.まる",
+        "ひろ.める",
+        "ひろ.がる",
+        "ひろ.げる"
+      ],
+      "meaning": "spacious, wide, broad",
+      "strokes": 5,
+      "radical": "广 (dotted cliff)",
+      "compounds": [
+        {
+          "word": "広い",
+          "reading": "ひろい",
+          "meaning": "spacious, wide, broad"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%BA%83%23kanji"
+    },
+    {
+      "id": "17-k-2",
+      "kanji": "多",
+      "onyomi": [
+        "タ"
+      ],
+      "kunyomi": [
+        "おお.い"
+      ],
+      "meaning": "a lot, plenty",
+      "strokes": 6,
+      "radical": "夕 (evening)",
+      "compounds": [
+        {
+          "word": "多い",
+          "reading": "おおい",
+          "meaning": "a lot, plenty"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A4%9A%23kanji"
+    },
+    {
+      "id": "17-k-3",
+      "kanji": "少",
+      "onyomi": [
+        "ショウ"
+      ],
+      "kunyomi": [
+        "すく.ない",
+        "すこ.し"
+      ],
+      "meaning": "a little, a few, a bit",
+      "strokes": 4,
+      "radical": "小 (small)",
+      "compounds": [
+        {
+          "word": "少ない",
+          "reading": "すくない",
+          "meaning": "a little, a few, scarce"
+        },
+        {
+          "word": "少し",
+          "reading": "すこし",
+          "meaning": "a little, a few, a bit"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%B0%91%23kanji"
+    },
+    {
+      "id": "17-k-4",
+      "kanji": "悪",
+      "onyomi": [
+        "アク",
+        "オ"
+      ],
+      "kunyomi": [
+        "わる.い"
+      ],
+      "meaning": "bad, wicked, wrong, harmful",
+      "strokes": 11,
+      "radical": "心 (heart)",
+      "compounds": [
+        {
+          "word": "悪い",
+          "reading": "わるい",
+          "meaning": "bad, wicked, wrong, harmful"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%82%AA%23kanji"
+    },
+    {
+      "id": "17-k-5",
+      "kanji": "重",
+      "onyomi": [
+        "ジュウ",
+        "チョウ"
+      ],
+      "kunyomi": [
+        "おも.い",
+        "かさ.ねる",
+        "かさ.なる"
+      ],
+      "meaning": "heavy",
+      "strokes": 9,
+      "radical": "里 (village)",
+      "compounds": [
+        {
+          "word": "重い",
+          "reading": "おもい",
+          "meaning": "heavy"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%87%8D%23kanji"
+    },
+    {
+      "id": "17-k-6",
+      "kanji": "軽",
+      "onyomi": [
+        "ケイ"
+      ],
+      "kunyomi": [
+        "かる.い",
+        "かろ.やか"
+      ],
+      "meaning": "light, handy",
+      "strokes": 12,
+      "radical": "車 (vehicle)",
+      "compounds": [
+        {
+          "word": "軽い",
+          "reading": "かるい",
+          "meaning": "light, handy"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%BB%BD%23kanji"
+    },
+    {
+      "id": "17-k-7",
+      "kanji": "早",
+      "onyomi": [
+        "ソウ",
+        "サッ"
+      ],
+      "kunyomi": [
+        "はや.い",
+        "はや.める",
+        "はや.まる"
+      ],
+      "meaning": "early",
+      "strokes": 6,
+      "radical": "日 (sun)",
+      "compounds": [
+        {
+          "word": "早い",
+          "reading": "はやい",
+          "meaning": "early"
+        },
+        {
+          "word": "早く",
+          "reading": "はやく",
+          "meaning": "early, quickly"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%97%A9%23kanji"
+    }
+  ],
+  "18": [
+    {
+      "id": "18-k-1",
+      "kanji": "便",
+      "onyomi": [
+        "ベン",
+        "ビン"
+      ],
+      "kunyomi": [
+        "たよ.り"
+      ],
+      "meaning": "convenience, mail, post",
+      "strokes": 9,
+      "radical": "人/亻 (person)",
+      "compounds": [
+        {
+          "word": "便利な",
+          "reading": "べんりな",
+          "meaning": "convenient, useful"
+        },
+        {
+          "word": "郵便局",
+          "reading": "ゆうびんきょく",
+          "meaning": "post office"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BE%BF%23kanji"
+    },
+    {
+      "id": "18-k-2",
+      "kanji": "利",
+      "onyomi": [
+        "リ"
+      ],
+      "kunyomi": [
+        "き.く"
+      ],
+      "meaning": "advantage",
+      "strokes": 7,
+      "radical": "刀/刂 (sword)",
+      "compounds": [
+        {
+          "word": "便利な",
+          "reading": "べんりな",
+          "meaning": "convenient, useful"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%88%A9%23kanji"
+    },
+    {
+      "id": "18-k-3",
+      "kanji": "元",
+      "onyomi": [
+        "ゲン",
+        "ガン"
+      ],
+      "kunyomi": [
+        "もと"
+      ],
+      "meaning": "origin, original",
+      "strokes": 4,
+      "radical": "儿 (legs)",
+      "compounds": [
+        {
+          "word": "元気な",
+          "reading": "げんきな",
+          "meaning": "fine, cheerful"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%85%83%23kanji"
+    },
+    {
+      "id": "18-k-4",
+      "kanji": "気",
+      "onyomi": [
+        "キ",
+        "ケ"
+      ],
+      "kunyomi": [],
+      "meaning": "spirit, mind, mood",
+      "strokes": 6,
+      "radical": "气 (steam)",
+      "compounds": [
+        {
+          "word": "元気な",
+          "reading": "げんきな",
+          "meaning": "fine, cheerful"
+        },
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "meaning": "sickness, illness, disease"
+        },
+        {
+          "word": "病気の",
+          "reading": "びょうきの",
+          "meaning": "sick, ill"
+        },
+        {
+          "word": "電気",
+          "reading": "でんき",
+          "meaning": "electricity, light"
+        },
+        {
+          "word": "天気",
+          "reading": "てんき",
+          "meaning": "weather"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%B0%97%23kanji"
+    },
+    {
+      "id": "18-k-5",
+      "kanji": "親",
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "おや",
+        "した.しい",
+        "した.しむ"
+      ],
+      "meaning": "parent(s); close, intimate",
+      "strokes": 16,
+      "radical": "見 (see)",
+      "compounds": [
+        {
+          "word": "親切な",
+          "reading": "しんせつな",
+          "meaning": "kind"
+        },
+        {
+          "word": "親",
+          "reading": "おや",
+          "meaning": "parent(s)"
+        },
+        {
+          "word": "両親",
+          "reading": "りょうしん",
+          "meaning": "parents"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%A6%AA%23kanji"
+    },
+    {
+      "id": "18-k-6",
+      "kanji": "有",
+      "onyomi": [
+        "ユウ",
+        "ウ"
+      ],
+      "kunyomi": [
+        "あ.る"
+      ],
+      "meaning": "to exist",
+      "strokes": 6,
+      "radical": "月 (moon)",
+      "compounds": [
+        {
+          "word": "有名な",
+          "reading": "ゆうめいな",
+          "meaning": "famous"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%9C%89%23kanji"
+    },
+    {
+      "id": "18-k-7",
+      "kanji": "名",
+      "onyomi": [
+        "メイ",
+        "ミョウ"
+      ],
+      "kunyomi": [
+        "な"
+      ],
+      "meaning": "name",
+      "strokes": 6,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "名前",
+          "reading": "なまえ",
+          "meaning": "name"
+        },
+        {
+          "word": "有名な",
+          "reading": "ゆうめいな",
+          "meaning": "famous"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%90%8D%23kanji"
+    }
+  ],
+  "19": [
+    {
+      "id": "19-k-1",
+      "kanji": "地",
+      "onyomi": [
+        "チ",
+        "ジ"
+      ],
+      "kunyomi": [],
+      "meaning": "land, ground",
+      "strokes": 6,
+      "radical": "土 (earth)",
+      "compounds": [
+        {
+          "word": "地下鉄",
+          "reading": "ちかてつ",
+          "meaning": "subway"
+        },
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "meaning": "map"
+        },
+        {
+          "word": "地下",
+          "reading": "ちか",
+          "meaning": "underground, basement"
+        },
+        {
+          "word": "地下室",
+          "reading": "ちかしつ",
+          "meaning": "basement"
+        },
+        {
+          "word": "土地",
+          "reading": "とち",
+          "meaning": "land"
+        },
+        {
+          "word": "地震",
+          "reading": "じしん",
+          "meaning": "earthquake"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%9C%B0%23kanji"
+    },
+    {
+      "id": "19-k-2",
+      "kanji": "鉄",
+      "onyomi": [
+        "テツ"
+      ],
+      "kunyomi": [],
+      "meaning": "iron",
+      "strokes": 13,
+      "radical": "金 (gold)",
+      "compounds": [
+        {
+          "word": "地下鉄",
+          "reading": "ちかてつ",
+          "meaning": "subway"
+        },
+        {
+          "word": "鉄",
+          "reading": "てつ",
+          "meaning": "iron"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%89%84%23kanji"
+    },
+    {
+      "id": "19-k-3",
+      "kanji": "仕",
+      "onyomi": [
+        "シ",
+        "ジ"
+      ],
+      "kunyomi": [
+        "つか.える"
+      ],
+      "meaning": "to serve, to engage",
+      "strokes": 5,
+      "radical": "人/亻 (person)",
+      "compounds": [
+        {
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "work, job"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BB%95%23kanji"
+    },
+    {
+      "id": "19-k-4",
+      "kanji": "事",
+      "onyomi": [
+        "ジ",
+        "ズ"
+      ],
+      "kunyomi": [
+        "こと"
+      ],
+      "meaning": "matter(s)",
+      "strokes": 8,
+      "radical": "亅 (hook)",
+      "compounds": [
+        {
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "work, job"
+        },
+        {
+          "word": "家事",
+          "reading": "かじ",
+          "meaning": "housework"
+        },
+        {
+          "word": "火事",
+          "reading": "かじ",
+          "meaning": "a fire"
+        },
+        {
+          "word": "食事",
+          "reading": "しょくじ",
+          "meaning": "meal"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BA%8B%23kanji"
+    },
+    {
+      "id": "19-k-5",
+      "kanji": "東",
+      "onyomi": [
+        "トウ"
+      ],
+      "kunyomi": [
+        "ひがし"
+      ],
+      "meaning": "east",
+      "strokes": 8,
+      "radical": "木 (tree)",
+      "compounds": [
+        {
+          "word": "東",
+          "reading": "ひがし",
+          "meaning": "east"
+        },
+        {
+          "word": "東京",
+          "reading": "とうきょう",
+          "meaning": "Tokyo"
+        },
+        {
+          "word": "東ヨーロッパ",
+          "reading": "ひがしよーろっぱ",
+          "meaning": "Eastern Europe"
+        },
+        {
+          "word": "東南アジア",
+          "reading": "とうなんあじあ",
+          "meaning": "South East Asia"
+        },
+        {
+          "word": "中東",
+          "reading": "ちゅうとう",
+          "meaning": "the Middle East"
+        },
+        {
+          "word": "東北",
+          "reading": "とうほく",
+          "meaning": "the Tohoku region"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%9D%B1%23kanji"
+    },
+    {
+      "id": "19-k-6",
+      "kanji": "西",
+      "onyomi": [
+        "セイ",
+        "サイ"
+      ],
+      "kunyomi": [
+        "にし"
+      ],
+      "meaning": "west",
+      "strokes": 6,
+      "radical": "襾 (cover)",
+      "compounds": [
+        {
+          "word": "西",
+          "reading": "にし",
+          "meaning": "west"
+        },
+        {
+          "word": "西ヨーロッパ",
+          "reading": "にしよーろっぱ",
+          "meaning": "Western Europe"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%A5%BF%23kanji"
+    },
+    {
+      "id": "19-k-7",
+      "kanji": "南",
+      "onyomi": [
+        "ナン",
+        "ナ"
+      ],
+      "kunyomi": [
+        "みなみ"
+      ],
+      "meaning": "south",
+      "strokes": 9,
+      "radical": "十 (ten)",
+      "compounds": [
+        {
+          "word": "南",
+          "reading": "みなみ",
+          "meaning": "south"
+        },
+        {
+          "word": "南アメリカ",
+          "reading": "みなみあめりか",
+          "meaning": "South America"
+        },
+        {
+          "word": "東南アジア",
+          "reading": "とうなんあじあ",
+          "meaning": "South East Asia"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%8D%97%23kanji"
+    }
+  ],
+  "20": [
+    {
+      "id": "20-k-1",
+      "kanji": "北",
+      "onyomi": [
+        "ホク"
+      ],
+      "kunyomi": [
+        "きた"
+      ],
+      "meaning": "north",
+      "strokes": 5,
+      "radical": "匕 (spoon)",
+      "compounds": [
+        {
+          "word": "北",
+          "reading": "きた",
+          "meaning": "north"
+        },
+        {
+          "word": "北アメリカ",
+          "reading": "きたあめりか",
+          "meaning": "North America"
+        },
+        {
+          "word": "東北",
+          "reading": "とうほく",
+          "meaning": "the Tohoku region"
+        },
+        {
+          "word": "北海道",
+          "reading": "ほっかいどう",
+          "meaning": "Hokkaido"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%8C%97%23kanji"
+    },
+    {
+      "id": "20-k-2",
+      "kanji": "京",
+      "onyomi": [
+        "キョウ",
+        "ケイ"
+      ],
+      "kunyomi": [],
+      "meaning": "capital city",
+      "strokes": 8,
+      "radical": "亠 (lid)",
+      "compounds": [
+        {
+          "word": "東京",
+          "reading": "とうきょう",
+          "meaning": "Tokyo"
+        },
+        {
+          "word": "京都",
+          "reading": "きょうと",
+          "meaning": "Kyoto"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BA%AC%23kanji"
+    },
+    {
+      "id": "20-k-3",
+      "kanji": "夜",
+      "onyomi": [
+        "ヤ"
+      ],
+      "kunyomi": [
+        "よる",
+        "よ"
+      ],
+      "meaning": "night, evening",
+      "strokes": 8,
+      "radical": "夕 (evening)",
+      "compounds": [
+        {
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "night, evening"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A4%9C%23kanji"
+    },
+    {
+      "id": "20-k-4",
+      "kanji": "料",
+      "onyomi": [
+        "リョウ"
+      ],
+      "kunyomi": [],
+      "meaning": "stuff, material; charge",
+      "strokes": 10,
+      "radical": "斗 (dipper)",
+      "compounds": [
+        {
+          "word": "料理",
+          "reading": "りょうり",
+          "meaning": "cuisine, food, cooking"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%96%99%23kanji"
+    },
+    {
+      "id": "20-k-5",
+      "kanji": "理",
+      "onyomi": [
+        "リ"
+      ],
+      "kunyomi": [],
+      "meaning": "reason; theory, logic",
+      "strokes": 11,
+      "radical": "玉/王 (jewel)",
+      "compounds": [
+        {
+          "word": "料理",
+          "reading": "りょうり",
+          "meaning": "cuisine, food, cooking"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%90%86%23kanji"
+    },
+    {
+      "id": "20-k-6",
+      "kanji": "口",
+      "onyomi": [
+        "コウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "くち"
+      ],
+      "meaning": "mouth; entrance, exit",
+      "strokes": 3,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "口",
+          "reading": "くち",
+          "meaning": "mouth"
+        },
+        {
+          "word": "入り口",
+          "reading": "いりぐち",
+          "meaning": "entrance"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "meaning": "exit"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%8F%A3%23kanji"
+    },
+    {
+      "id": "20-k-7",
+      "kanji": "曜",
+      "onyomi": [
+        "ヨウ"
+      ],
+      "kunyomi": [],
+      "meaning": "(used only in 曜日)",
+      "strokes": 18,
+      "radical": "日 (sun)",
+      "compounds": [
+        {
+          "word": "〜曜日",
+          "reading": "〜ようび",
+          "meaning": "indicates a day of the week"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%9B%9C%23kanji"
+    }
+  ],
+  "21": [
+    {
+      "id": "21-k-1",
+      "kanji": "降",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [
+        "お.りる",
+        "お.ろす",
+        "ふ.る"
+      ],
+      "meaning": "to get off; (rain) falls",
+      "strokes": 10,
+      "radical": "阜/阝 (mound)",
+      "compounds": [
+        {
+          "word": "降ります",
+          "reading": "おります",
+          "meaning": "get off"
+        },
+        {
+          "word": "降ります",
+          "reading": "ふります",
+          "meaning": "(rain) falls"
+        },
+        {
+          "word": "降ろします",
+          "reading": "おろします",
+          "meaning": "drop someone off, unload"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%99%8D%23kanji"
+    },
+    {
+      "id": "21-k-2",
+      "kanji": "思",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "おも.う"
+      ],
+      "meaning": "to think, to consider, to guess",
+      "strokes": 9,
+      "radical": "心 (heart)",
+      "compounds": [
+        {
+          "word": "思います",
+          "reading": "おもいます",
+          "meaning": "think, consider, guess"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%80%9D%23kanji"
+    },
+    {
+      "id": "21-k-3",
+      "kanji": "寝",
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "ね.る",
+        "ね.かす"
+      ],
+      "meaning": "to sleep",
+      "strokes": 13,
+      "radical": "宀 (roof)",
+      "compounds": [
+        {
+          "word": "寝ます",
+          "reading": "ねます",
+          "meaning": "sleep, go to bed"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%AF%9D%23kanji"
+    },
+    {
+      "id": "21-k-4",
+      "kanji": "終",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "お.わる",
+        "お.える"
+      ],
+      "meaning": "to end, to finish",
+      "strokes": 11,
+      "radical": "糸 (thread)",
+      "compounds": [
+        {
+          "word": "終わります",
+          "reading": "おわります",
+          "meaning": "end, finish"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%B5%82%23kanji"
+    },
+    {
+      "id": "21-k-5",
+      "kanji": "言",
+      "onyomi": [
+        "ゲン",
+        "ゴン"
+      ],
+      "kunyomi": [
+        "い.う",
+        "こと"
+      ],
+      "meaning": "to say, to tell",
+      "strokes": 7,
+      "radical": "言 (word)",
+      "compounds": [
+        {
+          "word": "言います",
+          "reading": "いいます",
+          "meaning": "say, tell"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%A8%80%23kanji"
+    },
+    {
+      "id": "21-k-6",
+      "kanji": "知",
+      "onyomi": [
+        "チ"
+      ],
+      "kunyomi": [
+        "し.る"
+      ],
+      "meaning": "to know, to be aware of",
+      "strokes": 8,
+      "radical": "矢 (arrow)",
+      "compounds": [
+        {
+          "word": "知っています",
+          "reading": "しっています",
+          "meaning": "know"
+        },
+        {
+          "word": "知りません",
+          "reading": "しりません",
+          "meaning": "don't know, doesn't know"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%9F%A5%23kanji"
+    },
+    {
+      "id": "21-k-7",
+      "kanji": "同",
+      "onyomi": [
+        "ドウ"
+      ],
+      "kunyomi": [
+        "おな.じ"
+      ],
+      "meaning": "same, identical",
+      "strokes": 6,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "同じ",
+          "reading": "おなじ",
+          "meaning": "same"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%90%8C%23kanji"
+    },
+    {
+      "id": "21-k-8",
+      "kanji": "漢",
+      "onyomi": [
+        "カン"
+      ],
+      "kunyomi": [],
+      "meaning": "Chinese (Han dynasty)",
+      "strokes": 13,
+      "radical": "水/氵 (water)",
+      "compounds": [
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "meaning": "kanji, Chinese character"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%BC%A2%23kanji"
+    },
+    {
+      "id": "21-k-9",
+      "kanji": "字",
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "あざ"
+      ],
+      "meaning": "character, letter, script",
+      "strokes": 6,
+      "radical": "子 (child)",
+      "compounds": [
+        {
+          "word": "漢字",
+          "reading": "かんじ",
+          "meaning": "kanji, Chinese character"
+        },
+        {
+          "word": "ローマ字",
+          "reading": "ろーまじ",
+          "meaning": "Roman letters"
+        },
+        {
+          "word": "字",
+          "reading": "じ",
+          "meaning": "character, letter"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%AD%97%23kanji"
+    },
+    {
+      "id": "21-k-10",
+      "kanji": "方",
+      "onyomi": [
+        "ホウ"
+      ],
+      "kunyomi": [
+        "かた"
+      ],
+      "meaning": "-ward, direction; person (polite)",
+      "strokes": 4,
+      "radical": "方 (direction)",
+      "compounds": [
+        {
+          "word": "あの方",
+          "reading": "あのかた",
+          "meaning": "that person (polite)"
+        },
+        {
+          "word": "使い方",
+          "reading": "つかいかた",
+          "meaning": "how to use"
+        },
+        {
+          "word": "読み方",
+          "reading": "よみかた",
+          "meaning": "how to read, reading of"
+        },
+        {
+          "word": "書き方",
+          "reading": "かきかた",
+          "meaning": "how to write"
+        },
+        {
+          "word": "〜方",
+          "reading": "〜かた",
+          "meaning": "how to 〜"
+        },
+        {
+          "word": "〜の方",
+          "reading": "〜のほう",
+          "meaning": "〜ward, 〜 direction"
+        },
+        {
+          "word": "夕方",
+          "reading": "ゆうがた",
+          "meaning": "early evening"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%96%B9%23kanji"
+    }
+  ],
+  "22": [
+    {
+      "id": "22-k-1",
+      "kanji": "図",
+      "onyomi": [
+        "ズ",
+        "ト"
+      ],
+      "kunyomi": [
+        "はか.る"
+      ],
+      "meaning": "chart, diagram, drawing",
+      "strokes": 7,
+      "radical": "囗 (enclosure)",
+      "compounds": [
+        {
+          "word": "図書館",
+          "reading": "としょかん",
+          "meaning": "library"
+        },
+        {
+          "word": "地図",
+          "reading": "ちず",
+          "meaning": "map"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%9B%B3%23kanji"
+    },
+    {
+      "id": "22-k-2",
+      "kanji": "館",
+      "onyomi": [
+        "カン"
+      ],
+      "kunyomi": [],
+      "meaning": "large building, house",
+      "strokes": 16,
+      "radical": "食/飠 (eat)",
+      "compounds": [
+        {
+          "word": "図書館",
+          "reading": "としょかん",
+          "meaning": "library"
+        },
+        {
+          "word": "大使館",
+          "reading": "たいしかん",
+          "meaning": "embassy"
+        },
+        {
+          "word": "映画館",
+          "reading": "えいがかん",
+          "meaning": "movie theater"
+        },
+        {
+          "word": "旅館",
+          "reading": "りょかん",
+          "meaning": "Japanese-style inn"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%A4%A8%23kanji"
+    },
+    {
+      "id": "22-k-3",
+      "kanji": "銀",
+      "onyomi": [
+        "ギン"
+      ],
+      "kunyomi": [],
+      "meaning": "silver",
+      "strokes": 14,
+      "radical": "金 (gold)",
+      "compounds": [
+        {
+          "word": "銀行",
+          "reading": "ぎんこう",
+          "meaning": "bank"
+        },
+        {
+          "word": "銀行員",
+          "reading": "ぎんこういん",
+          "meaning": "bank clerk"
+        },
+        {
+          "word": "銀",
+          "reading": "ぎん",
+          "meaning": "silver"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%8A%80%23kanji"
+    },
+    {
+      "id": "22-k-4",
+      "kanji": "町",
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "まち"
+      ],
+      "meaning": "town, city",
+      "strokes": 7,
+      "radical": "田 (rice field)",
+      "compounds": [
+        {
+          "word": "町",
+          "reading": "まち",
+          "meaning": "town, city"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%94%BA%23kanji"
+    },
+    {
+      "id": "22-k-5",
+      "kanji": "住",
+      "onyomi": [
+        "ジュウ"
+      ],
+      "kunyomi": [
+        "す.む",
+        "す.まう"
+      ],
+      "meaning": "to live (in)",
+      "strokes": 7,
+      "radical": "人/亻 (person)",
+      "compounds": [
+        {
+          "word": "住んでいます",
+          "reading": "すんでいます",
+          "meaning": "live (in)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BD%8F%23kanji"
+    },
+    {
+      "id": "22-k-6",
+      "kanji": "度",
+      "onyomi": [
+        "ド",
+        "ト",
+        "タク"
+      ],
+      "kunyomi": [
+        "たび"
+      ],
+      "meaning": "times, degree",
+      "strokes": 9,
+      "radical": "广 (dotted cliff)",
+      "compounds": [
+        {
+          "word": "一度",
+          "reading": "いちど",
+          "meaning": "once, sometime"
+        },
+        {
+          "word": "一度も",
+          "reading": "いちども",
+          "meaning": "never, not once"
+        },
+        {
+          "word": "〜度",
+          "reading": "〜ど",
+          "meaning": "〜 time(s), degree"
+        },
+        {
+          "word": "温度",
+          "reading": "おんど",
+          "meaning": "temperature"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%BA%A6%23kanji"
+    },
+    {
+      "id": "22-k-7",
+      "kanji": "服",
+      "onyomi": [
+        "フク"
+      ],
+      "kunyomi": [],
+      "meaning": "clothes",
+      "strokes": 8,
+      "radical": "月 (moon)",
+      "compounds": [
+        {
+          "word": "服",
+          "reading": "ふく",
+          "meaning": "clothes"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%9C%8D%23kanji"
+    },
+    {
+      "id": "22-k-8",
+      "kanji": "着",
+      "onyomi": [
+        "チャク",
+        "ジャク"
+      ],
+      "kunyomi": [
+        "き.る",
+        "き.せる",
+        "つ.く",
+        "つ.ける"
+      ],
+      "meaning": "to wear; to arrive",
+      "strokes": 12,
+      "radical": "羊/目",
+      "compounds": [
+        {
+          "word": "着ます",
+          "reading": "きます",
+          "meaning": "put on, wear"
+        },
+        {
+          "word": "着物",
+          "reading": "きもの",
+          "meaning": "kimono"
+        },
+        {
+          "word": "上着",
+          "reading": "うわぎ",
+          "meaning": "jacket"
+        },
+        {
+          "word": "下着",
+          "reading": "したぎ",
+          "meaning": "underwear"
+        },
+        {
+          "word": "着きます",
+          "reading": "つきます",
+          "meaning": "arrive, reach"
+        },
+        {
+          "word": "着せます",
+          "reading": "きせます",
+          "meaning": "dress (someone)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%9D%80%23kanji"
+    },
+    {
+      "id": "22-k-9",
+      "kanji": "音",
+      "onyomi": [
+        "オン",
+        "イン"
+      ],
+      "kunyomi": [
+        "おと",
+        "ね"
+      ],
+      "meaning": "sound",
+      "strokes": 9,
+      "radical": "音 (sound)",
+      "compounds": [
+        {
+          "word": "音楽",
+          "reading": "おんがく",
+          "meaning": "music"
+        },
+        {
+          "word": "音",
+          "reading": "おと",
+          "meaning": "sound"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%9F%B3%23kanji"
+    },
+    {
+      "id": "22-k-10",
+      "kanji": "楽",
+      "onyomi": [
+        "ガク",
+        "ラク"
+      ],
+      "kunyomi": [
+        "たの.しい",
+        "たの.しむ"
+      ],
+      "meaning": "to enjoy, joy; not laborious, easy",
+      "strokes": 13,
+      "radical": "木 (tree)",
+      "compounds": [
+        {
+          "word": "音楽",
+          "reading": "おんがく",
+          "meaning": "music"
+        },
+        {
+          "word": "楽しい",
+          "reading": "たのしい",
+          "meaning": "fun, enjoyable"
+        },
+        {
+          "word": "楽な",
+          "reading": "らくな",
+          "meaning": "easy"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%A5%BD%23kanji"
+    },
+    {
+      "id": "22-k-11",
+      "kanji": "持",
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "も.つ"
+      ],
+      "meaning": "to have, to own; to hold",
+      "strokes": 9,
+      "radical": "手/扌 (hand)",
+      "compounds": [
+        {
+          "word": "持ちます",
+          "reading": "もちます",
+          "meaning": "hold, own"
+        },
+        {
+          "word": "持っています",
+          "reading": "もっています",
+          "meaning": "have, own"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%8C%81%23kanji"
+    }
+  ],
+  "23": [
+    {
+      "id": "23-k-1",
+      "kanji": "春",
+      "onyomi": [
+        "シュン"
+      ],
+      "kunyomi": [
+        "はる"
+      ],
+      "meaning": "spring",
+      "strokes": 9,
+      "radical": "日 (sun)",
+      "compounds": [
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring"
+        },
+        {
+          "word": "春休み",
+          "reading": "はるやすみ",
+          "meaning": "spring vacation"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%98%A5%23kanji"
+    },
+    {
+      "id": "23-k-2",
+      "kanji": "夏",
+      "onyomi": [
+        "カ",
+        "ゲ"
+      ],
+      "kunyomi": [
+        "なつ"
+      ],
+      "meaning": "summer",
+      "strokes": 10,
+      "radical": "夂 (winter)",
+      "compounds": [
+        {
+          "word": "夏",
+          "reading": "なつ",
+          "meaning": "summer"
+        },
+        {
+          "word": "夏休み",
+          "reading": "なつやすみ",
+          "meaning": "summer vacation"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A4%8F%23kanji"
+    },
+    {
+      "id": "23-k-3",
+      "kanji": "秋",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "あき"
+      ],
+      "meaning": "fall, autumn",
+      "strokes": 9,
+      "radical": "禾 (grain)",
+      "compounds": [
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "fall, autumn"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%A7%8B%23kanji"
+    },
+    {
+      "id": "23-k-4",
+      "kanji": "冬",
+      "onyomi": [
+        "トウ"
+      ],
+      "kunyomi": [
+        "ふゆ"
+      ],
+      "meaning": "winter",
+      "strokes": 5,
+      "radical": "冫 (ice)",
+      "compounds": [
+        {
+          "word": "冬",
+          "reading": "ふゆ",
+          "meaning": "winter"
+        },
+        {
+          "word": "冬休み",
+          "reading": "ふゆやすみ",
+          "meaning": "winter vacation"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%86%AC%23kanji"
+    },
+    {
+      "id": "23-k-5",
+      "kanji": "道",
+      "onyomi": [
+        "ドウ",
+        "トウ"
+      ],
+      "kunyomi": [
+        "みち"
+      ],
+      "meaning": "street, road, way",
+      "strokes": 12,
+      "radical": "辵/⻌ (movement)",
+      "compounds": [
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "street, road, way"
+        },
+        {
+          "word": "水道",
+          "reading": "すいどう",
+          "meaning": "water supply"
+        },
+        {
+          "word": "北海道",
+          "reading": "ほっかいどう",
+          "meaning": "Hokkaido"
+        },
+        {
+          "word": "歩道",
+          "reading": "ほどう",
+          "meaning": "sidewalk, pavement"
+        },
+        {
+          "word": "近道",
+          "reading": "ちかみち",
+          "meaning": "shortcut"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%81%93%23kanji"
+    },
+    {
+      "id": "23-k-6",
+      "kanji": "堂",
+      "onyomi": [
+        "ドウ"
+      ],
+      "kunyomi": [],
+      "meaning": "hall",
+      "strokes": 11,
+      "radical": "土 (earth)",
+      "compounds": [
+        {
+          "word": "食堂",
+          "reading": "しょくどう",
+          "meaning": "dining hall, canteen"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A0%82%23kanji"
+    },
+    {
+      "id": "23-k-7",
+      "kanji": "建",
+      "onyomi": [
+        "ケン",
+        "コン"
+      ],
+      "kunyomi": [
+        "た.てる",
+        "た.つ"
+      ],
+      "meaning": "to build",
+      "strokes": 9,
+      "radical": "廴 (long stride)",
+      "compounds": [
+        {
+          "word": "建物",
+          "reading": "たてもの",
+          "meaning": "building"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%BB%BA%23kanji"
+    },
+    {
+      "id": "23-k-8",
+      "kanji": "病",
+      "onyomi": [
+        "ビョウ",
+        "ヘイ"
+      ],
+      "kunyomi": [
+        "や.む",
+        "やまい"
+      ],
+      "meaning": "sickness, illness, disease",
+      "strokes": 10,
+      "radical": "疒 (sickness)",
+      "compounds": [
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "meaning": "hospital"
+        },
+        {
+          "word": "病気",
+          "reading": "びょうき",
+          "meaning": "sickness, illness, disease"
+        },
+        {
+          "word": "病気の",
+          "reading": "びょうきの",
+          "meaning": "sick, ill"
+        },
+        {
+          "word": "病室",
+          "reading": "びょうしつ",
+          "meaning": "hospital ward"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%97%85%23kanji"
+    },
+    {
+      "id": "23-k-9",
+      "kanji": "院",
+      "onyomi": [
+        "イン"
+      ],
+      "kunyomi": [],
+      "meaning": "institution",
+      "strokes": 10,
+      "radical": "阜/阝 (mound)",
+      "compounds": [
+        {
+          "word": "病院",
+          "reading": "びょういん",
+          "meaning": "hospital"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%99%A2%23kanji"
+    },
+    {
+      "id": "23-k-10",
+      "kanji": "体",
+      "onyomi": [
+        "タイ",
+        "テイ"
+      ],
+      "kunyomi": [
+        "からだ"
+      ],
+      "meaning": "body",
+      "strokes": 7,
+      "radical": "人/亻 (person)",
+      "compounds": [
+        {
+          "word": "体",
+          "reading": "からだ",
+          "meaning": "body"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%BD%93%23kanji"
+    },
+    {
+      "id": "23-k-11",
+      "kanji": "運",
+      "onyomi": [
+        "ウン"
+      ],
+      "kunyomi": [
+        "はこ.ぶ"
+      ],
+      "meaning": "to carry; fortune, luck, fate",
+      "strokes": 12,
+      "radical": "辵/⻌ (movement)",
+      "compounds": [
+        {
+          "word": "運転",
+          "reading": "うんてん",
+          "meaning": "driving"
+        },
+        {
+          "word": "運転します",
+          "reading": "うんてんします",
+          "meaning": "drive"
+        },
+        {
+          "word": "運",
+          "reading": "うん",
+          "meaning": "fortune, luck, fate"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%81%8B%23kanji"
+    },
+    {
+      "id": "23-k-12",
+      "kanji": "乗",
+      "onyomi": [
+        "ジョウ"
+      ],
+      "kunyomi": [
+        "の.る",
+        "の.せる"
+      ],
+      "meaning": "to get on, to ride, to drive",
+      "strokes": 9,
+      "radical": "ノ (slash)",
+      "compounds": [
+        {
+          "word": "乗ります",
+          "reading": "のります",
+          "meaning": "get on, ride, drive"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%B9%97%23kanji"
+    }
+  ],
+  "24": [
+    {
+      "id": "24-k-1",
+      "kanji": "家",
+      "onyomi": [
+        "カ",
+        "ケ"
+      ],
+      "kunyomi": [
+        "いえ",
+        "や"
+      ],
+      "meaning": "house",
+      "strokes": 10,
+      "radical": "宀 (roof)",
+      "compounds": [
+        {
+          "word": "家",
+          "reading": "いえ",
+          "meaning": "house"
+        },
+        {
+          "word": "家内",
+          "reading": "かない",
+          "meaning": "my wife"
+        },
+        {
+          "word": "家族",
+          "reading": "かぞく",
+          "meaning": "family"
+        },
+        {
+          "word": "画家",
+          "reading": "がか",
+          "meaning": "painter"
+        },
+        {
+          "word": "作家",
+          "reading": "さっか",
+          "meaning": "writer, novelist"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%AE%B6%23kanji"
+    },
+    {
+      "id": "24-k-2",
+      "kanji": "内",
+      "onyomi": [
+        "ナイ",
+        "ダイ"
+      ],
+      "kunyomi": [
+        "うち"
+      ],
+      "meaning": "inside, internal",
+      "strokes": 4,
+      "radical": "冂 (border)",
+      "compounds": [
+        {
+          "word": "家内",
+          "reading": "かない",
+          "meaning": "my wife"
+        },
+        {
+          "word": "国内の",
+          "reading": "こくないの",
+          "meaning": "home, domestic"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%86%85%23kanji"
+    },
+    {
+      "id": "24-k-3",
+      "kanji": "族",
+      "onyomi": [
+        "ゾク"
+      ],
+      "kunyomi": [],
+      "meaning": "kin, family, tribal/ethnic group",
+      "strokes": 11,
+      "radical": "方 (direction)",
+      "compounds": [
+        {
+          "word": "家族",
+          "reading": "かぞく",
+          "meaning": "family"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%97%8F%23kanji"
+    },
+    {
+      "id": "24-k-4",
+      "kanji": "兄",
+      "onyomi": [
+        "ケイ",
+        "キョウ"
+      ],
+      "kunyomi": [
+        "あに"
+      ],
+      "meaning": "elder brother",
+      "strokes": 5,
+      "radical": "儿 (legs)",
+      "compounds": [
+        {
+          "word": "兄",
+          "reading": "あに",
+          "meaning": "(my) elder brother"
+        },
+        {
+          "word": "お兄さん",
+          "reading": "おにいさん",
+          "meaning": "(someone else's) elder brother"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "meaning": "brothers and sisters"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%85%84%23kanji"
+    },
+    {
+      "id": "24-k-5",
+      "kanji": "弟",
+      "onyomi": [
+        "テイ",
+        "ダイ",
+        "デ"
+      ],
+      "kunyomi": [
+        "おとうと"
+      ],
+      "meaning": "younger brother",
+      "strokes": 7,
+      "radical": "弓 (bow)",
+      "compounds": [
+        {
+          "word": "弟",
+          "reading": "おとうと",
+          "meaning": "(my) younger brother"
+        },
+        {
+          "word": "弟さん",
+          "reading": "おとうとさん",
+          "meaning": "(someone else's) younger brother"
+        },
+        {
+          "word": "兄弟",
+          "reading": "きょうだい",
+          "meaning": "brothers and sisters"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%BC%9F%23kanji"
+    },
+    {
+      "id": "24-k-6",
+      "kanji": "奥",
+      "onyomi": [
+        "オウ"
+      ],
+      "kunyomi": [
+        "おく"
+      ],
+      "meaning": "deep inside",
+      "strokes": 12,
+      "radical": "大 (big)",
+      "compounds": [
+        {
+          "word": "奥さん",
+          "reading": "おくさん",
+          "meaning": "(someone else's) wife"
+        },
+        {
+          "word": "奥",
+          "reading": "おく",
+          "meaning": "deep inside"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A5%A5%23kanji"
+    },
+    {
+      "id": "24-k-7",
+      "kanji": "姉",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "あね"
+      ],
+      "meaning": "elder sister",
+      "strokes": 8,
+      "radical": "女 (woman)",
+      "compounds": [
+        {
+          "word": "姉",
+          "reading": "あね",
+          "meaning": "(my) elder sister"
+        },
+        {
+          "word": "お姉さん",
+          "reading": "おねえさん",
+          "meaning": "(someone else's) elder sister"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A7%89%23kanji"
+    },
+    {
+      "id": "24-k-8",
+      "kanji": "妹",
+      "onyomi": [
+        "マイ"
+      ],
+      "kunyomi": [
+        "いもうと"
+      ],
+      "meaning": "younger sister",
+      "strokes": 8,
+      "radical": "女 (woman)",
+      "compounds": [
+        {
+          "word": "妹",
+          "reading": "いもうと",
+          "meaning": "(my) younger sister"
+        },
+        {
+          "word": "妹さん",
+          "reading": "いもうとさん",
+          "meaning": "(someone else's) younger sister"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A6%B9%23kanji"
+    },
+    {
+      "id": "24-k-9",
+      "kanji": "海",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [
+        "うみ"
+      ],
+      "meaning": "sea, ocean",
+      "strokes": 9,
+      "radical": "水/氵 (water)",
+      "compounds": [
+        {
+          "word": "海",
+          "reading": "うみ",
+          "meaning": "sea, ocean"
+        },
+        {
+          "word": "北海道",
+          "reading": "ほっかいどう",
+          "meaning": "Hokkaido"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%B5%B7%23kanji"
+    },
+    {
+      "id": "24-k-10",
+      "kanji": "計",
+      "onyomi": [
+        "ケイ"
+      ],
+      "kunyomi": [
+        "はか.る",
+        "はか.らう"
+      ],
+      "meaning": "plot, scheme, plan; measure",
+      "strokes": 9,
+      "radical": "言 (word)",
+      "compounds": [
+        {
+          "word": "時計",
+          "reading": "とけい",
+          "meaning": "watch, clock"
+        },
+        {
+          "word": "計画",
+          "reading": "けいかく",
+          "meaning": "plan, scheme"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%A8%88%23kanji"
+    }
+  ],
+  "25": [
+    {
+      "id": "25-k-1",
+      "kanji": "部",
+      "onyomi": [
+        "ブ"
+      ],
+      "kunyomi": [],
+      "meaning": "section, department",
+      "strokes": 11,
+      "radical": "邑/阝 (city)",
+      "compounds": [
+        {
+          "word": "部屋",
+          "reading": "へや",
+          "meaning": "room"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%83%A8%23kanji"
+    },
+    {
+      "id": "25-k-2",
+      "kanji": "屋",
+      "onyomi": [
+        "オク"
+      ],
+      "kunyomi": [
+        "や"
+      ],
+      "meaning": "shop, store",
+      "strokes": 9,
+      "radical": "尸 (corpse)",
+      "compounds": [
+        {
+          "word": "部屋",
+          "reading": "へや",
+          "meaning": "room"
+        },
+        {
+          "word": "本屋",
+          "reading": "ほんや",
+          "meaning": "book store"
+        },
+        {
+          "word": "〜屋",
+          "reading": "〜や",
+          "meaning": "〜 shop, 〜 store"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%B1%8B%23kanji"
+    },
+    {
+      "id": "25-k-3",
+      "kanji": "室",
+      "onyomi": [
+        "シツ"
+      ],
+      "kunyomi": [
+        "むろ"
+      ],
+      "meaning": "room",
+      "strokes": 9,
+      "radical": "宀 (roof)",
+      "compounds": [
+        {
+          "word": "教室",
+          "reading": "きょうしつ",
+          "meaning": "classroom"
+        },
+        {
+          "word": "病室",
+          "reading": "びょうしつ",
+          "meaning": "hospital ward"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%AE%A4%23kanji"
+    },
+    {
+      "id": "25-k-4",
+      "kanji": "窓",
+      "onyomi": [
+        "ソウ"
+      ],
+      "kunyomi": [
+        "まど"
+      ],
+      "meaning": "window",
+      "strokes": 11,
+      "radical": "穴 (hole)",
+      "compounds": [
+        {
+          "word": "窓",
+          "reading": "まど",
+          "meaning": "window"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%AA%93%23kanji"
+    },
+    {
+      "id": "25-k-5",
+      "kanji": "開",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [
+        "ひら.く",
+        "ひら.ける",
+        "あ.く",
+        "あ.ける"
+      ],
+      "meaning": "to open",
+      "strokes": 12,
+      "radical": "門 (gate)",
+      "compounds": [
+        {
+          "word": "開けます",
+          "reading": "あけます",
+          "meaning": "open"
+        },
+        {
+          "word": "開きます",
+          "reading": "ひらきます",
+          "meaning": "open (by itself)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%96%8B%23kanji"
+    },
+    {
+      "id": "25-k-6",
+      "kanji": "閉",
+      "onyomi": [
+        "ヘイ"
+      ],
+      "kunyomi": [
+        "と.じる",
+        "と.ざす",
+        "し.める",
+        "し.まる"
+      ],
+      "meaning": "to close, to shut",
+      "strokes": 11,
+      "radical": "門 (gate)",
+      "compounds": [
+        {
+          "word": "閉めます",
+          "reading": "しめます",
+          "meaning": "close, shut"
+        },
+        {
+          "word": "閉まります",
+          "reading": "しまります",
+          "meaning": "close (by itself)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%96%89%23kanji"
+    },
+    {
+      "id": "25-k-7",
+      "kanji": "歌",
+      "onyomi": [
+        "カ"
+      ],
+      "kunyomi": [
+        "うた.う",
+        "うた"
+      ],
+      "meaning": "to sing, song",
+      "strokes": 14,
+      "radical": "欠 (lack)",
+      "compounds": [
+        {
+          "word": "歌",
+          "reading": "うた",
+          "meaning": "song"
+        },
+        {
+          "word": "歌います",
+          "reading": "うたいます",
+          "meaning": "sing"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%AD%8C%23kanji"
+    },
+    {
+      "id": "25-k-8",
+      "kanji": "意",
+      "onyomi": [
+        "イ"
+      ],
+      "kunyomi": [],
+      "meaning": "mind, intention, meaning",
+      "strokes": 13,
+      "radical": "心 (heart)",
+      "compounds": [
+        {
+          "word": "意味",
+          "reading": "いみ",
+          "meaning": "meaning"
+        },
+        {
+          "word": "意見",
+          "reading": "いけん",
+          "meaning": "opinion"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%84%8F%23kanji"
+    },
+    {
+      "id": "25-k-9",
+      "kanji": "味",
+      "onyomi": [
+        "ミ"
+      ],
+      "kunyomi": [
+        "あじ",
+        "あじ.わう"
+      ],
+      "meaning": "taste",
+      "strokes": 8,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "意味",
+          "reading": "いみ",
+          "meaning": "meaning"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%91%B3%23kanji"
+    },
+    {
+      "id": "25-k-10",
+      "kanji": "天",
+      "onyomi": [
+        "テン"
+      ],
+      "kunyomi": [
+        "あめ",
+        "あま"
+      ],
+      "meaning": "the heavens, the sky",
+      "strokes": 4,
+      "radical": "大 (big)",
+      "compounds": [
+        {
+          "word": "天気",
+          "reading": "てんき",
+          "meaning": "weather"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A4%A9%23kanji"
+    },
+    {
+      "id": "25-k-11",
+      "kanji": "考",
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [
+        "かんが.える"
+      ],
+      "meaning": "to think, to consider",
+      "strokes": 6,
+      "radical": "老/耂 (old)",
+      "compounds": [
+        {
+          "word": "考えます",
+          "reading": "かんがえます",
+          "meaning": "think, consider"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%80%83%23kanji"
+    }
   ]
 }
