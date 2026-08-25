@@ -124,7 +124,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredContent.map((item) => (
             <div
-              key={item.id}
+              key={item.uid}
               className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-emerald-300 transition-all flex flex-col justify-between group"
             >
               <div className="p-4 md:p-5 flex-grow">
@@ -145,12 +145,12 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                 </p>
 
                 {/* AI Explanation Note if it exists */}
-                {aiVocabNotes[item.id] && (
+                {aiVocabNotes[item.id!] && (
                   <div className="mt-4 bg-emerald-50/50 p-3 rounded-lg border border-emerald-100 text-xs text-slate-700 animate-fade-in">
                     <div className="font-bold text-emerald-800 mb-1 flex items-center gap-1">
                       <Info size={14} /> Usage Note
                     </div>
-                    <MarkdownViewer content={aiVocabNotes[item.id]} />
+                    <MarkdownViewer content={aiVocabNotes[item.id!]} />
                   </div>
                 )}
               </div>
@@ -159,17 +159,17 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
               <div className="bg-slate-50/80 px-4 py-2.5 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => handleGenerateVocabHelp(item)}
-                  disabled={loadingVocabAi[item.id] || !!aiVocabNotes[item.id]}
+                  disabled={loadingVocabAi[item.id!] || !!aiVocabNotes[item.id!]}
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold transition-colors border border-slate-200 hover:border-emerald-200 disabled:opacity-50 cursor-pointer shadow-2xs"
                 >
-                  {loadingVocabAi[item.id] ? (
+                  {loadingVocabAi[item.id!] ? (
                     <Loader2 className="animate-spin" size={13} />
                   ) : (
                     <Sparkles size={13} />
                   )}
-                  {loadingVocabAi[item.id]
+                  {loadingVocabAi[item.id!]
                     ? 'Thinking...'
-                    : aiVocabNotes[item.id]
+                    : aiVocabNotes[item.id!]
                     ? 'Note Generated'
                     : 'AI: Explain Usage'}
                 </button>

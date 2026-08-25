@@ -141,27 +141,27 @@ export default function GrammarDetailModal({
             <div className="pt-4 border-t border-slate-200">
               <button
                 onClick={() => onGenerateExplanation(item)}
-                disabled={loadingExplanation[item.id]}
+                disabled={loadingExplanation[item.id!]}
                 className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-xl border border-indigo-200 transition-colors disabled:opacity-50 cursor-pointer"
               >
-                {loadingExplanation[item.id] ? (
+                {loadingExplanation[item.id!] ? (
                   <Loader2 className="animate-spin" size={14} />
                 ) : (
                   <Sparkles size={14} className="text-indigo-600" />
                 )}
-                {loadingExplanation[item.id]
+                {loadingExplanation[item.id!]
                   ? 'Generating AI Nuance & Extra Sentences...'
-                  : aiExplanation[item.id]
+                  : aiExplanation[item.id!]
                   ? 'Regenerate AI Nuance Notes'
                   : 'Ask AI: Explain Nuance & Give Practice Sentences'}
               </button>
 
-              {aiExplanation[item.id] && (
+              {aiExplanation[item.id!] && (
                 <div className="mt-3 p-4 bg-indigo-50/70 rounded-xl border border-indigo-200/80 text-xs text-indigo-950 space-y-1.5 animate-fade-in leading-relaxed">
                   <div className="flex items-center gap-1.5 font-bold text-indigo-900 mb-1">
                     <Lightbulb size={14} className="text-amber-500" /> AI Linguistic Breakdown:
                   </div>
-                  <MarkdownViewer content={aiExplanation[item.id]} className="text-xs text-indigo-950 leading-relaxed" />
+                  <MarkdownViewer content={aiExplanation[item.id!]} className="text-xs text-indigo-950 leading-relaxed" />
                 </div>
               )}
             </div>

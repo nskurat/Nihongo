@@ -1,6 +1,10 @@
 {
   "1": [
     {
+      "uid": "n5-vocab-1-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-1",
       "word": "わたし",
       "reading": "わたし",
@@ -11,6 +15,10 @@
       "exampleEn": "I am Mike Miller."
     },
     {
+      "uid": "n5-vocab-1-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-2",
       "word": "あなた",
       "reading": "あなた",
@@ -21,6 +29,10 @@
       "exampleEn": "Are you a student?"
     },
     {
+      "uid": "n5-vocab-1-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-3",
       "word": "あの人",
       "reading": "あのひと",
@@ -31,6 +43,10 @@
       "exampleEn": "Who is that person?"
     },
     {
+      "uid": "n5-vocab-1-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-4",
       "word": "〜さん",
       "reading": "〜さん",
@@ -41,6 +57,10 @@
       "exampleEn": "Mr. Yamada is a company employee."
     },
     {
+      "uid": "n5-vocab-1-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-5",
       "word": "先生",
       "reading": "せんせい",
@@ -51,6 +71,10 @@
       "exampleEn": "Mr. Watt is a teacher."
     },
     {
+      "uid": "n5-vocab-1-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-6",
       "word": "会社員",
       "reading": "かいしゃいん",
@@ -61,6 +85,10 @@
       "exampleEn": "Mr. Santos is a company employee."
     },
     {
+      "uid": "n5-vocab-1-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-7",
       "word": "医者",
       "reading": "いしゃ",
@@ -71,6 +99,10 @@
       "exampleEn": "Mr. Wang is a doctor."
     },
     {
+      "uid": "n5-vocab-1-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-8",
       "word": "何歳",
       "reading": "なんさい",
@@ -81,6 +113,10 @@
       "exampleEn": "How old is Teresa?"
     },
     {
+      "uid": "n5-vocab-1-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-9",
       "word": "初めまして",
       "reading": "はじめまして",
@@ -91,6 +127,10 @@
       "exampleEn": "How do you do? I am Mike Miller."
     },
     {
+      "uid": "n5-vocab-1-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
       "id": "n5-v-1-10",
       "word": "どうぞよろしく[お願いします]",
       "reading": "どうぞよろしく[おねがいします]",
@@ -103,6 +143,10 @@
   ],
   "2": [
     {
+      "uid": "n5-vocab-2-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-1",
       "word": "これ／それ／あれ",
       "reading": "これ／それ／あれ",
@@ -113,6 +157,10 @@
       "exampleEn": "Is that a dictionary?"
     },
     {
+      "uid": "n5-vocab-2-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-2",
       "word": "この／その／あの〜",
       "reading": "この／その／あの〜",
@@ -123,6 +171,10 @@
       "exampleEn": "This book is mine."
     },
     {
+      "uid": "n5-vocab-2-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-3",
       "word": "辞書",
       "reading": "じしょ",
@@ -133,6 +185,10 @@
       "exampleEn": "This is my dictionary."
     },
     {
+      "uid": "n5-vocab-2-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-4",
       "word": "雑誌",
       "reading": "ざっし",
@@ -143,6 +199,10 @@
       "exampleEn": "That is a magazine on computers."
     },
     {
+      "uid": "n5-vocab-2-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-5",
       "word": "新聞",
       "reading": "しんぶん",
@@ -153,6 +213,10 @@
       "exampleEn": "That over there is a Japanese newspaper."
     },
     {
+      "uid": "n5-vocab-2-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-6",
       "word": "名刺",
       "reading": "めいし",
@@ -163,6 +227,10 @@
       "exampleEn": "This is Ms. Sato's business card."
     },
     {
+      "uid": "n5-vocab-2-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-7",
       "word": "かばん",
       "reading": "かばん",
@@ -173,6 +241,10 @@
       "exampleEn": "Is that bag yours?"
     },
     {
+      "uid": "n5-vocab-2-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-8",
       "word": "違います",
       "reading": "ちがいます",
@@ -183,6 +255,10 @@
       "exampleEn": "No, that's not right."
     },
     {
+      "uid": "n5-vocab-2-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-9",
       "word": "そうですか",
       "reading": "そうですか",
@@ -193,6 +269,10 @@
       "exampleEn": "This is Mr. Schmidt's. — I see."
     },
     {
+      "uid": "n5-vocab-2-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
       "id": "n5-v-2-10",
       "word": "[どうも]ありがとう[ございます]",
       "reading": "[どうも]ありがとう[ございます]",
@@ -205,6 +285,10 @@
   ],
   "3": [
     {
+      "uid": "n5-vocab-3-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-1",
       "word": "ここ／そこ／あそこ",
       "reading": "ここ／そこ／あそこ",
@@ -215,6 +299,10 @@
       "exampleEn": "The classroom is here."
     },
     {
+      "uid": "n5-vocab-3-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-2",
       "word": "教室",
       "reading": "きょうしつ",
@@ -225,6 +313,10 @@
       "exampleEn": "The students are in the classroom."
     },
     {
+      "uid": "n5-vocab-3-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-3",
       "word": "事務所",
       "reading": "じむしょ",
@@ -235,6 +327,10 @@
       "exampleEn": "Mr. Yamada is in the office."
     },
     {
+      "uid": "n5-vocab-3-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-4",
       "word": "受付",
       "reading": "うけつけ",
@@ -245,6 +341,10 @@
       "exampleEn": "The reception desk is that way."
     },
     {
+      "uid": "n5-vocab-3-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-5",
       "word": "お手洗い",
       "reading": "おてあらい",
@@ -255,6 +355,10 @@
       "exampleEn": "Where is the rest room?"
     },
     {
+      "uid": "n5-vocab-3-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-6",
       "word": "会社",
       "reading": "かいしゃ",
@@ -265,6 +369,10 @@
       "exampleEn": "What company do you work for?"
     },
     {
+      "uid": "n5-vocab-3-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-7",
       "word": "いくら",
       "reading": "いくら",
@@ -275,6 +383,10 @@
       "exampleEn": "How much is this watch?"
     },
     {
+      "uid": "n5-vocab-3-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-8",
       "word": "すみません",
       "reading": "すみません",
@@ -285,6 +397,10 @@
       "exampleEn": "Excuse me. Where's the rest room?"
     },
     {
+      "uid": "n5-vocab-3-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-9",
       "word": "[〜を]見せてください",
       "reading": "[〜を]みせてください",
@@ -295,6 +411,10 @@
       "exampleEn": "Please show me that watch."
     },
     {
+      "uid": "n5-vocab-3-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
       "id": "n5-v-3-10",
       "word": "[〜を]ください",
       "reading": "[〜を]ください",
@@ -307,6 +427,10 @@
   ],
   "4": [
     {
+      "uid": "n5-vocab-4-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-1",
       "word": "起きます",
       "reading": "おきます",
@@ -317,6 +441,10 @@
       "exampleEn": "I get up at six every morning."
     },
     {
+      "uid": "n5-vocab-4-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-2",
       "word": "寝ます",
       "reading": "ねます",
@@ -327,6 +455,10 @@
       "exampleEn": "I go to bed at eleven every night."
     },
     {
+      "uid": "n5-vocab-4-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-3",
       "word": "働きます",
       "reading": "はたらきます",
@@ -337,6 +469,10 @@
       "exampleEn": "I work from nine to five."
     },
     {
+      "uid": "n5-vocab-4-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-4",
       "word": "休みます",
       "reading": "やすみます",
@@ -347,6 +483,10 @@
       "exampleEn": "I take Saturdays and Sundays off."
     },
     {
+      "uid": "n5-vocab-4-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-5",
       "word": "勉強します",
       "reading": "べんきょうします",
@@ -357,6 +497,10 @@
       "exampleEn": "I study Japanese every day."
     },
     {
+      "uid": "n5-vocab-4-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-6",
       "word": "終わります",
       "reading": "おわります",
@@ -367,6 +511,10 @@
       "exampleEn": "Work finishes at six."
     },
     {
+      "uid": "n5-vocab-4-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-7",
       "word": "今",
       "reading": "いま",
@@ -377,6 +525,10 @@
       "exampleEn": "What time is it now?"
     },
     {
+      "uid": "n5-vocab-4-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-8",
       "word": "何時",
       "reading": "なんじ",
@@ -387,6 +539,10 @@
       "exampleEn": "What time is it now?"
     },
     {
+      "uid": "n5-vocab-4-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-9",
       "word": "毎日",
       "reading": "まいにち",
@@ -397,6 +553,10 @@
       "exampleEn": "I study every day."
     },
     {
+      "uid": "n5-vocab-4-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-10",
       "word": "何曜日",
       "reading": "なんようび",
@@ -407,6 +567,10 @@
       "exampleEn": "What day of the week is it today?"
     },
     {
+      "uid": "n5-vocab-4-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
       "id": "n5-v-4-11",
       "word": "大変ですね",
       "reading": "たいへんですね",
@@ -419,6 +583,10 @@
   ],
   "5": [
     {
+      "uid": "n5-vocab-5-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-1",
       "word": "行きます",
       "reading": "いきます",
@@ -429,6 +597,10 @@
       "exampleEn": "I will go to Kyoto tomorrow."
     },
     {
+      "uid": "n5-vocab-5-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-2",
       "word": "来ます",
       "reading": "きます",
@@ -439,6 +611,10 @@
       "exampleEn": "I came to Japan."
     },
     {
+      "uid": "n5-vocab-5-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-3",
       "word": "帰ります",
       "reading": "かえります",
@@ -449,6 +625,10 @@
       "exampleEn": "I will go home."
     },
     {
+      "uid": "n5-vocab-5-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-4",
       "word": "駅",
       "reading": "えき",
@@ -459,6 +639,10 @@
       "exampleEn": "I walked home from the station."
     },
     {
+      "uid": "n5-vocab-5-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-5",
       "word": "飛行機",
       "reading": "ひこうき",
@@ -469,6 +653,10 @@
       "exampleEn": "I came to Japan by plane."
     },
     {
+      "uid": "n5-vocab-5-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-6",
       "word": "電車",
       "reading": "でんしゃ",
@@ -479,6 +667,10 @@
       "exampleEn": "I'll go by train."
     },
     {
+      "uid": "n5-vocab-5-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-7",
       "word": "歩いて",
       "reading": "あるいて",
@@ -489,6 +681,10 @@
       "exampleEn": "I'll walk to the station."
     },
     {
+      "uid": "n5-vocab-5-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-8",
       "word": "一人で",
       "reading": "ひとりで",
@@ -499,6 +695,10 @@
       "exampleEn": "I'll go to Tokyo alone."
     },
     {
+      "uid": "n5-vocab-5-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-9",
       "word": "いつ",
       "reading": "いつ",
@@ -509,6 +709,10 @@
       "exampleEn": "When did you come to Japan?"
     },
     {
+      "uid": "n5-vocab-5-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-10",
       "word": "誕生日",
       "reading": "たんじょうび",
@@ -519,6 +723,10 @@
       "exampleEn": "When is your birthday?"
     },
     {
+      "uid": "n5-vocab-5-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
       "id": "n5-v-5-11",
       "word": "どういたしまして",
       "reading": "どういたしまして",
@@ -531,6 +739,10 @@
   ],
   "6": [
     {
+      "uid": "n5-vocab-6-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-1",
       "word": "食べます",
       "reading": "たべます",
@@ -541,6 +753,10 @@
       "exampleEn": "I eat breakfast."
     },
     {
+      "uid": "n5-vocab-6-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-2",
       "word": "飲みます",
       "reading": "のみます",
@@ -551,6 +767,10 @@
       "exampleEn": "I drink juice."
     },
     {
+      "uid": "n5-vocab-6-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-3",
       "word": "見ます",
       "reading": "みます",
@@ -561,6 +781,10 @@
       "exampleEn": "I watch a movie."
     },
     {
+      "uid": "n5-vocab-6-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-4",
       "word": "読みます",
       "reading": "よみます",
@@ -571,6 +795,10 @@
       "exampleEn": "I read the newspaper."
     },
     {
+      "uid": "n5-vocab-6-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-5",
       "word": "書きます",
       "reading": "かきます",
@@ -581,6 +809,10 @@
       "exampleEn": "I write a letter."
     },
     {
+      "uid": "n5-vocab-6-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-6",
       "word": "買います",
       "reading": "かいます",
@@ -591,6 +823,10 @@
       "exampleEn": "I buy the newspaper at the station."
     },
     {
+      "uid": "n5-vocab-6-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-7",
       "word": "撮ります",
       "reading": "とります",
@@ -601,6 +837,10 @@
       "exampleEn": "I take a photograph."
     },
     {
+      "uid": "n5-vocab-6-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-8",
       "word": "会います",
       "reading": "あいます",
@@ -611,6 +851,10 @@
       "exampleEn": "I meet a friend."
     },
     {
+      "uid": "n5-vocab-6-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-9",
       "word": "ごはん",
       "reading": "ごはん",
@@ -621,6 +865,10 @@
       "exampleEn": "I eat supper."
     },
     {
+      "uid": "n5-vocab-6-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-10",
       "word": "お酒",
       "reading": "おさけ",
@@ -631,6 +879,10 @@
       "exampleEn": "Won't you drink some alcohol with me?"
     },
     {
+      "uid": "n5-vocab-6-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-11",
       "word": "宿題",
       "reading": "しゅくだい",
@@ -641,6 +893,10 @@
       "exampleEn": "I do homework."
     },
     {
+      "uid": "n5-vocab-6-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
       "id": "n5-v-6-12",
       "word": "[お]花見",
       "reading": "[お]はなみ",
@@ -653,6 +909,10 @@
   ],
   "7": [
     {
+      "uid": "n5-vocab-7-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-1",
       "word": "送ります",
       "reading": "おくります",
@@ -663,6 +923,10 @@
       "exampleEn": "I send a letter."
     },
     {
+      "uid": "n5-vocab-7-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-2",
       "word": "あげます",
       "reading": "あげます",
@@ -673,6 +937,10 @@
       "exampleEn": "I give flowers to Ms. Kimura."
     },
     {
+      "uid": "n5-vocab-7-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-3",
       "word": "もらいます",
       "reading": "もらいます",
@@ -683,6 +951,10 @@
       "exampleEn": "I received a CD from Mr. Yamada."
     },
     {
+      "uid": "n5-vocab-7-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-4",
       "word": "貸します",
       "reading": "かします",
@@ -693,6 +965,10 @@
       "exampleEn": "I lend a book to my friend."
     },
     {
+      "uid": "n5-vocab-7-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-5",
       "word": "借ります",
       "reading": "かります",
@@ -703,6 +979,10 @@
       "exampleEn": "I borrow money from the bank."
     },
     {
+      "uid": "n5-vocab-7-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-6",
       "word": "教えます",
       "reading": "おしえます",
@@ -713,6 +993,10 @@
       "exampleEn": "I teach Taro English."
     },
     {
+      "uid": "n5-vocab-7-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-7",
       "word": "習います",
       "reading": "ならいます",
@@ -723,6 +1007,10 @@
       "exampleEn": "I learn Chinese from Mr. Wang."
     },
     {
+      "uid": "n5-vocab-7-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-8",
       "word": "かけます",
       "reading": "かけます",
@@ -733,6 +1021,10 @@
       "exampleEn": "I'll call my office."
     },
     {
+      "uid": "n5-vocab-7-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-9",
       "word": "荷物",
       "reading": "にもつ",
@@ -743,6 +1035,10 @@
       "exampleEn": "Have you sent the parcel yet?"
     },
     {
+      "uid": "n5-vocab-7-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-10",
       "word": "お金",
       "reading": "おかね",
@@ -753,6 +1049,10 @@
       "exampleEn": "I borrowed some money from the bank."
     },
     {
+      "uid": "n5-vocab-7-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
       "id": "n5-v-7-11",
       "word": "もう／まだ",
       "reading": "もう／まだ",
@@ -765,6 +1065,10 @@
   ],
   "8": [
     {
+      "uid": "n5-vocab-8-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-1",
       "word": "きれい[な]",
       "reading": "きれい[な]",
@@ -775,6 +1079,10 @@
       "exampleEn": "Is the water of Lake Biwa clean?"
     },
     {
+      "uid": "n5-vocab-8-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-2",
       "word": "親切[な]",
       "reading": "しんせつ[な]",
@@ -785,6 +1093,10 @@
       "exampleEn": "Mr. Watt is kind."
     },
     {
+      "uid": "n5-vocab-8-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-3",
       "word": "有名[な]",
       "reading": "ゆうめい[な]",
@@ -795,6 +1107,10 @@
       "exampleEn": "This is a very famous movie."
     },
     {
+      "uid": "n5-vocab-8-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-4",
       "word": "便利[な]",
       "reading": "べんり[な]",
@@ -805,6 +1121,10 @@
       "exampleEn": "The subway in Tokyo is convenient."
     },
     {
+      "uid": "n5-vocab-8-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-5",
       "word": "大きい",
       "reading": "おおきい",
@@ -815,6 +1135,10 @@
       "exampleEn": "Mt. Fuji is a big mountain."
     },
     {
+      "uid": "n5-vocab-8-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-6",
       "word": "新しい",
       "reading": "あたらしい",
@@ -825,6 +1149,10 @@
       "exampleEn": "I bought a new car."
     },
     {
+      "uid": "n5-vocab-8-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-7",
       "word": "高い",
       "reading": "たかい",
@@ -835,6 +1163,10 @@
       "exampleEn": "Japanese food is good, but expensive."
     },
     {
+      "uid": "n5-vocab-8-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-8",
       "word": "難しい",
       "reading": "むずかしい",
@@ -845,6 +1177,10 @@
       "exampleEn": "This exam is difficult."
     },
     {
+      "uid": "n5-vocab-8-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-9",
       "word": "忙しい",
       "reading": "いそがしい",
@@ -855,6 +1191,10 @@
       "exampleEn": "Work is busy, but interesting."
     },
     {
+      "uid": "n5-vocab-8-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-10",
       "word": "おいしい",
       "reading": "おいしい",
@@ -865,6 +1205,10 @@
       "exampleEn": "This dish is delicious."
     },
     {
+      "uid": "n5-vocab-8-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-11",
       "word": "どんな〜",
       "reading": "どんな〜",
@@ -875,6 +1219,10 @@
       "exampleEn": "What kind of town is Nara?"
     },
     {
+      "uid": "n5-vocab-8-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
       "id": "n5-v-8-12",
       "word": "どれ",
       "reading": "どれ",
@@ -887,6 +1235,10 @@
   ],
   "9": [
     {
+      "uid": "n5-vocab-9-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-1",
       "word": "わかります",
       "reading": "わかります",
@@ -897,6 +1249,10 @@
       "exampleEn": "I understand Japanese."
     },
     {
+      "uid": "n5-vocab-9-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-2",
       "word": "あります",
       "reading": "あります",
@@ -907,6 +1263,10 @@
       "exampleEn": "I have a car."
     },
     {
+      "uid": "n5-vocab-9-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-3",
       "word": "好き[な]",
       "reading": "すき[な]",
@@ -917,6 +1277,10 @@
       "exampleEn": "I like Italian food."
     },
     {
+      "uid": "n5-vocab-9-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-4",
       "word": "嫌い[な]",
       "reading": "きらい[な]",
@@ -927,6 +1291,10 @@
       "exampleEn": "I dislike alcohol."
     },
     {
+      "uid": "n5-vocab-9-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-5",
       "word": "上手[な]",
       "reading": "じょうず[な]",
@@ -937,6 +1305,10 @@
       "exampleEn": "Ms. Karina is good at drawing pictures."
     },
     {
+      "uid": "n5-vocab-9-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-6",
       "word": "下手[な]",
       "reading": "へた[な]",
@@ -947,6 +1319,10 @@
       "exampleEn": "I'm poor at cooking."
     },
     {
+      "uid": "n5-vocab-9-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-7",
       "word": "料理",
       "reading": "りょうり",
@@ -957,6 +1333,10 @@
       "exampleEn": "I like Italian food."
     },
     {
+      "uid": "n5-vocab-9-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-8",
       "word": "音楽",
       "reading": "おんがく",
@@ -967,6 +1347,10 @@
       "exampleEn": "What kind of music do you like?"
     },
     {
+      "uid": "n5-vocab-9-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-9",
       "word": "時間",
       "reading": "じかん",
@@ -977,6 +1361,10 @@
       "exampleEn": "Because I don't have time, I don't read the newspaper."
     },
     {
+      "uid": "n5-vocab-9-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-10",
       "word": "約束",
       "reading": "やくそく",
@@ -987,6 +1375,10 @@
       "exampleEn": "I have an appointment with a friend."
     },
     {
+      "uid": "n5-vocab-9-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
       "id": "n5-v-9-11",
       "word": "どうして",
       "reading": "どうして",
@@ -999,6 +1391,10 @@
   ],
   "10": [
     {
+      "uid": "n5-vocab-10-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-1",
       "word": "います",
       "reading": "います",
@@ -1009,6 +1405,10 @@
       "exampleEn": "Mr. Miller is in the office."
     },
     {
+      "uid": "n5-vocab-10-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-2",
       "word": "いろいろ[な]",
       "reading": "いろいろ[な]",
@@ -1019,6 +1419,10 @@
       "exampleEn": "There are various things in the box."
     },
     {
+      "uid": "n5-vocab-10-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-3",
       "word": "男の人／女の人",
       "reading": "おとこのひと／おんなのひと",
@@ -1029,6 +1433,10 @@
       "exampleEn": "There is a man over there."
     },
     {
+      "uid": "n5-vocab-10-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-4",
       "word": "犬／猫",
       "reading": "いぬ／ねこ",
@@ -1039,6 +1447,10 @@
       "exampleEn": "There is a dog in the garden."
     },
     {
+      "uid": "n5-vocab-10-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-5",
       "word": "木",
       "reading": "き",
@@ -1049,6 +1461,10 @@
       "exampleEn": "There are trees in the park."
     },
     {
+      "uid": "n5-vocab-10-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-6",
       "word": "本屋",
       "reading": "ほんや",
@@ -1059,6 +1475,10 @@
       "exampleEn": "The bookstore is next to the station."
     },
     {
+      "uid": "n5-vocab-10-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-7",
       "word": "上／下",
       "reading": "うえ／した",
@@ -1069,6 +1489,10 @@
       "exampleEn": "There is a picture on the desk."
     },
     {
+      "uid": "n5-vocab-10-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-8",
       "word": "前／うしろ",
       "reading": "まえ／うしろ",
@@ -1079,6 +1503,10 @@
       "exampleEn": "The bank is in front of the post office."
     },
     {
+      "uid": "n5-vocab-10-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-9",
       "word": "隣",
       "reading": "となり",
@@ -1089,6 +1517,10 @@
       "exampleEn": "The post office is next to the bank."
     },
     {
+      "uid": "n5-vocab-10-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-10",
       "word": "近く",
       "reading": "ちかく",
@@ -1099,6 +1531,10 @@
       "exampleEn": "I met a friend near the station."
     },
     {
+      "uid": "n5-vocab-10-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "id": "n5-v-10-11",
       "word": "いちばん〜",
       "reading": "いちばん〜",
@@ -1111,6 +1547,10 @@
   ],
   "11": [
     {
+      "uid": "n5-vocab-11-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-1",
       "word": "かかります",
       "reading": "かかります",
@@ -1121,6 +1561,10 @@
       "exampleEn": "It takes two and a half hours from Osaka to Tokyo."
     },
     {
+      "uid": "n5-vocab-11-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-2",
       "word": "休みます",
       "reading": "やすみます",
@@ -1131,6 +1575,10 @@
       "exampleEn": "I'll take tomorrow off work."
     },
     {
+      "uid": "n5-vocab-11-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-3",
       "word": "いくつ",
       "reading": "いくつ",
@@ -1141,6 +1589,10 @@
       "exampleEn": "How many mandarin oranges did you buy?"
     },
     {
+      "uid": "n5-vocab-11-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-4",
       "word": "どのくらい",
       "reading": "どのくらい",
@@ -1151,6 +1603,10 @@
       "exampleEn": "How long did you study Japanese?"
     },
     {
+      "uid": "n5-vocab-11-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-5",
       "word": "〜ぐらい",
       "reading": "〜ぐらい",
@@ -1161,6 +1617,10 @@
       "exampleEn": "There are about thirty teachers in our school."
     },
     {
+      "uid": "n5-vocab-11-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-6",
       "word": "切手",
       "reading": "きって",
@@ -1171,6 +1631,10 @@
       "exampleEn": "Give me five 80-yen stamps, please."
     },
     {
+      "uid": "n5-vocab-11-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-7",
       "word": "兄弟",
       "reading": "きょうだい",
@@ -1181,6 +1645,10 @@
       "exampleEn": "How many brothers and sisters do you have?"
     },
     {
+      "uid": "n5-vocab-11-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-8",
       "word": "〜だけ",
       "reading": "〜だけ",
@@ -1191,6 +1659,10 @@
       "exampleEn": "I only have Sundays off."
     },
     {
+      "uid": "n5-vocab-11-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
       "id": "n5-v-11-9",
       "word": "全部で",
       "reading": "ぜんぶで",
@@ -1203,6 +1675,10 @@
   ],
   "12": [
     {
+      "uid": "n5-vocab-12-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-1",
       "word": "近い／遠い",
       "reading": "ちかい／とおい",
@@ -1213,6 +1689,10 @@
       "exampleEn": "The station is near, but the bank is far."
     },
     {
+      "uid": "n5-vocab-12-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-2",
       "word": "多い／少ない",
       "reading": "おおい／すくない",
@@ -1223,6 +1703,10 @@
       "exampleEn": "There are many people in Tokyo."
     },
     {
+      "uid": "n5-vocab-12-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-3",
       "word": "暖かい／涼しい",
       "reading": "あたたかい／すずしい",
@@ -1233,6 +1717,10 @@
       "exampleEn": "Which is cooler, Hokkaido or Osaka?"
     },
     {
+      "uid": "n5-vocab-12-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-4",
       "word": "重い／軽い",
       "reading": "おもい／かるい",
@@ -1243,6 +1731,10 @@
       "exampleEn": "This baggage is heavy."
     },
     {
+      "uid": "n5-vocab-12-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-5",
       "word": "季節",
       "reading": "きせつ",
@@ -1253,6 +1745,10 @@
       "exampleEn": "Which season do you like best of the year?"
     },
     {
+      "uid": "n5-vocab-12-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-6",
       "word": "天気",
       "reading": "てんき",
@@ -1263,6 +1759,10 @@
       "exampleEn": "How was the weather yesterday?"
     },
     {
+      "uid": "n5-vocab-12-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-7",
       "word": "世界",
       "reading": "せかい",
@@ -1273,6 +1773,10 @@
       "exampleEn": "In the world, where did you like best?"
     },
     {
+      "uid": "n5-vocab-12-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-8",
       "word": "[お]祭り",
       "reading": "[お]まつり",
@@ -1283,6 +1787,10 @@
       "exampleEn": "The Gion Festival is the most famous festival in Kyoto."
     },
     {
+      "uid": "n5-vocab-12-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-9",
       "word": "どちら",
       "reading": "どちら",
@@ -1293,6 +1801,10 @@
       "exampleEn": "Which do you prefer, the sea or the mountains?"
     },
     {
+      "uid": "n5-vocab-12-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
       "id": "n5-v-12-10",
       "word": "初めて",
       "reading": "はじめて",
@@ -1305,6 +1817,10 @@
   ],
   "13": [
     {
+      "uid": "n5-vocab-13-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-1",
       "word": "遊びます",
       "reading": "あそびます",
@@ -1315,6 +1831,10 @@
       "exampleEn": "I play in the park."
     },
     {
+      "uid": "n5-vocab-13-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-2",
       "word": "疲れます",
       "reading": "つかれます",
@@ -1325,6 +1845,10 @@
       "exampleEn": "I got tired today."
     },
     {
+      "uid": "n5-vocab-13-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-3",
       "word": "入ります／出ます",
       "reading": "はいります／でます",
@@ -1335,6 +1859,10 @@
       "exampleEn": "Let's go in that coffee shop."
     },
     {
+      "uid": "n5-vocab-13-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-4",
       "word": "結婚します",
       "reading": "けっこんします",
@@ -1345,6 +1873,10 @@
       "exampleEn": "I'll get married next year."
     },
     {
+      "uid": "n5-vocab-13-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-5",
       "word": "散歩します",
       "reading": "さんぽします",
@@ -1355,6 +1887,10 @@
       "exampleEn": "I take a walk in the park."
     },
     {
+      "uid": "n5-vocab-13-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-6",
       "word": "欲しい",
       "reading": "ほしい",
@@ -1365,6 +1901,10 @@
       "exampleEn": "What do you want most now?"
     },
     {
+      "uid": "n5-vocab-13-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-7",
       "word": "広い／狭い",
       "reading": "ひろい／せまい",
@@ -1375,6 +1915,10 @@
       "exampleEn": "My room is small."
     },
     {
+      "uid": "n5-vocab-13-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-8",
       "word": "週末",
       "reading": "しゅうまつ",
@@ -1385,6 +1929,10 @@
       "exampleEn": "What will you do this weekend?"
     },
     {
+      "uid": "n5-vocab-13-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-9",
       "word": "おなかが すきました",
       "reading": "おなかが すきました",
@@ -1395,6 +1943,10 @@
       "exampleEn": "I'm hungry, aren't you?"
     },
     {
+      "uid": "n5-vocab-13-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
       "id": "n5-v-13-10",
       "word": "のどが かわきました",
       "reading": "のどが かわきました",
@@ -1407,6 +1959,10 @@
   ],
   "14": [
     {
+      "uid": "n5-vocab-14-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-1",
       "word": "つけます／消します",
       "reading": "つけます／けします",
@@ -1417,6 +1973,10 @@
       "exampleEn": "Please turn on the air conditioner."
     },
     {
+      "uid": "n5-vocab-14-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-2",
       "word": "開けます／閉めます",
       "reading": "あけます／しめます",
@@ -1427,6 +1987,10 @@
       "exampleEn": "Shall I open the window?"
     },
     {
+      "uid": "n5-vocab-14-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-3",
       "word": "急ぎます",
       "reading": "いそぎます",
@@ -1437,6 +2001,10 @@
       "exampleEn": "Please hurry."
     },
     {
+      "uid": "n5-vocab-14-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-4",
       "word": "待ちます",
       "reading": "まちます",
@@ -1447,6 +2015,10 @@
       "exampleEn": "Please wait a moment."
     },
     {
+      "uid": "n5-vocab-14-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-5",
       "word": "曲がります",
       "reading": "まがります",
@@ -1457,6 +2029,10 @@
       "exampleEn": "Turn to the right at the signal."
     },
     {
+      "uid": "n5-vocab-14-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-6",
       "word": "手伝います",
       "reading": "てつだいます",
@@ -1467,6 +2043,10 @@
       "exampleEn": "Please help me with my work."
     },
     {
+      "uid": "n5-vocab-14-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-7",
       "word": "話します",
       "reading": "はなします",
@@ -1477,6 +2057,10 @@
       "exampleEn": "Mr. Miller is talking with Mr. Matsumoto."
     },
     {
+      "uid": "n5-vocab-14-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-8",
       "word": "見せます",
       "reading": "みせます",
@@ -1487,6 +2071,10 @@
       "exampleEn": "Please show me that shirt."
     },
     {
+      "uid": "n5-vocab-14-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-9",
       "word": "住所",
       "reading": "じゅうしょ",
@@ -1497,6 +2085,10 @@
       "exampleEn": "Please write your name and address here."
     },
     {
+      "uid": "n5-vocab-14-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-10",
       "word": "読み方",
       "reading": "よみかた",
@@ -1507,6 +2099,10 @@
       "exampleEn": "Please tell me how to read this kanji."
     },
     {
+      "uid": "n5-vocab-14-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-11",
       "word": "ゆっくり",
       "reading": "ゆっくり",
@@ -1517,6 +2113,10 @@
       "exampleEn": "Please speak a little more slowly."
     },
     {
+      "uid": "n5-vocab-14-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
       "id": "n5-v-14-12",
       "word": "まっすぐ",
       "reading": "まっすぐ",
@@ -1529,6 +2129,10 @@
   ],
   "15": [
     {
+      "uid": "n5-vocab-15-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-1",
       "word": "使います",
       "reading": "つかいます",
@@ -1539,6 +2143,10 @@
       "exampleEn": "May I use the dictionary?"
     },
     {
+      "uid": "n5-vocab-15-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-2",
       "word": "作ります",
       "reading": "つくります",
@@ -1549,6 +2157,10 @@
       "exampleEn": "IMC makes computer software."
     },
     {
+      "uid": "n5-vocab-15-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-3",
       "word": "売ります",
       "reading": "うります",
@@ -1559,6 +2171,10 @@
       "exampleEn": "Supermarkets sell films."
     },
     {
+      "uid": "n5-vocab-15-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-4",
       "word": "知ります／知っています",
       "reading": "しります／しって います",
@@ -1569,6 +2185,10 @@
       "exampleEn": "Do you know Mr. Tanaka? …No, I don't."
     },
     {
+      "uid": "n5-vocab-15-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-5",
       "word": "住んでいます",
       "reading": "すんで います",
@@ -1579,6 +2199,10 @@
       "exampleEn": "I live in Osaka."
     },
     {
+      "uid": "n5-vocab-15-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-6",
       "word": "研究します",
       "reading": "けんきゅうします",
@@ -1589,6 +2213,10 @@
       "exampleEn": "I do research on economics at university."
     },
     {
+      "uid": "n5-vocab-15-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-7",
       "word": "専門",
       "reading": "せんもん",
@@ -1599,6 +2227,10 @@
       "exampleEn": "What is your speciality? …It's Japanese fine art."
     },
     {
+      "uid": "n5-vocab-15-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-8",
       "word": "独身",
       "reading": "どくしん",
@@ -1609,6 +2241,10 @@
       "exampleEn": "Is Mr. Wang single? …No, he is married."
     },
     {
+      "uid": "n5-vocab-15-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
       "id": "n5-v-15-9",
       "word": "特に",
       "reading": "とくに",
@@ -1621,6 +2257,10 @@
   ],
   "16": [
     {
+      "uid": "n5-vocab-16-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-1",
       "word": "乗ります／降ります",
       "reading": "のります／おります",
@@ -1631,6 +2271,10 @@
       "exampleEn": "I take a bus from Kyoto Station and get off at Daigaku-mae."
     },
     {
+      "uid": "n5-vocab-16-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-2",
       "word": "乗り換えます",
       "reading": "のりかえます",
@@ -1641,6 +2285,10 @@
       "exampleEn": "I change trains at Kyoto Station."
     },
     {
+      "uid": "n5-vocab-16-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-3",
       "word": "入れます／出します",
       "reading": "いれます／だします",
@@ -1651,6 +2299,10 @@
       "exampleEn": "Insert the card and enter the code number."
     },
     {
+      "uid": "n5-vocab-16-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-4",
       "word": "入ります／出ます",
       "reading": "はいります／でます",
@@ -1661,6 +2313,10 @@
       "exampleEn": "I enter university."
     },
     {
+      "uid": "n5-vocab-16-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-5",
       "word": "若い",
       "reading": "わかい",
@@ -1671,6 +2327,10 @@
       "exampleEn": "Mr. Miller is young and lively."
     },
     {
+      "uid": "n5-vocab-16-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-6",
       "word": "背が高い",
       "reading": "せがたかい",
@@ -1681,6 +2341,10 @@
       "exampleEn": "Who is that tall person?"
     },
     {
+      "uid": "n5-vocab-16-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-7",
       "word": "体",
       "reading": "からだ",
@@ -1691,6 +2355,10 @@
       "exampleEn": "My body feels weary."
     },
     {
+      "uid": "n5-vocab-16-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-8",
       "word": "頭",
       "reading": "あたま",
@@ -1701,6 +2369,10 @@
       "exampleEn": "You're clever, aren't you."
     },
     {
+      "uid": "n5-vocab-16-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-9",
       "word": "留学生",
       "reading": "りゅうがくせい",
@@ -1711,6 +2383,10 @@
       "exampleEn": "Ms. Karina is a foreign student at Kyoto University."
     },
     {
+      "uid": "n5-vocab-16-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
       "id": "n5-v-16-10",
       "word": "どうやって",
       "reading": "どうやって",
@@ -1723,6 +2399,10 @@
   ],
   "17": [
     {
+      "uid": "n5-vocab-17-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-1",
       "word": "忘れます",
       "reading": "わすれます",
@@ -1733,6 +2413,10 @@
       "exampleEn": "I forgot the appointment."
     },
     {
+      "uid": "n5-vocab-17-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-2",
       "word": "払います",
       "reading": "はらいます",
@@ -1743,6 +2427,10 @@
       "exampleEn": "Can I pay by credit card?"
     },
     {
+      "uid": "n5-vocab-17-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-3",
       "word": "返します",
       "reading": "かえします",
@@ -1753,6 +2441,10 @@
       "exampleEn": "I must return the book by Saturday."
     },
     {
+      "uid": "n5-vocab-17-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-4",
       "word": "心配します",
       "reading": "しんぱいします",
@@ -1763,6 +2455,10 @@
       "exampleEn": "Please don't worry."
     },
     {
+      "uid": "n5-vocab-17-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-5",
       "word": "危ない",
       "reading": "あぶない",
@@ -1773,6 +2469,10 @@
       "exampleEn": "It's dangerous to play here."
     },
     {
+      "uid": "n5-vocab-17-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-6",
       "word": "大丈夫[な]",
       "reading": "だいじょうぶ[な]",
@@ -1783,6 +2483,10 @@
       "exampleEn": "Please don't worry. It's all right."
     },
     {
+      "uid": "n5-vocab-17-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-7",
       "word": "問題",
       "reading": "もんだい",
@@ -1793,6 +2497,10 @@
       "exampleEn": "What seems to be the problem?"
     },
     {
+      "uid": "n5-vocab-17-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-8",
       "word": "病気",
       "reading": "びょうき",
@@ -1803,6 +2511,10 @@
       "exampleEn": "I'll take a day off because I'm sick."
     },
     {
+      "uid": "n5-vocab-17-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-9",
       "word": "薬",
       "reading": "くすり",
@@ -1813,6 +2525,10 @@
       "exampleEn": "I must take medicine."
     },
     {
+      "uid": "n5-vocab-17-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
       "id": "n5-v-17-10",
       "word": "お大事に",
       "reading": "おだいじに",
@@ -1825,6 +2541,10 @@
   ],
   "18": [
     {
+      "uid": "n5-vocab-18-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-1",
       "word": "できます",
       "reading": "できます",
@@ -1835,6 +2555,10 @@
       "exampleEn": "Mr. Miller can speak Japanese."
     },
     {
+      "uid": "n5-vocab-18-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-2",
       "word": "弾きます",
       "reading": "ひきます",
@@ -1845,6 +2569,10 @@
       "exampleEn": "I can play the piano."
     },
     {
+      "uid": "n5-vocab-18-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-3",
       "word": "歌います",
       "reading": "うたいます",
@@ -1855,6 +2583,10 @@
       "exampleEn": "I sing songs at karaoke."
     },
     {
+      "uid": "n5-vocab-18-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-4",
       "word": "集めます／捨てます",
       "reading": "あつめます／すてます",
@@ -1865,6 +2597,10 @@
       "exampleEn": "My hobby is collecting old clocks."
     },
     {
+      "uid": "n5-vocab-18-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-5",
       "word": "運転します",
       "reading": "うんてんします",
@@ -1875,6 +2611,10 @@
       "exampleEn": "Can you drive a car?"
     },
     {
+      "uid": "n5-vocab-18-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-6",
       "word": "予約します",
       "reading": "よやくします",
@@ -1885,6 +2625,10 @@
       "exampleEn": "I'll reserve a restaurant."
     },
     {
+      "uid": "n5-vocab-18-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-7",
       "word": "趣味",
       "reading": "しゅみ",
@@ -1895,6 +2639,10 @@
       "exampleEn": "My hobby is listening to music."
     },
     {
+      "uid": "n5-vocab-18-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-8",
       "word": "日記",
       "reading": "にっき",
@@ -1905,6 +2653,10 @@
       "exampleEn": "I write in my diary before I go to bed."
     },
     {
+      "uid": "n5-vocab-18-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-9",
       "word": "現金",
       "reading": "げんきん",
@@ -1915,6 +2667,10 @@
       "exampleEn": "Please pay in cash."
     },
     {
+      "uid": "n5-vocab-18-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-10",
       "word": "なかなか",
       "reading": "なかなか",
@@ -1925,6 +2681,10 @@
       "exampleEn": "In Japan we can rarely see horses."
     },
     {
+      "uid": "n5-vocab-18-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "id": "n5-v-18-11",
       "word": "ぜひ",
       "reading": "ぜひ",
@@ -1937,6 +2697,10 @@
   ],
   "19": [
     {
+      "uid": "n5-vocab-19-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-1",
       "word": "登ります",
       "reading": "のぼります",
@@ -1947,6 +2711,10 @@
       "exampleEn": "I have climbed Mt. Fuji."
     },
     {
+      "uid": "n5-vocab-19-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-2",
       "word": "泊まります",
       "reading": "とまります",
@@ -1957,6 +2725,10 @@
       "exampleEn": "I'll stay at a hotel."
     },
     {
+      "uid": "n5-vocab-19-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-3",
       "word": "掃除します／洗濯します",
       "reading": "そうじします／せんたくします",
@@ -1967,6 +2739,10 @@
       "exampleEn": "On my days off I clean, do the laundry, and so on."
     },
     {
+      "uid": "n5-vocab-19-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-4",
       "word": "練習します",
       "reading": "れんしゅうします",
@@ -1977,6 +2753,10 @@
       "exampleEn": "I practice Japanese every day."
     },
     {
+      "uid": "n5-vocab-19-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-5",
       "word": "なります",
       "reading": "なります",
@@ -1987,6 +2767,10 @@
       "exampleEn": "It's got cold, hasn't it?"
     },
     {
+      "uid": "n5-vocab-19-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-6",
       "word": "眠い",
       "reading": "ねむい",
@@ -1997,6 +2781,10 @@
       "exampleEn": "I'm sleepy, so I'll drink coffee."
     },
     {
+      "uid": "n5-vocab-19-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-7",
       "word": "強い／弱い",
       "reading": "つよい／よわい",
@@ -2007,6 +2795,10 @@
       "exampleEn": "Are you in good condition or bad condition?"
     },
     {
+      "uid": "n5-vocab-19-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-8",
       "word": "調子",
       "reading": "ちょうし",
@@ -2017,6 +2809,10 @@
       "exampleEn": "I'm in bad condition."
     },
     {
+      "uid": "n5-vocab-19-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-9",
       "word": "一度／一度も",
       "reading": "いちど／いちども",
@@ -2027,6 +2823,10 @@
       "exampleEn": "I have never ridden a horse."
     },
     {
+      "uid": "n5-vocab-19-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
       "id": "n5-v-19-10",
       "word": "だんだん",
       "reading": "だんだん",
@@ -2039,6 +2839,10 @@
   ],
   "20": [
     {
+      "uid": "n5-vocab-20-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-1",
       "word": "要ります",
       "reading": "いります",
@@ -2049,6 +2853,10 @@
       "exampleEn": "Do I need a visa?"
     },
     {
+      "uid": "n5-vocab-20-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-2",
       "word": "調べます",
       "reading": "しらべます",
@@ -2059,6 +2867,10 @@
       "exampleEn": "I will check up on various things and call you."
     },
     {
+      "uid": "n5-vocab-20-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-3",
       "word": "直します／修理します",
       "reading": "なおします／しゅうりします",
@@ -2069,6 +2881,10 @@
       "exampleEn": "I'll repair the watch."
     },
     {
+      "uid": "n5-vocab-20-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-4",
       "word": "ぼく／きみ",
       "reading": "ぼく／きみ",
@@ -2079,6 +2895,10 @@
       "exampleEn": "I'm a student."
     },
     {
+      "uid": "n5-vocab-20-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-5",
       "word": "サラリーマン",
       "reading": "サラリーマン",
@@ -2089,6 +2909,10 @@
       "exampleEn": "My brother is an office worker."
     },
     {
+      "uid": "n5-vocab-20-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-6",
       "word": "物価",
       "reading": "ぶっか",
@@ -2099,6 +2923,10 @@
       "exampleEn": "Things are expensive in Japan."
     },
     {
+      "uid": "n5-vocab-20-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-7",
       "word": "ビザ",
       "reading": "ビザ",
@@ -2109,6 +2937,10 @@
       "exampleEn": "Do I need a visa?"
     },
     {
+      "uid": "n5-vocab-20-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-8",
       "word": "この間",
       "reading": "このあいだ",
@@ -2119,6 +2951,10 @@
       "exampleEn": "I met Mr. Miller the other day."
     },
     {
+      "uid": "n5-vocab-20-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-9",
       "word": "みんなで",
       "reading": "みんなで",
@@ -2129,6 +2965,10 @@
       "exampleEn": "Shall we go to Kyoto all together tomorrow?"
     },
     {
+      "uid": "n5-vocab-20-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "id": "n5-v-20-10",
       "word": "〜けど",
       "reading": "〜けど",
@@ -2141,6 +2981,10 @@
   ],
   "21": [
     {
+      "uid": "n5-vocab-21-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-1",
       "word": "勝ちます／負けます",
       "reading": "かちます／まけます",
@@ -2151,6 +2995,10 @@
       "exampleEn": "Do you think Japan will win?"
     },
     {
+      "uid": "n5-vocab-21-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-2",
       "word": "役に立ちます",
       "reading": "やくにたちます",
@@ -2161,6 +3009,10 @@
       "exampleEn": "This dictionary is useful."
     },
     {
+      "uid": "n5-vocab-21-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-3",
       "word": "同じ",
       "reading": "おなじ",
@@ -2171,6 +3023,10 @@
       "exampleEn": "I have the same opinion."
     },
     {
+      "uid": "n5-vocab-21-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-4",
       "word": "すごい",
       "reading": "すごい",
@@ -2181,6 +3037,10 @@
       "exampleEn": "That's amazing, isn't it."
     },
     {
+      "uid": "n5-vocab-21-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-5",
       "word": "政治",
       "reading": "せいじ",
@@ -2191,6 +3051,10 @@
       "exampleEn": "What do you think about politics?"
     },
     {
+      "uid": "n5-vocab-21-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-6",
       "word": "試合",
       "reading": "しあい",
@@ -2201,6 +3065,10 @@
       "exampleEn": "There will be a football game in Tokyo."
     },
     {
+      "uid": "n5-vocab-21-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-7",
       "word": "意見",
       "reading": "いけん",
@@ -2211,6 +3079,10 @@
       "exampleEn": "I gave my opinion at the meeting."
     },
     {
+      "uid": "n5-vocab-21-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-8",
       "word": "交通",
       "reading": "こうつう",
@@ -2221,6 +3093,10 @@
       "exampleEn": "The access here is not convenient."
     },
     {
+      "uid": "n5-vocab-21-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-9",
       "word": "〜について",
       "reading": "〜について",
@@ -2231,6 +3107,10 @@
       "exampleEn": "I'll talk about politics."
     },
     {
+      "uid": "n5-vocab-21-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
       "id": "n5-v-21-10",
       "word": "しかたが ありません",
       "reading": "しかたが ありません",
@@ -2243,6 +3123,10 @@
   ],
   "22": [
     {
+      "uid": "n5-vocab-22-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-1",
       "word": "着ます",
       "reading": "きます",
@@ -2253,6 +3137,10 @@
       "exampleEn": "I put on a coat."
     },
     {
+      "uid": "n5-vocab-22-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-2",
       "word": "はきます",
       "reading": "はきます",
@@ -2263,6 +3151,10 @@
       "exampleEn": "I put on shoes."
     },
     {
+      "uid": "n5-vocab-22-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-3",
       "word": "かぶります",
       "reading": "かぶります",
@@ -2273,6 +3165,10 @@
       "exampleEn": "I put on a hat."
     },
     {
+      "uid": "n5-vocab-22-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-4",
       "word": "かけます",
       "reading": "かけます",
@@ -2283,6 +3179,10 @@
       "exampleEn": "I put on glasses."
     },
     {
+      "uid": "n5-vocab-22-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-5",
       "word": "生まれます",
       "reading": "うまれます",
@@ -2293,6 +3193,10 @@
       "exampleEn": "Do you know the place where he was born?"
     },
     {
+      "uid": "n5-vocab-22-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-6",
       "word": "コート／セーター",
       "reading": "コート／セーター",
@@ -2303,6 +3207,10 @@
       "exampleEn": "My mother sent me a sweater."
     },
     {
+      "uid": "n5-vocab-22-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-7",
       "word": "帽子／眼鏡",
       "reading": "ぼうし／めがね",
@@ -2313,6 +3221,10 @@
       "exampleEn": "Who is the person wearing a hat?"
     },
     {
+      "uid": "n5-vocab-22-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-8",
       "word": "家賃",
       "reading": "やちん",
@@ -2323,6 +3235,10 @@
       "exampleEn": "The rent of this apartment is 80,000 yen."
     },
     {
+      "uid": "n5-vocab-22-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-9",
       "word": "アパート",
       "reading": "アパート",
@@ -2333,6 +3249,10 @@
       "exampleEn": "I'd like an apartment close to the station."
     },
     {
+      "uid": "n5-vocab-22-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
       "id": "n5-v-22-10",
       "word": "おめでとう ございます",
       "reading": "おめでとう ございます",
@@ -2345,6 +3265,10 @@
   ],
   "23": [
     {
+      "uid": "n5-vocab-23-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-1",
       "word": "回します",
       "reading": "まわします",
@@ -2355,6 +3279,10 @@
       "exampleEn": "Turn this, and the volume will go up."
     },
     {
+      "uid": "n5-vocab-23-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-2",
       "word": "引きます",
       "reading": "ひきます",
@@ -2365,6 +3293,10 @@
       "exampleEn": "Please pull this door."
     },
     {
+      "uid": "n5-vocab-23-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-3",
       "word": "変えます",
       "reading": "かえます",
@@ -2375,6 +3307,10 @@
       "exampleEn": "I change money into yen."
     },
     {
+      "uid": "n5-vocab-23-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-4",
       "word": "動きます",
       "reading": "うごきます",
@@ -2385,6 +3321,10 @@
       "exampleEn": "The watch doesn't work."
     },
     {
+      "uid": "n5-vocab-23-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-5",
       "word": "渡ります",
       "reading": "わたります",
@@ -2395,6 +3335,10 @@
       "exampleEn": "I cross the road."
     },
     {
+      "uid": "n5-vocab-23-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-6",
       "word": "気を つけます",
       "reading": "きを つけます",
@@ -2405,6 +3349,10 @@
       "exampleEn": "Please watch out for cars."
     },
     {
+      "uid": "n5-vocab-23-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-7",
       "word": "道",
       "reading": "みち",
@@ -2415,6 +3363,10 @@
       "exampleEn": "I cross the road."
     },
     {
+      "uid": "n5-vocab-23-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-8",
       "word": "信号",
       "reading": "しんごう",
@@ -2425,6 +3377,10 @@
       "exampleEn": "Turn to the right at the signal."
     },
     {
+      "uid": "n5-vocab-23-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-9",
       "word": "角",
       "reading": "かど",
@@ -2435,6 +3391,10 @@
       "exampleEn": "I turn at that corner."
     },
     {
+      "uid": "n5-vocab-23-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
       "id": "n5-v-23-10",
       "word": "橋",
       "reading": "はし",
@@ -2447,6 +3407,10 @@
   ],
   "24": [
     {
+      "uid": "n5-vocab-24-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-1",
       "word": "くれます",
       "reading": "くれます",
@@ -2457,6 +3421,10 @@
       "exampleEn": "Ms. Sato gave me flowers."
     },
     {
+      "uid": "n5-vocab-24-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-2",
       "word": "連れて 行きます／連れて 来ます",
       "reading": "つれて いきます／つれて きます",
@@ -2467,6 +3435,10 @@
       "exampleEn": "I'll take my child to the zoo."
     },
     {
+      "uid": "n5-vocab-24-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-3",
       "word": "紹介します",
       "reading": "しょうかいします",
@@ -2477,6 +3449,10 @@
       "exampleEn": "I'll introduce my friend."
     },
     {
+      "uid": "n5-vocab-24-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-4",
       "word": "案内します／説明します",
       "reading": "あんないします／せつめいします",
@@ -2487,6 +3463,10 @@
       "exampleEn": "I'll show you around Kyoto."
     },
     {
+      "uid": "n5-vocab-24-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-5",
       "word": "おじいさん／おばあさん",
       "reading": "おじいさん／おばあさん",
@@ -2497,6 +3477,10 @@
       "exampleEn": "Is your grandfather doing well?"
     },
     {
+      "uid": "n5-vocab-24-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-6",
       "word": "準備",
       "reading": "じゅんび",
@@ -2507,6 +3491,10 @@
       "exampleEn": "I'll prepare for the party."
     },
     {
+      "uid": "n5-vocab-24-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-7",
       "word": "意味",
       "reading": "いみ",
@@ -2517,6 +3505,10 @@
       "exampleEn": "I don't understand the meaning of this word."
     },
     {
+      "uid": "n5-vocab-24-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-8",
       "word": "全部",
       "reading": "ぜんぶ",
@@ -2527,6 +3519,10 @@
       "exampleEn": "Did you make all of it by yourself?"
     },
     {
+      "uid": "n5-vocab-24-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
       "id": "n5-v-24-9",
       "word": "自分で",
       "reading": "じぶんで",
@@ -2539,6 +3535,10 @@
   ],
   "25": [
     {
+      "uid": "n5-vocab-25-1",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-1",
       "word": "考えます",
       "reading": "かんがえます",
@@ -2549,6 +3549,10 @@
       "exampleEn": "No matter how much I think, I can't understand this."
     },
     {
+      "uid": "n5-vocab-25-2",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-2",
       "word": "着きます",
       "reading": "つきます",
@@ -2559,6 +3563,10 @@
       "exampleEn": "I'll call you when I arrive at the station."
     },
     {
+      "uid": "n5-vocab-25-3",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-3",
       "word": "留学します",
       "reading": "りゅうがくします",
@@ -2569,6 +3577,10 @@
       "exampleEn": "I want to study abroad in America."
     },
     {
+      "uid": "n5-vocab-25-4",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-4",
       "word": "田舎",
       "reading": "いなか",
@@ -2579,6 +3591,10 @@
       "exampleEn": "I'll go back to my hometown for the summer vacation."
     },
     {
+      "uid": "n5-vocab-25-5",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-5",
       "word": "大使館",
       "reading": "たいしかん",
@@ -2589,6 +3605,10 @@
       "exampleEn": "I'll get a visa at the embassy."
     },
     {
+      "uid": "n5-vocab-25-6",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-6",
       "word": "チャンス",
       "reading": "チャンス",
@@ -2599,6 +3619,10 @@
       "exampleEn": "That's a good chance, isn't it."
     },
     {
+      "uid": "n5-vocab-25-7",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-7",
       "word": "もし〜たら",
       "reading": "もし〜たら",
@@ -2609,6 +3633,10 @@
       "exampleEn": "If you had 100 million yen, what would you like to do?"
     },
     {
+      "uid": "n5-vocab-25-8",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-8",
       "word": "いくら〜ても",
       "reading": "いくら〜ても",
@@ -2619,6 +3647,10 @@
       "exampleEn": "No matter how expensive it is, I will buy it."
     },
     {
+      "uid": "n5-vocab-25-9",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-9",
       "word": "頑張ります",
       "reading": "がんばります",
@@ -2629,6 +3661,10 @@
       "exampleEn": "I'll do my best."
     },
     {
+      "uid": "n5-vocab-25-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
       "id": "n5-v-25-10",
       "word": "どうぞ お元気で。",
       "reading": "どうぞ おげんきで。",

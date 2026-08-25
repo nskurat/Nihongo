@@ -124,7 +124,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
         <div className="grid grid-cols-1 gap-5">
           {filteredContent.map((item) => (
             <div
-              key={item.id}
+              key={item.uid}
               className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-rose-300 transition-all flex flex-col md:flex-row group"
             >
               {/* Left Canvas - The Kanji itself */}
@@ -178,12 +178,12 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                   </div>
 
                   {/* AI Generated Mnemonic */}
-                  {aiKanjiMnemonics[item.id] && (
+                  {aiKanjiMnemonics[item.id!] && (
                     <div className="mt-2 bg-rose-50/50 p-3.5 rounded-lg border border-rose-100 text-sm text-slate-700 animate-fade-in shadow-xs mb-4">
                       <div className="font-bold text-rose-800 mb-1.5 flex items-center gap-1.5 text-xs uppercase tracking-wider">
                         <Info size={14} className="text-rose-500" /> Story / Mnemonic Hook
                       </div>
-                      <MarkdownViewer content={aiKanjiMnemonics[item.id]} />
+                      <MarkdownViewer content={aiKanjiMnemonics[item.id!]} />
                     </div>
                   )}
                 </div>
@@ -192,17 +192,17 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                 <div className="pt-3 border-t border-slate-100 mt-auto flex items-center justify-between">
                   <button
                     onClick={() => handleGenerateKanjiMnemonic(item)}
-                    disabled={loadingKanjiAi[item.id] || !!aiKanjiMnemonics[item.id]}
+                    disabled={loadingKanjiAi[item.id!] || !!aiKanjiMnemonics[item.id!]}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg text-xs font-semibold transition-colors border border-rose-200/80 disabled:opacity-50 cursor-pointer shadow-2xs"
                   >
-                    {loadingKanjiAi[item.id] ? (
+                    {loadingKanjiAi[item.id!] ? (
                       <Loader2 className="animate-spin" size={14} />
                     ) : (
                       <Sparkles size={14} />
                     )}
-                    {loadingKanjiAi[item.id]
+                    {loadingKanjiAi[item.id!]
                       ? 'Creating Story...'
-                      : aiKanjiMnemonics[item.id]
+                      : aiKanjiMnemonics[item.id!]
                       ? 'Mnemonic Saved'
                       : 'AI: Create Mnemonic Story'}
                   </button>

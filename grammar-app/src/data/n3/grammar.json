@@ -1,6 +1,10 @@
 {
   "1": [
     {
+      "uid": "n3-grammar-1-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 1,
       "id": "1-1",
       "title": "V-て きます / V-て いきます",
       "meaning": "Changes over time / Direction of action",
@@ -24,6 +28,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-1-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 1,
       "id": "1-2",
       "title": "〜ように 言う / 頼む / 注意する",
       "meaning": "Indirect requests, commands, or advice",
@@ -47,6 +55,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-1-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 1,
       "id": "1-3",
       "title": "〜という N",
       "meaning": "The Noun called / named ~",
@@ -70,6 +82,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-1-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 1,
       "id": "1-4",
       "title": "〜みたいだ / みたいに / みたいな",
       "meaning": "Seems like / Resembles / Like ~",
@@ -95,6 +111,10 @@
   ],
   "2": [
     {
+      "uid": "n3-grammar-2-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 2,
       "id": "2-1",
       "title": "V-て ほしい / V-ないで ほしい",
       "meaning": "Want someone to do / not do something",
@@ -117,6 +137,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-2-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 2,
       "id": "2-2",
       "title": "〜ことに する / 〜ことに している",
       "meaning": "Decide to do / Make it a rule to do",
@@ -140,6 +164,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-2-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 2,
       "id": "2-3",
       "title": "〜ことに なる / 〜ことに なっている",
       "meaning": "It has been decided that / It is a rule that",
@@ -164,6 +192,10 @@
   ],
   "3": [
     {
+      "uid": "n3-grammar-3-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 3,
       "id": "3-1",
       "title": "〜ように する / 〜ように している",
       "meaning": "Make an effort to / Habit of effort",
@@ -186,6 +218,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-3-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 3,
       "id": "3-2",
       "title": "V-る ようになる",
       "meaning": "Come to be able to / Change in state",
@@ -208,6 +244,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-3-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 3,
       "id": "3-3",
       "title": "V-終わる / 始める / 続ける",
       "meaning": "Finish / Start / Continue doing",
@@ -232,6 +272,10 @@
   ],
   "4": [
     {
+      "uid": "n3-grammar-4-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 4,
       "id": "4-1",
       "title": "〜らしい",
       "meaning": "It seems / Typical of ~",
@@ -255,6 +299,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-4-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 4,
       "id": "4-2",
       "title": "〜がる / 〜がっている",
       "meaning": "Showing signs of feeling (Third person)",
@@ -277,6 +325,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-4-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 4,
       "id": "4-3",
       "title": "V-させられる (Causative-Passive)",
       "meaning": "Be forced or made to do something",
@@ -301,6 +353,10 @@
   ],
   "5": [
     {
+      "uid": "n3-grammar-5-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 5,
       "id": "5-1",
       "title": "〜ばいい / 〜たらいい / 〜といい",
       "meaning": "Asking for/Giving advice, Hoping",
@@ -323,6 +379,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-5-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 5,
       "id": "5-2",
       "title": "〜おかげで / 〜せいで",
       "meaning": "Thanks to / Because of (Fault)",
@@ -345,6 +405,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-5-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 5,
       "id": "5-3",
       "title": "〜て もらう / 〜て くれる",
       "meaning": "Receiving favors (Expanded)",
@@ -369,6 +433,10 @@
   ],
   "6": [
     {
+      "uid": "n3-grammar-6-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 6,
       "id": "6-1",
       "title": "N は 〜の 一つだ",
       "meaning": "N is one of the ~",
@@ -391,6 +459,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-6-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 6,
       "id": "6-2",
       "title": "N にとって",
       "meaning": "For N / To N (From the standpoint of)",
@@ -413,6 +485,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-6-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 6,
       "id": "6-3",
       "title": "N の 代わりに",
       "meaning": "Instead of N / On behalf of N",
@@ -437,6 +513,10 @@
   ],
   "7": [
     {
+      "uid": "n3-grammar-7-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 7,
       "id": "7-1",
       "title": "〜から〜にかけて",
       "meaning": "From ~ through ~ (Spanning time/space)",
@@ -460,6 +540,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-7-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 7,
       "id": "7-2",
       "title": "〜として",
       "meaning": "As ~ / In the capacity or role of ~",
@@ -482,6 +566,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-7-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 7,
       "id": "7-3",
       "title": "〜(の)なら",
       "meaning": "If it is the case that ~ / Given that ~",
@@ -506,6 +594,10 @@
   ],
   "8": [
     {
+      "uid": "n3-grammar-8-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 8,
       "id": "8-1",
       "title": "V-る / V-ない ことがある",
       "meaning": "There are times when ~ / Sometimes ~",
@@ -529,6 +621,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-8-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 8,
       "id": "8-2",
       "title": "〜によって / 〜による",
       "meaning": "Depending on / By means of / Due to",
@@ -556,6 +652,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-8-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 8,
       "id": "8-3",
       "title": "〜に対して",
       "meaning": "Towards ~ / In contrast to ~",
@@ -580,6 +680,10 @@
   ],
   "9": [
     {
+      "uid": "n3-grammar-9-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 9,
       "id": "9-1",
       "title": "〜ば〜ほど",
       "meaning": "The more ~, the more ~",
@@ -603,6 +707,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-9-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 9,
       "id": "9-2",
       "title": "〜ばかり / 〜てばかりいる",
       "meaning": "Only / Doing nothing but ~",
@@ -626,6 +734,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-9-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 9,
       "id": "9-3",
       "title": "〜について",
       "meaning": "About ~ / Regarding ~",
@@ -650,6 +762,10 @@
   ],
   "10": [
     {
+      "uid": "n3-grammar-10-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 10,
       "id": "10-1",
       "title": "〜まま",
       "meaning": "As it is / Leaving something as is",
@@ -672,6 +788,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-10-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 10,
       "id": "10-2",
       "title": "〜ずに",
       "meaning": "Without doing ~",
@@ -694,6 +814,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-10-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 10,
       "id": "10-3",
       "title": "〜はずだ",
       "meaning": "It is expected that / Should be ~",
@@ -718,6 +842,10 @@
   ],
   "11": [
     {
+      "uid": "n3-grammar-11-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-1",
       "title": "〜てくる・〜ていく",
       "meaning": "Change leading up to present / Change from now into future",
@@ -741,6 +869,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-2",
       "title": "〜たら［どう］？",
       "meaning": "How about doing...? / Why don't you...?",
@@ -763,6 +895,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-3",
       "title": "〜より…ほうが…",
       "meaning": "… is more … than 〜 (Comparison)",
@@ -785,6 +921,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-4",
       "title": "〜らしい",
       "meaning": "Typical of ~ / Having the characteristics of ~",
@@ -807,6 +947,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-5",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-5",
       "title": "〜として",
       "meaning": "As ~ / In the capacity of ~",
@@ -829,6 +973,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-6",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-6",
       "title": "〜ず［に］",
       "meaning": "Without doing ~",
@@ -851,6 +999,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-11-7",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 11,
       "id": "11-7",
       "title": "〜ている",
       "meaning": "Experience / State",
@@ -876,6 +1028,10 @@
   ],
   "12": [
     {
+      "uid": "n3-grammar-12-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-1",
       "title": "…もの／もんだから",
       "meaning": "Because... (Reason/Excuse)",
@@ -898,6 +1054,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-12-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-2",
       "title": "〜（ら）れる (Indirect Passive)",
       "meaning": "Be adversely affected by ~",
@@ -920,6 +1080,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-12-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-3",
       "title": "〜たり〜たり",
       "meaning": "Doing things like ~ and ~",
@@ -942,6 +1106,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-12-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-4",
       "title": "〜っぱなし",
       "meaning": "Leaving something as it is (Negative connotation)",
@@ -964,6 +1132,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-12-5",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-5",
       "title": "…おかげで、…・…おかげだ",
       "meaning": "Thanks to... (Favorable result)",
@@ -986,6 +1158,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-12-6",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
       "id": "12-6",
       "title": "…せいで、…・…せいだ",
       "meaning": "Because of... (Negative result/Fault)",
@@ -1010,6 +1186,10 @@
   ],
   "13": [
     {
+      "uid": "n3-grammar-13-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 13,
       "id": "13-1",
       "title": "〜たて",
       "meaning": "Just done / Freshly done",
@@ -1032,6 +1212,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-13-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 13,
       "id": "13-2",
       "title": "たとえ〜ても",
       "meaning": "Even if ~",
@@ -1054,6 +1238,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-13-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 13,
       "id": "13-3",
       "title": "〜たりしない",
       "meaning": "Not do things like ~",
@@ -1076,6 +1264,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-13-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 13,
       "id": "13-4",
       "title": "〜ほど",
       "meaning": "To the extent that ~ / So ~ that ~",
@@ -1101,6 +1293,10 @@
   ],
   "14": [
     {
+      "uid": "n3-grammar-14-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 14,
       "id": "14-1",
       "title": "〜際（に）",
       "meaning": "When... / At the time of...",
@@ -1123,6 +1319,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-14-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 14,
       "id": "14-2",
       "title": "〜といった",
       "meaning": "Such as ~ / Like ~",
@@ -1145,6 +1345,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-14-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 14,
       "id": "14-3",
       "title": "〜に（も）わたって",
       "meaning": "Extending over / Spanning (time or space)",
@@ -1171,6 +1375,10 @@
   ],
   "15": [
     {
+      "uid": "n3-grammar-15-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 15,
       "id": "15-1",
       "title": "〜という",
       "meaning": "It is said that... / They say...",
@@ -1194,6 +1402,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-15-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 15,
       "id": "15-2",
       "title": "〜たびに",
       "meaning": "Every time / Whenever...",
@@ -1216,6 +1428,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-15-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 15,
       "id": "15-3",
       "title": "〜に関する／関して",
       "meaning": "Regarding / Concerning...",
@@ -1238,6 +1454,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-15-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 15,
       "id": "15-4",
       "title": "…わけではない",
       "meaning": "It doesn't mean that... / It is not necessarily the case that...",
@@ -1262,6 +1482,10 @@
   ],
   "16": [
     {
+      "uid": "n3-grammar-16-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 16,
       "id": "16-1",
       "title": "〜に応じて",
       "meaning": "In response to / Depending on",
@@ -1285,6 +1509,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-16-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 16,
       "id": "16-2",
       "title": "〜によって / 〜による",
       "meaning": "Due to / As a result of (Cause)",
@@ -1307,6 +1535,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-16-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 16,
       "id": "16-3",
       "title": "〜にもかかわらず",
       "meaning": "Despite / In spite of",
@@ -1330,6 +1562,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-16-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 16,
       "id": "16-4",
       "title": "〜ところだった",
       "meaning": "Was just about to / Almost happened",
@@ -1354,6 +1590,10 @@
   ],
   "17": [
     {
+      "uid": "n3-grammar-17-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 17,
       "id": "17-1",
       "title": "〜にしては",
       "meaning": "Considering... / For a...",
@@ -1377,6 +1617,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-17-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 17,
       "id": "17-2",
       "title": "〜からには",
       "meaning": "Because X, then of course Y / Now that...",
@@ -1400,6 +1644,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-17-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 17,
       "id": "17-3",
       "title": "〜ざるを得ない",
       "meaning": "Cannot help but / Have no choice but to",
@@ -1423,6 +1671,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-17-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 17,
       "id": "17-4",
       "title": "〜からなる",
       "meaning": "Consists of / Is composed of",
@@ -1447,6 +1699,10 @@
   ],
   "18": [
     {
+      "uid": "n3-grammar-18-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 18,
       "id": "18-1",
       "title": "〜に違いない",
       "meaning": "Must be / Undoubtedly",
@@ -1469,6 +1725,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-18-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 18,
       "id": "18-2",
       "title": "〜に比べて",
       "meaning": "Compared to",
@@ -1491,6 +1751,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-18-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 18,
       "id": "18-3",
       "title": "〜ものの",
       "meaning": "Although / Even though",
@@ -1516,6 +1780,10 @@
   ],
   "19": [
     {
+      "uid": "n3-grammar-19-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 19,
       "id": "19-1",
       "title": "〜として（は）／〜としても／〜としての",
       "meaning": "From the viewpoint of / As for / In the capacity of",
@@ -1542,6 +1810,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-19-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 19,
       "id": "19-2",
       "title": "〜はもちろん／〜はもとより",
       "meaning": "Not to mention ~ / Let alone ~",
@@ -1564,6 +1836,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-19-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 19,
       "id": "19-3",
       "title": "〜をめぐって／〜をめぐる",
       "meaning": "Concerning / Over / Regarding (a dispute or discussion)",
@@ -1589,6 +1865,10 @@
   ],
   "20": [
     {
+      "uid": "n3-grammar-20-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 20,
       "id": "20-1",
       "title": "〜を通して／〜を通じて",
       "meaning": "Through / Via / Throughout",
@@ -1612,6 +1892,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-20-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 20,
       "id": "20-2",
       "title": "〜からいうと／〜からいえば／〜からいって",
       "meaning": "Judging from / From the standpoint of",
@@ -1634,6 +1918,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-20-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 20,
       "id": "20-3",
       "title": "〜とともに",
       "meaning": "Together with / Along with / As ~",
@@ -1658,6 +1946,10 @@
   ],
   "21": [
     {
+      "uid": "n3-grammar-21-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 21,
       "id": "21-1",
       "title": "〜もせずに",
       "meaning": "Without even doing ~",
@@ -1680,6 +1972,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-21-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 21,
       "id": "21-2",
       "title": "〜といえども",
       "meaning": "Even if / However ~",
@@ -1703,6 +1999,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-21-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 21,
       "id": "21-3",
       "title": "N ＋ に基づいて",
       "meaning": "Based on N",
@@ -1726,6 +2026,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-21-4",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 21,
       "id": "21-4",
       "title": "〜が、一方で",
       "meaning": "But, at the same time / On the other hand",
@@ -1747,6 +2051,10 @@
   ],
   "22": [
     {
+      "uid": "n3-grammar-22-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 22,
       "id": "22-1",
       "title": "〜次第だ / 〜次第で",
       "meaning": "For that reason / Depending on",
@@ -1770,6 +2078,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-22-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 22,
       "id": "22-2",
       "title": "〜をもって…とする",
       "meaning": "Regarded as / On the basis of",
@@ -1793,6 +2105,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-22-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 22,
       "id": "22-3",
       "title": "〜におきましては",
       "meaning": "As for / In (formal)",
@@ -1819,6 +2135,10 @@
   ],
   "23": [
     {
+      "uid": "n3-grammar-23-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 23,
       "id": "23-1",
       "title": "〜に及ぶ",
       "meaning": "Extends as far as / Reaches",
@@ -1842,6 +2162,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-23-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 23,
       "id": "23-2",
       "title": "〜可能性がある",
       "meaning": "There is a possibility that ~",
@@ -1864,6 +2188,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-23-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 23,
       "id": "23-3",
       "title": "この ＋ N",
       "meaning": "This (previously mentioned term)",
@@ -1884,6 +2212,10 @@
   ],
   "24": [
     {
+      "uid": "n3-grammar-24-1",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 24,
       "id": "24-1",
       "title": "V-ない ＋ ざる N",
       "meaning": "The Un- / Without ~ing",
@@ -1907,6 +2239,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-24-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 24,
       "id": "24-2",
       "title": "〜から〜に至るまで",
       "meaning": "From ~ all the way to ~",
@@ -1930,6 +2266,10 @@
       ]
     },
     {
+      "uid": "n3-grammar-24-3",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 24,
       "id": "24-3",
       "title": "V-ます ＋ きる",
       "meaning": "Do ~ completely / To the end",

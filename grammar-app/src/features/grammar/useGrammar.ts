@@ -3,31 +3,18 @@ import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
 import { getTagMeta } from '../../utils/tags';
-import { buildUid, remapCacheToIds } from '../../utils/uid';
+import { remapCacheToIds } from '../../utils/uid';
 
 import grammarN3 from '../../data/n3/grammar.json';
 import grammarN4 from '../../data/n4/grammar.json';
 import grammarN5 from '../../data/n5/grammar.json';
 
-function stampItems(
-  raw: Record<number, GrammarItem[]>,
-  level: LevelType
-): Record<number, GrammarItem[]> {
-  const stamped: Record<number, GrammarItem[]> = {};
-  for (const [lesson, items] of Object.entries(raw)) {
-    stamped[Number(lesson)] = items.map(item => ({
-      ...item,
-      level,
-      lesson: Number(lesson),
-    }));
-  }
-  return stamped;
-}
-
+// level/lesson/uid now live in the data itself (scripts/add-uids.ts), so no more
+// runtime stamping - each file already reads as Record<number, GrammarItem[]>.
 const grammarData: Record<LevelType, Record<number, GrammarItem[]>> = {
-  N5: stampItems(grammarN5 as unknown as Record<number, GrammarItem[]>, 'N5'),
-  N4: stampItems(grammarN4 as unknown as Record<number, GrammarItem[]>, 'N4'),
-  N3: stampItems(grammarN3 as unknown as Record<number, GrammarItem[]>, 'N3'),
+  N5: grammarN5 as unknown as Record<number, GrammarItem[]>,
+  N4: grammarN4 as unknown as Record<number, GrammarItem[]>,
+  N3: grammarN3 as unknown as Record<number, GrammarItem[]>,
 };
 
 export function useGrammar(activeLevel: LevelType, activeLesson: number) {
@@ -72,27 +59,24 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
   const { loadingExamples: loadingExamplesByUid, loadingExplanations: loadingExplanationsByUid, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
 
   const generatedExamples = useMemo(
-    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, generatedExamplesByUid),
-    [currentContent, activeLevel, activeLesson, generatedExamplesByUid]
+    () => remapCacheToIds(currentContent, generatedExamplesByUid),
+    [currentContent, generatedExamplesByUid]
   );
   const aiExplanations = useMemo(
-    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, aiExplanationsByUid),
-    [currentContent, activeLevel, activeLesson, aiExplanationsByUid]
+    () => remapCacheToIds(currentContent, aiExplanationsByUid),
+    [currentContent, aiExplanationsByUid]
   );
   const loadingExamples = useMemo(
-    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, loadingExamplesByUid),
-    [currentContent, activeLevel, activeLesson, loadingExamplesByUid]
+    () => remapCacheToIds(currentContent, loadingExamplesByUid),
+    [currentContent, loadingExamplesByUid]
   );
   const loadingExplanations = useMemo(
-    () => remapCacheToIds(currentContent, activeLevel, 'grammar', activeLesson, loadingExplanationsByUid),
-    [currentContent, activeLevel, activeLesson, loadingExplanationsByUid]
+    () => remapCacheToIds(currentContent, loadingExplanationsByUid),
+    [currentContent, loadingExplanationsByUid]
   );
 
-  const uidFor = (grammar: GrammarItem) =>
-    buildUid(activeLevel, 'grammar', activeLesson, currentContent.indexOf(grammar) + 1);
-
   const handleGenerateExamples = async (grammar: GrammarItem) => {
-    const uid = uidFor(grammar);
+    const uid = grammar.uid;
     setLoadingExamples(uid, true);
     try {
       const newExamples = await generateGrammarExamples({ grammar, level: activeLevel });
@@ -107,7 +91,7 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
   };
 
   const handleExplainNuance = async (grammar: GrammarItem) => {
-    const uid = uidFor(grammar);
+    const uid = grammar.uid;
     setLoadingExplanations(uid, true);
     try {
       const text = await generateGrammarNuance({ grammar, level: activeLevel });

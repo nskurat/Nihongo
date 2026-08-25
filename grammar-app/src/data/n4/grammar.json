@@ -1,6 +1,10 @@
 {
   "26": [
     {
+      "uid": "n4-grammar-26-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 26,
       "id": "26-1",
       "title": "Plain form + んです",
       "structure": "Plain form + んです",
@@ -29,6 +33,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-26-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 26,
       "id": "26-2",
       "title": "Vて-form + いただけませんか",
       "structure": "Vて-form + いただけませんか",
@@ -47,6 +55,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-26-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 26,
       "id": "26-3",
       "title": "Interrogative + Vた-form ら いいですか",
       "structure": "Interrogative + Vた-form ら いいですか",
@@ -66,6 +78,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-26-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 26,
       "id": "26-4",
       "title": "N(object)は 好きです/嫌いです・上手です/下手です・あります, etc.",
       "structure": "N(object)は 好きです/嫌いです・上手です/下手です・あります, etc.",
@@ -86,6 +102,10 @@
   ],
   "27": [
     {
+      "uid": "n4-grammar-27-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 27,
       "id": "27-1",
       "title": "Potential Verbs",
       "structure": "Group I: -u→-e＋る／Group II: ＋られる／Group III: 来る→来られる、する→できる",
@@ -100,6 +120,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-27-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 27,
       "id": "27-2",
       "title": "Potential verb sentences — が instead of を",
       "structure": "Potential verb sentences — が instead of を",
@@ -123,6 +147,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-27-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 27,
       "id": "27-3",
       "title": "見えます・聞こえます",
       "structure": "見えます・聞こえます",
@@ -141,6 +169,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-27-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 27,
       "id": "27-4",
       "title": "できます",
       "structure": "できます",
@@ -159,6 +191,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-27-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 27,
       "id": "27-5",
       "title": "は / も / しか",
       "structure": "は / も / しか",
@@ -188,6 +224,10 @@
   ],
   "28": [
     {
+      "uid": "n4-grammar-28-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-1",
       "title": "Vます-form + ながら V2",
       "structure": "Vます-form + ながら V2",
@@ -210,6 +250,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-28-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-2",
       "title": "Vて-form + います (customary action)",
       "structure": "Vて-form + います (customary action)",
@@ -229,6 +273,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-28-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-3",
       "title": "plain form + し、〜",
       "structure": "plain form + し、〜",
@@ -252,6 +300,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-28-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-4",
       "title": "それに",
       "structure": "それに",
@@ -271,6 +323,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-28-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-5",
       "title": "それで",
       "structure": "それで",
@@ -290,6 +346,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-28-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 28,
       "id": "28-6",
       "title": "よくこの喫茶店に来るんですか",
       "structure": "よくこの喫茶店に来るんですか",
@@ -314,6 +374,10 @@
   ],
   "29": [
     {
+      "uid": "n4-grammar-29-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 29,
       "id": "29-1",
       "title": "N が Vて-form います (resulting state)",
       "structure": "N が Vて-form います (resulting state)",
@@ -336,6 +400,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-29-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 29,
       "id": "29-2",
       "title": "Vて-form + しまいました／しまいます",
       "structure": "Vて-form + しまいました／しまいます",
@@ -362,6 +430,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-29-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 29,
       "id": "29-3",
       "title": "ありました",
       "structure": "ありました",
@@ -380,6 +452,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-29-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 29,
       "id": "29-4",
       "title": "どこかで／どこかに",
       "structure": "どこかで／どこかに",
@@ -400,6 +476,10 @@
   ],
   "30": [
     {
+      "uid": "n4-grammar-30-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 30,
       "id": "30-1",
       "title": "N1に N2が Vて-form あります",
       "structure": "N1に N2が Vて-form あります",
@@ -423,6 +503,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-30-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 30,
       "id": "30-2",
       "title": "Vて-form おきます",
       "structure": "Vて-form おきます",
@@ -449,6 +533,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-30-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 30,
       "id": "30-3",
       "title": "まだ V (affirmative)",
       "structure": "まだ V (affirmative)",
@@ -468,6 +556,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-30-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 30,
       "id": "30-4",
       "title": "それは〜",
       "structure": "それは〜",
@@ -492,6 +584,10 @@
   ],
   "31": [
     {
+      "uid": "n4-grammar-31-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-1",
       "title": "Volitional Form",
       "structure": "Group I: -u→-ō／Group II: ＋よう／Group III: 来る→来よう、する→しよう",
@@ -506,6 +602,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-31-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-2",
       "title": "Plain-style use, and V volitional form + と思っています",
       "structure": "Plain-style use, and V volitional form + と思っています",
@@ -528,6 +628,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-31-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-3",
       "title": "Vdictionary form／Vない-form ない + つもりです",
       "structure": "Vdictionary form／Vない-form ない + つもりです",
@@ -546,6 +650,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-31-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-4",
       "title": "Vdictionary form／Nの + 予定です",
       "structure": "Vdictionary form／Nの + 予定です",
@@ -564,6 +672,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-31-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-5",
       "title": "まだ Vて-form いません",
       "structure": "まだ Vて-form いません",
@@ -583,6 +695,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-31-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 31,
       "id": "31-6",
       "title": "こ〜／そ〜 (in writing)",
       "structure": "こ〜／そ〜 (in writing)",
@@ -607,6 +723,10 @@
   ],
   "32": [
     {
+      "uid": "n4-grammar-32-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 32,
       "id": "32-1",
       "title": "Vた-form／Vない-form ない + ほうがいいです",
       "structure": "Vた-form／Vない-form ない + ほうがいいです",
@@ -629,6 +749,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-32-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 32,
       "id": "32-2",
       "title": "plain form + でしょう",
       "structure": "plain form + でしょう",
@@ -647,6 +771,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-32-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 32,
       "id": "32-3",
       "title": "plain form + かもしれません",
       "structure": "plain form + かもしれません",
@@ -666,6 +794,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-32-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 32,
       "id": "32-4",
       "title": "きっと／たぶん／もしかしたら",
       "structure": "きっと／たぶん／もしかしたら",
@@ -685,6 +817,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-32-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 32,
       "id": "32-5",
       "title": "Quantifier + で",
       "structure": "Quantifier + で",
@@ -706,6 +842,10 @@
   ],
   "33": [
     {
+      "uid": "n4-grammar-33-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-1",
       "title": "Imperative and prohibitive forms",
       "structure": "Imperative: Group I -u→-e／Group II ＋ろ／Group III 来る→来い、する→しろ ｜ Prohibitive: dictionary form ＋な",
@@ -721,6 +861,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-33-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-2",
       "title": "Use of the imperative and prohibitive forms",
       "structure": "Use of the imperative and prohibitive forms",
@@ -748,6 +892,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-33-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-3",
       "title": "〜と読みます／〜と書いてあります",
       "structure": "〜と読みます／〜と書いてあります",
@@ -766,6 +914,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-33-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-4",
       "title": "XはYという意味です",
       "structure": "XはYという意味です",
@@ -785,6 +937,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-33-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-5",
       "title": "\"S\" plain form + と言っていました",
       "structure": "\"S\" plain form + と言っていました",
@@ -804,6 +960,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-33-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 33,
       "id": "33-6",
       "title": "\"S\" plain form + と伝えていただけませんか",
       "structure": "\"S\" plain form + と伝えていただけませんか",
@@ -825,6 +985,10 @@
   ],
   "34": [
     {
+      "uid": "n4-grammar-34-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 34,
       "id": "34-1",
       "title": "V1 dictionary form／V1た-form／Nの + とおりに、V2",
       "structure": "V1 dictionary form／V1た-form／Nの + とおりに、V2",
@@ -843,6 +1007,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-34-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 34,
       "id": "34-2",
       "title": "V1た-form／Nの + あとで、V2",
       "structure": "V1た-form／Nの + あとで、V2",
@@ -861,6 +1029,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-34-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 34,
       "id": "34-3",
       "title": "V1て-form／V1ない-form ないで + V2",
       "structure": "V1て-form／V1ない-form ないで + V2",
@@ -879,6 +1051,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-34-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 34,
       "id": "34-4",
       "title": "V1ない-form ないで、V2",
       "structure": "V1ない-form ないで、V2",
@@ -899,6 +1075,10 @@
   ],
   "35": [
     {
+      "uid": "n4-grammar-35-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-1",
       "title": "Conditional ば-Form",
       "structure": "V: え-line＋ば／い-adj: 〜い→ければ／な-adj・N: だ→なら",
@@ -918,6 +1098,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-35-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-2",
       "title": "Conditional ば-form、〜",
       "structure": "Conditional ば-form、〜",
@@ -936,6 +1120,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-35-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-3",
       "title": "〜ば vs 〜と（L23）vs 〜たら（L25）",
       "structure": "〜ば vs 〜と（L23）vs 〜たら（L25）",
@@ -955,6 +1143,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-35-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-4",
       "title": "Nなら、〜",
       "structure": "Nなら、〜",
@@ -973,6 +1165,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-35-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-5",
       "title": "Interrogative + V conditional-form + いいですか",
       "structure": "Interrogative + V conditional-form + いいですか",
@@ -992,6 +1188,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-35-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 35,
       "id": "35-6",
       "title": "V／い-adj／な-adj 条件形　V／い-adj／な-adj 辞書形＋ほど、〜",
       "structure": "V／い-adj／な-adj 条件形　V／い-adj／な-adj 辞書形＋ほど、〜",
@@ -1013,6 +1213,10 @@
   ],
   "36": [
     {
+      "uid": "n4-grammar-36-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 36,
       "id": "36-1",
       "title": "V potential-form／V ない-form ＋ ように、V2",
       "structure": "V potential-form／V ない-form ＋ ように、V2",
@@ -1031,6 +1235,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-36-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 36,
       "id": "36-2",
       "title": "Vようになります／Vなくなります",
       "structure": "Vようになります／Vなくなります",
@@ -1049,6 +1257,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-36-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 36,
       "id": "36-3",
       "title": "Vようにします",
       "structure": "Vようにします",
@@ -1067,6 +1279,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-36-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 36,
       "id": "36-4",
       "title": "〜とか、〜とか",
       "structure": "〜とか、〜とか",
@@ -1087,6 +1303,10 @@
   ],
   "37": [
     {
+      "uid": "n4-grammar-37-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-1",
       "title": "Passive Verbs",
       "structure": "Group I: -u→-a＋れる／Group II: ＋られる／Group III: 来る→来られる、する→される",
@@ -1106,6 +1326,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-37-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-2",
       "title": "N1（人）はN2（人）にVpassive",
       "structure": "N1（人）はN2（人）にVpassive",
@@ -1124,6 +1348,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-37-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-3",
       "title": "N1（人）はN2（人）にN3をVpassive",
       "structure": "N1（人）はN2（人）にN3をVpassive",
@@ -1142,6 +1370,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-37-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-4",
       "title": "N（物）が／はVpassive",
       "structure": "N（物）が／はVpassive",
@@ -1160,6 +1392,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-37-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-5",
       "title": "N1はN2（人）によってVpassive",
       "structure": "N1はN2（人）によってVpassive",
@@ -1178,6 +1414,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-37-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 37,
       "id": "37-6",
       "title": "Nから／Nでつくります",
       "structure": "Nから／Nでつくります",
@@ -1198,6 +1438,10 @@
   ],
   "38": [
     {
+      "uid": "n4-grammar-38-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-1",
       "title": "V plain form ＋ の",
       "structure": "V plain form ＋ の",
@@ -1216,6 +1460,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-2",
       "title": "V dictionary formのは adjective です",
       "structure": "V dictionary formのは adjective です",
@@ -1234,6 +1482,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-3",
       "title": "V dictionary formのが adjective です",
       "structure": "V dictionary formのが adjective です",
@@ -1252,6 +1504,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-4",
       "title": "V dictionary formのを忘れました",
       "structure": "V dictionary formのを忘れました",
@@ -1270,6 +1526,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-5",
       "title": "V plain formのを知っていますか",
       "structure": "V plain formのを知っていますか",
@@ -1288,6 +1548,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-6",
       "title": "V／い-adj／な-adj plain form（な-adjだ→な）のはNです",
       "structure": "V／い-adj／な-adj plain form（な-adjだ→な）のはNです",
@@ -1306,6 +1570,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-38-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 38,
       "id": "38-7",
       "title": "〜ときも／〜ときや／〜ときの／〜ときに, etc.",
       "structure": "〜ときも／〜ときや／〜ときの／〜ときに, etc.",
@@ -1327,6 +1595,10 @@
   ],
   "39": [
     {
+      "uid": "n4-grammar-39-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 39,
       "id": "39-1",
       "title": "Vて-form／Vない-form なくて／い-adj（〜い→くて）／な-adj［な］→で、〜",
       "structure": "Vて-form／Vない-form なくて／い-adj（〜い→くて）／な-adj［な］→で、〜",
@@ -1345,6 +1617,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-39-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 39,
       "id": "39-2",
       "title": "Nで",
       "structure": "Nで",
@@ -1364,6 +1640,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-39-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 39,
       "id": "39-3",
       "title": "V／い-adj／な-adj plain form（な-adjだ→な）ので、〜",
       "structure": "V／い-adj／な-adj plain form（な-adjだ→な）ので、〜",
@@ -1382,6 +1662,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-39-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 39,
       "id": "39-4",
       "title": "とちゅうで",
       "structure": "とちゅうで",
@@ -1402,6 +1686,10 @@
   ],
   "40": [
     {
+      "uid": "n4-grammar-40-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 40,
       "id": "40-1",
       "title": "Interrogative + V／い-adj／な-adj（だ→N/a）plain form ＋ か、〜",
       "structure": "Interrogative + V／い-adj／な-adj（だ→N/a）plain form ＋ か、〜",
@@ -1421,6 +1709,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-40-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 40,
       "id": "40-2",
       "title": "V／い-adj／な-adj（だ→N/a）plain form ＋ かどうか、〜",
       "structure": "V／い-adj／な-adj（だ→N/a）plain form ＋ かどうか、〜",
@@ -1439,6 +1731,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-40-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 40,
       "id": "40-3",
       "title": "Vて-form みます",
       "structure": "Vて-form みます",
@@ -1457,6 +1753,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-40-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 40,
       "id": "40-4",
       "title": "い-adj（〜い→さ）",
       "structure": "い-adj（〜い→さ）",
@@ -1475,6 +1775,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-40-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 40,
       "id": "40-5",
       "title": "〜でしょうか",
       "structure": "〜でしょうか",
@@ -1496,6 +1800,10 @@
   ],
   "41": [
     {
+      "uid": "n4-grammar-41-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-1",
       "title": "N1にN2をやります",
       "structure": "N1にN2をやります",
@@ -1514,6 +1822,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-41-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-2",
       "title": "N1にN2をいただきます",
       "structure": "N1にN2をいただきます",
@@ -1533,6 +1845,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-41-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-3",
       "title": "［わたしに］N2をくださいます",
       "structure": "［わたしに］N2をくださいます",
@@ -1552,6 +1868,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-41-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-4",
       "title": "Vて-form やります／いただきます／くださいます",
       "structure": "Vて-form やります／いただきます／くださいます",
@@ -1570,6 +1890,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-41-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-5",
       "title": "Vて-form くださいませんか",
       "structure": "Vて-form くださいませんか",
@@ -1589,6 +1913,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-41-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 41,
       "id": "41-6",
       "title": "NにV",
       "structure": "NにV",
@@ -1609,6 +1937,10 @@
   ],
   "42": [
     {
+      "uid": "n4-grammar-42-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 42,
       "id": "42-1",
       "title": "V dictionary form／Nの ＋ ために、〜",
       "structure": "V dictionary form／Nの ＋ ために、〜",
@@ -1627,6 +1959,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-42-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 42,
       "id": "42-2",
       "title": "V dictionary formの／N ＋ に、〜",
       "structure": "V dictionary formの／N ＋ に、〜",
@@ -1645,6 +1981,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-42-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 42,
       "id": "42-3",
       "title": "Quantifier ＋ は",
       "structure": "Quantifier ＋ は",
@@ -1664,6 +2004,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-42-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 42,
       "id": "42-4",
       "title": "Quantifier ＋ も",
       "structure": "Quantifier ＋ も",
@@ -1685,6 +2029,10 @@
   ],
   "43": [
     {
+      "uid": "n4-grammar-43-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 43,
       "id": "43-1",
       "title": "Vます-form／い-adj（〜い）／な-adj［な］＋ そうです",
       "structure": "Vます-form／い-adj（〜い）／な-adj［な］＋ そうです",
@@ -1704,6 +2052,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-43-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 43,
       "id": "43-2",
       "title": "Vます-form ＋ そうです",
       "structure": "Vます-form ＋ そうです",
@@ -1722,6 +2074,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-43-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 43,
       "id": "43-3",
       "title": "い-adj（〜い）／な-adj［な］＋ そうです",
       "structure": "い-adj（〜い）／な-adj［な］＋ そうです",
@@ -1741,6 +2097,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-43-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 43,
       "id": "43-4",
       "title": "Vて-form 来ます",
       "structure": "Vて-form 来ます",
@@ -1761,6 +2121,10 @@
   ],
   "44": [
     {
+      "uid": "n4-grammar-44-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 44,
       "id": "44-1",
       "title": "Vます-form／い-adj（〜い）／な-adj［な］＋ すぎます",
       "structure": "Vます-form／い-adj（〜い）／な-adj［な］＋ すぎます",
@@ -1779,6 +2143,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-44-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 44,
       "id": "44-2",
       "title": "Vます-form ＋ やすいです／にくいです",
       "structure": "Vます-form ＋ やすいです／にくいです",
@@ -1797,6 +2165,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-44-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 44,
       "id": "44-3",
       "title": "い-adj（〜い→く）／な-adj［な→に］／N ＋ に します",
       "structure": "い-adj（〜い→く）／な-adj［な→に］／N ＋ に します",
@@ -1815,6 +2187,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-44-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 44,
       "id": "44-4",
       "title": "Nに します",
       "structure": "Nに します",
@@ -1833,6 +2209,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-44-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 44,
       "id": "44-5",
       "title": "い-adj（〜い→く）／な-adj［な→に］＋ V",
       "structure": "い-adj（〜い→く）／な-adj［な→に］＋ V",
@@ -1853,6 +2233,10 @@
   ],
   "45": [
     {
+      "uid": "n4-grammar-45-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 45,
       "id": "45-1",
       "title": "V dictionary form／V た-form／V ない-form ない／い-adj（〜い）／な-adj な／Nの ＋ 場合は、〜",
       "structure": "V dictionary form／V た-form／V ない-form ない／い-adj（〜い）／な-adj な／Nの ＋ 場合は、〜",
@@ -1871,6 +2255,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-45-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 45,
       "id": "45-2",
       "title": "V／い-adj／な-adj plain form／N（だ→な）＋ のに、〜",
       "structure": "V／い-adj／な-adj plain form／N（だ→な）＋ のに、〜",
@@ -1891,6 +2279,10 @@
   ],
   "46": [
     {
+      "uid": "n4-grammar-46-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 46,
       "id": "46-1",
       "title": "V dictionary form／Vて-form いる／Vた-form ＋ ところです",
       "structure": "V dictionary form／Vて-form いる／Vた-form ＋ ところです",
@@ -1909,6 +2301,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-46-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 46,
       "id": "46-2",
       "title": "Vた-form ＋ ばかりです",
       "structure": "Vた-form ＋ ばかりです",
@@ -1927,6 +2323,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-46-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 46,
       "id": "46-3",
       "title": "V dictionary form／V ない-form ない／い-adj（〜い）／な-adj な／Nの ＋ はずです",
       "structure": "V dictionary form／V ない-form ない／い-adj（〜い）／な-adj な／Nの ＋ はずです",
@@ -1947,6 +2347,10 @@
   ],
   "47": [
     {
+      "uid": "n4-grammar-47-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 47,
       "id": "47-1",
       "title": "plain form ＋ そうです",
       "structure": "plain form ＋ そうです",
@@ -1965,6 +2369,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-47-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 47,
       "id": "47-2",
       "title": "V／い-adj／な-adj plain form（だ→な）／N plain form（だ→の） ＋ ようです",
       "structure": "V／い-adj／な-adj plain form（だ→な）／N plain form（だ→の） ＋ ようです",
@@ -1984,6 +2392,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-47-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 47,
       "id": "47-3",
       "title": "声／音／におい／味 が します",
       "structure": "声／音／におい／味 が します",
@@ -2004,6 +2416,10 @@
   ],
   "48": [
     {
+      "uid": "n4-grammar-48-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 48,
       "id": "48-1",
       "title": "Causative Verbs",
       "structure": "Group I: -u→-a＋せる／Group II: ＋させる／Group III: 来る→来させる、する→させる",
@@ -2023,6 +2439,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-48-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 48,
       "id": "48-2",
       "title": "N（person）を V（intransitive）causative",
       "structure": "N（person）を V（intransitive）causative",
@@ -2041,6 +2461,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-48-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 48,
       "id": "48-3",
       "title": "N（person）に N を V（transitive）causative",
       "structure": "N（person）に N を V（transitive）causative",
@@ -2059,6 +2483,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-48-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 48,
       "id": "48-4",
       "title": "Usage of the causative",
       "structure": "Usage of the causative",
@@ -2077,6 +2505,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-48-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 48,
       "id": "48-5",
       "title": "V causative て-form いただけませんか",
       "structure": "V causative て-form いただけませんか",
@@ -2099,6 +2531,10 @@
   ],
   "49": [
     {
+      "uid": "n4-grammar-49-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-1",
       "title": "敬語 (けいご) — overview",
       "structure": "敬語 (けいご) — overview",
@@ -2117,6 +2553,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-2",
       "title": "Respectful verbs — Group II conjugation (れる/られる)",
       "structure": "Respectful verbs — Group II conjugation (れる/られる)",
@@ -2135,6 +2575,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-3",
       "title": "お V ます-form に なります",
       "structure": "お V ます-form に なります",
@@ -2153,6 +2597,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-4",
       "title": "Special respectful words",
       "structure": "Special respectful words",
@@ -2171,6 +2619,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-5",
       "title": "お V ます-form ください",
       "structure": "お V ます-form ください",
@@ -2190,6 +2642,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-6",
       "title": "お／ご + noun, adjective, adverb",
       "structure": "お／ご + noun, adjective, adverb",
@@ -2209,6 +2665,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-49-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 49,
       "id": "49-7",
       "title": "Keigo, sentence style, and consistency",
       "structure": "Keigo, sentence style, and consistency",
@@ -2229,6 +2689,10 @@
   ],
   "50": [
     {
+      "uid": "n4-grammar-50-1",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 50,
       "id": "50-1",
       "title": "謙譲語 (けんじょうご) — overview",
       "structure": "謙譲語 (けんじょうご) — overview",
@@ -2247,6 +2711,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-50-2",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 50,
       "id": "50-2",
       "title": "お V(Group I／II) ます-form します／ご V(Group III) します",
       "structure": "お V(Group I／II) ます-form します／ご V(Group III) します",
@@ -2265,6 +2733,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-50-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 50,
       "id": "50-3",
       "title": "Special humble verbs",
       "structure": "Special humble verbs",
@@ -2283,6 +2755,10 @@
       ]
     },
     {
+      "uid": "n4-grammar-50-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 50,
       "id": "50-4",
       "title": "丁寧語 (ていねいご) — polite expressions",
       "structure": "丁寧語 (ていねいご) — polite expressions",

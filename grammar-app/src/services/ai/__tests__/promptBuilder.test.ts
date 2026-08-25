@@ -17,10 +17,29 @@ describe('AI Reading Prompt Builder', () => {
 
   it('should build a lesson-targeted N3 prompt injecting grammar and vocabulary constraints', () => {
     const mockGrammar = [
-      { id: '1', title: '〜てたまらない', meaning: 'cannot help but...', structure: 'V-te + tamaranai', explanation: '...' },
+      {
+        uid: 'n3-grammar-12-1',
+        level: 'N3' as const,
+        section: 'grammar' as const,
+        lesson: 12,
+        id: '1',
+        title: '〜てたまらない',
+        meaning: 'cannot help but...',
+        structure: 'V-te + tamaranai',
+        explanation: '...',
+      },
     ];
     const mockVocab = [
-      { id: '1', word: '絶望', reading: 'ぜつぼう', meaning: 'despair' },
+      {
+        uid: 'n3-vocab-12-1',
+        level: 'N3' as const,
+        section: 'vocab' as const,
+        lesson: 12,
+        id: '1',
+        word: '絶望',
+        reading: 'ぜつぼう',
+        meaning: 'despair',
+      },
     ];
 
     const prompt = buildReadingPracticePrompt({

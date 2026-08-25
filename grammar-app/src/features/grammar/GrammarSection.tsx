@@ -136,7 +136,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
         {/* Grammar Cards List */}
         {filteredContent.map((item, index) => (
           <div
-            key={item.id}
+            key={item.uid}
             className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-slate-300"
           >
             {/* Card Header */}
@@ -206,13 +206,13 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               )}
 
               {/* AI Generated Sentences if generated */}
-              {generatedExamples[item.id] && generatedExamples[item.id].length > 0 && (
+              {generatedExamples[item.id!] && generatedExamples[item.id!].length > 0 && (
                 <div className="space-y-2 pt-2 border-t border-amber-100 animate-fade-in">
                   <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider flex items-center gap-1">
                     <Sparkles size={13} /> AI Practice Examples
                   </h4>
                   <div className="space-y-2">
-                    {generatedExamples[item.id].map((ex, idx) => (
+                    {generatedExamples[item.id!].map((ex, idx) => (
                       <div key={idx} className="bg-amber-50/50 p-2.5 rounded-lg border border-amber-100">
                         <div className="font-bold text-slate-900 text-sm">{ex.jp}</div>
                         {showTranslations && <div className="text-slate-600 text-xs mt-0.5">{ex.en}</div>}
@@ -226,43 +226,43 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => handleGenerateExamples(item)}
-                  disabled={loadingExamples[item.id]}
+                  disabled={loadingExamples[item.id!]}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
                 >
-                  {loadingExamples[item.id] ? (
+                  {loadingExamples[item.id!] ? (
                     <Loader2 className="animate-spin" size={14} />
                   ) : (
                     <Sparkles size={14} />
                   )}
-                  {loadingExamples[item.id] ? 'Generating...' : 'AI: More Examples'}
+                  {loadingExamples[item.id!] ? 'Generating...' : 'AI: More Examples'}
                 </button>
 
                 <button
                   onClick={() => handleExplainNuance(item)}
-                  disabled={loadingExplanations[item.id] || !!aiExplanations[item.id]}
+                  disabled={loadingExplanations[item.id!] || !!aiExplanations[item.id!]}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
                 >
-                  {loadingExplanations[item.id] ? (
+                  {loadingExplanations[item.id!] ? (
                     <Loader2 className="animate-spin" size={14} />
                   ) : (
                     <Lightbulb size={14} />
                   )}
-                  {loadingExplanations[item.id]
+                  {loadingExplanations[item.id!]
                     ? 'Analyzing...'
-                    : aiExplanations[item.id]
+                    : aiExplanations[item.id!]
                     ? 'Nuance Explained'
                     : 'AI: Explain Nuances'}
                 </button>
               </div>
 
               {/* AI Nuance Explanation Box */}
-              {aiExplanations[item.id] && (
+              {aiExplanations[item.id!] && (
                 <div className="mt-4 bg-gradient-to-r from-indigo-50/70 to-slate-50 p-4 md:p-5 rounded-xl border border-indigo-100 text-slate-700 text-xs md:text-sm leading-relaxed shadow-xs">
                   <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-900 text-sm">
                     <Lightbulb size={16} className="text-amber-500" />
                     Linguist's Note & Nuance
                   </h5>
-                  <MarkdownViewer content={aiExplanations[item.id]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
+                  <MarkdownViewer content={aiExplanations[item.id!]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
                 </div>
               )}
             </div>
