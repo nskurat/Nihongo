@@ -355,6 +355,57 @@
       "tags": [
         "particle-usage"
       ]
+    },
+    {
+      "uid": "n4-grammar-3-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "V-終わる / 始める / 続ける",
+      "meaning": "Finish / Start / Continue doing",
+      "structure": "Verb (ます stem) + 終わる / 始める / 続ける",
+      "explanation": "Compound verbs. Attach these to the stem of a verb to indicate the beginning, continuation, or completion of that action.",
+      "examples": [
+        {
+          "jp": "その本はもう読み終わりました。",
+          "en": "I have already finished reading that book."
+        },
+        {
+          "jp": "疲れても、歩き続けなければなりません。",
+          "en": "Even if you are tired, you must continue walking."
+        }
+      ],
+      "summary": "終わる／始める／続める attach to a verb's ます-stem as compound verbs, marking that an action is finished, beginning, or ongoing.",
+      "details": "### Compound Verbs of Progress\n\n| Suffix | Meaning | Example |\n| :--- | :--- | :--- |\n| **〜終わる** | Finish doing | その本はもう読み**終わりました**。 |\n| **〜始める** | Start doing | 雨が降り**始めました**。 *(It started raining.)* |\n| **〜続ける** | Continue doing | 疲れても、歩き**続けなければ**なりません。 |\n\nThese attach directly to the ます-stem (読み, 降り, 歩き) and conjugate as ordinary Group I/II verbs from that point on: 読み終わる, 読み終わらない, 読み終わって, etc. They're a compact, common alternative to more roundabout phrasing like 〜のを終える.",
+      "tags": [
+        "change-of-state"
+      ]
+    },
+    {
+      "uid": "n4-grammar-3-8",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "V-る / V-ない ことがある",
+      "meaning": "There are times when ~ / Sometimes ~",
+      "structure": "Verb (Dictionary form / ない form) + ことがある",
+      "explanation": "Expresses that something happens occasionally. Do not confuse this with 'V-た ことがある' which means 'have the experience of doing'.",
+      "examples": [
+        {
+          "jp": "朝ごはんを食べないことがあります。",
+          "en": "There are times when I don't eat breakfast."
+        },
+        {
+          "jp": "電車が遅れて、授業に遅刻することがあります。",
+          "en": "Sometimes the train is delayed, and I am late for class."
+        }
+      ],
+      "summary": "ことがある reports that something happens occasionally, from time to time — easy to confuse with Vたことがある ('have the experience of'), which instead reports a past experience.",
+      "details": "### ことがある: Occasional Occurrence vs. Past Experience\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **V dictionary／ない ＋ ことがある** (here) | \"There are times when...\" — an occasional, recurring event | 朝ごはんを食べない**ことがあります**。 *(There are times I don't eat breakfast.)* |\n| Vた-form ＋ ことがある | \"I have the experience of...\" — a past experience, at least once | 富士山に登った**ことがあります**。 *(I have climbed Mt. Fuji before.)* |\n\nCareful: only the dictionary/ない form (not the た-form) gives the \"sometimes/occasionally\" meaning here. Vたことがある is an entirely separate pattern meaning \"I have done X before\" — a one-time (or more) past experience, not a recurring habit.",
+      "tags": [
+        "experience",
+        "frequency"
+      ]
     }
   ],
   "4": [
@@ -941,6 +992,58 @@
         "request",
         "quotation"
       ]
+    },
+    {
+      "uid": "n4-grammar-8-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜という N",
+      "meaning": "The Noun called / named ~",
+      "structure": "Name/Word + という + Noun",
+      "explanation": "Used to introduce a specific name or define a term that the listener might not know. It links a specific proper noun or concept to a broader category noun.",
+      "examples": [
+        {
+          "jp": "桃太郎という話を知っていますか。",
+          "en": "Do you know a story called 'Momotaro'?"
+        },
+        {
+          "jp": "これは「おにぎり」という食べ物です。",
+          "en": "This is a food called 'Onigiri'."
+        }
+      ],
+      "summary": "という links a specific name or term to the broader category noun that follows it, introducing something the listener may not know.",
+      "details": "桃太郎**という**話を知っていますか。 *(Do you know a story called \"Momotaro\"?)*\nこれは「おにぎり」**という**食べ物です。 *(This is a food called \"onigiri.\")*\n\nという literally functions as \"[Name] that is called [Category]\" — it's the standard way to introduce an unfamiliar proper noun, brand name, or specialized term by immediately telling the listener what broader kind of thing it is. Compare with Lesson 8-8's という, which instead reports hearsay (\"it is said that...\") — same word, a different grammatical role depending on what precedes it.",
+      "tags": [
+        "quotation",
+        "definition-meaning"
+      ]
+    },
+    {
+      "uid": "n4-grammar-8-8",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜という",
+      "meaning": "It is said that... / They say...",
+      "structure": "Plain form + という",
+      "explanation": "Indicates reported speech (hearsay). It is used mainly in writing.",
+      "examples": [
+        {
+          "jp": "日本で最も古い大学が京都にあるという。",
+          "en": "They say that the oldest university in Japan is in Kyoto."
+        },
+        {
+          "jp": "普通の電球の8分の1から5分の1の電気代で済み、寿命は40倍あるという。",
+          "en": "They are said to cost 1/8 to 1/5 of a normal bulb in electricity charges and to last 40 times as long."
+        }
+      ],
+      "summary": "という reports hearsay in writing — 'it is said that...' — a different grammatical role from Lesson 8-7's という, which introduces a name/term.",
+      "details": "日本で最も古い大学が京都にあるという。 *(They say the oldest university in Japan is in Kyoto.)*\n\nCompare with Lesson 8-7's という, which links a specific name to a category (\"a food called X\") — here, という instead reports something the writer heard or read, without vouching for it personally. This use is mostly confined to written Japanese (news articles, essays); in conversation, そうです (hearsay, see Lesson 22-1) is the natural spoken equivalent.",
+      "tags": [
+        "quotation",
+        "hearsay"
+      ]
     }
   ],
   "9": [
@@ -1026,6 +1129,31 @@
       "details": "### ないで as \"Instead Of\"\n\n日曜日はどこも行**かないで**、うちでゆっくり休みます。\n*(I won't go anywhere on Sunday — instead, I'll rest at home.)*\n\nThis overlaps closely with 9-3's ないで pattern (absence of V1 while V2 happens), but the emphasis here is specifically on choosing one alternative (resting at home) *over* another that was available or expected (going out). Context — usually a contrast implied between \"going out\" and \"staying in\" — signals this \"instead of\" reading.",
       "tags": [
         "alternative-choice"
+      ]
+    },
+    {
+      "uid": "n4-grammar-9-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜まま",
+      "meaning": "As it is / Leaving something as is",
+      "structure": "Verb (た form / ない form) / Noun の / な-Adj な + まま",
+      "explanation": "Expresses that a state remains unchanged, or that an action is performed while a certain state continues (often when it shouldn't).",
+      "examples": [
+        {
+          "jp": "靴を履いたまま、部屋に入らないでください。",
+          "en": "Please do not enter the room with your shoes still on (as they are)."
+        },
+        {
+          "jp": "テレビをつけたまま寝てしまいました。",
+          "en": "I fell asleep with the TV left on."
+        }
+      ],
+      "summary": "まま marks a state that stays unchanged while something else happens — often flagging that an expected change didn't occur, sometimes when it really should have.",
+      "details": "靴を履い**たまま**、部屋に入らないでください。 *(Please don't enter the room with your shoes still on.)*\nテレビをつけ**たまま**寝てしまいました。 *(I fell asleep with the TV left on.)*\n\nまま attaches after a た-form (a state that resulted from a completed action, and persists: 履いたまま, つけたまま), a ない-form (something that remains undone: 何も言わないまま, \"without saying anything\"), or a noun/な-adjective + の/な (裸足のまま, \"barefoot as is\"). The implicit nuance is often \"this state should have changed by now, but hasn't\" — which is why it so often appears with a mild warning or regret (ください, てしまいました).",
+      "tags": [
+        "state-continuation"
       ]
     }
   ],
@@ -1159,6 +1287,31 @@
         "degree-extent",
         "conditional"
       ]
+    },
+    {
+      "uid": "n4-grammar-10-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 10,
+      "title": "〜たら［どう］？",
+      "meaning": "How about doing...? / Why don't you...?",
+      "structure": "Verb (たら form) ＋ ［どう］？",
+      "explanation": "Used to make a suggestion. '〜たらどう？' or just '〜たら？' is used when speaking to someone junior or someone with whom one is on familiar terms. A polite form is '〜たらいかがですか'.",
+      "examples": [
+        {
+          "jp": "電話でもかけてあげたらどう？",
+          "en": "Why don't you call her or something?"
+        },
+        {
+          "jp": "薬を飲んで、今日は早く寝たら？",
+          "en": "How about taking some medicine and going to bed early today?"
+        }
+      ],
+      "summary": "たら［どう］？ makes a suggestion — 'why don't you...?' — casual between friends or toward a junior, with たらいかがですか as the polite equivalent.",
+      "details": "電話でもかけてあげ**たらどう**？ *(Why don't you call her or something?)*\n薬を飲んで、今日は早く寝**たら**？ *(How about taking medicine and going to bed early today?)*\n\nThe どう can be dropped entirely in casual speech (寝たら？ alone still reads as \"why don't you go to bed?\"). For a politer version appropriate toward someone senior or unfamiliar, use 〜たらいかがですか instead of 〜たらどう？ — same structure, different register.",
+      "tags": [
+        "advice-suggestion"
+      ]
     }
   ],
   "11": [
@@ -1244,6 +1397,57 @@
       "details": "### とか vs や\n\n| Pattern | Register | Can list actions/verbs? | Example |\n| :--- | :--- | :--- | :--- |\n| **〜とか、〜とか** (here) | Casual, conversational | Yes | **踊るとか**、**泳ぐとか**、いろいろします。 *(I do various things, like dancing, swimming, and so on.)* |\n| 〜や〜（など） | Neutral | No — nouns only | ケーキ**や**クッキー**など**を食べます。 |\n\nとか's flexibility with verbs (not just nouns) is what makes it distinct from や — it's the natural, casual way to list example activities in spoken Japanese.",
       "tags": [
         "listing-examples"
+      ]
+    },
+    {
+      "uid": "n4-grammar-11-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜ことに する / 〜ことに している",
+      "meaning": "Decide to do / Make it a rule to do",
+      "structure": "Verb (Dictionary / ない form) + ことに する/している",
+      "explanation": "'ことにする' indicates a decision made by the speaker. 'ことにしている' indicates a habit or routine that is the result of the speaker's own conscious decision.",
+      "examples": [
+        {
+          "jp": "毎日ジョギングをすることにしました。",
+          "en": "I decided to jog every day."
+        },
+        {
+          "jp": "健康のために、甘いものを食べないことにしています。",
+          "en": "For my health, I make it a rule not to eat sweets."
+        }
+      ],
+      "summary": "ことにする reports a decision the speaker made themselves; ことにしている reports an ongoing habit that resulted from that decision.",
+      "details": "### ことにする vs ことにしている\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **ことにする** (a one-time decision) | \"I decided to...\" | 毎日ジョギングをすることに**しました**。 |\n| **ことにしている** (an ongoing habit from that decision) | \"I make it a rule to...\" | 甘いものを食べないことに**しています**。 |\n\nBoth describe a *voluntary* decision the speaker made — contrast with Lesson 11-6's ことになる／ことになっている, where the decision comes from someone else or from circumstances outside the speaker's control.",
+      "tags": [
+        "decision-outcome",
+        "habit-effort"
+      ]
+    },
+    {
+      "uid": "n4-grammar-11-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜ことに なる / 〜ことに なっている",
+      "meaning": "It has been decided that / It is a rule that",
+      "structure": "Verb (Dictionary / ない form) + ことに なる/なっている",
+      "explanation": "'ことになる' indicates a decision made by someone else or circumstances out of the speaker's control. 'ことになっている' refers to an established rule or custom.",
+      "examples": [
+        {
+          "jp": "来月、日本へ出張することになりました。",
+          "en": "It has been decided that I will go on a business trip to Japan next month."
+        },
+        {
+          "jp": "この部屋には入ってはいけないことになっています。",
+          "en": "It is a rule that you must not enter this room."
+        }
+      ],
+      "summary": "ことになる reports a decision made by someone else or by circumstances beyond the speaker's control; ことになっている describes an established rule or custom.",
+      "details": "### ことになる vs ことになっている\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **ことになる** (decided externally) | \"It has been decided/arranged that...\" | 来月、日本へ出張することに**なりました**。 |\n| **ことになっている** (a standing rule/custom) | \"It is a rule/custom that...\" | この部屋には入ってはいけないことに**なっています**。 |\n\nThis is the mirror image of Lesson 11-5's ことにする／している, which describes the speaker's *own* voluntary decision. The と/に distinction (する = active decision, なる = passive/external result) is a recurring theme in Japanese grammar — compare with くする vs くなる (Lesson 19).",
+      "tags": [
+        "decision-outcome"
       ]
     }
   ],
@@ -1851,6 +2055,31 @@
       "tags": [
         "particle-usage"
       ]
+    },
+    {
+      "uid": "n4-grammar-16-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "V-て ほしい / V-ないで ほしい",
+      "meaning": "Want someone to do / not do something",
+      "structure": "Verb (て-form) + ほしい / Verb (ない-form) + で + ほしい",
+      "explanation": "Expresses the speaker's desire for someone else (usually marked with に) to perform or not perform a specific action.",
+      "examples": [
+        {
+          "jp": "私はあなたに英語を教えてほしいです。",
+          "en": "I want you to teach me English."
+        },
+        {
+          "jp": "ここでタバコを吸わないでほしいんですが。",
+          "en": "I would like you not to smoke here..."
+        }
+      ],
+      "summary": "Expresses wanting someone else to do (or not do) something — てほしい for a positive wish, ないでほしい for a negative one, with the person marked by に.",
+      "details": "私はあなたに英語を教え**てほしい**です。 *(I want you to teach me English.)*\nここでタバコを吸わない**でほしい**んですが。 *(I would like you not to smoke here.)*\n\nThis pattern describes the speaker's own wish about someone *else's* action (marked with に) — different from たい, which expresses the speaker's wish about their *own* action. Softer/more indirect alternatives exist for polite requests (ていただけませんか, Lesson 1), but てほしい is common in everyday conversation to state a hope or preference about what another person does.",
+      "tags": [
+        "request"
+      ]
     }
   ],
   "17": [
@@ -2027,6 +2256,32 @@
       "tags": [
         "direction-movement"
       ]
+    },
+    {
+      "uid": "n4-grammar-18-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "V-て きます / V-て いきます",
+      "meaning": "Changes over time / Direction of action",
+      "structure": "Verb (て-form) + きます / いきます",
+      "explanation": "Indicates a physical or temporal progression. '〜てきます' describes an action or change that has continued up to the present, or an action directed toward the speaker. '〜ていきます' describes an action or change that will continue from the present into the future, or an action directed away from the speaker.",
+      "examples": [
+        {
+          "jp": "だんだん寒くなってきました。",
+          "en": "It has gradually become colder (up to now)."
+        },
+        {
+          "jp": "これからも日本語を勉強していきます。",
+          "en": "I will continue studying Japanese from now on."
+        }
+      ],
+      "summary": "Describes physical movement or temporal progression over time relative to the speaker's perspective.",
+      "details": "### 〜てくる vs 〜ていく Directional & Temporal Matrix\n\n| Pattern | Spatial / Physical Movement | Temporal / Change Over Time | Example Sentence |\n| :--- | :--- | :--- | :--- |\n| **V-て きます** | Moving **toward** the speaker | Change continuing from past **up to the present** | だんだん寒くなって**きました**。<br>*(It has gradually gotten colder.)* |\n| **V-て いきます** | Moving **away from** the speaker | Change continuing from present **into the future** | これからも勉強を続けて**いきます**。<br>*(I will continue studying from now on.)* |\n\n---\n\n### Common Temporal Expressions\n\n- **〜てきた** (Has emerged / begun):\n  - 雨が降って**きた**。 *(It has started raining.)*\n  - 赤ちゃんが笑うように**なってきた**。 *(The baby has begun to smile.)*\n- **〜ていく** (Will go on / develop):\n  - これから日本の人口は減って**いく**だろう。 *(From now on, Japan's population will likely decrease.)*",
+      "tags": [
+        "change-of-state",
+        "direction-movement"
+      ]
     }
   ],
   "19": [
@@ -2130,9 +2385,34 @@
         }
       ],
       "summary": "い-adj くく／な-adj に turns the adjective into an adverb modifying the following verb.",
-      "details": "野菜を**細かく**切ってください。 *(Please cut the vegetables into small pieces.)*\n電気や水は**大切に**使いましょう。 *(Let's use electricity and water carefully.)*\n\nThis is the same く／に conversion used in N5 Lesson 19 and N4 Lesson 19-3 (adjective-to-adverb via く for い-adjectives, に for な-adjectives) — here it modifies a verb describing *how* an action is done, rather than describing a change of state.",
+      "details": "野菜を**細かく**切ってください。 *(Please cut the vegetables into small pieces.)*\n電気や水は**大切に**使いましょう。 *(Let's use electricity and water carefully.)*\n\nThis is the same く／に conversion used in N5 Lesson 19 and Lesson 19-3 (adjective-to-adverb via く for い-adjectives, に for な-adjectives) — here it modifies a verb describing *how* an action is done, rather than describing a change of state.",
       "tags": [
         "change-of-state"
+      ]
+    },
+    {
+      "uid": "n4-grammar-19-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜がる / 〜がっている",
+      "meaning": "Showing signs of feeling (Third person)",
+      "structure": "い-Adj (drop い) / な-Adj / V-たい (drop い) + がる",
+      "explanation": "Used to describe the emotions, physical feelings, or desires of someone other than the speaker, based on their outward behavior or signs.",
+      "examples": [
+        {
+          "jp": "子供がおもちゃを欲しがっています。",
+          "en": "The child is acting like they want a toy."
+        },
+        {
+          "jp": "彼は犬を怖がります。",
+          "en": "He is afraid of (shows fear of) dogs."
+        }
+      ],
+      "summary": "がる describes another person's (never the speaker's own) feelings, desires, or physical sensations, based on their outward behavior — attached to い-adjective/な-adjective/たい stems.",
+      "details": "子供がおもちゃを**欲しがっています**。 *(The child is acting like they want a toy.)*\n彼は犬を**怖がります**。 *(He shows fear of dogs.)*\n\n> **Why you can't just say 彼は怖いです for someone else**: い-adjectives describing internal feelings (怖い, 痛い, 悲しい, ほしい) can only be stated directly about the speaker's *own* feelings. To describe someone *else's* feelings, you either use conjecture (怖いようです/そうです) or attach がる to describe their observable behavior — 彼は犬を怖がります literally says \"he shows outward signs of fear toward dogs,\" which is what makes it grammatically valid for a third person.",
+      "tags": [
+        "emotion-expression"
       ]
     }
   ],
@@ -2309,6 +2589,58 @@
       "tags": [
         "spontaneous-perception"
       ]
+    },
+    {
+      "uid": "n4-grammar-22-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜みたいだ / みたいに / みたいな",
+      "meaning": "Seems like / Resembles / Like ~",
+      "structure": "Verb/Adj/Noun (Plain form) + みたいだ",
+      "explanation": "A colloquial equivalent of '〜ようだ'. It expresses the speaker's conjecture based on observation, or expresses resemblance. When modifying a noun, use 'みたいな'. When modifying a verb/adjective, use 'みたいに'.",
+      "examples": [
+        {
+          "jp": "氷みたいな手ですね。",
+          "en": "Your hands are like ice, aren't they?"
+        },
+        {
+          "jp": "日本人みたいに上手に日本語を話します。",
+          "en": "They speak Japanese well, just like a Japanese person."
+        }
+      ],
+      "summary": "A casual, spoken equivalent of ようだ — みたいな before a noun, みたいに before a verb/adjective, and no の is ever inserted between a noun and みたい.",
+      "details": "### みたいだ Conjugation Shapes\n\n| Position | Form | Example |\n| :--- | :--- | :--- |\n| Modifying a noun | 〜**みたいな** N | 氷**みたいな**手ですね。 *(Your hands are like ice.)* |\n| Modifying a verb/adjective | 〜**みたいに** | 日本人**みたいに**上手に話します。 *(Speaks as skillfully as a Japanese person.)* |\n| Ending a sentence | 〜**みたいだ** | あの人は先生**みたいだ**。 *(That person seems to be a teacher.)* |\n\n> **Common mistake**: Unlike のよう(な/に) — which requires の after a noun (日本人のように) — みたい attaches *directly* to a noun, with no の in between: 日本人**みたいに** (not 日本人のみたいに). みたいだ is simply the casual/conversational register of ようだ; ようだ is preferred in writing or formal speech.",
+      "tags": [
+        "similarity-appearance",
+        "conjecture-inference"
+      ]
+    },
+    {
+      "uid": "n4-grammar-22-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜らしい",
+      "meaning": "It seems / Typical of ~",
+      "structure": "Verb/Adj (Plain) / Noun + らしい",
+      "explanation": "Has two meanings: 1) Conjecture based on objective information or hearsay. 2) Attached to a noun to mean 'typical of' or 'having all the expected characteristics of' that noun.",
+      "examples": [
+        {
+          "jp": "うわさによると、二人は結婚するらしい。",
+          "en": "According to rumors, those two are getting married."
+        },
+        {
+          "jp": "今日は春らしい天気ですね。",
+          "en": "Today is very spring-like weather, isn't it?"
+        }
+      ],
+      "summary": "らしい has two distinct roles: reporting a conjecture based on hearsay or outside information, and attaching to a noun to mean 'typical of' that noun.",
+      "details": "### The Two Meanings of らしい\n\n| Meaning | Example |\n| :--- | :--- |\n| **Conjecture/hearsay** — attaches to a plain-form clause | うわさによると、二人は結婚する**らしい**。 *(Rumor has it those two are getting married.)* |\n| **\"Typical of\" / characteristic** — attaches directly to a noun | 今日は春**らしい**天気ですね。 *(Today's weather is properly spring-like.)* |\n\nSee Lessons 18 and 22 for how this compares with そうです (appearance-based) and ようです (evidence-based inference) — らしい leans specifically on hearsay/outside information rather than the speaker's own direct observation.",
+      "tags": [
+        "hearsay",
+        "conjecture-inference"
+      ]
     }
   ],
   "23": [
@@ -2418,6 +2750,31 @@
         "causative",
         "request",
         "keigo-humble"
+      ]
+    },
+    {
+      "uid": "n4-grammar-23-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "V-させられる (Causative-Passive)",
+      "meaning": "Be forced or made to do something",
+      "structure": "Verb (Causative-Passive Form)",
+      "explanation": "Indicates that the subject was forced or made to do something against their will by someone else. Expresses annoyance or reluctance.",
+      "examples": [
+        {
+          "jp": "子供の時、母に野菜を食べさせられました。",
+          "en": "When I was a child, I was forced to eat vegetables by my mother."
+        },
+        {
+          "jp": "先生に漢字を100回書かされました。",
+          "en": "I was made to write the kanji 100 times by the teacher."
+        }
+      ],
+      "summary": "The causative-passive form combines causative (make someone do) and passive (something done to you) to express being forced into an action against your will — often carrying a real sense of annoyance or resentment.",
+      "details": "### Building & Reading the Causative-Passive\n\n子供の時、母に野菜を**食べさせられました**。 *(When I was a child, I was made to eat vegetables by my mother.)*\n先生に漢字を100回**書かされました**。 *(I was made to write the kanji 100 times by the teacher.)*\n\nFormed by taking the causative (食べさせる, 書かせる) and then passivizing it (食べさせられる, 書かされる — Group I verbs often contract させられる to される in casual speech: 書かせられた → 書かされた). Structurally it's N（causer）に + V-causative-passive, matching the plain passive's N（agent）に pattern. The emotional coloring — reluctance, annoyance, \"I didn't want to but had no choice\" — is the whole point of this form; a neutral causative (食べさせました, \"I made him eat\") carries no such complaint.",
+      "tags": [
+        "causative-passive"
       ]
     }
   ],

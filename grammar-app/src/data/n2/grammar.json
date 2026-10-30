@@ -1,0 +1,538 @@
+{
+  "12": [
+    {
+      "uid": "n2-grammar-12-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "…もの／もんだから",
+      "meaning": "Because... (Reason/Excuse)",
+      "structure": "Verb/Adj (Plain) / Noun な + もの／もんだから",
+      "explanation": "Indicates the reason or cause of something, often used to justify it, or give a reason for it in order to deny responsibility or excuse oneself.",
+      "examples": [
+        {
+          "jp": "急いでいたものですから、かぎをかけるのを忘れてしまいました。",
+          "en": "I was in a rush, so I went and forgot to lock up."
+        },
+        {
+          "jp": "とても安かったものだから、買いすぎたんです。",
+          "en": "It was very cheap, so I bought too much."
+        }
+      ],
+      "summary": "もの／もんだから gives a reason, often used to justify or excuse the speaker's own behavior — もんだから is the more casual, contracted spoken form.",
+      "details": "急いでいた**ものですから**、かぎをかけるのを忘れてしまいました。\n*(I was in a rush, so I forgot to lock up.)*\nとても安かった**ものだから**、買いすぎたんです。\n*(It was very cheap, so I bought too much.)*\n\nThis pattern has a distinctly excuse-making or self-justifying flavor — compared with plain から, もの／もんだから frames the cause as an unavoidable circumstance the speaker feels shouldn't be held against them. もんだから is the contracted, more casual spoken equivalent of もの／ものだから.",
+      "tags": [
+        "cause-reason"
+      ]
+    }
+  ],
+  "14": [
+    {
+      "uid": "n2-grammar-14-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜といった",
+      "meaning": "Such as ~ / Like ~",
+      "structure": "Noun 1, Noun 2... + といった + Noun 3",
+      "explanation": "Indicates that N1, N2 etc. are specific examples of N3. It implies that there are also other examples apart from those mentioned.",
+      "examples": [
+        {
+          "jp": "5月5日には「ちまき」「かしわもち」といった昔からの菓子を食べる習慣がある。",
+          "en": "On 5th May, there is the custom of eating traditional confectionery such as 'chimaki' and 'kashiwamochi'."
+        },
+        {
+          "jp": "この大学にはルーマニア、ポーランドといった東ヨーロッパからの留学生が多い。",
+          "en": "There are many students from Eastern European countries such as Romania and Poland at this university."
+        }
+      ],
+      "summary": "といった lists a couple of representative examples of a broader category, implying there are more items like them not mentioned.",
+      "details": "5月5日には「ちまき」「かしわもち」**といった**昔からの菓子を食べる習慣がある。\n*(On May 5th, there's a custom of eating traditional sweets such as chimaki and kashiwamochi.)*\n\nStructurally: N1、N2 ＋ といった ＋ N3, where N1/N2 are specific examples and N3 is the category they belong to (お菓子, 留学生, etc.). Compare with N4 Lesson 11-4's とか、とか, which lists examples in casual speech — といった is the more formal, written equivalent used for the same purpose.",
+      "tags": [
+        "listing-examples"
+      ]
+    },
+    {
+      "uid": "n2-grammar-14-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜に（も）わたって",
+      "meaning": "Extending over / Spanning (time or space)",
+      "structure": "Noun (Time/Space) + に（も）わたって",
+      "explanation": "Indicates that the speaker feels that the span of time mentioned is lengthy or the area extensive.",
+      "examples": [
+        {
+          "jp": "手術は3時間にわたって行われた。",
+          "en": "The operation lasted for three hours."
+        },
+        {
+          "jp": "砂漠は東西450キロにわたって広がっている。",
+          "en": "The desert extends 450 km across from East to West."
+        }
+      ],
+      "summary": "に（も）わたって marks that a span of time or area is felt to be notably long or extensive — used to emphasize scale.",
+      "details": "手術は3時間**にわたって**行われた。 *(The operation lasted for three hours.)*\n砂漠は東西450キロ**にわたって**広がっている。 *(The desert extends 450 km from east to west.)*\n\nThe optional も (に**も**わたって) adds extra emphasis on just how long/extensive the span is — this pattern is reserved for spans the speaker genuinely considers noteworthy in scale (a multi-hour surgery, a huge desert), not routine short durations.",
+      "tags": [
+        "time-relative",
+        "degree-extent",
+        "formal-written"
+      ]
+    }
+  ],
+  "16": [
+    {
+      "uid": "n2-grammar-16-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜に応じて",
+      "meaning": "In response to / Depending on",
+      "structure": "Noun + に応じて / Noun 1 + に応じた + Noun 2",
+      "explanation": "Indicates doing something appropriately 'in response to' a demand or request. When used with a word representing change or diversity, it means 'in response to the change/diversity'.",
+      "examples": [
+        {
+          "jp": "学生たちは大学に授業料についての要求をしました。1年間話し合った後、大学は要求に応じました。",
+          "en": "The students made demands about the tuition fees. After discussing it for a year, the university acceded to their demands."
+        },
+        {
+          "jp": "時代の変化に応じて若者の文化や考え方も変わる。",
+          "en": "Young people's culture and thinking also change in response to the changing times."
+        }
+      ],
+      "summary": "に応じて means acting appropriately 'in response to' something — a demand, a request, or a changing situation — adjusting behavior to match.",
+      "details": "学生たちは大学に授業料についての要求をしました。1年間話し合った後、大学は要求**に応じました**。\n*(The students made demands about tuition. After a year of talks, the university acceded to their demands.)*\n時代の変化**に応じて**若者の文化や考え方も変わる。 *(Young people's culture also changes in response to the changing times.)*\n\nWhen paired with a word implying variation or diversity (変化, 個人, ニーズ), に応じて conveys \"adapting to match\" that variation — the response scales or adjusts according to what it's responding to, rather than being a single fixed reaction.",
+      "tags": [
+        "cause-reason",
+        "viewpoint-standpoint"
+      ]
+    },
+    {
+      "uid": "n2-grammar-16-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜にもかかわらず",
+      "meaning": "Despite / In spite of",
+      "structure": "Verb/Adj (Plain) / Noun (である) + にもかかわらず",
+      "explanation": "Indicates an action or event occurring despite contrary expectations. It carries a similar meaning to '〜のに' but is more formal.",
+      "examples": [
+        {
+          "jp": "雨が激しく降っているにもかかわらず、サッカーの試合は行われた。",
+          "en": "Despite the heavy rain, the soccer match was held."
+        },
+        {
+          "jp": "彼は熱があるにもかかわらず、仕事へ行きました。",
+          "en": "In spite of having a fever, he went to work."
+        }
+      ],
+      "summary": "にもかかわらず means 'despite' or 'in spite of' — similar to のに, but more formal, and typically found in writing or formal speech.",
+      "details": "雨が激しく降っている**にもかかわらず**、サッカーの試合は行われた。\n*(Despite the heavy rain, the soccer match was held.)*\n彼は熱がある**にもかかわらず**、仕事へ行きました。 *(In spite of having a fever, he went to work.)*\n\nSee N4 Lesson 20-2's のに for the more conversational equivalent of this same contrastive meaning — にもかかわらず carries the same \"contrary to expectation\" nuance but reads as noticeably more formal, and doesn't carry のに's stronger emotional undertone of complaint/reproach.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ]
+    }
+  ],
+  "17": [
+    {
+      "uid": "n2-grammar-17-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜からには",
+      "meaning": "Because X, then of course Y / Now that...",
+      "structure": "Verb (Plain) / Noun (である) + からには",
+      "explanation": "Means 'because X is a fact, then naturally Y'. The 'Y' part is often an expression of a strong determination, order, obligation, or aspiration.",
+      "examples": [
+        {
+          "jp": "大学院に入ったからには、どんなに大変でも学位を取って国へ帰りたい。",
+          "en": "Now that I've gotten into graduate school, I want to get my degree and go back home no matter how tough it is."
+        },
+        {
+          "jp": "やるからには勝たなければならないと思う。",
+          "en": "As long as I'm doing it, I feel I have to win."
+        }
+      ],
+      "summary": "からには means 'because X is now a settled fact, Y naturally follows' — the second clause typically expresses strong resolve, obligation, or aspiration.",
+      "details": "大学院に入った**からには**、どんなに大変でも学位を取って国へ帰りたい。\n*(Now that I've gotten into graduate school, I want to get my degree and go home, however tough it is.)*\nやる**からには**勝たなければならないと思う。 *(As long as I'm doing it, I feel I have to win.)*\n\nUnlike a neutral cause-and-effect (から), からには implies a decision or commitment already made, and the second half is the natural, almost obligatory consequence of that commitment — it's frequently paired with strong resolve verbs (たい, なければならない).",
+      "tags": [
+        "cause-reason",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-17-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜ざるを得ない",
+      "meaning": "Cannot help but / Have no choice but to",
+      "structure": "Verb (ない form, drop ない) + ざるを得ない (※する -> せざるを得ない)",
+      "explanation": "Indicates that one does not want to do something, but has absolutely no other choice due to the circumstances.",
+      "examples": [
+        {
+          "jp": "熱が39度もあるので、今日の会議は休まざるを得ない。",
+          "en": "Since I have a fever of 39 degrees, I have no choice but to miss today's meeting."
+        },
+        {
+          "jp": "電車が止まってしまったので、歩いて帰らざるを得ない。",
+          "en": "Because the trains have stopped, I cannot help but walk home."
+        }
+      ],
+      "summary": "ざるを得ない means having no real choice but to do something the speaker doesn't actually want to do — 'cannot help but...'",
+      "details": "熱が39度もあるので、今日の会議は休ま**ざるを得ない**。\n*(Since I have a 39-degree fever, I have no choice but to miss today's meeting.)*\n電車が止まってしまったので、歩いて帰ら**ざるを得ない**。\n*(Because the trains have stopped, I can't help but walk home.)*\n\nFormed from the ない-form (drop ない) + ざるを得ない — irregular for する, which becomes せざるを得ない (not しざるを得ない). The whole phrase always carries reluctance: the speaker is being forced into an action by circumstances, against their actual preference.",
+      "tags": [
+        "obligation-necessity",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-17-3",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜からなる",
+      "meaning": "Consists of / Is composed of",
+      "structure": "Noun + からなる / からなっている",
+      "explanation": "A formal expression used to describe what parts, elements, or materials make up a whole entity.",
+      "examples": [
+        {
+          "jp": "この本は、10の章からなっている。",
+          "en": "This book is composed of 10 chapters."
+        },
+        {
+          "jp": "水は水素と酸素からなる。",
+          "en": "Water consists of hydrogen and oxygen."
+        }
+      ],
+      "summary": "からなる is a formal expression describing what components make up a whole — 'consists of' or 'is composed of.'",
+      "details": "この本は、10の章**からなっている**。 *(This book is composed of 10 chapters.)*\n水は水素と酸素**からなる**。 *(Water consists of hydrogen and oxygen.)*\n\nThis is a written, somewhat technical/encyclopedic register — natural for describing the composition of a system, document, or substance (chapters of a book, elements of a compound, members of an organization), but not something you'd casually use in everyday conversation.",
+      "tags": [
+        "definition-meaning"
+      ]
+    }
+  ],
+  "18": [
+    {
+      "uid": "n2-grammar-18-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "〜ものの",
+      "meaning": "Although / Even though",
+      "structure": "Verb/Adj (Plain) / Noun (である) + ものの",
+      "explanation": "Indicates that although the first part (the premise) is true, the result in the second part is contrary to expectations or is not fully realized.",
+      "examples": [
+        {
+          "jp": "新しいパソコンを買ったものの、使い方がわからない。",
+          "en": "Even though I bought a new PC, I don't know how to use it."
+        },
+        {
+          "jp": "日本語の勉強を始めたものの、なかなか上達しない。",
+          "en": "Although I started studying Japanese, I'm not making much progress."
+        }
+      ],
+      "summary": "ものの concedes that the first statement is true, but the outcome that follows runs contrary to what you'd expect, or falls short of it.",
+      "details": "新しいパソコンを買った**ものの**、使い方がわからない。 *(Even though I bought a new PC, I don't know how to use it.)*\n日本語の勉強を始めた**ものの**、なかなか上達しない。 *(Although I started studying Japanese, I'm not making much progress.)*\n\nものの has a similar concessive feel to のに (N4 Lesson 20-2) and にもかかわらず (Lesson 16-2), but reads as more neutral/literary — it doesn't carry のに's charge of complaint/reproach, just a calm acknowledgment that the outcome didn't match the premise's natural expectation.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ]
+    }
+  ],
+  "19": [
+    {
+      "uid": "n2-grammar-19-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜をめぐって／〜をめぐる",
+      "meaning": "Concerning / Over / Regarding (a dispute or discussion)",
+      "structure": "Noun + をめぐって / Noun + をめぐる + Noun",
+      "explanation": "Used when multiple people are arguing, discussing, or competing 'over' or 'concerning' a central issue. It is used in news or formal contexts.",
+      "examples": [
+        {
+          "jp": "新しい法律をめぐって、激しい議論が交わされている。",
+          "en": "Intense debates are being exchanged over the new law."
+        },
+        {
+          "jp": "遺産をめぐる争いが起きた。",
+          "en": "A dispute over the inheritance occurred."
+        }
+      ],
+      "summary": "をめぐって marks the central issue that people are arguing, discussing, or competing over — 'concerning/over [a contested topic].'",
+      "details": "新しい法律**をめぐって**、激しい議論が交わされている。 *(Intense debates are being exchanged over the new law.)*\n遺産**をめぐる**争いが起きた。 *(A dispute over the inheritance occurred.)*\n\nをめぐって is reserved specifically for situations involving conflict, debate, or competing interests around a shared topic — different from a neutral topic marker like について (N3 Lesson 9-3), which just introduces what something is about without implying any dispute.",
+      "tags": [
+        "viewpoint-standpoint",
+        "formal-written"
+      ]
+    }
+  ],
+  "20": [
+    {
+      "uid": "n2-grammar-20-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜からいうと／〜からいえば／〜からいって",
+      "meaning": "Judging from / From the standpoint of",
+      "structure": "Noun + からいうと／からいえば／からいって",
+      "explanation": "Used to make a judgment or evaluation based on a specific standpoint, symptom, or piece of evidence.",
+      "examples": [
+        {
+          "jp": "現状からいうと、計画の変更は避けられない。",
+          "en": "Judging from the current situation, a change of plans is unavoidable."
+        },
+        {
+          "jp": "消費者の立場からいえば、値段は安いほうがいい。",
+          "en": "From the standpoint of consumers, cheaper prices are better."
+        }
+      ],
+      "summary": "からいうと／からいえば／からいって all mark the standpoint or evidence a judgment is being made from — 'judging from...'",
+      "details": "現状**からいうと**、計画の変更は避けられない。 *(Judging from the current situation, a change of plans is unavoidable.)*\n消費者の立場**からいえば**、値段は安いほうがいい。 *(From consumers' standpoint, cheaper prices are better.)*\n\nAll three variants (からいうと／からいえば／からいって) are interchangeable, attaching to a noun that represents the vantage point or body of evidence behind the following judgment. Compare with にとって (N3 Lesson 6-2), which marks a perspective for evaluating something's *importance/difficulty*, whereas からいうと marks the *basis* for a specific conclusion or prediction.",
+      "tags": [
+        "viewpoint-standpoint"
+      ]
+    }
+  ],
+  "21": [
+    {
+      "uid": "n2-grammar-21-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜といえども",
+      "meaning": "Even if / However ~",
+      "structure": "Noun / Plain form + といえども",
+      "explanation": "An archaic/formal expression meaning '〜といっても' or '〜ではあるが'. Used to state that despite a fact or condition, something else holds true.",
+      "examples": [
+        {
+          "jp": "どんな大金持ちといえども、お金で解決できない悩みがあるはずだ。",
+          "en": "However rich one might be, there are bound to be some problems that money can't solve."
+        },
+        {
+          "jp": "名医といえども、すべての患者を救うことはできない。",
+          "en": "However skillful a doctor might be, she cannot save all her patients."
+        }
+      ],
+      "summary": "といえども is an archaic/formal way of saying 'even though X, still Y' — roughly equivalent to といっても or ではあるが, but reserved for formal or written register.",
+      "details": "どんな大金持ち**といえども**、お金で解決できない悩みがあるはずだ。\n*(However rich one might be, there are bound to be problems money can't solve.)*\n名医**といえども**、すべての患者を救うことはできない。\n*(However skillful a doctor might be, she cannot save all her patients.)*\n\nThis carries a classical, almost proverbial tone — often used with extreme examples (大金持ち, 名医) to make a broad, memorable point. In everyday conversation, というても or ではあるが would be the natural, less formal substitutes for the same underlying \"even granting X, still Y\" logic.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-21-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "N ＋ に基づいて",
+      "meaning": "Based on N",
+      "structure": "Noun + に基づいて / に基づいた + Noun",
+      "explanation": "Means 'based on ~'. When modifying a noun directly, it takes the form '〜に基づいた'.",
+      "examples": [
+        {
+          "jp": "この映画は、事実に基づいて作られている。",
+          "en": "This film is based on true facts."
+        },
+        {
+          "jp": "デパートでは、調査結果に基づいた新しいサービスを導入した。",
+          "en": "The department store introduced some new services based on the results of a survey."
+        }
+      ],
+      "summary": "に基づいて means 'based on' — grounding something in a stated source, fact, or set of results — with に基づいた used to modify a following noun directly.",
+      "details": "この映画は、事実**に基づいて**作られている。 *(This film is based on true facts.)*\nデパートでは、調査結果**に基づいた**新しいサービスを導入した。 *(The department store introduced new services based on survey results.)*\n\nStructurally straightforward: に基づいて attaches mid-sentence (like a て-form connector), while に基づいた attaches directly before a noun it modifies — the same shape distinction you've already seen with による／によって (N3 Lesson 8-1) and に関する／に関して (N3 Lesson 15-2).",
+      "tags": [
+        "viewpoint-standpoint",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-21-3",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜が、一方で",
+      "meaning": "But, at the same time / On the other hand",
+      "structure": "Plain form + が、一方で",
+      "explanation": "Used to introduce a statement that contrasts with a preceding statement.",
+      "examples": [
+        {
+          "jp": "日本は技術が進んだ国だが、一方で古い伝統文化も大切にしている。",
+          "en": "Japan is a technologically-advanced country, but at the same time it cherishes its traditional culture."
+        }
+      ],
+      "summary": "が、一方で introduces a statement that contrasts with what was just said — 'but, on the other hand' or 'while at the same time.'",
+      "details": "日本は技術が進んだ国だ**が、一方で**古い伝統文化も大切にしている。\n*(Japan is a technologically advanced country, but at the same time it cherishes its traditional culture.)*\n\n一方で highlights that two seemingly contrasting facts are both simultaneously true about the same subject — useful for essay writing and balanced arguments where you want to acknowledge two sides of something without one negating the other.",
+      "tags": [
+        "concession-contrast",
+        "connective"
+      ]
+    }
+  ],
+  "22": [
+    {
+      "uid": "n2-grammar-22-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜次第だ / 〜次第で",
+      "meaning": "For that reason / Depending on",
+      "structure": "Verb (て-form / た-form) + 次第です",
+      "explanation": "When ending with '次第です', it means 'for this reason, I did ~'. It's a formal way to explain circumstances. When used as '次第で', it means 'depending on'.",
+      "examples": [
+        {
+          "jp": "関係者が情報を共有すべきだと考え、皆様にお知らせした次第です。",
+          "en": "We let everyone involved know about it because we believed the information should be shared."
+        },
+        {
+          "jp": "私どもだけではどうしようもなく、こうしてお願いに参った次第でございます。",
+          "en": "There's no way we can manage it by ourselves, so this is why we have come to ask you for a favor like this."
+        }
+      ],
+      "summary": "次第です explains circumstances formally ('for this reason, I did X'); 次第で instead means 'depending on' — two quite different meanings sharing the same word.",
+      "details": "### 次第だ (Explaining Circumstances) vs 次第で (Depending On)\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **V て/た-form ＋ 次第です** | Formally explains why the speaker did something | 皆様にお知らせした**次第です**。 *(This is why we informed everyone.)* |\n| **N ＋ 次第で** | \"Depending on N\" | 結果**次第で**、対応が変わります。 *(The response will change depending on the result.)* |\n\nThe 次第です form is quite formal and often appears at the very end of a business letter or formal explanation, summarizing the reasoning behind an action just described.",
+      "tags": [
+        "conditional",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-22-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜をもって…とする",
+      "meaning": "Regarded as / On the basis of",
+      "structure": "Noun + をもって…とする / とされている",
+      "explanation": "Indicates '〜を…と見なす' (is regarded as). This is a highly formal written expression.",
+      "examples": [
+        {
+          "jp": "出席率、授業中の発表、レポートをもって、評価とします。",
+          "en": "Students are evaluated on the basis of attendance rate, presentations during classes, and reports."
+        },
+        {
+          "jp": "拍手をもって、賛成をいただいたものといたします。",
+          "en": "Based on your applause, I shall take it that I have received your endorsement."
+        }
+      ],
+      "summary": "をもって…とする is a highly formal written expression meaning 'to regard X as...' or 'on the basis of X' — typically found in official announcements and formal declarations.",
+      "details": "出席率、授業中の発表、レポート**をもって**、評価**とします**。\n*(Students are evaluated on the basis of attendance rate, in-class presentations, and reports.)*\n拍手**をもって**、賛成をいただいたものと**いたします**。\n*(Based on your applause, I shall take it that I have received your endorsement.)*\n\nThis is essentially a formal written equivalent of 〜を〜と見なす (\"regard X as Y\") — you'll encounter it in official rules, ceremony announcements, and formal business writing, rarely in everyday speech.",
+      "tags": [
+        "definition-meaning",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-22-3",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜におきましては",
+      "meaning": "As for / In (formal)",
+      "structure": "Noun + においては / におきましては",
+      "explanation": "An expression that defines the extent of something, and is an even more formal way of saying '〜では'. Often used in formal writing or speeches.",
+      "examples": [
+        {
+          "jp": "経済成長期の日本においては、収入が2〜3年で倍になることもあった。",
+          "en": "In Japan during its rapid economic growth period, some people's incomes doubled within two to three years."
+        },
+        {
+          "jp": "小社におきましては、目下『私の死亡記事』というネクロロジー集を編集中です。",
+          "en": "At our company, we are currently compiling a collection of obituaries entitled 'My Obituary'."
+        }
+      ],
+      "summary": "においては／におきましては is an even more formal way of saying では, defining the scope or context something applies within.",
+      "details": "経済成長期の日本**においては**、収入が2〜3年で倍になることもあった。\n*(In Japan during its rapid economic growth period, some people's incomes doubled within two to three years.)*\n小社**におきましては**、目下『私の死亡記事』というネクロロジー集を編集中です。\n*(At our company, we are currently compiling a collection of obituaries titled \"My Obituary.\")*\n\nにおきましては is the more deferential/humble-sounding of the two, often used in business correspondence when referring to one's own company (小社におきましては) — においては is slightly less formal but still clearly written/formal register compared to plain では.",
+      "tags": [
+        "viewpoint-standpoint",
+        "formal-written",
+        "keigo-polite"
+      ]
+    }
+  ],
+  "23": [
+    {
+      "uid": "n2-grammar-23-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "〜に及ぶ",
+      "meaning": "Extends as far as / Reaches",
+      "structure": "Noun + に及ぶ",
+      "explanation": "Indicates that what is expressed as the subject of the sentence extends as far as the stated scope, area, or time.",
+      "examples": [
+        {
+          "jp": "害虫による松の被害は県内全域に及んでおり、回復には時間がかかるだろう。",
+          "en": "Insect damage to pine trees extends to all parts of the prefecture, and it will take time to recover."
+        },
+        {
+          "jp": "議論は国内問題にとどまらず国際問題にまで及び、実りのあるものとなった。",
+          "en": "The discussion was not confined to domestic issues but broadened out to include international ones, making it fruitful."
+        }
+      ],
+      "summary": "に及ぶ says something extends as far as a stated scope, area, or time — emphasizing the reach or extent of the subject.",
+      "details": "害虫による松の被害は県内全域**に及んでおり**、回復には時間がかかるだろう。\n*(Insect damage to pine trees extends across the whole prefecture, and recovery will take time.)*\n議論は国内問題にとどまらず国際問題にまで**及び**、実りのあるものとなった。\n*(The discussion wasn't confined to domestic issues but extended to international ones, becoming fruitful.)*\n\nに及ぶ often pairs with にとどまらず (\"not confined to...\") to emphasize that something has spread well beyond an initially expected scope — a formal/written expression common in news reporting.",
+      "tags": [
+        "degree-extent",
+        "formal-written"
+      ]
+    }
+  ],
+  "24": [
+    {
+      "uid": "n2-grammar-24-1",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "V-ない ＋ ざる N",
+      "meaning": "The Un- / Without ~ing",
+      "structure": "Verb (ない-form, drop ない) + ざる + Noun",
+      "explanation": "An archaic form used when modifying a noun with 'Vない'. Since archaic forms remain only in stock expressions, their use is limited (e.g., 知られざる, 見ざる).",
+      "examples": [
+        {
+          "jp": "歴史にはまだ知られざる事実があるはずだ。",
+          "en": "Many historical facts must still be unknown (facts that are not known)."
+        },
+        {
+          "jp": "「見ざる、聞かざる、言わざる」は一つの生き方を示している。",
+          "en": "'See nothing, hear nothing, say nothing' points to one way of living one's life."
+        }
+      ],
+      "summary": "V-ない + ざる + N is an archaic noun-modifying form, surviving today only in a handful of fixed expressions.",
+      "details": "歴史にはまだ**知られざる**事実があるはずだ。 *(Many historical facts must still be unknown.)*\n「**見ざる**、聞かざる、言わざる」は一つの生き方を示している。 *(\"See no evil, hear no evil, speak no evil\" points to one way of living.)*\n\nThis classical negative form (ざる, from the old auxiliary ず) once modified nouns the way ない does today (知らない事実 → 知られざる事実), but in modern Japanese it survives only in stock idioms and set phrases — you won't productively form new ざる expressions the way you can with ない, but recognizing them (見ざる聞かざる言わざる being the most famous) is useful for reading older or more literary text.",
+      "tags": [
+        "negative-manner",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-24-2",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "〜から〜に至るまで",
+      "meaning": "From ~ all the way to ~",
+      "structure": "Noun 1 + から + Noun 2 + に至るまで (にいたるまで)",
+      "explanation": "By citing items at either extreme of a group, it indicates that something applies to absolutely everything in that group.",
+      "examples": [
+        {
+          "jp": "自転車のねじから人工衛星の部品に至るまで、どれもこの工場で作っています。",
+          "en": "We make everything in this factory from bicycle screws to satellite components."
+        },
+        {
+          "jp": "クラシックからJ-popに至るまで、当店ではどんなジャンルの音楽でもご用意しております。",
+          "en": "We offer all kinds of music in this shop, from classical to J-pop."
+        }
+      ],
+      "summary": "から〜に至るまで cites two extreme ends of a group to emphasize that something applies to absolutely everything within it — 'from A all the way to Z.'",
+      "details": "自転車のねじから人工衛星の部品**に至るまで**、どれもこの工場で作っています。\n*(We make everything in this factory, from bicycle screws all the way to satellite components.)*\nクラシックからJ-pop**に至るまで**、当店ではどんなジャンルの音楽でもご用意しております。\n*(We offer every genre of music in this shop, from classical all the way to J-pop.)*\n\nThe two items cited (自転車のねじ ↔ 人工衛星の部品; クラシック ↔ J-pop) are chosen specifically because they're at opposite extremes — the whole point is that if even these two very different things are covered, everything in between must be too.",
+      "tags": [
+        "degree-extent",
+        "formal-written"
+      ]
+    }
+  ]
+}

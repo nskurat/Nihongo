@@ -55,7 +55,9 @@ export const useAiCacheStore = create<AiCacheState>()(
       // so a version bump with no old-shape entries just starts empty.
       // v3: N4 uids were renumbered (n4-grammar-30-1 became n4-grammar-5-1), so
       // v2 entries would attach cached text to the wrong item.
-      version: 3,
+      // v4: the level audit moved, dropped and renumbered N3/N4 grammar points, so
+      // v3 entries would do the same.
+      version: 4,
       migrate: () =>
         ({
           generatedExamples: {},
