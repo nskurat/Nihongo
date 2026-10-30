@@ -37,6 +37,7 @@ grammar-app/
     services/ai/        Provider registry, prompts, parsers, storage adapter
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
     data/{n5,n4,n3}/    grammar|vocab|kanji.json, keyed by lesson number
+    data/n2/grammar.json  N2-level points parked out of N3; validated, not shown in the UI
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
 ```

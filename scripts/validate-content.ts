@@ -2,7 +2,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
 
-type Level = 'N5' | 'N4' | 'N3';
+// N2 is data-only for now: points parked out of N3, not exposed in the UI.
+type Level = 'N5' | 'N4' | 'N3' | 'N2';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
 // Mirrors grammar-app/src/utils/levels.ts's LESSON_RANGES. Scripts run outside
@@ -12,6 +13,7 @@ const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
   N5: { min: 1, max: 25 },
   N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
+  N2: { min: 1, max: 24 },
 };
 
 interface FileTarget {
@@ -23,17 +25,20 @@ interface FileTarget {
 const LEVELS: Level[] = ['N5', 'N4', 'N3'];
 const SECTIONS: ContentSection[] = ['grammar', 'vocab', 'kanji'];
 
-const FILES: FileTarget[] = LEVELS.flatMap((level) =>
-  SECTIONS.map((section) => ({
-    path: `grammar-app/src/data/${level.toLowerCase()}/${section}.json`,
-    level,
-    section,
-  }))
-);
+const FILES: FileTarget[] = [
+  ...LEVELS.flatMap((level) =>
+    SECTIONS.map((section) => ({
+      path: `grammar-app/src/data/${level.toLowerCase()}/${section}.json`,
+      level,
+      section,
+    }))
+  ),
+  { path: 'grammar-app/src/data/n2/grammar.json', level: 'N2', section: 'grammar' },
+];
 
 const baseItemSchema = z.object({
   uid: z.string(),
-  level: z.enum(['N5', 'N4', 'N3']),
+  level: z.enum(['N5', 'N4', 'N3', 'N2']),
   section: z.enum(['grammar', 'vocab', 'kanji']),
   lesson: z.number().int(),
   id: z.union([z.string(), z.number()]).optional(),
@@ -90,7 +95,7 @@ const SCHEMAS = {
   kanji: kanjiItemSchema,
 };
 
-const UID_RE = /^(n5|n4|n3)-(grammar|vocab|kanji)-(\d+)-(\d+)$/;
+const UID_RE = /^(n5|n4|n3|n2)-(grammar|vocab|kanji)-(\d+)-(\d+)$/;
 
 const errors: string[] = [];
 const warnings: string[] = [];
