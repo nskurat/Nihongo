@@ -1043,6 +1043,32 @@
       "tags": [
         "keigo-polite"
       ]
+    },
+    {
+      "uid": "n5-grammar-6-9",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 6,
+      "title": "一緒に",
+      "meaning": "Together / Together with ~",
+      "structure": "(N と) 一緒に + V",
+      "explanation": "Says that an action is done together with someone. Combine with ませんか or ましょう to invite.",
+      "examples": [
+        {
+          "jp": "いっしょに昼ごはんを食べませんか。",
+          "en": "Shall we eat lunch together?"
+        },
+        {
+          "jp": "友達と一緒に映画を見ました。",
+          "en": "I watched a movie together with a friend."
+        }
+      ],
+      "summary": "一緒に means 'together'; with と it names the companion.",
+      "details": "**いっしょに**昼ごはんを食べませんか。 *(Shall we eat lunch together?)*\n\n友達**と一緒に**映画を見ました。 *(I watched a movie with a friend.)*\n\nAdding と before 一緒に names the person you are with. It combines naturally with the invitation patterns ませんか and ましょう.",
+      "tags": [
+        "simultaneous-action",
+        "request"
+      ]
     }
   ],
   "7": [
@@ -1369,6 +1395,58 @@
       "tags": [
         "demonstrative"
       ]
+    },
+    {
+      "uid": "n5-grammar-8-9",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "しかし",
+      "meaning": "However / But",
+      "structure": "S1。しかし、S2。",
+      "explanation": "Starts a new sentence that contrasts with the previous one. Slightly more formal than でも.",
+      "examples": [
+        {
+          "jp": "この店は安いです。しかし、おいしくありません。",
+          "en": "This shop is cheap. However, it isn't tasty."
+        },
+        {
+          "jp": "日本語は難しいです。しかし、おもしろいです。",
+          "en": "Japanese is difficult. But it is interesting."
+        }
+      ],
+      "summary": "しかし begins a sentence that contradicts or balances the previous one.",
+      "details": "この店は安いです。**しかし**、おいしくありません。 *(This shop is cheap. However, it isn't tasty.)*\n\nしかし appears at the start of a sentence; the same contrast inside one sentence uses が or けど. In speech, でも and だけど are more common.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n5-grammar-8-10",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "けど／けれども",
+      "meaning": "But / Although",
+      "structure": "S1 けど／けれども、S2",
+      "explanation": "Joins two clauses in contrast, like が. けど is casual and けれども is a little more polite.",
+      "examples": [
+        {
+          "jp": "この料理は辛いけど、おいしいです。",
+          "en": "This dish is spicy, but it's tasty."
+        },
+        {
+          "jp": "日本語は難しいけれども、楽しいです。",
+          "en": "Japanese is hard, but fun."
+        }
+      ],
+      "summary": "けど／けれども link two clauses in contrast, the spoken version of が.",
+      "details": "この料理は**辛いけど**、おいしいです。 *(Spicy, but tasty.)*\n\nけど is used in everyday talk; けれど and けれども are progressively more formal. They can also soften a request: すみませんけど、〜.",
+      "tags": [
+        "concession-contrast",
+        "colloquial"
+      ]
     }
   ],
   "9": [
@@ -1502,6 +1580,31 @@
       "details": "This is the question form that pairs directly with 9-4's から answer — the two are taught together for a reason: every どうして question demands a から-ending response, so they should be drilled as a matched question/answer set.",
       "tags": [
         "cause-reason"
+      ]
+    },
+    {
+      "uid": "n5-grammar-9-6",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "いつも",
+      "meaning": "Always / Usually",
+      "structure": "いつも + verb",
+      "explanation": "A frequency adverb meaning that something happens every time, at the top of the frequency scale.",
+      "examples": [
+        {
+          "jp": "私はいつも七時に起きます。",
+          "en": "I always get up at seven."
+        },
+        {
+          "jp": "田中さんはいつも元気です。",
+          "en": "Mr. Tanaka is always energetic."
+        }
+      ],
+      "summary": "いつも means 'always': the highest on the frequency scale.",
+      "details": "私は**いつも**七時に起きます。 *(I always get up at seven.)*\n\nFrequency: いつも > よく > ときどき > あまり〜ません > 全然〜ません. Place いつも before the verb or after the topic.",
+      "tags": [
+        "frequency"
       ]
     }
   ],
@@ -2263,6 +2366,32 @@
       "tags": [
         "spontaneous-perception"
       ]
+    },
+    {
+      "uid": "n5-grammar-14-9",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "Vます-form 方（かた）",
+      "meaning": "How to ~ / The way of ~ing",
+      "structure": "V ます-stem + 方",
+      "explanation": "Turns a verb into a noun meaning the way or method of doing it.",
+      "examples": [
+        {
+          "jp": "漢字の読み方を教えてください。",
+          "en": "Please teach me how to read this kanji."
+        },
+        {
+          "jp": "この機械の使い方が分かりません。",
+          "en": "I don't know how to use this machine."
+        }
+      ],
+      "summary": "ます-stem + 方 means 'how to ~' (a noun for the method).",
+      "details": "漢字の**読み方**を教えてください。 *(Please teach me how to read the kanji.)*\n\nThe pattern makes a noun, so it takes particles: 使い方が分かりません. The object is marked with の, not を (漢字の読み方).",
+      "tags": [
+        "nominalizer",
+        "manner-accordance"
+      ]
     }
   ],
   "15": [
@@ -2582,6 +2711,32 @@
       "tags": [
         "demonstrative"
       ]
+    },
+    {
+      "uid": "n5-grammar-16-8",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "そして／それから",
+      "meaning": "And / And then / After that",
+      "structure": "S1。そして、S2。／S1。それから、S2。",
+      "explanation": "そして adds another fact. それから puts events in order, 'and then'.",
+      "examples": [
+        {
+          "jp": "朝ごはんを食べました。そして、学校へ行きました。",
+          "en": "I ate breakfast. And then I went to school."
+        },
+        {
+          "jp": "宿題をします。それから、テレビを見ます。",
+          "en": "I'll do homework. After that I'll watch TV."
+        }
+      ],
+      "summary": "そして adds information; それから stresses the order of events.",
+      "details": "朝ごはんを食べました。**そして**、学校へ行きました。 *(I ate breakfast, and then went to school.)*\n\n宿題をします。**それから**、テレビを見ます。 *(I'll do homework, and after that watch TV.)*\n\nUse それから when the time sequence matters, and そして for plain addition or listing qualities.",
+      "tags": [
+        "listing-examples",
+        "time-relative"
+      ]
     }
   ],
   "17": [
@@ -2740,6 +2895,57 @@
       "details": "Direct contrast with L4's まで (5時まで働きます = 'work until 5') — までに adds に to shift the meaning from a continuous duration's endpoint to a deadline for a single completed action. This までに/まで pair is worth quizzing directly since the forms are nearly identical.",
       "tags": [
         "time-relative"
+      ]
+    },
+    {
+      "uid": "n5-grammar-17-7",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜ちゃいけない／〜なくちゃ",
+      "meaning": "Mustn't ~ / Have to ~ (casual)",
+      "structure": "V て-form → ちゃ／じゃ + いけない / V ない-form なくちゃ",
+      "explanation": "Casual spoken contractions: てはいけない becomes ちゃいけない, and なくてはいけない becomes なくちゃ.",
+      "examples": [
+        {
+          "jp": "ここで遊んじゃいけません。",
+          "en": "You mustn't play here."
+        },
+        {
+          "jp": "もう帰らなくちゃ。",
+          "en": "I've got to go home now."
+        }
+      ],
+      "summary": "ちゃ／じゃ and なくちゃ are the relaxed, spoken forms of てはいけない and なくてはいけない.",
+      "details": "ここで**遊んじゃいけません**。 *(You mustn't play here.)*\n\nもう**帰らなくちゃ**。 *(I've got to head home.)*\n\nて-form ending in ん／い／ぐ uses じゃ (遊んじゃ), others use ちゃ (食べちゃ). Don't use these contractions in formal writing.",
+      "tags": [
+        "prohibition",
+        "colloquial"
+      ]
+    },
+    {
+      "uid": "n5-grammar-17-8",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜なくてはいけません／〜なくてはなりません",
+      "meaning": "Must ~ / Have to ~",
+      "structure": "V ない-form (drop い) + くてはいけません／くてはなりません",
+      "explanation": "Another common way to say 'must', equivalent to なければなりません.",
+      "examples": [
+        {
+          "jp": "毎日薬を飲まなくてはいけません。",
+          "en": "I have to take my medicine every day."
+        },
+        {
+          "jp": "明日までに出さなくてはなりません。",
+          "en": "It must be handed in by tomorrow."
+        }
+      ],
+      "summary": "なくてはいけません／なりません mean the same as なければなりません.",
+      "details": "毎日薬を**飲まなくてはいけません**。 *(I have to take medicine every day.)*\n\nThe forms are interchangeable in meaning: なければなりません (more formal), なくてはいけません (everyday), and なくちゃ (casual speech).",
+      "tags": [
+        "obligation-necessity"
       ]
     }
   ],
@@ -3124,6 +3330,32 @@
       "details": "This ties together several threads: だ is 20-1's plain copula; けど reuses が's connective job from 8-7/14-7 in a more colloquial register; the ている→てる contraction (dropping い) is a very common real-world speech feature. Together, 20-1 through 20-3 form one cohesive 'register' lesson worth reviewing as a unit rather than as separate grammar points.",
       "tags": [
         "colloquial"
+      ]
+    },
+    {
+      "uid": "n5-grammar-20-4",
+      "level": "N5",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜だろう",
+      "meaning": "Probably ~ (plain style)",
+      "structure": "V／い-adj／な-adj／N plain form + だろう",
+      "explanation": "The plain-style counterpart of でしょう: the speaker thinks something is probably true.",
+      "examples": [
+        {
+          "jp": "明日は雨が降るだろう。",
+          "en": "It will probably rain tomorrow."
+        },
+        {
+          "jp": "彼はもう帰っただろう。",
+          "en": "He has probably gone home already."
+        }
+      ],
+      "summary": "だろう is the plain form of でしょう, expressing probability.",
+      "details": "明日は雨が**降るだろう**。 *(It will probably rain tomorrow.)*\n\nだろう appears in plain-style writing and male casual speech; だろうか (I wonder?) and だろう? (right?) are common variants. Polite speech uses でしょう.",
+      "tags": [
+        "conjecture-inference",
+        "confirmation-seeking"
       ]
     }
   ],

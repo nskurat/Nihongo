@@ -9,9 +9,15 @@ Compared our grammar points (N5 143, N4 119, N3 85) against jlptsensei.com's lev
 |---|---|---|
 | 1 | Restructure: move 14 N3 points to N4, drop 17 duplicates, park 20 N2/N1 points in `data/n2/grammar.json` (script: `scripts/restructure-grammar-levels.ts`) | done |
 | 2 | Author the missing N3 points: 105 new points (`scripts/add-grammar-items.ts`), N3 is now 139 points over all 24 lessons | done |
-| 3 | Author the missing N4 / N5 points | pending |
+| 3 | Author the missing N4 / N5 points: 25 N4 + 9 N5, plus 16 remaining N3 gaps | done |
 
-Borderline items (section 1, N4 and N5 lists) were deliberately left where they are.
+Final counts: N5 152, N4 158, N3 155 (+20 parked as N2 in `data/n2/grammar.json`).
+
+Deliberately left alone: the borderline N4/N5 boundary items (section 1), and a few reference
+entries that are already covered under different notation in our decks (e.g. てしまう, てくる,
+ございます, お〜になる) or that are plain vocabulary (さて, たって, 数量＋は, which N4 17-3 already covers).
+The new points' Japanese was authored against the schema and my own reading of each pattern; a
+native-level review of a sample is still worthwhile.
 
 **Caveat.** jlpt.jp publishes no grammar list (only a per-level competence description), so
 every level boundary here is community consensus. jlptsensei is one source and it differs from
