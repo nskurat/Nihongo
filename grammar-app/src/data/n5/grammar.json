@@ -39,6 +39,14 @@
         {
           "jp": "スミスさんは学生じゃありません。",
           "en": "Mr. Smith is not a student."
+        },
+        {
+          "jp": "たなかさんは先生じゃありません。",
+          "en": "Mr. Tanaka is not a teacher."
+        },
+        {
+          "jp": "わたしは会社員じゃありません。",
+          "en": "I am not a company employee."
         }
       ],
       "summary": "Negates a です statement; casual じゃ ありません vs formal では ありません.",
@@ -91,6 +99,10 @@
         {
           "jp": "スミスさんは会社員です。たなかさんも会社員です。",
           "en": "Mr. Smith is a company employee. Mr. Tanaka is also a company employee."
+        },
+        {
+          "jp": "わたしは学生です。友達も学生です。",
+          "en": "I am a student. My friend is also a student."
         }
       ],
       "summary": "も stands in for は to add \"also\" onto a second topic that shares the same predicate as the first.",
@@ -114,6 +126,14 @@
         {
           "jp": "スミスさんはさくら大学の学生です。",
           "en": "Mr. Smith is a student at Sakura University."
+        },
+        {
+          "jp": "たなかさんはさくら会社の社員です。",
+          "en": "Mr. Tanaka is an employee of Sakura Company."
+        },
+        {
+          "jp": "母は大学の先生です。",
+          "en": "My mother is a university teacher."
         }
       ],
       "summary": "の glues two nouns together, N1 describing/modifying N2 — here specifically \"N2 belonging to organization N1.\"",
@@ -140,6 +160,10 @@
         {
           "jp": "たなか：スミスさんは学生ですか。スミス：いいえ、会社員です。",
           "en": "Tanaka: Are you a student, Mr. Smith? Smith: No, I'm a company employee."
+        },
+        {
+          "jp": "あの方はたなかさんです。",
+          "en": "That person is Ms. Tanaka."
         }
       ],
       "summary": "さん politely names the listener or a third party; never attach it to your own name, and prefer name+さん over あなた when you know who you're addressing.",
@@ -245,6 +269,10 @@
         {
           "jp": "これは「9」ですか、「7」ですか。…「9」です。",
           "en": "Is this a \"9\" or a \"7\"? — It's a \"9\"."
+        },
+        {
+          "jp": "あの方は先生ですか、学生ですか。…学生です。",
+          "en": "Is that person a teacher or a student? — A student."
         }
       ],
       "summary": "An alternative question offering two choices, each marked with か; answered by naming the correct choice, never with はい/いいえ.",
@@ -304,6 +332,14 @@
         {
           "jp": "この傘はあなたのですか。…いいえ、違います。スミスさんのです。そうですか。",
           "en": "Is this umbrella yours? — No, it's not mine. It's Mr. Smith's. — I see."
+        },
+        {
+          "jp": "あの方は先生です。…そうですか。",
+          "en": "That person is a teacher. — I see."
+        },
+        {
+          "jp": "これは母のかばんです。…そうですか。",
+          "en": "This is my mother's bag. — Oh, is that so?"
         }
       ],
       "summary": "A short acknowledgment phrase that registers new information the speaker just learned — not a question in practice, despite the か.",
@@ -415,8 +451,16 @@
       "explanation": "When N1 is the name of a country and N2 is a product, it means N2 is made in that country; when N1 is a company, it means N2 is made by that company. どこ is used to ask where or by whom N2 is made.",
       "examples": [
         {
-          "jp": "これはどこのコンピューターですか。…日本のコンピューターです。／ABC社のコンピューターです。",
-          "en": "Where is this computer made? / Who is the maker of this computer? — It's made in Japan. / It's made by ABC."
+          "jp": "これはどこのコンピューターですか。…日本のコンピューターです。",
+          "en": "Where is this computer made? — It's made in Japan."
+        },
+        {
+          "jp": "これはどこのコンピューターですか。…ABC社のコンピューターです。",
+          "en": "Who is the maker of this computer? — It's made by ABC."
+        },
+        {
+          "jp": "これはどこのくつですか。…イタリアのくつです。",
+          "en": "Where are these shoes from? — They're Italian shoes."
         }
       ],
       "summary": "の keeps extending: here N1 names the country or company that made product N2 — the fourth use of の so far.",
@@ -465,6 +509,14 @@
         {
           "jp": "［お］国はどちらですか。",
           "en": "Where are you from?"
+        },
+        {
+          "jp": "［お］名前は何ですか。",
+          "en": "What is your name?"
+        },
+        {
+          "jp": "［お］仕事は何ですか。",
+          "en": "What is your job?"
         }
       ],
       "summary": "お is a respect-marking prefix attached to nouns belonging to the listener or a third party — never to the speaker's own things.",
@@ -493,6 +545,10 @@
         {
           "jp": "ニューヨークは今何時ですか。…午前4時です。",
           "en": "In New York what time is it now? — It's 4 a.m."
+        },
+        {
+          "jp": "今3時5分です。",
+          "en": "It's now three five."
         }
       ],
       "summary": "時/分 are the o'clock/minute counters used to state and ask the time; a place name can be topicalized with は to ask the time elsewhere.",
@@ -514,6 +570,14 @@
         {
           "jp": "わたしは毎日勉強します。",
           "en": "I study every day."
+        },
+        {
+          "jp": "たなかさんは毎晩テレビを見ます。",
+          "en": "Mr. Tanaka watches TV every evening."
+        },
+        {
+          "jp": "母は毎朝新聞を読みます。",
+          "en": "My mother reads the newspaper every morning."
         }
       ],
       "summary": "ます is the polite predicate ending for verbs, parallel to です for nouns — the first true verb sentence.",
@@ -647,6 +711,14 @@
         {
           "jp": "銀行の休みは土曜日と日曜日です。",
           "en": "The bank is closed on Saturdays and Sundays."
+        },
+        {
+          "jp": "かばんの中に本とノートがあります。",
+          "en": "There are a book and a notebook in the bag."
+        },
+        {
+          "jp": "わたしは母と父の写真を見ます。",
+          "en": "I look at a photo of my mother and father."
         }
       ],
       "summary": "と is the plain noun-and-noun connector — reserved for nouns, not clauses or verbs.",
@@ -673,6 +745,10 @@
         {
           "jp": "たなかさんの電話番号は871の6813です。…871の6813ですね。",
           "en": "Mr. Tanaka's telephone number is 871-6813. — 871-6813, right?"
+        },
+        {
+          "jp": "今日はいい天気ですね。",
+          "en": "It's nice weather today, isn't it?"
         }
       ],
       "summary": "Sentence-final ね softens a statement into a shared feeling, or invites the listener to confirm what was just said.",
@@ -816,6 +892,10 @@
         {
           "jp": "いつ広島へ行きますか。…来週行きます。",
           "en": "When will you go to Hiroshima? — I'll go there next week."
+        },
+        {
+          "jp": "たなかさんの誕生日はいつですか。…5月3日です。",
+          "en": "When is Ms. Tanaka's birthday? — It's May 3rd."
         }
       ],
       "summary": "いつ asks \"when\" in general (as opposed to a specific なん+counter question) and is one of the rare time words that never takes に.",
@@ -843,6 +923,10 @@
         {
           "jp": "無理なダイエットは体によくないですよ。",
           "en": "Excessive dieting is bad for your health."
+        },
+        {
+          "jp": "あしたは休みですよ。",
+          "en": "Tomorrow is a day off, you know."
         }
       ],
       "summary": "Sentence-final よ asserts new information or the speaker's own judgment — the mirror image of ね (see Sね), which instead seeks the listener's agreement.",
@@ -924,6 +1008,10 @@
         {
           "jp": "月曜日は 何を しますか。…京都へ 行きます。",
           "en": "As for Monday, what will you do? …I'll go to Kyoto."
+        },
+        {
+          "jp": "日曜日は 何を しますか。…友達に 会います。",
+          "en": "What will you do on Sunday? …I'll meet a friend."
         }
       ],
       "summary": "何を しますか asks what someone does; は can topicalize a time expression in front of it.",
@@ -970,6 +1058,14 @@
         {
           "jp": "駅で 新聞を 買います。",
           "en": "I buy the newspaper at the station."
+        },
+        {
+          "jp": "図書館で 本を 読みます。",
+          "en": "I read books at the library."
+        },
+        {
+          "jp": "友達は 学校で 日本語を 勉強します。",
+          "en": "My friend studies Japanese at school."
         }
       ],
       "summary": "で after a place noun marks where an action takes place.",
@@ -992,6 +1088,14 @@
         {
           "jp": "いっしょに 京都へ 行きませんか。…ええ、いいですね。",
           "en": "Won't you go to Kyoto together with me? …That's a nice idea."
+        },
+        {
+          "jp": "あした いっしょに 映画を 見ませんか。…ええ、見ます。",
+          "en": "Won't you watch a movie with me tomorrow? …Yes, I'd like to."
+        },
+        {
+          "jp": "いっしょに コーヒーを 飲みませんか。",
+          "en": "Won't you have coffee with me?"
         }
       ],
       "summary": "V ませんか politely invites someone to join in doing something.",
@@ -1018,6 +1122,10 @@
         {
           "jp": "いっしょに 昼ごはんを 食べませんか。…ええ、食べましょう。",
           "en": "Won't you have lunch with me? …Yes, let's eat."
+        },
+        {
+          "jp": "あしたの朝、いっしょに 勉強しましょう。",
+          "en": "Let's study together tomorrow morning."
         }
       ],
       "summary": "Vましょう proposes an action together, or accepts an invitation made with ませんか.",
@@ -1118,6 +1226,10 @@
         {
           "jp": "「ありがとう」は 英語で 何ですか。…「Thank you」です。",
           "en": "What's 'ありがとう' in English? …It's 'Thank you.'"
+        },
+        {
+          "jp": "「おはよう」は 英語で 何ですか。…「Good morning」です。",
+          "en": "What's 'おはよう' in English? …It's 'Good morning.'"
         }
       ],
       "summary": "Combines で (means) — 語で 'in [language]' — with 何ですか to ask for a translation.",
@@ -1201,6 +1313,10 @@
         {
           "jp": "もう 荷物を 送りましたか。…いいえ、まだです。",
           "en": "Have you sent the parcel yet? …No, not yet."
+        },
+        {
+          "jp": "もう 昼ごはんを 食べましたか。…はい、もう 食べました。",
+          "en": "Have you eaten lunch yet? …Yes, I've already eaten."
         }
       ],
       "summary": "もう + Vました asks/states whether something has already been done; answer negatively with まだです, never Vませんでした.",
@@ -1332,6 +1448,10 @@
         {
           "jp": "日本の 生活は どうですか。…楽しいです。",
           "en": "How is the life in Japan? …It's enjoyable."
+        },
+        {
+          "jp": "日本語の 勉強は どうですか。…おもしろいです。",
+          "en": "How is your Japanese study? …It's interesting."
         }
       ],
       "summary": "どうですか asks for the listener's general impression/opinion of something they've experienced.",
@@ -1353,6 +1473,10 @@
         {
           "jp": "奈良は どんな 町ですか。…古い 町です。",
           "en": "What kind of town is Nara? …It's an old town."
+        },
+        {
+          "jp": "たなかさんは どんな 人ですか。…やさしい 人です。",
+          "en": "What kind of person is Ms. Tanaka? …She's a kind person."
         }
       ],
       "summary": "どんな N asks for a descriptive category answer (an adjective+noun phrase), unlike どうですか's impression answer.",
@@ -1375,6 +1499,10 @@
         {
           "jp": "日本の 食べ物は おいしいですが、高いです。",
           "en": "Japanese food is good, but expensive."
+        },
+        {
+          "jp": "日本語は 難しいですが、おもしろいです。",
+          "en": "Japanese is difficult, but interesting."
         }
       ],
       "summary": "が links two clauses as 'S1, but S2.'",
@@ -1396,6 +1524,10 @@
         {
           "jp": "スミスさんの 傘は どれですか。…あの 青い 傘です。",
           "en": "Which is Mr. Smith's umbrella? …That blue one is."
+        },
+        {
+          "jp": "たなかさんの かばんは どれですか。…その 黒い かばんです。",
+          "en": "Which is Ms. Tanaka's bag? …That black bag is."
         }
       ],
       "summary": "どれ asks 'which one' among three-or-more concrete choices.",
@@ -1421,6 +1553,10 @@
         {
           "jp": "日本語は難しいです。しかし、おもしろいです。",
           "en": "Japanese is difficult. But it is interesting."
+        },
+        {
+          "jp": "あの部屋は広いです。しかし、暗いです。",
+          "en": "That room is big. However, it is dark."
         }
       ],
       "summary": "しかし begins a sentence that contradicts or balances the previous one.",
@@ -1501,6 +1637,10 @@
         {
           "jp": "どんな スポーツが 好きですか。…サッカーが 好きです。",
           "en": "What sports do you like? …I like football."
+        },
+        {
+          "jp": "どんな 音楽を 聞きますか。…ジャズを 聞きます。",
+          "en": "What kind of music do you listen to? …I listen to jazz."
         }
       ],
       "summary": "Here どんな asks the listener to pick/name an item from a category, unlike the どんな that asks for a description of one specific thing.",
@@ -1556,6 +1696,10 @@
         {
           "jp": "毎朝 新聞を 読みますか。…いいえ、読みません。時間が ありませんから。",
           "en": "Do you read a newspaper every morning? …No, I don't. Because I have no time."
+        },
+        {
+          "jp": "あしたは 休みですから、友達と 映画を 見ます。",
+          "en": "Tomorrow is a day off, so I'll watch a movie with a friend."
         }
       ],
       "summary": "Vから marks a clause as the reason for the following (or preceding) statement — 'because S1, S2.'",
@@ -1582,6 +1726,10 @@
         {
           "jp": "きょうは 早く 帰ります。…どうしてですか。子どもの 誕生日ですから。",
           "en": "I'll go home early today. …Why? …Because today's my child's birthday."
+        },
+        {
+          "jp": "どうして 学校を 休みましたか。…おなかが 痛かったですから。",
+          "en": "Why were you absent from school? …Because I had a stomachache."
         }
       ],
       "summary": "どうして asks 'why'; the reply must end in から (see S1から、S2), matching the reason-clause pattern.",
@@ -1769,6 +1917,14 @@
         {
           "jp": "すみません。さくらストアは どこですか。…さくらストアですか。あの ビルの 中です。",
           "en": "Excuse me, but where is Sakura Store? …Sakura Store? It's in that building."
+        },
+        {
+          "jp": "あした たなかさんと 会います。…たなかさんですか。",
+          "en": "I'm meeting Ms. Tanaka tomorrow. …Ms. Tanaka?"
+        },
+        {
+          "jp": "この 本は 500円です。…500円ですか。",
+          "en": "This book is 500 yen. …500 yen?"
         }
       ],
       "summary": "Repeating a word/phrase with ですか confirms/echoes back what the listener just said before answering.",
@@ -1791,6 +1947,14 @@
         {
           "jp": "チリソースは ありませんか。",
           "en": "Don't you have any chili sauce? / Do you happen to have chili sauce?"
+        },
+        {
+          "jp": "すみません。ボールペンは ありませんか。…はい、ありますよ。",
+          "en": "Excuse me, don't you have a ballpoint pen? …Yes, we do."
+        },
+        {
+          "jp": "あの 店に 地図は ありませんか。…すみません、ありません。",
+          "en": "Doesn't that shop have a map? …I'm sorry, we don't."
         }
       ],
       "summary": "A negative question (ありませんか) is a politer, more indirect way to ask 'do you have...?' than the plain ありますか.",
@@ -1851,6 +2015,14 @@
         {
           "jp": "1か月に 2回 映画を 見ます。",
           "en": "I go to see movies twice a month."
+        },
+        {
+          "jp": "1週間に 3回 プールで 泳ぎます。",
+          "en": "I swim in the pool three times a week."
+        },
+        {
+          "jp": "母は 1年に 1回 国へ 帰ります。",
+          "en": "My mother goes back to her home country once a year."
         }
       ],
       "summary": "[period]に[count]回 V expresses frequency: 'X times per [period].'",
@@ -1949,6 +2121,14 @@
         {
           "jp": "この 車は あの 車より 大きいです。",
           "en": "This car is bigger than that car."
+        },
+        {
+          "jp": "今日は きのうより 暑いです。",
+          "en": "Today is hotter than yesterday."
+        },
+        {
+          "jp": "たなかさんは わたしより 若いです。",
+          "en": "Ms. Tanaka is younger than I am."
         }
       ],
       "summary": "N1は N2より adjective です = 'N1 is more [adjective] than N2.'",
@@ -1972,8 +2152,12 @@
           "en": "Which is more interesting, soccer or baseball? …Soccer is."
         },
         {
-          "jp": "北海道と 大阪と どちらが 涼しいですか。",
-          "en": "Which is cooler, Hokkaido or Osaka?"
+          "jp": "北海道と 大阪と どちらが 涼しいですか。…北海道の ほうが 涼しいです。",
+          "en": "Which is cooler, Hokkaido or Osaka? …Hokkaido is cooler."
+        },
+        {
+          "jp": "電車と バスと どちらが 便利ですか。…電車の ほうが 便利です。",
+          "en": "Which is more convenient, the train or the bus? …The train is."
         }
       ],
       "summary": "どちら always means 'which of these two' — answered with [N]のほうが adjective です ('N is more...').",
@@ -2027,6 +2211,10 @@
         {
           "jp": "今 何が いちばん 欲しいですか。…車が 欲しいです。",
           "en": "What do you want most now? …I want a car most."
+        },
+        {
+          "jp": "新しい かばんが 欲しいです。",
+          "en": "I want a new bag."
         }
       ],
       "summary": "Nが欲しいです expresses 'I want N' — が marks the desired object, and ほしい conjugates as an い-adjective; restricted to first-person (or question) use.",
@@ -2135,6 +2323,10 @@
         {
           "jp": "のどが かわきましたから、何か[を] 飲みたいです。",
           "en": "I'm thirsty. I want to drink something."
+        },
+        {
+          "jp": "きょうは どこか[へ] 行きませんか。…いいですね。",
+          "en": "Shall we go somewhere today? …Sounds good."
         }
       ],
       "summary": "どこか ('somewhere/anywhere') and 何か ('something/anything') are indefinite pronouns that often drop the following へ/を.",
@@ -2157,6 +2349,14 @@
         {
           "jp": "ご注文は？",
           "en": "May I have your order?"
+        },
+        {
+          "jp": "ご家族は 何人ですか。",
+          "en": "How many people are in your family?"
+        },
+        {
+          "jp": "ご住所を 書いて ください。",
+          "en": "Please write your address."
         }
       ],
       "summary": "ご is a second honorific prefix (alongside お), attached to certain (often Sino-Japanese) nouns.",
@@ -2294,6 +2494,10 @@
         {
           "jp": "今 雨が 降って いますか。…はい、降って います。",
           "en": "Is it raining now? …Yes, it is."
+        },
+        {
+          "jp": "母は 今 台所で ごはんを 作って います。",
+          "en": "My mother is cooking in the kitchen now."
         }
       ],
       "summary": "Vて-form + います describes an action currently in progress ('is V-ing').",
@@ -2319,6 +2523,10 @@
         {
           "jp": "荷物を 持ちましょうか。…いいえ、けっこうです。",
           "en": "Shall I carry your parcel? …No, thank you."
+        },
+        {
+          "jp": "暑いですね。窓を 開けましょうか。…ええ、お願いします。",
+          "en": "It's hot, isn't it? Shall I open the window? …Yes, please."
         }
       ],
       "summary": "Vます-form + ましょうか offers to do something for the listener ('shall I...?').",
@@ -2367,6 +2575,14 @@
         {
           "jp": "雨が 降って います。",
           "en": "It is raining."
+        },
+        {
+          "jp": "風が 吹いて います。",
+          "en": "The wind is blowing."
+        },
+        {
+          "jp": "あ、雪が 降って います。",
+          "en": "Oh, it's snowing."
         }
       ],
       "summary": "が marks the subject of natural-phenomenon sentences (雨が降ります, weather verbs).",
@@ -2422,8 +2638,8 @@
           "en": "May I have this catalogue? …Yes. Here you are."
         },
         {
-          "jp": "…すみません。ちょっと。",
-          "en": "…Sorry. I'm afraid not."
+          "jp": "ここで 写真を 撮っても いいですか。…すみません。ちょっと。",
+          "en": "May I take pictures here? …Sorry. I'm afraid not."
         }
       ],
       "summary": "Vて-form も いいです grants permission ('you may...'); Vて-form も いいですか asks for it; a refusal is often softened to すみません、ちょっと… rather than a flat no.",
@@ -2449,6 +2665,10 @@
         {
           "jp": "先生、ここで 遊んでも いいですか。…いいえ、いけません。",
           "en": "May we play here, Ma'am? …No, you must not."
+        },
+        {
+          "jp": "ここに 車を 止めては いけません。",
+          "en": "You must not park a car here."
         }
       ],
       "summary": "Vて-form + は + いけません forbids an action ('must not'); a strong refusal can shorten to just いいえ、いけません; not used from a subordinate to a superior.",
@@ -2537,8 +2757,16 @@
       "explanation": "The negative form of しって います is しりません.",
       "examples": [
         {
-          "jp": "市役所の 電話番号を 知って いますか。…はい、知って います。…いいえ、知りません。",
-          "en": "Do you know the telephone number of the city hall? …Yes, I do. …No, I don't."
+          "jp": "市役所の 電話番号を 知って いますか。…はい、知って います。",
+          "en": "Do you know the telephone number of the city hall? …Yes, I do."
+        },
+        {
+          "jp": "市役所の 電話番号を 知って いますか。…いいえ、知りません。",
+          "en": "Do you know the telephone number of the city hall? …No, I don't."
+        },
+        {
+          "jp": "あの 人を 知って いますか。…いいえ、知りません。",
+          "en": "Do you know that person? …No, I don't."
         }
       ],
       "summary": "知っています ('know') has an irregular negative — 知りません, never 知っていません.",
@@ -2691,6 +2919,14 @@
         {
           "jp": "大学まで どうやって 行きますか。…京都駅から 16番の バスに 乗って、大学前で 降ります。",
           "en": "How do you go to your university? …I take a No.16 bus from Kyoto Station and get off at Daigaku-mae."
+        },
+        {
+          "jp": "駅まで どうやって 行きますか。…あの 角を 右へ 曲がって、まっすぐ 行きます。",
+          "en": "How do I get to the station? …Turn right at that corner and go straight."
+        },
+        {
+          "jp": "学校まで どうやって 来ますか。…うちから 電車に 乗って、来ます。",
+          "en": "How do you come to school? …I take a train from home and come."
         }
       ],
       "summary": "どうやって asks 'by what method/how,' typically answered with a chain of て-form verbs describing the steps.",
@@ -2712,6 +2948,14 @@
         {
           "jp": "スミスさんは どの 人ですか。…あの 背が 高くて、髪が 黒い 人です。",
           "en": "Which one is Mr. Smith? …That tall man with black hair is."
+        },
+        {
+          "jp": "田中さんの かばんは どの かばんですか。…あの 赤い かばんです。",
+          "en": "Which bag is Ms. Tanaka's? …That red bag."
+        },
+        {
+          "jp": "どの 本が あなたのですか。…この 本です。",
+          "en": "Which book is yours? …This book."
         }
       ],
       "summary": "どの N completes the この/その/あの/どの demonstrative-modifier series, asking the listener to pick out one specific item from several shown.",
@@ -2737,6 +2981,10 @@
         {
           "jp": "宿題をします。それから、テレビを見ます。",
           "en": "I'll do homework. After that I'll watch TV."
+        },
+        {
+          "jp": "きのう 友達と 買い物を しました。それから、映画を 見ました。",
+          "en": "Yesterday I went shopping with a friend. After that we watched a movie."
         }
       ],
       "summary": "そして adds information; それから stresses the order of events.",
@@ -2817,6 +3065,14 @@
         {
           "jp": "あした 来なくても いいです。",
           "en": "You don't have to come tomorrow."
+        },
+        {
+          "jp": "日曜日は 早く 起きなくても いいです。",
+          "en": "I don't have to get up early on Sunday."
+        },
+        {
+          "jp": "この 本は 買わなくても いいです。",
+          "en": "You don't have to buy this book."
         }
       ],
       "summary": "Vない-form + なくても + いいです = 'you don't have to' — the true negation/absence-of-obligation counterpart to なければなりません.",
@@ -3147,6 +3403,14 @@
         {
           "jp": "寒く なりましたね。…そうですね。",
           "en": "It's got cold, hasn't it? …Yes, it has."
+        },
+        {
+          "jp": "きょうは いい 天気ですね。…そうですね。",
+          "en": "It's nice weather today, isn't it? …Yes, it is."
+        },
+        {
+          "jp": "この ラーメンは おいしいですね。…そうですね。",
+          "en": "This ramen is delicious, isn't it? …Yes, it is."
         }
       ],
       "summary": "そうですね agrees/sympathizes with something the listener already shares/knows; そうですか(falling tone) instead marks newly-learned information — a subtle but important pragmatic distinction.",
@@ -3169,16 +3433,28 @@
       "explanation": "Japanese language has two styles of speech: polite style and plain style. The predicates which are used in polite style sentences and accompanied by either です or ます are called the polite form, while the predicates used in plain style sentences are called the plain form.",
       "examples": [
         {
-          "jp": "あした 東京へ 行きます。／あした 東京へ 行く。",
-          "en": "I will go to Tokyo tomorrow. (polite / plain)"
+          "jp": "あした 東京へ 行きます。",
+          "en": "I will go to Tokyo tomorrow. (polite)"
         },
         {
-          "jp": "相撲が 好きです。／相撲が 好きだ。",
-          "en": "I like sumo. (polite / plain)"
+          "jp": "あした 東京へ 行く。",
+          "en": "I will go to Tokyo tomorrow. (plain)"
         },
         {
-          "jp": "ドイツへ 行った ことが ありません。／ドイツへ 行った ことが ない。",
-          "en": "I have never been to Germany. (polite / plain)"
+          "jp": "相撲が 好きです。",
+          "en": "I like sumo. (polite)"
+        },
+        {
+          "jp": "相撲が 好きだ。",
+          "en": "I like sumo. (plain)"
+        },
+        {
+          "jp": "ドイツへ 行った ことが ありません。",
+          "en": "I have never been to Germany. (polite)"
+        },
+        {
+          "jp": "ドイツへ 行った ことが ない。",
+          "en": "I have never been to Germany. (plain)"
         }
       ],
       "summary": "Every sentence has a polite form (です／ます) and a plain form (だ／dictionary-ない-た-forms) — the plain forms are exactly the dictionary, ない- and た-forms already learned, used as sentence-final predicates instead of building blocks.",
@@ -3201,6 +3477,14 @@
         {
           "jp": "（会話）友達に：元気？　…うん、元気。",
           "en": "(casual, to a close friend) How are you? …Fine."
+        },
+        {
+          "jp": "（会話）先生に：先生、あした 来ますか。…はい、来ますよ。",
+          "en": "(polite, to a teacher) Will you come tomorrow, Sir? …Yes, I will."
+        },
+        {
+          "jp": "（会話）初めて 会う 人に：はじめまして。たなかです。",
+          "en": "(polite, to someone met for the first time) How do you do? I'm Tanaka."
         }
       ],
       "summary": "Choose polite style by default (safe with strangers/superiors/not-close acquaintances); reserve plain style for close friends/family, and expect it in most written Japanese except letters.",
@@ -3310,6 +3594,14 @@
         {
           "jp": "東京で 日本と ブラジルの サッカーの 試合が あります。",
           "en": "A football game between Japan and Brazil will be held in Tokyo."
+        },
+        {
+          "jp": "駅の 前で お祭りが あります。",
+          "en": "There will be a festival in front of the station."
+        },
+        {
+          "jp": "あした 学校で パーティーが あります。",
+          "en": "There will be a party at school tomorrow."
         }
       ],
       "summary": "N1(place)で N2(event)が あります states that an event is held/takes place at a location — a special event-related meaning of あります distinct from its plain existence meaning.",
@@ -3331,6 +3623,14 @@
         {
           "jp": "会議で 何か 意見を 言いましたか。",
           "en": "Did you give your opinion at the meeting?"
+        },
+        {
+          "jp": "パーティーで たなかさんと 話しました。",
+          "en": "I talked with Ms. Tanaka at the party."
+        },
+        {
+          "jp": "結婚式で 写真を 撮りました。",
+          "en": "I took pictures at the wedding."
         }
       ],
       "summary": "で after an occasion-noun (会議で, パーティーで) marks the setting/occasion in which an action occurs.",
@@ -3352,6 +3652,14 @@
         {
           "jp": "ちょっと ビールでも 飲みませんか。",
           "en": "Shall we drink beer or something?"
+        },
+        {
+          "jp": "お茶でも 飲みませんか。",
+          "en": "Won't you have some tea or something?"
+        },
+        {
+          "jp": "日曜日に 映画でも 見ませんか。",
+          "en": "Shall we see a movie or something on Sunday?"
         }
       ],
       "summary": "Nでも V softens a suggestion by presenting N as just one example from a category ('beer or something'), rather than a strict demand.",
@@ -3646,6 +3954,14 @@
         {
           "jp": "すてきな ネクタイですね。…ええ、たなかさんが くれました。",
           "en": "That's a nice tie, isn't it? …Yes. Ms. Tanaka gave it to me."
+        },
+        {
+          "jp": "おいしい ケーキですね。…ええ、母が 作りました。",
+          "en": "This is a delicious cake, isn't it? …Yes, my mother made it."
+        },
+        {
+          "jp": "きれいな 花ですね。…ええ、友達が くれました。",
+          "en": "Pretty flowers, aren't they? …Yes, a friend gave them to me."
         }
       ],
       "summary": "When a response supplies new information about who did something (in reply to an observation/topic already raised), that subject takes が, not は.",
@@ -3667,6 +3983,14 @@
         {
           "jp": "だれが 手伝いに 行きますか。…スミスさんが 行きます。",
           "en": "Who will go to help? …Ms. Smith will."
+        },
+        {
+          "jp": "だれが 窓を 開けましたか。…先生が 開けました。",
+          "en": "Who opened the window? …The teacher did."
+        },
+        {
+          "jp": "何が 一番 好きですか。…りんごが 好きです。",
+          "en": "What do you like most? …I like apples."
         }
       ],
       "summary": "An interrogative subject (だれが, 何が) always takes が, whether the sentence is あります/います, an adjective sentence, or, as confirmed here, an ordinary verb sentence.",
