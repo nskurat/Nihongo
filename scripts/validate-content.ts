@@ -10,7 +10,7 @@ type ContentSection = 'grammar' | 'vocab' | 'kanji';
 // rather than an import - keep it in sync if the ranges ever change.
 const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
   N5: { min: 1, max: 25 },
-  N4: { min: 26, max: 50 },
+  N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
 };
 

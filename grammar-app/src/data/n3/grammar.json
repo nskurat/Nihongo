@@ -126,7 +126,7 @@
         }
       ],
       "summary": "Expresses wanting someone else to do (or not do) something — てほしい for a positive wish, ないでほしい for a negative one, with the person marked by に.",
-      "details": "私はあなたに英語を教え**てほしい**です。 *(I want you to teach me English.)*\nここでタバコを吸わない**でほしい**んですが。 *(I would like you not to smoke here.)*\n\nThis pattern describes the speaker's own wish about someone *else's* action (marked with に) — different from たい, which expresses the speaker's wish about their *own* action. Softer/more indirect alternatives exist for polite requests (ていただけませんか, Lesson 26 in N4), but てほしい is common in everyday conversation to state a hope or preference about what another person does.",
+      "details": "私はあなたに英語を教え**てほしい**です。 *(I want you to teach me English.)*\nここでタバコを吸わない**でほしい**んですが。 *(I would like you not to smoke here.)*\n\nThis pattern describes the speaker's own wish about someone *else's* action (marked with に) — different from たい, which expresses the speaker's wish about their *own* action. Softer/more indirect alternatives exist for polite requests (ていただけませんか, Lesson 1 in N4), but てほしい is common in everyday conversation to state a hope or preference about what another person does.",
       "tags": [
         "request"
       ]
@@ -177,7 +177,7 @@
         }
       ],
       "summary": "ことになる reports a decision made by someone else or by circumstances beyond the speaker's control; ことになっている describes an established rule or custom.",
-      "details": "### ことになる vs ことになっている\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **ことになる** (decided externally) | \"It has been decided/arranged that...\" | 来月、日本へ出張することに**なりました**。 |\n| **ことになっている** (a standing rule/custom) | \"It is a rule/custom that...\" | この部屋には入ってはいけないことに**なっています**。 |\n\nThis is the mirror image of Lesson 2-2's ことにする／している, which describes the speaker's *own* voluntary decision. The と/に distinction (する = active decision, なる = passive/external result) is a recurring theme in Japanese grammar — compare with くする vs くなる (N4 Lesson 44).",
+      "details": "### ことになる vs ことになっている\n\n| Form | Meaning | Example |\n| :--- | :--- | :--- |\n| **ことになる** (decided externally) | \"It has been decided/arranged that...\" | 来月、日本へ出張することに**なりました**。 |\n| **ことになっている** (a standing rule/custom) | \"It is a rule/custom that...\" | この部屋には入ってはいけないことに**なっています**。 |\n\nThis is the mirror image of Lesson 2-2's ことにする／している, which describes the speaker's *own* voluntary decision. The と/に distinction (する = active decision, なる = passive/external result) is a recurring theme in Japanese grammar — compare with くする vs くなる (N4 Lesson 19).",
       "tags": [
         "decision-outcome"
       ]
@@ -281,7 +281,7 @@
         }
       ],
       "summary": "らしい has two distinct roles: reporting a conjecture based on hearsay or outside information, and attaching to a noun to mean 'typical of' that noun.",
-      "details": "### The Two Meanings of らしい\n\n| Meaning | Example |\n| :--- | :--- |\n| **Conjecture/hearsay** — attaches to a plain-form clause | うわさによると、二人は結婚する**らしい**。 *(Rumor has it those two are getting married.)* |\n| **\"Typical of\" / characteristic** — attaches directly to a noun | 今日は春**らしい**天気ですね。 *(Today's weather is properly spring-like.)* |\n\nSee Lesson 11-4 for the second (typical-of) meaning covered again on its own, and Lesson 43/47 in the N4 grammar set for how this compares with そうです (appearance-based) and ようです (evidence-based inference) — らしい leans specifically on hearsay/outside information rather than the speaker's own direct observation.",
+      "details": "### The Two Meanings of らしい\n\n| Meaning | Example |\n| :--- | :--- |\n| **Conjecture/hearsay** — attaches to a plain-form clause | うわさによると、二人は結婚する**らしい**。 *(Rumor has it those two are getting married.)* |\n| **\"Typical of\" / characteristic** — attaches directly to a noun | 今日は春**らしい**天気ですね。 *(Today's weather is properly spring-like.)* |\n\nSee Lesson 11-4 for the second (typical-of) meaning covered again on its own, and Lesson 18/22 in the N4 grammar set for how this compares with そうです (appearance-based) and ようです (evidence-based inference) — らしい leans specifically on hearsay/outside information rather than the speaker's own direct observation.",
       "tags": [
         "hearsay",
         "conjecture-inference"
@@ -359,7 +359,7 @@
         }
       ],
       "summary": "ばいい／たらいい／といい all mean roughly 'it would be good if...' — used in questions to ask for advice, and in statements to give advice or express a hope.",
-      "details": "どこでカメラを買っ**たらいいですか**。 *(Where should I buy a camera? — asking for advice.)*\n明日、晴れる**といいですね**。 *(I hope it'll be sunny tomorrow. — a wish.)*\n\nAll three conditional forms (ば／たら／と) can combine with いい here, largely interchangeably in casual speech — see N4 Lessons 26 and 35 for the fuller comparison of these three conditionals in other contexts. と＋いい specifically leans toward expressing a hope about something outside the speaker's control (weather, luck), while ば/たらいい more often ask for or give practical advice.",
+      "details": "どこでカメラを買っ**たらいいですか**。 *(Where should I buy a camera? — asking for advice.)*\n明日、晴れる**といいですね**。 *(I hope it'll be sunny tomorrow. — a wish.)*\n\nAll three conditional forms (ば／たら／と) can combine with いい here, largely interchangeably in casual speech — see N4 Lessons 1 and 10 for the fuller comparison of these three conditionals in other contexts. と＋いい specifically leans toward expressing a hope about something outside the speaker's control (weather, luck), while ば/たらいい more often ask for or give practical advice.",
       "tags": [
         "advice-suggestion"
       ]
@@ -409,7 +409,7 @@
         }
       ],
       "summary": "てもらう／てくれる express gratitude for something someone did — and in their potential or negative-question forms, they become natural casual or polite requests.",
-      "details": "### てもらう／てくれる as Requests\n\nちょっと手伝っ**てくれない**？ *(Could you help me a little? — casual.)*\nペンを貸し**てもらえませんか**。 *(Could I have you lend me a pen? — polite.)*\n\nThe underlying logic: てもらう/てくれる describe *receiving* an action as a favor — asking くれない？(won't you give me this favor?) or もらえませんか (could I receive this favor?) turns that description into a request. This mirrors the giving/receiving request ladder from N4 Lessons 26 and 41 (てくれませんか, てもらえませんか, ていただけませんか, てくださいませんか) — this point revisits the same system with a focus on the casual/polite question forms specifically.",
+      "details": "### てもらう／てくれる as Requests\n\nちょっと手伝っ**てくれない**？ *(Could you help me a little? — casual.)*\nペンを貸し**てもらえませんか**。 *(Could I have you lend me a pen? — polite.)*\n\nThe underlying logic: てもらう/てくれる describe *receiving* an action as a favor — asking くれない？(won't you give me this favor?) or もらえませんか (could I receive this favor?) turns that description into a request. This mirrors the giving/receiving request ladder from N4 Lessons 1 and 16 (てくれませんか, てもらえませんか, ていただけませんか, てくださいませんか) — this point revisits the same system with a focus on the casual/polite question forms specifically.",
       "tags": [
         "giving-receiving"
       ]
@@ -564,7 +564,7 @@
         }
       ],
       "summary": "(の)なら picks up a topic or situation just mentioned and responds to it directly — 'if that's the case...' — distinct from the hypothetical conditional なら attached to a full clause.",
-      "details": "A: パソコンを買いたいんですが。 B: パソコン**なら**、あの店が安いですよ。\n*(A: I want to buy a PC. B: If it's a PC you want, that store is cheap.)*\n\nThis なら is reactive — it directly references what the other person just said (パソコン) rather than setting up a fresh hypothetical from scratch. See N4 Lesson 35-4 for this same topic-picking-up use of なら — the same conversational logic applies here at N3.",
+      "details": "A: パソコンを買いたいんですが。 B: パソコン**なら**、あの店が安いですよ。\n*(A: I want to buy a PC. B: If it's a PC you want, that store is cheap.)*\n\nThis なら is reactive — it directly references what the other person just said (パソコン) rather than setting up a fresh hypothetical from scratch. See N4 Lesson 10-4 for this same topic-picking-up use of なら — the same conversational logic applies here at N3.",
       "tags": [
         "conditional"
       ]
@@ -621,7 +621,7 @@
         }
       ],
       "summary": "A highly versatile pattern: によって can mean 'depending on' (variation), 'by means of' (method), or 'caused by/done by' (the agent of a passive sentence) — context decides which sense applies.",
-      "details": "### The Three Senses of によって\n\n| Sense | Example |\n| :--- | :--- |\n| **Variation** (\"depending on\") | 国**によって**、文化や習慣が違います。 *(Culture differs depending on the country.)* |\n| **Passive agent** (\"by [creator]\") | この絵はピカソ**によって**描かれました。 *(This painting was drawn by Picasso.)* |\n| **Cause** (\"due to/because of\") | 台風**によって**、木が倒れました。 *(The tree fell due to the typhoon.)* |\n\nSee Lesson 16-2 for this same expression revisited with a narrower focus specifically on the causal sense (\"as a result of\"), and N4 Lesson 37-5's によって marking the \"creator\" specifically in passive sentences about invention/creation/discovery — 8-2 is really the umbrella pattern that the other two lessons each zoom in on one sense of.",
+      "details": "### The Three Senses of によって\n\n| Sense | Example |\n| :--- | :--- |\n| **Variation** (\"depending on\") | 国**によって**、文化や習慣が違います。 *(Culture differs depending on the country.)* |\n| **Passive agent** (\"by [creator]\") | この絵はピカソ**によって**描かれました。 *(This painting was drawn by Picasso.)* |\n| **Cause** (\"due to/because of\") | 台風**によって**、木が倒れました。 *(The tree fell due to the typhoon.)* |\n\nSee Lesson 16-2 for this same expression revisited with a narrower focus specifically on the causal sense (\"as a result of\"), and N4 Lesson 12-5's によって marking the \"creator\" specifically in passive sentences about invention/creation/discovery — 8-2 is really the umbrella pattern that the other two lessons each zoom in on one sense of.",
       "tags": [
         "cause-reason",
         "viewpoint-standpoint"
@@ -674,7 +674,7 @@
         }
       ],
       "summary": "ばほど repeats the same verb or adjective in both the ば-conditional and dictionary-form halves to show that a degree scales up (or down) together — 'the more..., the more...'",
-      "details": "日本語は、**話せば話すほど**上手になります。 *(The more you speak Japanese, the better you become.)*\nスーパーは家から**近ければ近いほど**便利です。 *(The closer the supermarket is, the more convenient.)*\n\nThis is the same 〜ば〜ほど pattern covered in N4 Lesson 35-6 — the same verb/adjective must appear on both sides, once conditionalized with ば, once left in dictionary/plain form and followed by ほど.",
+      "details": "日本語は、**話せば話すほど**上手になります。 *(The more you speak Japanese, the better you become.)*\nスーパーは家から**近ければ近いほど**便利です。 *(The closer the supermarket is, the more convenient.)*\n\nThis is the same 〜ば〜ほど pattern covered in N4 Lesson 10-6 — the same verb/adjective must appear on both sides, once conditionalized with ば, once left in dictionary/plain form and followed by ほど.",
       "tags": [
         "degree-extent",
         "conditional"
@@ -803,7 +803,7 @@
         }
       ],
       "summary": "はずだ expresses a strong conviction or logical expectation grounded in objective facts or reasoning — weaker than に違いない, but stronger than a plain guess.",
-      "details": "彼は日本に10年住んでいるから、日本語が上手な**はずだ**。\n*(He's lived in Japan for 10 years, so his Japanese should be good.)*\n\nBecause はずだ is grounded in a stated reason (から, ので, or an implied one), it's a reasoned expectation, not a wild guess — if the expectation turns out wrong, a natural reaction is はずなのに… (\"it was supposed to be the case, but...\"). See N4 Lesson 46-3 for this same pattern and Lesson 18-1's に違いない for a stronger degree of certainty on the same scale.",
+      "details": "彼は日本に10年住んでいるから、日本語が上手な**はずだ**。\n*(He's lived in Japan for 10 years, so his Japanese should be good.)*\n\nBecause はずだ is grounded in a stated reason (から, ので, or an implied one), it's a reasoned expectation, not a wild guess — if the expectation turns out wrong, a natural reaction is はずなのに… (\"it was supposed to be the case, but...\"). See N4 Lesson 21-3 for this same pattern and Lesson 18-1's に違いない for a stronger degree of certainty on the same scale.",
       "tags": [
         "certainty-expectation"
       ]
@@ -829,8 +829,8 @@
           "en": "The number of non-Japanese nationals working in Japan will probably increase from now on."
         }
       ],
-      "summary": "てくる traces a change up to the present moment (from the past); ていく traces a change continuing from the present into the future — the same pattern as N4 Lesson 1-1, applied here to abstract/temporal change rather than physical direction.",
-      "details": "See N4 Lesson 1-1's details table for the fuller spatial/temporal breakdown of てくる vs ていく.\n\nだんだん春らしくなっ**てきました**。 *(Little by little, it's become spring-like — change up to now.)*\n日本で働く外国人が増え**ていく**でしょう。 *(The number of foreign workers will likely increase from now — change into the future.)*",
+      "summary": "てくる traces a change up to the present moment (from the past); ていく traces a change continuing from the present into the future, applied here to abstract/temporal change rather than physical direction.",
+      "details": "だんだん春らしくなっ**てきました**。 *(Little by little, it's become spring-like — change up to now.)*\n日本で働く外国人が増え**ていく**でしょう。 *(The number of foreign workers will likely increase from now — change into the future.)*",
       "tags": [
         "change-of-state",
         "direction-movement"
@@ -981,7 +981,7 @@
         }
       ],
       "summary": "V-ている here describes a lasting state or experience that continues from the past into the present — not an action in progress, but a fact that remains true.",
-      "details": "私は日本に住ん**でいる**。 *(I live in Japan — and still do, an ongoing fact.)*\n彼は結婚し**ている**。 *(He is married — a resulting state, not an ongoing action.)*\n\nThis is the resulting-state use of ている you already know from Vて-form + います with instantaneous verbs (結婚する, 住む — see N4 Lesson 29-1 for the parallel with intransitive-verb resulting states) — 住んでいる doesn't mean it's in the process of happening, it means the state has held from the past up to now.",
+      "details": "私は日本に住ん**でいる**。 *(I live in Japan — and still do, an ongoing fact.)*\n彼は結婚し**ている**。 *(He is married — a resulting state, not an ongoing action.)*\n\nThis is the resulting-state use of ている you already know from Vて-form + います with instantaneous verbs (結婚する, 住む — see N4 Lesson 4-1 for the parallel with intransitive-verb resulting states) — 住んでいる doesn't mean it's in the process of happening, it means the state has held from the past up to now.",
       "tags": [
         "experience",
         "state-continuation"
@@ -1034,7 +1034,7 @@
         }
       ],
       "summary": "Beyond the direct passive, this れる／られる form describes the speaker being adversely affected by someone else's action — including intransitive verbs like raining or crying, which have no direct object of their own to become the passive subject.",
-      "details": "### The \"Suffering/Adversity\" Indirect Passive\n\n雨に**降られて**、服がぬれてしまった。 *(I was caught in the rain, and my clothes got wet.)*\n夜中に隣の赤ちゃんに**泣かれて**、眠れませんでした。 *(The baby next door cried, and I couldn't sleep.)*\n\nThis mirrors the \"suffering passive\" you may have seen in N4 Lesson 37-3 (わたしは弟にパソコンを壊されました) — but here it extends even to intransitive verbs (降る, 泣く) that have no direct object at all. The speaker (implicit or は-marked) is simply inconvenienced by someone/something else's action, even though grammatically that action doesn't act \"on\" them directly.",
+      "details": "### The \"Suffering/Adversity\" Indirect Passive\n\n雨に**降られて**、服がぬれてしまった。 *(I was caught in the rain, and my clothes got wet.)*\n夜中に隣の赤ちゃんに**泣かれて**、眠れませんでした。 *(The baby next door cried, and I couldn't sleep.)*\n\nThis mirrors the \"suffering passive\" you may have seen in N4 Lesson 12-3 (わたしは弟にパソコンを壊されました) — but here it extends even to intransitive verbs (降る, 泣く) that have no direct object at all. The speaker (implicit or は-marked) is simply inconvenienced by someone/something else's action, even though grammatically that action doesn't act \"on\" them directly.",
       "tags": [
         "passive"
       ]
@@ -1161,7 +1161,7 @@
         }
       ],
       "summary": "たて marks that something has just been made or completed, emphasizing its freshness — most common with food and freshly finished products.",
-      "details": "焼き**たて**のパンはおいしいです。 *(Freshly baked bread is delicious.)*\nペンキ塗り**たて**。 *(Freshly painted — a warning sign.)*\n\nたて attaches directly to a verb's ます-stem (焼き, 塗り) and always highlights that not much time has passed since completion — similar in spirit to N4 Lesson 46-2's ばかりです, but たて is used specifically as a noun-modifier (焼きたてのパン) rather than a sentence-ending predicate, and leans toward food/products rather than general events.",
+      "details": "焼き**たて**のパンはおいしいです。 *(Freshly baked bread is delicious.)*\nペンキ塗り**たて**。 *(Freshly painted — a warning sign.)*\n\nたて attaches directly to a verb's ます-stem (焼き, 塗り) and always highlights that not much time has passed since completion — similar in spirit to N4 Lesson 21-2's ばかりです, but たて is used specifically as a noun-modifier (焼きたてのパン) rather than a sentence-ending predicate, and leans toward food/products rather than general events.",
       "tags": [
         "time-relative"
       ]
@@ -1236,7 +1236,7 @@
         }
       ],
       "summary": "ほど expresses degree by pointing to an extreme, vivid example — 'to the extent that...' or 'so much that...'",
-      "details": "死ぬ**ほど**疲れました。 *(I'm tired to the point of dying — dead tired.)*\n涙が出る**ほど**笑いました。 *(I laughed so much that tears came out.)*\n\nほど here attaches to a full clause describing an extreme outcome (死ぬ, 涙が出る) as a colorful, exaggerated way of measuring the true degree of the preceding statement — this hyperbolic style is common in casual speech for emphasis. See N4 Lesson 35-6 and N3 Lesson 9-1 for ほど's other major use, in the 〜ば〜ほど \"the more... the more...\" pattern — a related but distinct grammatical role for the same word.",
+      "details": "死ぬ**ほど**疲れました。 *(I'm tired to the point of dying — dead tired.)*\n涙が出る**ほど**笑いました。 *(I laughed so much that tears came out.)*\n\nほど here attaches to a full clause describing an extreme outcome (死ぬ, 涙が出る) as a colorful, exaggerated way of measuring the true degree of the preceding statement — this hyperbolic style is common in casual speech for emphasis. See N4 Lesson 10-6 and N3 Lesson 9-1 for ほど's other major use, in the 〜ば〜ほど \"the more... the more...\" pattern — a related but distinct grammatical role for the same word.",
       "tags": [
         "degree-extent",
         "comparison"
@@ -1289,7 +1289,7 @@
         }
       ],
       "summary": "といった lists a couple of representative examples of a broader category, implying there are more items like them not mentioned.",
-      "details": "5月5日には「ちまき」「かしわもち」**といった**昔からの菓子を食べる習慣がある。\n*(On May 5th, there's a custom of eating traditional sweets such as chimaki and kashiwamochi.)*\n\nStructurally: N1、N2 ＋ といった ＋ N3, where N1/N2 are specific examples and N3 is the category they belong to (お菓子, 留学生, etc.). Compare with N4 Lesson 36-4's とか、とか, which lists examples in casual speech — といった is the more formal, written equivalent used for the same purpose.",
+      "details": "5月5日には「ちまき」「かしわもち」**といった**昔からの菓子を食べる習慣がある。\n*(On May 5th, there's a custom of eating traditional sweets such as chimaki and kashiwamochi.)*\n\nStructurally: N1、N2 ＋ といった ＋ N3, where N1/N2 are specific examples and N3 is the category they belong to (お菓子, 留学生, etc.). Compare with N4 Lesson 11-4's とか、とか, which lists examples in casual speech — といった is the more formal, written equivalent used for the same purpose.",
       "tags": [
         "listing-examples"
       ]
@@ -1343,7 +1343,7 @@
         }
       ],
       "summary": "という reports hearsay in writing — 'it is said that...' — a different grammatical role from Lesson 1-3's という, which introduces a name/term.",
-      "details": "日本で最も古い大学が京都にあるという。 *(They say the oldest university in Japan is in Kyoto.)*\n\nCompare with N3 Lesson 1-3's という, which links a specific name to a category (\"a food called X\") — here, という instead reports something the writer heard or read, without vouching for it personally. This use is mostly confined to written Japanese (news articles, essays); in conversation, そうです (hearsay, see N4 Lesson 47-1) is the natural spoken equivalent.",
+      "details": "日本で最も古い大学が京都にあるという。 *(They say the oldest university in Japan is in Kyoto.)*\n\nCompare with N3 Lesson 1-3's という, which links a specific name to a category (\"a food called X\") — here, という instead reports something the writer heard or read, without vouching for it personally. This use is mostly confined to written Japanese (news articles, essays); in conversation, そうです (hearsay, see N4 Lesson 22-1) is the natural spoken equivalent.",
       "tags": [
         "quotation",
         "hearsay"
@@ -1497,7 +1497,7 @@
         }
       ],
       "summary": "にもかかわらず means 'despite' or 'in spite of' — similar to のに, but more formal, and typically found in writing or formal speech.",
-      "details": "雨が激しく降っている**にもかかわらず**、サッカーの試合は行われた。\n*(Despite the heavy rain, the soccer match was held.)*\n彼は熱がある**にもかかわらず**、仕事へ行きました。 *(In spite of having a fever, he went to work.)*\n\nSee N4 Lesson 45-2's のに for the more conversational equivalent of this same contrastive meaning — にもかかわらず carries the same \"contrary to expectation\" nuance but reads as noticeably more formal, and doesn't carry のに's stronger emotional undertone of complaint/reproach.",
+      "details": "雨が激しく降っている**にもかかわらず**、サッカーの試合は行われた。\n*(Despite the heavy rain, the soccer match was held.)*\n彼は熱がある**にもかかわらず**、仕事へ行きました。 *(In spite of having a fever, he went to work.)*\n\nSee N4 Lesson 20-2's のに for the more conversational equivalent of this same contrastive meaning — にもかかわらず carries the same \"contrary to expectation\" nuance but reads as noticeably more formal, and doesn't carry のに's stronger emotional undertone of complaint/reproach.",
       "tags": [
         "concession-contrast",
         "formal-written"
@@ -1523,7 +1523,7 @@
         }
       ],
       "summary": "ところだった says a (usually negative or dangerous) situation was on the verge of happening, but was narrowly avoided.",
-      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I was just about to miss the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with N4 Lesson 46-1's plain V dictionary form + ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
+      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I was just about to miss the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with N4 Lesson 21-1's plain V dictionary form + ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
       "tags": [
         "time-relative"
       ]
@@ -1655,7 +1655,7 @@
         }
       ],
       "summary": "に違いない expresses a strong conviction or confident guess — stronger in certainty than はずだ, closer to 'must be' than 'should be.'",
-      "details": "毎日遅くまで練習しているから、彼は疲れている**に違いない**。\n*(Since he practices late every day, he must be tired.)*\n犯人はあの男**に違いない**。 *(The culprit must be that man.)*\n\nSee Lesson 10-3's はずだ for a related but weaker expectation. On a certainty scale: に違いない (very confident, near-certain conviction) sits above はずだ (a reasoned, likely expectation), which in turn sits above かもしれない (a mere possibility) — see N4 Lesson 32 for that lower end of the same scale.",
+      "details": "毎日遅くまで練習しているから、彼は疲れている**に違いない**。\n*(Since he practices late every day, he must be tired.)*\n犯人はあの男**に違いない**。 *(The culprit must be that man.)*\n\nSee Lesson 10-3's はずだ for a related but weaker expectation. On a certainty scale: に違いない (very confident, near-certain conviction) sits above はずだ (a reasoned, likely expectation), which in turn sits above かもしれない (a mere possibility) — see N4 Lesson 7 for that lower end of the same scale.",
       "tags": [
         "certainty-expectation"
       ]
@@ -1705,7 +1705,7 @@
         }
       ],
       "summary": "ものの concedes that the first statement is true, but the outcome that follows runs contrary to what you'd expect, or falls short of it.",
-      "details": "新しいパソコンを買った**ものの**、使い方がわからない。 *(Even though I bought a new PC, I don't know how to use it.)*\n日本語の勉強を始めた**ものの**、なかなか上達しない。 *(Although I started studying Japanese, I'm not making much progress.)*\n\nものの has a similar concessive feel to のに (N4 Lesson 45-2) and にもかかわらず (Lesson 16-3), but reads as more neutral/literary — it doesn't carry のに's charge of complaint/reproach, just a calm acknowledgment that the outcome didn't match the premise's natural expectation.",
+      "details": "新しいパソコンを買った**ものの**、使い方がわからない。 *(Even though I bought a new PC, I don't know how to use it.)*\n日本語の勉強を始めた**ものの**、なかなか上達しない。 *(Although I started studying Japanese, I'm not making much progress.)*\n\nものの has a similar concessive feel to のに (N4 Lesson 20-2) and にもかかわらず (Lesson 16-3), but reads as more neutral/literary — it doesn't carry のに's charge of complaint/reproach, just a calm acknowledgment that the outcome didn't match the premise's natural expectation.",
       "tags": [
         "concession-contrast",
         "formal-written"
@@ -1866,7 +1866,7 @@
         }
       ],
       "summary": "とともに covers two meanings: doing something together with someone/something, and one change happening alongside another.",
-      "details": "### Two Meanings of とともに\n\n| Meaning | Example |\n| :--- | :--- |\n| **Together with** (similar to と一緒に) | 家族**とともに**、海外へ引っ越すことになった。 |\n| **Along with** (as one thing changes, so does another) | 年をとる**とともに**、体力が落ちてきた。 |\n\nThe \"together with\" meaning is a more formal/written alternative to と一緒に. The \"as X changes, Y changes too\" meaning parallels N4 Lesson 35-6's 〜ば〜ほど (both track a paired change), though とともに doesn't require repeating the same verb/adjective the way ば〜ほど does.",
+      "details": "### Two Meanings of とともに\n\n| Meaning | Example |\n| :--- | :--- |\n| **Together with** (similar to と一緒に) | 家族**とともに**、海外へ引っ越すことになった。 |\n| **Along with** (as one thing changes, so does another) | 年をとる**とともに**、体力が落ちてきた。 |\n\nThe \"together with\" meaning is a more formal/written alternative to と一緒に. The \"as X changes, Y changes too\" meaning parallels N4 Lesson 10-6's 〜ば〜ほど (both track a paired change), though とともに doesn't require repeating the same verb/adjective the way ば〜ほど does.",
       "tags": [
         "simultaneous-action"
       ]
@@ -2122,7 +2122,7 @@
         }
       ],
       "summary": "この + N uses この rather than その specifically when referring back to a saying, phrase, or expression that itself carries meaning worth restating — flagging it as noteworthy.",
-      "details": "「コモンズの悲劇」という有名な言葉がある。**この**言葉は地球の環境を考える上で重要だ。\n*(There is a famous saying, \"The tragedy of the commons.\" This saying is important for thinking about the global environment.)*\n\nOrdinarily そ〜 refers back to something just mentioned (see N4 Lesson 31-6). But when the referent is a notable term, saying, or expression the writer wants to give special weight to — treating it almost as freshly introduced information worth commenting on — この is used instead of その. This is a subtle stylistic choice typical of essays and formal writing that introduce and then elaborate on a key term.",
+      "details": "「コモンズの悲劇」という有名な言葉がある。**この**言葉は地球の環境を考える上で重要だ。\n*(There is a famous saying, \"The tragedy of the commons.\" This saying is important for thinking about the global environment.)*\n\nOrdinarily そ〜 refers back to something just mentioned (see N4 Lesson 6-6). But when the referent is a notable term, saying, or expression the writer wants to give special weight to — treating it almost as freshly introduced information worth commenting on — この is used instead of その. This is a subtle stylistic choice typical of essays and formal writing that introduce and then elaborate on a key term.",
       "tags": [
         "demonstrative"
       ]

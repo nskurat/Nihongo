@@ -83,14 +83,27 @@ describe('Reading Storage Adapter Architecture', () => {
       const history = await readingRepository.saveToHistory({
         reading: mockReadingData,
         level: 'N4',
-        lesson: 26,
+        lesson: 5,
         topic: 'Test Topic',
       });
 
       expect(history).toHaveLength(1);
       expect(history[0].data.title).toBe('テストの物語');
       expect(history[0].level).toBe('N4');
-      expect(history[0].lesson).toBe(26);
+      expect(history[0].lesson).toBe(5);
+    });
+
+    it('should map history saved under the old N4 numbering (26-50) onto 1-25', async () => {
+      const legacy = [
+        { id: 'a', timestamp: '2026-01-01T00:00:00Z', level: 'N4', lesson: 30, topic: '', data: mockReadingData },
+        { id: 'b', timestamp: '2026-01-01T00:00:00Z', level: 'N5', lesson: 30, topic: '', data: mockReadingData },
+        { id: 'c', timestamp: '2026-01-01T00:00:00Z', level: 'N4', lesson: null, topic: '', data: mockReadingData },
+      ];
+      mockStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(legacy));
+
+      const history = await readingRepository.getHistory();
+
+      expect(history.map((h) => h.lesson)).toEqual([5, 30, null]);
     });
 
     it('should deduplicate and move re-saved reading stories to top of history', async () => {

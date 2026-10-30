@@ -55,9 +55,10 @@ grammar-app/
 
 ## Constraints
 
-- **Lesson ranges differ per level**: N5 = 1–25, N4 = 26–50,
-  N3 = 1–24. Never assume lessons start at 1. Source of truth: `utils/levels.ts`
-  (`LESSON_RANGES`, also the single source `scripts/validate-content.ts` mirrors).
+- **Lessons are numbered independently per level**, always from 1, with different
+  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24. Never assume a max. Source of truth:
+  `utils/levels.ts` (`LESSON_RANGES`, also the single source `scripts/validate-content.ts`
+  mirrors). Text cross-references to another level's lesson name it, e.g. "N5 Lesson 23".
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or
   tests pass. Schema changes go through `scripts/` migrations.
 - **AI calls cost the user money.** Never invoke a provider from a test, a script, or
