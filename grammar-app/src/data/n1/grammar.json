@@ -1,0 +1,30 @@
+{
+  "1": [
+    {
+      "uid": "n1-grammar-1-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 1,
+      "title": "〜といえども",
+      "meaning": "Even though (it is) ~ / Even ~",
+      "structure": "Noun / Plain form + といえども",
+      "explanation": "An archaic/formal expression meaning '〜といっても' or '〜ではあるが'. Used to state that despite a fact or condition, something else holds true.",
+      "examples": [
+        {
+          "jp": "どんな大金持ちといえども、お金で解決できない悩みがあるはずだ。",
+          "en": "However rich one might be, there are bound to be some problems that money can't solve."
+        },
+        {
+          "jp": "名医といえども、すべての患者を救うことはできない。",
+          "en": "Even a renowned doctor cannot save every patient."
+        }
+      ],
+      "summary": "といえども is an archaic/formal way of saying 'even though X, still Y' — roughly equivalent to といっても or ではあるが, but reserved for formal or written register.",
+      "details": "どんな大金持ち**といえども**、お金で解決できない悩みがあるはずだ。\n*(However rich one might be, there are bound to be problems money can't solve.)*\n名医**といえども**、すべての患者を救うことはできない。\n*(Even a renowned doctor cannot save every patient.)*\n\nThis carries a classical, almost proverbial tone — often used with extreme examples (大金持ち, 名医) to make a broad, memorable point. In everyday conversation, といっても or ではあるが would be the natural, less formal substitutes for the same underlying \"even granting X, still Y\" logic.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ]
+    }
+  ]
+}

@@ -5,10 +5,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 1,
-      "title": "N1は N2です",
-      "structure": "N1は N2です",
-      "meaning": "States that N1 is/equals N2 — the basic Japanese sentence of identification.",
-      "explanation": "The particle は marks N1 as the topic of the sentence (read わ, not は). です is the copula: it attaches to a noun to make a polite statement/assertion. Together, N1は N2です means \"As for N1, it is N2\" — used to state who or what someone/something is.",
+      "title": "Aは Bです",
+      "structure": "Aは Bです",
+      "meaning": "States that A is/equals B — the basic Japanese sentence of identification.",
+      "explanation": "The particle は marks A as the topic of the sentence (read わ, not は). です is the copula: it attaches to a noun to make a polite statement/assertion. Together, Aは Bです means \"As for A, it is B\" — used to state who or what someone/something is.",
       "examples": [
         {
           "jp": "わたしはマイク・スミスです。",
@@ -20,7 +20,7 @@
         }
       ],
       "summary": "The foundational identification sentence: topic marked by は, followed by a noun predicate closed with the polite copula です.",
-      "details": "### は vs です\n\n| Part | Job |\n| :--- | :--- |\n| **は** | Marks what the sentence is *about* (the topic). Pronounced わ. |\n| **です** | Politely asserts the predicate that follows は. Changes for negative (see N1は N2じゃ ありません) and past tense (でした, covered later). |\n\nThis is the pattern every noun-sentence builds on — the negative (N1は N2じゃ ありません), question (Sか), and topic-shift with も (Nも) versions all reuse this same N1は…です frame.",
+      "details": "### は vs です\n\n| Part | Job |\n| :--- | :--- |\n| **は** | Marks what the sentence is *about* (the topic). Pronounced わ. |\n| **です** | Politely asserts the predicate that follows は. Changes for negative (see Aは Bじゃ ありません) and past tense (でした, covered later). |\n\nThis is the pattern every noun-sentence builds on — the negative (Aは Bじゃ ありません), question (Sか), and topic-shift with も (Nも) versions all reuse this same Aは…です frame.",
       "tags": [
         "topic-focus-particle",
         "definition-meaning"
@@ -31,9 +31,9 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 1,
-      "title": "N1は N2じゃ ありません",
-      "structure": "N1は N2じゃ ありません",
-      "meaning": "The negative of N1は N2です — states that N1 is not N2.",
+      "title": "Aは Bじゃ ありません",
+      "structure": "Aは Bじゃ ありません",
+      "meaning": "The negative of Aは Bです — states that A is not B.",
       "explanation": "じゃ ありません is the negative form of です, used in everyday conversation. In formal speech or writing, では ありません is used instead (は here is also read わ).",
       "examples": [
         {
@@ -50,7 +50,7 @@
         }
       ],
       "summary": "Negates a です statement; casual じゃ ありません vs formal では ありません.",
-      "details": "Swap です for じゃ ありません (casual/spoken) or では ありません (formal/written) to negate the N1は N2です pattern. Both are grammatically \"non-past\" — the past-tense negative (じゃ ありませんでした) is a separate form covered later.",
+      "details": "Swap です for じゃ ありません (casual/spoken) or では ありません (formal/written) to negate the Aは Bです pattern. Both are grammatically \"non-past\" — the past-tense negative (じゃ ありませんでした) is a separate form covered later.",
       "tags": [
         "topic-focus-particle",
         "definition-meaning"
@@ -92,7 +92,7 @@
       "section": "grammar",
       "lesson": 1,
       "title": "Nも",
-      "structure": "N1は N2です。 N3も N2です。",
+      "structure": "Aは Bです。 Cも Bです。",
       "meaning": "Marks that the same thing said about the previous topic is also true of a new topic — \"also.\"",
       "explanation": "も replaces は after a topic when the statement about it is the same as the statement just made about the previous topic.",
       "examples": [
@@ -118,10 +118,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 1,
-      "title": "N1の N2",
-      "structure": "N1の N2",
-      "meaning": "の connects two nouns, with N1 modifying N2 — here, N1 is an organization/group N2 belongs to.",
-      "explanation": "の links N1 and N2 into one noun phrase, with N1 describing N2. In this lesson, N1 is an organization or group, and N2 is a person who belongs to it.",
+      "title": "Aの B",
+      "structure": "Aの B",
+      "meaning": "の connects two nouns, with A modifying B — here, A is an organization/group B belongs to.",
+      "explanation": "の links A and B into one noun phrase, with A describing B. In this lesson, A is an organization or group, and B is a person who belongs to it.",
       "examples": [
         {
           "jp": "スミスさんはさくら大学の学生です。",
@@ -136,8 +136,8 @@
           "en": "My mother is a university teacher."
         }
       ],
-      "summary": "の glues two nouns together, N1 describing/modifying N2 — here specifically \"N2 belonging to organization N1.\"",
-      "details": "の is one of the most overloaded particles in Japanese — this point only covers the \"belongs to this organization\" sense. Later points add two more: \"N2 is about N1\" and \"N2 is owned by N1\" (see N1の N2（説明／所有）). Watch for the pattern across points rather than trying to memorize one fixed translation for の.",
+      "summary": "の glues two nouns together, A describing/modifying B — here specifically \"B belonging to organization A.\"",
+      "details": "の is one of the most overloaded particles in Japanese — this point only covers the \"belongs to this organization\" sense. Later points add two more: \"B is about A\" and \"B is owned by A\" (see Aの B（説明／所有）). Watch for the pattern across points rather than trying to memorize one fixed translation for の.",
       "tags": [
         "particle-usage",
         "definition-meaning"
@@ -286,10 +286,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 2,
-      "title": "N1の N2（説明／所有）",
-      "structure": "N1の N2",
-      "meaning": "の used to say what N2 is about, or who N2 belongs to.",
-      "explanation": "Building on the earlier N1の N2 (\"N2 belongs to organization N1\"), this point adds two more uses: (1) N1 explains what N2 is about/of, and (2) N1 explains who owns N2. N2 can be dropped when it's obvious from context, but not when N2 refers to a person.",
+      "title": "Aの B（説明／所有）",
+      "structure": "Aの B",
+      "meaning": "の used to say what B is about, or who B belongs to.",
+      "explanation": "Building on the earlier Aの B (\"B belongs to organization A\"), this point adds two more uses: (1) A explains what B is about/of, and (2) A explains who owns B. B can be dropped when it's obvious from context, but not when B refers to a person.",
       "examples": [
         {
           "jp": "これはコンピューターの本です。",
@@ -312,8 +312,8 @@
           "en": "Is Mr. Smith a student at Sakura University? — Yes, he is."
         }
       ],
-      "summary": "の keeps doing the same modifying job as in N1の N2, now covering \"about N1\" and \"belongs to N1\" alongside the earlier \"member of N1.\"",
-      "details": "の's growing job list:\n\n| Use | Example |\n| :--- | :--- |\n| N2 belongs to organization N1 | さくら大学の学生 |\n| N2 is about/of N1 | コンピューターの本 |\n| N2 is owned by N1 | わたしの本 |\n\nWhen N2 is a thing and obvious from context, it can be dropped (これはわたしの[本]です → これはわたしのです), but never when N2 is a person.",
+      "summary": "の keeps doing the same modifying job as in Aの B, now covering \"about A\" and \"belongs to A\" alongside the earlier \"member of A.\"",
+      "details": "の's growing job list:\n\n| Use | Example |\n| :--- | :--- |\n| B belongs to organization A | さくら大学の学生 |\n| B is about/of A | コンピューターの本 |\n| B is owned by A | わたしの本 |\n\nWhen B is a thing and obvious from context, it can be dropped (これはわたしの[本]です → これはわたしのです), but never when B is a person.",
       "tags": [
         "particle-usage",
         "definition-meaning"
@@ -381,8 +381,8 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 3,
-      "title": "N1は N2(place)です",
-      "structure": "N1は N2(place)です",
+      "title": "Aは B(place)です",
+      "structure": "Aは B(place)です",
       "meaning": "States where a place, thing, or person is.",
       "explanation": "This sentence pattern is used to explain where a place, a thing, or a person is, by putting a place word directly after は…です.",
       "examples": [
@@ -399,8 +399,8 @@
           "en": "Mr. Tanaka is in the office."
         }
       ],
-      "summary": "The N1は N2です pattern reused with a place word as the predicate, to state location.",
-      "details": "No new grammar here — it's the N1は N2です pattern with N2 restricted to a place word. This is the simplest way to state location, before the existence verbs あります/います, which let you also state *what exists* somewhere rather than just *where someone/something is*.",
+      "summary": "The Aは Bです pattern reused with a place word as the predicate, to state location.",
+      "details": "No new grammar here — it's the Aは Bです pattern with B restricted to a place word. This is the simplest way to state location, before the existence verbs あります/います, which let you also state *what exists* somewhere rather than just *where someone/something is*.",
       "tags": [
         "existence-location",
         "topic-focus-particle"
@@ -445,10 +445,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 3,
-      "title": "N1の N2（made in／by）",
-      "structure": "N1の N2",
-      "meaning": "N1の N2 where N1 is a country or company and N2 is a product — \"N2 made in/by N1.\"",
-      "explanation": "When N1 is the name of a country and N2 is a product, it means N2 is made in that country; when N1 is a company, it means N2 is made by that company. どこ is used to ask where or by whom N2 is made.",
+      "title": "Aの B（made in／by）",
+      "structure": "Aの B",
+      "meaning": "Aの B where A is a country or company and B is a product — \"B made in/by A.\"",
+      "explanation": "When A is the name of a country and B is a product, it means B is made in that country; when A is a company, it means B is made by that company. どこ is used to ask where or by whom B is made.",
       "examples": [
         {
           "jp": "これはどこのコンピューターですか。…日本のコンピューターです。",
@@ -463,8 +463,8 @@
           "en": "Where are these shoes from? — They're Italian shoes."
         }
       ],
-      "summary": "の keeps extending: here N1 names the country or company that made product N2 — the fourth use of の so far.",
-      "details": "By this point の has picked up four distinct jobs: member-of-organization, about/of, owned-by (see the table under N1の N2（説明／所有）), and now made-in/by. All four share the same surface form N1の N2 — only context tells them apart, which is exactly why they're worth tracking as a set rather than memorizing each in isolation.",
+      "summary": "の keeps extending: here A names the country or company that made product B — the fourth use of の so far.",
+      "details": "By this point の has picked up four distinct jobs: member-of-organization, about/of, owned-by (see the table under Aの B（説明／所有）), and now made-in/by. All four share the same surface form Aの B — only context tells them apart, which is exactly why they're worth tracking as a set rather than memorizing each in isolation.",
       "tags": [
         "particle-usage",
         "definition-meaning"
@@ -581,7 +581,7 @@
         }
       ],
       "summary": "ます is the polite predicate ending for verbs, parallel to です for nouns — the first true verb sentence.",
-      "details": "This is the doorway into an entirely new sentence type. Up to this point the sentences were noun-sentences (N1は N2です); from here on, verb-sentences take over, and Vます／Vません／Vました／Vませんでした lays out the full conjugation this ます form belongs to.",
+      "details": "This is the doorway into an entirely new sentence type. Up to this point the sentences were noun-sentences (Aは Bです); from here on, verb-sentences take over, and Vます／Vません／Vました／Vませんでした lays out the full conjugation this ます form belongs to.",
       "tags": [
         "habit-effort",
         "meta-conjugation"
@@ -665,9 +665,9 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 4,
-      "title": "N1から N2まで",
-      "structure": "N1から N2まで",
-      "meaning": "\"From N1 to N2\" — marks a starting and finishing time or place.",
+      "title": "Aから Bまで",
+      "structure": "Aから Bまで",
+      "meaning": "\"From A to B\" — marks a starting and finishing time or place.",
       "explanation": "から indicates the starting time or place, and まで indicates the finishing time or place. They aren't always used together — either can appear alone. です can attach directly after から, まで, or から〜まで.",
       "examples": [
         {
@@ -703,9 +703,9 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 4,
-      "title": "N1と N2",
-      "structure": "N1と N2",
-      "meaning": "\"N1 and N2\" — connects two nouns in a coordinate (equal) relationship.",
+      "title": "Aと B",
+      "structure": "Aと B",
+      "meaning": "\"A and B\" — connects two nouns in a coordinate (equal) relationship.",
       "explanation": "The particle と connects two nouns in a coordinate relation, like English \"and\" between two nouns.",
       "examples": [
         {
@@ -870,7 +870,7 @@
         }
       ],
       "summary": "と marks a companion (\"with N\"); ひとりで (\"alone\") is the mutually-exclusive alternative when there's no companion at all.",
-      "details": "This is a different と from the noun-connecting と (N1と N2, \"N1 and N2\") — here と follows a single person/animal and means \"together with,\" attaching to a verb rather than joining two nouns. If there's no companion at all, swap the と-phrase out entirely for ひとりで rather than trying to negate it.",
+      "details": "This is a different と from the noun-connecting と (Aと B, \"A and B\") — here と follows a single person/animal and means \"together with,\" attaching to a verb rather than joining two nouns. If there's no companion at all, swap the と-phrase out entirely for ひとりで rather than trying to negate it.",
       "tags": [
         "particle-usage"
       ]
@@ -1465,10 +1465,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 8,
-      "title": "N1は どんな N2ですか",
-      "structure": "N1は どんな N2ですか",
-      "meaning": "Asks the listener to describe N1, where N2 is the category N1 belongs to.",
-      "explanation": "When the speaker wants the listener to describe or explain N1, this question pattern is used. N2 denotes the category N1 belongs to. The interrogative どんな is always followed by a noun.",
+      "title": "Aは どんな Bですか",
+      "structure": "Aは どんな Bですか",
+      "meaning": "Asks the listener to describe A, where B is the category A belongs to.",
+      "explanation": "When the speaker wants the listener to describe or explain A, this question pattern is used. B denotes the category A belongs to. The interrogative どんな is always followed by a noun.",
       "examples": [
         {
           "jp": "奈良は どんな 町ですか。…古い 町です。",
@@ -1644,7 +1644,7 @@
         }
       ],
       "summary": "Here どんな asks the listener to pick/name an item from a category, unlike the どんな that asks for a description of one specific thing.",
-      "details": "Direct callback to どんな N1は N2ですか — same question word, different function: that one asks 'describe N1, which belongs to category N2' (どんな町ですか→古い町です), while this usage asks 'name something from category N' (どんなスポーツが好きですか→サッカー). Worth reviewing both together since the surface form looks identical.",
+      "details": "Direct callback to どんな Aは Bですか — same question word, different function: that one asks 'describe A, which belongs to category B' (どんな町ですか→古い町です), while this usage asks 'name something from category N' (どんなスポーツが好きですか→サッカー). Worth reviewing both together since the surface form looks identical.",
       "tags": [
         "question-embedding"
       ]
@@ -1795,10 +1795,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 10,
-      "title": "N1(place)に N2が あります／います",
-      "structure": "N1(place)に N2が あります／います",
-      "meaning": "に marks the place where N2 is present; asks what/who is there with 何 (things) or だれ (people).",
-      "explanation": "The place where N2 is present is indicated by the particle に. You can ask what or who is present at/in the place using this pattern. The interrogative なに is used for things and だれ is used for persons.",
+      "title": "A(place)に Bが あります／います",
+      "structure": "A(place)に Bが あります／います",
+      "meaning": "に marks the place where B is present; asks what/who is there with 何 (things) or だれ (people).",
+      "explanation": "The place where B is present is indicated by the particle に. You can ask what or who is present at/in the place using this pattern. The interrogative なに is used for things and だれ is used for persons.",
       "examples": [
         {
           "jp": "わたしの 部屋に 机が あります。",
@@ -1824,10 +1824,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 10,
-      "title": "N1は N2(place)に あります／います",
-      "structure": "N1は N2(place)に あります／います",
-      "meaning": "Topicalizes N1 (something both speaker and listener already know) and states where it is; です can replace あります／います when the predicate is contextually obvious.",
-      "explanation": "The speaker picks up N1 as the topic, and explains where it is. The topic should be something or someone that both the speaker and the listener know about. The particle attached to N1 is not が (which marks the subject) but は (which marks the topic). です is sometimes used to replace a verb predicate when the predicate is obvious — N1は N2(place)です.",
+      "title": "Aは B(place)に あります／います",
+      "structure": "Aは B(place)に あります／います",
+      "meaning": "Topicalizes A (something both speaker and listener already know) and states where it is; です can replace あります／います when the predicate is contextually obvious.",
+      "explanation": "The speaker picks up A as the topic, and explains where it is. The topic should be something or someone that both the speaker and the listener know about. The particle attached to A is not が (which marks the subject) but は (which marks the topic). です is sometimes used to replace a verb predicate when the predicate is obvious — Aは B(place)です.",
       "examples": [
         {
           "jp": "東京ディズニーランドは 千葉県に あります。",
@@ -1843,7 +1843,7 @@
         }
       ],
       "summary": "は(topic)+place+に+あります/います states where a known thing is; です can stand in for the verb when context makes it obvious.",
-      "details": "This flips the が of N1(place)に N2が あります (new information, 'what/who is there') into は (topic, 'where is the known thing'), the same が-vs-は logic seen from the start. The です-substitution also echoes the N1はN2(place)です pattern — the two turn out to be near-equivalent when the predicate is a location.",
+      "details": "This flips the が of A(place)に Bが あります (new information, 'what/who is there') into は (topic, 'where is the known thing'), the same が-vs-は logic seen from the start. The です-substitution also echoes the AはB(place)です pattern — the two turn out to be near-equivalent when the predicate is a location.",
       "tags": [
         "topic-focus-particle",
         "existence-location"
@@ -1854,9 +1854,9 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 10,
-      "title": "N1(thing/person/place)の N2(position)",
-      "structure": "N1の 上／下／前／うしろ／右／左／中／外／隣／近く／間",
-      "meaning": "Position nouns (上,下,前,うしろ,みぎ,ひだり,中,そと,となり,ちかく,あいだ) combine with の to pinpoint location relative to N1.",
+      "title": "A(thing/person/place)の B(position)",
+      "structure": "Aの 上／下／前／うしろ／右／左／中／外／隣／近く／間",
+      "meaning": "Position nouns (上,下,前,うしろ,みぎ,ひだり,中,そと,となり,ちかく,あいだ) combine with の to pinpoint location relative to A.",
       "explanation": "うえ、した、まえ、うしろ、みぎ、ひだり、なか、そと、となり、ちかく and あいだ are nouns denoting position. As these are place nouns, not only に but also particles like で can come after them.",
       "examples": [
         {
@@ -1883,9 +1883,9 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 10,
-      "title": "N1 や N2",
-      "structure": "N1 や N2［など］",
-      "meaning": "Connects nouns in a non-exhaustive list ('N1, N2, and so on') — contrast と, which lists everything.",
+      "title": "A や B",
+      "structure": "A や B［など］",
+      "meaning": "Connects nouns in a non-exhaustive list ('A, B, and so on') — contrast と, which lists everything.",
       "explanation": "Nouns are connected in coordinate relation by the particle や. While と enumerates all the items, や shows a few representative items. Sometimes など is put after the last noun to explicitly express that there are also other things of the kind.",
       "examples": [
         {
@@ -2113,10 +2113,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 12,
-      "title": "N1は N2より adjective です",
-      "structure": "N1は N2より adjective です",
-      "meaning": "Describes N1's quality/state compared with N2, using より ('than').",
-      "explanation": "This sentence pattern describes the quality and/or state of N1 in comparison with N2.",
+      "title": "Aは Bより adjective です",
+      "structure": "Aは Bより adjective です",
+      "meaning": "Describes A's quality/state compared with B, using より ('than').",
+      "explanation": "This sentence pattern describes the quality and/or state of A in comparison with B.",
       "examples": [
         {
           "jp": "この 車は あの 車より 大きいです。",
@@ -2131,8 +2131,8 @@
           "en": "Ms. Tanaka is younger than I am."
         }
       ],
-      "summary": "N1は N2より adjective です = 'N1 is more [adjective] than N2.'",
-      "details": "The first comparison structure — より marks the standard being compared against. Immediately followed by the どちら-question pattern (N1と N2と どちらが), which is the natural question this statement answers.",
+      "summary": "Aは Bより adjective です = 'A is more [adjective] than B.'",
+      "details": "The first comparison structure — より marks the standard being compared against. Immediately followed by the どちら-question pattern (Aと Bと どちらが), which is the natural question this statement answers.",
       "tags": [
         "comparison"
       ]
@@ -2142,10 +2142,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 12,
-      "title": "N1と N2と どちらが adjective ですか",
-      "structure": "N1と N2と どちらが adjective ですか …N1／N2の ほうが adjective です",
+      "title": "Aと Bと どちらが adjective ですか",
+      "structure": "Aと Bと どちらが adjective ですか …A／Bの ほうが adjective です",
       "meaning": "Asks the listener to choose between exactly two items using どちら; answered with N のほうが adjective です.",
-      "explanation": "The question asks the listener to choose between two items (N1 and N2). The interrogative used is always どちら if the comparison is made between two items. [Note] When the subject is an interrogative, the particle が is used.",
+      "explanation": "The question asks the listener to choose between two items (A and B). The interrogative used is always どちら if the comparison is made between two items. [Note] When the subject is an interrogative, the particle が is used.",
       "examples": [
         {
           "jp": "サッカーと 野球と どちらが おもしろいですか。…サッカーの ほうが おもしろいです。",
@@ -2171,10 +2171,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 12,
-      "title": "N1[の中]で 何／どこ／だれ／いつが いちばん adjective ですか",
-      "structure": "N1[の中]で 何／どこ／だれ／いつが いちばん adjective ですか …N2が いちばん adjective です",
-      "meaning": "Asks the listener to pick the most [adjective] item out of a category N1, using いちばん ('the most').",
-      "explanation": "This question pattern is used to ask the listener to choose something that is the most 'adjective.' The choice is made from the group or category denoted by N1. The interrogative used is decided by the kind of category from which the choice is made (何 for things, どこ for places, だれ for people, いつ for time).",
+      "title": "A[の中]で 何／どこ／だれ／いつが いちばん adjective ですか",
+      "structure": "A[の中]で 何／どこ／だれ／いつが いちばん adjective ですか …Bが いちばん adjective です",
+      "meaning": "Asks the listener to pick the most [adjective] item out of a category A, using いちばん ('the most').",
+      "explanation": "This question pattern is used to ask the listener to choose something that is the most 'adjective.' The choice is made from the group or category denoted by A. The interrogative used is decided by the kind of category from which the choice is made (何 for things, どこ for places, だれ for people, いつ for time).",
       "examples": [
         {
           "jp": "日本料理[の中]で 何が いちばん おいしいですか。…てんぷらが いちばん おいしいです。",
@@ -2886,10 +2886,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 16,
-      "title": "N1は N2が adjective",
-      "structure": "N1は N2が adjective",
-      "meaning": "Describes an attribute of N1 (the topic) via N2 (the subject of the adjective description).",
-      "explanation": "This sentence pattern is used to describe an attribute of a thing or a person. The topic of the sentence is denoted by は. N1 is the topic of the sentence. N2 is the subject of the adjective's description.",
+      "title": "Aは Bが adjective",
+      "structure": "Aは Bが adjective",
+      "meaning": "Describes an attribute of A (the topic) via B (the subject of the adjective description).",
+      "explanation": "This sentence pattern is used to describe an attribute of a thing or a person. The topic of the sentence is denoted by は. A is the topic of the sentence. B is the subject of the adjective's description.",
       "examples": [
         {
           "jp": "大阪は 食べ物が おいしいです。",
@@ -2900,7 +2900,7 @@
           "en": "Ms. Tanaka has long hair."
         }
       ],
-      "summary": "N1は N2が adjective describes N1's attribute by naming a part/aspect (N2) and an adjective about that part.",
+      "summary": "Aは Bが adjective describes A's attribute by naming a part/aspect (B) and an adjective about that part.",
       "details": "A double-marking pattern that layers は (topic) over が (subject-of-description, familiar from preference/ability sentences) within a single sentence — useful for describing people/places by a specific feature (髪が長い, 食べ物がおいしい) rather than the whole topic directly.",
       "tags": [
         "topic-focus-particle"
@@ -3586,10 +3586,10 @@
       "level": "N5",
       "section": "grammar",
       "lesson": 21,
-      "title": "N1(place)で N2が あります",
-      "structure": "N1(place)で N2が あります",
-      "meaning": "で marks the place where an event (party, concert, festival, incident, disaster) takes place, when N2 means 'to be held/take place.'",
-      "explanation": "When N2 expresses such events as a party, concert, festival, incident, disaster and so on, あります means 'to take place' or 'to be held.'",
+      "title": "A(place)で Bが あります",
+      "structure": "A(place)で Bが あります",
+      "meaning": "で marks the place where an event (party, concert, festival, incident, disaster) takes place, when B means 'to be held/take place.'",
+      "explanation": "When B expresses such events as a party, concert, festival, incident, disaster and so on, あります means 'to take place' or 'to be held.'",
       "examples": [
         {
           "jp": "東京で 日本と ブラジルの サッカーの 試合が あります。",
@@ -3604,7 +3604,7 @@
           "en": "There will be a party at school tomorrow."
         }
       ],
-      "summary": "N1(place)で N2(event)が あります states that an event is held/takes place at a location — a special event-related meaning of あります distinct from its plain existence meaning.",
+      "summary": "A(place)で B(event)が あります states that an event is held/takes place at a location — a special event-related meaning of あります distinct from its plain existence meaning.",
       "details": "Reuses で as place-of-action (contrasted with に as place-of-existence) — here で marks where an event happens, and あります itself takes on the special 'be held/take place' sense rather than its usual 'exist' meaning.",
       "tags": [
         "existence-location"

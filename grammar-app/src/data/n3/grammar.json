@@ -785,6 +785,31 @@
         "frequency",
         "degree-extent"
       ]
+    },
+    {
+      "uid": "n3-grammar-5-7",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "〜ものだから／もんだから",
+      "meaning": "Because... (Reason/Excuse)",
+      "structure": "Verb/い-Adj (Plain) / な-Adj・Noun + な + ものだから／もんだから",
+      "explanation": "Indicates the reason or cause of something, often used to justify it, or give a reason for it in order to deny responsibility or excuse oneself.",
+      "examples": [
+        {
+          "jp": "急いでいたものですから、かぎをかけるのを忘れてしまいました。",
+          "en": "I was in a rush, so I went and forgot to lock up."
+        },
+        {
+          "jp": "とても安かったものだから、買いすぎたんです。",
+          "en": "It was very cheap, so I bought too much."
+        }
+      ],
+      "summary": "もの／もんだから gives a reason, often used to justify or excuse the speaker's own behavior — もんだから is the more casual, contracted spoken form.",
+      "details": "急いでいた**ものですから**、かぎをかけるのを忘れてしまいました。\n*(I was in a rush, so I forgot to lock up.)*\nとても安かった**ものだから**、買いすぎたんです。\n*(It was very cheap, so I bought too much.)*\n\nThis pattern has a distinctly excuse-making or self-justifying flavor — compared with plain から, もの／もんだから frames the cause as an unavoidable circumstance the speaker feels shouldn't be held against them. もんだから is the contracted, more casual spoken equivalent of ものだから.\n\nBecause it presents a personal excuse, the second clause describes what happened — it is not used for requests, commands or invitations (✗ 時間がないものだから、急いでください).",
+      "tags": [
+        "cause-reason"
+      ]
     }
   ],
   "6": [
@@ -1265,8 +1290,8 @@
       "level": "N3",
       "section": "grammar",
       "lesson": 8,
-      "title": "N1はN2（人）によってVpassive",
-      "structure": "N1はN2（人）によってVpassive",
+      "title": "AはB（人）によってVpassive",
+      "structure": "AはB（人）によってVpassive",
       "meaning": "When something is created, invented, or discovered, and the passive sentence identifies who did it, that person is marked with によって instead of に.",
       "explanation": "When something is created, invented, or discovered, and the passive sentence identifies who did it, that person is marked with によって instead of に. Used with verbs like かきます、はつめいします、はっけんします.",
       "examples": [
@@ -1280,7 +1305,7 @@
         }
       ],
       "summary": "When identifying who created, invented, or discovered something, that person is marked with によって instead of the usual に.",
-      "details": "### によって: Marking the \"Creator\" in a Passive Sentence\n\n「源氏物語」は紫式部**によって**書かれました。 *(The Tale of Genji was written by Murasaki Shikibu.)*\n\nによって replaces に specifically in passive sentences about creation, invention, or discovery (書かれます、発明されます、発見されます) — it signals \"by means of/through the work of,\" a slightly more formal, encyclopedic register than ordinary に. This によって does not extend to the \"suffering passive\" (N1はN2にN3をVpassive): you'd still use に for わたしは弟にパソコンを壊されました, not によって.",
+      "details": "### によって: Marking the \"Creator\" in a Passive Sentence\n\n「源氏物語」は紫式部**によって**書かれました。 *(The Tale of Genji was written by Murasaki Shikibu.)*\n\nによって replaces に specifically in passive sentences about creation, invention, or discovery (書かれます、発明されます、発見されます) — it signals \"by means of/through the work of,\" a slightly more formal, encyclopedic register than ordinary に. This によって does not extend to the \"suffering passive\" (AはBにCをVpassive): you'd still use に for わたしは弟にパソコンを壊されました, not によって.",
       "tags": [
         "passive"
       ]
@@ -1742,7 +1767,7 @@
       "lesson": 11,
       "title": "〜も〜ば〜も",
       "meaning": "Both ~ and ~ / ~ as well as ~",
-      "structure": "N1 も V/adj ば-form、N2 も",
+      "structure": "A も V/adj ば-form、B も",
       "explanation": "Lists two items or qualities that both hold, with a feeling of accumulation.",
       "examples": [
         {
@@ -2512,6 +2537,31 @@
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
+      "title": "〜ところだった",
+      "meaning": "Almost ~ / Nearly ~ (but didn't)",
+      "structure": "Verb (Dictionary form) + ところだった",
+      "explanation": "Used to express that a situation (often negative or dangerous) was just about to happen, but was narrowly avoided.",
+      "examples": [
+        {
+          "jp": "もう少しで電車に乗り遅れるところだった。",
+          "en": "I almost missed the train."
+        },
+        {
+          "jp": "あやうく事故を起こすところだった。",
+          "en": "I almost caused an accident."
+        }
+      ],
+      "summary": "ところだった says a (usually negative or dangerous) situation was on the verge of happening, but was narrowly avoided.",
+      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I almost missed the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with the plain V dictionary form + ところだ／ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
+      "tags": [
+        "time-relative"
+      ]
+    },
+    {
+      "uid": "n3-grammar-16-2",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 16,
       "title": "〜にしたがって",
       "meaning": "As ~ / In accordance with ~",
       "structure": "V dictionary form / N + にしたがって",
@@ -2534,7 +2584,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-2",
+      "uid": "n3-grammar-16-3",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2560,7 +2610,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-3",
+      "uid": "n3-grammar-16-4",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2586,7 +2636,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-4",
+      "uid": "n3-grammar-16-5",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2612,7 +2662,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-5",
+      "uid": "n3-grammar-16-6",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2724,7 +2774,7 @@
       "lesson": 17,
       "title": "〜をはじめ",
       "meaning": "Starting with ~ / ~ and others",
-      "structure": "N1 をはじめ（として）、N2 など",
+      "structure": "A をはじめ（として）、B など",
       "explanation": "Gives the most prominent example first, implying many similar items follow.",
       "examples": [
         {
@@ -4007,7 +4057,7 @@
       "lesson": 24,
       "title": "〜は〜で有名",
       "meaning": "Famous for ~",
-      "structure": "N1 は N2 で有名だ",
+      "structure": "A は B で有名だ",
       "explanation": "Says that something or someone is well known for a particular feature.",
       "examples": [
         {

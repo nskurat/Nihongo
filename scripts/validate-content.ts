@@ -3,17 +3,20 @@ import { resolve } from 'node:path';
 import { z } from 'zod';
 
 // N2 is a grammar-only preview level: there is no N2 vocab or kanji file.
-type Level = 'N5' | 'N4' | 'N3' | 'N2';
+// N1 is data-only: points parked above N2, validated but not shown in the UI.
+type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
 // Mirrors grammar-app/src/utils/levels.ts's LESSON_RANGES. Scripts run outside
 // the app's Vite/browser TS project, so this is a deliberate plain-value copy
-// rather than an import - keep it in sync if the ranges ever change.
+// rather than an import - keep it in sync if the ranges ever change. N1 has no
+// app-side range because the app has no N1 level.
 const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
   N5: { min: 1, max: 25 },
   N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
-  N2: { min: 1, max: 11 },
+  N2: { min: 1, max: 10 },
+  N1: { min: 1, max: 1 },
 };
 
 interface FileTarget {
@@ -34,11 +37,12 @@ const FILES: FileTarget[] = [
     }))
   ),
   { path: 'grammar-app/src/data/n2/grammar.json', level: 'N2', section: 'grammar' },
+  { path: 'grammar-app/src/data/n1/grammar.json', level: 'N1', section: 'grammar' },
 ];
 
 const baseItemSchema = z.object({
   uid: z.string(),
-  level: z.enum(['N5', 'N4', 'N3', 'N2']),
+  level: z.enum(['N5', 'N4', 'N3', 'N2', 'N1']),
   section: z.enum(['grammar', 'vocab', 'kanji']),
   lesson: z.number().int(),
   id: z.union([z.string(), z.number()]).optional(),
@@ -95,7 +99,7 @@ const SCHEMAS = {
   kanji: kanjiItemSchema,
 };
 
-const UID_RE = /^(n5|n4|n3|n2)-(grammar|vocab|kanji)-(\d+)-(\d+)$/;
+const UID_RE = /^(n5|n4|n3|n2|n1)-(grammar|vocab|kanji)-(\d+)-(\d+)$/;
 
 const errors: string[] = [];
 const warnings: string[] = [];

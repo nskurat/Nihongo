@@ -24,8 +24,8 @@ describe('lesson numbering', () => {
 describe('N2 grammar preview', () => {
   it('parses N2 and keeps its lessons in range', () => {
     expect(parseLevel('n2')).toBe('N2');
-    expect(clampLessonForLevel('N2', 11)).toBe(11);
-    expect(clampLessonForLevel('N2', 12)).toBe(1);
+    expect(clampLessonForLevel('N2', 10)).toBe(10);
+    expect(clampLessonForLevel('N2', 11)).toBe(1);
   });
 
   it('offers only grammar for N2 and every section elsewhere', () => {

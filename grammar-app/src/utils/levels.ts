@@ -12,7 +12,7 @@ export const LESSON_RANGES: Record<LevelType, LessonRange> = {
   N5: { min: 1, max: 25, default: 1 },
   N4: { min: 1, max: 25, default: 1 },
   N3: { min: 1, max: 24, default: 1 },
-  N2: { min: 1, max: 11, default: 1 },
+  N2: { min: 1, max: 10, default: 1 },
 };
 
 const ALL_SECTIONS: SectionType[] = ['grammar', 'vocab', 'kanji', 'reading'];

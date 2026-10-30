@@ -8,9 +8,9 @@ function grammarItem(overrides: Partial<GrammarItem> = {}): GrammarItem {
     level: 'N5',
     section: 'grammar',
     lesson: 1,
-    title: 'N1は N2です',
+    title: 'Aは Bです',
     meaning: 'is/equals',
-    structure: 'N1は N2です',
+    structure: 'Aは Bです',
     explanation: '...',
     ...overrides,
   };

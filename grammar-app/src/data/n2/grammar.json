@@ -5,33 +5,6 @@
       "level": "N2",
       "section": "grammar",
       "lesson": 1,
-      "title": "〜ものだから／もんだから",
-      "meaning": "Because... (Reason/Excuse)",
-      "structure": "Verb/い-Adj (Plain) / な-Adj・Noun + な + ものだから／もんだから",
-      "explanation": "Indicates the reason or cause of something, often used to justify it, or give a reason for it in order to deny responsibility or excuse oneself.",
-      "examples": [
-        {
-          "jp": "急いでいたものですから、かぎをかけるのを忘れてしまいました。",
-          "en": "I was in a rush, so I went and forgot to lock up."
-        },
-        {
-          "jp": "とても安かったものだから、買いすぎたんです。",
-          "en": "It was very cheap, so I bought too much."
-        }
-      ],
-      "summary": "もの／もんだから gives a reason, often used to justify or excuse the speaker's own behavior — もんだから is the more casual, contracted spoken form.",
-      "details": "急いでいた**ものですから**、かぎをかけるのを忘れてしまいました。\n*(I was in a rush, so I forgot to lock up.)*\nとても安かった**ものだから**、買いすぎたんです。\n*(It was very cheap, so I bought too much.)*\n\nThis pattern has a distinctly excuse-making or self-justifying flavor — compared with plain から, もの／もんだから frames the cause as an unavoidable circumstance the speaker feels shouldn't be held against them. もんだから is the contracted, more casual spoken equivalent of ものだから.\n\nBecause it presents a personal excuse, the second clause describes what happened — it is not used for requests, commands or invitations (✗ 時間がないものだから、急いでください).",
-      "tags": [
-        "cause-reason"
-      ]
-    }
-  ],
-  "2": [
-    {
-      "uid": "n2-grammar-2-1",
-      "level": "N2",
-      "section": "grammar",
-      "lesson": 2,
       "title": "〜といった",
       "meaning": "Such as ~ / Like ~",
       "structure": "Noun A、Noun B ＋ といった ＋ Noun C",
@@ -53,10 +26,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-2-2",
+      "uid": "n2-grammar-1-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 2,
+      "lesson": 1,
       "title": "〜に（も）わたって",
       "meaning": "Extending over / Spanning (time or space)",
       "structure": "Noun (period / distance / area) + に（も）わたって / にわたる + Noun",
@@ -84,12 +57,12 @@
       ]
     }
   ],
-  "3": [
+  "2": [
     {
-      "uid": "n2-grammar-3-1",
+      "uid": "n2-grammar-2-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 3,
+      "lesson": 2,
       "title": "〜に応じて",
       "meaning": "In accordance with / Depending on",
       "structure": "Noun + に応じて / Noun 1 + に応じた + Noun 2",
@@ -115,10 +88,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-3-2",
+      "uid": "n2-grammar-2-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 3,
+      "lesson": 2,
       "title": "〜にもかかわらず",
       "meaning": "Despite / In spite of",
       "structure": "Verb/い-Adj (Plain) / な-Adj・Noun (である) + にもかかわらず",
@@ -143,39 +116,14 @@
         "concession-contrast",
         "formal-written"
       ]
-    },
+    }
+  ],
+  "3": [
     {
-      "uid": "n2-grammar-3-3",
+      "uid": "n2-grammar-3-1",
       "level": "N2",
       "section": "grammar",
       "lesson": 3,
-      "title": "〜ところだった",
-      "meaning": "Almost ~ / Nearly ~ (but didn't)",
-      "structure": "Verb (Dictionary form) + ところだった",
-      "explanation": "Used to express that a situation (often negative or dangerous) was just about to happen, but was narrowly avoided.",
-      "examples": [
-        {
-          "jp": "もう少しで電車に乗り遅れるところだった。",
-          "en": "I almost missed the train."
-        },
-        {
-          "jp": "あやうく事故を起こすところだった。",
-          "en": "I almost caused an accident."
-        }
-      ],
-      "summary": "ところだった says a (usually negative or dangerous) situation was on the verge of happening, but was narrowly avoided.",
-      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I almost missed the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with the plain V dictionary form + ところだ／ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
-      "tags": [
-        "time-relative"
-      ]
-    }
-  ],
-  "4": [
-    {
-      "uid": "n2-grammar-4-1",
-      "level": "N2",
-      "section": "grammar",
-      "lesson": 4,
       "title": "〜からには",
       "meaning": "Because X, then of course Y / Now that...",
       "structure": "Verb (Plain) / Noun (である) + からには",
@@ -198,10 +146,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-4-2",
+      "uid": "n2-grammar-3-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 4,
+      "lesson": 3,
       "title": "〜ざるを得ない",
       "meaning": "Have no choice but to / Cannot avoid ~ing",
       "structure": "Verb (ない form, drop ない) + ざるを得ない (※する -> せざるを得ない)",
@@ -224,10 +172,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-4-3",
+      "uid": "n2-grammar-3-3",
       "level": "N2",
       "section": "grammar",
-      "lesson": 4,
+      "lesson": 3,
       "title": "〜からなる",
       "meaning": "Consists of / Is composed of",
       "structure": "Noun + からなる / からなっている",
@@ -249,12 +197,12 @@
       ]
     }
   ],
-  "5": [
+  "4": [
     {
-      "uid": "n2-grammar-5-1",
+      "uid": "n2-grammar-4-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 5,
+      "lesson": 4,
       "title": "〜ものの",
       "meaning": "Although / Even though",
       "structure": "Verb/い-Adj (Plain) / な-Adj + な・である / Noun + である + ものの",
@@ -277,12 +225,12 @@
       ]
     }
   ],
-  "6": [
+  "5": [
     {
-      "uid": "n2-grammar-6-1",
+      "uid": "n2-grammar-5-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 6,
+      "lesson": 5,
       "title": "〜をめぐって／〜をめぐる",
       "meaning": "Concerning / Over / Regarding (a dispute or discussion)",
       "structure": "Noun + をめぐって / Noun + をめぐる + Noun",
@@ -305,12 +253,12 @@
       ]
     }
   ],
-  "7": [
+  "6": [
     {
-      "uid": "n2-grammar-7-1",
+      "uid": "n2-grammar-6-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 7,
+      "lesson": 6,
       "title": "〜からいうと／〜からいえば／〜からいって",
       "meaning": "Judging from / From the standpoint of",
       "structure": "Noun + からいうと／からいえば／からいって",
@@ -332,38 +280,12 @@
       ]
     }
   ],
-  "8": [
+  "7": [
     {
-      "uid": "n2-grammar-8-1",
+      "uid": "n2-grammar-7-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 8,
-      "title": "〜といえども",
-      "meaning": "Even though (it is) ~ / Even ~",
-      "structure": "Noun / Plain form + といえども",
-      "explanation": "An archaic/formal expression meaning '〜といっても' or '〜ではあるが'. Used to state that despite a fact or condition, something else holds true.",
-      "examples": [
-        {
-          "jp": "どんな大金持ちといえども、お金で解決できない悩みがあるはずだ。",
-          "en": "However rich one might be, there are bound to be some problems that money can't solve."
-        },
-        {
-          "jp": "名医といえども、すべての患者を救うことはできない。",
-          "en": "Even a renowned doctor cannot save every patient."
-        }
-      ],
-      "summary": "といえども is an archaic/formal way of saying 'even though X, still Y' — roughly equivalent to といっても or ではあるが, but reserved for formal or written register.",
-      "details": "どんな大金持ち**といえども**、お金で解決できない悩みがあるはずだ。\n*(However rich one might be, there are bound to be problems money can't solve.)*\n名医**といえども**、すべての患者を救うことはできない。\n*(Even a renowned doctor cannot save every patient.)*\n\nThis carries a classical, almost proverbial tone — often used with extreme examples (大金持ち, 名医) to make a broad, memorable point. In everyday conversation, といっても or ではあるが would be the natural, less formal substitutes for the same underlying \"even granting X, still Y\" logic.",
-      "tags": [
-        "concession-contrast",
-        "formal-written"
-      ]
-    },
-    {
-      "uid": "n2-grammar-8-2",
-      "level": "N2",
-      "section": "grammar",
-      "lesson": 8,
+      "lesson": 7,
       "title": "N ＋ に基づいて",
       "meaning": "Based on N",
       "structure": "Noun + に基づいて / に基づいた + Noun",
@@ -386,10 +308,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-8-3",
+      "uid": "n2-grammar-7-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 8,
+      "lesson": 7,
       "title": "〜一方（で）",
       "meaning": "While ~ / On the other hand",
       "structure": "Plain form (な-Adj な／である, Noun である) + 一方（で） / 〜。一方（で）、〜",
@@ -416,12 +338,12 @@
       ]
     }
   ],
-  "9": [
+  "8": [
     {
-      "uid": "n2-grammar-9-1",
+      "uid": "n2-grammar-8-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 9,
+      "lesson": 8,
       "title": "〜次第（だ／で）",
       "meaning": "As soon as ~ / Depending on ~ / That is why ~",
       "structure": "V-ます stem + 次第 (as soon as) / Noun + 次第で・次第だ (depending on) / V-た・V-る + 次第です (that is why)",
@@ -454,10 +376,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-9-2",
+      "uid": "n2-grammar-8-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 9,
+      "lesson": 8,
       "title": "〜をもって…とする",
       "meaning": "Regarded as / On the basis of",
       "structure": "Noun + をもって…とする / とされている",
@@ -480,10 +402,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-9-3",
+      "uid": "n2-grammar-8-3",
       "level": "N2",
       "section": "grammar",
-      "lesson": 9,
+      "lesson": 8,
       "title": "〜においては／におきましては",
       "meaning": "In / As for (formal)",
       "structure": "Noun + においては / におきましては",
@@ -507,12 +429,12 @@
       ]
     }
   ],
-  "10": [
+  "9": [
     {
-      "uid": "n2-grammar-10-1",
+      "uid": "n2-grammar-9-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 10,
+      "lesson": 9,
       "title": "〜に及ぶ",
       "meaning": "Extends as far as / Reaches",
       "structure": "Noun + に及ぶ",
@@ -539,12 +461,12 @@
       ]
     }
   ],
-  "11": [
+  "10": [
     {
-      "uid": "n2-grammar-11-1",
+      "uid": "n2-grammar-10-1",
       "level": "N2",
       "section": "grammar",
-      "lesson": 11,
+      "lesson": 10,
       "title": "V-ない ＋ ざる ＋ N",
       "meaning": "Un~ / Not ~ (literary noun modifier)",
       "structure": "Verb (ない-form, drop ない) + ざる + Noun (※する → せざる)",
@@ -567,10 +489,10 @@
       ]
     },
     {
-      "uid": "n2-grammar-11-2",
+      "uid": "n2-grammar-10-2",
       "level": "N2",
       "section": "grammar",
-      "lesson": 11,
+      "lesson": 10,
       "title": "〜から〜に至るまで",
       "meaning": "From ~ all the way to ~",
       "structure": "Noun 1 + から + Noun 2 + に至るまで (にいたるまで)",

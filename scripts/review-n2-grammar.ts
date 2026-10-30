@@ -1,11 +1,18 @@
-import { readFileSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
 
 /**
  * One-time migration: prepares the parked N2 grammar points for display.
  *
- *  - Renumbers lessons to close the gaps left by their old N3 numbering
- *    (12, 14, 16 ... 24 -> 1-11), keeping their order and grouping, and recomputes
+ *  - Moves out the points whose level was contested, now that N2 is visible:
+ *    ものだから and ところだった go to N3 (where most JLPT lists put them), and
+ *    といえども is parked in data/n1/grammar.json (data-only, like N2 used to be).
+ *    No existing N3 uid shifts: ところだった returns to its original slot at the head
+ *    of N3 Lesson 16 (restoring the uids that lesson had before it left), and
+ *    ものだから is appended to N3 Lesson 5, next to おかげで／せいで, under a uid that
+ *    has never existed - so no cached AI text can attach to the wrong point.
+ *  - Renumbers the remaining N2 lessons to close the gaps left by their old N3 numbering
+ *    (14, 16 ... 24 -> 1-10), keeping their order and grouping, and recomputes
  *    every uid positionally. N2 was never shown in the UI, so no saved link,
  *    AI cache entry or reading-history uid points at the old numbers.
  *  - Applies the content review: wrong or misleading structures, English that
@@ -34,7 +41,10 @@ interface Review {
   appendDetails?: string;
 }
 
-const FILE = resolve('grammar-app/src/data/n2/grammar.json');
+const DATA_DIR = 'grammar-app/src/data';
+const FILE = resolve(`${DATA_DIR}/n2/grammar.json`);
+const N3_FILE = resolve(`${DATA_DIR}/n3/grammar.json`);
+const N1_FILE = resolve(`${DATA_DIR}/n1/grammar.json`);
 const dryRun = process.argv.includes('--dry-run');
 
 const REVIEWS: Record<string, Review> = {
@@ -328,7 +338,16 @@ const REVIEWS: Record<string, Review> = {
   },
 };
 
+// Pre-migration uid -> destination. `index` is the 0-based position in the target lesson.
+const MOVES: Record<string, { level: 'N3' | 'N1'; lesson: number; index: 'start' | 'end' }> = {
+  'n2-grammar-12-1': { level: 'N3', lesson: 5, index: 'end' }, // ものだから, next to おかげで／せいで
+  'n2-grammar-16-3': { level: 'N3', lesson: 16, index: 'start' }, // ところだった, its original slot
+  'n2-grammar-21-1': { level: 'N1', lesson: 1, index: 'end' }, // といえども
+};
+
 const chunk = JSON.parse(readFileSync(FILE, 'utf8')) as Chunk;
+const n3 = JSON.parse(readFileSync(N3_FILE, 'utf8')) as Chunk;
+const n1: Chunk = existsSync(N1_FILE) ? (JSON.parse(readFileSync(N1_FILE, 'utf8')) as Chunk) : {};
 const seen = new Set<string>();
 
 for (const items of Object.values(chunk)) {
@@ -354,6 +373,38 @@ for (const items of Object.values(chunk)) {
 const missing = Object.keys(REVIEWS).filter((uid) => !seen.has(uid));
 if (missing.length) throw new Error(`Planned uids not found: ${missing.join(', ')}`);
 
+const n3Before = new Map(Object.values(n3).flat().map((item) => [item.uid, item.title]));
+
+for (const [oldLesson, items] of Object.entries(chunk)) {
+  for (const item of [...items]) {
+    const move = MOVES[item.uid];
+    if (!move) continue;
+    chunk[oldLesson] = chunk[oldLesson].filter((other) => other !== item);
+    const target = move.level === 'N3' ? n3 : n1;
+    const list = (target[move.lesson] ??= []);
+    const moved = { ...item, level: move.level, lesson: move.lesson };
+    if (move.index === 'start') list.unshift(moved);
+    else list.push(moved);
+    if (dryRun) console.log(`${item.uid} -> ${move.level} Lesson ${move.lesson} (${move.index})  ${item.title}`);
+  }
+  if (chunk[oldLesson].length === 0) delete chunk[oldLesson];
+}
+
+for (const [level, target] of [['n3', n3], ['n1', n1]] as const) {
+  for (const [lesson, items] of Object.entries(target)) {
+    items.forEach((item, n) => (item.uid = `${level}-grammar-${lesson}-${n + 1}`));
+  }
+}
+
+// Every N3 uid that existed before must still name the same point, except the
+// Lesson 16 slots, which return to their pre-PR-#10 assignments.
+for (const item of Object.values(n3).flat()) {
+  const before = n3Before.get(item.uid);
+  if (before !== undefined && before !== item.title && item.lesson !== 16) {
+    throw new Error(`${item.uid} changed from "${before}" to "${item.title}"`);
+  }
+}
+
 const output: Chunk = {};
 const lessons = Object.keys(chunk)
   .map(Number)
@@ -371,5 +422,8 @@ if (dryRun) {
   console.log(`\n${seen.size} items reviewed, ${lessons.length} lessons (dry run, nothing written)`);
 } else {
   writeFileSync(FILE, `${JSON.stringify(output, null, 2)}\n`);
-  console.log(`Wrote ${FILE}: ${seen.size} items reviewed, lessons renumbered 1-${lessons.length}`);
+  writeFileSync(N3_FILE, `${JSON.stringify(n3, null, 2)}\n`);
+  mkdirSync(dirname(N1_FILE), { recursive: true });
+  writeFileSync(N1_FILE, `${JSON.stringify(n1, null, 2)}\n`);
+  console.log(`Wrote ${FILE}: ${seen.size} items reviewed, lessons renumbered 1-${lessons.length}; moved ${Object.keys(MOVES).length} out`);
 }

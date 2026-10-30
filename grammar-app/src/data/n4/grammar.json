@@ -715,10 +715,10 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 5,
-      "title": "N1に N2が Vて-form あります",
-      "structure": "N1に N2が Vて-form あります",
+      "title": "Aに Bが Vて-form あります",
+      "structure": "Aに Bが Vて-form あります",
       "meaning": "Indicates the state that results from an action intentionally done by somebody, using transitive verbs.",
-      "explanation": "Indicates the state that results from an action intentionally done by somebody, using transitive verbs. N2は Vて-form あります is used when N2 is taken up as the topic. Often used with もう to show that some preparation has been done. Contrast with Vて-form います: 窓が閉まっています simply describes the window being closed (state), while 窓が閉めてあります implies somebody closed it on purpose. Most Vて-form います verbs are intransitive; verbs in Vて-form あります are transitive — many intransitive verbs have a transitive counterpart sharing part of the same kanji/reading.",
+      "explanation": "Indicates the state that results from an action intentionally done by somebody, using transitive verbs. Bは Vて-form あります is used when B is taken up as the topic. Often used with もう to show that some preparation has been done. Contrast with Vて-form います: 窓が閉まっています simply describes the window being closed (state), while 窓が閉めてあります implies somebody closed it on purpose. Most Vて-form います verbs are intransitive; verbs in Vて-form あります are transitive — many intransitive verbs have a transitive counterpart sharing part of the same kanji/reading.",
       "examples": [
         {
           "jp": "机の上にメモが置いてあります。",
@@ -734,7 +734,7 @@
         }
       ],
       "summary": "Nてあります describes the state left behind by someone's deliberate, purposeful action — contrast with Nています, which just describes a state with no implication that anyone did it on purpose.",
-      "details": "### てあります (Deliberate) vs ています (Just a State)\n\n| Pattern | Verb type | Implies | Example |\n| :--- | :--- | :--- | :--- |\n| **N2が Vて-form います** | Intransitive | Just describes the resulting state, no mention of who caused it | 窓が閉まっ**ています**。 *(The window is closed — as a plain fact.)* |\n| **N2が Vて-form あります** | Transitive | Someone deliberately did this, often in preparation | 窓が閉め**てあります**。 *(The window has been closed — by someone, on purpose.)* |\n\nMost Vて-form います verbs are intransitive (自動詞); Vて-form あります always uses transitive verbs (他動詞), and many intransitive verbs have a transitive partner sharing part of the same kanji/reading (開く／開ける, 閉まる／閉める, つく／つける). もう often signals that a preparation has already been taken care of: ホテルはもう予約してあります (I've already reserved a hotel). When N2 is the established topic, は replaces が: プレゼントはもう買ってあります。",
+      "details": "### てあります (Deliberate) vs ています (Just a State)\n\n| Pattern | Verb type | Implies | Example |\n| :--- | :--- | :--- | :--- |\n| **Bが Vて-form います** | Intransitive | Just describes the resulting state, no mention of who caused it | 窓が閉まっ**ています**。 *(The window is closed — as a plain fact.)* |\n| **Bが Vて-form あります** | Transitive | Someone deliberately did this, often in preparation | 窓が閉め**てあります**。 *(The window has been closed — by someone, on purpose.)* |\n\nMost Vて-form います verbs are intransitive (自動詞); Vて-form あります always uses transitive verbs (他動詞), and many intransitive verbs have a transitive partner sharing part of the same kanji/reading (開く／開ける, 閉まる／閉める, つく／つける). もう often signals that a preparation has already been taken care of: ホテルはもう予約してあります (I've already reserved a hotel). When B is the established topic, は replaces が: プレゼントはもう買ってあります。",
       "tags": [
         "state-continuation",
         "preparation"
@@ -2331,10 +2331,10 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 12,
-      "title": "N1（人）はN2（人）にVpassive",
-      "structure": "N1（人）はN2（人）にVpassive",
+      "title": "A（人）はB（人）にVpassive",
+      "structure": "A（人）はB（人）にVpassive",
       "meaning": "States another person's action from the point of view of the person it's directed at.",
-      "explanation": "States another person's action from the point of view of the person it's directed at. That person (N1) becomes the topic, marked with は; the person who performs the action (N2) is marked with に. Something that moves (an animal, a car) can replace N2.",
+      "explanation": "States another person's action from the point of view of the person it's directed at. That person (A) becomes the topic, marked with は; the person who performs the action (B) is marked with に. Something that moves (an animal, a car) can replace B.",
       "examples": [
         {
           "jp": "わたしは先生に褒められました。",
@@ -2349,8 +2349,8 @@
           "en": "I was laughed at by my friend."
         }
       ],
-      "summary": "N1（affected person, topic）は N2（doer）に Vpassive states someone else's action from the point of view of the person it happens to; a moving thing (animal, vehicle) can fill the N2 slot too.",
-      "details": "わたしは先生**に**褒められました。 *(I was praised by my teacher.)*\n\nN1 (は, the topic) is the person the action happens *to*; N2 (に) is the person who *performs* the action. This flips the perspective compared to the active sentence (先生はわたしを褒めました) — the passive puts the affected person front and center as the topic. N2 doesn't have to be a person: 犬に噛まれました (I was bitten by a dog) works the same way.",
+      "summary": "A（affected person, topic）は B（doer）に Vpassive states someone else's action from the point of view of the person it happens to; a moving thing (animal, vehicle) can fill the B slot too.",
+      "details": "わたしは先生**に**褒められました。 *(I was praised by my teacher.)*\n\nA (は, the topic) is the person the action happens *to*; B (に) is the person who *performs* the action. This flips the perspective compared to the active sentence (先生はわたしを褒めました) — the passive puts the affected person front and center as the topic. B doesn't have to be a person: 犬に噛まれました (I was bitten by a dog) works the same way.",
       "tags": [
         "passive"
       ]
@@ -2360,10 +2360,10 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 12,
-      "title": "N1（人）はN2（人）にN3をVpassive",
-      "structure": "N1（人）はN2（人）にN3をVpassive",
-      "meaning": "Used when N2's action is directed at an object belonging to N1, and N1 feels troubled or annoyed by it.",
-      "explanation": "Used when N2's action is directed at an object belonging to N1, and N1 feels troubled or annoyed by it. Note: the topic is N1 (the person affected), not N3 (the object) itself — わたしは弟にパソコンを壊されました conveys the speaker's trouble; わたしのパソコンは弟に壊されました is grammatical but neutral, lacking the 'affected owner' nuance.",
+      "title": "A（人）はB（人）にCをVpassive",
+      "structure": "A（人）はB（人）にCをVpassive",
+      "meaning": "Used when B's action is directed at an object belonging to A, and A feels troubled or annoyed by it.",
+      "explanation": "Used when B's action is directed at an object belonging to A, and A feels troubled or annoyed by it. Note: the topic is A (the person affected), not C (the object) itself — わたしは弟にパソコンを壊されました conveys the speaker's trouble; わたしのパソコンは弟に壊されました is grammatical but neutral, lacking the 'affected owner' nuance.",
       "examples": [
         {
           "jp": "わたしは弟にパソコンを壊されました。",
@@ -2374,8 +2374,8 @@
           "en": "My friend read my diary (and I'm upset about it)."
         }
       ],
-      "summary": "N1はN2にN3を Vpassive is used when N2's action affects an object belonging to N1, and N1 is troubled or annoyed by it — the topic is N1 (the affected person); making N3 the topic loses the 'affected' nuance.",
-      "details": "### The \"Suffering Passive\" on an Object\n\nわたしは弟にパソコンを壊されました。 *(I had my computer broken by my brother — and I'm not happy about it.)*\n\n> **Nuance difference**: To show that the speaker was personally affected, make N1 the topic, not N3 (the object).\n> - ○ わたしは弟にパソコンを壊されました。(I'm affected)\n> - △ わたしのパソコンは弟に壊されました。(grammatical, but neutral — it lacks the 'affected owner' feel)\n\nThis \"suffering passive\" construction inherently carries the nuance that the speaker was bothered or inconvenienced — it's not a neutral, purely descriptive statement the way the object-as-subject passive (N（物）が／はVpassive) is.",
+      "summary": "AはBにCを Vpassive is used when B's action affects an object belonging to A, and A is troubled or annoyed by it — the topic is A (the affected person); making C the topic loses the 'affected' nuance.",
+      "details": "### The \"Suffering Passive\" on an Object\n\nわたしは弟にパソコンを壊されました。 *(I had my computer broken by my brother — and I'm not happy about it.)*\n\n> **Nuance difference**: To show that the speaker was personally affected, make A the topic, not C (the object).\n> - ○ わたしは弟にパソコンを壊されました。(I'm affected)\n> - △ わたしのパソコンは弟に壊されました。(grammatical, but neutral — it lacks the 'affected owner' feel)\n\nThis \"suffering passive\" construction inherently carries the nuance that the speaker was bothered or inconvenienced — it's not a neutral, purely descriptive statement the way the object-as-subject passive (N（物）が／はVpassive) is.",
       "tags": [
         "passive"
       ]
@@ -2986,8 +2986,8 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 16,
-      "title": "N1にN2をやります",
-      "structure": "N1にN2をやります",
+      "title": "AにBをやります",
+      "structure": "AにBをやります",
       "meaning": "When the receiver is of lower social status, or an animal or plant, やります is normally used.",
       "explanation": "When the receiver is of lower social status, or an animal or plant, やります is normally used. However, when the receiver is a person, あげます is often preferred in current Japanese.",
       "examples": [
@@ -3015,8 +3015,8 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 16,
-      "title": "N1にN2をいただきます",
-      "structure": "N1にN2をいただきます",
+      "title": "AにBをいただきます",
+      "structure": "AにBをいただきます",
       "meaning": "When the speaker receives a thing from a person of higher social status, いただきます is used instead of もらいます.",
       "explanation": "When the speaker receives a thing from a person of higher social status, いただきます is used instead of もらいます.",
       "examples": [
@@ -3030,7 +3030,7 @@
         }
       ],
       "summary": "いただきます replaces もらいます when receiving something from someone of higher social status — the humble-language partner of もらいます, elevating the giver rather than the speaker.",
-      "details": "See the N1にN2をやります point's table for the full giving/receiving system by social direction.\n\nわたしは部長に**お土産をいただきました**。 *(I received a souvenir from the general manager.)*\n\nいただきます is grammatically identical to もらいます in structure (N1にN2をもらいます／いただきます) — only the verb itself changes to signal that N2 (the giver) outranks the speaker.",
+      "details": "See the AにBをやります point's table for the full giving/receiving system by social direction.\n\nわたしは部長に**お土産をいただきました**。 *(I received a souvenir from the general manager.)*\n\nいただきます is grammatically identical to もらいます in structure (AにBをもらいます／いただきます) — only the verb itself changes to signal that B (the giver) outranks the speaker.",
       "tags": [
         "giving-receiving",
         "keigo-humble"
@@ -3041,8 +3041,8 @@
       "level": "N4",
       "section": "grammar",
       "lesson": 16,
-      "title": "［わたしに］N2をくださいます",
-      "structure": "［わたしに］N2をくださいます",
+      "title": "［わたしに］Bをくださいます",
+      "structure": "［わたしに］Bをくださいます",
       "meaning": "When a person of higher social status gives the speaker something, くださいます is used instead of くれます.",
       "explanation": "When a person of higher social status gives the speaker something, くださいます is used instead of くれます. It's also used when the receiver is a member of the speaker's family.",
       "examples": [
@@ -3060,7 +3060,7 @@
         }
       ],
       "summary": "くださいます replaces くれます when a person of higher status gives the speaker something — also used when the receiver is a member of the speaker's family.",
-      "details": "部長がわたしに**お土産をくださいました**。 *(The general manager gave me a souvenir.)*\n\nNote the register: くださいます is honorific (尊敬語), raising the giver's own act, whereas いただきます／さしあげます are humble (謙譲語) forms that lower the speaker's own act — all of them show respect to the other person. See the N1にN2をやります point's table for how くださいます sits within the full giving/receiving system.",
+      "details": "部長がわたしに**お土産をくださいました**。 *(The general manager gave me a souvenir.)*\n\nNote the register: くださいます is honorific (尊敬語), raising the giver's own act, whereas いただきます／さしあげます are humble (謙譲語) forms that lower the speaker's own act — all of them show respect to the other person. See the AにBをやります point's table for how くださいます sits within the full giving/receiving system.",
       "tags": [
         "giving-receiving",
         "keigo-respectful"
@@ -4244,8 +4244,8 @@
           "en": "The teacher made the students write a report."
         }
       ],
-      "summary": "'Make/let a person do V' with a transitive verb — the person doing the action is marked with に, and the object of that action keeps を, exactly like the passive construction's N1にN2をVpassive shape.",
-      "details": "朝は忙しいですから、娘**に**朝ごはんの準備**を**手伝わせます。\n*(I am busy in the morning, so I make my daughter help prepare breakfast.)*\n\nCompare the pattern shape N（person）に N（object）を V-causative with the passive pattern N1（人）はN2（人）にN3をVpassive — both use に for the \"other person\" involved and を for the object, even though causative and passive express opposite relationships (making someone act, vs. being affected by someone's act).",
+      "summary": "'Make/let a person do V' with a transitive verb — the person doing the action is marked with に, and the object of that action keeps を, exactly like the passive construction's AにBをVpassive shape.",
+      "details": "朝は忙しいですから、娘**に**朝ごはんの準備**を**手伝わせます。\n*(I am busy in the morning, so I make my daughter help prepare breakfast.)*\n\nCompare the pattern shape N（person）に N（object）を V-causative with the passive pattern A（人）はB（人）にCをVpassive — both use に for the \"other person\" involved and を for the object, even though causative and passive express opposite relationships (making someone act, vs. being affected by someone's act).",
       "tags": [
         "causative"
       ]
