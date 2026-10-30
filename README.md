@@ -4,7 +4,7 @@
 
 🔗 **Live Site**: [https://nskurat.github.io/Nihongo/](https://nskurat.github.io/Nihongo/)
 
-An interactive Japanese study hub for **Minna no Nihongo** (JLPT N5/N4/N3), with
+An interactive Japanese study hub for **JLPT N5/N4/N3**, with
 grammar, vocabulary and kanji reference plus AI-generated reading practice.
 
 For the codebase layout, conventions and constraints, see [AGENTS.md](AGENTS.md) —

@@ -48,7 +48,7 @@ describe('AI Reading Prompt Builder', () => {
       vocabList: mockVocab,
     });
 
-    expect(prompt).toContain('TARGET LESSON: Minna no Nihongo Lesson 12 (JLPT N3)');
+    expect(prompt).toContain('TARGET LESSON: Lesson 12 (JLPT N3)');
     expect(prompt).toContain('〜てたまらない');
     expect(prompt).toContain('絶望 (ぜつぼう: despair)');
   });

@@ -5,7 +5,7 @@ it is loaded into every session. Details belong in `docs/refactor/`, not here.
 
 ## What this is
 
-A static, client-only study portal for Minna no Nihongo (JLPT N5/N4/N3): grammar,
+A static, client-only study portal for JLPT N5/N4/N3: grammar,
 vocabulary and kanji reference plus AI-generated reading practice. React 19 + Vite +
 Tailwind v4 + zustand + react-router. No backend. Deployed to GitHub Pages at
 `https://nskurat.github.io/Nihongo/` by `.github/workflows/deploy.yml` on push to `main`.
@@ -55,7 +55,7 @@ grammar-app/
 
 ## Constraints
 
-- **Lesson ranges differ per level**: N5 = 1–25, N4 = 26–50 (Book II numbering),
+- **Lesson ranges differ per level**: N5 = 1–25, N4 = 26–50,
   N3 = 1–24. Never assume lessons start at 1. Source of truth: `utils/levels.ts`
   (`LESSON_RANGES`, also the single source `scripts/validate-content.ts` mirrors).
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or

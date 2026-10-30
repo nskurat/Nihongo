@@ -96,7 +96,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               <span className="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 text-xs font-bold rounded-md uppercase tracking-wide">
                 {activeLevel} Level
               </span>
-              <span className="text-xs text-slate-400">• Minna no Nihongo Reference</span>
+              <span className="text-xs text-slate-400">• Grammar Reference</span>
             </div>
             <h2 className="text-3xl font-extrabold text-slate-800 border-b-4 border-indigo-500 pb-1 inline-block mt-2">
               Lesson {activeLesson}

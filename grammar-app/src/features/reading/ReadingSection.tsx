@@ -312,7 +312,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                   <option value="all">General {activeLevel} (All Lessons Aligned)</option>
                   {totalLessons.map((l) => (
                     <option key={l} value={l}>
-                      Minna no Nihongo Lesson {l} (Targeted Vocabulary & Grammar)
+                      Lesson {l} (Targeted Vocabulary & Grammar)
                     </option>
                   ))}
                 </select>

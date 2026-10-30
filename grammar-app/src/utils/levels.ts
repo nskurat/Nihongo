@@ -6,8 +6,8 @@ interface LessonRange {
   default: number;
 }
 
-// Lesson numbering follows the Minna no Nihongo textbook for N4 (26-50, Book II)
-// while N5 and N3 use their own independent 1-based ranges for this app's content.
+// N4 lessons are numbered 26-50, while N5 and N3 use their own independent 1-based
+// ranges for this app's content.
 // Exported as the single source of truth for scripts/validate-content.ts.
 export const LESSON_RANGES: Record<LevelType, LessonRange> = {
   N5: { min: 1, max: 25, default: 1 },

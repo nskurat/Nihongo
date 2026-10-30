@@ -68,7 +68,7 @@ export default function App() {
 
       <footer className="mt-12 py-6 border-t border-slate-200 bg-white/50 text-center text-xs text-slate-500">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span>Minna no Nihongo Study Portal • JLPT N5, N4 & N3</span>
+          <span>Japanese Study Portal • JLPT N5, N4 & N3</span>
           <span>Interactive Grammar, Vocabulary & Kanji Reference</span>
         </div>
       </footer>

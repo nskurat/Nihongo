@@ -64,7 +64,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight flex items-center gap-2">
-                Minna no Nihongo Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
+                Japanese Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
               </h1>
               <p className="text-indigo-200 text-xs font-medium">
                 JLPT N5, N4 & N3 Interactive Reference & AI Practice

@@ -29,7 +29,7 @@ function buildContextBlock(
     .join(', ');
 
   return [
-    `TARGET LESSON: Minna no Nihongo Lesson ${lesson} (JLPT ${level})`,
+    `TARGET LESSON: Lesson ${lesson} (JLPT ${level})`,
     `- Target Grammar to incorporate naturally:\n${grammarSnippets || `Key patterns from Lesson ${lesson}`}`,
     `- Target Vocabulary:\n${vocabSnippets || `Key words from Lesson ${lesson}`}`,
   ].join('\n');
