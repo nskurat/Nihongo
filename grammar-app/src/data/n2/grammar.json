@@ -47,7 +47,7 @@
         }
       ],
       "summary": "といった lists a couple of representative examples of a broader category, implying there are more items like them not mentioned.",
-      "details": "5月5日には「ちまき」「かしわもち」**といった**昔からの菓子を食べる習慣がある。\n*(On May 5th, there's a custom of eating traditional sweets such as chimaki and kashiwamochi.)*\n\nStructurally: N1、N2 ＋ といった ＋ N3, where N1/N2 are specific examples and N3 is the category they belong to (お菓子, 留学生, etc.). Compare with N4 Lesson 11-4's とか、とか, which lists examples in casual speech — といった is the more formal, written equivalent used for the same purpose.",
+      "details": "5月5日には「ちまき」「かしわもち」**といった**昔からの菓子を食べる習慣がある。\n*(On May 5th, there's a custom of eating traditional sweets such as chimaki and kashiwamochi.)*\n\nStructurally: N1、N2 ＋ といった ＋ N3, where N1/N2 are specific examples and N3 is the category they belong to (お菓子, 留学生, etc.). Compare with the N4 とか、とか point, which lists examples in casual speech — といった is the more formal, written equivalent used for the same purpose.",
       "tags": [
         "listing-examples"
       ]
@@ -127,10 +127,35 @@
         }
       ],
       "summary": "にもかかわらず means 'despite' or 'in spite of' — similar to のに, but more formal, and typically found in writing or formal speech.",
-      "details": "雨が激しく降っている**にもかかわらず**、サッカーの試合は行われた。\n*(Despite the heavy rain, the soccer match was held.)*\n彼は熱がある**にもかかわらず**、仕事へ行きました。 *(In spite of having a fever, he went to work.)*\n\nSee N4 Lesson 20-2's のに for the more conversational equivalent of this same contrastive meaning — にもかかわらず carries the same \"contrary to expectation\" nuance but reads as noticeably more formal, and doesn't carry のに's stronger emotional undertone of complaint/reproach.",
+      "details": "雨が激しく降っている**にもかかわらず**、サッカーの試合は行われた。\n*(Despite the heavy rain, the soccer match was held.)*\n彼は熱がある**にもかかわらず**、仕事へ行きました。 *(In spite of having a fever, he went to work.)*\n\nSee the N4 のに point for the more conversational equivalent of this same contrastive meaning — にもかかわらず carries the same \"contrary to expectation\" nuance but reads as noticeably more formal, and doesn't carry のに's stronger emotional undertone of complaint/reproach.",
       "tags": [
         "concession-contrast",
         "formal-written"
+      ]
+    },
+    {
+      "uid": "n2-grammar-16-3",
+      "level": "N2",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜ところだった",
+      "meaning": "Was just about to / Almost happened",
+      "structure": "Verb (Dictionary form) + ところだった",
+      "explanation": "Used to express that a situation (often negative or dangerous) was just about to happen, but was narrowly avoided.",
+      "examples": [
+        {
+          "jp": "もう少しで電車に乗り遅れるところだった。",
+          "en": "I was just about to miss the train (but I made it)."
+        },
+        {
+          "jp": "あやうく事故を起こすところだった。",
+          "en": "I almost caused an accident."
+        }
+      ],
+      "summary": "ところだった says a (usually negative or dangerous) situation was on the verge of happening, but was narrowly avoided.",
+      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I was just about to miss the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with the plain V dictionary form + ところだ／ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
+      "tags": [
+        "time-relative"
       ]
     }
   ],
@@ -234,7 +259,7 @@
         }
       ],
       "summary": "ものの concedes that the first statement is true, but the outcome that follows runs contrary to what you'd expect, or falls short of it.",
-      "details": "新しいパソコンを買った**ものの**、使い方がわからない。 *(Even though I bought a new PC, I don't know how to use it.)*\n日本語の勉強を始めた**ものの**、なかなか上達しない。 *(Although I started studying Japanese, I'm not making much progress.)*\n\nものの has a similar concessive feel to のに (N4 Lesson 20-2) and にもかかわらず (Lesson 16-2), but reads as more neutral/literary — it doesn't carry のに's charge of complaint/reproach, just a calm acknowledgment that the outcome didn't match the premise's natural expectation.",
+      "details": "新しいパソコンを買った**ものの**、使い方がわからない。 *(Even though I bought a new PC, I don't know how to use it.)*\n日本語の勉強を始めた**ものの**、なかなか上達しない。 *(Although I started studying Japanese, I'm not making much progress.)*\n\nものの has a similar concessive feel to のに (N4) and にもかかわらず, but reads as more neutral/literary — it doesn't carry のに's charge of complaint/reproach, just a calm acknowledgment that the outcome didn't match the premise's natural expectation.",
       "tags": [
         "concession-contrast",
         "formal-written"
@@ -262,7 +287,7 @@
         }
       ],
       "summary": "をめぐって marks the central issue that people are arguing, discussing, or competing over — 'concerning/over [a contested topic].'",
-      "details": "新しい法律**をめぐって**、激しい議論が交わされている。 *(Intense debates are being exchanged over the new law.)*\n遺産**をめぐる**争いが起きた。 *(A dispute over the inheritance occurred.)*\n\nをめぐって is reserved specifically for situations involving conflict, debate, or competing interests around a shared topic — different from a neutral topic marker like について (N3 Lesson 9-3), which just introduces what something is about without implying any dispute.",
+      "details": "新しい法律**をめぐって**、激しい議論が交わされている。 *(Intense debates are being exchanged over the new law.)*\n遺産**をめぐる**争いが起きた。 *(A dispute over the inheritance occurred.)*\n\nをめぐって is reserved specifically for situations involving conflict, debate, or competing interests around a shared topic — different from a neutral topic marker like について (N3), which just introduces what something is about without implying any dispute.",
       "tags": [
         "viewpoint-standpoint",
         "formal-written"
@@ -290,7 +315,7 @@
         }
       ],
       "summary": "からいうと／からいえば／からいって all mark the standpoint or evidence a judgment is being made from — 'judging from...'",
-      "details": "現状**からいうと**、計画の変更は避けられない。 *(Judging from the current situation, a change of plans is unavoidable.)*\n消費者の立場**からいえば**、値段は安いほうがいい。 *(From consumers' standpoint, cheaper prices are better.)*\n\nAll three variants (からいうと／からいえば／からいって) are interchangeable, attaching to a noun that represents the vantage point or body of evidence behind the following judgment. Compare with にとって (N3 Lesson 6-2), which marks a perspective for evaluating something's *importance/difficulty*, whereas からいうと marks the *basis* for a specific conclusion or prediction.",
+      "details": "現状**からいうと**、計画の変更は避けられない。 *(Judging from the current situation, a change of plans is unavoidable.)*\n消費者の立場**からいえば**、値段は安いほうがいい。 *(From consumers' standpoint, cheaper prices are better.)*\n\nAll three variants (からいうと／からいえば／からいって) are interchangeable, attaching to a noun that represents the vantage point or body of evidence behind the following judgment. Compare with にとって (N3), which marks a perspective for evaluating something's *importance/difficulty*, whereas からいうと marks the *basis* for a specific conclusion or prediction.",
       "tags": [
         "viewpoint-standpoint"
       ]
@@ -343,7 +368,7 @@
         }
       ],
       "summary": "に基づいて means 'based on' — grounding something in a stated source, fact, or set of results — with に基づいた used to modify a following noun directly.",
-      "details": "この映画は、事実**に基づいて**作られている。 *(This film is based on true facts.)*\nデパートでは、調査結果**に基づいた**新しいサービスを導入した。 *(The department store introduced new services based on survey results.)*\n\nStructurally straightforward: に基づいて attaches mid-sentence (like a て-form connector), while に基づいた attaches directly before a noun it modifies — the same shape distinction you've already seen with による／によって (N3 Lesson 8-1) and に関する／に関して (N3 Lesson 15-2).",
+      "details": "この映画は、事実**に基づいて**作られている。 *(This film is based on true facts.)*\nデパートでは、調査結果**に基づいた**新しいサービスを導入した。 *(The department store introduced new services based on survey results.)*\n\nStructurally straightforward: に基づいて attaches mid-sentence (like a て-form connector), while に基づいた attaches directly before a noun it modifies — the same shape distinction you've already seen with による／によって (N3) and に関する／に関して (N3).",
       "tags": [
         "viewpoint-standpoint",
         "formal-written"

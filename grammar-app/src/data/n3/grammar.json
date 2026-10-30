@@ -1259,6 +1259,31 @@
         "permission",
         "keigo-polite"
       ]
+    },
+    {
+      "uid": "n3-grammar-8-7",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "N1はN2（人）によってVpassive",
+      "structure": "N1はN2（人）によってVpassive",
+      "meaning": "When something is created, invented, or discovered, and the passive sentence identifies who did it, that person is marked with によって instead of に.",
+      "explanation": "When something is created, invented, or discovered, and the passive sentence identifies who did it, that person is marked with によって instead of に. Used with verbs like かきます、はつめいします、はっけんします.",
+      "examples": [
+        {
+          "jp": "「源氏物語」は紫式部によって書かれました。",
+          "en": "\"The Tale of Genji\" was written by Murasaki Shikibu."
+        },
+        {
+          "jp": "電話はベルによって発明されました。",
+          "en": "The telephone was invented by Bell."
+        }
+      ],
+      "summary": "When identifying who created, invented, or discovered something, that person is marked with によって instead of the usual に.",
+      "details": "### によって: Marking the \"Creator\" in a Passive Sentence\n\n「源氏物語」は紫式部**によって**書かれました。 *(The Tale of Genji was written by Murasaki Shikibu.)*\n\nによって replaces に specifically in passive sentences about creation, invention, or discovery (書かれます、発明されます、発見されます) — it signals \"by means of/through the work of,\" a slightly more formal, encyclopedic register than ordinary に. This によって does not extend to the \"suffering passive\" (N1はN2にN3をVpassive): you'd still use に for わたしは弟にパソコンを壊されました, not によって.",
+      "tags": [
+        "passive"
+      ]
     }
   ],
   "9": [
@@ -1279,6 +1304,10 @@
         {
           "jp": "スーパーは家から近ければ近いほど便利です。",
           "en": "The closer the supermarket is to home, the more convenient it is."
+        },
+        {
+          "jp": "部屋は静かなら静かなほど、勉強しやすいです。",
+          "en": "The quieter the room is, the easier it is to study."
         }
       ],
       "summary": "ばほど repeats the same verb or adjective in both the ば-conditional and dictionary-form halves to show that a degree scales up (or down) together — 'the more..., the more...'",
@@ -1939,6 +1968,27 @@
         "conditional",
         "conjecture-inference"
       ]
+    },
+    {
+      "uid": "n3-grammar-12-8",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "とちゅうで",
+      "structure": "とちゅうで",
+      "meaning": "とちゅう means \"during\" or \"on the way\", and follows a verb's dictionary form or Nの.",
+      "explanation": "とちゅう means \"during\" or \"on the way\", and follows a verb's dictionary form or Nの.",
+      "examples": [
+        {
+          "jp": "来る途中で事故があって、バスが遅れてしまったんです。",
+          "en": "On my way here, there was an accident and the bus was delayed."
+        }
+      ],
+      "summary": "とちゅう means 'during' or 'on the way,' and attaches after a verb's dictionary form or Nの.",
+      "details": "来る**途中で**事故があって、バスが遅れてしまったんです。\n*(On my way here, there was an accident and the bus was delayed.)*\n\nCommon combinations: V dictionary formとちゅうで (来る途中で, 帰る途中で), Nのとちゅうで (仕事のとちゅうで, \"in the middle of work\"). とちゅう literally breaks down as \"mid-way\" — useful for describing something that happened partway through a journey or activity, before it was completed.",
+      "tags": [
+        "time-relative"
+      ]
     }
   ],
   "13": [
@@ -2119,6 +2169,28 @@
       "tags": [
         "time-relative",
         "experience"
+      ]
+    },
+    {
+      "uid": "n3-grammar-13-8",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 13,
+      "title": "Quantifier ＋ は",
+      "structure": "Quantifier ＋ は",
+      "meaning": "When attached to a quantifier, the particle は indicates the minimum amount the speaker estimates is required or necessary.",
+      "explanation": "When attached to a quantifier, the particle は indicates the minimum amount the speaker estimates is required or necessary.",
+      "examples": [
+        {
+          "jp": "日本では結婚式をするのに200万円は要ります。",
+          "en": "In Japan you need at least 2 million yen to hold a wedding."
+        }
+      ],
+      "summary": "Quantifier + は indicates a minimum — the least amount the speaker estimates is required or necessary.",
+      "details": "日本では結婚式をするのに200万円**は**要ります。\n*(In Japan you need at least 2 million yen to hold a wedding.)*\n\nは here signals \"at the very least, this much\" — the actual amount could well be more, but the speaker is stating a floor. Compare with quantifier + も, which instead signals that an amount is surprisingly *large*, not a minimum estimate.",
+      "tags": [
+        "particle-usage",
+        "emphasis-limitation"
       ]
     }
   ],
@@ -2440,31 +2512,6 @@
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
-      "title": "〜ところだった",
-      "meaning": "Was just about to / Almost happened",
-      "structure": "Verb (Dictionary form) + ところだった",
-      "explanation": "Used to express that a situation (often negative or dangerous) was just about to happen, but was narrowly avoided.",
-      "examples": [
-        {
-          "jp": "もう少しで電車に乗り遅れるところだった。",
-          "en": "I was just about to miss the train (but I made it)."
-        },
-        {
-          "jp": "あやうく事故を起こすところだった。",
-          "en": "I almost caused an accident."
-        }
-      ],
-      "summary": "ところだった says a (usually negative or dangerous) situation was on the verge of happening, but was narrowly avoided.",
-      "details": "もう少しで電車に乗り遅れる**ところだった**。 *(I was just about to miss the train — but I made it.)*\nあやうく事故を起こす**ところだった**。 *(I almost caused an accident.)*\n\nOften paired with adverbs emphasizing how close a call it was — もう少しで (\"just a little more and...\"), あやうく (\"narrowly\") — the whole point of the sentence is relief that the bad outcome was avoided at the last moment. Contrast with the plain V dictionary form + ところだ／ところです (\"about to...\"), which doesn't carry that same narrowly-averted, past-tense nuance.",
-      "tags": [
-        "time-relative"
-      ]
-    },
-    {
-      "uid": "n3-grammar-16-2",
-      "level": "N3",
-      "section": "grammar",
-      "lesson": 16,
       "title": "〜にしたがって",
       "meaning": "As ~ / In accordance with ~",
       "structure": "V dictionary form / N + にしたがって",
@@ -2487,7 +2534,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-3",
+      "uid": "n3-grammar-16-2",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2513,7 +2560,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-4",
+      "uid": "n3-grammar-16-3",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2539,7 +2586,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-5",
+      "uid": "n3-grammar-16-4",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2565,7 +2612,7 @@
       ]
     },
     {
-      "uid": "n3-grammar-16-6",
+      "uid": "n3-grammar-16-5",
       "level": "N3",
       "section": "grammar",
       "lesson": 16,
@@ -2746,6 +2793,31 @@
       "tags": [
         "hearsay",
         "colloquial"
+      ]
+    },
+    {
+      "uid": "n3-grammar-17-7",
+      "level": "N3",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "V1 dictionary form／V1た-form／Nの + とおりに、V2",
+      "structure": "V1 dictionary form／V1た-form／Nの + とおりに、V2",
+      "meaning": "Means to copy exactly, in words or actions (V2), what one has heard, seen, read, or learnt (V1).",
+      "explanation": "Means to copy exactly, in words or actions (V2), what one has heard, seen, read, or learnt (V1). The dictionary form is used when V1's action is going to be done from now on; the た-form is used when V1's action has already been done. Nのとおりに means an action is done in accordance with the manner shown by N.",
+      "examples": [
+        {
+          "jp": "わたしがやるとおりに、やってください。",
+          "en": "Please do it the way I do it."
+        },
+        {
+          "jp": "説明書のとおりに、組み立てました。",
+          "en": "I assembled it according to the manual."
+        }
+      ],
+      "summary": "とおりに means to copy exactly what was seen, heard, read, or learned — the dictionary form is used before doing the action, the た-form after it's already been done, and Nのとおりに follows a noun directly.",
+      "details": "### とおりに: Copying an Example Exactly\n\n| Form | Timing | Example |\n| :--- | :--- | :--- |\n| **V1 dictionary form ＋ とおりに** | The model (V1) is demonstrated *as* V2 happens | わたしがやる**とおりに**、やってください。 *(Do it the way I'm doing it, right now.)* |\n| **V1た-form ＋ とおりに** | The model (V1) was already seen/heard/learned *before* V2 | 説明書に書いてあった**とおりに**、組み立てました。 *(I assembled it just as written in the manual.)* |\n| **Nの ＋ とおりに** | Follows a manner shown by a noun | 地図の**とおりに**行けば、着きます。 *(If you go according to the map, you'll arrive.)* |\n\nとおり literally means \"the same as/following\" — the choice between dictionary form and た-form purely tracks whether the model action happens simultaneously or was learned beforehand.",
+      "tags": [
+        "manner-accordance"
       ]
     }
   ],
