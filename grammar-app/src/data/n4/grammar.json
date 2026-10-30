@@ -406,6 +406,110 @@
         "experience",
         "frequency"
       ]
+    },
+    {
+      "uid": "n4-grammar-3-9",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜間／〜間に",
+      "meaning": "During ~ / While ~ (throughout / at some point within)",
+      "structure": "V dictionary / V ている / adj / N の + 間（に）",
+      "explanation": "間 describes something continuing throughout a period. 間に describes something that happens once at some point within the period.",
+      "examples": [
+        {
+          "jp": "私が寝ている間、犬はずっとそばにいた。",
+          "en": "While I was sleeping, the dog stayed by my side the whole time."
+        },
+        {
+          "jp": "留守の間に、荷物が届いた。",
+          "en": "While I was out, a package arrived."
+        }
+      ],
+      "summary": "間 = a state or action lasting through the whole period; 間に = one event occurring within it.",
+      "details": "私が**寝ている間**、犬はずっとそばにいた。 *(The dog stayed by me the whole time I slept.)*\n\n留守の**間に**、荷物が届いた。 *(A package came at some point while I was out.)*\n\nUse 間 when both clauses last through the same span (state or continuing action). With 間に the main clause is a single, usually punctual, event.",
+      "tags": [
+        "time-relative",
+        "simultaneous-action"
+      ]
+    },
+    {
+      "uid": "n4-grammar-3-10",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜出す",
+      "meaning": "Start to ~ / Suddenly begin ~",
+      "structure": "V ます-stem + 出す",
+      "explanation": "Marks the sudden start of an action or event, often unexpectedly and without the speaker's control.",
+      "examples": [
+        {
+          "jp": "急に雨が降り出した。",
+          "en": "It suddenly started to rain."
+        },
+        {
+          "jp": "赤ちゃんが突然泣き出した。",
+          "en": "The baby suddenly started crying."
+        }
+      ],
+      "summary": "出す after a verb stem expresses an abrupt beginning of an action or event.",
+      "details": "急に雨が**降り出した**。 *(It suddenly began raining.)*\n\n出す emphasizes suddenness, unlike 始める, which is neutral (and can be deliberate). Verbs of intention are unnatural with 〜出す: 勉強し出す sounds like an unplanned switch.",
+      "tags": [
+        "time-relative",
+        "change-of-state"
+      ]
+    },
+    {
+      "uid": "n4-grammar-3-11",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "または",
+      "meaning": "Or / Alternatively",
+      "structure": "A または B",
+      "explanation": "Joins two options in statements, forms or instructions. More formal than か or それとも.",
+      "examples": [
+        {
+          "jp": "電話またはメールでご連絡ください。",
+          "en": "Please contact us by phone or email."
+        },
+        {
+          "jp": "パスポートまたは運転免許証が必要です。",
+          "en": "A passport or a driver's license is required."
+        }
+      ],
+      "summary": "または links alternatives in formal statements and instructions.",
+      "details": "電話**または**メールでご連絡ください。 *(Please contact us by phone or email.)*\n\nUse または in written statements; それとも belongs to questions (コーヒーですか、それとも紅茶ですか). あるいは is similar but more formal.",
+      "tags": [
+        "alternative-choice",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n4-grammar-3-12",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "それでも",
+      "meaning": "Even so / Still / Nevertheless",
+      "structure": "S1。それでも、S2。",
+      "explanation": "Despite the situation described in the previous sentence, the following outcome still holds.",
+      "examples": [
+        {
+          "jp": "雨が降っていた。それでも、彼は出かけた。",
+          "en": "It was raining. Even so, he went out."
+        },
+        {
+          "jp": "何度も失敗した。それでも、私は諦めなかった。",
+          "en": "I failed many times. Still, I did not give up."
+        }
+      ],
+      "summary": "それでも connects a sentence to its contrary outcome: 'nevertheless'.",
+      "details": "雨が降っていた。**それでも**、彼は出かけた。 *(It was raining; even so he went out.)*\n\nそれでも is a contrast connector, unlike それで (so, cause→effect) and それに (also, addition). It often shows persistence or surprise.",
+      "tags": [
+        "concession-contrast",
+        "result-consequence"
+      ]
     }
   ],
   "4": [
@@ -503,6 +607,32 @@
       "details": "### Particles That Can — and Can't — Be Omitted After か-Compounds\n\n| Pattern | Particle droppable? | Example |\n| :--- | :--- | :--- |\n| どこか**へ** | Yes, often dropped in casual speech | どこか（へ）行きましたか。 |\n| なにか**を** | Yes, often dropped | なにか（を）食べましたか。 |\n| どこか**で** | **No** | どこか**で**財布をなくしてしまいました。 |\n| どこか**に** | **No** | どこか**に**電話がありませんか。 |\n\nで marks the location *where an action happens* (lost my wallet somewhere) and に marks *existence* (is there a phone somewhere) — both of these particles carry essential grammatical information that へ and を don't, which is why they can't be casually dropped the way へ/を sometimes are.",
       "tags": [
         "particle-usage"
+      ]
+    },
+    {
+      "uid": "n4-grammar-4-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 4,
+      "title": "〜に気がつく",
+      "meaning": "Notice ~ / Become aware of ~",
+      "structure": "Noun / V plain form こと + に気がつく",
+      "explanation": "Describes suddenly realizing something that was there but not yet noticed.",
+      "examples": [
+        {
+          "jp": "財布がないことに気がつきました。",
+          "en": "I noticed that my wallet was missing."
+        },
+        {
+          "jp": "彼の変化に気がついた人はいなかった。",
+          "en": "No one had noticed the change in him."
+        }
+      ],
+      "summary": "に気がつく expresses coming to notice something, often a mistake or missing object.",
+      "details": "財布が**ないことに気がつきました**。 *(I realized my wallet was gone.)*\n\nThe noticed item is marked with に. 気づく means the same, and 気がつく is more conversational. Compare 分かる (understand) which focuses on understanding.",
+      "tags": [
+        "spontaneous-perception",
+        "change-of-state"
       ]
     }
   ],
@@ -607,6 +737,32 @@
       "details": "### それは〜 as a Conversational Reaction\n\nそれ refers back to the other speaker's preceding statement, and それは introduces the listener's reaction to it:\n\n| Their statement | Your reaction |\n| :--- | :--- |\n| 来月結婚するんです。 | **それは**おめでとうございます。 |\n| きのう財布をなくしてしまったんです。 | **それは**いけませんね。 |\n| すごく忙しかったんです。 | **それは**大変でしたね。 |\n\nThis is a purely conversational pattern — you won't produce it out of context, only in response to something someone has just told you.",
       "tags": [
         "connective"
+      ]
+    },
+    {
+      "uid": "n4-grammar-5-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "Transitive and intransitive verbs (他動詞と自動詞)",
+      "meaning": "Verbs that act on something vs. verbs that just happen",
+      "structure": "N を 他動詞 / N が 自動詞  (e.g. 開ける／開く, つける／つく)",
+      "explanation": "Many Japanese verbs come in pairs: the transitive verb has an agent who does it (を), the intransitive verb describes a thing changing by itself (が).",
+      "examples": [
+        {
+          "jp": "私はドアを開けた。",
+          "en": "I opened the door."
+        },
+        {
+          "jp": "ドアが開いている。",
+          "en": "The door is open."
+        }
+      ],
+      "summary": "他動詞 (を) = someone does it; 自動詞 (が) = it happens or is in a state. Learn them in pairs.",
+      "details": "| 他動詞 (を) | 自動詞 (が) |\n| :--- | :--- |\n| 開ける | 開く |\n| 閉める | 閉まる |\n| つける | つく |\n| 消す | 消える |\n| 始める | 始まる |\n\n私は電気**を**つけた。 *(I turned on the light.)*\n電気**が**ついている。 *(The light is on.)*\n\n〜てある pairs with transitive verbs (the result of someone's action), while 〜ている pairs with intransitive verbs (a state).",
+      "tags": [
+        "state-continuation",
+        "particle-usage"
       ]
     }
   ],
@@ -855,6 +1011,110 @@
         "particle-usage",
         "degree-extent"
       ]
+    },
+    {
+      "uid": "n4-grammar-7-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "そんなに",
+      "meaning": "That much / Not so much (with negative)",
+      "structure": "そんなに + adjective / verb (+ negative)",
+      "explanation": "Refers to a degree the listener mentioned or showed. With a negative it means 'not that much'.",
+      "examples": [
+        {
+          "jp": "そんなに急がなくてもいいですよ。",
+          "en": "You don't have to hurry that much."
+        },
+        {
+          "jp": "この問題はそんなに難しくありません。",
+          "en": "This problem isn't that difficult."
+        }
+      ],
+      "summary": "そんなに points at a degree already in the conversation; with a negative, it softens 'not so ~'.",
+      "details": "**そんなに**急がなくてもいいですよ。 *(No need to hurry that much.)*\n\nそんなに refers to what the listener said; こんなに (this much) and あんなに (that much, far away) are its relatives. Unlike あまり〜ない, it responds to a stated impression.",
+      "tags": [
+        "degree-extent",
+        "partial-negation"
+      ]
+    },
+    {
+      "uid": "n4-grammar-7-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "さすが",
+      "meaning": "As expected of ~ / Truly ~ (admiring)",
+      "structure": "さすが + N / さすがに + clause",
+      "explanation": "Admiration or confirmation: the result meets high expectations given the person's reputation. さすがに can also mean 'even ~ would'.",
+      "examples": [
+        {
+          "jp": "さすが専門家ですね。説明が分かりやすい。",
+          "en": "As expected of an expert; the explanation is easy to follow."
+        },
+        {
+          "jp": "さすがの彼も、今回は困っていた。",
+          "en": "Even he was in trouble this time."
+        }
+      ],
+      "summary": "さすが praises someone for living up to a reputation, or notes that even an able person has limits.",
+      "details": "**さすが**専門家ですね。 *(That's what you'd expect from an expert.)*\n\nさすがに + negative reasoning: さすがに疲れた (even I'm tired by now). Avoid さすが toward superiors, as it can sound patronizing.",
+      "tags": [
+        "emotion-expression",
+        "certainty-expectation"
+      ]
+    },
+    {
+      "uid": "n4-grammar-7-8",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "やっと",
+      "meaning": "Finally / At last / Barely",
+      "structure": "やっと + verb",
+      "explanation": "After a long wait or great effort, something is at last achieved. Also 'barely managed'.",
+      "examples": [
+        {
+          "jp": "三時間待って、やっとバスが来た。",
+          "en": "After waiting three hours, the bus finally came."
+        },
+        {
+          "jp": "やっと宿題が終わった。",
+          "en": "I've finally finished my homework."
+        }
+      ],
+      "summary": "やっと expresses relief that something finally happened after struggle or waiting.",
+      "details": "三時間待って、**やっと**バスが来た。 *(After a three-hour wait, the bus finally came.)*\n\nやっと is usually positive, with a sense of relief. With a negative, やっと〜 can mean 'barely': やっと間に合った (just in time).",
+      "tags": [
+        "completion",
+        "time-relative"
+      ]
+    },
+    {
+      "uid": "n4-grammar-7-9",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "〜ではないか／〜じゃないか",
+      "meaning": "Isn't it ~? / Why, it's ~! / Let's ~",
+      "structure": "Plain form + ではないか／じゃないか",
+      "explanation": "Used to confirm something one has just noticed, to express surprise, or (with a volitional) to invite.",
+      "examples": [
+        {
+          "jp": "あれ、雨が降っているじゃないか。",
+          "en": "Hey, it's raining!"
+        },
+        {
+          "jp": "それは君のカバンじゃないか。",
+          "en": "Isn't that your bag?"
+        }
+      ],
+      "summary": "じゃないか expresses a spontaneous recognition or a rhetorical confirmation.",
+      "details": "あれ、雨が**降っているじゃないか**。 *(Hey, it's raining!)*\n\nIn conversation, じゃない？ with rising tone is a soft confirmation (いいんじゃない？ = I think that's fine). Rude when used sharply with someone you should show respect.",
+      "tags": [
+        "confirmation-seeking",
+        "emotion-expression"
+      ]
     }
   ],
   "8": [
@@ -1044,6 +1304,32 @@
         "quotation",
         "hearsay"
       ]
+    },
+    {
+      "uid": "n4-grammar-8-9",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜なさい",
+      "meaning": "Do ~ (gentle command)",
+      "structure": "V ます-stem + なさい",
+      "explanation": "A mild but firm command, used by parents, teachers and in written instructions. Softer than the plain imperative.",
+      "examples": [
+        {
+          "jp": "早く寝なさい。",
+          "en": "Go to bed early."
+        },
+        {
+          "jp": "次の質問に答えなさい。",
+          "en": "Answer the following questions."
+        }
+      ],
+      "summary": "なさい commands from a position of authority, kinder than the bare imperative.",
+      "details": "早く**寝なさい**。 *(Go to bed early.)*\n\nCommon in exam instructions and parental speech. It is not for use toward superiors; with them use お〜ください. Negative commands use な (行くな) or てはいけません.",
+      "tags": [
+        "command",
+        "advice-suggestion"
+      ]
     }
   ],
   "9": [
@@ -1154,6 +1440,32 @@
       "details": "靴を履い**たまま**、部屋に入らないでください。 *(Please don't enter the room with your shoes still on.)*\nテレビをつけ**たまま**寝てしまいました。 *(I fell asleep with the TV left on.)*\n\nまま attaches after a た-form (a state that resulted from a completed action, and persists: 履いたまま, つけたまま), a ない-form (something that remains undone: 何も言わないまま, \"without saying anything\"), or a noun/な-adjective + の/な (裸足のまま, \"barefoot as is\"). The implicit nuance is often \"this state should have changed by now, but hasn't\" — which is why it so often appears with a mild warning or regret (ください, てしまいました).",
       "tags": [
         "state-continuation"
+      ]
+    },
+    {
+      "uid": "n4-grammar-9-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜ごろ／〜頃",
+      "meaning": "Around ~ / About (a time)",
+      "structure": "Time word + ごろ / V dictionary / V た-form + 頃",
+      "explanation": "ごろ gives an approximate time point (三時ごろ). 頃 (ころ) refers to a period (子供の頃, 若い頃) and can follow verbs.",
+      "examples": [
+        {
+          "jp": "明日は十時ごろ行きます。",
+          "en": "I'll go at about ten tomorrow."
+        },
+        {
+          "jp": "子供の頃、よくここで遊んだ。",
+          "en": "When I was a child, I often played here."
+        }
+      ],
+      "summary": "ごろ approximates a clock time or date; 頃 refers to a stretch of life or season.",
+      "details": "明日は**十時ごろ**行きます。 *(I'll go around ten tomorrow.)*\n\n**子供の頃**、よくここで遊んだ。 *(When I was a kid, I played here a lot.)*\n\nDon't use ごろ with durations (use ぐらい: 三時間ぐらい). The two share the kanji 頃, but ごろ attaches to time points and ころ to periods.",
+      "tags": [
+        "time-relative",
+        "degree-extent"
       ]
     }
   ],
@@ -1449,6 +1761,32 @@
       "tags": [
         "decision-outcome"
       ]
+    },
+    {
+      "uid": "n4-grammar-11-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "急に",
+      "meaning": "Suddenly / All of a sudden",
+      "structure": "急に + verb",
+      "explanation": "Describes a sudden change of state or an abrupt action, often unexpected.",
+      "examples": [
+        {
+          "jp": "急に雨が降ってきた。",
+          "en": "It suddenly began to rain."
+        },
+        {
+          "jp": "車は急に止まった。",
+          "en": "The car stopped suddenly."
+        }
+      ],
+      "summary": "急に stresses that a change happens abruptly and without warning.",
+      "details": "**急に**雨が降ってきた。 *(It began to rain all of a sudden.)*\n\n急に focuses on the abruptness of a change, unlike ふと (a sudden thought or glance) or 突然, which is slightly more formal.",
+      "tags": [
+        "change-of-state",
+        "time-relative"
+      ]
     }
   ],
   "12": [
@@ -1577,6 +1915,32 @@
       "details": "### から vs で: Marking Raw Materials\n\n| Particle | Condition | Example |\n| :--- | :--- | :--- |\n| **から** | The material is transformed beyond recognition | ビールは**麦から**造られます。 *(Beer is made from barley — you can't see the barley anymore.)* |\n| **で** | The material is still visually apparent in the final product | 昔、日本の家は**木で**造られました。 *(Japanese houses were made of wood — you can clearly see it's wood.)* |\n\nThis distinction (recognizable vs. transformed) is the deciding factor, not the type of material itself — some materials could go either way depending on how visibly they survive into the finished product.",
       "tags": [
         "particle-usage"
+      ]
+    },
+    {
+      "uid": "n4-grammar-12-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "〜と言われている",
+      "meaning": "It is said that ~ / ~ is said to be",
+      "structure": "Plain form + と言われている",
+      "explanation": "Reports a general view held by many people, using the passive of 言う.",
+      "examples": [
+        {
+          "jp": "この寺は千年前に建てられたと言われている。",
+          "en": "This temple is said to have been built a thousand years ago."
+        },
+        {
+          "jp": "睡眠は健康に大切だと言われています。",
+          "en": "Sleep is said to be important for health."
+        }
+      ],
+      "summary": "と言われている states a widely held belief, not a specific person's remark.",
+      "details": "この寺は千年前に**建てられたと言われている**。 *(This temple is said to date back a thousand years.)*\n\nGeneral knowledge, folklore and scientific claims use this form. For a specific speaker use と言っていた instead.",
+      "tags": [
+        "hearsay",
+        "passive"
       ]
     }
   ],
@@ -1815,6 +2179,58 @@
       "tags": [
         "time-relative"
       ]
+    },
+    {
+      "uid": "n4-grammar-14-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜てよかった",
+      "meaning": "I'm glad that ~",
+      "structure": "V て-form + よかった",
+      "explanation": "Expresses relief or gladness about something that happened.",
+      "examples": [
+        {
+          "jp": "あなたに会えてよかったです。",
+          "en": "I'm glad I got to meet you."
+        },
+        {
+          "jp": "傘を持ってきてよかった。",
+          "en": "I'm glad I brought an umbrella."
+        }
+      ],
+      "summary": "てよかった attaches to the cause of one's relief or gladness.",
+      "details": "あなたに**会えてよかった**です。 *(I'm glad I could meet you.)*\n\nThe negative is なくてよかった (I'm glad I didn't). Related: てうれしい、て安心した. It is the natural ending of thank-you and farewell remarks.",
+      "tags": [
+        "emotion-expression",
+        "cause-reason"
+      ]
+    },
+    {
+      "uid": "n4-grammar-14-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜てすみません",
+      "meaning": "I'm sorry for ~ing / Sorry that ~",
+      "structure": "V て-form / V ない-form なくて + すみません",
+      "explanation": "Apologizes (or thanks) for a cause of inconvenience. The て-form marks the reason.",
+      "examples": [
+        {
+          "jp": "遅れてすみません。",
+          "en": "Sorry for being late."
+        },
+        {
+          "jp": "お待たせしてすみません。",
+          "en": "I'm sorry to have kept you waiting."
+        }
+      ],
+      "summary": "てすみません gives the reason for an apology with a て-form clause.",
+      "details": "**遅れてすみません**。 *(Sorry I'm late.)*\n\nFor deeper apology: 申し訳ありません. For thanks, 〜てすみません often switches to 〜てありがとう (手伝ってくれてありがとう).",
+      "tags": [
+        "emotion-expression",
+        "cause-reason"
+      ]
     }
   ],
   "15": [
@@ -1923,6 +2339,32 @@
       "tags": [
         "conjecture-inference",
         "request"
+      ]
+    },
+    {
+      "uid": "n4-grammar-15-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 15,
+      "title": "〜かしら／〜かい／〜かな",
+      "meaning": "I wonder ~ / (casual question)",
+      "structure": "Plain form + かしら／かい／かな",
+      "explanation": "Casual sentence-final particles: かな and かしら express wondering aloud, かい is a friendly question, mostly used by men.",
+      "examples": [
+        {
+          "jp": "明日は晴れるかな。",
+          "en": "I wonder if it'll be sunny tomorrow."
+        },
+        {
+          "jp": "この荷物、重くないかしら。",
+          "en": "I wonder if this luggage isn't heavy."
+        }
+      ],
+      "summary": "かな／かしら voice a thought or doubt; かい asks a friendly question. Casual speech only.",
+      "details": "明日は**晴れるかな**。 *(I wonder if it'll be sunny tomorrow.)*\n\nかな is neutral-casual for all speakers, かしら is traditionally feminine, and かい is typically a masculine or elderly speaker's question. Avoid them in polite speech.",
+      "tags": [
+        "question-embedding",
+        "colloquial"
       ]
     }
   ],
@@ -2167,6 +2609,58 @@
       "tags": [
         "particle-usage",
         "emphasis-limitation"
+      ]
+    },
+    {
+      "uid": "n4-grammar-17-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜おきに",
+      "meaning": "Every other ~ / At intervals of ~",
+      "structure": "Number + counter + おきに",
+      "explanation": "Describes regular recurrence skipping one unit or leaving a given interval between events.",
+      "examples": [
+        {
+          "jp": "このバスは十分おきに来ます。",
+          "en": "This bus comes every ten minutes."
+        },
+        {
+          "jp": "一日おきに運動しています。",
+          "en": "I exercise every other day."
+        }
+      ],
+      "summary": "おきに says something recurs with the stated gap between occurrences.",
+      "details": "このバスは**十分おき**に来ます。 *(A bus comes at ten-minute intervals.)*\n\n一日おき = every other day. Compare ごとに (every, counting each unit), whose number refers to the unit itself.",
+      "tags": [
+        "frequency",
+        "time-relative"
+      ]
+    },
+    {
+      "uid": "n4-grammar-17-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜だけで",
+      "meaning": "Just by ~ing / Merely ~",
+      "structure": "V dictionary / N + だけで",
+      "explanation": "A single, small action is enough to produce a result or an emotion.",
+      "examples": [
+        {
+          "jp": "彼の顔を見るだけで、元気が出る。",
+          "en": "Just seeing his face cheers me up."
+        },
+        {
+          "jp": "考えるだけで、頭が痛くなる。",
+          "en": "Merely thinking about it gives me a headache."
+        }
+      ],
+      "summary": "だけで marks the one thing that is enough to trigger a result.",
+      "details": "彼の顔を**見るだけで**、元気が出る。 *(Just seeing his face lifts my spirits.)*\n\nCombine with だけでなく for 'not only'. Don't confuse with だけ in ただ〜だけだ (only), where だけ limits the scope of a single predicate.",
+      "tags": [
+        "emphasis-limitation",
+        "result-consequence"
       ]
     }
   ],
@@ -2414,6 +2908,58 @@
       "tags": [
         "emotion-expression"
       ]
+    },
+    {
+      "uid": "n4-grammar-19-7",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜たがる",
+      "meaning": "Want to ~ (third person)",
+      "structure": "V ます-stem + たがる／たがっている",
+      "explanation": "The third-person counterpart of たい: a visible sign that someone else wants to do something.",
+      "examples": [
+        {
+          "jp": "子供が外で遊びたがっている。",
+          "en": "The child wants to play outside."
+        },
+        {
+          "jp": "彼は何でも知りたがる。",
+          "en": "He wants to know everything."
+        }
+      ],
+      "summary": "たがる describes another person's desire as observed, replacing たい for third parties.",
+      "details": "子供が外で**遊びたがっている**。 *(The child wants to play outside.)*\n\nたい is for the speaker's (or in questions, the listener's) wishes. たがる reports outward signs of someone else's wishes, often with ている.",
+      "tags": [
+        "volitional-intention",
+        "viewpoint-standpoint"
+      ]
+    },
+    {
+      "uid": "n4-grammar-19-8",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜づらい",
+      "meaning": "Hard to ~ / Awkward to ~",
+      "structure": "V ます-stem + づらい",
+      "explanation": "Something is hard to do, usually because of physical or psychological discomfort rather than lack of skill.",
+      "examples": [
+        {
+          "jp": "この靴は歩きづらい。",
+          "en": "These shoes are hard to walk in."
+        },
+        {
+          "jp": "みんなの前では言いづらい。",
+          "en": "It's hard to say in front of everyone."
+        }
+      ],
+      "summary": "づらい means 'awkward or uncomfortable to do', close to にくい but more about feeling.",
+      "details": "この靴は**歩きづらい**。 *(These shoes are hard to walk in.)*\n\nにくい is for general difficulty; づらい stresses discomfort, embarrassment or pain on the doer's side (言いづらい、見づらい、食べづらい).",
+      "tags": [
+        "ease-difficulty",
+        "emotion-expression"
+      ]
     }
   ],
   "20": [
@@ -2457,6 +3003,32 @@
       "details": "### のに vs が／ても\n\n| Pattern | Applies to | Nuance |\n| :--- | :--- | :--- |\n| **のに** (here) | Only real, actually-occurred situations | Strong sense of unexpectedness, disappointment, or reproach |\n| が／ても | Real or hypothetical situations | More neutral, no particular emotional charge |\n\n約束をした**のに**、彼女は来ませんでした。 *(She didn't come, even though she'd promised — implying frustration/disappointment.)*\nきょうは日曜日な**のに**、働かなければなりません。 *(Even though today is Sunday, I have to work — implying \"that's not fair.\")*\n\nBecause のに always signals the speaker's emotional reaction to a real contradiction, it can sound like a complaint or reproach even when that's not fully intended — worth being mindful of tone when using it.",
       "tags": [
         "concession-contrast"
+      ]
+    },
+    {
+      "uid": "n4-grammar-20-3",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜が必要／〜必要がある",
+      "meaning": "Need ~ / It is necessary to ~",
+      "structure": "N + が必要だ / V dictionary form + 必要がある",
+      "explanation": "States that something is needed, or that one has to do something. The negative 必要はない means 'no need'.",
+      "examples": [
+        {
+          "jp": "この仕事には経験が必要です。",
+          "en": "This job requires experience."
+        },
+        {
+          "jp": "明日までに提出する必要があります。",
+          "en": "You need to submit it by tomorrow."
+        }
+      ],
+      "summary": "必要がある expresses necessity objectively; 必要はない says it is unnecessary.",
+      "details": "この仕事には**経験が必要**です。 *(Experience is necessary for this job.)*\n\n明日までに**提出する必要があります**。 *(You need to submit it by tomorrow.)*\n\nCompare なければならない (a rule or duty) and 〜ことはない (no need to).",
+      "tags": [
+        "obligation-necessity",
+        "formal-written"
       ]
     }
   ],
@@ -2522,6 +3094,58 @@
       "details": "ミラーさんはきょう来る**はずです**よ。きのう電話がありましたから。\n*(I'm sure Mr. Miller will come today — I got a call from him yesterday [so I have grounds to be confident].)*\n\nはずです always implies the speaker has a concrete reason for their conviction (here, \"he called yesterday [and said he'd come]\") — it's stronger than でしょう (plain inference) and much stronger than かもしれません (low-certainty possibility). If evidence later contradicts a はずです statement, it typically triggers surprise: おかしいですね。来るはずなんですが… (\"That's odd — he was supposed to come...\").",
       "tags": [
         "certainty-expectation"
+      ]
+    },
+    {
+      "uid": "n4-grammar-21-4",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜はずがない",
+      "meaning": "There's no way ~ / It can't be that ~",
+      "structure": "Plain form (な-adj + な／N + の) + はずがない",
+      "explanation": "Strong denial based on logic or knowledge: the speaker is sure something is not the case.",
+      "examples": [
+        {
+          "jp": "彼がこんな簡単な問題を間違えるはずがない。",
+          "en": "There's no way he'd get such an easy question wrong."
+        },
+        {
+          "jp": "あの人が犯人のはずがありません。",
+          "en": "That person can't possibly be the culprit."
+        }
+      ],
+      "summary": "はずがない is the negative of はずだ: 'it can't be', backed by reasons.",
+      "details": "彼が**間違えるはずがない**。 *(He can't possibly make that mistake.)*\n\nUnlike はずだ (expectation), はずがない expresses a firm denial. It often alternates with わけがない without much difference in meaning.",
+      "tags": [
+        "certainty-expectation",
+        "emphasis-assertion"
+      ]
+    },
+    {
+      "uid": "n4-grammar-21-5",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "さっき",
+      "meaning": "A little while ago / Just now",
+      "structure": "さっき + past tense",
+      "explanation": "A casual word for a short time ago, within the same day, often only minutes earlier.",
+      "examples": [
+        {
+          "jp": "さっき、田中さんから電話がありました。",
+          "en": "Mr. Tanaka called a little while ago."
+        },
+        {
+          "jp": "さっきの話、もう一度お願いします。",
+          "en": "Could you repeat what you said earlier?"
+        }
+      ],
+      "summary": "さっき refers to the recent past; さっきの N points back to something just mentioned.",
+      "details": "**さっき**、田中さんから電話がありました。 *(Mr. Tanaka phoned a while ago.)*\n\nIn polite or formal speech, さきほど replaces さっき. For 'just done', use たところだ or たばかりだ.",
+      "tags": [
+        "time-relative",
+        "colloquial"
       ]
     }
   ],
@@ -2640,6 +3264,32 @@
       "tags": [
         "hearsay",
         "conjecture-inference"
+      ]
+    },
+    {
+      "uid": "n4-grammar-22-6",
+      "level": "N4",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜と聞いた",
+      "meaning": "I heard that ~",
+      "structure": "Plain form + と聞いた／と聞いている",
+      "explanation": "Reports information obtained from another person, with the speaker identifying it as something heard.",
+      "examples": [
+        {
+          "jp": "来月、田中さんが結婚すると聞きました。",
+          "en": "I heard Mr. Tanaka is getting married next month."
+        },
+        {
+          "jp": "この店はおいしいと聞いて、来てみた。",
+          "en": "I heard this shop was good, so I came."
+        }
+      ],
+      "summary": "と聞いた marks hearsay with the speaker as the one who heard it.",
+      "details": "来月、田中さんが**結婚すると聞きました**。 *(I heard that Tanaka is marrying next month.)*\n\nUnlike そうです (neutral hearsay), と聞いた says explicitly that the speaker heard it. Add the source with から: 友達から聞いた.",
+      "tags": [
+        "hearsay",
+        "quotation"
       ]
     }
   ],
