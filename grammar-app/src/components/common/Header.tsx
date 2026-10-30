@@ -78,7 +78,7 @@ export default function Header() {
               <button
                 key={lvl.id}
                 onClick={() => handleLevelChange(lvl.id)}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3 py-1 max-md:min-h-10 max-md:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeLevel === lvl.id
                     ? 'bg-white text-indigo-700 shadow-md transform scale-105'
                     : 'text-indigo-200 hover:text-white hover:bg-white/10'
@@ -95,7 +95,7 @@ export default function Header() {
         <div className="flex items-center gap-2 w-full md:w-auto justify-end">
           <button
             onClick={() => setShowKeyModal(true)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border shadow-sm transition-all cursor-pointer ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 rounded-full text-xs font-medium border shadow-sm transition-all cursor-pointer ${
               hasKey
                 ? 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-100 border-emerald-400'
                 : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 border-amber-400'
@@ -108,7 +108,7 @@ export default function Header() {
 
           <button
             onClick={() => setShowTranslations(!showTranslations)}
-            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-400 shadow-sm cursor-pointer"
+            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-700 transition-colors px-3 py-1.5 max-md:min-h-10 rounded-full text-xs font-medium border border-indigo-400 shadow-sm cursor-pointer"
           >
             {showTranslations ? <EyeOff size={14} /> : <Eye size={14} />}
             <span>{showTranslations ? 'Hide English' : 'Show English'}</span>
