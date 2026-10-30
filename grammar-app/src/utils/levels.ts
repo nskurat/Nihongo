@@ -6,12 +6,11 @@ interface LessonRange {
   default: number;
 }
 
-// N4 lessons are numbered 26-50, while N5 and N3 use their own independent 1-based
-// ranges for this app's content.
+// Every level numbers its lessons independently from 1.
 // Exported as the single source of truth for scripts/validate-content.ts.
 export const LESSON_RANGES: Record<LevelType, LessonRange> = {
   N5: { min: 1, max: 25, default: 1 },
-  N4: { min: 26, max: 50, default: 26 },
+  N4: { min: 1, max: 25, default: 1 },
   N3: { min: 1, max: 24, default: 1 },
 };
 
@@ -20,6 +19,15 @@ export function parseLevel(raw: string | undefined): LevelType {
   if (upper === 'N5') return 'N5';
   if (upper === 'N4') return 'N4';
   return 'N3';
+}
+
+// N4 lessons used to be numbered 26-50 (continuing on from N5). Old bookmarks,
+// ?lesson= links and saved reading history still carry those numbers; since
+// 26-50 is now out of range for every level, mapping them is unambiguous.
+const LEGACY_N4_OFFSET = 25;
+
+export function fromLegacyLesson(level: LevelType, lesson: number): number {
+  return level === 'N4' && lesson >= 26 && lesson <= 50 ? lesson - LEGACY_N4_OFFSET : lesson;
 }
 
 export function getDefaultLesson(level: LevelType): number {

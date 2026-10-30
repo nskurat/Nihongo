@@ -3,6 +3,7 @@ import {
   ReadingHistoryEntry,
   SaveHistoryParams,
 } from '../../types/ai';
+import { fromLegacyLesson } from '../../utils/levels';
 
 export const ACTIVE_STORAGE_KEY = 'nihongo_reading_active';
 export const HISTORY_STORAGE_KEY = 'nihongo_reading_history';
@@ -86,7 +87,11 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
   async getHistory(): Promise<ReadingHistoryEntry[]> {
     try {
       const raw = this._getItem(HISTORY_STORAGE_KEY);
-      return raw ? (JSON.parse(raw) as ReadingHistoryEntry[]) : [];
+      if (!raw) return [];
+      // Entries saved before N4 was renumbered 1-25 carry its old 26-50 lessons.
+      return (JSON.parse(raw) as ReadingHistoryEntry[]).map((entry) =>
+        entry.lesson === null ? entry : { ...entry, lesson: fromLegacyLesson(entry.level, entry.lesson) }
+      );
     } catch (e) {
       console.error('LocalStorageAdapter: failed to get history', e);
       return [];

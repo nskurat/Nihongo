@@ -3,10 +3,10 @@ import { parseLegacyUrl } from '../legacyUrl';
 
 describe('parseLegacyUrl', () => {
   it('parses a query-string URL', () => {
-    expect(parseLegacyUrl('?level=n4&section=vocab&lesson=30', '')).toEqual({
+    expect(parseLegacyUrl('?level=n4&section=vocab&lesson=3', '')).toEqual({
       level: 'N4',
       section: 'vocab',
-      lesson: 30,
+      lesson: 3,
     });
   });
 
@@ -39,10 +39,14 @@ describe('parseLegacyUrl', () => {
   });
 
   it('clamps a lesson out of range for the level', () => {
-    expect(parseLegacyUrl('?level=n4&lesson=1', '')).toEqual({
+    expect(parseLegacyUrl('?level=n4&lesson=99', '')).toEqual({
       level: 'N4',
       section: 'grammar',
-      lesson: 26,
+      lesson: 1,
     });
+  });
+
+  it('maps an old 26-50 N4 lesson onto the 1-25 numbering', () => {
+    expect(parseLegacyUrl('?level=n4&lesson=30', '')?.lesson).toBe(5);
   });
 });

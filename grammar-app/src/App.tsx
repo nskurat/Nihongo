@@ -7,7 +7,7 @@ import ReadingSection from './features/reading/ReadingSection';
 import AiSettingsModal from './components/common/AiSettingsModal';
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
-import { parseLevel, clampLessonForLevel } from './utils/levels';
+import { parseLevel, clampLessonForLevel, fromLegacyLesson } from './utils/levels';
 import { parseLegacyUrl } from './utils/legacyUrl';
 
 const DEFAULT_ROUTE = '/n3/grammar/1';
@@ -20,7 +20,10 @@ function ContentWrapper() {
   const parsedSection = (section?.toLowerCase() || 'grammar') as SectionType;
 
   // Default to each level's starting lesson if unspecified, and guard against out-of-range lessons
-  const parsedLesson = clampLessonForLevel(parsedLevel, parseInt(lesson || '', 10));
+  const parsedLesson = clampLessonForLevel(
+    parsedLevel,
+    fromLegacyLesson(parsedLevel, parseInt(lesson || '', 10))
+  );
 
   // We use this component to render the appropriate section based on the URL
   return (

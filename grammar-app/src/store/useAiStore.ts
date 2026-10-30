@@ -53,7 +53,9 @@ export const useAiCacheStore = create<AiCacheState>()(
       // (N5 and N3 grammar both start at "1-1") - see utils/uid.ts. Cached
       // text isn't worth migrating; v2 keys are shaped differently anyway,
       // so a version bump with no old-shape entries just starts empty.
-      version: 2,
+      // v3: N4 uids were renumbered (n4-grammar-30-1 became n4-grammar-5-1), so
+      // v2 entries would attach cached text to the wrong item.
+      version: 3,
       migrate: () =>
         ({
           generatedExamples: {},

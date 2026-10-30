@@ -1,5 +1,5 @@
 import { LevelType, SectionType } from '../types/japanese';
-import { parseLevel, clampLessonForLevel } from './levels';
+import { parseLevel, clampLessonForLevel, fromLegacyLesson } from './levels';
 
 const VALID_SECTIONS: SectionType[] = ['grammar', 'vocab', 'kanji', 'reading'];
 
@@ -28,7 +28,10 @@ export function parseLegacyUrl(search: string, hash: string): LegacyUrlTarget | 
   let section = (params.get('section') || rawHash || 'grammar').toLowerCase() as SectionType;
   if (!VALID_SECTIONS.includes(section)) section = 'grammar';
 
-  const lesson = clampLessonForLevel(level, parseInt(params.get('lesson') || '', 10));
+  const lesson = clampLessonForLevel(
+    level,
+    fromLegacyLesson(level, parseInt(params.get('lesson') || '', 10))
+  );
 
   return { level, section, lesson };
 }

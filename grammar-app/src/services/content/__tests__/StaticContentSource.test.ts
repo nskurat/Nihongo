@@ -21,9 +21,9 @@ function fixtureSource(modules: Record<string, () => Promise<{ default: unknown 
 }
 
 describe('StaticContentSource', () => {
-  it('lists real N4 lessons (26-50)', async () => {
+  it('lists real N4 lessons (1-25)', async () => {
     const chunk: Record<number, GrammarItem[]> = {};
-    for (let lesson = 26; lesson <= 50; lesson++) {
+    for (let lesson = 1; lesson <= 25; lesson++) {
       chunk[lesson] = [grammarItem({ uid: `n4-grammar-${lesson}-1`, level: 'N4', lesson })];
     }
     const source = fixtureSource({
@@ -32,8 +32,8 @@ describe('StaticContentSource', () => {
 
     const lessons = await source.listLessons('N4', 'grammar');
 
-    expect(lessons.map((l) => l.lesson)).toEqual(Array.from({ length: 25 }, (_, i) => i + 26));
-    expect(lessons[0]).toEqual({ lesson: 26, count: 1 });
+    expect(lessons.map((l) => l.lesson)).toEqual(Array.from({ length: 25 }, (_, i) => i + 1));
+    expect(lessons[0]).toEqual({ lesson: 1, count: 1 });
   });
 
   it('looks up an item by uid across lessons in its chunk', async () => {

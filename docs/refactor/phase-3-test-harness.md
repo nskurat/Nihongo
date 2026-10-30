@@ -42,7 +42,7 @@ Phase 4, so write them against current behaviour and do not "improve" anything.
 - **ReadingSection library flow**: filter by level, search by title, open a story in the
   modal, answer a question inside the modal, delete an entry, load one back into the studio.
 - **Header**: level switch preserves the section and clamps the lesson (N3 lesson 24 →
-  N4 must land in 26–50, not 24).
+  N4 must land in 1–25, not 24).
 
 ## Acceptance
 
