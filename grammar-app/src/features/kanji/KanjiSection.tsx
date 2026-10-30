@@ -105,11 +105,11 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                 placeholder="Search kanji, reading, meaning..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 w-full sm:w-64"
+                className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 w-full sm:w-64"
               />
             </div>
             <div className="px-3.5 py-1.5 bg-rose-50 rounded-lg border border-rose-100 text-rose-700 font-semibold text-xs text-center whitespace-nowrap">
-              {currentContent.length} Kanji
+              {searchQuery ? `${filteredContent.length} of ${currentContent.length}` : currentContent.length} Kanji
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
             </p>
             <button
               onClick={retry}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-xs rounded-lg border border-rose-200 cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-rose-50 hover:bg-rose-100 text-rose-700 font-semibold text-xs rounded-lg border border-rose-200 cursor-pointer"
             >
               Retry
             </button>
@@ -224,7 +224,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                   <button
                     onClick={() => handleGenerateKanjiMnemonic(item)}
                     disabled={loadingKanjiAi[item.uid] || !!aiKanjiMnemonics[item.uid]}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg text-xs font-semibold transition-colors border border-rose-200/80 disabled:opacity-50 cursor-pointer shadow-2xs"
+                    className="flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg text-xs font-semibold transition-colors border border-rose-200/80 disabled:opacity-50 cursor-pointer shadow-2xs"
                   >
                     {loadingKanjiAi[item.uid] ? (
                       <Loader2 className="animate-spin" size={14} />

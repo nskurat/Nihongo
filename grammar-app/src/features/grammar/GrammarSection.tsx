@@ -118,11 +118,11 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                 placeholder="Search grammar, title, formula..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-56"
+                className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-56"
               />
             </div>
             <div className="px-3.5 py-1.5 bg-indigo-50 rounded-lg border border-indigo-100 text-indigo-700 font-semibold text-xs text-center whitespace-nowrap">
-              {currentContent.length} Patterns
+              {searchQuery ? `${filteredContent.length} of ${currentContent.length}` : currentContent.length} Patterns
             </div>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               {/* View Deep Dive breakdown button */}
               <button
                 onClick={() => setSelectedDetailItem(item)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-lg border border-indigo-200 shadow-2xs transition-all cursor-pointer shrink-0"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-white hover:bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-lg border border-indigo-200 shadow-2xs transition-all cursor-pointer shrink-0"
               >
                 <Layers size={14} />
                 <span>Deep Dive</span>
@@ -258,7 +258,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                 <button
                   onClick={() => handleGenerateExamples(item)}
                   disabled={loadingExamples[item.uid]}
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
                 >
                   {loadingExamples[item.uid] ? (
                     <Loader2 className="animate-spin" size={14} />
@@ -271,7 +271,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                 <button
                   onClick={() => handleExplainNuance(item)}
                   disabled={loadingExplanations[item.uid] || !!aiExplanations[item.uid]}
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
                 >
                   {loadingExplanations[item.uid] ? (
                     <Loader2 className="animate-spin" size={14} />

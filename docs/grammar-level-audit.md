@@ -10,8 +10,28 @@ Compared our grammar points (N5 143, N4 119, N3 85) against jlptsensei.com's lev
 | 1 | Restructure: move 14 N3 points to N4, drop 17 duplicates, park 20 N2/N1 points in `data/n2/grammar.json` (script: `scripts/restructure-grammar-levels.ts`) | done |
 | 2 | Author the missing N3 points: 105 new points (`scripts/add-grammar-items.ts`), N3 is now 139 points over all 24 lessons | done |
 | 3 | Author the missing N4 / N5 points: 25 N4 + 9 N5, plus 16 remaining N3 gaps | done |
+| 4 | Re-level contested points (`scripts/move-grammar-levels.ts`): 13 N5 -> N4, 4 N4 -> N3, 1 N3 -> N2, 1 duplicate dropped | done |
 
-Final counts: N5 152, N4 158, N3 155 (+20 parked as N2 in `data/n2/grammar.json`).
+Final counts: N5 139, N4 166, N3 158 (+21 parked as N2 in `data/n2/grammar.json`).
+
+### Stage 4: re-leveling rule
+
+Each contested point was checked against two sources (jlptsensei's level lists and Bunpro's
+per-point JLPT tag). Where both gave a harder level the point moved up; where they disagreed it
+also moved up (uncertain -> the higher level), one level at a time. Where both agreed the point
+is at its current level it stayed, whatever a reviewer suspected.
+
+Moved N5 -> N4: なければなりません and ないと(いけません) (jlptsensei N4 / Bunpro N4), までに, なかなか, ぜひ,
+と思います, と言います, conditional と (jlptsensei N4, Bunpro N5), てあげる/てもらう/てくれる, たら,
+ても and もし/いくら (N3 on jlptsensei; placed in N4). Moved N4 -> N3: とおりに, によって (passive
+agent), とちゅうで, 数量＋は. N3 -> N2: ところだった. Dropped: N4 ば〜ほど (N3 already has it).
+N5 lesson 25 now keeps only the generic subordinate-clause が rule, because its other four
+points were all conditionals.
+
+Kept where both sources agree: だろう, ないといけません (jlptsensei N5), なくてもいいです, づらい, 出す,
+に気がつく (N4), がたい (N3 on both), とみえる (N3 on jlptsensei; Bunpro tags it N4), and the N5
+adverb point よく／だいたい／あまり／全然 (basic N5 vocabulary).
+
 
 Deliberately left alone: the borderline N4/N5 boundary items (section 1), and a few reference
 entries that are already covered under different notation in our decks (e.g. てしまう, てくる,

@@ -105,11 +105,11 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                 placeholder="Search word, reading, meaning..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-64"
+                className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-64"
               />
             </div>
             <div className="px-3.5 py-1.5 bg-emerald-50 rounded-lg border border-emerald-100 text-emerald-700 font-semibold text-xs text-center whitespace-nowrap">
-              {currentContent.length} Words
+              {searchQuery ? `${filteredContent.length} of ${currentContent.length}` : currentContent.length} Words
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
             </p>
             <button
               onClick={retry}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs rounded-lg border border-emerald-200 cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs rounded-lg border border-emerald-200 cursor-pointer"
             >
               Retry
             </button>
@@ -201,7 +201,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                 <button
                   onClick={() => handleGenerateVocabHelp(item)}
                   disabled={loadingVocabAi[item.uid] || !!aiVocabNotes[item.uid]}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold transition-colors border border-slate-200 hover:border-emerald-200 disabled:opacity-50 cursor-pointer shadow-2xs"
+                  className="flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-white hover:bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold transition-colors border border-slate-200 hover:border-emerald-200 disabled:opacity-50 cursor-pointer shadow-2xs"
                 >
                   {loadingVocabAi[item.uid] ? (
                     <Loader2 className="animate-spin" size={13} />
