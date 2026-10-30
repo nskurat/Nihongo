@@ -4,7 +4,7 @@ import { Level, ContentSection, StudyItem, Uid } from '../../types/content';
 type ChunkData = Record<number, StudyItem[]>;
 type ChunkImporter = () => Promise<{ default: ChunkData }>;
 
-const UID_RE = /^(n5|n4|n3)-(grammar|vocab|kanji)-(\d+)-\d+$/;
+const UID_RE = /^(n5|n4|n3|n2)-(grammar|vocab|kanji)-(\d+)-\d+$/;
 
 function chunkKey(level: Level, section: ContentSection): string {
   return `${level}:${section}`;

@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
 
-// N2 is data-only for now: points parked out of N3, not exposed in the UI.
+// N2 is a grammar-only preview level: there is no N2 vocab or kanji file.
 type Level = 'N5' | 'N4' | 'N3' | 'N2';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
@@ -13,7 +13,7 @@ const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
   N5: { min: 1, max: 25 },
   N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
-  N2: { min: 1, max: 24 },
+  N2: { min: 1, max: 11 },
 };
 
 interface FileTarget {

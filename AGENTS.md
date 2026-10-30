@@ -37,7 +37,7 @@ grammar-app/
     services/ai/        Provider registry, prompts, parsers, storage adapter
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
     data/{n5,n4,n3}/    grammar|vocab|kanji.json, keyed by lesson number
-    data/n2/grammar.json  N2-level points parked out of N3; validated, not shown in the UI
+    data/n2/grammar.json  N2 grammar preview (grammar only; no N2 vocab/kanji/reading)
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
 ```
@@ -57,7 +57,7 @@ grammar-app/
 ## Constraints
 
 - **Lessons are numbered independently per level**, always from 1, with different
-  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24. Never assume a max. Source of truth:
+  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24, N2 = 1–11. Never assume a max. Source of truth:
   `utils/levels.ts` (`LESSON_RANGES`, also the single source `scripts/validate-content.ts`
   mirrors). Text cross-references to another level's lesson name it, e.g. "N5 Lesson 23".
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or

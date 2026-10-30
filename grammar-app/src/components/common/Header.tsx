@@ -5,7 +5,7 @@ import { getActiveProviderId, getProvider, getStoredApiKey } from '../../service
 import { LevelType, SectionType } from '../../types/japanese';
 import { useAppStore } from '../../store/useAppStore';
 import { useAiUiStore } from '../../store/useAiStore';
-import { parseLevel, getDefaultLesson, clampLessonForLevel } from '../../utils/levels';
+import { parseLevel, getDefaultLesson, clampLessonForLevel, isSectionAvailable } from '../../utils/levels';
 
 export default function Header() {
   const location = useLocation();
@@ -30,14 +30,16 @@ export default function Header() {
     { id: 'N5', label: 'JLPT N5', desc: 'Beginner I' },
     { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
     { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
+    { id: 'N2', label: 'JLPT N2', desc: 'Upper Intermediate (grammar preview)' },
   ];
 
-  const sections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
+  const allSections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
     { id: 'grammar', label: 'Grammar', icon: BookOpen },
     { id: 'vocab', label: 'Vocabulary', icon: BookText },
     { id: 'kanji', label: 'Kanji', icon: Languages },
     { id: 'reading', label: 'Reading Practice', icon: BookOpenCheck },
   ];
+  const sections = allSections.filter((sec) => isSectionAvailable(activeLevel, sec.id));
 
   const provider = getProvider(getActiveProviderId());
   const hasKey = !provider.requiresKey || !!getStoredApiKey(provider.id);
@@ -45,8 +47,9 @@ export default function Header() {
   const handleLevelChange = (newLevel: LevelType) => {
     // When switching levels, default to their starting lesson if current isn't valid for new level
     const newLesson = clampLessonForLevel(newLevel, parseInt(activeLesson, 10));
+    const newSection = isSectionAvailable(newLevel, activeSection) ? activeSection : 'grammar';
 
-    navigate(`/${newLevel.toLowerCase()}/${activeSection}/${newLesson}`);
+    navigate(`/${newLevel.toLowerCase()}/${newSection}/${newLesson}`);
   };
 
   const handleSectionChange = (newSection: SectionType) => {
@@ -67,7 +70,7 @@ export default function Header() {
                 Japanese Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
               </h1>
               <p className="text-indigo-200 text-xs font-medium">
-                JLPT N5, N4 & N3 Interactive Reference & AI Practice
+                JLPT N5–N3 Interactive Reference & AI Practice · N2 Grammar Preview
               </p>
             </div>
           </div>

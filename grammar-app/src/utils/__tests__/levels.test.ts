@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { LESSON_RANGES, clampLessonForLevel, fromLegacyLesson } from '../levels';
+import { LESSON_RANGES, clampLessonForLevel, fromLegacyLesson, parseLevel, isSectionAvailable } from '../levels';
 
 describe('lesson numbering', () => {
   it('starts every level at lesson 1', () => {
@@ -18,5 +18,20 @@ describe('lesson numbering', () => {
     expect(fromLegacyLesson('N4', 12)).toBe(12);
     expect(fromLegacyLesson('N5', 30)).toBe(30);
     expect(clampLessonForLevel('N5', fromLegacyLesson('N5', 30))).toBe(1);
+  });
+});
+
+describe('N2 grammar preview', () => {
+  it('parses N2 and keeps its lessons in range', () => {
+    expect(parseLevel('n2')).toBe('N2');
+    expect(clampLessonForLevel('N2', 11)).toBe(11);
+    expect(clampLessonForLevel('N2', 12)).toBe(1);
+  });
+
+  it('offers only grammar for N2 and every section elsewhere', () => {
+    expect(isSectionAvailable('N2', 'grammar')).toBe(true);
+    expect(isSectionAvailable('N2', 'vocab')).toBe(false);
+    expect(isSectionAvailable('N2', 'reading')).toBe(false);
+    expect(isSectionAvailable('N3', 'kanji')).toBe(true);
   });
 });

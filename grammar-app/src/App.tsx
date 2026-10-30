@@ -7,7 +7,7 @@ import ReadingSection from './features/reading/ReadingSection';
 import AiSettingsModal from './components/common/AiSettingsModal';
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
-import { parseLevel, clampLessonForLevel, fromLegacyLesson } from './utils/levels';
+import { parseLevel, clampLessonForLevel, fromLegacyLesson, isSectionAvailable } from './utils/levels';
 import { parseLegacyUrl } from './utils/legacyUrl';
 
 const DEFAULT_ROUTE = '/n3/grammar/1';
@@ -24,6 +24,11 @@ function ContentWrapper() {
     parsedLevel,
     fromLegacyLesson(parsedLevel, parseInt(lesson || '', 10))
   );
+
+  // Sections a level has no content for (e.g. N2 vocab) fall back to its grammar
+  if (!isSectionAvailable(parsedLevel, parsedSection)) {
+    return <Navigate to={`/${parsedLevel.toLowerCase()}/grammar/${parsedLesson}`} replace />;
+  }
 
   // We use this component to render the appropriate section based on the URL
   return (
@@ -71,7 +76,7 @@ export default function App() {
 
       <footer className="mt-12 py-6 border-t border-slate-200 bg-white/50 text-center text-xs text-slate-500">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span>Japanese Study Portal • JLPT N5, N4 & N3</span>
+          <span>Japanese Study Portal • JLPT N5, N4 & N3 • N2 Grammar Preview</span>
           <span>Interactive Grammar, Vocabulary & Kanji Reference</span>
         </div>
       </footer>
