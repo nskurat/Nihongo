@@ -8,11 +8,10 @@ Compared our grammar points (N5 143, N4 119, N3 85) against jlptsensei.com's lev
 | Stage | What | State |
 |---|---|---|
 | 1 | Restructure: move 14 N3 points to N4, drop 17 duplicates, park 20 N2/N1 points in `data/n2/grammar.json` (script: `scripts/restructure-grammar-levels.ts`) | done |
-| 2 | Author the missing N3 points | pending |
+| 2 | Author the missing N3 points: 105 new points (`scripts/add-grammar-items.ts`), N3 is now 139 points over all 24 lessons | done |
 | 3 | Author the missing N4 / N5 points | pending |
 
 Borderline items (section 1, N4 and N5 lists) were deliberately left where they are.
-N3 grammar is intentionally thin between stages 1 and 2 (lessons 2, 3, 4, 11, 22 are empty).
 
 **Caveat.** jlpt.jp publishes no grammar list (only a per-level competence description), so
 every level boundary here is community consensus. jlptsensei is one source and it differs from
