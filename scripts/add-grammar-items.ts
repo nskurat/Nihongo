@@ -10,10 +10,16 @@ import { resolve } from 'node:path';
  * examples, summary, details, tags }. Points are appended to the end of their lesson, so
  * existing positional uids (and the "Lesson 3-2" style references to them) never shift;
  * uid/level/section/lesson are stamped here. Tags must exist in tag-taxonomy.json and a
- * title may not repeat within a level. Nothing is written if any point is rejected.
+ * title may not repeat at any level. Nothing is written if any point is rejected.
+ *
+ * Instead of `details`, a point may give `bold` (the pattern's surface forms) and `note`
+ * (the nuance paragraph): details are then built as the examples with the pattern bolded,
+ * followed by the note, and every example must contain one of the `bold` forms - so an
+ * example that doesn't actually use the pattern is rejected.
  */
 
-type Level = 'N5' | 'N4' | 'N3';
+type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
+const LEVELS: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1'];
 interface NewItem {
   level: Level;
   lesson: number;
@@ -23,7 +29,9 @@ interface NewItem {
   explanation: string;
   examples: Array<{ jp: string; en: string }>;
   summary: string;
-  details: string;
+  details?: string;
+  bold?: string[];
+  note?: string;
   tags: string[];
 }
 type Stored = Record<string, unknown> & { title: string };
@@ -42,14 +50,14 @@ const taxonomy = readJson<{ facets: Record<string, { tags: Record<string, unknow
 );
 const knownTags = new Set(Object.values(taxonomy.facets).flatMap((facet) => Object.keys(facet.tags)));
 
-const RANGES: Record<Level, number> = { N5: 25, N4: 25, N3: 24 };
-const REQUIRED = ['title', 'meaning', 'structure', 'explanation', 'summary', 'details'] as const;
+const RANGES: Record<Level, number> = { N5: 25, N4: 25, N3: 24, N2: 26, N1: 32 };
+const REQUIRED = ['title', 'meaning', 'structure', 'explanation', 'summary'] as const;
 
 const items = batchFiles.flatMap((file) => readJson<NewItem[]>(file));
 const errors: string[] = [];
 const chunks = {} as Record<Level, Chunk>;
 const titles = {} as Record<Level, Set<string>>;
-for (const level of ['N5', 'N4', 'N3'] as const) {
+for (const level of LEVELS) {
   chunks[level] = readJson<Chunk>(`${DATA_DIR}/${level.toLowerCase()}/grammar.json`);
   titles[level] = new Set(Object.values(chunks[level]).flatMap((list) => list.map((item) => item.title)));
 }
@@ -66,8 +74,22 @@ for (const item of items) {
   }
   if (!item.tags?.length) errors.push(`${where}: needs at least one tag`);
   for (const tag of item.tags ?? []) if (!knownTags.has(tag)) errors.push(`${where}: unknown tag "${tag}"`);
-  if (titles[item.level].has(item.title)) errors.push(`${where}: title already exists at ${item.level}`);
+  const clash = LEVELS.find((level) => titles[level].has(item.title));
+  if (clash) errors.push(`${where}: title already exists at ${clash}`);
   titles[item.level].add(item.title);
+  if (!item.details) {
+    if (!item.note?.trim() || !item.bold?.length) {
+      errors.push(`${where}: needs details, or bold + note`);
+    } else {
+      const lines: string[] = [];
+      for (const example of item.examples ?? []) {
+        const form = [...item.bold].sort((a, b) => b.length - a.length).find((f) => example.jp.includes(f));
+        if (!form) errors.push(`${where}: example "${example.jp}" contains none of ${item.bold.join(', ')}`);
+        else lines.push(`${example.jp.replace(form, `**${form}**`)}\n*(${example.en})*`);
+      }
+      item.details = `${lines.join('\n')}\n\n${item.note.trim()}`;
+    }
+  }
 }
 if (errors.length) {
   errors.forEach((e) => console.error(`  - ${e}`));
@@ -78,7 +100,7 @@ const added: Record<string, number> = {};
 for (const item of items) {
   const key = String(item.lesson);
   const lessonList = (chunks[item.level][key] ||= []);
-  const { level, lesson, ...rest } = item;
+  const { level, lesson, bold: _bold, note: _note, ...rest } = item;
   lessonList.push({
     uid: `${level.toLowerCase()}-grammar-${lesson}-${lessonList.length + 1}`,
     level,
@@ -89,7 +111,7 @@ for (const item of items) {
   added[level] = (added[level] ?? 0) + 1;
 }
 
-for (const level of ['N5', 'N4', 'N3'] as const) {
+for (const level of LEVELS) {
   const sorted: Chunk = {};
   for (const key of Object.keys(chunks[level]).map(Number).sort((a, b) => a - b)) {
     sorted[String(key)] = chunks[level][String(key)];

@@ -21,15 +21,18 @@ describe('lesson numbering', () => {
   });
 });
 
-describe('N2 grammar preview', () => {
-  it('parses N2 and keeps its lessons in range', () => {
+describe('grammar-only levels', () => {
+  it('parses N2 and N1 and keeps their lessons in range', () => {
     expect(parseLevel('n2')).toBe('N2');
-    expect(clampLessonForLevel('N2', 10)).toBe(10);
-    expect(clampLessonForLevel('N2', 11)).toBe(1);
+    expect(parseLevel('n1')).toBe('N1');
+    expect(clampLessonForLevel('N2', 26)).toBe(26);
+    expect(clampLessonForLevel('N2', 27)).toBe(1);
+    expect(clampLessonForLevel('N1', 32)).toBe(32);
   });
 
-  it('offers only grammar for N2 and every section elsewhere', () => {
+  it('offers only grammar for N2/N1 and every section elsewhere', () => {
     expect(isSectionAvailable('N2', 'grammar')).toBe(true);
+    expect(isSectionAvailable('N1', 'kanji')).toBe(false);
     expect(isSectionAvailable('N2', 'vocab')).toBe(false);
     expect(isSectionAvailable('N2', 'reading')).toBe(false);
     expect(isSectionAvailable('N3', 'kanji')).toBe(true);

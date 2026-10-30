@@ -5,8 +5,8 @@ it is loaded into every session. Details belong in `docs/refactor/`, not here.
 
 ## What this is
 
-A static, client-only study portal for JLPT N5/N4/N3: grammar,
-vocabulary and kanji reference plus AI-generated reading practice. React 19 + Vite +
+A static, client-only study portal for JLPT N5–N1: grammar (all levels),
+vocabulary and kanji reference (N5–N3) plus AI-generated reading practice. React 19 + Vite +
 Tailwind v4 + zustand + react-router. No backend. Deployed to GitHub Pages at
 `https://nskurat.github.io/Nihongo/` by `.github/workflows/deploy.yml` on push to `main`.
 
@@ -37,8 +37,7 @@ grammar-app/
     services/ai/        Provider registry, prompts, parsers, storage adapter
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
     data/{n5,n4,n3}/    grammar|vocab|kanji.json, keyed by lesson number
-    data/n2/grammar.json  N2 grammar preview (grammar only; no N2 vocab/kanji/reading)
-    data/n1/grammar.json  N1-level points parked above N2; validated, not shown in the UI
+    data/{n2,n1}/grammar.json  N2/N1 are grammar-only (no vocab/kanji/reading at those levels)
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
 ```
@@ -58,7 +57,7 @@ grammar-app/
 ## Constraints
 
 - **Lessons are numbered independently per level**, always from 1, with different
-  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24, N2 = 1–10. Never assume a max. Source of truth:
+  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24, N2 = 1–26, N1 = 1–32. Never assume a max. Source of truth:
   `utils/levels.ts` (`LESSON_RANGES`, also the single source `scripts/validate-content.ts`
   mirrors). Text cross-references to another level's lesson name it, e.g. "N5 Lesson 23".
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or

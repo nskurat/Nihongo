@@ -2,21 +2,19 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
 
-// N2 is a grammar-only preview level: there is no N2 vocab or kanji file.
-// N1 is data-only: points parked above N2, validated but not shown in the UI.
+// N2 and N1 are grammar-only levels: there is no N2/N1 vocab or kanji file.
 type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
 // Mirrors grammar-app/src/utils/levels.ts's LESSON_RANGES. Scripts run outside
 // the app's Vite/browser TS project, so this is a deliberate plain-value copy
-// rather than an import - keep it in sync if the ranges ever change. N1 has no
-// app-side range because the app has no N1 level.
+// rather than an import - keep it in sync if the ranges ever change.
 const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
   N5: { min: 1, max: 25 },
   N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
-  N2: { min: 1, max: 10 },
-  N1: { min: 1, max: 1 },
+  N2: { min: 1, max: 26 },
+  N1: { min: 1, max: 32 },
 };
 
 interface FileTarget {

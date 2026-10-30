@@ -12,18 +12,20 @@ export const LESSON_RANGES: Record<LevelType, LessonRange> = {
   N5: { min: 1, max: 25, default: 1 },
   N4: { min: 1, max: 25, default: 1 },
   N3: { min: 1, max: 24, default: 1 },
-  N2: { min: 1, max: 10, default: 1 },
+  N2: { min: 1, max: 26, default: 1 },
+  N1: { min: 1, max: 32, default: 1 },
 };
 
 const ALL_SECTIONS: SectionType[] = ['grammar', 'vocab', 'kanji', 'reading'];
 
-// N2 is a grammar-only preview: there is no N2 vocab or kanji content, and
+// N2 and N1 are grammar-only: there is no N2/N1 vocab or kanji content, and
 // Reading Practice builds its prompts from a level's vocab.
 export const LEVEL_SECTIONS: Record<LevelType, SectionType[]> = {
   N5: ALL_SECTIONS,
   N4: ALL_SECTIONS,
   N3: ALL_SECTIONS,
   N2: ['grammar'],
+  N1: ['grammar'],
 };
 
 export function isSectionAvailable(level: LevelType, section: SectionType): boolean {
@@ -35,6 +37,7 @@ export function parseLevel(raw: string | undefined): LevelType {
   if (upper === 'N5') return 'N5';
   if (upper === 'N4') return 'N4';
   if (upper === 'N2') return 'N2';
+  if (upper === 'N1') return 'N1';
   return 'N3';
 }
 

@@ -25,6 +25,3403 @@
         "concession-contrast",
         "formal-written"
       ]
+    },
+    {
+      "uid": "n1-grammar-1-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 1,
+      "title": "〜とはいえ",
+      "meaning": "Although ~ / Even though ~ / That said, ~",
+      "structure": "Verb/い-Adj (Plain) / な-Adj・Noun (だ) + とはいえ / 〜。とはいえ、〜",
+      "explanation": "Admits a fact, then says that something contrary is still true. Can also open a sentence as a connective.",
+      "examples": [
+        {
+          "jp": "春とはいえ、まだ朝晩は寒い。",
+          "en": "It may be spring, but mornings and evenings are still cold."
+        },
+        {
+          "jp": "計画は順調だ。とはいえ、油断はできない。",
+          "en": "The plan is going well. That said, we can't let our guard down."
+        }
+      ],
+      "summary": "とはいえ admits X but insists on a contrary Y — 'although X', or 'that said' at the start of a sentence.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ],
+      "details": "春**とはいえ**、まだ朝晩は寒い。\n*(It may be spring, but mornings and evenings are still cold.)*\n計画は順調だ。**とはいえ**、油断はできない。\n*(The plan is going well. That said, we can't let our guard down.)*\n\nMore formal than とはいっても／といっても (N3) and very common in writing. The first part is an accepted fact; the second corrects an expectation it might create. Compare といえども (this lesson), which is even more literary and often uses extreme examples."
+    },
+    {
+      "uid": "n1-grammar-1-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 1,
+      "title": "〜ものを",
+      "meaning": "If only ~ (but) / Although ~ (regret, reproach)",
+      "structure": "Verb/い-Adj (Plain) / な-Adj + な + ものを",
+      "explanation": "Something would have turned out well, but it didn't — expressing regret or reproach.",
+      "examples": [
+        {
+          "jp": "一言相談してくれれば手伝ったものを。",
+          "en": "If only you'd asked me, I would have helped."
+        },
+        {
+          "jp": "早く病院に行けばよかったものを、彼は我慢し続けた。",
+          "en": "He should have gone to the hospital early, but he kept putting up with it."
+        }
+      ],
+      "summary": "ものを expresses regret or reproach that a better outcome didn't happen — 'if only...'.",
+      "tags": [
+        "concession-contrast",
+        "emotion-expression"
+      ],
+      "details": "一言相談してくれれば手伝った**ものを**。\n*(If only you'd asked me, I would have helped.)*\n早く病院に行けばよかった**ものを**、彼は我慢し続けた。\n*(He should have gone to the hospital early, but he kept putting up with it.)*\n\nUsually after a conditional (〜ば, 〜たら) with a hypothetical result, and often at the end of a sentence with the rest left unsaid. It's like のに (N4) but more literary and emotional."
+    },
+    {
+      "uid": "n1-grammar-1-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 1,
+      "title": "〜ならまだしも",
+      "meaning": "If it were ~, it might be OK, but ~",
+      "structure": "Noun / Verb (Plain) + ならまだしも",
+      "explanation": "The first case could be accepted, but the actual situation is worse and can't be accepted.",
+      "examples": [
+        {
+          "jp": "一度ならまだしも、何度も同じミスをするのは問題だ。",
+          "en": "Once might be forgivable, but making the same mistake again and again is a problem."
+        },
+        {
+          "jp": "子どもならまだしも、大人がそんなことをするなんて。",
+          "en": "If it were a child it might be understandable, but for an adult to do that..."
+        }
+      ],
+      "summary": "ならまだしも says 'X would be acceptable, but this (worse) situation is not'.",
+      "tags": [
+        "concession-contrast",
+        "comparison"
+      ],
+      "details": "一度**ならまだしも**、何度も同じミスをするのは問題だ。\n*(Once might be forgivable, but making the same mistake again and again is a problem.)*\n子ども**ならまだしも**、大人がそんなことをするなんて。\n*(If it were a child it might be understandable, but for an adult to do that...)*\n\nまだしも means 'would still be better/tolerable'. The second clause criticizes the actual situation. ならともかく is very close. Typical pairs: 一度 vs 何度も, 子ども vs 大人, 少し vs 全部."
+    }
+  ],
+  "2": [
+    {
+      "uid": "n1-grammar-2-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 2,
+      "title": "〜（よ）うが／〜（よ）うと",
+      "meaning": "No matter ~ / Even if ~",
+      "structure": "Verb (volitional) / い-Adj (〜かろう) / な-Adj・Noun (だろう・であろう) + が・と",
+      "explanation": "Whatever happens or whatever someone does, the conclusion doesn't change. Usually with a question word.",
+      "examples": [
+        {
+          "jp": "誰が何と言おうが、私の気持ちは変わらない。",
+          "en": "No matter what anyone says, my feelings won't change."
+        },
+        {
+          "jp": "どんなに苦しかろうと、最後までやり遂げるつもりだ。",
+          "en": "However hard it may be, I intend to see it through to the end."
+        }
+      ],
+      "summary": "（よ）うが／（よ）うと means 'no matter X, Y stays the same' — a strong, literary 'even if'.",
+      "tags": [
+        "concession-contrast",
+        "conditional",
+        "formal-written"
+      ],
+      "details": "誰が何と**言おうが**、私の気持ちは変わらない。\n*(No matter what anyone says, my feelings won't change.)*\nどんなに**苦しかろうと**、最後までやり遂げるつもりだ。\n*(However hard it may be, I intend to see it through to the end.)*\n\nA literary equivalent of 〜ても (N4), usually with どんなに, 何を, 誰が, いくら. Adjectives take the old volitional 〜かろう (高かろう, 寒かろう). The second clause states something unaffected (変わらない, 関係ない, 自由だ)."
+    },
+    {
+      "uid": "n1-grammar-2-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 2,
+      "title": "〜（よ）うが〜まいが",
+      "meaning": "Whether ~ or not",
+      "structure": "Verb (volitional) + が・と + same Verb (Dictionary) + まいが・まいと",
+      "explanation": "Pairs a verb with its own negative to say that either way, the result is the same.",
+      "examples": [
+        {
+          "jp": "雨が降ろうが降るまいが、試合は行われる。",
+          "en": "Whether it rains or not, the match will be held."
+        },
+        {
+          "jp": "君が来ようと来るまいと、私は行く。",
+          "en": "Whether you come or not, I'm going."
+        }
+      ],
+      "summary": "（よ）うが〜まいが means 'whether X or not' — the outcome doesn't depend on it.",
+      "tags": [
+        "conditional",
+        "concession-contrast",
+        "formal-written"
+      ],
+      "details": "雨が**降ろうが降るまいが**、試合は行われる。\n*(Whether it rains or not, the match will be held.)*\n君が**来ようと来るまいと**、私は行く。\n*(Whether you come or not, I'm going.)*\n\nまい is the literary negative volitional (N2). Note 来る: 来ようと来るまいと (or 来まいと). The plain equivalent is 〜ても〜なくても."
+    },
+    {
+      "uid": "n1-grammar-2-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 2,
+      "title": "〜であれ",
+      "meaning": "Whatever ~ / Even if ~ / Whether A or B",
+      "structure": "Noun + であれ / Question word + であれ / A であれ B であれ",
+      "explanation": "Even if something is a certain way, or whatever it is, the statement still applies.",
+      "examples": [
+        {
+          "jp": "どんな理由であれ、暴力は許されない。",
+          "en": "Whatever the reason, violence cannot be tolerated."
+        },
+        {
+          "jp": "大人であれ子どもであれ、ルールは守らなければならない。",
+          "en": "Whether adult or child, everyone has to follow the rules."
+        }
+      ],
+      "summary": "であれ means 'whatever X is' or, paired, 'whether A or B' — the rule applies regardless.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ],
+      "details": "どんな理由**であれ**、暴力は許されない。\n*(Whatever the reason, violence cannot be tolerated.)*\n大人**であれ**子どもであれ、ルールは守らなければならない。\n*(Whether adult or child, everyone has to follow the rules.)*\n\nA literary form of でも. Paired (AであれBであれ), it lists cases that are all covered. であろうと is a near-identical variant. Common phrases: 何であれ ('whatever it is'), 誰であれ ('whoever it is')."
+    },
+    {
+      "uid": "n1-grammar-2-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 2,
+      "title": "〜としたところで／〜にしたところで",
+      "meaning": "Even if ~ / Even for ~",
+      "structure": "Verb (Plain) + としたところで / Noun + にしたところで",
+      "explanation": "Even assuming something, or even from someone's standpoint, the conclusion is the same — usually negative.",
+      "examples": [
+        {
+          "jp": "今から急いだとしたところで、もう間に合わない。",
+          "en": "Even if we hurried now, we wouldn't make it."
+        },
+        {
+          "jp": "社長にしたところで、この問題は解決できないだろう。",
+          "en": "Even the company president probably couldn't solve this problem."
+        }
+      ],
+      "summary": "としたところで／にしたところで mean 'even assuming X' or 'even for X' — it makes no difference.",
+      "tags": [
+        "concession-contrast",
+        "conditional"
+      ],
+      "details": "今から急いだ**としたところで**、もう間に合わない。\n*(Even if we hurried now, we wouldn't make it.)*\n社長**にしたところで**、この問題は解決できないだろう。\n*(Even the company president probably couldn't solve this problem.)*\n\nStronger, more emphatic forms of としても／にしても (N3). The second clause usually says it won't help or isn't possible. Casual speech often uses にしたって."
+    }
+  ],
+  "3": [
+    {
+      "uid": "n1-grammar-3-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜ならいざしらず",
+      "meaning": "It might be different for ~, but ~",
+      "structure": "Noun / Verb (Plain) + ならいざしらず / Noun + はいざしらず",
+      "explanation": "An exceptional case might be excused, but the actual situation is different and can't be.",
+      "examples": [
+        {
+          "jp": "子どもならいざしらず、大人がこんな計算もできないとは。",
+          "en": "It might be different for a child, but for an adult not to be able to do this calculation..."
+        },
+        {
+          "jp": "昔はいざしらず、今は誰でも海外旅行ができる。",
+          "en": "Things may have been different in the past, but nowadays anyone can travel abroad."
+        }
+      ],
+      "summary": "ならいざしらず sets aside an exceptional case to criticize or describe the actual one.",
+      "tags": [
+        "concession-contrast",
+        "comparison",
+        "formal-written"
+      ],
+      "details": "子ども**ならいざしらず**、大人がこんな計算もできないとは。\n*(It might be different for a child, but for an adult not to be able to do this calculation...)*\n昔**はいざしらず**、今は誰でも海外旅行ができる。\n*(Things may have been different in the past, but nowadays anyone can travel abroad.)*\n\nいざしらず literally means 'I don't know about that'. It is very close to ならまだしも and ならともかく, but more literary. Common pairs: 子ども vs 大人, 昔 vs 今, 素人 vs プロ."
+    },
+    {
+      "uid": "n1-grammar-3-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜ないまでも",
+      "meaning": "Even if not ~, at least ~",
+      "structure": "Verb (ない-form) + までも",
+      "explanation": "Even if something doesn't reach a high level, it should at least reach a lower one.",
+      "examples": [
+        {
+          "jp": "毎日とは言わないまでも、週に一度は運動したほうがいい。",
+          "en": "Even if not every day, you should exercise at least once a week."
+        },
+        {
+          "jp": "優勝できないまでも、決勝には進みたい。",
+          "en": "Even if we can't win, I want to at least reach the final."
+        }
+      ],
+      "summary": "ないまでも means 'even if not X (high level), at least Y (lower level)'.",
+      "tags": [
+        "concession-contrast",
+        "degree-extent"
+      ],
+      "details": "毎日とは言わ**ないまでも**、週に一度は運動したほうがいい。\n*(Even if not every day, you should exercise at least once a week.)*\n優勝でき**ないまでも**、決勝には進みたい。\n*(Even if we can't win, I want to at least reach the final.)*\n\nThe second clause states the minimum, often with せめて, 少なくとも, or は. 〜とは言わないまでも ('I won't go as far as saying X, but') is a very common phrase."
+    },
+    {
+      "uid": "n1-grammar-3-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜ではあるまいし",
+      "meaning": "It's not as if ~ / Since ~ is not the case",
+      "structure": "Noun + ではあるまいし（じゃあるまいし）",
+      "explanation": "Since someone obviously isn't X, they shouldn't act like X — used to criticize or reassure.",
+      "examples": [
+        {
+          "jp": "子どもじゃあるまいし、自分のことは自分でしなさい。",
+          "en": "You're not a child, so take care of your own business."
+        },
+        {
+          "jp": "神様ではあるまいし、未来のことなんて分からないよ。",
+          "en": "I'm not God, so how would I know what the future holds?"
+        }
+      ],
+      "summary": "ではあるまいし means 'you're not X, so...' — criticizing or brushing off unrealistic expectations.",
+      "tags": [
+        "cause-reason",
+        "colloquial"
+      ],
+      "details": "子ども**じゃあるまいし**、自分のことは自分でしなさい。\n*(You're not a child, so take care of your own business.)*\n神様**ではあるまいし**、未来のことなんて分からないよ。\n*(I'm not God, so how would I know what the future holds?)*\n\nConversational despite its classical look, especially the じゃあるまいし form. The second clause is often a command, advice or criticism. The noun is something the person clearly isn't (子ども, 神様, 学生)."
+    },
+    {
+      "uid": "n1-grammar-3-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 3,
+      "title": "〜ないものでもない",
+      "meaning": "It's not impossible to ~ / Could ~ (if)",
+      "structure": "Verb (ない-form) + ものでもない",
+      "explanation": "A hesitant, partial yes: under some conditions, it could be done.",
+      "examples": [
+        {
+          "jp": "条件次第では、引き受けないものでもない。",
+          "en": "Depending on the conditions, I might take it on."
+        },
+        {
+          "jp": "急げば、間に合わないものでもない。",
+          "en": "If we hurry, it's not impossible that we'll make it."
+        }
+      ],
+      "summary": "ないものでもない is a reluctant 'it's not out of the question' — a guarded possibility.",
+      "tags": [
+        "possibility",
+        "partial-negation"
+      ],
+      "details": "条件次第では、引き受け**ないものでもない**。\n*(Depending on the conditions, I might take it on.)*\n急げば、間に合わ**ないものでもない**。\n*(If we hurry, it's not impossible that we'll make it.)*\n\nA double negative that gives a cautious yes. Often with a condition: 〜ば, 〜次第では. Close to ないこともない (N3) but more formal and more reluctant."
+    }
+  ],
+  "4": [
+    {
+      "uid": "n1-grammar-4-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 4,
+      "title": "〜が早いか",
+      "meaning": "The moment ~ / No sooner ~ than ~",
+      "structure": "Verb (Dictionary / た-form) + が早いか",
+      "explanation": "The second action happens immediately after the first, almost at the same time.",
+      "examples": [
+        {
+          "jp": "彼は家に帰るが早いか、テレビをつけた。",
+          "en": "The moment he got home, he turned on the TV."
+        },
+        {
+          "jp": "ベルが鳴るが早いか、生徒たちは教室を飛び出した。",
+          "en": "No sooner had the bell rung than the students dashed out of the classroom."
+        }
+      ],
+      "summary": "が早いか describes a second action that follows the first instantly — 'no sooner X than Y'.",
+      "tags": [
+        "time-relative",
+        "formal-written"
+      ],
+      "details": "彼は家に帰る**が早いか**、テレビをつけた。\n*(The moment he got home, he turned on the TV.)*\nベルが鳴る**が早いか**、生徒たちは教室を飛び出した。\n*(No sooner had the bell rung than the students dashed out of the classroom.)*\n\nDescribes a past event the speaker observed, not wishes or commands. It is literary. The N1 'as soon as' family — が早いか, や否や, なり, そばから — all stress speed; なり and そばから have extra nuances (see this lesson)."
+    },
+    {
+      "uid": "n1-grammar-4-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 4,
+      "title": "〜や否や",
+      "meaning": "As soon as ~ / The moment ~",
+      "structure": "Verb (Dictionary) + や否や（やいなや） / Verb (Dictionary) + や",
+      "explanation": "Right after one thing happens, the next thing happens.",
+      "examples": [
+        {
+          "jp": "ドアが開くや否や、客が店に殺到した。",
+          "en": "As soon as the doors opened, customers rushed into the shop."
+        },
+        {
+          "jp": "その知らせを聞くや否や、彼は病院へ向かった。",
+          "en": "The moment he heard the news, he headed for the hospital."
+        }
+      ],
+      "summary": "や否や means 'the moment X happened, Y happened' — very literary.",
+      "tags": [
+        "time-relative",
+        "formal-written"
+      ],
+      "details": "ドアが開く**や否や**、客が店に殺到した。\n*(As soon as the doors opened, customers rushed into the shop.)*\nその知らせを聞く**や否や**、彼は病院へ向かった。\n*(The moment he heard the news, he headed for the hospital.)*\n\nRead やいなや. A shortened や also appears in writing. Like が早いか, the second clause is a past fact, not a request or plan. 否 means 'no', so the literal sense is 'whether it happened or not'."
+    },
+    {
+      "uid": "n1-grammar-4-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 4,
+      "title": "〜なり",
+      "meaning": "As soon as ~ / The moment ~",
+      "structure": "Verb (Dictionary) + なり",
+      "explanation": "Right after someone does something, they do something unexpected or unusual.",
+      "examples": [
+        {
+          "jp": "彼女は部屋に入るなり、泣き出した。",
+          "en": "The moment she entered the room, she burst into tears."
+        },
+        {
+          "jp": "父は私の顔を見るなり、怒鳴った。",
+          "en": "As soon as my father saw my face, he yelled at me."
+        }
+      ],
+      "summary": "なり describes someone doing something surprising immediately after an action.",
+      "tags": [
+        "time-relative"
+      ],
+      "details": "彼女は部屋に入る**なり**、泣き出した。\n*(The moment she entered the room, she burst into tears.)*\n父は私の顔を見る**なり**、怒鳴った。\n*(As soon as my father saw my face, he yelled at me.)*\n\nThe same person does both actions, and the second is usually unexpected. It describes others, not the speaker, and can't be followed by a command or plan. Don't confuse with 〜なり〜なり ('A or B', Lesson 30) or なりに ('in one's own way', Lesson 27)."
+    },
+    {
+      "uid": "n1-grammar-4-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 4,
+      "title": "〜そばから",
+      "meaning": "As soon as ~ (again and again)",
+      "structure": "Verb (Dictionary / た-form) + そばから",
+      "explanation": "Every time something is done, it is immediately undone or followed by the same thing — a frustrating repetition.",
+      "examples": [
+        {
+          "jp": "片付けるそばから、子どもが部屋を散らかす。",
+          "en": "As soon as I tidy up, the kids mess up the room again."
+        },
+        {
+          "jp": "新しい単語を覚えたそばから忘れてしまう。",
+          "en": "I forget new words as soon as I've learned them."
+        }
+      ],
+      "summary": "そばから describes an action undone as soon as it's done — repeatedly and frustratingly.",
+      "tags": [
+        "time-relative",
+        "frequency"
+      ],
+      "details": "片付ける**そばから**、子どもが部屋を散らかす。\n*(As soon as I tidy up, the kids mess up the room again.)*\n新しい単語を覚えた**そばから**忘れてしまう。\n*(I forget new words as soon as I've learned them.)*\n\nUnlike が早いか or や否や, そばから describes a repeated pattern, not a single event, and usually carries frustration. そば means 'beside', so the image is 'right next to the moment of doing'."
+    }
+  ],
+  "5": [
+    {
+      "uid": "n1-grammar-5-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "〜てからというもの",
+      "meaning": "Ever since ~",
+      "structure": "Verb (て-form) + からというもの",
+      "explanation": "Since a certain event, a big change has continued.",
+      "examples": [
+        {
+          "jp": "子どもが生まれてからというもの、生活が大きく変わった。",
+          "en": "Ever since our child was born, our life has changed dramatically."
+        },
+        {
+          "jp": "彼女と別れてからというもの、彼は元気がない。",
+          "en": "Ever since they broke up, he has been down."
+        }
+      ],
+      "summary": "てからというもの means 'ever since X, there has been a big, lasting change'.",
+      "tags": [
+        "time-relative",
+        "change-of-state"
+      ],
+      "details": "子どもが生まれて**からというもの**、生活が大きく変わった。\n*(Ever since our child was born, our life has changed dramatically.)*\n彼女と別れて**からというもの**、彼は元気がない。\n*(Ever since they broke up, he has been down.)*\n\nStronger and more emotional than て以来 (N2). The event is a turning point, and the second clause describes a lasting new state, not a single action."
+    },
+    {
+      "uid": "n1-grammar-5-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "〜を皮切りに",
+      "meaning": "Starting with ~ / Beginning with ~",
+      "structure": "Noun + を皮切りに（して）・を皮切りとして",
+      "explanation": "Something starts at one point and then spreads or continues in a series.",
+      "examples": [
+        {
+          "jp": "東京公演を皮切りに、全国ツアーが始まる。",
+          "en": "Starting with the Tokyo concert, a nationwide tour will begin."
+        },
+        {
+          "jp": "彼の発言を皮切りに、次々と反対意見が出た。",
+          "en": "Starting with his remark, objections came out one after another."
+        }
+      ],
+      "summary": "を皮切りに marks the first event in a series that then spreads — 'kicking off with X'.",
+      "tags": [
+        "time-relative",
+        "formal-written"
+      ],
+      "details": "東京公演**を皮切りに**、全国ツアーが始まる。\n*(Starting with the Tokyo concert, a nationwide tour will begin.)*\n彼の発言**を皮切りに**、次々と反対意見が出た。\n*(Starting with his remark, objections came out one after another.)*\n\nThe second clause describes a development or a series (次々と, 全国で, 続々と). It is common in news about tours, campaigns and openings. 皮切り originally means the first moxibustion treatment — 'the first cut'."
+    },
+    {
+      "uid": "n1-grammar-5-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "〜を限りに",
+      "meaning": "As of ~ (and no longer) / For the last time",
+      "structure": "Noun (time) + を限りに",
+      "explanation": "Marks the last time or the end point after which something stops.",
+      "examples": [
+        {
+          "jp": "今日を限りに、たばこをやめる。",
+          "en": "As of today, I'm quitting smoking."
+        },
+        {
+          "jp": "この店は今月末を限りに閉店します。",
+          "en": "This shop will close at the end of this month."
+        }
+      ],
+      "summary": "を限りに means 'with X as the last time' — something stops from that point on.",
+      "tags": [
+        "time-relative",
+        "completion"
+      ],
+      "details": "今日**を限りに**、たばこをやめる。\n*(As of today, I'm quitting smoking.)*\nこの店は今月末**を限りに**閉店します。\n*(This shop will close at the end of this month.)*\n\nThe noun is usually a time word (今日, 今回, 今月末). It is close to をもって ('as of', Lesson 11) and both appear in formal announcements. 声を限りに is a fixed phrase meaning 'at the top of one's voice'."
+    },
+    {
+      "uid": "n1-grammar-5-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 5,
+      "title": "〜を機に",
+      "meaning": "Taking the opportunity of ~ / With ~ as a turning point",
+      "structure": "Noun + を機に（して）",
+      "explanation": "Uses an event as a chance to start or change something.",
+      "examples": [
+        {
+          "jp": "結婚を機に、会社を辞めた。",
+          "en": "I quit my job when I got married."
+        },
+        {
+          "jp": "引っ越しを機に、不要な物を全部捨てた。",
+          "en": "I took the move as a chance to throw away everything I didn't need."
+        }
+      ],
+      "summary": "を機に uses an event as a turning point to start or change something.",
+      "tags": [
+        "change-of-state",
+        "decision-outcome"
+      ],
+      "details": "結婚**を機に**、会社を辞めた。\n*(I quit my job when I got married.)*\n引っ越し**を機に**、不要な物を全部捨てた。\n*(I took the move as a chance to throw away everything I didn't need.)*\n\nVery close to をきっかけに and を契機に (N2). を機に is more formal and implies a deliberate decision rather than an accidental trigger. 機 means 'opportunity'."
+    }
+  ],
+  "6": [
+    {
+      "uid": "n1-grammar-6-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 6,
+      "title": "〜たら最後／〜が最後",
+      "meaning": "Once ~, (there's no going back)",
+      "structure": "Verb (た-form) + ら最後・が最後",
+      "explanation": "Once something happens, a bad situation inevitably follows and can't be stopped.",
+      "examples": [
+        {
+          "jp": "彼は一度寝たら最後、何があっても起きない。",
+          "en": "Once he falls asleep, nothing will wake him up."
+        },
+        {
+          "jp": "この秘密を知られたが最後、もう終わりだ。",
+          "en": "Once this secret gets out, it's all over."
+        }
+      ],
+      "summary": "たら最後 means 'once X happens, Y (bad) is inevitable' — no turning back.",
+      "tags": [
+        "conditional",
+        "result-consequence"
+      ],
+      "details": "彼は一度寝**たら最後**、何があっても起きない。\n*(Once he falls asleep, nothing will wake him up.)*\nこの秘密を知られ**たが最後**、もう終わりだ。\n*(Once this secret gets out, it's all over.)*\n\nThe second clause expresses something unstoppable or a bad consequence, often with 何があっても, 決して, もう〜ない. が最後 is more literary; たら最後 is common in speech."
+    },
+    {
+      "uid": "n1-grammar-6-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 6,
+      "title": "〜（よ）うものなら",
+      "meaning": "If one were to ~, (something terrible would happen)",
+      "structure": "Verb (volitional form) + ものなら",
+      "explanation": "Warns that if someone even tried to do something, it would cause serious trouble.",
+      "examples": [
+        {
+          "jp": "部長に意見しようものなら、ひどく怒られる。",
+          "en": "If you dared to contradict the manager, you'd get a terrible scolding."
+        },
+        {
+          "jp": "一日でも休もうものなら、仕事がたまって大変なことになる。",
+          "en": "If I took even one day off, the work would pile up and it'd be a disaster."
+        }
+      ],
+      "summary": "（よ）うものなら warns that even attempting X would cause a serious problem.",
+      "tags": [
+        "conditional",
+        "result-consequence"
+      ],
+      "details": "部長に意見し**ようものなら**、ひどく怒られる。\n*(If you dared to contradict the manager, you'd get a terrible scolding.)*\n一日でも休も**うものなら**、仕事がたまって大変なことになる。\n*(If I took even one day off, the work would pile up and it'd be a disaster.)*\n\nAn exaggerated warning: the action is small, but the consequence is big. The second clause is always negative. Related to the N2 ものなら, which with potential verbs means 'if only I could'."
+    },
+    {
+      "uid": "n1-grammar-6-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 6,
+      "title": "〜ばそれまでだ",
+      "meaning": "If ~, that's the end of it / It's all over if ~",
+      "structure": "Verb (ば-form) + それまでだ / 〜たらそれまでだ",
+      "explanation": "If something happens, everything done so far is wasted or there's nothing more to say.",
+      "examples": [
+        {
+          "jp": "どんなにお金を貯めても、死んでしまえばそれまでだ。",
+          "en": "However much money you save, it all ends when you die."
+        },
+        {
+          "jp": "いい計画でも、実行しなければそれまでだ。",
+          "en": "Even a good plan is worthless if you don't carry it out."
+        }
+      ],
+      "summary": "ばそれまでだ says that once X happens, everything is over or pointless.",
+      "tags": [
+        "conditional",
+        "result-consequence"
+      ],
+      "details": "どんなにお金を貯めても、死んでしまえ**ばそれまでだ**。\n*(However much money you save, it all ends when you die.)*\nいい計画でも、実行しなけ**ればそれまでだ**。\n*(Even a good plan is worthless if you don't carry it out.)*\n\nそれまで means 'up to that point', so the idea is 'everything stops there'. Often with 〜てしまえば ('once it's done'). それまでのことだ is a variant."
+    },
+    {
+      "uid": "n1-grammar-6-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 6,
+      "title": "〜とあれば",
+      "meaning": "If (it's for) ~ / If it's the case that ~",
+      "structure": "Noun / Verb (Plain) + とあれば",
+      "explanation": "If such a special situation arises, the speaker is willing to do something unusual.",
+      "examples": [
+        {
+          "jp": "子どものためとあれば、親は何でもする。",
+          "en": "If it's for their children, parents will do anything."
+        },
+        {
+          "jp": "社長の命令とあれば、従うしかない。",
+          "en": "If it's the president's order, we have no choice but to obey."
+        }
+      ],
+      "summary": "とあれば means 'if it's for X / if it comes to X', then special action follows.",
+      "tags": [
+        "conditional"
+      ],
+      "details": "子どものため**とあれば**、親は何でもする。\n*(If it's for their children, parents will do anything.)*\n社長の命令**とあれば**、従うしかない。\n*(If it's the president's order, we have no choice but to obey.)*\n\nCommon with ため (〜のためとあれば) and 必要とあれば ('if necessary'). The second clause often expresses willingness or obligation (何でもする, しかたがない)."
+    }
+  ],
+  "7": [
+    {
+      "uid": "n1-grammar-7-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "〜ゆえ（に）",
+      "meaning": "Because of ~ / Due to ~ / Therefore",
+      "structure": "Verb/い-Adj (Plain) / な-Adj・Noun (である) + ゆえ（に） / Noun + の + ゆえ",
+      "explanation": "A literary way of giving a reason, common in formal writing.",
+      "examples": [
+        {
+          "jp": "若さゆえの失敗は、誰にでもある。",
+          "en": "Everyone makes mistakes because of youth."
+        },
+        {
+          "jp": "経験が少ないがゆえに、判断を誤ってしまった。",
+          "en": "Because I had little experience, I made the wrong judgment."
+        }
+      ],
+      "summary": "ゆえ（に） is a literary 'because' or 'therefore'.",
+      "tags": [
+        "cause-reason",
+        "formal-written"
+      ],
+      "details": "若さ**ゆえの**失敗は、誰にでもある。\n*(Everyone makes mistakes because of youth.)*\n経験が少ないが**ゆえに**、判断を誤ってしまった。\n*(Because I had little experience, I made the wrong judgment.)*\n\nがゆえに after a verb or adjective is a typical written form. ゆえに can also start a sentence as 'therefore', as in logic and math (我思う、ゆえに我あり, 'I think, therefore I am'). 故 in kanji."
+    },
+    {
+      "uid": "n1-grammar-7-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "〜こととて",
+      "meaning": "Because ~ / Since ~ (apologetic excuse)",
+      "structure": "Verb/い-Adj (Plain) / な-Adj + な / Noun + の + こととて",
+      "explanation": "A very formal, old-fashioned way of giving a reason, usually as an apology.",
+      "examples": [
+        {
+          "jp": "慣れないこととて、ご迷惑をおかけしました。",
+          "en": "Since I wasn't used to it, I'm sorry to have caused you trouble."
+        },
+        {
+          "jp": "子どものしたこととて、どうかお許しください。",
+          "en": "As it was a child who did it, please forgive them."
+        }
+      ],
+      "summary": "こととて gives a reason as a polite excuse, usually before an apology.",
+      "tags": [
+        "cause-reason",
+        "formal-written",
+        "keigo-polite"
+      ],
+      "details": "慣れない**こととて**、ご迷惑をおかけしました。\n*(Since I wasn't used to it, I'm sorry to have caused you trouble.)*\n子どものした**こととて**、どうかお許しください。\n*(As it was a child who did it, please forgive them.)*\n\nFound in formal apologies and letters. The second clause is often an apology or a request for forgiveness. In everyday speech, ので or から are used instead."
+    },
+    {
+      "uid": "n1-grammar-7-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "〜とあって",
+      "meaning": "Because (it's the special case that) ~",
+      "structure": "Noun / Verb (Plain) + とあって",
+      "explanation": "Because of a special situation, an expected result follows. Common in news.",
+      "examples": [
+        {
+          "jp": "連休とあって、観光地はどこも混雑している。",
+          "en": "Since it's a long weekend, tourist spots are crowded everywhere."
+        },
+        {
+          "jp": "人気歌手が来るとあって、会場は若者でいっぱいだった。",
+          "en": "Because a popular singer was coming, the venue was full of young people."
+        }
+      ],
+      "summary": "とあって gives a special situation as the reason for a natural result.",
+      "tags": [
+        "cause-reason",
+        "formal-written"
+      ],
+      "details": "連休**とあって**、観光地はどこも混雑している。\n*(Since it's a long weekend, tourist spots are crowded everywhere.)*\n人気歌手が来る**とあって**、会場は若者でいっぱいだった。\n*(Because a popular singer was coming, the venue was full of young people.)*\n\nThe situation is out of the ordinary (連休, 初めて, 人気の). The second clause is an objective description, not the speaker's will or a request. Typical of news reports."
+    },
+    {
+      "uid": "n1-grammar-7-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 7,
+      "title": "〜ばこそ",
+      "meaning": "Precisely because ~",
+      "structure": "Verb (ば-form) / い-Adj (〜ければ) / な-Adj・Noun (であれば) + こそ",
+      "explanation": "Strongly emphasizes the reason, usually a positive one behind a seemingly negative action.",
+      "examples": [
+        {
+          "jp": "あなたのことを思えばこそ、厳しく言うのです。",
+          "en": "It's precisely because I care about you that I speak so strictly."
+        },
+        {
+          "jp": "健康であればこそ、好きなことができる。",
+          "en": "It's precisely because you're healthy that you can do what you like."
+        }
+      ],
+      "summary": "ばこそ is a literary 'precisely because', often explaining a well-meant reason.",
+      "tags": [
+        "cause-reason",
+        "emphasis-assertion",
+        "formal-written"
+      ],
+      "details": "あなたのことを**思えばこそ**、厳しく言うのです。\n*(It's precisely because I care about you that I speak so strictly.)*\n健康で**あればこそ**、好きなことができる。\n*(It's precisely because you're healthy that you can do what you like.)*\n\nA more literary version of からこそ (N2). The sentence often ends with のだ／のです. Despite the ば-form, it isn't a condition; it states an actual reason."
+    }
+  ],
+  "8": [
+    {
+      "uid": "n1-grammar-8-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜手前",
+      "meaning": "Since (considering how it looks) ~ / Out of consideration for ~",
+      "structure": "Verb (Plain) / Noun + の + 手前",
+      "explanation": "Because of one's position or what one has said, one must act a certain way to save face.",
+      "examples": [
+        {
+          "jp": "やると言った手前、途中でやめるわけにはいかない。",
+          "en": "Since I said I'd do it, I can't quit halfway."
+        },
+        {
+          "jp": "子どもの手前、親が約束を破るわけにはいかない。",
+          "en": "In front of the children, parents can't break a promise."
+        }
+      ],
+      "summary": "手前 means 'because of how it would look (to others)', so one must keep face.",
+      "tags": [
+        "cause-reason",
+        "obligation-necessity"
+      ],
+      "details": "やると言った**手前**、途中でやめるわけにはいかない。\n*(Since I said I'd do it, I can't quit halfway.)*\n子どもの**手前**、親が約束を破るわけにはいかない。\n*(In front of the children, parents can't break a promise.)*\n\nThe second clause often expresses obligation: わけにはいかない, なければならない. With a person, it means 'in front of / out of consideration for'. 手前 literally means 'just in front of oneself'."
+    },
+    {
+      "uid": "n1-grammar-8-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜あっての",
+      "meaning": "~ is possible only because of ~ / Owes everything to ~",
+      "structure": "Noun A + あっての + Noun B",
+      "explanation": "B exists only because A exists; without A, there is no B.",
+      "examples": [
+        {
+          "jp": "お客様あっての商売です。",
+          "en": "Our business exists only because of our customers."
+        },
+        {
+          "jp": "健康あっての人生だから、無理をしないでください。",
+          "en": "Life depends on good health, so please don't overdo it."
+        }
+      ],
+      "summary": "AあってのB means 'B is only possible thanks to A'.",
+      "tags": [
+        "cause-reason",
+        "emphasis-assertion"
+      ],
+      "details": "お客様**あっての**商売です。\n*(Our business exists only because of our customers.)*\n健康**あっての**人生だから、無理をしないでください。\n*(Life depends on good health, so please don't overdo it.)*\n\nOften expresses gratitude or importance (お客様あっての, ファンあっての, 命あっての). A common proverb is 命あっての物種 ('while there's life, there's hope')."
+    },
+    {
+      "uid": "n1-grammar-8-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜べくして",
+      "meaning": "As was bound to happen ~ / Inevitably ~",
+      "structure": "Verb (Dictionary) + べくして + same Verb (た-form)",
+      "explanation": "Something happened because it was bound to, given the circumstances.",
+      "examples": [
+        {
+          "jp": "準備不足だったので、失敗すべくして失敗した。",
+          "en": "We weren't prepared, so we failed as we were bound to."
+        },
+        {
+          "jp": "あの事故は起こるべくして起こったと言える。",
+          "en": "You could say that accident was bound to happen."
+        }
+      ],
+      "summary": "べくして〜た says something happened because it was inevitable.",
+      "tags": [
+        "result-consequence",
+        "certainty-expectation",
+        "formal-written"
+      ],
+      "details": "準備不足だったので、失敗す**べくして**失敗した。\n*(We weren't prepared, so we failed as we were bound to.)*\nあの事故は起こる**べくして**起こったと言える。\n*(You could say that accident was bound to happen.)*\n\nThe same verb repeats: 起こるべくして起こった, 勝つべくして勝った. べく comes from べし ('should'). Note する → すべくして."
+    },
+    {
+      "uid": "n1-grammar-8-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 8,
+      "title": "〜うえは",
+      "meaning": "Now that ~ / Since ~ (one must)",
+      "structure": "Verb (Dictionary / た-form) + うえは（上は）",
+      "explanation": "Now that something has been decided or has happened, there is a natural duty or resolve that follows.",
+      "examples": [
+        {
+          "jp": "引き受けた上は、最後まで責任を持ってやります。",
+          "en": "Now that I've taken it on, I'll see it through responsibly to the end."
+        },
+        {
+          "jp": "こうなった上は、もう覚悟を決めるしかない。",
+          "en": "Now that it's come to this, I have no choice but to prepare myself."
+        }
+      ],
+      "summary": "うえは means 'now that X, Y must follow' — the most formal of the からには family.",
+      "tags": [
+        "cause-reason",
+        "obligation-necessity",
+        "formal-written"
+      ],
+      "details": "引き受けた**上は**、最後まで責任を持ってやります。\n*(Now that I've taken it on, I'll see it through responsibly to the end.)*\nこうなった**上は**、もう覚悟を決めるしかない。\n*(Now that it's come to this, I have no choice but to prepare myself.)*\n\nA formal version of からには and 以上は (N2). The second clause expresses resolve, duty or a command (つもりだ, しかない, べきだ). Don't confuse with 上に ('besides', N3) or 上で ('after', N3)."
+    }
+  ],
+  "9": [
+    {
+      "uid": "n1-grammar-9-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜べく",
+      "meaning": "In order to ~ / With the aim of ~",
+      "structure": "Verb (Dictionary) + べく（する → すべく）",
+      "explanation": "A literary 'in order to', expressing a clear purpose behind an action.",
+      "examples": [
+        {
+          "jp": "彼は夢を実現すべく、毎日努力を続けている。",
+          "en": "He keeps working hard every day in order to make his dream come true."
+        },
+        {
+          "jp": "問題を解決すべく、対策チームが作られた。",
+          "en": "A task force was set up to solve the problem."
+        }
+      ],
+      "summary": "べく is a formal 'in order to' — a deliberate purpose.",
+      "tags": [
+        "purpose",
+        "formal-written"
+      ],
+      "details": "彼は夢を実現**すべく**、毎日努力を続けている。\n*(He keeps working hard every day in order to make his dream come true.)*\n問題を解決**すべく**、対策チームが作られた。\n*(A task force was set up to solve the problem.)*\n\nA literary version of ために (N4). する usually becomes すべく. The second clause is a deliberate action, not a command or request (✗ 合格すべく勉強しなさい). This purpose べく is a different point from the N3 adverb なるべく ('as much as possible')."
+    },
+    {
+      "uid": "n1-grammar-9-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜んがため（に）",
+      "meaning": "In order to ~ (strong resolve)",
+      "structure": "Verb (ない-form stem) + んがため（に）・んがための + Noun（する → せんがため）",
+      "explanation": "A very literary, emphatic purpose: doing something with a strong determination to achieve a goal.",
+      "examples": [
+        {
+          "jp": "勝たんがために、彼らは厳しい練習に耐えた。",
+          "en": "They endured harsh training in order to win."
+        },
+        {
+          "jp": "真実を明らかにせんがため、記者は調査を続けた。",
+          "en": "Determined to bring the truth to light, the reporter continued the investigation."
+        }
+      ],
+      "summary": "んがため（に） is a very literary, determined 'in order to'.",
+      "tags": [
+        "purpose",
+        "volitional-intention",
+        "formal-written"
+      ],
+      "details": "勝た**んがために**、彼らは厳しい練習に耐えた。\n*(They endured harsh training in order to win.)*\n真実を明らかにせ**んがため**、記者は調査を続けた。\n*(Determined to bring the truth to light, the reporter continued the investigation.)*\n\nFormed from the ない-stem: 勝つ → 勝たんがため, 見る → 見んがため, する → せんがため. It sounds old-fashioned and dramatic, so it's mostly used in writing and speeches. Not used for requests or commands."
+    },
+    {
+      "uid": "n1-grammar-9-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜なくして（は）",
+      "meaning": "Without ~, (cannot) ~",
+      "structure": "Noun + なくして（は）",
+      "explanation": "Without something essential, the result cannot happen.",
+      "examples": [
+        {
+          "jp": "皆様のご協力なくして、この成功はありませんでした。",
+          "en": "Without everyone's cooperation, this success would not have been possible."
+        },
+        {
+          "jp": "努力なくしては、夢は実現しない。",
+          "en": "Without effort, dreams don't come true."
+        }
+      ],
+      "summary": "なくして（は） says 'without X, Y is impossible' — X is essential.",
+      "tags": [
+        "conditional",
+        "emphasis-assertion",
+        "formal-written"
+      ],
+      "details": "皆様のご協力**なくして**、この成功はありませんでした。\n*(Without everyone's cooperation, this success would not have been possible.)*\n努力**なくしては**、夢は実現しない。\n*(Without effort, dreams don't come true.)*\n\nThe second clause is negative (〜ない, 〜できない, ありえない). Common in speeches thanking people. It's more formal and emphatic than がなければ."
+    },
+    {
+      "uid": "n1-grammar-9-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 9,
+      "title": "〜なしに（は）",
+      "meaning": "Without ~",
+      "structure": "Noun + なしに（は）・なしで / Noun + なしでは",
+      "explanation": "Without doing or having something — either a plain 'without', or (with は) 'can't happen without'.",
+      "examples": [
+        {
+          "jp": "彼は連絡なしに会社を休んだ。",
+          "en": "He took the day off work without getting in touch."
+        },
+        {
+          "jp": "許可なしには、この部屋に入れません。",
+          "en": "You can't enter this room without permission."
+        }
+      ],
+      "summary": "なしに means 'without X'; なしには adds 'Y is impossible without X'.",
+      "tags": [
+        "negative-manner",
+        "conditional"
+      ],
+      "details": "彼は連絡**なしに**会社を休んだ。\n*(He took the day off work without getting in touch.)*\n許可**なしには**、この部屋に入れません。\n*(You can't enter this room without permission.)*\n\nWithout は, it simply describes how something was done (断りなしに, 予告なしに). With は, it works like なくしては and the second clause is negative. 〜ことなしに (Lesson 10) is the verb version."
+    }
+  ],
+  "10": [
+    {
+      "uid": "n1-grammar-10-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 10,
+      "title": "〜ことなしに",
+      "meaning": "Without ~ing, (cannot) ~",
+      "structure": "Verb (Dictionary) + ことなしに（は）",
+      "explanation": "Without doing something, the next thing can't happen.",
+      "examples": [
+        {
+          "jp": "失敗することなしに、成長することはできない。",
+          "en": "You can't grow without failing."
+        },
+        {
+          "jp": "人と話し合うことなしには、問題は解決しない。",
+          "en": "The problem won't be solved without talking things through."
+        }
+      ],
+      "summary": "ことなしに says 'without doing X, Y can't happen'.",
+      "tags": [
+        "conditional",
+        "negative-manner",
+        "formal-written"
+      ],
+      "details": "失敗する**ことなしに**、成長することはできない。\n*(You can't grow without failing.)*\n人と話し合う**ことなしには**、問題は解決しない。\n*(The problem won't be solved without talking things through.)*\n\nThe verb version of なしに. It is close to ことなく (N2), but ことなしに usually implies 'impossible without', while ことなく just describes 'without ever doing'. Formal and written."
+    },
+    {
+      "uid": "n1-grammar-10-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 10,
+      "title": "〜ずとも",
+      "meaning": "Even without ~ / Without having to ~",
+      "structure": "Verb (ない-form stem) + ずとも（する → せずとも）",
+      "explanation": "Even if something isn't done, the result is the same or still fine.",
+      "examples": [
+        {
+          "jp": "言わずとも、彼は私の気持ちを分かってくれた。",
+          "en": "Even without my saying it, he understood how I felt."
+        },
+        {
+          "jp": "そんなに心配せずとも、大丈夫ですよ。",
+          "en": "There's no need to worry so much — it'll be fine."
+        }
+      ],
+      "summary": "ずとも is a literary 'even without doing X'.",
+      "tags": [
+        "conditional",
+        "negative-manner",
+        "formal-written"
+      ],
+      "details": "言わ**ずとも**、彼は私の気持ちを分かってくれた。\n*(Even without my saying it, he understood how I felt.)*\nそんなに心配せ**ずとも**、大丈夫ですよ。\n*(There's no need to worry so much — it'll be fine.)*\n\nA literary version of 〜なくても (N4). する becomes せずとも. Common phrases: 言わずとも, 見ずとも, 急がずとも."
+    },
+    {
+      "uid": "n1-grammar-10-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 10,
+      "title": "〜（よ）うにも〜ない",
+      "meaning": "Even if one wants to ~, one can't",
+      "structure": "Verb (volitional) + にも + same Verb (potential, negative)",
+      "explanation": "The speaker wants to do something, but circumstances make it impossible.",
+      "examples": [
+        {
+          "jp": "財布を忘れたので、買おうにも買えない。",
+          "en": "I forgot my wallet, so even though I want to buy it, I can't."
+        },
+        {
+          "jp": "雨がひどくて、出かけようにも出かけられない。",
+          "en": "The rain is so heavy that I can't go out even if I want to."
+        }
+      ],
+      "summary": "（よ）うにも〜ない means 'I want to do X, but I can't'.",
+      "tags": [
+        "potential",
+        "volitional-intention"
+      ],
+      "details": "財布を忘れたので、**買おうにも**買えない。\n*(I forgot my wallet, so even though I want to buy it, I can't.)*\n雨がひどくて、**出かけようにも**出かけられない。\n*(The rain is so heavy that I can't go out even if I want to.)*\n\nThe same verb repeats, first as volitional + にも, then as a negative potential. The reason usually comes first. 〜（よ）うにもできない is also used."
+    },
+    {
+      "uid": "n1-grammar-10-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 10,
+      "title": "〜ずじまい",
+      "meaning": "End up never ~ing",
+      "structure": "Verb (ない-form stem) + ずじまい（する → せずじまい）",
+      "explanation": "Something the speaker intended to do never got done, and now it's too late.",
+      "examples": [
+        {
+          "jp": "旅行中、忙しくてお土産を買わずじまいだった。",
+          "en": "I was so busy on the trip that I never got around to buying souvenirs."
+        },
+        {
+          "jp": "結局、彼の本当の気持ちは聞けずじまいだった。",
+          "en": "In the end, I never got to hear how he really felt."
+        }
+      ],
+      "summary": "ずじまい says something the speaker meant to do never happened, with regret.",
+      "tags": [
+        "negative-manner",
+        "result-consequence"
+      ],
+      "details": "旅行中、忙しくてお土産を買わ**ずじまい**だった。\n*(I was so busy on the trip that I never got around to buying souvenirs.)*\n結局、彼の本当の気持ちは聞け**ずじまい**だった。\n*(In the end, I never got to hear how he really felt.)*\n\nAlmost always in the past (〜ずじまいだった) and with regret. 結局 often appears. じまい comes from 仕舞う ('to finish')."
+    }
+  ],
+  "11": [
+    {
+      "uid": "n1-grammar-11-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜をもって…とする",
+      "meaning": "Regarded as / On the basis of",
+      "structure": "Noun + をもって…とする / とされている",
+      "explanation": "Indicates '〜を…と見なす' (is regarded as). This is a highly formal written expression.",
+      "examples": [
+        {
+          "jp": "出席率、授業中の発表、レポートをもって、評価とします。",
+          "en": "Students are evaluated on the basis of attendance rate, presentations during classes, and reports."
+        },
+        {
+          "jp": "拍手をもって、賛成をいただいたものといたします。",
+          "en": "Based on your applause, I shall take it that I have received your endorsement."
+        }
+      ],
+      "summary": "をもって…とする is a highly formal written expression meaning 'to regard X as...' or 'on the basis of X' — typically found in official announcements and formal declarations.",
+      "details": "出席率、授業中の発表、レポート**をもって**、評価**とします**。\n*(Students are evaluated on the basis of attendance rate, in-class presentations, and reports.)*\n拍手**をもって**、賛成をいただいたものと**いたします**。\n*(Based on your applause, I shall take it that I have received your endorsement.)*\n\nThis is essentially a formal written equivalent of 〜を〜と見なす (\"regard X as Y\") — you'll encounter it in official rules, ceremony announcements, and formal business writing, rarely in everyday speech.\n\nOn its own, をもって also marks a point in time in formal announcements: 本日**をもって**閉店いたします *(we are closing as of today)*.",
+      "tags": [
+        "definition-meaning",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n1-grammar-11-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜をもってすれば／〜をもってしても",
+      "meaning": "With ~, (even X is possible) / Even with ~, (still not)",
+      "structure": "Noun + をもってすれば / Noun + をもってしても",
+      "explanation": "をもってすれば: with this powerful means, even something hard is possible. をもってしても: even with it, it's still impossible.",
+      "examples": [
+        {
+          "jp": "彼の実力をもってすれば、優勝も夢ではない。",
+          "en": "With his ability, even winning the championship isn't just a dream."
+        },
+        {
+          "jp": "最新の技術をもってしても、地震を予知することは難しい。",
+          "en": "Even with the latest technology, predicting earthquakes is difficult."
+        }
+      ],
+      "summary": "をもってすれば: 'with X, even Y is possible'; をもってしても: 'even with X, Y is impossible'.",
+      "tags": [
+        "conditional",
+        "concession-contrast",
+        "formal-written"
+      ],
+      "details": "彼の実力**をもってすれば**、優勝も夢ではない。\n*(With his ability, even winning the championship isn't just a dream.)*\n最新の技術**をもってしても**、地震を予知することは難しい。\n*(Even with the latest technology, predicting earthquakes is difficult.)*\n\nThe noun is something impressive (実力, 技術, 経験). With しても, the second clause is negative. Both build on をもって ('by means of', this lesson)."
+    },
+    {
+      "uid": "n1-grammar-11-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜をおいて",
+      "meaning": "Other than ~ / Apart from ~ (no one else)",
+      "structure": "Noun + をおいて（ほかに）〜ない",
+      "explanation": "Says that one person or thing is the only possible choice.",
+      "examples": [
+        {
+          "jp": "このチームを率いることができるのは、彼をおいてほかにいない。",
+          "en": "There's no one other than him who can lead this team."
+        },
+        {
+          "jp": "留学するなら今をおいてチャンスはない。",
+          "en": "If you're going to study abroad, there's no chance like now."
+        }
+      ],
+      "summary": "をおいて〜ない means 'there's no one/nothing other than X' — the only choice.",
+      "tags": [
+        "emphasis-limitation",
+        "alternative-choice"
+      ],
+      "details": "このチームを率いることができるのは、彼**をおいて**ほかにいない。\n*(There's no one other than him who can lead this team.)*\n留学するなら今**をおいて**チャンスはない。\n*(If you're going to study abroad, there's no chance like now.)*\n\nAlways followed by a negative, often with ほかに. Used to praise someone as the best or only choice. おく here means 'to set aside'."
+    },
+    {
+      "uid": "n1-grammar-11-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 11,
+      "title": "〜を経て",
+      "meaning": "After going through ~ / Via ~",
+      "structure": "Noun + を経て",
+      "explanation": "Passing through a place, a stage or a period of time before reaching a result.",
+      "examples": [
+        {
+          "jp": "長い議論を経て、ようやく結論が出た。",
+          "en": "After a long discussion, a conclusion was finally reached."
+        },
+        {
+          "jp": "この飛行機は香港を経て、シンガポールへ向かう。",
+          "en": "This plane goes to Singapore via Hong Kong."
+        }
+      ],
+      "summary": "を経て means 'after going through X' — a stage, process, place or period.",
+      "tags": [
+        "time-relative",
+        "direction-movement",
+        "formal-written"
+      ],
+      "details": "長い議論**を経て**、ようやく結論が出た。\n*(After a long discussion, a conclusion was finally reached.)*\nこの飛行機は香港**を経て**、シンガポールへ向かう。\n*(This plane goes to Singapore via Hong Kong.)*\n\nRead をへて. Used for places on a route, processes (審査を経て), and time (10年の歳月を経て). It's formal and common in news and biographies."
+    }
+  ],
+  "12": [
+    {
+      "uid": "n1-grammar-12-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "〜に即して",
+      "meaning": "In accordance with ~ / Based on (the facts) ~",
+      "structure": "Noun + に即して / Noun + に即した + Noun",
+      "explanation": "Acting in a way that closely matches facts, reality or actual conditions.",
+      "examples": [
+        {
+          "jp": "事実に即して報告してください。",
+          "en": "Please report in line with the facts."
+        },
+        {
+          "jp": "現状に即した対策が必要だ。",
+          "en": "We need measures suited to the current situation."
+        }
+      ],
+      "summary": "に即して means acting in close accordance with facts or actual conditions.",
+      "tags": [
+        "manner-accordance",
+        "formal-written"
+      ],
+      "details": "事実**に即して**報告してください。\n*(Please report in line with the facts.)*\n現状**に即した**対策が必要だ。\n*(We need measures suited to the current situation.)*\n\nRead にそくして. Typical nouns: 事実, 現実, 現状, 実態, 経験. Compare に則って (also this lesson), which follows rules or traditions; に即して follows reality."
+    },
+    {
+      "uid": "n1-grammar-12-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "〜に則って",
+      "meaning": "In accordance with ~ (rules, law, tradition)",
+      "structure": "Noun + に則って・に則り / Noun + に則った + Noun",
+      "explanation": "Following a standard such as law, rules or tradition exactly.",
+      "examples": [
+        {
+          "jp": "法律に則って、厳正に処分します。",
+          "en": "We will deal with it strictly in accordance with the law."
+        },
+        {
+          "jp": "式は伝統に則って行われた。",
+          "en": "The ceremony was held in accordance with tradition."
+        }
+      ],
+      "summary": "に則って means 'in accordance with' an established rule, law or tradition.",
+      "tags": [
+        "manner-accordance",
+        "formal-written"
+      ],
+      "details": "法律**に則って**、厳正に処分します。\n*(We will deal with it strictly in accordance with the law.)*\n式は伝統**に則って**行われた。\n*(The ceremony was held in accordance with tradition.)*\n\nRead にのっとって. Used with 法律, 規則, ルール, 伝統, 慣例. It's more formal than に従って (N3) and suggests a fixed standard."
+    },
+    {
+      "uid": "n1-grammar-12-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "〜を踏まえて",
+      "meaning": "Based on ~ / Taking ~ into account",
+      "structure": "Noun + を踏まえて・を踏まえ / Noun + を踏まえた + Noun",
+      "explanation": "Taking previous facts or results into account as the basis for the next step.",
+      "examples": [
+        {
+          "jp": "前回の反省を踏まえて、計画を立て直した。",
+          "en": "Taking our reflections on the last time into account, we revised the plan."
+        },
+        {
+          "jp": "調査結果を踏まえた提案をお願いします。",
+          "en": "Please make a proposal based on the survey results."
+        }
+      ],
+      "summary": "を踏まえて means using earlier facts or results as the basis for what comes next.",
+      "tags": [
+        "manner-accordance",
+        "formal-written"
+      ],
+      "details": "前回の反省**を踏まえて**、計画を立て直した。\n*(Taking our reflections on the last time into account, we revised the plan.)*\n調査結果**を踏まえた**提案をお願いします。\n*(Please make a proposal based on the survey results.)*\n\nVery common in business and academic writing. The noun is something already known: 結果, 経験, 意見, 反省, 現状. 踏まえる literally means 'to step firmly on'."
+    },
+    {
+      "uid": "n1-grammar-12-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 12,
+      "title": "〜いかんで／〜いかんによらず",
+      "meaning": "Depending on ~ / Regardless of ~",
+      "structure": "Noun + (の) + いかんで・いかんによって / Noun + の + いかんによらず・いかんにかかわらず",
+      "explanation": "いかんで: the result depends on X. いかんによらず: regardless of X.",
+      "examples": [
+        {
+          "jp": "試験の結果いかんで、進学できるかどうかが決まる。",
+          "en": "Whether you can go on to university depends on your exam results."
+        },
+        {
+          "jp": "理由のいかんによらず、遅刻は認められません。",
+          "en": "Regardless of the reason, lateness will not be accepted."
+        }
+      ],
+      "summary": "いかんで means 'depending on X'; いかんによらず means 'regardless of X'.",
+      "tags": [
+        "conditional",
+        "concession-contrast",
+        "formal-written"
+      ],
+      "details": "試験の結果**いかんで**、進学できるかどうかが決まる。\n*(Whether you can go on to university depends on your exam results.)*\n理由の**いかんによらず**、遅刻は認められません。\n*(Regardless of the reason, lateness will not be accepted.)*\n\nいかん means 'how / what state'. A formal version of 次第で (N2) and にかかわらず (N2). Typical nouns: 結果, 理由, 成績, 対応."
+    }
+  ],
+  "13": [
+    {
+      "uid": "n1-grammar-13-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 13,
+      "title": "〜極まる／〜極まりない",
+      "meaning": "Extremely ~ / Utterly ~",
+      "structure": "な-Adj (stem) + 極まる・極まりない",
+      "explanation": "Says that a quality is at its extreme limit — usually negative.",
+      "examples": [
+        {
+          "jp": "そんな運転は危険極まりない。",
+          "en": "Driving like that is extremely dangerous."
+        },
+        {
+          "jp": "彼の態度は失礼極まる。",
+          "en": "His attitude is utterly rude."
+        }
+      ],
+      "summary": "極まる／極まりない mean 'extremely' — a quality at its limit, usually negative.",
+      "tags": [
+        "excessive-degree",
+        "emphasis-assertion",
+        "formal-written"
+      ],
+      "details": "そんな運転は危険**極まりない**。\n*(Driving like that is extremely dangerous.)*\n彼の態度は失礼**極まる**。\n*(His attitude is utterly rude.)*\n\nDespite the negative ない, 極まりない means the same as 極まる ('to the extreme'). Typical words: 危険, 失礼, 不快, 残念, 迷惑. Read きわまる."
+    },
+    {
+      "uid": "n1-grammar-13-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 13,
+      "title": "〜の極み",
+      "meaning": "The height of ~ / The utmost ~",
+      "structure": "Noun + の極み",
+      "explanation": "The highest or most extreme degree of a feeling or state.",
+      "examples": [
+        {
+          "jp": "このような賞をいただき、感激の極みです。",
+          "en": "I'm deeply moved to receive such an award."
+        },
+        {
+          "jp": "徹夜続きで、疲労の極みに達していた。",
+          "en": "After staying up night after night, I had reached the limit of exhaustion."
+        }
+      ],
+      "summary": "の極み means 'the height of X' — the utmost degree.",
+      "tags": [
+        "excessive-degree",
+        "emotion-expression",
+        "formal-written"
+      ],
+      "details": "このような賞をいただき、感激**の極み**です。\n*(I'm deeply moved to receive such an award.)*\n徹夜続きで、疲労**の極み**に達していた。\n*(After staying up night after night, I had reached the limit of exhaustion.)*\n\nUsed in formal speeches with emotions (感激, 光栄, 喜び) and in descriptions of extreme states (疲労, ぜいたく). Read のきわみ."
+    },
+    {
+      "uid": "n1-grammar-13-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 13,
+      "title": "〜の至り",
+      "meaning": "The utmost ~ / Extremely ~",
+      "structure": "Noun + の至り（です）",
+      "explanation": "A formal expression of the highest degree of a feeling, used mainly in set phrases.",
+      "examples": [
+        {
+          "jp": "このような席でお話しできるとは、光栄の至りです。",
+          "en": "It is the greatest honor to be able to speak on such an occasion."
+        },
+        {
+          "jp": "あの頃の失敗は、若気の至りでした。",
+          "en": "Those mistakes back then were down to youthful folly."
+        }
+      ],
+      "summary": "の至り expresses the utmost degree, mostly in fixed polite phrases.",
+      "tags": [
+        "excessive-degree",
+        "keigo-polite",
+        "formal-written"
+      ],
+      "details": "このような席でお話しできるとは、光栄**の至り**です。\n*(It is the greatest honor to be able to speak on such an occasion.)*\nあの頃の失敗は、若気**の至り**でした。\n*(Those mistakes back then were down to youthful folly.)*\n\nAlmost always in set phrases: 光栄の至り ('the greatest honor'), 恐縮の至り ('extremely grateful/sorry'), 若気の至り ('youthful indiscretion'). Read のいたり."
+    },
+    {
+      "uid": "n1-grammar-13-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 13,
+      "title": "〜ことこの上ない",
+      "meaning": "Extremely ~ / Nothing could be more ~",
+      "structure": "い-Adj / な-Adj + な + ことこの上ない",
+      "explanation": "Says nothing could be more so than this.",
+      "examples": [
+        {
+          "jp": "一人で夜道を歩くのは、心細いことこの上ない。",
+          "en": "Walking alone at night is as unnerving as it gets."
+        },
+        {
+          "jp": "彼の説明は分かりにくいことこの上ない。",
+          "en": "His explanation could not be harder to understand."
+        }
+      ],
+      "summary": "ことこの上ない means 'nothing could be more X'.",
+      "tags": [
+        "excessive-degree",
+        "formal-written"
+      ],
+      "details": "一人で夜道を歩くのは、心細い**ことこの上ない**。\n*(Walking alone at night is as unnerving as it gets.)*\n彼の説明は分かりにくい**ことこの上ない**。\n*(His explanation could not be harder to understand.)*\n\nこの上ない ('nothing above this') can also come before a noun: この上ない喜び ('the greatest joy'). With こと, it follows an adjective and ends the sentence. Formal and written."
+    }
+  ],
+  "14": [
+    {
+      "uid": "n1-grammar-14-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜といったらない",
+      "meaning": "Indescribably ~ / Extremely ~",
+      "structure": "い-Adj / Noun + といったらない（ったらない）",
+      "explanation": "A feeling or quality is so extreme that it can't be put into words.",
+      "examples": [
+        {
+          "jp": "初めて富士山に登った時の感動といったらない。",
+          "en": "The emotion when I first climbed Mt. Fuji was beyond words."
+        },
+        {
+          "jp": "彼の部屋の汚さといったらない。",
+          "en": "You wouldn't believe how dirty his room is."
+        }
+      ],
+      "summary": "といったらない says something was so X it can't be described.",
+      "tags": [
+        "excessive-degree",
+        "emotion-expression"
+      ],
+      "details": "初めて富士山に登った時の感動**といったらない**。\n*(The emotion when I first climbed Mt. Fuji was beyond words.)*\n彼の部屋の汚さ**といったらない**。\n*(You wouldn't believe how dirty his room is.)*\n\nOften with a noun formed with さ (汚さ, 寒さ, うれしさ). It can be positive or negative. The casual form is ったらない: 寒いったらない."
+    },
+    {
+      "uid": "n1-grammar-14-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜かぎりだ",
+      "meaning": "Extremely ~ / I feel so ~",
+      "structure": "い-Adj / な-Adj + な + かぎりだ",
+      "explanation": "The speaker's own feeling is at its height.",
+      "examples": [
+        {
+          "jp": "皆様にお会いできて、うれしいかぎりです。",
+          "en": "I'm so delighted to be able to meet you all."
+        },
+        {
+          "jp": "一人で海外に住むのは、心細いかぎりだ。",
+          "en": "Living abroad alone makes me feel so very lonely."
+        }
+      ],
+      "summary": "かぎりだ expresses the speaker's own emotion at its peak.",
+      "tags": [
+        "emotion-expression",
+        "excessive-degree"
+      ],
+      "details": "皆様にお会いできて、うれしい**かぎりです**。\n*(I'm so delighted to be able to meet you all.)*\n一人で海外に住むのは、心細い**かぎりだ**。\n*(Living abroad alone makes me feel so very lonely.)*\n\nOnly with adjectives of emotion (うれしい, 悲しい, 寂しい, うらやましい, 心細い), and only about the speaker's feelings. 限り in kanji. Different from the N2 かぎり ('as long as')."
+    },
+    {
+      "uid": "n1-grammar-14-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜にもほどがある",
+      "meaning": "There's a limit to ~ / Too ~ (beyond acceptable)",
+      "structure": "Noun / い-Adj / な-Adj + にもほどがある",
+      "explanation": "Criticizes something as going far beyond acceptable limits.",
+      "examples": [
+        {
+          "jp": "冗談にもほどがある。",
+          "en": "There's a limit to joking around!"
+        },
+        {
+          "jp": "三時間も遅れるなんて、ルーズにもほどがある。",
+          "en": "Three hours late? That's way too careless."
+        }
+      ],
+      "summary": "にもほどがある criticizes something as excessive — 'that's going too far'.",
+      "tags": [
+        "excessive-degree",
+        "emotion-expression"
+      ],
+      "details": "冗談**にもほどがある**。\n*(There's a limit to joking around!)*\n三時間も遅れるなんて、ルーズ**にもほどがある**。\n*(Three hours late? That's way too careless.)*\n\nAn emotional, critical expression used in speech. 冗談にもほどがある and ばかにもほどがある are common phrases. ほど means 'limit, degree'."
+    },
+    {
+      "uid": "n1-grammar-14-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 14,
+      "title": "〜以外の何ものでもない",
+      "meaning": "Nothing but ~ / Nothing other than ~",
+      "structure": "Noun + 以外の何ものでもない",
+      "explanation": "Strongly states that something can only be described as X.",
+      "examples": [
+        {
+          "jp": "彼のしたことは、裏切り以外の何ものでもない。",
+          "en": "What he did is nothing but betrayal."
+        },
+        {
+          "jp": "この結果は、努力の成果以外の何ものでもない。",
+          "en": "This result is nothing other than the fruit of hard work."
+        }
+      ],
+      "summary": "以外の何ものでもない means 'it is nothing but X' — strong assertion.",
+      "tags": [
+        "emphasis-assertion"
+      ],
+      "details": "彼のしたことは、裏切り**以外の何ものでもない**。\n*(What he did is nothing but betrayal.)*\nこの結果は、努力の成果**以外の何ものでもない**。\n*(This result is nothing other than the fruit of hard work.)*\n\nStronger than にほかならない (N2). Often used for strong criticism (迷惑, 暴力, 犯罪) but also for praise. 何もの can be written 何物."
+    }
+  ],
+  "15": [
+    {
+      "uid": "n1-grammar-15-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 15,
+      "title": "〜てやまない",
+      "meaning": "Never cease to ~ / Sincerely ~",
+      "structure": "Verb (て-form) + やまない",
+      "explanation": "A feeling such as hope or love continues strongly and never stops.",
+      "examples": [
+        {
+          "jp": "皆様のご健康を願ってやみません。",
+          "en": "I sincerely wish you all good health."
+        },
+        {
+          "jp": "彼は生涯、故郷を愛してやまなかった。",
+          "en": "He loved his hometown deeply all his life."
+        }
+      ],
+      "summary": "てやまない expresses a feeling that never ceases — deep, sincere wishes or love.",
+      "tags": [
+        "emotion-expression",
+        "state-continuation",
+        "formal-written"
+      ],
+      "details": "皆様のご健康を願っ**てやみません**。\n*(I sincerely wish you all good health.)*\n彼は生涯、故郷を愛し**てやまなかった**。\n*(He loved his hometown deeply all his life.)*\n\nUsed with verbs of feeling: 願う, 祈る, 愛する, 期待する, 尊敬する. Common at the end of formal speeches and letters (〜を祈ってやみません). Not used for actions."
+    },
+    {
+      "uid": "n1-grammar-15-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 15,
+      "title": "〜を禁じ得ない",
+      "meaning": "Cannot help feeling ~",
+      "structure": "Noun (emotion) + を禁じ得ない",
+      "explanation": "A strong feeling arises that one cannot suppress.",
+      "examples": [
+        {
+          "jp": "被害者の話を聞いて、涙を禁じ得なかった。",
+          "en": "Hearing the victim's story, I couldn't hold back my tears."
+        },
+        {
+          "jp": "政府の対応には怒りを禁じ得ない。",
+          "en": "I can't help feeling angry at the government's response."
+        }
+      ],
+      "summary": "を禁じ得ない means one cannot suppress a strong feeling.",
+      "tags": [
+        "emotion-expression",
+        "spontaneous-perception",
+        "formal-written"
+      ],
+      "details": "被害者の話を聞いて、涙**を禁じ得なかった**。\n*(Hearing the victim's story, I couldn't hold back my tears.)*\n政府の対応には怒り**を禁じ得ない**。\n*(I can't help feeling angry at the government's response.)*\n\nUsed with emotion nouns: 涙, 怒り, 同情, 驚き, 失望. It's formal and written. 禁じる = 'forbid', 得ない = 'cannot', so literally 'cannot forbid (the feeling)'."
+    },
+    {
+      "uid": "n1-grammar-15-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 15,
+      "title": "〜に堪える／〜に堪えない",
+      "meaning": "Worth ~ / Unbearable to ~ / Deeply (feel) ~",
+      "structure": "Verb (Dictionary) / Noun + に堪える・に堪えない",
+      "explanation": "に堪える: worth doing. に堪えない: too awful to bear, or (with emotion nouns) to feel something very deeply.",
+      "examples": [
+        {
+          "jp": "その番組は、見るに堪えないほどひどかった。",
+          "en": "The show was so awful it was unbearable to watch."
+        },
+        {
+          "jp": "皆様の温かいお言葉に、感謝に堪えません。",
+          "en": "I cannot thank you enough for your kind words."
+        }
+      ],
+      "summary": "に堪える means 'worth X'; に堪えない means 'unbearable to X', or 'deeply feel X'.",
+      "tags": [
+        "emotion-expression",
+        "ease-difficulty",
+        "formal-written"
+      ],
+      "details": "その番組は、見る**に堪えない**ほどひどかった。\n*(The show was so awful it was unbearable to watch.)*\n皆様の温かいお言葉に、感謝**に堪えません**。\n*(I cannot thank you enough for your kind words.)*\n\nRead にたえる. With 見る, 聞く, 読む: 見るに堪えない ('too awful to watch'). With emotion nouns like 感謝 or 同情, 〜に堪えない expresses intense feeling in formal speech. The positive 鑑賞に堪える means 'worth appreciating'."
+    },
+    {
+      "uid": "n1-grammar-15-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 15,
+      "title": "〜てはばからない",
+      "meaning": "Not hesitate to ~ / Openly ~",
+      "structure": "Verb (て-form) + はばからない",
+      "explanation": "Someone says or does something boldly, without caring what others think.",
+      "examples": [
+        {
+          "jp": "彼は自分が天才だと言ってはばからない。",
+          "en": "He doesn't hesitate to call himself a genius."
+        },
+        {
+          "jp": "社長は改革が必要だと公言してはばからない。",
+          "en": "The president openly declares that reform is necessary."
+        }
+      ],
+      "summary": "てはばからない describes saying something openly, without hesitation.",
+      "tags": [
+        "manner-accordance",
+        "emphasis-assertion"
+      ],
+      "details": "彼は自分が天才だと言っ**てはばからない**。\n*(He doesn't hesitate to call himself a genius.)*\n社長は改革が必要だと公言し**てはばからない**。\n*(The president openly declares that reform is necessary.)*\n\nUsually with verbs of speech (言う, 公言する, 主張する). It describes another person, often with surprise or mild criticism. はばかる means 'to hesitate, to be shy of'."
+    }
+  ],
+  "16": [
+    {
+      "uid": "n1-grammar-16-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜ずにはおかない／〜ないではおかない",
+      "meaning": "Will definitely ~ / Cannot fail to ~",
+      "structure": "Verb (ない-form stem) + ずにはおかない（する → せずにはおかない）",
+      "explanation": "Something will inevitably cause a reaction, or someone is determined to do something.",
+      "examples": [
+        {
+          "jp": "この映画は、見る人を感動させずにはおかないだろう。",
+          "en": "This film will surely move everyone who sees it."
+        },
+        {
+          "jp": "犯人を見つけ出さずにはおかない。",
+          "en": "I will find the culprit, no matter what."
+        }
+      ],
+      "summary": "ずにはおかない means 'X will inevitably happen' — a sure reaction or a firm resolve.",
+      "tags": [
+        "certainty-expectation",
+        "volitional-intention",
+        "formal-written"
+      ],
+      "details": "この映画は、見る人を感動させ**ずにはおかない**だろう。\n*(This film will surely move everyone who sees it.)*\n犯人を見つけ出さ**ずにはおかない**。\n*(I will find the culprit, no matter what.)*\n\nTwo uses: a natural reaction that is bound to happen (often with causatives like 感動させる, 考えさせる), and strong personal determination. ないではおかない is the same meaning. Compare ずにはいられない (N3): that one is about the speaker's own urge."
+    },
+    {
+      "uid": "n1-grammar-16-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜ずにはすまない／〜ないではすまない",
+      "meaning": "Must ~ / Won't get away without ~",
+      "structure": "Verb (ない-form stem) + ずにはすまない（する → せずにはすまない）",
+      "explanation": "Given the situation or social expectations, one has no choice but to do something.",
+      "examples": [
+        {
+          "jp": "人のものを壊したのだから、謝らずにはすまない。",
+          "en": "Since you broke someone's things, you'll have to apologize."
+        },
+        {
+          "jp": "これだけの問題になれば、社長も責任を取らずにはすまないだろう。",
+          "en": "With a problem this serious, even the president won't get away without taking responsibility."
+        }
+      ],
+      "summary": "ずにはすまない means 'you won't get away without doing X' — an unavoidable duty.",
+      "tags": [
+        "obligation-necessity",
+        "formal-written"
+      ],
+      "details": "人のものを壊したのだから、謝ら**ずにはすまない**。\n*(Since you broke someone's things, you'll have to apologize.)*\nこれだけの問題になれば、社長も責任を取ら**ずにはすまない**だろう。\n*(With a problem this serious, even the president won't get away without taking responsibility.)*\n\nThe obligation comes from the situation or social norms, not personal desire. ないではすまない means the same. すむ means 'to be settled', so 'it won't be settled without doing X'."
+    },
+    {
+      "uid": "n1-grammar-16-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜を余儀なくされる",
+      "meaning": "Be forced to ~ / Have no choice but to ~",
+      "structure": "Noun + を余儀なくされる / Noun + を余儀なくさせる",
+      "explanation": "Circumstances force someone to do something they didn't want to.",
+      "examples": [
+        {
+          "jp": "台風のため、イベントは中止を余儀なくされた。",
+          "en": "Because of the typhoon, the event was forced to be canceled."
+        },
+        {
+          "jp": "けがのため、彼は引退を余儀なくされた。",
+          "en": "Because of his injury, he was forced to retire."
+        }
+      ],
+      "summary": "を余儀なくされる means being forced by circumstances to do something.",
+      "tags": [
+        "obligation-necessity",
+        "passive",
+        "formal-written"
+      ],
+      "details": "台風のため、イベントは中止**を余儀なくされた**。\n*(Because of the typhoon, the event was forced to be canceled.)*\nけがのため、彼は引退**を余儀なくされた**。\n*(Because of his injury, he was forced to retire.)*\n\nThe noun is usually a する-noun of change (中止, 変更, 延期, 引退, 入院). The causative form 余儀なくさせる means a cause forces someone. Common in news. Read よぎなく."
+    },
+    {
+      "uid": "n1-grammar-16-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 16,
+      "title": "〜始末だ",
+      "meaning": "End up ~ (in a bad state) / It's come to ~",
+      "structure": "Verb (Dictionary) + 始末だ / この・あの + 始末だ",
+      "explanation": "After a series of problems, things ended in a bad situation.",
+      "examples": [
+        {
+          "jp": "彼は遅刻ばかりして、ついには無断で休む始末だ。",
+          "en": "He was always late, and now he's even taking days off without notice."
+        },
+        {
+          "jp": "兄は借金を重ね、とうとう家まで売る始末だった。",
+          "en": "My brother kept borrowing money until he finally ended up selling even his house."
+        }
+      ],
+      "summary": "始末だ describes a bad end result after a series of problems — 'it's come to this'.",
+      "tags": [
+        "result-consequence",
+        "emotion-expression"
+      ],
+      "details": "彼は遅刻ばかりして、ついには無断で休む**始末だ**。\n*(He was always late, and now he's even taking days off without notice.)*\n兄は借金を重ね、とうとう家まで売る**始末だった**。\n*(My brother kept borrowing money until he finally ended up selling even his house.)*\n\nOften with ついには, とうとう, 最後には, and expresses the speaker's criticism or exasperation. この始末だ ('and this is the result!') is a common phrase. Read しまつ."
+    }
+  ],
+  "17": [
+    {
+      "uid": "n1-grammar-17-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜とばかりに",
+      "meaning": "As if to say ~",
+      "structure": "Sentence (Plain / Imperative) + とばかりに / Noun + とばかりに",
+      "explanation": "Someone's attitude or action clearly shows what they're thinking, though they don't say it.",
+      "examples": [
+        {
+          "jp": "彼は「もう帰れ」とばかりに、ドアを開けた。",
+          "en": "He opened the door as if to say, 'Go home already.'"
+        },
+        {
+          "jp": "ここぞとばかりに、彼女は自分の意見を述べた。",
+          "en": "Seizing the moment, she stated her opinion."
+        }
+      ],
+      "summary": "とばかりに describes an action that clearly expresses unspoken thoughts — 'as if to say'.",
+      "tags": [
+        "similarity-appearance",
+        "quotation"
+      ],
+      "details": "彼は「もう帰れ」**とばかりに**、ドアを開けた。\n*(He opened the door as if to say, 'Go home already.')*\nここぞ**とばかりに**、彼女は自分の意見を述べた。\n*(Seizing the moment, she stated her opinion.)*\n\nUsed to describe other people's behavior, not the speaker's. The quoted part is often a command or short remark. ここぞとばかりに ('as if this were the moment') is a common set phrase. Compare んばかり (this lesson), which is about something almost happening."
+    },
+    {
+      "uid": "n1-grammar-17-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜んばかり",
+      "meaning": "As if about to ~ / Almost ~",
+      "structure": "Verb (ない-form stem) + んばかり（に・の・だ）（する → せんばかり）",
+      "explanation": "Something is so extreme that it looks as if it is about to happen.",
+      "examples": [
+        {
+          "jp": "彼女は泣き出さんばかりの顔をしていた。",
+          "en": "She looked as if she were about to burst into tears."
+        },
+        {
+          "jp": "会場は割れんばかりの拍手に包まれた。",
+          "en": "The hall was filled with thunderous applause."
+        }
+      ],
+      "summary": "んばかり describes something so intense it seems about to happen — 'almost', 'as if about to'.",
+      "tags": [
+        "similarity-appearance",
+        "degree-extent",
+        "formal-written"
+      ],
+      "details": "彼女は泣き出さ**んばかりの**顔をしていた。\n*(She looked as if she were about to burst into tears.)*\n会場は割れ**んばかりの**拍手に包まれた。\n*(The hall was filled with thunderous applause.)*\n\nFormed from the ない-stem: 泣き出す → 泣き出さんばかり, 割れる → 割れんばかり. Common phrases: 割れんばかりの拍手, あふれんばかりの笑顔, 言わんばかり ('as if to say'). It's literary and descriptive."
+    },
+    {
+      "uid": "n1-grammar-17-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜めく",
+      "meaning": "Show signs of ~ / Become like ~ / -ish",
+      "structure": "Noun + めく / めいた + Noun",
+      "explanation": "Something starts to have the quality or feel of the noun.",
+      "examples": [
+        {
+          "jp": "日差しが暖かくなり、だいぶ春めいてきた。",
+          "en": "The sunlight has gotten warmer, and it feels quite spring-like now."
+        },
+        {
+          "jp": "彼は皮肉めいた言い方をした。",
+          "en": "He said it in a rather sarcastic way."
+        }
+      ],
+      "summary": "めく means taking on the feel of X — 'spring-like', 'sarcastic-sounding'.",
+      "tags": [
+        "similarity-appearance",
+        "change-of-state"
+      ],
+      "details": "日差しが暖かくなり、だいぶ春**めいて**きた。\n*(The sunlight has gotten warmer, and it feels quite spring-like now.)*\n彼は皮肉**めいた**言い方をした。\n*(He said it in a rather sarcastic way.)*\n\nWorks with a limited set of nouns: 春めく, 秋めく, 冗談めく, 皮肉めく, 謎めく ('mysterious'), 言い訳めく. めいた + noun is very common: 謎めいた人."
+    },
+    {
+      "uid": "n1-grammar-17-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 17,
+      "title": "〜じみる",
+      "meaning": "Seem like ~ / Smack of ~ (negative)",
+      "structure": "Noun + じみる / じみた + Noun",
+      "explanation": "Something has an unwelcome quality of the noun — usually critical.",
+      "examples": [
+        {
+          "jp": "いい大人が子どもじみたことを言うな。",
+          "en": "A grown adult shouldn't say such childish things."
+        },
+        {
+          "jp": "彼の行動は狂気じみていた。",
+          "en": "His behavior bordered on madness."
+        }
+      ],
+      "summary": "じみる means having an unwelcome quality of X — 'childish', 'smacking of madness'.",
+      "tags": [
+        "similarity-appearance"
+      ],
+      "details": "いい大人が子ども**じみた**ことを言うな。\n*(A grown adult shouldn't say such childish things.)*\n彼の行動は狂気**じみて**いた。\n*(His behavior bordered on madness.)*\n\nMostly negative. Common words: 子どもじみる, 年寄りじみる, 芝居じみる ('theatrical'), 説教じみる ('preachy'). 所帯じみる means 'to look worn down by domestic life'. Compare めく, which is neutral."
+    }
+  ],
+  "18": [
+    {
+      "uid": "n1-grammar-18-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "〜に足る",
+      "meaning": "Worthy of ~ / Sufficient to ~",
+      "structure": "Verb (Dictionary) / Noun + に足る + Noun",
+      "explanation": "Something deserves or is sufficient for a certain action or evaluation.",
+      "examples": [
+        {
+          "jp": "彼は信頼するに足る人物だ。",
+          "en": "He is a person worthy of trust."
+        },
+        {
+          "jp": "それは言うに足りない小さな問題だ。",
+          "en": "It's a trivial problem not worth mentioning."
+        }
+      ],
+      "summary": "に足る means 'worthy of X' or 'enough to justify X'.",
+      "tags": [
+        "degree-extent",
+        "formal-written"
+      ],
+      "details": "彼は信頼する**に足る**人物だ。\n*(He is a person worthy of trust.)*\nそれは言う**に足りない**小さな問題だ。\n*(It's a trivial problem not worth mentioning.)*\n\nUsually before a noun: 信頼に足る人, 満足するに足る結果. The negative 取るに足りない／取るに足らない means 'trivial'. Read にたる."
+    },
+    {
+      "uid": "n1-grammar-18-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "〜に難くない",
+      "meaning": "It's not hard to ~ (imagine, understand)",
+      "structure": "Verb (Dictionary) / Noun + に難くない",
+      "explanation": "Says something is easy to imagine or understand from the situation.",
+      "examples": [
+        {
+          "jp": "家族を失った彼の悲しみは、想像に難くない。",
+          "en": "It's not hard to imagine his grief at losing his family."
+        },
+        {
+          "jp": "彼が反対した理由は、察するに難くない。",
+          "en": "It's not hard to guess why he objected."
+        }
+      ],
+      "summary": "に難くない means 'it's easy to imagine or understand X'.",
+      "tags": [
+        "ease-difficulty",
+        "conjecture-inference",
+        "formal-written"
+      ],
+      "details": "家族を失った彼の悲しみは、想像**に難くない**。\n*(It's not hard to imagine his grief at losing his family.)*\n彼が反対した理由は、察する**に難くない**。\n*(It's not hard to guess why he objected.)*\n\nRead にかたくない. Used almost only with verbs of thinking: 想像, 察する, 理解, 予想. It's a formal written way of saying 簡単に〜できる."
+    },
+    {
+      "uid": "n1-grammar-18-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "〜てしかるべきだ",
+      "meaning": "Ought to ~ / It would only be natural to ~",
+      "structure": "Verb (て-form) + しかるべきだ / い-Adj (〜くて) + しかるべきだ",
+      "explanation": "Something should naturally be done, and it's surprising or wrong that it hasn't been.",
+      "examples": [
+        {
+          "jp": "これほどの功績なら、もっと評価されてしかるべきだ。",
+          "en": "With achievements like these, they ought to be recognized much more."
+        },
+        {
+          "jp": "ミスをしたのだから、謝ってしかるべきだろう。",
+          "en": "Since they made a mistake, they really ought to apologize."
+        }
+      ],
+      "summary": "てしかるべきだ says something should naturally be done — often a criticism that it hasn't been.",
+      "tags": [
+        "obligation-necessity",
+        "advice-suggestion",
+        "formal-written"
+      ],
+      "details": "これほどの功績なら、もっと評価され**てしかるべきだ**。\n*(With achievements like these, they ought to be recognized much more.)*\nミスをしたのだから、謝っ**てしかるべきだ**ろう。\n*(Since they made a mistake, they really ought to apologize.)*\n\nFormal and somewhat critical. しかるべき alone, before a noun, means 'appropriate': しかるべき対応 ('an appropriate response'), しかるべき人 ('the right person')."
+    },
+    {
+      "uid": "n1-grammar-18-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 18,
+      "title": "〜には当たらない",
+      "meaning": "There's no need to ~ / It's not worth ~",
+      "structure": "Verb (Dictionary) / Noun + には当たらない",
+      "explanation": "A reaction such as surprise or criticism isn't warranted.",
+      "examples": [
+        {
+          "jp": "彼が合格したのは当然で、驚くには当たらない。",
+          "en": "It's only natural that he passed — there's no need to be surprised."
+        },
+        {
+          "jp": "子どものいたずらだから、そんなに責めるには当たらない。",
+          "en": "It was just a child's prank, so there's no need to blame them so much."
+        }
+      ],
+      "summary": "には当たらない says a reaction like surprise or blame is unwarranted.",
+      "tags": [
+        "advice-suggestion",
+        "partial-negation",
+        "formal-written"
+      ],
+      "details": "彼が合格したのは当然で、驚く**には当たらない**。\n*(It's only natural that he passed — there's no need to be surprised.)*\n子どものいたずらだから、そんなに責める**には当たらない**。\n*(It was just a child's prank, so there's no need to blame them so much.)*\n\nCommon with 驚く, 責める, 非難する, 心配する, 悲観する. It's a formal way of saying 〜する必要はない. Read にはあたらない."
+    }
+  ],
+  "19": [
+    {
+      "uid": "n1-grammar-19-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜までもない",
+      "meaning": "Needless to ~ / There's no need to ~",
+      "structure": "Verb (Dictionary) + までもない / までもなく",
+      "explanation": "Something is so obvious or simple that it isn't necessary to do it.",
+      "examples": [
+        {
+          "jp": "そんな簡単なことは、説明するまでもない。",
+          "en": "Something that simple doesn't need explaining."
+        },
+        {
+          "jp": "言うまでもなく、健康は何より大切だ。",
+          "en": "Needless to say, health is more important than anything."
+        }
+      ],
+      "summary": "までもない means 'there's no need to go as far as X' — it's obvious.",
+      "tags": [
+        "partial-negation",
+        "advice-suggestion"
+      ],
+      "details": "そんな簡単なことは、説明する**までもない**。\n*(Something that simple doesn't need explaining.)*\n言う**までもなく**、健康は何より大切だ。\n*(Needless to say, health is more important than anything.)*\n\n言うまでもなく ('needless to say') is a very common sentence opener. Compared with 必要はない, までもない implies the matter is too obvious or small to bother with."
+    },
+    {
+      "uid": "n1-grammar-19-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜までだ／〜までのことだ",
+      "meaning": "(I'll) just ~ / I merely ~",
+      "structure": "Verb (Dictionary) + までだ (resolve) / Verb (た-form) + までだ (explanation)",
+      "explanation": "With the dictionary form: 'if that fails, I'll simply do X' — a calm resolve. With the た-form: 'I only did X, nothing more'.",
+      "examples": [
+        {
+          "jp": "電車がないなら、歩いて帰るまでだ。",
+          "en": "If there are no trains, I'll just walk home."
+        },
+        {
+          "jp": "本当のことを言ったまでです。",
+          "en": "I merely told the truth."
+        }
+      ],
+      "summary": "までだ means 'I'll just do X (no big deal)' or 'I merely did X'.",
+      "tags": [
+        "volitional-intention",
+        "emphasis-limitation"
+      ],
+      "details": "電車がないなら、歩いて帰る**までだ**。\n*(If there are no trains, I'll just walk home.)*\n本当のことを言った**までです**。\n*(I merely told the truth.)*\n\nThe dictionary-form use shows readiness to take the last option without fuss, often after 〜なら or 〜ば. The た-form use defends or downplays one's action. までのことだ is a slightly more emphatic variant."
+    },
+    {
+      "uid": "n1-grammar-19-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜べくもない",
+      "meaning": "Cannot possibly ~ / There's no way to ~",
+      "structure": "Verb (Dictionary) + べくもない（する → すべくもない）",
+      "explanation": "Something is completely impossible given the situation.",
+      "examples": [
+        {
+          "jp": "素人の私が、プロに勝つべくもない。",
+          "en": "As an amateur, I couldn't possibly beat a pro."
+        },
+        {
+          "jp": "彼の本当の気持ちなど、知るべくもなかった。",
+          "en": "There was no way I could have known his real feelings."
+        }
+      ],
+      "summary": "べくもない means 'there's no way X could happen'.",
+      "tags": [
+        "possibility",
+        "partial-negation",
+        "formal-written"
+      ],
+      "details": "素人の私が、プロに勝つ**べくもない**。\n*(As an amateur, I couldn't possibly beat a pro.)*\n彼の本当の気持ちなど、知る**べくもなかった**。\n*(There was no way I could have known his real feelings.)*\n\nOften with verbs like 望む, 知る, 比べる, 勝つ: 望むべくもない ('out of the question'). It's literary. Compare べく ('in order to', Lesson 9) — both come from classical べし."
+    },
+    {
+      "uid": "n1-grammar-19-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 19,
+      "title": "〜てもさしつかえない",
+      "meaning": "It's all right to ~ / There's no problem if ~",
+      "structure": "Verb (て-form) / い-Adj (〜くて) / な-Adj・Noun (で) + もさしつかえない",
+      "explanation": "A formal way of giving or asking for permission.",
+      "examples": [
+        {
+          "jp": "こちらの書類は、鉛筆で書いてもさしつかえありません。",
+          "en": "It's fine to fill in these documents in pencil."
+        },
+        {
+          "jp": "明日の会議は欠席してもさしつかえないでしょうか。",
+          "en": "Would it be all right if I missed tomorrow's meeting?"
+        }
+      ],
+      "summary": "てもさしつかえない is a formal 'it's all right to'.",
+      "tags": [
+        "permission",
+        "keigo-polite",
+        "formal-written"
+      ],
+      "details": "こちらの書類は、鉛筆で書いて**もさしつかえありません**。\n*(It's fine to fill in these documents in pencil.)*\n明日の会議は欠席して**もさしつかえない**でしょうか。\n*(Would it be all right if I missed tomorrow's meeting?)*\n\nA formal version of てもいい／てもかまわない (N4/N3), common in business and official contexts. Written 差し支えない. 差し支え alone means 'hindrance'."
+    }
+  ],
+  "20": [
+    {
+      "uid": "n1-grammar-20-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜ないとも限らない",
+      "meaning": "It's not impossible that ~ / There's a chance ~",
+      "structure": "Verb (ない-form) + ないとも限らない",
+      "explanation": "Warns that something unlikely might still happen, so one should be careful.",
+      "examples": [
+        {
+          "jp": "地震が起きないとも限らないから、準備しておこう。",
+          "en": "An earthquake could happen, so let's be prepared."
+        },
+        {
+          "jp": "誰かに聞かれないとも限らないので、ここでは話さないほうがいい。",
+          "en": "Someone might overhear us, so we'd better not talk here."
+        }
+      ],
+      "summary": "ないとも限らない means 'X might happen after all', so take precautions.",
+      "tags": [
+        "possibility",
+        "conjecture-inference"
+      ],
+      "details": "地震が起き**ないとも限らない**から、準備しておこう。\n*(An earthquake could happen, so let's be prepared.)*\n誰かに聞かれ**ないとも限らない**ので、ここでは話さないほうがいい。\n*(Someone might overhear us, so we'd better not talk here.)*\n\nUsually about undesirable possibilities, and the second clause is often a precaution. It's a double negative built on とは限らない (N3)."
+    },
+    {
+      "uid": "n1-grammar-20-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜きらいがある",
+      "meaning": "Have a (bad) tendency to ~",
+      "structure": "Verb (Dictionary / ない-form) / Noun + の + きらいがある",
+      "explanation": "Someone or something tends to do something undesirable.",
+      "examples": [
+        {
+          "jp": "彼は物事を大げさに言うきらいがある。",
+          "en": "He tends to exaggerate things."
+        },
+        {
+          "jp": "最近の若者は、すぐにあきらめるきらいがある。",
+          "en": "Young people these days tend to give up quickly."
+        }
+      ],
+      "summary": "きらいがある points out an undesirable tendency.",
+      "tags": [
+        "habit-effort",
+        "frequency"
+      ],
+      "details": "彼は物事を大げさに言う**きらいがある**。\n*(He tends to exaggerate things.)*\n最近の若者は、すぐにあきらめる**きらいがある**。\n*(Young people these days tend to give up quickly.)*\n\nAlways critical. It's more formal and indirect than がちだ (N3) or 傾向がある. 嫌い in kanji, but it doesn't mean 'dislike' here."
+    },
+    {
+      "uid": "n1-grammar-20-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜ごとき／〜ごとく",
+      "meaning": "Like ~ / As ~ / The likes of ~",
+      "structure": "Noun + の + ごとく・ごとき + Noun / Verb (Dictionary・た-form) + がごとく",
+      "explanation": "A literary 'like' or 'as'. After a person, ごとき can also be humble or contemptuous ('the likes of').",
+      "examples": [
+        {
+          "jp": "時間は矢のごとく過ぎていく。",
+          "en": "Time flies like an arrow."
+        },
+        {
+          "jp": "私ごときに、そんな大役は務まりません。",
+          "en": "Someone like me isn't capable of such an important role."
+        }
+      ],
+      "summary": "ごとく／ごとき are a literary 'like' — and with people, a humble or scornful 'the likes of'.",
+      "tags": [
+        "similarity-appearance",
+        "formal-written"
+      ],
+      "details": "時間は矢の**ごとく**過ぎていく。\n*(Time flies like an arrow.)*\n私**ごとき**に、そんな大役は務まりません。\n*(Someone like me isn't capable of such an important role.)*\n\nごとく is adverbial (のごとく走る), ごとき modifies nouns (夢のごとき話). 私ごとき is humble; お前ごとき is contemptuous. The modern equivalents are ように／ような. The classical base form is ごとし (如し)."
+    },
+    {
+      "uid": "n1-grammar-20-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 20,
+      "title": "〜ずくめ",
+      "meaning": "Nothing but ~ / Full of ~",
+      "structure": "Noun + ずくめ",
+      "explanation": "Something is entirely made up of one thing, or one thing happens after another.",
+      "examples": [
+        {
+          "jp": "今年は結婚に昇進に、いいことずくめの一年だった。",
+          "en": "With my wedding and promotion, this year was nothing but good news."
+        },
+        {
+          "jp": "彼女はいつも黒ずくめの服を着ている。",
+          "en": "She always dresses entirely in black."
+        }
+      ],
+      "summary": "ずくめ means 'nothing but X' — wall-to-wall X.",
+      "tags": [
+        "degree-extent",
+        "emphasis-limitation"
+      ],
+      "details": "今年は結婚に昇進に、いいこと**ずくめ**の一年だった。\n*(With my wedding and promotion, this year was nothing but good news.)*\n彼女はいつも黒**ずくめ**の服を着ている。\n*(She always dresses entirely in black.)*\n\nWorks with a limited set of nouns: いいこと, 規則, 黒, ごちそう, 結構. Unlike だらけ (N3) or まみれ (Lesson 23), ずくめ can be positive."
+    }
+  ],
+  "21": [
+    {
+      "uid": "n1-grammar-21-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜と相まって",
+      "meaning": "Combined with ~ / Coupled with ~",
+      "structure": "Noun + と相まって",
+      "explanation": "Two factors combine to produce a stronger effect.",
+      "examples": [
+        {
+          "jp": "美しい景色と相まって、その音楽は一層心に響いた。",
+          "en": "Combined with the beautiful scenery, the music moved me all the more."
+        },
+        {
+          "jp": "円安と相まって、外国人観光客が急増した。",
+          "en": "Coupled with the weak yen, the number of foreign tourists surged."
+        }
+      ],
+      "summary": "と相まって means two factors combine to strengthen an effect.",
+      "tags": [
+        "simultaneous-action",
+        "degree-extent",
+        "formal-written"
+      ],
+      "details": "美しい景色**と相まって**、その音楽は一層心に響いた。\n*(Combined with the beautiful scenery, the music moved me all the more.)*\n円安**と相まって**、外国人観光客が急増した。\n*(Coupled with the weak yen, the number of foreign tourists surged.)*\n\nRead とあいまって. The second clause often has 一層, さらに, ますます. AとBが相まって is another word order. Formal and written."
+    },
+    {
+      "uid": "n1-grammar-21-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜にひきかえ",
+      "meaning": "In contrast to ~ / Unlike ~",
+      "structure": "Noun / Verb (Plain) + の + にひきかえ",
+      "explanation": "Contrasts two people or things, with the speaker's judgment about one of them.",
+      "examples": [
+        {
+          "jp": "まじめな兄にひきかえ、弟は遊んでばかりいる。",
+          "en": "Unlike his serious older brother, the younger one does nothing but play."
+        },
+        {
+          "jp": "去年の猛暑にひきかえ、今年の夏は過ごしやすい。",
+          "en": "In contrast to last year's heat wave, this summer is comfortable."
+        }
+      ],
+      "summary": "にひきかえ contrasts two things, often with a judgment of one.",
+      "tags": [
+        "comparison",
+        "concession-contrast"
+      ],
+      "details": "まじめな兄**にひきかえ**、弟は遊んでばかりいる。\n*(Unlike his serious older brother, the younger one does nothing but play.)*\n去年の猛暑**にひきかえ**、今年の夏は過ごしやすい。\n*(In contrast to last year's heat wave, this summer is comfortable.)*\n\nMore subjective than に比べて (N3) or に対して (N3): it often carries praise for one and criticism of the other. それにひきかえ ('by contrast') can start a sentence."
+    },
+    {
+      "uid": "n1-grammar-21-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜にもまして",
+      "meaning": "Even more than ~ / Above all ~",
+      "structure": "Noun + にもまして / Question word + にもまして",
+      "explanation": "Something is even more so than another thing that was already significant.",
+      "examples": [
+        {
+          "jp": "今年の夏は、去年にもまして暑い。",
+          "en": "This summer is even hotter than last year."
+        },
+        {
+          "jp": "何にもまして大切なのは、家族の健康だ。",
+          "en": "Above all else, what's most important is my family's health."
+        }
+      ],
+      "summary": "にもまして means 'even more than X' — or with question words, 'above all'.",
+      "tags": [
+        "comparison",
+        "degree-extent"
+      ],
+      "details": "今年の夏は、去年**にもまして**暑い。\n*(This summer is even hotter than last year.)*\n何**にもまして**大切なのは、家族の健康だ。\n*(Above all else, what's most important is my family's health.)*\n\nWith question words: 何にもまして ('above all else'), 誰にもまして ('more than anyone'), いつにもまして ('more than ever'). It's more emphatic and literary than より."
+    },
+    {
+      "uid": "n1-grammar-21-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 21,
+      "title": "〜もさることながら",
+      "meaning": "~ of course, but even more ~ / Not only ~ but also ~",
+      "structure": "Noun + もさることながら",
+      "explanation": "Acknowledges that X is important, but stresses that Y is even more important.",
+      "examples": [
+        {
+          "jp": "この店は、味もさることながら、サービスがすばらしい。",
+          "en": "The food here is great, of course, but the service is even better."
+        },
+        {
+          "jp": "学歴もさることながら、人柄が大切だ。",
+          "en": "Education matters, but character matters even more."
+        }
+      ],
+      "summary": "もさることながら means 'X goes without saying, but Y is even more notable'.",
+      "tags": [
+        "comparison",
+        "listing-examples",
+        "formal-written"
+      ],
+      "details": "この店は、味**もさることながら**、サービスがすばらしい。\n*(The food here is great, of course, but the service is even better.)*\n学歴**もさることながら**、人柄が大切だ。\n*(Education matters, but character matters even more.)*\n\nThe second item is the one being emphasized. It's elegant and often used in praise. さる comes from classical 然り ('so it is')."
+    }
+  ],
+  "22": [
+    {
+      "uid": "n1-grammar-22-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜はおろか",
+      "meaning": "Let alone ~ / Not to mention ~",
+      "structure": "Noun + はおろか + Noun + も・さえ・まで",
+      "explanation": "Not even the easier thing happens, so of course the harder thing doesn't either.",
+      "examples": [
+        {
+          "jp": "彼は漢字はおろか、ひらがなも書けない。",
+          "en": "He can't even write hiragana, let alone kanji."
+        },
+        {
+          "jp": "けがをして、走ることはおろか、歩くことさえできない。",
+          "en": "I'm injured, so I can't even walk, let alone run."
+        }
+      ],
+      "summary": "はおろか means 'let alone X' — not even the more basic thing is possible.",
+      "tags": [
+        "degree-extent",
+        "emphasis-assertion"
+      ],
+      "details": "彼は漢字**はおろか**、ひらがなも書けない。\n*(He can't even write hiragana, let alone kanji.)*\nけがをして、走ること**はおろか**、歩くことさえできない。\n*(I'm injured, so I can't even walk, let alone run.)*\n\nThe second item is the more basic one, followed by も, さえ or まで, and the sentence is usually negative. It's close to どころか (N2) but more literary and always critical or regretful."
+    },
+    {
+      "uid": "n1-grammar-22-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜のみならず",
+      "meaning": "Not only ~ but also ~",
+      "structure": "Verb/い-Adj (Plain) / な-Adj・Noun (である) + のみならず",
+      "explanation": "A formal, written 'not only... but also'.",
+      "examples": [
+        {
+          "jp": "この問題は日本のみならず、世界中で議論されている。",
+          "en": "This problem is being discussed not only in Japan but all over the world."
+        },
+        {
+          "jp": "彼は優秀であるのみならず、人柄もいい。",
+          "en": "He is not only talented, he also has a good personality."
+        }
+      ],
+      "summary": "のみならず is a formal 'not only... but also'.",
+      "tags": [
+        "listing-examples",
+        "degree-extent",
+        "formal-written"
+      ],
+      "details": "この問題は日本**のみならず**、世界中で議論されている。\n*(This problem is being discussed not only in Japan but all over the world.)*\n彼は優秀である**のみならず**、人柄もいい。\n*(He is not only talented, he also has a good personality.)*\n\nA written equivalent of だけでなく (N3) and ばかりでなく. The second clause usually has も. It can also start a sentence: のみならず、〜 ('moreover')."
+    },
+    {
+      "uid": "n1-grammar-22-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "〜にとどまらず",
+      "meaning": "Not limited to ~ / Going beyond ~",
+      "structure": "Noun / Verb (Plain) + にとどまらず",
+      "explanation": "Something spreads beyond a limited range.",
+      "examples": [
+        {
+          "jp": "その影響は国内にとどまらず、海外にまで広がった。",
+          "en": "The impact was not limited to Japan, spreading even overseas."
+        },
+        {
+          "jp": "彼は歌手にとどまらず、俳優としても活躍している。",
+          "en": "He's not just a singer — he's also active as an actor."
+        }
+      ],
+      "summary": "にとどまらず means 'not stopping at X' — it spreads further.",
+      "tags": [
+        "degree-extent",
+        "formal-written"
+      ],
+      "details": "その影響は国内**にとどまらず**、海外にまで広がった。\n*(The impact was not limited to Japan, spreading even overseas.)*\n彼は歌手**にとどまらず**、俳優としても活躍している。\n*(He's not just a singer — he's also active as an actor.)*\n\nThe second clause often has まで, も or 広がる. とどまる means 'to stay, to remain', so the image is 'not staying within X'. Formal; common in news."
+    },
+    {
+      "uid": "n1-grammar-22-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 22,
+      "title": "ただ〜のみ",
+      "meaning": "Only ~ / Just ~",
+      "structure": "ただ + Noun / Verb (Dictionary) + のみ（だ）",
+      "explanation": "A formal, emphatic 'only': nothing else.",
+      "examples": [
+        {
+          "jp": "今はただ、皆の無事を祈るのみだ。",
+          "en": "All I can do now is pray that everyone is safe."
+        },
+        {
+          "jp": "ただ努力あるのみ。",
+          "en": "There is nothing for it but hard work."
+        }
+      ],
+      "summary": "ただ〜のみ means 'only X, nothing else' — formal and emphatic.",
+      "tags": [
+        "emphasis-limitation",
+        "formal-written"
+      ],
+      "details": "今はただ、皆の無事を祈る**のみ**だ。\n*(All I can do now is pray that everyone is safe.)*\nただ努力ある**のみ**。\n*(There is nothing for it but hard work.)*\n\nA written version of ただ〜だけ. あるのみ ('there's nothing but') is a set phrase: 前進あるのみ ('forward, and only forward'). のみ alone also appears in notices: 現金のみ ('cash only')."
+    }
+  ],
+  "23": [
+    {
+      "uid": "n1-grammar-23-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "〜すら",
+      "meaning": "Even ~",
+      "structure": "Noun (+ particle) + すら / Noun + ですら",
+      "explanation": "Gives an extreme example to stress a point — usually with a negative.",
+      "examples": [
+        {
+          "jp": "疲れて、立つことすらできなかった。",
+          "en": "I was so tired I couldn't even stand up."
+        },
+        {
+          "jp": "専門家ですら、この問題には答えられない。",
+          "en": "Even experts can't answer this question."
+        }
+      ],
+      "summary": "すら means 'even X' — an extreme example, usually in negative sentences.",
+      "tags": [
+        "emphasis-assertion",
+        "degree-extent"
+      ],
+      "details": "疲れて、立つこと**すら**できなかった。\n*(I was so tired I couldn't even stand up.)*\n専門家**ですら**、この問題には答えられない。\n*(Even experts can't answer this question.)*\n\nA more literary version of さえ (N3). With a subject, ですら is common. Unlike さえ, すら doesn't form a 'if only' condition (✗ 〜すら〜ば)."
+    },
+    {
+      "uid": "n1-grammar-23-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "〜だに",
+      "meaning": "Even (just) ~ / Not even ~",
+      "structure": "Verb (Dictionary: 考える・想像する・聞く) + だに / Noun + だに〜ない",
+      "explanation": "Even just thinking or hearing about something causes a strong feeling; or (with a negative) not even the slightest bit.",
+      "examples": [
+        {
+          "jp": "あんな事故に遭うなんて、想像するだに恐ろしい。",
+          "en": "Being in an accident like that is terrifying even to imagine."
+        },
+        {
+          "jp": "彼が優勝するとは、夢にだに思わなかった。",
+          "en": "I never even dreamed he would win."
+        }
+      ],
+      "summary": "だに means 'even just (thinking of) X' or 'not even X' — very literary.",
+      "tags": [
+        "emphasis-assertion",
+        "formal-written"
+      ],
+      "details": "あんな事故に遭うなんて、想像する**だに**恐ろしい。\n*(Being in an accident like that is terrifying even to imagine.)*\n彼が優勝するとは、夢に**だに**思わなかった。\n*(I never even dreamed he would win.)*\n\nVery limited usage: 考えるだに, 想像するだに, 聞くだに (+ 恐ろしい etc.), and 夢にだに思わない, 微動だにしない ('not budge an inch'). It's classical and mostly written."
+    },
+    {
+      "uid": "n1-grammar-23-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "〜たりとも",
+      "meaning": "Not even (one) ~",
+      "structure": "One + counter + たりとも〜ない",
+      "explanation": "Not even the smallest amount is allowed or possible.",
+      "examples": [
+        {
+          "jp": "一日たりとも練習を休んだことはない。",
+          "en": "I have never missed practice, not even for a single day."
+        },
+        {
+          "jp": "一円たりとも無駄にはできない。",
+          "en": "We can't waste even a single yen."
+        }
+      ],
+      "summary": "たりとも means 'not even one' — absolutely nothing is permitted.",
+      "tags": [
+        "emphasis-assertion",
+        "emphasis-limitation"
+      ],
+      "details": "一日**たりとも**練習を休んだことはない。\n*(I have never missed practice, not even for a single day.)*\n一円**たりとも**無駄にはできない。\n*(We can't waste even a single yen.)*\n\nAlways 一 + counter: 一日, 一人, 一瞬, 一円, 一歩. The sentence is negative and often a strong resolve or prohibition (油断できない, 許さない)."
+    },
+    {
+      "uid": "n1-grammar-23-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 23,
+      "title": "〜まみれ",
+      "meaning": "Covered in ~ / Smeared with ~",
+      "structure": "Noun + まみれ（になる・の）",
+      "explanation": "Something is completely covered with an unpleasant substance.",
+      "examples": [
+        {
+          "jp": "子どもたちは泥まみれになって遊んでいた。",
+          "en": "The children were playing, covered in mud."
+        },
+        {
+          "jp": "彼は汗まみれで帰ってきた。",
+          "en": "He came home drenched in sweat."
+        }
+      ],
+      "summary": "まみれ means 'covered all over in X' — usually something dirty.",
+      "tags": [
+        "degree-extent",
+        "existence-location"
+      ],
+      "details": "子どもたちは泥**まみれ**になって遊んでいた。\n*(The children were playing, covered in mud.)*\n彼は汗**まみれ**で帰ってきた。\n*(He came home drenched in sweat.)*\n\nUsed with liquids and fine stuff that stick to a surface: 泥, 汗, 血, ほこり, 油. Compare だらけ (N3), which also covers many scattered items (間違いだらけ). 借金まみれ ('drowning in debt') is a figurative use."
+    }
+  ],
+  "24": [
+    {
+      "uid": "n1-grammar-24-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "〜ともなると／〜ともなれば",
+      "meaning": "When it comes to ~ / Once (someone) is ~",
+      "structure": "Noun / Verb (Dictionary) + ともなると・ともなれば",
+      "explanation": "Once something reaches a certain level, stage or status, a corresponding situation naturally follows.",
+      "examples": [
+        {
+          "jp": "社長ともなると、自由な時間はほとんどない。",
+          "en": "Once you become company president, you hardly have any free time."
+        },
+        {
+          "jp": "12月ともなれば、街はクリスマス一色になる。",
+          "en": "By the time December comes, the whole town is full of Christmas."
+        }
+      ],
+      "summary": "ともなると means 'once things reach X level, Y naturally follows'.",
+      "tags": [
+        "conditional",
+        "change-of-state"
+      ],
+      "details": "社長**ともなると**、自由な時間はほとんどない。\n*(Once you become company president, you hardly have any free time.)*\n12月**ともなれば**、街はクリスマス一色になる。\n*(By the time December comes, the whole town is full of Christmas.)*\n\nThe noun is a high position, an age, a season or a scale (大学生, 横綱, 冬, 百人). The second clause describes what is natural at that level. Close to となると, but stronger."
+    },
+    {
+      "uid": "n1-grammar-24-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "〜ならでは",
+      "meaning": "Unique to ~ / Only ~ could ~",
+      "structure": "Noun + ならでは（の + Noun）",
+      "explanation": "Something that only X can offer — usually praise.",
+      "examples": [
+        {
+          "jp": "この料理は、京都ならではの味だ。",
+          "en": "This dish has a flavor you'll only find in Kyoto."
+        },
+        {
+          "jp": "子どもならではの自由な発想に驚いた。",
+          "en": "I was amazed by the free thinking that only a child could have."
+        }
+      ],
+      "summary": "ならでは means 'something only X can offer' — special to X.",
+      "tags": [
+        "emphasis-limitation"
+      ],
+      "details": "この料理は、京都**ならでは**の味だ。\n*(This dish has a flavor you'll only find in Kyoto.)*\n子ども**ならでは**の自由な発想に驚いた。\n*(I was amazed by the free thinking that only a child could have.)*\n\nAlmost always positive and usually ならではの + noun. Very common in tourism and advertising: 地元ならではの, この季節ならではの. 〜ならではだ can end a sentence."
+    },
+    {
+      "uid": "n1-grammar-24-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "〜にあって",
+      "meaning": "In (the situation of) ~ / At (the time of) ~",
+      "structure": "Noun + にあって（は・も）",
+      "explanation": "In a special situation, position or era, something happens or is the case.",
+      "examples": [
+        {
+          "jp": "厳しい経済状況にあって、多くの企業が苦労している。",
+          "en": "In this harsh economic climate, many companies are struggling."
+        },
+        {
+          "jp": "彼は困難な状況にあっても、決して希望を失わなかった。",
+          "en": "Even in difficult circumstances, he never lost hope."
+        }
+      ],
+      "summary": "にあって means 'in the special situation of X' — a formal に／で.",
+      "tags": [
+        "viewpoint-standpoint",
+        "existence-location",
+        "formal-written"
+      ],
+      "details": "厳しい経済状況**にあって**、多くの企業が苦労している。\n*(In this harsh economic climate, many companies are struggling.)*\n彼は困難な状況**にあって**も、決して希望を失わなかった。\n*(Even in difficult circumstances, he never lost hope.)*\n\nA formal version of で or において (N3), stressing that the situation is special. にあっては ('in such a situation') and にあっても ('even in such a situation') are the two common forms."
+    },
+    {
+      "uid": "n1-grammar-24-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 24,
+      "title": "〜にして",
+      "meaning": "Only (at/with) ~ / Even ~ / Both ~ and ~",
+      "structure": "Noun + にして",
+      "explanation": "Several uses: 'only at this level is it possible', 'even someone like X', or 'being both A and B'.",
+      "examples": [
+        {
+          "jp": "この作品は、ベテランの彼にしてはじめて書けるものだ。",
+          "en": "Only a veteran like him could have written this work."
+        },
+        {
+          "jp": "彼は医者にして作家でもある。",
+          "en": "He is both a doctor and a writer."
+        }
+      ],
+      "summary": "にして means 'only at X', 'even X', or 'both A and B'.",
+      "tags": [
+        "emphasis-limitation",
+        "time-relative",
+        "formal-written"
+      ],
+      "details": "この作品は、ベテランの彼**にして**はじめて書けるものだ。\n*(Only a veteran like him could have written this work.)*\n彼は医者**にして**作家でもある。\n*(He is both a doctor and a writer.)*\n\nにしてはじめて means 'only at X (is it possible)'. With ages and times: 40歳にして初めて ('only at forty'). 〜にして〜でもある means 'both'. Not the same as にしては (N3, 'considering')."
+    }
+  ],
+  "25": [
+    {
+      "uid": "n1-grammar-25-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 25,
+      "title": "〜たる",
+      "meaning": "As (one who is) ~ / Befitting a ~",
+      "structure": "Noun + たる + Noun / Noun + たるもの",
+      "explanation": "Someone in a certain position should behave in a way that fits it.",
+      "examples": [
+        {
+          "jp": "教師たる者、生徒の手本とならなければならない。",
+          "en": "As a teacher, one must set an example for students."
+        },
+        {
+          "jp": "一国の首相たる人物が、そんな発言をするべきではない。",
+          "en": "Someone who is the prime minister of a country shouldn't make such a statement."
+        }
+      ],
+      "summary": "たる means 'as one who is X' — and so should behave accordingly.",
+      "tags": [
+        "obligation-necessity",
+        "viewpoint-standpoint",
+        "formal-written"
+      ],
+      "details": "教師**たる**者、生徒の手本とならなければならない。\n*(As a teacher, one must set an example for students.)*\n一国の首相**たる**人物が、そんな発言をするべきではない。\n*(Someone who is the prime minister of a country shouldn't make such a statement.)*\n\nThe noun is a respected position (教師, 医者, 政治家, 親). たる者 (also written たるもの) is the typical phrase, and the sentence usually ends with べきだ or なければならない. It's a classical form of である."
+    },
+    {
+      "uid": "n1-grammar-25-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 25,
+      "title": "〜ともあろう",
+      "meaning": "Someone (of such standing) as ~ / Of all people ~",
+      "structure": "Noun + ともあろう + Noun",
+      "explanation": "Criticizes someone who acted in a way unworthy of their high status.",
+      "examples": [
+        {
+          "jp": "警察官ともあろう者が、法律を破るとは。",
+          "en": "For a police officer of all people to break the law..."
+        },
+        {
+          "jp": "大企業ともあろう会社が、こんなミスをするなんて信じられない。",
+          "en": "I can't believe a major company would make a mistake like this."
+        }
+      ],
+      "summary": "ともあろう criticizes someone whose action betrays their high status — 'of all people'.",
+      "tags": [
+        "emotion-expression",
+        "viewpoint-standpoint"
+      ],
+      "details": "警察官**ともあろう**者が、法律を破るとは。\n*(For a police officer of all people to break the law...)*\n大企業**ともあろう**会社が、こんなミスをするなんて信じられない。\n*(I can't believe a major company would make a mistake like this.)*\n\nAlmost always 〜ともあろう者が／人が and followed by criticism or disbelief (とは, なんて). Compare たる (this lesson), which states how such a person should behave; ともあろう complains that they didn't."
+    },
+    {
+      "uid": "n1-grammar-25-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 25,
+      "title": "〜まじき",
+      "meaning": "Unacceptable for ~ / Should not ~ (given one's position)",
+      "structure": "Noun + に・として + あるまじき + Noun / Verb (Dictionary) + まじき + Noun",
+      "explanation": "Something is completely inappropriate for a person in a certain position.",
+      "examples": [
+        {
+          "jp": "生徒を殴るなんて、教師にあるまじき行為だ。",
+          "en": "Hitting a student is conduct unworthy of a teacher."
+        },
+        {
+          "jp": "それは政治家として許すまじき発言だ。",
+          "en": "That is a remark that cannot be tolerated from a politician."
+        }
+      ],
+      "summary": "まじき marks behavior that is unacceptable for someone in a given position.",
+      "tags": [
+        "prohibition",
+        "formal-written"
+      ],
+      "details": "生徒を殴るなんて、教師に**あるまじき**行為だ。\n*(Hitting a student is conduct unworthy of a teacher.)*\nそれは政治家として許す**まじき**発言だ。\n*(That is a remark that cannot be tolerated from a politician.)*\n\nMost common as 〜にあるまじき + noun (行為, 発言, 態度). まじき is the classical negative of べき ('should not'). Strongly critical and formal."
+    },
+    {
+      "uid": "n1-grammar-25-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 25,
+      "title": "〜べからず／〜べからざる",
+      "meaning": "Must not ~ / Do not ~ (signs) / Must not be ~",
+      "structure": "Verb (Dictionary) + べからず（する → すべからず） / Verb (Dictionary) + べからざる + Noun",
+      "explanation": "A classical prohibition, seen on signs and in proverbs. べからざる modifies a noun.",
+      "examples": [
+        {
+          "jp": "芝生に入るべからず。",
+          "en": "Keep off the grass."
+        },
+        {
+          "jp": "水は人間にとって欠くべからざるものだ。",
+          "en": "Water is something indispensable to human beings."
+        }
+      ],
+      "summary": "べからず is a classical 'must not', mostly on signs; べからざる means 'must not be' before a noun.",
+      "tags": [
+        "prohibition",
+        "formal-written"
+      ],
+      "details": "芝生に入る**べからず**。\n*(Keep off the grass.)*\n水は人間にとって欠く**べからざる**ものだ。\n*(Water is something indispensable to human beings.)*\n\nCommon phrases: 働かざる者食うべからず ('he who does not work shall not eat'), 欠くべからざる ('indispensable'), 初心忘るべからず ('never forget your original intention'). It sounds old-fashioned and very strong."
+    }
+  ],
+  "26": [
+    {
+      "uid": "n1-grammar-26-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 26,
+      "title": "〜ときたら",
+      "meaning": "When it comes to ~ / As for ~ (complaint)",
+      "structure": "Noun + ときたら",
+      "explanation": "Introduces a person or thing the speaker is fed up with, followed by criticism.",
+      "examples": [
+        {
+          "jp": "うちの息子ときたら、毎日ゲームばかりしている。",
+          "en": "As for my son, all he does is play games every day."
+        },
+        {
+          "jp": "この部屋のエアコンときたら、全然効かない。",
+          "en": "This room's air conditioner — it doesn't work at all."
+        }
+      ],
+      "summary": "ときたら introduces something the speaker is fed up with, followed by a complaint.",
+      "tags": [
+        "emotion-expression",
+        "topic-focus-particle",
+        "colloquial"
+      ],
+      "details": "うちの息子**ときたら**、毎日ゲームばかりしている。\n*(As for my son, all he does is play games every day.)*\nこの部屋のエアコン**ときたら**、全然効かない。\n*(This room's air conditioner — it doesn't work at all.)*\n\nConversational and almost always critical; the speaker is often close to the topic (family, colleagues, things they own). Compare といえば (N3), which is neutral."
+    },
+    {
+      "uid": "n1-grammar-26-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 26,
+      "title": "〜に言わせれば",
+      "meaning": "If you ask ~ / In ~'s opinion",
+      "structure": "Noun (person) + に言わせれば・に言わせると",
+      "explanation": "Presents a particular person's opinion, often a strong or different one.",
+      "examples": [
+        {
+          "jp": "父に言わせれば、最近の若者は努力が足りないそうだ。",
+          "en": "According to my father, young people today don't try hard enough."
+        },
+        {
+          "jp": "私に言わせれば、その計画は無理がある。",
+          "en": "If you ask me, that plan is unrealistic."
+        }
+      ],
+      "summary": "に言わせれば introduces someone's own, often critical, opinion — 'if you ask X'.",
+      "tags": [
+        "viewpoint-standpoint",
+        "quotation"
+      ],
+      "details": "父**に言わせれば**、最近の若者は努力が足りないそうだ。\n*(According to my father, young people today don't try hard enough.)*\n私**に言わせれば**、その計画は無理がある。\n*(If you ask me, that plan is unrealistic.)*\n\nWith 私, it emphasizes the speaker's own frank opinion. The causative 言わせる ('let say') gives the sense 'if X were allowed to speak'. The opinion often differs from the general view."
+    },
+    {
+      "uid": "n1-grammar-26-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 26,
+      "title": "〜きっての",
+      "meaning": "The best in ~ / The most ~ in ~",
+      "structure": "Noun (group, place) + きっての + Noun",
+      "explanation": "Someone or something is the best or most outstanding in a group or place.",
+      "examples": [
+        {
+          "jp": "彼は社内きっての切れ者だ。",
+          "en": "He's the sharpest person in the company."
+        },
+        {
+          "jp": "ここは町きっての名店として知られている。",
+          "en": "This place is known as the best restaurant in town."
+        }
+      ],
+      "summary": "きっての means 'the best/most outstanding in X'.",
+      "tags": [
+        "comparison",
+        "emphasis-assertion"
+      ],
+      "details": "彼は社内**きっての**切れ者だ。\n*(He's the sharpest person in the company.)*\nここは町**きっての**名店として知られている。\n*(This place is known as the best restaurant in town.)*\n\nThe noun is a group or area (社内, 学内, 日本, 当代 'of the present age'). It's always used as praise. 切っての in kanji."
+    },
+    {
+      "uid": "n1-grammar-26-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 26,
+      "title": "〜ながらに／〜ながらの",
+      "meaning": "As (it was) ~ / While remaining ~ / Since ~ (birth)",
+      "structure": "Noun / Verb (ます-stem) + ながらに・ながらの",
+      "explanation": "A state continues unchanged, in a few set expressions.",
+      "examples": [
+        {
+          "jp": "この町には昔ながらの家並みが残っている。",
+          "en": "This town still has rows of houses just as they used to be."
+        },
+        {
+          "jp": "彼女は涙ながらに事故の様子を語った。",
+          "en": "She described the accident in tears."
+        }
+      ],
+      "summary": "ながらに／ながらの describe a state that stays the same — in set phrases like 昔ながら.",
+      "tags": [
+        "state-continuation",
+        "manner-accordance"
+      ],
+      "details": "この町には昔**ながらの**家並みが残っている。\n*(This town still has rows of houses just as they used to be.)*\n彼女は涙**ながらに**事故の様子を語った。\n*(She described the accident in tears.)*\n\nUsed in fixed expressions: 昔ながらの ('traditional'), 生まれながらに ('from birth'), 涙ながらに ('in tears'), いながらにして ('without leaving home'). Not productive with other words, and different from ながら ('while') and ながらも ('although')."
+    }
+  ],
+  "27": [
+    {
+      "uid": "n1-grammar-27-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 27,
+      "title": "〜から〜に至るまで",
+      "meaning": "From ~ all the way to ~",
+      "structure": "Noun 1 + から + Noun 2 + に至るまで (にいたるまで)",
+      "explanation": "By citing items at either extreme of a group, it indicates that something applies to absolutely everything in that group.",
+      "examples": [
+        {
+          "jp": "自転車のねじから人工衛星の部品に至るまで、どれもこの工場で作っています。",
+          "en": "We make everything in this factory from bicycle screws to satellite components."
+        },
+        {
+          "jp": "クラシックからJ-popに至るまで、当店ではどんなジャンルの音楽でもご用意しております。",
+          "en": "We offer all kinds of music in this shop, from classical to J-pop."
+        }
+      ],
+      "summary": "から〜に至るまで cites two extreme ends of a group to emphasize that something applies to absolutely everything within it — 'from A all the way to Z.'",
+      "details": "自転車のねじから人工衛星の部品**に至るまで**、どれもこの工場で作っています。\n*(We make everything in this factory, from bicycle screws all the way to satellite components.)*\nクラシックからJ-pop**に至るまで**、当店ではどんなジャンルの音楽でもご用意しております。\n*(We offer every genre of music in this shop, from classical all the way to J-pop.)*\n\nThe two items cited (自転車のねじ ↔ 人工衛星の部品; クラシック ↔ J-pop) are chosen specifically because they're at opposite extremes — the whole point is that if even these two very different things are covered, everything in between must be too.",
+      "tags": [
+        "degree-extent",
+        "formal-written"
+      ]
+    },
+    {
+      "uid": "n1-grammar-27-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 27,
+      "title": "〜に至る／〜に至って（は）",
+      "meaning": "Reach ~ / Only when it came to ~ / As for ~",
+      "structure": "Noun / Verb (Dictionary) + に至る・に至って・に至っては",
+      "explanation": "Reaching an extreme point. に至って: only when things reached that point. に至っては: as for X (the most extreme example).",
+      "examples": [
+        {
+          "jp": "事故が起きるに至って、ようやく対策がとられた。",
+          "en": "Measures were only taken once an accident had happened."
+        },
+        {
+          "jp": "家族全員が反対している。妹に至っては、口もきいてくれない。",
+          "en": "My whole family is against it. As for my sister, she won't even speak to me."
+        }
+      ],
+      "summary": "に至る means reaching an extreme point; に至って: 'only when it came to X'; に至っては: 'and as for X (the extreme case)'.",
+      "tags": [
+        "degree-extent",
+        "time-relative",
+        "formal-written"
+      ],
+      "details": "事故が起きる**に至って**、ようやく対策がとられた。\n*(Measures were only taken once an accident had happened.)*\n家族全員が反対している。妹**に至っては**、口もきいてくれない。\n*(My whole family is against it. As for my sister, she won't even speak to me.)*\n\nに至る alone means 'to lead to' (死に至る病気, 'a fatal disease'). に至って is often followed by ようやく／やっと, criticizing a late response. に至っては picks out the most extreme item in a list. See also から〜に至るまで (this lesson)."
+    },
+    {
+      "uid": "n1-grammar-27-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 27,
+      "title": "〜ぐるみ",
+      "meaning": "Including all of ~ / The whole ~ together",
+      "structure": "Noun + ぐるみ",
+      "explanation": "Something involves an entire group, all together.",
+      "examples": [
+        {
+          "jp": "私たちは家族ぐるみで付き合っている。",
+          "en": "Our families are friends with each other."
+        },
+        {
+          "jp": "地域ぐるみで子どもの安全を守る活動をしている。",
+          "en": "The whole community works together to keep children safe."
+        }
+      ],
+      "summary": "ぐるみ means 'the whole X together' — involving everyone in the group.",
+      "tags": [
+        "degree-extent",
+        "listing-examples"
+      ],
+      "details": "私たちは家族**ぐるみ**で付き合っている。\n*(Our families are friends with each other.)*\n地域**ぐるみ**で子どもの安全を守る活動をしている。\n*(The whole community works together to keep children safe.)*\n\nUsed with a limited set of nouns: 家族, 町, 地域, 会社, 組織. 組織ぐるみの犯罪 means 'an organization-wide crime'. It comes from くるむ ('to wrap')."
+    },
+    {
+      "uid": "n1-grammar-27-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 27,
+      "title": "〜なりに／〜なりの",
+      "meaning": "In one's own way ~ / As far as ~ allows",
+      "structure": "Noun / Verb・Adj (Plain) + なりに・なりの + Noun",
+      "explanation": "Within someone's own limits or position, they do the best they can.",
+      "examples": [
+        {
+          "jp": "子どもは子どもなりに、親のことを心配している。",
+          "en": "Children worry about their parents in their own way."
+        },
+        {
+          "jp": "私なりの方法で問題を解決してみます。",
+          "en": "I'll try to solve the problem in my own way."
+        }
+      ],
+      "summary": "なりに means 'in one's own way, within one's limits'.",
+      "tags": [
+        "manner-accordance",
+        "viewpoint-standpoint"
+      ],
+      "details": "子どもは子ども**なりに**、親のことを心配している。\n*(Children worry about their parents in their own way.)*\n私**なりの**方法で問題を解決してみます。\n*(I'll try to solve the problem in my own way.)*\n\nOften acknowledges effort despite limits: 子どもなりに, 若いなりに. With 私, it's modest: 私なりに頑張りました. それなりに means 'to a reasonable extent'. Different from なり ('as soon as', Lesson 4)."
+    }
+  ],
+  "28": [
+    {
+      "uid": "n1-grammar-28-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 28,
+      "title": "〜をよそに",
+      "meaning": "Ignoring ~ / Paying no heed to ~",
+      "structure": "Noun + をよそに",
+      "explanation": "Someone acts while ignoring others' worries, expectations or surroundings.",
+      "examples": [
+        {
+          "jp": "親の心配をよそに、彼は一人で海外へ旅立った。",
+          "en": "Ignoring his parents' worries, he set off abroad alone."
+        },
+        {
+          "jp": "住民の反対をよそに、工事は進められた。",
+          "en": "The construction went ahead despite residents' opposition."
+        }
+      ],
+      "summary": "をよそに means acting while ignoring others' concerns or opposition.",
+      "tags": [
+        "negative-manner",
+        "concession-contrast"
+      ],
+      "details": "親の心配**をよそに**、彼は一人で海外へ旅立った。\n*(Ignoring his parents' worries, he set off abroad alone.)*\n住民の反対**をよそに**、工事は進められた。\n*(The construction went ahead despite residents' opposition.)*\n\nThe noun is usually others' feelings or reactions: 心配, 期待, 反対, 不安. よそ means 'elsewhere', so the image is pushing those concerns aside. It describes other people's actions."
+    },
+    {
+      "uid": "n1-grammar-28-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 28,
+      "title": "〜をものともせず（に）",
+      "meaning": "In defiance of ~ / Undaunted by ~",
+      "structure": "Noun + をものともせず（に）",
+      "explanation": "Overcoming a hardship or danger bravely, without being discouraged.",
+      "examples": [
+        {
+          "jp": "彼女は足のけがをものともせず、最後まで走り抜いた。",
+          "en": "Undaunted by her leg injury, she ran all the way to the end."
+        },
+        {
+          "jp": "救助隊は激しい雨をものともせずに、捜索を続けた。",
+          "en": "Braving the heavy rain, the rescue team continued the search."
+        }
+      ],
+      "summary": "をものともせず describes bravely overcoming a hardship — 'undaunted by X'.",
+      "tags": [
+        "concession-contrast",
+        "habit-effort"
+      ],
+      "details": "彼女は足のけが**をものともせず**、最後まで走り抜いた。\n*(Undaunted by her leg injury, she ran all the way to the end.)*\n救助隊は激しい雨**をものともせずに**、捜索を続けた。\n*(Braving the heavy rain, the rescue team continued the search.)*\n\nThe noun is an obstacle (けが, 危険, 困難, 反対, 嵐). It expresses admiration and describes others, not the speaker. Compare をよそに, which means ignoring others' concerns, not overcoming danger."
+    },
+    {
+      "uid": "n1-grammar-28-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 28,
+      "title": "〜をいいことに",
+      "meaning": "Taking (unfair) advantage of ~",
+      "structure": "Noun / Verb (Plain) + の + をいいことに",
+      "explanation": "Someone exploits a situation to do something they shouldn't.",
+      "examples": [
+        {
+          "jp": "親が留守なのをいいことに、彼は友達を家に呼んで騒いだ。",
+          "en": "Taking advantage of his parents being away, he invited friends over and partied."
+        },
+        {
+          "jp": "先生が何も言わないのをいいことに、生徒たちは宿題をしなくなった。",
+          "en": "Taking advantage of the teacher saying nothing, the students stopped doing homework."
+        }
+      ],
+      "summary": "をいいことに means exploiting a situation to do something one shouldn't.",
+      "tags": [
+        "cause-reason",
+        "emotion-expression"
+      ],
+      "details": "親が留守なの**をいいことに**、彼は友達を家に呼んで騒いだ。\n*(Taking advantage of his parents being away, he invited friends over and partied.)*\n先生が何も言わないの**をいいことに**、生徒たちは宿題をしなくなった。\n*(Taking advantage of the teacher saying nothing, the students stopped doing homework.)*\n\nAlways critical. The situation is often an absence of control (留守, 黙っている, 優しい). It describes other people's behavior."
+    },
+    {
+      "uid": "n1-grammar-28-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 28,
+      "title": "〜にかこつけて",
+      "meaning": "Using ~ as an excuse / Under the pretext of ~",
+      "structure": "Noun + にかこつけて",
+      "explanation": "Using something as a pretext to do what one actually wants to do.",
+      "examples": [
+        {
+          "jp": "出張にかこつけて、観光を楽しんだ。",
+          "en": "Using the business trip as an excuse, I enjoyed some sightseeing."
+        },
+        {
+          "jp": "彼は病気にかこつけて、面倒な仕事を断った。",
+          "en": "He used illness as an excuse to turn down a troublesome job."
+        }
+      ],
+      "summary": "にかこつけて means using X as a pretext for doing something else.",
+      "tags": [
+        "purpose",
+        "cause-reason"
+      ],
+      "details": "出張**にかこつけて**、観光を楽しんだ。\n*(Using the business trip as an excuse, I enjoyed some sightseeing.)*\n彼は病気**にかこつけて**、面倒な仕事を断った。\n*(He used illness as an excuse to turn down a troublesome job.)*\n\nThe noun is the excuse (仕事, 病気, 用事, 雨) and the second clause is the real purpose. The tone is often critical or self-mocking. かこつける means 'to make a pretext of'."
+    }
+  ],
+  "29": [
+    {
+      "uid": "n1-grammar-29-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 29,
+      "title": "〜にかまけて",
+      "meaning": "Being too wrapped up in ~ (to do other things)",
+      "structure": "Noun + にかまけて",
+      "explanation": "Being so absorbed in one thing that one neglects something else.",
+      "examples": [
+        {
+          "jp": "仕事にかまけて、家族との時間をおろそかにしていた。",
+          "en": "I was so wrapped up in work that I neglected time with my family."
+        },
+        {
+          "jp": "忙しさにかまけて、ずっと連絡していなかった。",
+          "en": "I was so caught up in being busy that I hadn't been in touch."
+        }
+      ],
+      "summary": "にかまけて means being so absorbed in X that something else gets neglected.",
+      "tags": [
+        "cause-reason",
+        "negative-manner"
+      ],
+      "details": "仕事**にかまけて**、家族との時間をおろそかにしていた。\n*(I was so wrapped up in work that I neglected time with my family.)*\n忙しさ**にかまけて**、ずっと連絡していなかった。\n*(I was so caught up in being busy that I hadn't been in touch.)*\n\nOften used as an apology or self-criticism. The second clause describes neglect (おろそかにする, 〜ていなかった). 忙しさにかまけて is a common excuse in letters."
+    },
+    {
+      "uid": "n1-grammar-29-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 29,
+      "title": "〜かたわら",
+      "meaning": "While (also) ~ / Alongside (one's main job) ~",
+      "structure": "Verb (Dictionary) / Noun + の + かたわら",
+      "explanation": "Doing a second activity alongside one's main occupation over a long period.",
+      "examples": [
+        {
+          "jp": "彼は会社に勤めるかたわら、小説を書いている。",
+          "en": "He writes novels while working at a company."
+        },
+        {
+          "jp": "彼女は子育てのかたわら、大学で勉強を続けた。",
+          "en": "She continued studying at university alongside raising her children."
+        }
+      ],
+      "summary": "かたわら describes a second, long-term activity alongside one's main work.",
+      "tags": [
+        "simultaneous-action",
+        "formal-written"
+      ],
+      "details": "彼は会社に勤める**かたわら**、小説を書いている。\n*(He writes novels while working at a company.)*\n彼女は子育ての**かたわら**、大学で勉強を続けた。\n*(She continued studying at university alongside raising her children.)*\n\nUnlike ながら (which is moment-to-moment), かたわら describes two roles over a long period. The first is usually the main job. かたわら alone also means 'beside' (道のかたわら)."
+    },
+    {
+      "uid": "n1-grammar-29-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 29,
+      "title": "〜がてら",
+      "meaning": "While (doing) ~ / On the way ~ / Taking the opportunity of ~",
+      "structure": "Noun (する-noun) / Verb (ます-stem) + がてら",
+      "explanation": "Doing one thing while also using the chance to do another, usually something involving going somewhere.",
+      "examples": [
+        {
+          "jp": "散歩がてら、パンを買いに行った。",
+          "en": "I went to buy bread while out for a walk."
+        },
+        {
+          "jp": "駅まで送りがてら、少し話をした。",
+          "en": "We had a little talk while I walked them to the station."
+        }
+      ],
+      "summary": "がてら means doing a second thing at the same time as the first — 'while out doing X'.",
+      "tags": [
+        "simultaneous-action"
+      ],
+      "details": "散歩**がてら**、パンを買いに行った。\n*(I went to buy bread while out for a walk.)*\n駅まで送り**がてら**、少し話をした。\n*(We had a little talk while I walked them to the station.)*\n\nThe second action is usually movement (行く, 来る, 歩く). Typical first actions: 散歩, 買い物, 見物. Unlike かたわら, がてら is short-term and casual."
+    },
+    {
+      "uid": "n1-grammar-29-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 29,
+      "title": "〜かたがた",
+      "meaning": "While also ~ / Partly to ~",
+      "structure": "Noun + かたがた",
+      "explanation": "A formal way of saying one action serves two purposes, typically in letters and business.",
+      "examples": [
+        {
+          "jp": "お礼かたがた、ご挨拶に伺いました。",
+          "en": "I came to greet you and also to thank you."
+        },
+        {
+          "jp": "近況報告かたがた、お手紙を差し上げます。",
+          "en": "I'm writing to you partly to let you know how I'm doing."
+        }
+      ],
+      "summary": "かたがた is a formal 'while also' — one visit or letter serves two purposes.",
+      "tags": [
+        "purpose",
+        "keigo-humble",
+        "formal-written"
+      ],
+      "details": "お礼**かたがた**、ご挨拶に伺いました。\n*(I came to greet you and also to thank you.)*\n近況報告**かたがた**、お手紙を差し上げます。\n*(I'm writing to you partly to let you know how I'm doing.)*\n\nVery formal; used in business letters and polite visits. Typical nouns: お礼, お詫び, ご挨拶, ご報告, お見舞い. The second clause is usually 伺う, 参る, or a letter."
+    }
+  ],
+  "30": [
+    {
+      "uid": "n1-grammar-30-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 30,
+      "title": "〜といい〜といい",
+      "meaning": "Both ~ and ~ / In terms of ~ as well as ~",
+      "structure": "Noun A + といい + Noun B + といい",
+      "explanation": "Gives two examples to show that something is outstanding (or bad) in every respect.",
+      "examples": [
+        {
+          "jp": "味といい値段といい、この店は文句なしだ。",
+          "en": "Both the taste and the price are perfect at this restaurant."
+        },
+        {
+          "jp": "顔といい性格といい、彼は父親にそっくりだ。",
+          "en": "In both looks and personality, he's just like his father."
+        }
+      ],
+      "summary": "といい〜といい lists two aspects to show that something is X in every respect.",
+      "tags": [
+        "listing-examples",
+        "emphasis-assertion"
+      ],
+      "details": "味**といい**値段といい、この店は文句なしだ。\n*(Both the taste and the price are perfect at this restaurant.)*\n顔**といい**性格といい、彼は父親にそっくりだ。\n*(In both looks and personality, he's just like his father.)*\n\nUsed to evaluate (praise, criticism, surprise), not for neutral listing. Compare にしても〜にしても and であれ〜であれ, which mean 'whether A or B'."
+    },
+    {
+      "uid": "n1-grammar-30-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 30,
+      "title": "〜なり〜なり",
+      "meaning": "Either ~ or ~ / ~ or something",
+      "structure": "Noun / Verb (Dictionary) + なり + Noun / Verb (Dictionary) + なり",
+      "explanation": "Suggests choosing from examples — 'X or Y, whatever suits you'.",
+      "examples": [
+        {
+          "jp": "分からなければ、先生に聞くなり辞書で調べるなりしなさい。",
+          "en": "If you don't understand, ask the teacher or look it up in a dictionary."
+        },
+        {
+          "jp": "電話なりメールなりで連絡してください。",
+          "en": "Please get in touch by phone or email or whatever."
+        }
+      ],
+      "summary": "なり〜なり suggests a choice among examples — 'X or Y, whichever'.",
+      "tags": [
+        "alternative-choice",
+        "advice-suggestion"
+      ],
+      "details": "分からなければ、先生に聞く**なり**辞書で調べるなりしなさい。\n*(If you don't understand, ask the teacher or look it up in a dictionary.)*\n電話**なり**メールなりで連絡してください。\n*(Please get in touch by phone or email or whatever.)*\n\nUsed for suggestions, advice and commands. It's not used for past events. 何なり means 'anything': 何なりとお申し付けください ('please ask for anything'). Different from なり ('as soon as', Lesson 4)."
+    },
+    {
+      "uid": "n1-grammar-30-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 30,
+      "title": "〜だの〜だの",
+      "meaning": "~ and ~ and such (complaining)",
+      "structure": "Noun / Verb・Adj (Plain) + だの + ... + だの",
+      "explanation": "Lists examples with a tone of complaint or irritation.",
+      "examples": [
+        {
+          "jp": "彼は暑いだの疲れただのと、文句ばかり言っている。",
+          "en": "He's always complaining — it's too hot, he's tired, and so on."
+        },
+        {
+          "jp": "引っ越しの前は、掃除だの手続きだので忙しい。",
+          "en": "Before moving, I'm busy with cleaning, paperwork and whatnot."
+        }
+      ],
+      "summary": "だの〜だの lists things with a complaining tone — 'this and that and so on'.",
+      "tags": [
+        "listing-examples",
+        "emotion-expression",
+        "colloquial"
+      ],
+      "details": "彼は暑い**だの**疲れただのと、文句ばかり言っている。\n*(He's always complaining — it's too hot, he's tired, and so on.)*\n引っ越しの前は、掃除**だの**手続きだので忙しい。\n*(Before moving, I'm busy with cleaning, paperwork and whatnot.)*\n\nConversational and usually negative. Often followed by と言う or と文句を言う. Compared with やら〜やら (N2), だの〜だの is more critical."
+    },
+    {
+      "uid": "n1-grammar-30-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 30,
+      "title": "〜かれ〜かれ",
+      "meaning": "Whether ~ or ~ / ~ or ~ alike",
+      "structure": "い-Adj (stem) + かれ + opposite い-Adj (stem) + かれ",
+      "explanation": "A classical pattern used in a few fixed pairs of opposites, meaning 'whether X or Y'.",
+      "examples": [
+        {
+          "jp": "遅かれ早かれ、真実は明らかになるだろう。",
+          "en": "Sooner or later, the truth will come out."
+        },
+        {
+          "jp": "人は多かれ少なかれ、悩みを抱えている。",
+          "en": "Everyone has worries to a greater or lesser degree."
+        }
+      ],
+      "summary": "かれ〜かれ means 'whether X or Y', in a few fixed pairs like 遅かれ早かれ.",
+      "tags": [
+        "alternative-choice",
+        "formal-written"
+      ],
+      "details": "**遅かれ早かれ**、真実は明らかになるだろう。\n*(Sooner or later, the truth will come out.)*\n人は**多かれ少なかれ**、悩みを抱えている。\n*(Everyone has worries to a greater or lesser degree.)*\n\nOnly in set phrases: 遅かれ早かれ ('sooner or later'), 多かれ少なかれ ('more or less'), 善かれ悪しかれ ('for better or worse'). It's not productive with other adjectives."
+    }
+  ],
+  "31": [
+    {
+      "uid": "n1-grammar-31-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 31,
+      "title": "〜つ〜つ",
+      "meaning": "~ing and ~ing (alternately)",
+      "structure": "Verb A (ます-stem) + つ + Verb B (ます-stem) + つ",
+      "explanation": "Two opposite actions alternate back and forth, in set phrases.",
+      "examples": [
+        {
+          "jp": "二人は抜きつ抜かれつのレースを続けた。",
+          "en": "The two kept overtaking each other throughout the race."
+        },
+        {
+          "jp": "持ちつ持たれつの関係が大切だ。",
+          "en": "A relationship of mutual support is important."
+        }
+      ],
+      "summary": "つ〜つ describes two opposite actions alternating — in fixed phrases.",
+      "tags": [
+        "simultaneous-action",
+        "frequency"
+      ],
+      "details": "二人は**抜きつ抜かれつ**のレースを続けた。\n*(The two kept overtaking each other throughout the race.)*\n**持ちつ持たれつ**の関係が大切だ。\n*(A relationship of mutual support is important.)*\n\nFixed expressions only: 行きつ戻りつ ('back and forth'), 抜きつ抜かれつ ('neck and neck'), 持ちつ持たれつ ('give and take'), 差しつ差されつ ('pouring drinks for each other'). Often an active verb paired with its passive."
+    },
+    {
+      "uid": "n1-grammar-31-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 31,
+      "title": "〜ともなく／〜ともなしに",
+      "meaning": "Without meaning to ~ / Idly ~ / (with question words) Some ~ or other",
+      "structure": "Verb (Dictionary) + ともなく・ともなしに / Question word + (particle) + ともなく",
+      "explanation": "Doing something without any clear intention; with question words, it means it's unclear who, where or when.",
+      "examples": [
+        {
+          "jp": "テレビを見るともなく見ていたら、友達が映っていた。",
+          "en": "I was idly watching TV when a friend of mine appeared on screen."
+        },
+        {
+          "jp": "どこからともなく、いい匂いがしてきた。",
+          "en": "A nice smell drifted in from somewhere or other."
+        }
+      ],
+      "summary": "ともなく means doing something absent-mindedly, or (with question words) 'from somewhere or other'.",
+      "tags": [
+        "negative-manner",
+        "spontaneous-perception"
+      ],
+      "details": "テレビを見る**ともなく**見ていたら、友達が映っていた。\n*(I was idly watching TV when a friend of mine appeared on screen.)*\nどこから**ともなく**、いい匂いがしてきた。\n*(A nice smell drifted in from somewhere or other.)*\n\nWith verbs, the same verb often repeats: 見るともなく見る, 聞くともなく聞く. With question words: どこからともなく, 誰からともなく, いつからともなく. Literary."
+    },
+    {
+      "uid": "n1-grammar-31-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 31,
+      "title": "〜かいもなく",
+      "meaning": "Despite (efforts) ~, to no avail",
+      "structure": "Verb (た-form) / Noun + の + かいもなく",
+      "explanation": "Efforts were made, but they didn't produce the hoped-for result.",
+      "examples": [
+        {
+          "jp": "必死の看病のかいもなく、祖父は亡くなった。",
+          "en": "Despite our desperate nursing, my grandfather passed away."
+        },
+        {
+          "jp": "一生懸命勉強したかいもなく、試験に落ちてしまった。",
+          "en": "All my hard study was in vain — I failed the exam."
+        }
+      ],
+      "summary": "かいもなく means 'efforts were in vain'.",
+      "tags": [
+        "concession-contrast",
+        "result-consequence"
+      ],
+      "details": "必死の看病の**かいもなく**、祖父は亡くなった。\n*(Despite our desperate nursing, my grandfather passed away.)*\n一生懸命勉強した**かいもなく**、試験に落ちてしまった。\n*(All my hard study was in vain — I failed the exam.)*\n\nかい (甲斐) means 'worth, effect'. The positive form is かいがある ('worth it'): 頑張ったかいがあった. Common with 努力, 看病, 応援."
+    },
+    {
+      "uid": "n1-grammar-31-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 31,
+      "title": "〜とは (Surprise)",
+      "meaning": "(To think) that ~! / I'm surprised that ~",
+      "structure": "Sentence (Plain) + とは",
+      "explanation": "Expresses surprise, shock or admiration at a fact, often leaving the rest of the sentence unsaid.",
+      "examples": [
+        {
+          "jp": "あの彼が会社の社長になるとは。",
+          "en": "To think that he of all people would become company president!"
+        },
+        {
+          "jp": "こんな所で昔の友達に会うとは思わなかった。",
+          "en": "I never thought I'd meet an old friend in a place like this."
+        }
+      ],
+      "summary": "とは at the end of a clause expresses surprise — 'to think that...!'.",
+      "tags": [
+        "emotion-expression",
+        "quotation"
+      ],
+      "details": "あの彼が会社の社長になる**とは**。\n*(To think that he of all people would become company president!)*\nこんな所で昔の友達に会う**とは**思わなかった。\n*(I never thought I'd meet an old friend in a place like this.)*\n\nOften the sentence ends right after とは, or continues with 驚いた, 思わなかった, 信じられない. It's a stronger version of なんて. Different from the defining とは ('X means...')."
+    }
+  ],
+  "32": [
+    {
+      "uid": "n1-grammar-32-1",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 32,
+      "title": "〜かと思いきや",
+      "meaning": "Just when one thought ~ (but actually) ~",
+      "structure": "Sentence (Plain) + かと思いきや / 〜と思いきや",
+      "explanation": "The speaker expected one thing, but the result was the opposite.",
+      "examples": [
+        {
+          "jp": "簡単な試験かと思いきや、意外に難しかった。",
+          "en": "I thought it would be an easy exam, but it was surprisingly hard."
+        },
+        {
+          "jp": "雨がやんだと思いきや、また降り出した。",
+          "en": "Just when I thought the rain had stopped, it started again."
+        }
+      ],
+      "summary": "かと思いきや means 'I thought X, but actually Y' — expectation overturned.",
+      "tags": [
+        "concession-contrast",
+        "certainty-expectation"
+      ],
+      "details": "簡単な試験**かと思いきや**、意外に難しかった。\n*(I thought it would be an easy exam, but it was surprisingly hard.)*\n雨がやんだ**と思いきや**、また降り出した。\n*(Just when I thought the rain had stopped, it started again.)*\n\nThe second clause often has 意外にも, 実は, また. It's used in writing and somewhat playfully in speech. Compare かと思うと (N2), where the second event really happens right after."
+    },
+    {
+      "uid": "n1-grammar-32-2",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 32,
+      "title": "〜といったところだ",
+      "meaning": "About ~ / At most ~ / More or less ~",
+      "structure": "Noun / Verb (Plain) + といったところだ",
+      "explanation": "Gives a rough estimate or evaluation, usually implying 'not much'.",
+      "examples": [
+        {
+          "jp": "参加者は多くても20人といったところだ。",
+          "en": "There'll be about twenty participants at most."
+        },
+        {
+          "jp": "私の英語力は、日常会話ができるといったところです。",
+          "en": "My English is about good enough for everyday conversation."
+        }
+      ],
+      "summary": "といったところだ gives a modest estimate — 'roughly X, at most'.",
+      "tags": [
+        "degree-extent",
+        "conjecture-inference"
+      ],
+      "details": "参加者は多くても20人**といったところだ**。\n*(There'll be about twenty participants at most.)*\n私の英語力は、日常会話ができる**といったところです**。\n*(My English is about good enough for everyday conversation.)*\n\nOften with せいぜい or 多くても, showing the amount is small. It's also used to describe something as 'more or less' a certain level. というところだ is a variant."
+    },
+    {
+      "uid": "n1-grammar-32-3",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 32,
+      "title": "〜ところを",
+      "meaning": "Although (you are) ~ / At the moment when ~",
+      "structure": "Verb/い-Adj (Plain) / な-Adj + な / Noun + の + ところを",
+      "explanation": "Mostly in polite set phrases: acknowledging someone's situation (busy, tired) when asking or thanking. Also 'at the moment when'.",
+      "examples": [
+        {
+          "jp": "お忙しいところを、わざわざありがとうございます。",
+          "en": "Thank you for taking the time when you're so busy."
+        },
+        {
+          "jp": "犯人は逃げようとしたところを捕まった。",
+          "en": "The criminal was caught just as he tried to run away."
+        }
+      ],
+      "summary": "ところを acknowledges the listener's situation in polite phrases, or means 'at the moment when'.",
+      "tags": [
+        "concession-contrast",
+        "keigo-polite",
+        "time-relative"
+      ],
+      "details": "お忙しい**ところを**、わざわざありがとうございます。\n*(Thank you for taking the time when you're so busy.)*\n犯人は逃げようとした**ところを**捕まった。\n*(The criminal was caught just as he tried to run away.)*\n\nPolite set phrases: お忙しいところを, お休みのところを, お疲れのところを — followed by thanks or an apology. The 'at the moment' use comes with verbs of catching or seeing (捕まる, 見られる)."
+    },
+    {
+      "uid": "n1-grammar-32-4",
+      "level": "N1",
+      "section": "grammar",
+      "lesson": 32,
+      "title": "〜ものとする",
+      "meaning": "Shall be ~ / Is to be regarded as ~",
+      "structure": "Verb (Plain) + ものとする",
+      "explanation": "A formal expression used in contracts and rules to set a condition or interpretation.",
+      "examples": [
+        {
+          "jp": "期限までに返事がない場合は、欠席とみなすものとする。",
+          "en": "If no reply is received by the deadline, it shall be regarded as absence."
+        },
+        {
+          "jp": "本契約は、署名の日から有効になるものとする。",
+          "en": "This contract shall take effect from the date of signature."
+        }
+      ],
+      "summary": "ものとする is legal and official 'shall be' language.",
+      "tags": [
+        "definition-meaning",
+        "formal-written"
+      ],
+      "details": "期限までに返事がない場合は、欠席とみなす**ものとする**。\n*(If no reply is received by the deadline, it shall be regarded as absence.)*\n本契約は、署名の日から有効になる**ものとする**。\n*(This contract shall take effect from the date of signature.)*\n\nFound in contracts, regulations and terms of service. It sets an agreed interpretation, not a fact. 〜ものと思われる ('it is believed that') is another formal use of ものと."
     }
   ]
 }

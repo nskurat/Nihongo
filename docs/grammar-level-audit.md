@@ -11,8 +11,29 @@ Compared our grammar points (N5 143, N4 119, N3 85) against jlptsensei.com's lev
 | 2 | Author the missing N3 points: 105 new points (`scripts/add-grammar-items.ts`), N3 is now 139 points over all 24 lessons | done |
 | 3 | Author the missing N4 / N5 points: 25 N4 + 9 N5, plus 16 remaining N3 gaps | done |
 | 4 | Re-level contested points (`scripts/move-grammar-levels.ts`): 13 N5 -> N4, 4 N4 -> N3, 1 N3 -> N2, 1 duplicate dropped | done |
+| 5 | Show N2, review its points, move ものだから/ところだった back to N3 (`scripts/review-n2-grammar.ts`) | done |
+| 6 | Build out N2 and N1 (`scripts/move-n2-to-n1.ts`, `scripts/add-grammar-items.ts`): 87 new N2 + 125 new N1 points | done |
 
-Final counts: N5 139, N4 166, N3 158 (+21 parked as N2 in `data/n2/grammar.json`).
+Final counts after stage 4: N5 139, N4 166, N3 158 (+21 parked as N2 in `data/n2/grammar.json`).
+After stage 6: N5 139, N4 166, N3 160, N2 103 (26 lessons), N1 128 (32 lessons).
+
+### Stage 6: N2 and N1 build-out
+
+Checklist: OpenJLPT's per-level grammar lists (github.com/zhira-pras/OpenJLPT,
+`data/json/grammar/{n2,n1}.json`, v0.3.0; N2 123 and N1 123 patterns), topped up from
+jlptsensei's lists. jlptsensei itself could not be fetched from the session. OpenJLPT is
+CC BY-SA 4.0, so only pattern names and levels were used; every meaning, explanation,
+example and note was written from scratch.
+
+- Skipped every pattern already taught at N5-N3 (e.g. に反して, を通じて, 上に, 際に, ことから,
+  っぱなし, ずにはいられない, をはじめ) - N5-N3 data was not touched.
+- Moved up to N1, where both lists put them: 〜をもって (N1 Lesson 11) and 〜から〜に至るまで (N1
+  Lesson 27). This shifted one N2 uid (〜においては, 8-3 -> 8-2).
+- Kept at N2 though neither list has them: といった, にわたって, からなる, 一方で, に及ぶ, ざる + N.
+- Lessons hold 3-5 points, grouped by function (limits, conditions, timing, cause, emphasis...).
+  Existing N2 lessons were topped up first so existing uids did not move.
+- Every example was checked by the add script to actually contain the pattern (`bold` forms).
+  A native-level review of a sample is still worthwhile, as for stages 2-3.
 
 ### Stage 4: re-leveling rule
 

@@ -107,9 +107,9 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
             <p className="text-slate-500 text-sm mt-1">
               Explore grammar patterns, conjugation formulas, nuances, and AI-powered examples.
             </p>
-            {activeLevel === 'N2' && (
+            {(activeLevel === 'N2' || activeLevel === 'N1') && (
               <p className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md px-2.5 py-1.5 mt-2">
-                N2 is a preview: a first set of grammar points only. Vocabulary, kanji and reading practice are not available for N2 yet.
+                {activeLevel} covers grammar only. Vocabulary, kanji and reading practice are not available for {activeLevel} yet.
               </p>
             )}
           </div>

@@ -25,7 +25,7 @@ function ContentWrapper() {
     fromLegacyLesson(parsedLevel, parseInt(lesson || '', 10))
   );
 
-  // Sections a level has no content for (e.g. N2 vocab) fall back to its grammar
+  // Sections a level has no content for (e.g. N2/N1 vocab) fall back to its grammar
   if (!isSectionAvailable(parsedLevel, parsedSection)) {
     return <Navigate to={`/${parsedLevel.toLowerCase()}/grammar/${parsedLesson}`} replace />;
   }
@@ -76,7 +76,7 @@ export default function App() {
 
       <footer className="mt-12 py-6 border-t border-slate-200 bg-white/50 text-center text-xs text-slate-500">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span>Japanese Study Portal • JLPT N5, N4 & N3 • N2 Grammar Preview</span>
+          <span>Japanese Study Portal • JLPT N5–N1</span>
           <span>Interactive Grammar, Vocabulary & Kanji Reference</span>
         </div>
       </footer>

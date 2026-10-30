@@ -1,4 +1,4 @@
-export type Level = 'N5' | 'N4' | 'N3' | 'N2';
+export type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 export type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
 /** Globally unique, stable, safe as a database primary key: `{level}-{section}-{lesson}-{n}` */

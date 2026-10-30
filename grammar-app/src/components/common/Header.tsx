@@ -30,7 +30,8 @@ export default function Header() {
     { id: 'N5', label: 'JLPT N5', desc: 'Beginner I' },
     { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
     { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
-    { id: 'N2', label: 'JLPT N2', desc: 'Upper Intermediate (grammar preview)' },
+    { id: 'N2', label: 'JLPT N2', desc: 'Upper Intermediate (grammar only)' },
+    { id: 'N1', label: 'JLPT N1', desc: 'Advanced (grammar only)' },
   ];
 
   const allSections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
@@ -60,7 +61,7 @@ export default function Header() {
     <header className="bg-indigo-600 text-white shadow-lg sticky top-0 z-20 transition-all">
       {/* Top Banner */}
       <div className="max-w-6xl mx-auto px-4 py-3 md:py-4 flex flex-col md:flex-row justify-between items-center gap-3 border-b border-indigo-500/50">
-        <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
+        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-between md:justify-start">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/20">
               <GraduationCap size={24} className="text-indigo-100" />
@@ -70,18 +71,18 @@ export default function Header() {
                 Japanese Study Guide <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500 border border-indigo-400/80">{activeLevel}</span>
               </h1>
               <p className="text-indigo-200 text-xs font-medium">
-                JLPT N5–N3 Interactive Reference & AI Practice · N2 Grammar Preview
+                JLPT N5–N1 Interactive Reference & AI Practice
               </p>
             </div>
           </div>
 
           {/* Level Switcher (Pill Selector) */}
-          <div className="flex items-center bg-indigo-800/60 p-1 rounded-xl border border-indigo-400/30">
+          <div className="flex items-center bg-indigo-800/60 p-1 rounded-xl border border-indigo-400/30 max-md:w-full">
             {levels.map((lvl) => (
               <button
                 key={lvl.id}
                 onClick={() => handleLevelChange(lvl.id)}
-                className={`px-3 py-1 max-md:min-h-10 max-md:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3 py-1 max-md:min-h-10 max-md:flex-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeLevel === lvl.id
                     ? 'bg-white text-indigo-700 shadow-md transform scale-105'
                     : 'text-indigo-200 hover:text-white hover:bg-white/10'
