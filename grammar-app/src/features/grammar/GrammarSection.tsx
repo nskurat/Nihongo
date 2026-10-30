@@ -6,6 +6,7 @@ import TagBadge from '../../components/common/TagBadge';
 import { LevelType } from '../../types/japanese';
 import { useGrammar } from './useGrammar';
 import { useAppStore } from '../../store/useAppStore';
+import { useActiveLessonScroll } from '../useActiveLessonScroll';
 
 interface GrammarSectionProps {
   activeLevel: LevelType;
@@ -35,6 +36,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
     loadingExamples,
     loadingExplanations,
   } = useGrammar(activeLevel, activeLesson);
+  const lessonListRef = useActiveLessonScroll<HTMLUListElement>(activeLesson, totalLessons.length);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in">
@@ -53,13 +55,14 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
             </span>
           </div>
 
-          <ul className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-indigo-200">
+          <ul ref={lessonListRef} className="flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin scrollbar-thumb-indigo-200">
             {totalLessons.map((lesson) => {
               const count = lessonCounts[lesson] || 0;
               return (
                 <li key={lesson} className="min-w-fit">
                   <button
                     onClick={() => navigate(`/${activeLevel.toLowerCase()}/grammar/${lesson}`)}
+                    aria-current={activeLesson === lesson ? 'true' : undefined}
                     className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
                       activeLesson === lesson
                         ? 'bg-indigo-600 text-white shadow-md font-semibold'

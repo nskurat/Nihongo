@@ -19,6 +19,16 @@ interface AiSettingsModalProps {
 }
 
 export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: AiSettingsModalProps) {
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   // getRegisteredProviders() returns Object.values() of a static registry - a new
   // array reference every call even though the providers themselves never change.
   const providers = useMemo(() => getRegisteredProviders(), []);
