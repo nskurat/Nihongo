@@ -1,4 +1,8 @@
 import { AiProvider, AiPromptOptions } from '../../../types/ai';
+import { MODEL_CATALOG, getDefaultModelId, toModelOptions } from '../modelCatalog';
+
+const models = toModelOptions(MODEL_CATALOG.providers.anthropic, 'claude-sonnet-5-5');
+const DEFAULT_MODEL = getDefaultModelId(models);
 
 export const anthropicProvider: AiProvider = {
   id: 'anthropic',
@@ -6,13 +10,10 @@ export const anthropicProvider: AiProvider = {
   description: 'Deep analytical linguistic reasoning and nuanced natural phrasing.',
   website: 'https://console.anthropic.com/settings/keys',
   requiresKey: true,
-  models: [
-    { id: 'claude-sonnet-5', name: 'Claude Sonnet 5', isDefault: true },
-    { id: 'claude-haiku-4-5', name: 'Claude Haiku 4.5' },
-  ],
+  models,
 
   async executePrompt(prompt: string, options: AiPromptOptions = {}): Promise<string> {
-    const { apiKey, model = 'claude-sonnet-5' } = options;
+    const { apiKey, model = DEFAULT_MODEL } = options;
 
     if (!apiKey) {
       throw new Error('MISSING_KEY');

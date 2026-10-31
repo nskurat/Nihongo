@@ -1,5 +1,19 @@
 import { useState, useEffect, useMemo } from 'react';
-import { KeyRound, ExternalLink, X, ShieldCheck, Sparkles, Check, Cpu, Bot, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import {
+  KeyRound,
+  ExternalLink,
+  X,
+  ShieldCheck,
+  Check,
+  Cpu,
+  Bot,
+  CheckCircle2,
+  AlertCircle,
+  AlertTriangle,
+  Loader2,
+  WifiOff,
+  BadgeCheck,
+} from 'lucide-react';
 import {
   getRegisteredProviders,
   getActiveProviderId,
@@ -8,9 +22,20 @@ import {
   setStoredApiKey,
   getStoredModel,
   setStoredModel,
-  executeAiPrompt,
 } from '../../services/ai/registry';
-import { AiProvider, AiProviderId, AiModelOption } from '../../types/ai';
+import { getKeyChecker } from '../../services/ai/keyChecker';
+import { KeyCheckResult } from '../../services/ai/modelListing';
+import { buildPickerOptions, getDefaultModelId } from '../../services/ai/modelCatalog';
+import { AiProvider, AiProviderId } from '../../types/ai';
+
+/** Result of the free "Check key" call, tagged with the provider tab it was made for. */
+interface KeyCheckState {
+  loading: boolean;
+  provider: AiProviderId | null;
+  result: KeyCheckResult | null;
+}
+
+const IDLE_CHECK: KeyCheckState = { loading: false, provider: null, result: null };
 
 interface AiSettingsModalProps {
   isOpen: boolean;
@@ -36,11 +61,8 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
   const [apiKeys, setApiKeys] = useState<Record<string, string>>({});
   const [selectedModels, setSelectedModels] = useState<Record<string, string>>({});
   const [savedSuccess, setSavedSuccess] = useState(false);
-  const [testingStatus, setTestingStatus] = useState<{ loading: boolean; success: boolean | null; error: string }>({
-    loading: false,
-    success: null,
-    error: '',
-  });
+  const [keyCheck, setKeyCheck] = useState<KeyCheckState>(IDLE_CHECK);
+  const [openError, setOpenError] = useState('');
 
   // Load stored settings on open. This re-syncs the form from localStorage (an
   // external system) each time the modal opens, rather than adjusting state from a
@@ -60,7 +82,8 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
       setApiKeys(keys);
       setSelectedModels(models);
       setSavedSuccess(false);
-      setTestingStatus({ loading: false, success: null, error: initialError });
+      setKeyCheck(IDLE_CHECK);
+      setOpenError(initialError);
     }
   }, [isOpen, initialError, providers]);
 
@@ -68,17 +91,23 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
 
   const currentProviderConfig = providers.find((p) => p.id === activeProvider) || providers[0];
   const currentKey = apiKeys[activeProvider] || '';
-  const currentModel = selectedModels[activeProvider] || currentProviderConfig?.models[0]?.id || '';
+  const currentModel = selectedModels[activeProvider] || getDefaultModelId(currentProviderConfig.models);
+  const picker = buildPickerOptions(currentProviderConfig.models, currentModel);
+  // A check result only belongs to the tab it was made for.
+  const checkResult = keyCheck.provider === activeProvider ? keyCheck.result : null;
+  const checkLoading = keyCheck.loading && keyCheck.provider === activeProvider;
 
+  // Nothing below writes to storage: only Save does.
   const handleKeyChange = (val: string) => {
     setApiKeys((prev) => ({ ...prev, [activeProvider]: val }));
     setSavedSuccess(false);
-    setTestingStatus({ loading: false, success: null, error: '' });
+    setKeyCheck(IDLE_CHECK);
+    setOpenError('');
   };
 
   const handleModelChange = (val: string) => {
     setSelectedModels((prev) => ({ ...prev, [activeProvider]: val }));
-    setStoredModel(activeProvider, val);
+    setSavedSuccess(false);
   };
 
   const handleSave = () => {
@@ -92,28 +121,14 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
     }, 400);
   };
 
-  const handleTestConnection = async () => {
-    setTestingStatus({ loading: true, success: null, error: '' });
-    try {
-      setStoredApiKey(activeProvider, currentKey);
-      setStoredModel(activeProvider, currentModel);
-
-      const res = await executeAiPrompt('Respond with the word "OK".', {
-        apiKey: currentKey,
-        model: currentModel,
-      });
-
-      if (res) {
-        setTestingStatus({ loading: false, success: true, error: '' });
-      }
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : String(err);
-      setTestingStatus({
-        loading: false,
-        success: false,
-        error: msg === 'MISSING_KEY' ? 'Please enter an API key first.' : msg,
-      });
-    }
+  // Free check: lists the OPEN tab's models with the key as typed. No tokens, no storage writes.
+  const handleCheckKey = async () => {
+    const provider = activeProvider;
+    setOpenError('');
+    setKeyCheck({ loading: true, provider, result: null });
+    const result = await getKeyChecker().check(provider, currentKey);
+    // Drop the result if the key was edited (which resets the check) while it was in flight.
+    setKeyCheck((prev) => (prev.provider === provider && prev.loading ? { loading: false, provider, result } : prev));
   };
 
   return (
@@ -161,7 +176,8 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
                     key={p.id}
                     onClick={() => {
                       setActiveProvider(p.id);
-                      setTestingStatus({ loading: false, success: null, error: '' });
+                      setSavedSuccess(false);
+                      setOpenError('');
                     }}
                     className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all relative cursor-pointer ${
                       isSelected
@@ -208,22 +224,37 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
             </div>
 
             {/* Model Selector */}
-            {currentProviderConfig.models.length > 1 && (
+            {currentProviderConfig.models.length > 0 && (
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
+                <label
+                  htmlFor="ai-model-select"
+                  className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5"
+                >
                   <Cpu size={13} className="text-indigo-500" /> Model Selection
                 </label>
                 <select
+                  id="ai-model-select"
                   value={currentModel}
                   onChange={(e) => handleModelChange(e.target.value)}
-                  className="w-full text-xs font-medium bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+                  className={`w-full text-xs font-medium bg-white border rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer ${
+                    picker.selectedMissing ? 'border-amber-400' : 'border-slate-300'
+                  }`}
                 >
-                  {currentProviderConfig.models.map((m: AiModelOption) => (
-                    <option key={m.id} value={m.id}>
-                      {m.name}
+                  {picker.options.map((o) => (
+                    <option key={o.id} value={o.id}>
+                      {o.label}
                     </option>
                   ))}
                 </select>
+                {picker.selectedMissing && (
+                  <p className="mt-1.5 flex items-start gap-1.5 text-[11px] text-amber-700">
+                    <AlertTriangle size={13} className="shrink-0 mt-px" />
+                    <span>
+                      Your saved model <code className="bg-amber-50 px-1 rounded">{currentModel}</code> is not in the
+                      current list. It may have been retired. Pick another model and save.
+                    </span>
+                  </p>
+                )}
               </div>
             )}
 
@@ -247,32 +278,70 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
               </div>
             )}
 
-            {/* Test Connection Button & Status */}
+            {/* Free key check: lists models, spends no tokens */}
             <div className="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200">
               <button
                 type="button"
-                onClick={handleTestConnection}
-                disabled={testingStatus.loading || (currentProviderConfig.requiresKey && !currentKey)}
+                onClick={handleCheckKey}
+                disabled={checkLoading || (currentProviderConfig.requiresKey && !currentKey.trim())}
+                title="Lists the models this key can use. Free: no tokens are spent."
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-300 transition-colors disabled:opacity-40 cursor-pointer"
               >
-                {testingStatus.loading ? (
+                {checkLoading ? (
                   <Loader2 size={13} className="animate-spin text-indigo-600" />
                 ) : (
-                  <Sparkles size={13} className="text-indigo-600" />
+                  <BadgeCheck size={13} className="text-indigo-600" />
                 )}
-                {testingStatus.loading ? 'Testing...' : 'Test Connection'}
+                {checkLoading ? 'Checking...' : 'Check key'}
               </button>
 
-              {testingStatus.success && (
-                <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-semibold animate-fade-in">
-                  <CheckCircle2 size={14} /> Connection Successful!
+              {!checkResult && !checkLoading && !openError && (
+                <span className="text-[11px] text-slate-400">Free check: spends no tokens, saves nothing.</span>
+              )}
+
+              {checkResult?.status === 'ok' && (
+                <div className="flex flex-col items-end gap-0.5 text-xs animate-fade-in" role="status">
+                  <span className="flex items-center gap-1.5 text-emerald-700 font-semibold">
+                    <CheckCircle2 size={14} /> Key works
+                    {checkResult.modelIds.length > 0 && (
+                      <span className="font-normal text-emerald-600">
+                        ({checkResult.modelIds.length} models available)
+                      </span>
+                    )}
+                  </span>
+                  {checkResult.modelIds.length > 0 && !checkResult.modelIds.includes(currentModel) && (
+                    <span className="flex items-center gap-1 text-[11px] text-amber-700">
+                      <AlertTriangle size={12} /> The selected model is not offered to this key.
+                    </span>
+                  )}
                 </div>
               )}
 
-              {testingStatus.error && (
+              {checkResult?.status === 'invalid-key' && (
+                <div className="flex items-center gap-1.5 text-xs text-rose-600 font-medium animate-fade-in" role="alert">
+                  <AlertCircle size={14} className="shrink-0" />
+                  <span className="line-clamp-2">Invalid key: {checkResult.message}</span>
+                </div>
+              )}
+
+              {checkResult?.status === 'network' && (
+                <div className="flex items-center gap-1.5 text-xs text-amber-700 font-medium animate-fade-in" role="alert">
+                  <WifiOff size={14} className="shrink-0" />
+                  <span className="line-clamp-2">Network or CORS blocked: could not reach the provider.</span>
+                </div>
+              )}
+
+              {checkResult?.status === 'error' && (
+                <div className="flex items-center gap-1.5 text-xs text-rose-600 font-medium animate-fade-in" role="alert">
+                  <AlertCircle size={14} className="shrink-0" />
+                  <span className="line-clamp-2">{checkResult.message}</span>
+                </div>
+              )}
+
+              {!checkResult && openError && (
                 <div className="flex items-center gap-1.5 text-xs text-rose-600 font-medium animate-fade-in">
                   <AlertCircle size={14} className="shrink-0" />
-                  <span className="line-clamp-1">{testingStatus.error}</span>
+                  <span className="line-clamp-1">{openError}</span>
                 </div>
               )}
             </div>
@@ -290,10 +359,8 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
         {/* Footer Actions */}
         <div className="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center">
           <button
-            onClick={() => {
-              handleKeyChange('');
-              setStoredApiKey(activeProvider, '');
-            }}
+            onClick={() => handleKeyChange('')}
+            title="Empties the key field. Press Save to remove the stored key."
             className="text-xs text-slate-500 hover:text-rose-600 font-medium px-2 py-1 transition-colors cursor-pointer"
           >
             Clear Active Key
