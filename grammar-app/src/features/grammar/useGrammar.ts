@@ -60,7 +60,11 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
     const uid = grammar.uid;
     setLoadingExamples(uid, true);
     try {
-      const newExamples = await generateGrammarExamples({ grammar, level: activeLevel });
+      const newExamples = await generateGrammarExamples({
+        grammar,
+        level: activeLevel,
+        previous: generatedExamples[uid] ?? [],
+      });
       if (newExamples && newExamples.length > 0) {
         addExamples(uid, newExamples);
       }
@@ -75,7 +79,7 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
     const uid = grammar.uid;
     setLoadingExplanations(uid, true);
     try {
-      const text = await generateGrammarNuance({ grammar, level: activeLevel });
+      const text = await generateGrammarNuance({ grammar, level: activeLevel, lessonItems: currentContent });
       if (text) {
         setExplanation(uid, text);
       }
