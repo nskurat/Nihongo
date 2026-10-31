@@ -6,7 +6,7 @@ it is loaded into every session. Details belong in `docs/refactor/`, not here.
 ## What this is
 
 A static, client-only study portal for JLPT N5–N1: grammar (all levels),
-vocabulary and kanji reference (N5–N3, N1) plus AI-generated reading practice (N5–N3). React 19 + Vite +
+vocabulary and kanji reference (N5–N3, N1) plus AI-generated reading practice (any level with grammar + vocab). React 19 + Vite +
 Tailwind v4 + zustand + react-router. No backend. Deployed to GitHub Pages at
 `https://nskurat.github.io/Nihongo/` by `.github/workflows/deploy.yml` on push to `main`.
 

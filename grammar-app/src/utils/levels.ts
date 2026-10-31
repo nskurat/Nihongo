@@ -23,12 +23,13 @@ const ALL_SECTIONS: SectionType[] = ['grammar', 'vocab', 'kanji', 'reading'];
 // read here; the files themselves stay lazy chunks loaded by StaticContentSource.
 const CONTENT_FILES = new Set(Object.keys(import.meta.glob('../data/*/*.json')));
 
-// Reading Practice's prompts and story library are tuned for N5-N3 only.
-const READING_LEVELS: LevelType[] = ['N5', 'N4', 'N3'];
+const hasFile = (level: LevelType, section: SectionType) =>
+  CONTENT_FILES.has(`../data/${level.toLowerCase()}/${section}.json`);
 
+// Reading Practice builds its prompts from a level's grammar and vocab, so it needs both.
 function levelOffers(level: LevelType, section: SectionType): boolean {
-  if (section === 'reading') return READING_LEVELS.includes(level);
-  return CONTENT_FILES.has(`../data/${level.toLowerCase()}/${section}.json`);
+  if (section === 'reading') return hasFile(level, 'grammar') && hasFile(level, 'vocab');
+  return hasFile(level, section);
 }
 
 export const LEVEL_SECTIONS = Object.fromEntries(

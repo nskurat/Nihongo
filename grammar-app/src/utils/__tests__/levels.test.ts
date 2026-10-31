@@ -39,9 +39,9 @@ describe('N2 and N1', () => {
     expect(isSectionAvailable('N1', 'kanji')).toBe(true);
   });
 
-  it('keeps Reading Practice to N5-N3', () => {
+  it('offers Reading Practice wherever grammar and vocab both exist', () => {
+    expect(isSectionAvailable('N2', 'reading')).toBe(isSectionAvailable('N2', 'vocab'));
     expect(isSectionAvailable('N3', 'reading')).toBe(true);
-    expect(isSectionAvailable('N2', 'reading')).toBe(false);
-    expect(isSectionAvailable('N1', 'reading')).toBe(false);
+    expect(isSectionAvailable('N1', 'reading')).toBe(true);
   });
 });
