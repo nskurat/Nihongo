@@ -41,6 +41,8 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
   const location = useLocation();
   const navigate = useNavigate();
   const lastLesson = useAppStore((s) => s.lastLesson);
+  const rankLevel = lastLesson.level;
+  const prefetch = () => prefetchSearchIndex(rankLevel);
   const items = useSearchUiStore((s) => s.items);
   const activeId = useSearchUiStore((s) => s.activeId);
   const move = useSearchUiStore((s) => s.move);
@@ -110,7 +112,7 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
       if (!input) return;
       input.focus();
       input.select();
-      prefetchSearchIndex();
+      prefetchSearchIndex(rankLevel);
       if (!isDesktop && !onSearch && !searchNav.entering) {
         searchNav.entering = true;
         const entry: SearchEntryState = { searchEntry: true };
@@ -119,7 +121,7 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [inputRef, isDesktop, onSearch, navigate]);
+  }, [inputRef, isDesktop, onSearch, navigate, rankLevel]);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const next = e.target.value;
@@ -227,7 +229,7 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
           value={value}
           onChange={onChange}
           onKeyDown={onKeyDown}
-          onFocus={prefetchSearchIndex}
+          onFocus={prefetch}
           onCompositionStart={() => {
             composing.current = true;
           }}
@@ -274,11 +276,13 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
 
 /** Mobile title-row icon that opens search (03-ux §1.2). */
 export function MobileSearchButton({ onOpen }: { onOpen: () => void }) {
+  const rankLevel = useAppStore((s) => s.lastLesson.level);
+  const prefetch = () => prefetchSearchIndex(rankLevel);
   return (
     <button
       type="button"
       onClick={onOpen}
-      onPointerEnter={prefetchSearchIndex}
+      onPointerEnter={prefetch}
       aria-label={S.fieldLabel}
       className="md:hidden w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-white/10 border border-white/20 text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
     >

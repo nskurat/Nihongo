@@ -50,7 +50,7 @@ export default function Header() {
   const openSearch = () => {
     // Focus synchronously inside the tap so iOS opens the keyboard, then route.
     searchInputRef.current?.focus();
-    prefetchSearchIndex();
+    prefetchSearchIndex(lastLesson.level);
     if (searchNav.entering) return;
     searchNav.entering = true;
     const entry: SearchEntryState = { searchEntry: true };

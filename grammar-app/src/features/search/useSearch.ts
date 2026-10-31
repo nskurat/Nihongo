@@ -1,5 +1,12 @@
-import { startTransition, useCallback, useEffect, useMemo, useState } from 'react';
-import type { CategoryChip, Level, SearchHit, SearchOptions, SearchResponse } from '../../services/search/types';
+import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type {
+  CategoryChip,
+  IndexStatus,
+  Level,
+  SearchHit,
+  SearchOptions,
+  SearchResponse,
+} from '../../services/search/types';
 import { searchClient } from './searchClient';
 import type { SearchUrlState } from './searchUrl';
 
@@ -21,6 +28,14 @@ interface Request {
   q: string;
   opts: SearchOptions;
   retry: number;
+}
+
+/**
+ * A search answered while later index shards were still loading (`status: 'partial'`) is
+ * re-run once the index reports 'ready', so early partial results don't linger. Pure.
+ */
+export function shouldRequeryOnReady(indexStatus: IndexStatus, lastResponse: SearchResponse | undefined): boolean {
+  return indexStatus === 'ready' && lastResponse?.status === 'partial';
 }
 
 /** Builds the service request for a URL state. Pure; exported for tests. */
@@ -80,7 +95,12 @@ function loadCategories(): Promise<CategoryChip[]> {
  */
 export function useSearch(state: SearchUrlState, rankLevel: Level): UseSearchResult {
   const [retryToken, setRetryToken] = useState(0);
-  const request = useMemo(() => buildRequest(state, rankLevel, retryToken), [state, rankLevel, retryToken]);
+  // Bumped when the index finishes loading after a partial answer: re-runs the same query.
+  const [indexEpoch, setIndexEpoch] = useState(0);
+  const request = useMemo(
+    () => buildRequest(state, rankLevel, retryToken + indexEpoch * 1000),
+    [state, rankLevel, retryToken, indexEpoch]
+  );
   const key = requestKey(request);
 
   const [settled, setSettled] = useState<Settled | null>(null);
@@ -119,6 +139,21 @@ export function useSearch(state: SearchUrlState, rankLevel: Level): UseSearchRes
     // `key` encodes the request; `request` is a fresh object for every URL render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
+
+  // Re-run a partial answer once the index is fully loaded.
+  const lastResponse = useRef<SearchResponse | undefined>(undefined);
+  useEffect(() => {
+    lastResponse.current = settled?.response;
+  }, [settled]);
+  useEffect(() => {
+    try {
+      return searchClient.subscribe((status) => {
+        if (shouldRequeryOnReady(status, lastResponse.current)) setIndexEpoch((n) => n + 1);
+      });
+    } catch {
+      return undefined; // no source registered (unit tests)
+    }
+  }, []);
 
   // Stale / slow indicators.
   const loading = request.mode !== 'empty' && settled?.key !== key;

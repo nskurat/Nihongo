@@ -44,12 +44,19 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   cannot be used to prune; the v2 `pos` migration would allow it.
 
 - Search fix round 2, deferred (P1-only ship):
-  - UI should re-run a query whose response has `status: 'partial'` when `searchRepository.subscribe` reports 'ready' (contract addition is in place; without it a partial answer stays until the next keystroke).
   - First search unthrottled desktop is ~0.94 s p75 (budget 0.5 s); Fast 4G + CPU×4 is 1.20 s (ものの) / 1.67 s (食べる) p75. Remaining cost is cold worker indexing; a precomputed key format or lazy per-level indexing would cut it.
-  - Teacher review F13 (radical filter), F14 UI step join (` → ` instead of `・`), F16 content gaps (日本語, N5 greetings), F12 respelling 斯う/然る — not started.
+  - Teacher review F13 (radical filter), F16 content gaps (日本語, N5 greetings), F12 respelling 斯う/然る — not started.
   - QA BUG-13 "Did you mean kan'i?" (`didYouMean`) and `CategoryChip.description` — not added.
   - QA BUG-12 JMdict POS markers `(n) (a)` inside N1/N2 vocab meanings — content cleanup.
   - `が`/`けど` in the "although" chip list are ranked by curated core keys in `aliases.ts`; the core table needs teacher sign-off.
+- Search UI, deferred (P1-only ship):
+  - QA BUG-10: warm keystroke → results p95 ~160–200 ms at CPU×4 (target 100 ms); remaining cost is layout/paint of the result list and the page re-render per URL change.
+  - QA BUG-17: lemma hits read "わかります → わかる · polite" rather than "→ 分かる (dictionary form)" — depends on the engine's `deinflection`/`via` payload.
+  - Mobile: the filter chip row is visually first but later in tab order.
+  - Teacher F14: duplicate rows such as 行く/ゆく are not collapsed into one result.
+  - Category view shows no description (needs `CategoryChip.description` in the contract).
+  - `sannen` (and similar n+vowel romaji) returns nothing when the word isn't in the data; no "did you mean" fallback.
+- Not yet re-run after the fix round: QA's full browser regression (T-01…T-47, a11y, perf at Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden queries were re-checked (2026-10-31).
 
 ### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
 
