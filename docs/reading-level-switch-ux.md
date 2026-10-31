@@ -2,6 +2,8 @@
 
 UX spec with PM scope for what Reading Practice shows when the user changes the header level
 (N5…N1). Status: MVP implemented on `claude/reading-level-ux`, with the "later" items still open.
+Since then, answers are kept **per story** rather than per level, and the library view and filter
+are in the URL. See `docs/reading-library-nav-ux.md`.
 
 ## 1. Problem
 

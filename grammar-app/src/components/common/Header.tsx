@@ -86,7 +86,12 @@ export default function Header() {
     const newLesson = clampLessonForLevel(newLevel, parseInt(activeLesson, 10));
     const newSection = isSectionAvailable(newLevel, activeSection) ? activeSection : 'grammar';
 
-    navigate(`/${newLevel.toLowerCase()}/${newSection}/${newLesson}`);
+    // Reading's Story Library stays open across a level switch; its filter is dropped so it
+    // follows the new level.
+    const keepLibrary =
+      newSection === 'reading' && new URLSearchParams(location.search).get('view') === 'library';
+
+    navigate(`/${newLevel.toLowerCase()}/${newSection}/${newLesson}${keepLibrary ? '?view=library' : ''}`);
   };
 
   const handleSectionChange = (newSection: SectionType) => {

@@ -1,13 +1,20 @@
 import {
   ActiveReadings,
   ReadingHistoryEntry,
+  ReadingProgress,
   SaveHistoryParams,
 } from '../../types/ai';
 import { fromLegacyLesson } from '../../utils/levels';
-import { normalizeActiveReadings } from './readingSession';
+import { migrateLegacyAnswers, normalizeActiveReadings, normalizeProgress } from './readingSession';
 
 export const ACTIVE_STORAGE_KEY = 'nihongo_reading_active';
 export const HISTORY_STORAGE_KEY = 'nihongo_reading_history';
+export const PROGRESS_STORAGE_KEY = 'nihongo_reading_progress';
+
+/** A new, unique story id (also used as the saved-library entry id). */
+export function createStoryId(): string {
+  return `reading_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+}
 
 export interface StorageLike {
   getItem(key: string): string | null;
@@ -19,9 +26,12 @@ export interface StorageLike {
  * Base Abstract Adapter (Contract Interface)
  */
 export abstract class BaseReadingStorageAdapter {
-  /** Each level's current Studio passage (and its answers), keyed by level. */
+  /** Each level's current Studio passage, keyed by level. */
   abstract getActiveReadings(): Promise<ActiveReadings>;
   abstract setActiveReadings(readings: ActiveReadings): Promise<void>;
+  /** Quiz answers per story id. */
+  abstract getProgress(): Promise<ReadingProgress>;
+  abstract setProgress(progress: ReadingProgress): Promise<void>;
   abstract getHistory(): Promise<ReadingHistoryEntry[]>;
   abstract saveToHistory(params: SaveHistoryParams): Promise<ReadingHistoryEntry[]>;
   abstract deleteFromHistory(id: string): Promise<ReadingHistoryEntry[]>;
@@ -88,6 +98,33 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
+  async getProgress(): Promise<ReadingProgress> {
+    try {
+      const raw = this._getItem(PROGRESS_STORAGE_KEY);
+      const progress = raw ? normalizeProgress(JSON.parse(raw)) : {};
+      // Older builds kept answers per level inside the active-reading map. Move them onto
+      // that passage's story id; they drop out of that map on its next write.
+      const rawActive = this._getItem(ACTIVE_STORAGE_KEY);
+      if (!rawActive) return progress;
+      return migrateLegacyAnswers(JSON.parse(rawActive), progress, await this.getHistory());
+    } catch (e) {
+      console.error('LocalStorageAdapter: failed to get progress', e);
+      return {};
+    }
+  }
+
+  async setProgress(progress: ReadingProgress): Promise<void> {
+    try {
+      if (Object.keys(progress).length > 0) {
+        this._setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+      } else {
+        this._removeItem(PROGRESS_STORAGE_KEY);
+      }
+    } catch (e) {
+      console.error('LocalStorageAdapter: failed to set progress', e);
+    }
+  }
+
   async getHistory(): Promise<ReadingHistoryEntry[]> {
     try {
       const raw = this._getItem(HISTORY_STORAGE_KEY);
@@ -104,6 +141,7 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
 
   async saveToHistory({
     reading,
+    id = createStoryId(),
     level = 'N4',
     lesson = null,
     topic = '',
@@ -114,7 +152,7 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     try {
       const current = await this.getHistory();
       const entry: ReadingHistoryEntry = {
-        id: `reading_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+        id,
         timestamp: new Date().toISOString(),
         level,
         lesson,
@@ -183,6 +221,8 @@ export function setReadingStorageAdapter(adapter: BaseReadingStorageAdapter): vo
 export const readingRepository = {
   getActiveReadings: () => currentAdapter.getActiveReadings(),
   setActiveReadings: (readings: ActiveReadings) => currentAdapter.setActiveReadings(readings),
+  getProgress: () => currentAdapter.getProgress(),
+  setProgress: (progress: ReadingProgress) => currentAdapter.setProgress(progress),
   getHistory: () => currentAdapter.getHistory(),
   saveToHistory: (params: SaveHistoryParams) => currentAdapter.saveToHistory(params),
   deleteFromHistory: (id: string) => currentAdapter.deleteFromHistory(id),

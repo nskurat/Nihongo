@@ -71,21 +71,32 @@ export interface ReadingHistoryEntry {
   data: ReadingPracticeData;
 }
 
-/** A level's current Reading Studio passage, with the answers given so far. */
+/** A level's current Reading Studio passage. Its answers live in `ReadingProgress`. */
 export interface ActiveReading {
+  /**
+   * The story this passage is: its saved-library entry id (every generated
+   * passage is saved there under the id it was given). Keys `ReadingProgress`.
+   */
+  storyId: string;
   level: LevelType;
   lesson: number | null;
   topic: string;
   data: ReadingPracticeData;
-  /** questionId -> chosen option index. Answers are final once given. */
-  answers: Record<number, number>;
 }
 
 /** Each level keeps its own current passage; switching level never relabels one. */
 export type ActiveReadings = Partial<Record<LevelType, ActiveReading>>;
 
+/** questionId -> chosen option index. Answers are final once given. */
+export type StoryAnswers = Record<number, number>;
+
+/** Answers per story (keyed by story id), so reopening a story restores where you left off. */
+export type ReadingProgress = Record<string, StoryAnswers>;
+
 export interface SaveHistoryParams {
   reading: ReadingPracticeData;
+  /** Id for the new entry; pass the id the passage is already open under. */
+  id?: string;
   level?: LevelType;
   lesson?: number | null;
   topic?: string;
