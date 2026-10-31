@@ -8,7 +8,10 @@ export const STOPWORDS = new Set(
   (
     'a an the of to in on at for by with and or is are be as it its one s sb sth someone something etc eg e g ie i ' +
     "one's oneself"
-  ).split(' ')
+  )
+    .split(' ')
+    // Single letters are placeholders (N, V, A) or noise, never a search word.
+    .concat('abcdefghijklmnopqrstuvwxyz'.split(''))
 );
 
 const IRREGULAR: Record<string, string> = {

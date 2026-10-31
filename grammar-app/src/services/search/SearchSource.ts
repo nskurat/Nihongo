@@ -1,4 +1,4 @@
-import type { CategoryChip, SearchHit, SearchOptions, SearchResponse } from './types';
+import type { CategoryChip, IndexStatus, Level, SearchHit, SearchOptions, SearchResponse } from './types';
 
 /**
  * Global search backend (docs/search/04-data.md §5). Same swap pattern as
@@ -13,8 +13,19 @@ export abstract class BaseSearchSource {
   abstract listByTag(tag: string, opts?: Omit<SearchOptions, 'tag'>): Promise<SearchHit[]>;
   /** Function categories for the empty-state browse panel. */
   abstract listCategories(): Promise<CategoryChip[]>;
-  /** Start loading the index (on search-field focus). Rejects on load failure. */
-  abstract warmup(): Promise<void>;
+  /**
+   * Start loading the index (on search-field focus). Rejects on load failure.
+   * `rankLevel` (optional) loads that level's vocab right after grammar.
+   */
+  abstract warmup(rankLevel?: Level): Promise<void>;
+  /**
+   * Listen for index load state changes (additive). Returns an unsubscribe function.
+   * Sources that load synchronously never call the listener.
+   */
+  subscribe(listener: (status: IndexStatus) => void): () => void {
+    void listener;
+    return () => undefined;
+  }
 }
 
 let source: BaseSearchSource | null = null;
@@ -32,5 +43,6 @@ export const searchRepository = {
   search: (query: string, opts: SearchOptions) => current().search(query, opts),
   listByTag: (tag: string, opts?: Omit<SearchOptions, 'tag'>) => current().listByTag(tag, opts),
   listCategories: () => current().listCategories(),
-  warmup: () => current().warmup(),
+  warmup: (rankLevel?: Level) => current().warmup(rankLevel),
+  subscribe: (listener: (status: IndexStatus) => void) => current().subscribe(listener),
 };

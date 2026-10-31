@@ -61,9 +61,16 @@ export function romajiToKana(input: string): string {
       continue;
     }
     if (c === 'n') {
-      if (n === "'" || n === 'n') {
+      if (n === "'") {
         out += 'ん';
         i += 2;
+        continue;
+      }
+      if (n === 'n') {
+        // Hepburn double n before a vowel is ん + な-row (konnichiwa, minna, onna);
+        // otherwise (end, consonant, IME "nnn") the pair is one ん.
+        out += 'ん';
+        i += VOWEL_OR_Y.test(s[i + 2] ?? '') ? 1 : 2;
         continue;
       }
       if (n === undefined || !VOWEL_OR_Y.test(n)) {

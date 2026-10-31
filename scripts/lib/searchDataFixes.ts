@@ -7,9 +7,12 @@ type Json = Record<string, unknown>;
 export type LessonFile = Record<string, Json[]>;
 
 /** §7 #1: vocab readings that are wrong for the word (uid-keyed, guarded by the old value). */
-export const VOCAB_READING_FIXES: { uid: string; word: string; from: string; to: string }[] = [
+export const VOCAB_READING_FIXES: { uid: string; word: string; from: string; to: string; romaji?: string }[] = [
   // Waller's N3 list spells the colloquial pronunciation; the dictionary reading is いう.
   { uid: 'n3-vocab-23-124', word: '言う', from: 'ゆう', to: 'いう' },
+  // Teacher review F9: the readings drop part of the phrase (が, します).
+  { uid: 'n4-vocab-9-2', word: '気が付きます', from: 'きつきます', to: 'きがつきます', romaji: 'kigatsukimasu' },
+  { uid: 'n4-vocab-16-6', word: '親切にします', from: 'しんせつに', to: 'しんせつにします', romaji: 'shinsetsu ni shimasu' },
 ];
 
 /**
@@ -73,6 +76,7 @@ export function applyVocabFixes(file: LessonFile, report: FixReport): void {
     if (!row) continue;
     if (row.word === fix.word && row.reading === fix.from) {
       row.reading = fix.to;
+      if (fix.romaji && 'romaji' in row) row.romaji = fix.romaji;
       report.changed.push(`${fix.uid} ${fix.word} ${fix.from} → ${fix.to}`);
     } else if (row.reading !== fix.to) {
       report.skipped.push(`${fix.uid}: expected ${fix.word}【${fix.from}】, found ${String(row.word)}【${String(row.reading)}】`);

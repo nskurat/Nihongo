@@ -6,7 +6,12 @@
  * applies to the raw query (terminal forms such as polite or volitional).
  */
 
-export type WordType = 'v1' | 'v5' | 'vk' | 'vs' | 'adj-i' | 'te' | 'noun';
+/**
+ * v1 ichidan, v5 godan, vk 来る, vs する, adj-i い-adjective, noun (also な-adjectives),
+ * te a te-form, aux a te-form left by stripping an auxiliary (its て形 step is not shown),
+ * plain any dictionary form (after なら).
+ */
+export type WordType = 'v1' | 'v5' | 'vk' | 'vs' | 'adj-i' | 'te' | 'aux' | 'noun' | 'plain';
 
 export interface Label {
   en: string;
@@ -37,10 +42,10 @@ export const L = {
   causative: { en: 'causative', ja: '使役' },
   causPass: { en: 'causative-passive', ja: '使役受身' },
   volitional: { en: 'volitional', ja: '意向形' },
-  ba: { en: 'conditional (ば)', ja: '仮定・ば' },
-  tara: { en: 'conditional (たら)', ja: '仮定・たら' },
+  ba: { en: 'conditional (ば)', ja: '仮定形（ば）' },
+  tara: { en: 'conditional (たら)', ja: '条件（たら）' },
   imperative: { en: 'imperative', ja: '命令形' },
-  zu: { en: 'without (ずに)', ja: 'ず形' },
+  zu: { en: 'without (ず/ずに)', ja: '否定（ず）' },
   sou: { en: 'looks like (そう)', ja: '様態' },
   sugiru: { en: 'too much (すぎる)', ja: '過度' },
   nagara: { en: 'while (ながら)', ja: '同時' },
@@ -49,6 +54,16 @@ export const L = {
   tearu: { en: 'resultative (てある)', ja: '結果の状態' },
   teshimau: { en: 'completion (てしまう)', ja: '完了' },
   suru: { en: 'する-verb', ja: 'する動詞' },
+  raNuki: { en: 'potential (colloquial ら抜き)', ja: '可能（ら抜き）' },
+  copula: { en: 'copula (です/だ)', ja: '断定' },
+  copulaPast: { en: 'copula, past', ja: '断定・過去' },
+  copulaNeg: { en: 'copula, negative', ja: '断定・否定' },
+  chau: { en: 'completion, colloquial (ちゃう)', ja: '完了（ちゃう）' },
+  teoku: { en: 'preparation (ておく)', ja: '準備（ておく）' },
+  adverb: { en: 'adverbial (く)', ja: '連用形' },
+  naru: { en: 'become (くなる)', ja: '変化' },
+  nara: { en: 'if (なら)', ja: '仮定（なら）' },
+  kudasai: { en: 'request (てください)', ja: '依頼' },
 } satisfies Record<string, Label>;
 
 const rules: DeinflectRule[] = [];
@@ -98,7 +113,7 @@ const TA_GODAN: [string, string[]][] = [
 ];
 const PAST_FORMS: [string, string, Label, WordType[]][] = [
   ['た', 'だ', L.past, []],
-  ['て', 'で', L.te, ['te']],
+  ['て', 'で', L.te, ['te', 'aux']],
   ['たら', 'だら', L.tara, []],
 ];
 for (const [plain, voiced, label, inT] of PAST_FORMS) {
@@ -118,12 +133,22 @@ for (const [plain, voiced, label, inT] of PAST_FORMS) {
   r(`いっ${plain}`, 'いく', label, inT, 'v5');
 }
 
-// ---- te-form auxiliaries (strip; the te-form is deinflected next)
-r('ている', 'て', L.teiru, ['v1'], 'te');
-r('でいる', 'で', L.teiru, ['v1'], 'te');
-r('てある', 'て', L.tearu, ['v5'], 'te');
-r('てしまう', 'て', L.teshimau, ['v5'], 'te');
-r('でしまう', 'で', L.teshimau, ['v5'], 'te');
+// ---- te-form auxiliaries (strip; the te-form is deinflected next without its own step)
+r('ている', 'て', L.teiru, ['v1'], 'aux');
+r('でいる', 'で', L.teiru, ['v1'], 'aux');
+r('てる', 'て', L.teiru, ['v1'], 'aux');
+r('でる', 'で', L.teiru, ['v1'], 'aux');
+r('てある', 'て', L.tearu, ['v5'], 'aux');
+r('てしまう', 'て', L.teshimau, ['v5'], 'aux');
+r('でしまう', 'で', L.teshimau, ['v5'], 'aux');
+r('ちゃう', 'て', L.chau, ['v5'], 'aux');
+r('じゃう', 'で', L.chau, ['v5'], 'aux');
+r('ておく', 'て', L.teoku, ['v5'], 'aux');
+r('でおく', 'で', L.teoku, ['v5'], 'aux');
+r('とく', 'て', L.teoku, ['v5'], 'aux');
+r('どく', 'で', L.teoku, ['v5'], 'aux');
+r('てください', 'て', L.kudasai, [], 'aux');
+r('でください', 'で', L.kudasai, [], 'aux');
 
 // ---- たい (an い-adjective form)
 r('たい', 'る', L.tai, ['adj-i'], 'v1');
@@ -133,6 +158,7 @@ r('きたい', 'くる', L.tai, ['adj-i'], 'vk');
 
 // ---- potential / passive / causative / causative-passive (all ichidan-shaped: chain on v1)
 r('られる', 'る', L.potPass, ['v1'], 'v1');
+r('れる', 'る', L.raNuki, ['v1'], 'v1');
 r('させる', 'る', L.causative, ['v1'], 'v1');
 r('させられる', 'る', L.causPass, ['v1'], 'v1');
 for (const [u, , a, e] of GODAN) {
@@ -195,7 +221,7 @@ for (const [u, i] of GODAN) {
 // ---- い-adjectives
 r('かった', 'い', L.past, [], 'adj-i');
 r('くない', 'い', L.negative, ['adj-i'], 'adj-i');
-r('くて', 'い', L.te, ['te'], 'adj-i');
+r('くて', 'い', L.te, ['te', 'aux'], 'adj-i');
 r('ければ', 'い', L.ba, [], 'adj-i');
 r('かったら', 'い', L.tara, [], 'adj-i');
 r('さ', 'い', L.sa, [], 'adj-i');
@@ -204,10 +230,28 @@ r('すぎる', 'い', L.sugiru, ['v1'], 'adj-i');
 // いい inflects on よい.
 r('よかった', 'いい', L.past, [], 'adj-i');
 r('よくない', 'いい', L.negative, ['adj-i'], 'adj-i');
-r('よくて', 'いい', L.te, ['te'], 'adj-i');
+r('よくて', 'いい', L.te, ['te', 'aux'], 'adj-i');
 r('よければ', 'いい', L.ba, [], 'adj-i');
 
-// ---- する-verb → its noun (勉強する → 勉強)
+// ---- adverbial く and くなる
+r('く', 'い', L.adverb, [], 'adj-i');
+r('くなる', 'い', L.naru, ['v5'], 'adj-i');
+
+// ---- copula after nouns / な-adjectives (静かだった → 静か), です after い-adjectives
+const COPULA: [string, Label][] = [
+  ['です', L.copula], ['だ', L.copula], ['でした', L.copulaPast], ['だった', L.copulaPast],
+  ['じゃない', L.copulaNeg], ['ではない', L.copulaNeg], ['じゃなかった', L.copulaNeg],
+  ['じゃありません', L.copulaNeg], ['ではありません', L.copulaNeg], ['でしょう', L.copula],
+];
+for (const [from, label] of COPULA) r(from, '', label, [], 'noun');
+r('いです', 'い', L.copula, [], 'adj-i');
+r('かったです', 'い', L.past, [], 'adj-i');
+r('くないです', 'い', L.negative, [], 'adj-i');
+
+// ---- なら after any dictionary form (食べるなら)
+r('なら', '', L.nara, [], 'plain');
+
+// ---- する-verb → its noun (勉強する → 勉強); the engine only keeps all-kanji/katakana stems
 r('する', '', L.suru, ['vs'], 'noun');
 
 export const DEINFLECT_RULES: readonly DeinflectRule[] = rules;

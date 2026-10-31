@@ -60,21 +60,26 @@ for (const [chars, v] of ROWS) for (const c of chars) VOWEL_OF[c] = v;
 
 /**
  * Long-vowel fold on hiragana (§3.2): after an o-row kana drop う/お/ー, after e-row
- * い/え/ー, after u-row う/ー, after a-row あ/ー, after i-row い/ー. So `きょしつ`,
+ * い/え/ー, after u-row う/ー, after a-row あ/ー, after i-row い/ー (a word-final い/あ is
+ * kept, so いい ≠ い and おおきい ≠ おき). So `きょしつ`,
  * `きょうしつ` and `きょーしつ` all fold to `きょしつ`.
  */
 export function foldLong(h: string): string {
   let out = '';
   let prevVowel: string | undefined;
-  for (const ch of h) {
+  const chars = [...h];
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
     const v = prevVowel;
+    // A word-final い/あ is an ending (いい, 大きい), not a long vowel: keep it.
+    const final = i === chars.length - 1;
     if (v) {
       if (ch === 'ー') continue;
       if (v === 'o' && (ch === 'う' || ch === 'お')) continue;
       if (v === 'e' && (ch === 'い' || ch === 'え')) continue;
       if (v === 'u' && ch === 'う') continue;
-      if (v === 'a' && ch === 'あ') continue;
-      if (v === 'i' && ch === 'い') continue;
+      if (v === 'a' && ch === 'あ' && !final) continue;
+      if (v === 'i' && ch === 'い' && !final) continue;
     }
     out += ch;
     prevVowel = VOWEL_OF[ch];

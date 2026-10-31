@@ -19,14 +19,13 @@ export const TIER = {
 const LEVEL_INDEX: Record<Level, number> = { N5: 0, N4: 1, N3: 2, N2: 3, N1: 4 };
 
 /**
- * Tie-break by level: the learner's level first, then lower levels nearest first (review),
- * then higher levels nearest first.
+ * Tie-break by level (orchestrator decision, 02-requirements §5): more basic first — N5
+ * before N4 … before N1 — whatever the learner's level, so a rare word at the current
+ * level never buries a core N5/N4 word. `current` is kept for API stability.
  */
-export function levelRank(level: Level, current: Level): number {
-  const a = LEVEL_INDEX[current];
-  const b = LEVEL_INDEX[level];
-  if (a === b) return 0;
-  return b < a ? a - b : 10 + (b - a);
+export function levelRank(level: Level, current?: Level): number {
+  void current;
+  return LEVEL_INDEX[level];
 }
 
 /** N5 → N1. */
@@ -39,6 +38,8 @@ export interface Rankable {
   /** Order inside a tier before the level tie-break (deinflection depth, phrase vs AND). */
   sub: number;
   level: Level;
+  /** Headword length: shorter (more basic) words first among equals. 0 to skip. */
+  len: number;
   lesson: number;
   pos: number;
 }
@@ -48,6 +49,7 @@ export function compareHits(current: Level) {
     a.tier - b.tier ||
     a.sub - b.sub ||
     levelRank(a.level, current) - levelRank(b.level, current) ||
+    a.len - b.len ||
     a.lesson - b.lesson ||
     a.pos - b.pos;
 }
@@ -69,4 +71,30 @@ export function groupOrderFor(script: Script, opts: { singleKanji: boolean; roma
     default:
       return ['vocab', 'grammar', 'kanji'];
   }
+}
+
+export interface GroupBest {
+  tier: number;
+  sub: number;
+}
+
+/**
+ * Orders groups by their best hit (teacher review F4, QA BUG-03): the group with the
+ * strongest match comes first. Weak matches (tier ≥ 7: hints, structure, patterns inside
+ * the query) are not passed in. Ties keep the script default, except that a Vocab exact
+ * hit on a verb/adjective beats a Grammar exact hit (わかります, いきます).
+ */
+export function orderGroups(defaults: DocType[], best: Partial<Record<DocType, GroupBest>>, vocabWinsTie: boolean): DocType[] {
+  const score = (t: DocType) => best[t] ?? { tier: Infinity, sub: 0 };
+  return [...defaults].sort((a, b) => {
+    const x = score(a);
+    const y = score(b);
+    if (x.tier !== y.tier) return x.tier - y.tier;
+    if (x.tier !== Infinity && x.sub !== y.sub) return x.sub - y.sub;
+    if (vocabWinsTie && x.tier !== Infinity) {
+      if (a === 'vocab' && b === 'grammar') return -1;
+      if (a === 'grammar' && b === 'vocab') return 1;
+    }
+    return defaults.indexOf(a) - defaults.indexOf(b);
+  });
 }

@@ -221,9 +221,15 @@ the UX reason line. Prototype results: `食べられない→食べる/食べま
 | 7 | `collocation`, `compound`, structure | `hint` keys |
 | — | `tag` | `listByTag`: no tiers, ordered N5→N1, then lesson (T-10) |
 
-A doc keeps its best tier. Within a tier: **current level** first (from `lastLevel`), then lower levels nearest first
-(review), then higher levels nearest first. Then lesson ascending, then uid. **Single-kana guard**: a query of
-one kana runs tier 0 only (grammar surface, vocab word or reading, kanji full readings). It is capped at 40. `に` returns 22.
+A doc keeps its best tier. *(Fix round 2, orchestrator decision.)* Within a tier: **lower levels first** (N5 → N1, the
+learner's level gets no priority, so a rare current-level word never buries a core N5/N4 word), then shorter vocab headwords,
+then lesson, then position. Deinflected hits order by path length; irregular lemmas (する/来る/行く/ある/いい) go first, and a
+lemma must have a compatible word class (verb class from `pos`, the ます rule, or the dictionary form plus a godan-る exception
+list), so かえって → 帰る but never 変える. English hits use two density buckets; grammar in a matched category chip ranks
+first (its teacher-curated core points such as because → から, ので at the very top), and N5/N4 chip members are listed even
+without a meaning match. Groups are ordered by their best real hit (tier < 7); on a tie a Vocab verb/adjective beats Grammar.
+Patterns inside the query are capped at 2 grammar rows (whole kana runs, no bare morphemes). **Single-kana guard**: a query of
+one kana runs tier 0 only (grammar surface, vocab word or reading, kanji full readings). It is capped at 40.
 Duplicates are collapsed **after** ranking by `dupKey`. The best-ranked row is primary and the rest become `alsoAt`.
 
 **Two acceptance-list conflicts, now decided by the orchestrator (2026-10-31):**

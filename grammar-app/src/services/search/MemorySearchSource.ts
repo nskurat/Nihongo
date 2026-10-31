@@ -1,7 +1,7 @@
 import { BaseSearchSource } from './SearchSource';
 import { SearchEngine } from './engine/SearchEngine';
 import type { ShardFile } from './shard';
-import type { CategoryChip, SearchHit, SearchOptions, SearchResponse } from './types';
+import type { CategoryChip, Level, SearchHit, SearchOptions, SearchResponse } from './types';
 
 type ShardLoader = () => Promise<ShardFile[]>;
 
@@ -19,7 +19,8 @@ export class MemorySearchSource extends BaseSearchSource {
     this.load = Array.isArray(shards) ? () => Promise.resolve(shards) : shards;
   }
 
-  warmup(): Promise<void> {
+  warmup(rankLevel?: Level): Promise<void> {
+    void rankLevel;
     if (!this.loading) {
       this.loading = this.load()
         .then((shards) => {

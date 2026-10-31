@@ -94,9 +94,11 @@ describe('§5 acceptance list (golden queries)', () => {
       { t: '自分', level: 'N5', lesson: 4 },
       { t: '十分', level: 'N4', lesson: 7 },
     ]);
-    // 半分 (N4 L19) ranks 9th of 58 with an N5 learner, so it is checked over all ranks.
+    // 半分 (N4 L19) is in the group but 10th of 58 (N5 words come first).
     const all = await run('分', { limitPerType: Infinity });
     expectContains(all, 'vocab', [{ t: '半分', level: 'N4', lesson: 19 }]);
+    // Same top rows for an N3 learner: the current level gets no priority (orchestrator decision).
+    expectContains(await run('分', { rankLevel: 'N3' }), 'vocab', [{ t: '自分', level: 'N5', lesson: 4 }, { t: '十分', level: 'N4', lesson: 7 }]);
     expect(r.groups.grammar.some((h) => h.title === '今 -時-分です' && h.level === 'N5')).toBe(true);
   });
 
@@ -104,23 +106,29 @@ describe('§5 acceptance list (golden queries)', () => {
     for (const q of ['ぷん', 'pun']) expectContains(await run(q), 'kanji', [{ t: '分', level: 'N5', lesson: 4 }]);
   });
 
-  it('T-08 mei = めい = メイ: kanji with on メイ in level, lesson order', async () => {
+  it('T-08 mei = めい = メイ: kanji with on メイ in level, lesson order (any rank level)', async () => {
     const expected = ['明 N5 L16', '名 N5 L18', '迷 N3 L1', '命 N3 L1', '鳴 N3 L12', '謎 N3 L14', '盟 N1 L2', '銘 N1 L12'];
     for (const q of ['mei', 'めい', 'メイ']) {
-      const r = await run(q, { limitPerType: Infinity });
+      const r = await run(q, { limitPerType: Infinity, rankLevel: 'N3' });
       const exact = r.groups.kanji.filter((h) => h.tier === 0);
       expect(titles(exact), q).toEqual(expected);
     }
   });
 
-  it('T-09 although: grammar = exactly the 8 points', async () => {
+  it('T-09 although (amended): the 8 meaning hits, plus the Concession / Contrast chip members after them', async () => {
+    // Fix round 2: a chip match also lists that chip's grammar, so the group is no longer
+    // exactly 8. The 8 points whose meaning says "although" are all there, as english hits.
     const r = await run('although', { limitPerType: Infinity });
-    expect(titles(r.groups.grammar).sort()).toEqual(
+    const meaningHits = r.groups.grammar.filter((h) => h.matchKind === 'english');
+    expect(titles(meaningHits).sort()).toEqual(
       [
         'けど／けれども N5 L8', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
         '〜とはいえ N1 L1', '〜ものを N1 L1', '〜ところを N1 L32',
       ].sort()
     );
+    expect(r.groupOrder[0]).toBe('grammar');
+    // けど and のに are the teacher's core answers for "although".
+    expect(r.groups.grammar.slice(0, 2).map((h) => h.title)).toEqual(['けど／けれども', 'V／い-adj／な-adj plain form／N（だ→な）＋ のに、〜']);
   });
 
   it('T-10 ?tag=comparison: exactly 17, N5 → N1', async () => {
@@ -176,13 +184,14 @@ describe('§5 acceptance list (golden queries)', () => {
     const r = await run('contrast');
     const chip = r.categories.find((c) => c.label === 'Concession / Contrast');
     expect(chip?.count).toBe(49);
-    expectContains(r, 'grammar', [
+    expectContains(r, 'grammar', [{ t: '〜にひきかえ', level: 'N1', lesson: 21 }]);
+    // Amended: chip members now appear in the results, so 〜反面 (meaning "On the other
+    // hand") is in the group; with 56 rows it and 〜に対して sit behind "Show all".
+    const all = await run('contrast', { limitPerType: Infinity });
+    expectContains(all, 'grammar', [
       { t: '〜に対して', level: 'N3', lesson: 8 },
-      { t: '〜にひきかえ', level: 'N1', lesson: 21 },
+      { t: '〜反面', level: 'N2', lesson: 4 },
     ]);
-    // 〜反面's meaning/summary never says "contrast"; it is reached through the chip.
-    const viaChip = await source.listByTag(chip?.id ?? '');
-    expect(present(viaChip, { t: '〜反面', level: 'N2', lesson: 4 })).toBe(true);
   });
 
   it('T-15 ものの: grammar first, 〜ものの N2 L4 #1', async () => {
@@ -295,19 +304,14 @@ describe('§5 acceptance list (golden queries)', () => {
     expectContains(await run('寒くて'), 'vocab', [{ t: '寒い', level: 'N5', lesson: 5 }]);
   });
 
-  it('T-33 かえって: 帰る and 変える deinflected, above the prefix hit かえって来ます', async () => {
+  it('T-33 (amended) かえって: 帰る first among deinflections, never 変える (its te-form is 変えて)', async () => {
     const r = await run('かえって');
-    const kaeru = r.groups.vocab.find((h) => h.title === '帰る' && h.level === 'N5');
-    const kaeru2 = r.groups.vocab.find((h) => h.title === '変える' && h.level === 'N4');
-    expect(kaeru?.matchKind).toBe('deinflected');
-    expect(kaeru2?.matchKind).toBe('deinflected');
-    // Ten real かえる homophones fill the deinflected tier, so the prefix row is 11th:
-    // it is in the group, behind "Show all" (see the report).
-    const all = await run('かえって', { limitPerType: Infinity });
-    const prefix = all.groups.vocab.findIndex((h) => h.title === 'かえって来ます' && h.level === 'N4');
-    const lastDeinflected = all.groups.vocab.map((h) => h.matchKind).lastIndexOf('deinflected');
-    expect(prefix).toBeGreaterThan(lastDeinflected);
-    expect(all.groups.vocab[prefix].matchKind).toBe('prefix');
+    const deinflected = r.groups.vocab.filter((h) => h.matchKind === 'deinflected');
+    expect(deinflected[0]).toMatchObject({ title: '帰る', level: 'N5' });
+    for (const ichidan of ['変える', '替える', '換える', '代える']) expect(r.groups.vocab.some((h) => h.title === ichidan)).toBe(false);
+    const prefix = r.groups.vocab.findIndex((h) => h.title === 'かえって来ます' && h.level === 'N4');
+    expect(prefix).toBeGreaterThan(r.groups.vocab.indexOf(deinflected[deinflected.length - 1]));
+    expect(r.groups.vocab[prefix].matchKind).toBe('prefix');
   });
 
   it('T-34 きた: 北 first, then 来る and 着る above every prefix hit; kanji 来 and 北', async () => {
@@ -336,15 +340,14 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(await run('kitte'), 'vocab', { t: '切手', level: 'N5', lesson: 11 });
   });
 
-  it('T-37 lost: 迷子, 無くなる, 迷う (via lose); kanji 迷', async () => {
-    // 19 vocab glosses contain lost/lose; with the 8-row cap only some are visible, so
-    // membership is checked over all ranks (see the report).
-    const r = await run('lost', { limitPerType: Infinity });
-    expectContains(r, 'vocab', [
+  it('T-37 lost: 迷子 and 迷う in the top 8, 無くなる in the group; kanji 迷', async () => {
+    expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [
       { t: '迷子', level: 'N3', lesson: 8 },
-      { t: '無くなる', level: 'N4', lesson: 13 },
       { t: '迷う [道に〜]', level: 'N3', lesson: 1 },
     ]);
+    // 19 glosses match; 無くなる ("to disappear, to get lost") is a sparse gloss, ranked later.
+    const r = await run('lost', { limitPerType: Infinity });
+    expectContains(r, 'vocab', [{ t: '無くなる', level: 'N4', lesson: 13 }]);
     expectContains(await run('lost'), 'kanji', [{ t: '迷', level: 'N3', lesson: 1 }]);
   });
 
@@ -355,6 +358,8 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 
   it('T-39 に: exact-only, particle grammar, vocab 二 and 荷, ≤ 40', async () => {
+    const top = await run('に', { rankLevel: 'N3' });
+    expect(titles(top.groups.grammar).slice(0, 2)).toEqual(['N(time)に V N5 L4', 'N(person)に あげます、etc. N5 L7']);
     const r = await run('に', { limitPerType: Infinity });
     expect(r.exactOnly).toBe(true);
     expect(titles(r.groups.grammar)).toContain('N(time)に V N5 L4');

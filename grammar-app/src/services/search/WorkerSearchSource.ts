@@ -1,12 +1,12 @@
 import { ContentError } from '../content/ContentSource';
 import { BaseSearchSource } from './SearchSource';
-import type { CategoryChip, SearchHit, SearchOptions, SearchResponse } from './types';
-import type { WorkerRequest, WorkerResponse, WorkerResultMap } from './worker/protocol';
+import type { CategoryChip, IndexStatus, Level, SearchHit, SearchOptions, SearchResponse } from './types';
+import type { WorkerMessage, WorkerRequest, WorkerResultMap } from './worker/protocol';
 
 /** The subset of `Worker` this source uses (a fake in tests). */
 export interface WorkerLike {
   postMessage(message: WorkerRequest): void;
-  onmessage: ((event: MessageEvent<WorkerResponse>) => void) | null;
+  onmessage: ((event: MessageEvent<WorkerMessage>) => void) | null;
   onerror: ((event: ErrorEvent) => void) | null;
   terminate(): void;
 }
@@ -33,6 +33,7 @@ export class WorkerSearchSource extends BaseSearchSource {
   private worker: WorkerLike | null = null;
   private nextId = 1;
   private pending = new Map<number, Pending>();
+  private listeners = new Set<(status: IndexStatus) => void>();
 
   constructor(private createWorker: () => WorkerLike = defaultWorker) {
     super();
@@ -43,6 +44,10 @@ export class WorkerSearchSource extends BaseSearchSource {
     const worker = this.createWorker();
     worker.onmessage = (event) => {
       const msg = event.data;
+      if ('event' in msg) {
+        for (const l of this.listeners) l(msg.status);
+        return;
+      }
       const p = this.pending.get(msg.id);
       if (!p) return;
       this.pending.delete(msg.id);
@@ -53,6 +58,7 @@ export class WorkerSearchSource extends BaseSearchSource {
       // The worker script itself failed (e.g. stale chunk after a deploy): fail every
       // call in flight and start a fresh worker next time.
       const err = new ContentError('load-failed', event.message);
+      for (const l of this.listeners) l('error');
       for (const p of this.pending.values()) p.reject(err);
       this.pending.clear();
       worker.terminate();
@@ -76,8 +82,13 @@ export class WorkerSearchSource extends BaseSearchSource {
     });
   }
 
-  warmup(): Promise<void> {
-    return this.call({ op: 'warmup' }).then(() => undefined);
+  warmup(rankLevel?: Level): Promise<void> {
+    return this.call({ op: 'warmup', ...(rankLevel ? { rankLevel } : {}) }).then(() => undefined);
+  }
+
+  subscribe(listener: (status: IndexStatus) => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
   }
 
   search(query: string, opts: SearchOptions): Promise<SearchResponse> {

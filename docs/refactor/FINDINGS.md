@@ -43,6 +43,14 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   sit behind "Show all". Without reliable `pos` the godan/ichidan te-form difference
   cannot be used to prune; the v2 `pos` migration would allow it.
 
+- Search fix round 2, deferred (P1-only ship):
+  - UI should re-run a query whose response has `status: 'partial'` when `searchRepository.subscribe` reports 'ready' (contract addition is in place; without it a partial answer stays until the next keystroke).
+  - First search unthrottled desktop is ~0.94 s p75 (budget 0.5 s); Fast 4G + CPU×4 is 1.20 s (ものの) / 1.67 s (食べる) p75. Remaining cost is cold worker indexing; a precomputed key format or lazy per-level indexing would cut it.
+  - Teacher review F13 (radical filter), F14 UI step join (` → ` instead of `・`), F16 content gaps (日本語, N5 greetings), F12 respelling 斯う/然る — not started.
+  - QA BUG-13 "Did you mean kan'i?" (`didYouMean`) and `CategoryChip.description` — not added.
+  - QA BUG-12 JMdict POS markers `(n) (a)` inside N1/N2 vocab meanings — content cleanup.
+  - `が`/`けど` in the "although" chip list are ranked by curated core keys in `aliases.ts`; the core table needs teacher sign-off.
+
 ### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
 
 Found reviewing the merged Phase 0–2 work, 2026-08-25.

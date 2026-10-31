@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { grammarKeys } from '../keys/grammarKeys';
+import { grammarKeys, grammarPatternKeys, patternInQuery, plainForms } from '../keys/grammarKeys';
+import { classForType, defaultClassOf, dictClass, masuRuleClass, posClass } from '../keys/wordClass';
 import { kanjiReadingKeys } from '../keys/kanjiReadingKeys';
 import { isMasuExpression, masuToDict, posGroup } from '../keys/masuToDict';
 import { honorificAlias, vocabVariants } from '../keys/vocabVariants';
@@ -41,7 +42,7 @@ describe('vocabVariants (teacher §3 table)', () => {
 describe('grammarKeys', () => {
   it('strips placeholders and keeps Japanese runs', () => {
     expect(grammarKeys('Vて-form + いただけませんか')).toEqual(['ていただけませんか', 'て', 'いただけませんか']);
-    expect(grammarKeys('Aは Bです')).toEqual(['はです', 'は', 'です']);
+    expect(grammarKeys('Aは Bです')).toEqual(['はです', 'は', 'です', 'はだ']);
     expect(grammarKeys('N(time)に V')).toEqual(['に']);
   });
 
@@ -56,6 +57,70 @@ describe('grammarKeys', () => {
     expect(grammarKeys('上（じょう）')).toEqual(['上']);
     expect(grammarKeys('い-adj（〜い→さ）')).toEqual(['い']);
     expect(grammarKeys(undefined)).toEqual([]);
+  });
+});
+
+describe('plain-form grammar keys (teacher F6)', () => {
+  it('adds plain variants of polite titles', () => {
+    expect(grammarKeys('Vて-form + しまいました／しまいます')).toEqual(expect.arrayContaining(['てしまう', 'しまう']));
+    expect(grammarKeys('…はずです')).toEqual(expect.arrayContaining(['はずだ', 'はず']));
+    expect(grammarKeys('Vようにします')).toEqual(expect.arrayContaining(['ようにする']));
+    expect(plainForms('なります')).toEqual(['なる']);
+    expect(plainForms('でしょう')).toEqual([]);
+    expect(plainForms('だろうでしょう')).toEqual(['だろうだろう', 'だろう']);
+  });
+});
+
+describe('grammar pattern keys', () => {
+  it('whole kana runs, no morphemes, no joins across placeholders', () => {
+    expect(grammarPatternKeys('〜ずに')).toEqual(['ずに']);
+    expect(grammarPatternKeys('N(place)へ 行きます／来ます／帰ります')).toEqual([]);
+    expect(grammarPatternKeys('S1か、S2か')).toEqual([]);
+    expect(grammarPatternKeys('Verb ない-form')).toEqual([]);
+    expect(grammarPatternKeys('〜ば〜ほど')).toEqual(['ば〜ほど', 'ほど']);
+  });
+
+  it('matches inside the query (2-kana keys only at the end, sequences in order)', () => {
+    expect(patternInQuery('ずに', '読まずに')).toBe(true);
+    expect(patternInQuery('かな', 'わけにはいかない')).toBe(false);
+    expect(patternInQuery('ば〜ほど', '食べれば食べるほど')).toBe(true);
+    expect(patternInQuery('ほど〜ない', '食べれば食べるほど')).toBe(false);
+    expect(patternInQuery('ずに', 'ずに')).toBe(false);
+  });
+});
+
+describe('word class (teacher F1)', () => {
+  it('derives class from dictionary forms', () => {
+    expect(dictClass('食べる', 'たべる')).toBe('1');
+    expect(dictClass('帰る', 'かえる')).toBe('5');
+    expect(dictClass('変える', 'かえる')).toBe('1');
+    expect(dictClass('知る', 'しる')).toBe('5');
+    expect(dictClass('分かる', 'わかる')).toBe('5');
+    expect(dictClass('勉強する', 'べんきょうする')).toBe('s');
+    expect(dictClass('来る', 'くる')).toBe('k');
+    expect(dictClass('書く', 'かく')).toBe('5');
+    expect(dictClass('高い', 'たかい')).toBe('in');
+    expect(dictClass('いつ', 'いつ')).toBe('5');
+    expect(dictClass('本', 'ほん')).toBe('n');
+  });
+
+  it('uses pos and ます rules, and maps deinflection types', () => {
+    expect(posClass('Verb (Group II)', '起きます')).toBe('1');
+    expect(posClass('Verb (Group III)', '来ます')).toBe('k');
+    expect(posClass('Interrogative', 'いつ')).toBe('n');
+    expect(posClass('verb', '行く')).toBeNull();
+    expect(masuRuleClass('godan(corpus)')).toBe('5');
+    expect(masuRuleClass('suru')).toBe('s');
+    expect(classForType('v1')).toBe('1');
+    expect(classForType('plain')).toBeNull();
+    expect(defaultClassOf(['勝つ', '負ける'], ['かつ', 'まける'])).toBe('15');
+  });
+
+  it('fixes the honorific ます lemmas (teacher F9)', () => {
+    const none = new Set<string>();
+    for (const [w, lemma] of [['いらっしゃいます', 'いらっしゃる'], ['くださいます', 'くださる'], ['おっしゃいます', 'おっしゃる'], ['なさいます', 'なさる']]) {
+      expect(masuToDict(w, w, 'verb', none)?.lemma).toBe(lemma);
+    }
   });
 });
 

@@ -17,7 +17,8 @@ export type MasuRule =
   | 'ichidan(corpus)'
   | 'godan(corpus)'
   | 'ichidan(exception)'
-  | 'godan(default)';
+  | 'godan(default)'
+  | 'godan(honorific)';
 
 export interface MasuLemma {
   lemma: string;
@@ -63,6 +64,10 @@ export function masuToDict(word: string, reading: string, pos: string | undefine
   if (!w) return null;
   const grp = posGroup(pos);
 
+  // ラ行特殊 honorifics: the ます-stem ends in い, not り (いらっしゃいます → いらっしゃる).
+  if (/(くださ|いらっしゃ|おっしゃ|なさ|ござ)い$/.test(w)) {
+    return { lemma: `${w.slice(0, -1)}る`, lemmaReading: `${r.slice(0, -1)}る`, rule: 'godan(honorific)' };
+  }
   if (/[てで]い$/.test(w)) {
     return { lemma: `${w}る`, lemmaReading: `${r}る`, rule: 'te-iru' };
   }

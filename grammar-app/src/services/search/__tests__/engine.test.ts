@@ -4,8 +4,8 @@ import type { GrammarItem, KanjiItem, TagTaxonomy, VocabItem } from '../../../ty
 import { ALIAS_CATEGORIES, aliasKey } from '../aliases';
 import { buildSearchIndex, type SearchContent } from '../indexer/buildSearchIndex';
 import { ContentHashMismatchError, SearchEngine } from '../engine/SearchEngine';
-import { compareHits, groupOrderFor, levelRank } from '../rank';
-import type { Level } from '../types';
+import { compareHits, groupOrderFor, levelRank, orderGroups } from '../rank';
+import type { DocType, Level } from '../types';
 
 const g = (uid: string, title: string, meaning: string, tags: string[] = [], structure = ''): GrammarItem => {
   const [lv, , lesson] = uid.split('-');
@@ -75,8 +75,8 @@ describe('SearchEngine (fixture)', () => {
   it('collapses duplicates into alsoAt, keeping the best-ranked row primary', () => {
     const r = engine().search('ちょうど', { rankLevel: 'N3' });
     expect(r.groups.vocab).toHaveLength(1);
-    expect(r.groups.vocab[0].uid).toBe('n3-vocab-1-1');
-    expect(r.groups.vocab[0].alsoAt).toEqual([{ uid: 'n4-vocab-21-1', level: 'N4', lesson: 21 }]);
+    expect(r.groups.vocab[0].uid).toBe('n4-vocab-21-1'); // more basic level first
+    expect(r.groups.vocab[0].alsoAt).toEqual([{ uid: 'n3-vocab-1-1', level: 'N3', lesson: 1 }]);
     expect(r.totals.vocab).toBe(1);
   });
 
@@ -158,15 +158,23 @@ describe('SearchEngine (fixture)', () => {
 });
 
 describe('rank', () => {
-  it('current level first, then lower nearest, then higher nearest', () => {
-    const order = (['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).sort((a, b) => levelRank(a, 'N3') - levelRank(b, 'N3'));
-    expect(order).toEqual(['N3', 'N4', 'N5', 'N2', 'N1']);
+  it('more basic levels first, whatever the current level', () => {
+    const order = (['N1', 'N3', 'N5', 'N2', 'N4'] as Level[]).sort((a, b) => levelRank(a, 'N3') - levelRank(b, 'N3'));
+    expect(order).toEqual(['N5', 'N4', 'N3', 'N2', 'N1']);
+  });
+
+  it('orders groups by their best hit, vocab winning a verb tie', () => {
+    const d: DocType[] = ['grammar', 'vocab', 'kanji'];
+    expect(orderGroups(d, { grammar: { tier: 0, sub: 0 }, vocab: { tier: 0, sub: 0 } }, true)).toEqual(['vocab', 'grammar', 'kanji']);
+    expect(orderGroups(d, { grammar: { tier: 0, sub: 0 }, vocab: { tier: 0, sub: 0 } }, false)).toEqual(['grammar', 'vocab', 'kanji']);
+    expect(orderGroups(d, { grammar: { tier: 4, sub: 0 }, vocab: { tier: 2, sub: 0 } }, false)).toEqual(['vocab', 'grammar', 'kanji']);
+    expect(orderGroups(d, { kanji: { tier: 0, sub: 0 } }, false)).toEqual(['kanji', 'grammar', 'vocab']);
   });
 
   it('tier, then sub, then level, lesson, position', () => {
     const cmp = compareHits('N5');
-    const a = { tier: 0, sub: 0, level: 'N1' as Level, lesson: 1, pos: 1 };
-    const b = { tier: 2, sub: 0, level: 'N5' as Level, lesson: 1, pos: 1 };
+    const a = { tier: 0, sub: 0, level: 'N1' as Level, len: 0, lesson: 1, pos: 1 };
+    const b = { tier: 2, sub: 0, level: 'N5' as Level, len: 0, lesson: 1, pos: 1 };
     expect(cmp(a, b)).toBeLessThan(0);
     expect(cmp({ ...b, lesson: 2 }, { ...b, lesson: 10 })).toBeLessThan(0);
     expect(cmp({ ...b, pos: 2 }, { ...b, pos: 10 })).toBeLessThan(0);
@@ -193,7 +201,13 @@ describe('alias layer', () => {
       const keys = c.aliases.map(aliasKey);
       expect(new Set(keys).size, `${c.id} aliases unique`).toBe(keys.length);
     }
-    expect(ALIAS_CATEGORIES.length).toBe(22);
+    expect(ALIAS_CATEGORIES.length).toBeGreaterThanOrEqual(22);
+    for (const c of ALIAS_CATEGORIES) {
+      for (const [alias, keys] of Object.entries(c.core ?? {})) {
+        expect(c.aliases, `${c.id} core alias ${alias}`).toContain(alias);
+        expect(keys.length).toBeGreaterThan(0);
+      }
+    }
   });
 
   it('ambiguous short words map to several categories', () => {

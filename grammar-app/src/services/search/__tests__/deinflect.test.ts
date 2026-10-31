@@ -41,9 +41,20 @@ describe('deinflect', () => {
     ['食べよう', '食べる', ['volitional']],
     ['書けば', '書く', ['conditional (ば)']],
     ['書いたら', '書く', ['conditional (たら)']],
-    ['読まずに', '読む', ['without (ずに)']],
-    ['食べている', '食べる', ['te-form', 'ongoing/state (ている)']],
-    ['書いてある', '書く', ['te-form', 'resultative (てある)']],
+    ['読まずに', '読む', ['without (ず/ずに)']],
+    ['食べている', '食べる', ['ongoing/state (ている)']],
+    ['食べてる', '食べる', ['ongoing/state (ている)']],
+    ['食べちゃった', '食べる', ['completion, colloquial (ちゃう)', 'past']],
+    ['置いておく', '置く', ['preparation (ておく)']],
+    ['食べてください', '食べる', ['request (てください)']],
+    ['見れる', '見る', ['potential (colloquial ら抜き)']],
+    ['静かだった', '静か', ['copula, past']],
+    ['元気です', '元気', ['copula (です/だ)']],
+    ['高いです', '高い', ['copula (です/だ)']],
+    ['早く', '早い', ['adverbial (く)']],
+    ['高くなる', '高い', ['become (くなる)']],
+    ['食べるなら', '食べる', ['if (なら)']],
+    ['書いてある', '書く', ['resultative (てある)']],
     ['高かった', '高い', ['past']],
     ['寒くて', '寒い', ['te-form']],
     ['高くない', '高い', ['negative']],
@@ -60,6 +71,19 @@ describe('deinflect', () => {
   it('over-generates ambiguous forms (the caller filters by the index)', () => {
     expect(lemmas('かえって')).toEqual(expect.arrayContaining(['かえる', 'かえう', 'かえつ']));
     expect(lemmas('きた')).toEqual(expect.arrayContaining(['きる', 'くる']));
+  });
+
+  it('する → noun only for kanji compounds and katakana (teacher F7)', () => {
+    expect(lemmas('勉強する')).toContain('勉強');
+    expect(lemmas('コピーする')).toContain('コピー');
+    expect(lemmas('話する')).not.toContain('話');
+    expect(lemmas('として')).not.toContain('と');
+    expect(lemmas('まだ')).not.toContain('ま');
+  });
+
+  it('marks irregular lemmas for ranking', () => {
+    expect(deinflect('して').find((d) => d.lemma === 'する')?.irregular).toBe(true);
+    expect(deinflect('して').find((d) => d.lemma === 'しる')?.irregular).toBe(false);
   });
 
   it('never exceeds the depth limit and never returns the input', () => {

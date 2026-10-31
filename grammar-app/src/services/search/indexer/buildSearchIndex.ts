@@ -5,6 +5,7 @@ import { enTokens } from '../english';
 import { grammarKeys } from '../keys/grammarKeys';
 import { isMasuExpression, masuToDict, type MasuRule } from '../keys/masuToDict';
 import { honorificAlias, vocabVariants } from '../keys/vocabVariants';
+import { defaultClassOf, dictClass, masuRuleClass, mergeClasses, posClass } from '../keys/wordClass';
 import { key } from '../normalize';
 import {
   LEVELS,
@@ -139,21 +140,29 @@ export function buildSearchIndex(content: SearchContent, contentHash = 'dev'): S
       // ます → dictionary form, part by part (入ります／出ます pair with their readings).
       // Only N5/N4 store ます-forms; N3–N1 rows are dictionary forms (覚ます, クリスマス).
       const lemmas: string[] = [];
+      const classes: string[] = [];
       const masuLevel = level === 'N5' || level === 'N4';
       const posParts = (v.pos ?? '').split(/\s+\/\s+/);
       wv.parts.forEach((part, i) => {
         const readingPart = rv.parts.length === wv.parts.length ? rv.parts[i] : rv.parts[0];
         const pos = posParts.length === wv.parts.length ? posParts[i] : v.pos;
         part.variants.forEach((w, j) => {
-          if (!masuLevel || !w.endsWith('ます') || isMasuExpression(w, v.pos)) return;
           const r = readingPart?.variants[j] ?? readingPart?.variants[0] ?? '';
-          const m = masuToDict(w, r, pos, corpus);
-          if (!m) return;
+          const masuRow = masuLevel && w.endsWith('ます');
+          const m = masuRow && !isMasuExpression(w, v.pos) ? masuToDict(w, r, pos, corpus) : null;
+          if (!m) {
+            classes.push(masuRow ? 'n' : (posClass(pos, w) ?? dictClass(w, r)));
+            return;
+          }
+          // 知ります／知っています: the te-iru part is ichidan-shaped but says nothing about 知る.
+          if (m.rule !== 'te-iru' || wv.parts.length === 1) classes.push(masuRuleClass(m.rule));
           for (const k of [m.lemma, m.lemmaReading]) if (k && !lemmas.includes(k)) lemmas.push(k);
           masuReport.push({ uid: v.uid, word: v.word, pos: v.pos ?? '', lemma: m.lemma, lemmaReading: m.lemmaReading, rule: m.rule });
         });
       });
       if (lemmas.length) extra.l = lemmas;
+      const cls = mergeClasses(classes.length ? classes : ['n']);
+      if (cls !== defaultClassOf(extra.s ?? [plainW], extra.r ?? [plainR])) extra.c = cls;
 
       const aliases: string[] = [];
       const addAlias = (k: string) => {

@@ -116,3 +116,9 @@ export interface SearchResponse {
   /** 'partial' while later shards are still loading. */
   status: 'partial' | 'ready';
 }
+
+/**
+ * Index load state, pushed through `BaseSearchSource.subscribe` (additive, fix round 2).
+ * A response with `status: 'partial'` should be re-requested once this becomes 'ready'.
+ */
+export type IndexStatus = 'idle' | 'loading' | 'partial' | 'ready' | 'error';

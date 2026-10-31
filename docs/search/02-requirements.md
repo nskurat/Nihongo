@@ -86,7 +86,7 @@ IDs are referenced from §3 and §5. "Index" means the build-time search index (
 - Results are grouped as Grammar, Vocabulary and Kanji. The group order follows the query script: a single kanji puts Kanji first, kana or 〜 puts Grammar first, English puts Vocab first. Each group shows its count and up to 8 rows, with "Show all N".
 - Each row shows the display form, the reading (furigana or kana), a meaning truncated to one line, and a badge such as `N3 · L12`.
 - When I activate a row, the app navigates to `/:level/:section/:lesson?focus=<uid>`, and the item is scrolled into view and highlighted. The lesson renders exactly as it does when reached from the header. *(Amended, decided by the orchestrator after UX.)* Grammar does **not** auto-open the detail modal. The highlighted card's Deep Dive button gets focus, so one `Enter` opens it. Grammar therefore behaves like vocab and kanji, and the lesson context stays visible.
-- Within a tier, items from my current header level rank first, then lower levels (review), then higher levels.
+- *(Amended, fix round 2.)* Within a tier, more basic items rank first: N5 before N4 … before N1, whatever the current level, then shorter headwords. A rare current-level word never buries a core N5/N4 word.
 
 **US-8 Filters.**
 - Level (N5–N1, multi-select), type (Grammar, Vocab, Kanji), and either one tag or one alias category. Tag and category apply to grammar only, so choosing one implies Grammar.
@@ -213,12 +213,12 @@ group, at any rank, without "Show all".
 | T-06 | `分` | Kanji group first: 分 N5 L4. Vocab contains 自分 N5 L4, 十分 N4 L7, 半分 N4 L19. Grammar contains `今 -時-分です` N5 L4 | US-6/7 |
 | T-07 | `ぷん` and `pun` | Kanji contains 分 N5 L4 (on'yomi プン) | US-6 |
 | T-08 | `mei` (= `めい`, `メイ`) | Kanji: 明 N5 L16, 名 N5 L18, 迷 N3 L1, 命 N3 L1, 鳴 N3 L12, 謎 N3 L14, 盟 N1 L2, 銘 N1 L12, in that order | US-6 |
-| T-09 | `although` | Grammar = exactly these 8: けど／けれども N5 L8, 〜ながらも N3 L8, 〜といっても N3 L9, 〜ものの N2 L4, 〜つつ（も） N2 L4, 〜とはいえ N1 L1, 〜ものを N1 L1, 〜ところを N1 L32 | US-5 |
+| T-09 | `although` | *(Amended, fix round 2.)* Grammar group first. Its `english` (meaning) hits are exactly these 8: けど／けれども N5 L8, 〜ながらも N3 L8, 〜といっても N3 L9, 〜ものの N2 L4, 〜つつ（も） N2 L4, 〜とはいえ N1 L1, 〜ものを N1 L1, 〜ところを N1 L32. The other Concession / Contrast chip members follow; けど and のに are the first two rows | US-5 |
 | T-10 | tag filter `comparison` (`?tag=comparison`) | Exactly 17 grammar points, first `Aは Bより adjective です` N5 L12, last 〜きっての N1 L26. Includes 〜に比べて N3 L18 | US-5/8 |
 | T-11 | `comparison` typed | Chip "Comparison · 17" shown. Grammar group contains 〜に比べて N3 L18 | US-5 |
 | T-12 | `degree/extent` | Chip "Degree / Extent · 45". Tapping it lists 45 points incl. 〜ばかりか N2 L9, 〜ずつ N3 L5, 〜だらけ N3 L7 | US-5 |
 | T-13 | `in addition` / `not only` | Grammar contains それに N4 L3, さらに N3 L3, 〜上に N3 L13, 〜ばかりでなく／〜だけでなく N3 L5, 〜に加えて N2 L1, 〜ばかりか N2 L9, 〜のみならず N1 L22 (meaning search; no new tag needed) | US-5 |
-| T-14 | `contrast` | Chip "Concession / Contrast · 49". Grammar also contains 〜に対して N3 L8 (meaning "In contrast to"; it is tagged `viewpoint-standpoint` only), 〜反面 N2 L4, 〜にひきかえ N1 L21 | US-5 |
+| T-14 | `contrast` | Chip "Concession / Contrast · 49". *(Amended.)* Chip members are listed in the results, so 〜反面 N2 L4 is in the grammar group. 〜にひきかえ N1 L21 is in the top 8. 〜に対して N3 L8 (meaning "In contrast to", tagged `viewpoint-standpoint` only) is in the group, behind "Show all" | US-5 |
 | T-15 | `ものの` | Grammar first. 〜ものの N2 L4 is #1 | US-5/7 |
 | T-16 | `ばかりか`, `〜ばかりか`, `~ばかりか`, `～ばかりか` | Four identical result lists, top 〜ばかりか N2 L9 | US-2 |
 | T-17 | `ばかり` | Grammar first, containing all 8: N4 L21 `Vた-form ＋ ばかりです`, N3 L5, N3 L9, N2 L9, N2 L17, N2 L19, N1 L17 ×2 | US-5/7 |
@@ -237,7 +237,7 @@ group, at any rank, without "Show all".
 | T-30 | `待たされた` | 待つ N5 L14, path shows causative-passive, past | US-3 |
 | T-31 | `読まずに` | Vocab 読む N5 L9. Grammar contains 〜ずに N3 L10 | US-3/5 |
 | T-32 | `高かった` / `寒くて` | 高い N5 L8 / 寒い N5 L5 | US-3 |
-| T-33 | `かえって` | 帰る N5 L9 and 変える N4 L10 both shown in the deinflected tier. *(Amended.)* They rank **above** the literal prefix hit かえって来ます N4 L21, which still appears in the Vocabulary group | US-3 |
+| T-33 | `かえって` | *(Amended, teacher review F1.)* 却って exact, then 帰る N5 L9 (first deinflected row), 帰ります, 反る, 返る. 変える/替える/換える/代える are **absent**: their te-form is 〜えて. The prefix hit かえって来ます N4 L21 follows, in the top 8 | US-3 |
 | T-34 | `きた` | Vocab: 北 N5 L20 (exact reading きた) first. Then 来る N5 L4 and 着る N5 L22 (deinflected tier) above every prefix hit (帰宅, 期待…). Kanji contains 来 N5 L4 and 北 N5 L20 (kun きた) | US-3/6 |
 | T-35 | `kyoushitsu`, `kyōshitsu`, `kyousitu` | Vocab top 教室 N5 L3. `kyoshitsu` also finds it (Should #12, folded tier) | US-2 |
 | T-36 | `jouzu` / `zyouzu` / `kitte` | 上手[な] N5 L9 / 上手[な] N5 L9 / 切手 N5 L11 | US-2 |
@@ -250,7 +250,7 @@ group, at any rank, without "Show all".
 | T-43 | Fresh browser opens `…/search?q=ものの&level=N2` (cold load through the `404.html` fallback) | Same results as T-15 filtered to N2. Title and focus OK. `…/search?q=ばかり&level=N2,N3` lists only N2 and N3 points | US-11 |
 | T-44 | Activate result 〜ものの in T-15 | URL `/n2/grammar/4?focus=n2-grammar-4-1`. Card scrolled into view and highlighted, with **no** modal open. Back returns to results with the query intact | US-7/11 |
 | T-45 | Index fetch blocked (offline, uncached) | Error with Retry. Header level and lesson navigation still works | US-9 |
-| T-46 | Screen reader, type `although` | Announces "8 results: 8 grammar" once after a pause | §4 |
+| T-46 | Screen reader, type `although` | *(Amended.)* Announces the result count once after a pause (the count now includes the chip members and vocab hits) | §4 |
 | T-47 | Network panel, entire session of T-01…T-42 | Zero requests to any AI or provider host. Only same-origin static assets | Non-goal |
 
 ---

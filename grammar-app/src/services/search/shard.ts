@@ -24,6 +24,8 @@ export interface VocabExtra {
   h?: string[];
   /** お-stripped forms and okurigana variants */
   a?: string[];
+  /** word-class set (keys/wordClass.ts) when it differs from the one derived from the keys */
+  c?: string;
 }
 
 /** [uid, word, reading, meaning, extra?] */

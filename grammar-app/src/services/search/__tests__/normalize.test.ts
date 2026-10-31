@@ -28,6 +28,10 @@ describe('foldLong', () => {
     expect(foldLong('せんせい')).toBe('せんせ');
     expect(foldLong('らーめん')).toBe('らめん');
     expect(foldLong('おばあさん')).toBe('おばさん');
+    // A word-final い/あ is an ending, not a long vowel (teacher F10).
+    expect(foldLong('いい')).toBe('いい');
+    expect(foldLong('おおきい')).toBe('おきい');
+    expect(foldLong('おにいさん')).toBe('おにさん');
   });
 });
 
@@ -50,7 +54,13 @@ describe('romajiToKana', () => {
     ['kyoshitsu', 'きょしつ'],
     ["kan'i", 'かんい'],
     ['kani', 'かに'],
-    ['kanni', 'かんい'],
+    ['kanni', 'かんに'],
+    ['konnichiwa', 'こんにちわ'],
+    ['konnnichiha', 'こんにちは'],
+    ['minna', 'みんな'],
+    ['onna', 'おんな'],
+    ['sannen', 'さんねん'],
+    ['honn', 'ほん'],
     ['shinbun', 'しんぶん'],
     ['shimbun', 'しんぶん'],
     ['kitte', 'きって'],

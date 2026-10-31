@@ -1,5 +1,7 @@
 import { enTokens, phraseText } from '../english';
+import { grammarPatternKeys } from '../keys/grammarKeys';
 import { kanjiReadingKeys } from '../keys/kanjiReadingKeys';
+import { defaultClassOf } from '../keys/wordClass';
 import { foldLong, isKana, kanjiChars, key } from '../normalize';
 import type { GrammarShard, KanjiShard, ShardFile, VocabExtra, VocabShard } from '../shard';
 import type { DocType, Level, SearchDocument } from '../types';
@@ -38,6 +40,10 @@ export interface Doc {
   /** ` word word ` lower-case meaning, for English phrase matching. */
   phrase: string;
   dupKey?: string;
+  /** Vocab word-class set (keys/wordClass.ts); '' for grammar and kanji. */
+  cls: string;
+  /** Grammar keys allowed to match inside a longer query. */
+  patternKeys: string[];
 }
 
 function parseUid(uid: string): { level: Level; type: DocType; lesson: number; pos: number } {
@@ -77,6 +83,8 @@ function decodeGrammar(shard: GrammarShard): Doc[] {
     en: enTokens(meaning),
     summaryEn: summary ? summary.split(' ') : [],
     phrase: phraseText(meaning),
+    cls: '',
+    patternKeys: grammarPatternKeys(title),
   }));
 }
 
@@ -104,6 +112,8 @@ function decodeVocab(shard: VocabShard): Doc[] {
       summaryEn: [],
       phrase: phraseText(meaning),
       dupKey: `${surface[0] ?? ''}|${readings[0] ?? ''}`,
+      cls: x.c ?? defaultClassOf(surface, readings),
+      patternKeys: [],
     };
   });
 }
@@ -137,6 +147,8 @@ function decodeKanji(shard: KanjiShard): Doc[] {
       en: enTokens(meaning),
       summaryEn: [],
       phrase: phraseText(meaning),
+      cls: '',
+      patternKeys: [],
     };
   });
 }

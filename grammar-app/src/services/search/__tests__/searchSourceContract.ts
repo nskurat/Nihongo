@@ -14,7 +14,9 @@ export function searchSourceContract(make: () => BaseSearchSource): void {
   });
 
   it('contract: search returns grouped, typed results with totals and facets', async () => {
-    const r = await make().search('ものの', { rankLevel: 'N5' });
+    const src = make();
+    await src.warmup('N5');
+    const r = await src.search('ものの', { rankLevel: 'N5' });
     expect(r.groups.grammar[0]).toMatchObject({ title: '〜ものの', level: 'N2', type: 'grammar', matchKind: 'exact' });
     expect(r.totals.grammar).toBeGreaterThanOrEqual(1);
     expect(r.facetCounts.level.N2).toBeGreaterThanOrEqual(1);

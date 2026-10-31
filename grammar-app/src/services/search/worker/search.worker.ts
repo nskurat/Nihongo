@@ -1,7 +1,6 @@
 /// <reference lib="webworker" />
-import { isShardFile } from '../shard';
 import { SearchWorkerHost, ShardLoadError } from './host';
-import type { WorkerRequest } from './protocol';
+import type { WorkerRequest, WorkerStatusEvent } from './protocol';
 
 /**
  * Search Web Worker: holds the index, planner and matcher off the main thread.
@@ -25,13 +24,15 @@ async function fetchShard(name: string) {
   if (!url) throw new ShardLoadError(`unknown shard ${name}`);
   const res = await fetch(url);
   if (!res.ok) throw new ShardLoadError(`${name}: HTTP ${res.status}`);
-  const json: unknown = await res.json();
-  if (!isShardFile(json)) throw new ShardLoadError(`${name}: not a search index shard of this version`);
-  return json;
+  // Text, not JSON: the host parses shards in priority order (grammar first).
+  return res.text();
 }
 
-const host = new SearchWorkerHost([...byName.keys()], fetchShard);
 const scope = self as unknown as DedicatedWorkerGlobalScope;
+const host = new SearchWorkerHost([...byName.keys()], fetchShard, (status) => {
+  const event: WorkerStatusEvent = { event: 'status', status };
+  scope.postMessage(event);
+});
 
 scope.onmessage = (event: MessageEvent<WorkerRequest>) => {
   void host.handle(event.data).then((response) => scope.postMessage(response));

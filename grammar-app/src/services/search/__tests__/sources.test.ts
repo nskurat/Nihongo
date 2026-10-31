@@ -5,8 +5,10 @@ import { MemorySearchSource } from '../MemorySearchSource';
 import { searchRepository, setSearchSource } from '../SearchSource';
 import { WorkerSearchSource, type WorkerLike } from '../WorkerSearchSource';
 import { SearchWorkerHost, ShardLoadError, type ShardFetcher } from '../worker/host';
-import type { WorkerRequest, WorkerResponse } from '../worker/protocol';
+
+import type { WorkerMessage, WorkerRequest } from '../worker/protocol';
 import type { ShardFile } from '../shard';
+import type { SearchResponse } from '../types';
 import { realIndex } from './realIndex';
 import { searchSourceContract } from './searchSourceContract';
 
@@ -15,28 +17,33 @@ const byName = new Map(build.shards.map((s) => [s.shard, s]));
 
 /** An in-thread stand-in for `new Worker(...)` that runs the real worker host. */
 class FakeWorker implements WorkerLike {
-  onmessage: ((event: MessageEvent<WorkerResponse>) => void) | null = null;
+  onmessage: ((event: MessageEvent<WorkerMessage>) => void) | null = null;
   onerror: ((event: ErrorEvent) => void) | null = null;
   terminated = false;
-  constructor(private host: SearchWorkerHost) {}
+  constructor(makeHost: (emit: (m: WorkerMessage) => void) => SearchWorkerHost) {
+    this.host = makeHost((m) => this.onmessage?.({ data: structuredClone(m) } as MessageEvent<WorkerMessage>));
+  }
+  private host: SearchWorkerHost;
   postMessage(message: WorkerRequest): void {
     // Structured clone, as postMessage would.
     const req = structuredClone(message);
-    void this.host.handle(req).then((res) => this.onmessage?.({ data: structuredClone(res) } as MessageEvent<WorkerResponse>));
+    void this.host.handle(req).then((res) => this.onmessage?.({ data: structuredClone(res) } as MessageEvent<WorkerMessage>));
   }
   terminate(): void {
     this.terminated = true;
   }
 }
 
-const okFetch: ShardFetcher = async (name) => {
+const okFetch = async (name: string): Promise<ShardFile> => {
   const s = byName.get(name as ShardFile['shard']);
   if (!s) throw new ShardLoadError(`missing ${name}`);
   return s;
 };
 
 const workerSource = (fetcher: ShardFetcher = okFetch) =>
-  new WorkerSearchSource(() => new FakeWorker(new SearchWorkerHost([...byName.keys()], fetcher)));
+  new WorkerSearchSource(
+    () => new FakeWorker((emit) => new SearchWorkerHost([...byName.keys()], fetcher, (status) => emit({ event: 'status', status })))
+  );
 
 describe('MemorySearchSource contract', () => {
   searchSourceContract(() => realIndex().source);
@@ -60,6 +67,43 @@ describe('WorkerSearchSource', () => {
     expect(r.groups.grammar[0].title).toBe('〜ものの');
   });
 
+  it('fetches shards in parallel and answers from grammar + level vocab with status partial', async () => {
+    let releaseKanji: () => void = () => undefined;
+    const kanjiGate = new Promise<void>((resolve) => (releaseKanji = resolve));
+    const started: string[] = [];
+    const statuses: string[] = [];
+    const host = new SearchWorkerHost(
+      [...byName.keys()],
+      async (name) => {
+        started.push(name);
+        if (name === 'kanji') await kanjiGate;
+        return okFetch(name);
+      },
+      (s) => statuses.push(s)
+    );
+    const res = await host.handle({ id: 1, op: 'search', query: 'ものの', opts: { rankLevel: 'N3' } });
+    expect(started).toHaveLength(byName.size); // all requested up front
+    expect(started.slice(0, 2)).toEqual(['grammar', 'vocab-N3']);
+    const first = res.ok ? (res.result as SearchResponse) : null;
+    expect(first?.status).toBe('partial');
+    expect(first?.groups.grammar[0].title).toBe('〜ものの');
+    releaseKanji();
+    const ready = await host.handle({ id: 2, op: 'warmup' });
+    expect(ready.ok).toBe(true);
+    expect(statuses).toEqual(['loading', 'partial', 'ready']);
+    const again = await host.handle({ id: 3, op: 'search', query: '因', opts: { rankLevel: 'N3' } });
+    expect(again.ok ? (again.result as SearchResponse).status : null).toBe('ready');
+  });
+
+  it('forwards status events to subscribers', async () => {
+    const src = workerSource();
+    const seen: string[] = [];
+    const off = src.subscribe((s) => seen.push(s));
+    await src.warmup('N4');
+    off();
+    expect(seen).toContain('ready');
+  });
+
   it('rejects shards from a different build as load-failed', async () => {
     const src = workerSource(async (name) => {
       const s = await okFetch(name);
@@ -71,7 +115,7 @@ describe('WorkerSearchSource', () => {
   it('fails calls in flight when the worker script errors, and starts a new worker next time', async () => {
     const workers: FakeWorker[] = [];
     const src = new WorkerSearchSource(() => {
-      const w = new FakeWorker(new SearchWorkerHost([...byName.keys()], () => new Promise<ShardFile>(() => {})));
+      const w = new FakeWorker(() => new SearchWorkerHost([...byName.keys()], () => new Promise<ShardFile>(() => {})));
       workers.push(w);
       return w;
     });
