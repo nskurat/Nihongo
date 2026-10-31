@@ -18,3 +18,12 @@ describe('V5_REPLACED_KANJI_UIDS', () => {
     for (const uid of V5_REPLACED_KANJI_UIDS) expect(uids.has(uid)).toBe(true);
   });
 });
+
+import { withoutShiftedUids } from '../aiCacheMigration';
+
+describe('withoutShiftedUids', () => {
+  it('drops uids at or after the first shifted position of their lesson only', () => {
+    const notes = { 'n5-vocab-7-26': 'a', 'n5-vocab-7-27': 'b', 'n5-vocab-7-40': 'c', 'n5-vocab-8-30': 'd', 'n5-kanji-7-30': 'e' };
+    expect(withoutShiftedUids(notes, ['n5-vocab-7-27'])).toEqual({ 'n5-vocab-7-26': 'a', 'n5-vocab-8-30': 'd', 'n5-kanji-7-30': 'e' });
+  });
+});
