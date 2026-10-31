@@ -3,14 +3,17 @@ import { GrammarItem, VocabItem, KanjiItem, LevelType } from '../../types/japane
 import { geminiProvider } from './providers/gemini';
 import { openaiProvider } from './providers/openai';
 import { anthropicProvider } from './providers/anthropic';
-import {
-  getGrammarExamplesPrompt,
-  getGrammarNuancePrompt,
-  getVocabHelpPrompt,
-  getKanjiMnemonicPrompt,
-} from './prompts';
 import { buildReadingPracticePrompt, BuildReadingPromptParams } from './promptBuilder';
 import { parseReadingResponse } from './readingParser';
+import {
+  GrammarExampleSentence,
+  cleanMarkdownNote,
+  grammarExamplesPromptFor,
+  grammarNuancePromptFor,
+  kanjiMnemonicPromptFor,
+  parseGrammarExamples,
+  vocabHelpPromptFor,
+} from './studyItems';
 
 // Provider Registry Storage
 const providers: Record<AiProviderId, AiProvider> = {
@@ -129,48 +132,35 @@ export async function executeAiPrompt(prompt: string, options: ExecuteAiPromptOp
 // High-Level Domain Services
 // -------------------------------------------------------------
 
-export interface GrammarExampleSentence {
-  jp: string;
-  en: string;
-}
+export type { GrammarExampleSentence };
 
 export async function generateGrammarExamples({
   grammar,
   level,
+  previous = [],
 }: {
   grammar: GrammarItem;
   level: LevelType;
+  /** Examples the learner already has (earlier AI presses), so they are not repeated. */
+  previous?: GrammarExampleSentence[];
 }): Promise<GrammarExampleSentence[]> {
-  const prompt = getGrammarExamplesPrompt({
-    title: grammar.title,
-    meaning: grammar.meaning,
-    structure: grammar.structure,
-    level,
-  });
-
+  const { prompt, known } = grammarExamplesPromptFor(grammar, level, previous);
   const text = await executeAiPrompt(prompt, { responseFormat: 'json' });
-  const cleaned = text.replace(/```json/g, '').replace(/```/g, '').trim();
-  const parsed = JSON.parse(cleaned);
-
-  if (Array.isArray(parsed)) return parsed as GrammarExampleSentence[];
-  if (parsed.examples && Array.isArray(parsed.examples)) return parsed.examples as GrammarExampleSentence[];
-  return [];
+  return parseGrammarExamples(text, known);
 }
 
 export async function generateGrammarNuance({
   grammar,
   level,
+  lessonItems = [],
 }: {
   grammar: GrammarItem;
   level: LevelType;
+  /** The other grammar points of the lesson; same-function ones are offered as comparisons. */
+  lessonItems?: GrammarItem[];
 }): Promise<string> {
-  const prompt = getGrammarNuancePrompt({
-    title: grammar.title,
-    meaning: grammar.meaning,
-    level,
-  });
-
-  return await executeAiPrompt(prompt, { responseFormat: 'text' });
+  const prompt = grammarNuancePromptFor(grammar, level, lessonItems);
+  return cleanMarkdownNote(await executeAiPrompt(prompt, { responseFormat: 'text' }));
 }
 
 export async function generateVocabHelp({
@@ -180,14 +170,8 @@ export async function generateVocabHelp({
   vocab: VocabItem;
   level: LevelType;
 }): Promise<string> {
-  const prompt = getVocabHelpPrompt({
-    word: vocab.word,
-    reading: vocab.reading,
-    meaning: vocab.meaning,
-    level,
-  });
-
-  return await executeAiPrompt(prompt, { responseFormat: 'text' });
+  const prompt = vocabHelpPromptFor(vocab, level);
+  return cleanMarkdownNote(await executeAiPrompt(prompt, { responseFormat: 'text' }));
 }
 
 export async function generateKanjiMnemonic({
@@ -197,22 +181,8 @@ export async function generateKanjiMnemonic({
   kanji: KanjiItem;
   level: LevelType;
 }): Promise<string> {
-  const readings = [
-    kanji.onyomi?.length ? `On: ${kanji.onyomi.join(', ')}` : '',
-    kanji.kunyomi?.length ? `Kun: ${kanji.kunyomi.join(', ')}` : '',
-  ]
-    .filter(Boolean)
-    .join(' | ');
-
-  const prompt = getKanjiMnemonicPrompt({
-    kanji: kanji.kanji,
-    meaning: kanji.meaning,
-    radical: kanji.radical,
-    readings,
-    level,
-  });
-
-  return await executeAiPrompt(prompt, { responseFormat: 'text' });
+  const prompt = kanjiMnemonicPromptFor(kanji, level);
+  return cleanMarkdownNote(await executeAiPrompt(prompt, { responseFormat: 'text' }));
 }
 
 export async function generateReadingPractice(params: BuildReadingPromptParams): Promise<ReadingPracticeData> {

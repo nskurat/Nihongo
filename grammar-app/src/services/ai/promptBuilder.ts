@@ -3,6 +3,8 @@ import {
   READING_PRACTICE_SYSTEM_PROMPT,
   READING_PRACTICE_SCHEMA_TEMPLATE,
   getReadingPracticeRules,
+  N5_FORM_MILESTONES,
+  firstClause,
 } from './prompts';
 
 /** Random source in [0, 1). Injected so tests are deterministic. */
@@ -10,21 +12,6 @@ export type RandomSource = () => number;
 
 export const MAX_TARGET_GRAMMAR = 5;
 export const MAX_TARGET_VOCAB = 10;
-
-/**
- * N5 (lessons 1–25) and N4 (lessons 1–25) follow the Minna no Nihongo sequence
- * (N4 Lesson n = Minna Lesson 25 + n). Early N5 lessons have not met the verb
- * forms a model reaches for by default, so lesson-targeted prompts name them.
- */
-const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
-  { lesson: 9, form: 'reason clauses with から' },
-  { lesson: 14, form: 'て-form' },
-  { lesson: 17, form: 'ない-form' },
-  { lesson: 18, form: 'dictionary form' },
-  { lesson: 19, form: 'た-form' },
-  { lesson: 20, form: 'plain style (だ / plain verb endings outside quotes)' },
-  { lesson: 22, form: 'noun-modifying clauses (きのう買った本)' },
-];
 
 function shuffle<T>(items: T[], rng: RandomSource): T[] {
   const out = [...items];
@@ -74,12 +61,6 @@ export function formatTargetVocab(v: VocabItem): string | null {
   const usage = notes.length ? `; as in ${notes.join(', ')}` : '';
   const readingPart = reading && reading !== word ? `${reading}: ` : '';
   return `${word} (${readingPart}${meaning}${usage})`;
-}
-
-function firstClause(text: string, max = 80): string {
-  // Split at a real sentence end, not inside an ellipsis ("Not... anywhere").
-  const sentence = text.split(/(?<=[\p{L}\d)"'][.;])\s+/u)[0].trim();
-  return sentence.length > max ? `${sentence.slice(0, max - 1).trimEnd()}…` : sentence;
 }
 
 function lessonCeiling(level: LevelType, lesson: number): string[] {

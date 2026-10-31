@@ -207,64 +207,295 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
   ]
 }`;
 
+
+
+// -------------------------------------------------------------
+// Study-item prompts: the AI buttons on grammar, vocab and kanji cards.
+// Same conventions as the reading prompt (docs/ai-prompts-review.md):
+// English instructions with Japanese exemplars, an explicit output contract,
+// a level ceiling taken from the item's own level, and short outputs.
+// -------------------------------------------------------------
+
 /**
- * Grammar Example Sentences Prompt Template
+ * N5 (lessons 1–25) and N4 (lessons 1–25) follow the Minna no Nihongo sequence
+ * (N4 Lesson n = Minna Lesson 25 + n). Early N5 lessons have not met the verb
+ * forms a model reaches for by default, so lesson-scoped prompts name them.
  */
-export function getGrammarExamplesPrompt({
-  title,
-  meaning,
-  structure,
-  level,
-}: {
+export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
+  { lesson: 9, form: 'reason clauses with から' },
+  { lesson: 14, form: 'て-form' },
+  { lesson: 17, form: 'ない-form' },
+  { lesson: 18, form: 'dictionary form' },
+  { lesson: 19, form: 'た-form' },
+  { lesson: 20, form: 'plain style (だ / plain verb endings outside quotes)' },
+  { lesson: 22, form: 'noun-modifying clauses (きのう買った本)' },
+];
+
+/** First sentence of an English gloss, capped at `max` characters. */
+export function firstClause(text: string, max = 80): string {
+  // Split at a real sentence end, not inside an ellipsis ("Not... anywhere").
+  const sentence = text.split(/(?<=[\p{L}\d)"'][.;])\s+/u)[0].trim();
+  return sentence.length > max ? `${sentence.slice(0, max - 1).trimEnd()}…` : sentence;
+}
+
+interface StudyLevelRule {
+  /** Grammar / vocabulary / kanji ceiling for Japanese the model writes. */
+  ceiling: string;
+  /** Longest example sentence, in Japanese characters. */
+  maxSentenceChars: number;
+  /** Default style of example sentences. */
+  style: string;
+  /** Which kanji words quoted in a Markdown note get a reading in （）. */
+  readings: string;
+}
+
+export const STUDY_LEVEL_RULES: Record<LevelType, StudyLevelRule> = {
+  N5: {
+    ceiling:
+      'Use only N5 grammar and the most basic everyday words. Write kanji only for basic N5 words (日本, 学校, 先生, 行きます, 食べます); write every other word in hiragana, loanwords in katakana.',
+    maxSentenceChars: 25,
+    style: 'Polite です/ます style.',
+    readings: 'every Japanese word or phrase with kanji',
+  },
+  N4: {
+    ceiling:
+      'Use only N5/N4 grammar and vocabulary. Write kanji only for common N5/N4 words; write harder words in hiragana.',
+    maxSentenceChars: 35,
+    style: 'Polite です/ます style, unless the pattern itself needs plain form or casual speech.',
+    readings: 'every Japanese word or phrase with kanji',
+  },
+  N3: {
+    ceiling: 'Use grammar, vocabulary and kanji at N3 or below.',
+    maxSentenceChars: 45,
+    style: 'Plain or polite style, whichever the situation calls for.',
+    readings: 'every Japanese word or phrase with kanji',
+  },
+  N2: {
+    ceiling: 'Use grammar and vocabulary at N2 or below; no specialist jargon.',
+    maxSentenceChars: 55,
+    style: 'The register the pattern really lives in (written, formal or conversational).',
+    readings: 'words with kanji beyond N3 only',
+  },
+  N1: {
+    ceiling: 'Use grammar and vocabulary at N1 or below; no specialist jargon beyond what an educated reader knows.',
+    maxSentenceChars: 65,
+    style: 'The register the pattern really lives in (written, formal or conversational).',
+    readings: 'words with kanji beyond N3 only',
+  },
+};
+
+/**
+ * What the learner already knows. N5/N4 lessons follow Minna no Nihongo, so a
+ * lesson number narrows the grammar; above N4 the level is the ceiling.
+ */
+export function learnerScope(level: LevelType, lesson?: number | null): string[] {
+  const lines = [`- Level ceiling (JLPT ${level}): ${STUDY_LEVEL_RULES[level].ceiling}`];
+  if (lesson && level === 'N5') {
+    lines.push(`- The learner has studied N5 Lessons 1–${lesson} only (Minna no Nihongo order).`);
+    const notYet = N5_FORM_MILESTONES.filter((m) => m.lesson > lesson);
+    if (notYet.length) {
+      lines.push(
+        `- Not taught yet, so never use them in Japanese sentences: ${notYet
+          .map((m) => `${m.form} (Lesson ${m.lesson})`)
+          .join('; ')}.`
+      );
+    }
+  } else if (lesson && level === 'N4') {
+    lines.push(
+      `- The learner knows all of N5 and N4 Lessons 1–${lesson} (Minna no Nihongo Lessons 26–${25 + lesson}); avoid N4 grammar from later lessons.`
+    );
+  }
+  return lines;
+}
+
+/** Japanese shown as plain text (grammar example cards): no reading syntax at all. */
+const PLAIN_JAPANESE_RULE =
+  '- "jp" is plain Japanese only: no furigana or readings in [] or （）, no romaji, no English, no Markdown, no numbering. Use 「」 for quotations, never ASCII double quotes.';
+
+/**
+ * Notes are rendered by MarkdownViewer, which has no furigana support: readings go
+ * in full-width parentheses, and square brackets would show up raw.
+ */
+function markdownNoteRules(level: LevelType, maxWords: number): string {
+  return [
+    'FORMAT (rendered as Markdown)',
+    `- Explanations in English. Japanese only for patterns, words and example sentences; Japanese sentences at JLPT ${level} level or below.`,
+    `- Readings: when you quote a Japanese word or phrase in the English text, put its hiragana reading in full-width parentheses right after it — ${STUDY_LEVEL_RULES[level].readings}: 道に迷う（みちにまよう）. Full example sentences carry no readings. Never use square brackets.`,
+    '- Start each bold label on a new line with a blank line between parts. No romaji. Use only the bold labels shown: no headings, tables, preamble ("Sure!") or closing remarks.',
+    `- At most ${maxWords} words in total.`,
+  ].join('\n');
+}
+
+export interface GrammarPromptItem {
   title: string;
   meaning: string;
   structure: string;
   level: LevelType;
-}) {
-  return `Generate 2 new, natural Japanese example sentences for the JLPT ${level} grammar point: "${title}" (Meaning: ${meaning}). Structure: ${structure}.
+  /** Lesson within the level; narrows the ceiling at N5/N4. */
+  lesson?: number | null;
+  /** Human-readable function tags, e.g. "Concession / contrast". */
+  tagLabels?: string[];
+}
 
-CRITICAL: Return ONLY a valid JSON array of objects with "jp" and "en" keys. Do NOT include markdown code fences or conversational text.
-Example format:
-[
-  {"jp": "...", "en": "..."},
-  {"jp": "...", "en": "..."}
-]`;
+/** Number of sentences one "AI: More Examples" press adds. */
+export const GRAMMAR_EXAMPLE_COUNT = 3;
+const MAX_KNOWN_EXAMPLES = 8;
+
+function grammarHeader(g: GrammarPromptItem): string[] {
+  const lines = [
+    `GRAMMAR POINT (JLPT ${g.level}${g.lesson ? `, Lesson ${g.lesson}` : ''})`,
+    `- Pattern: ${g.title}`,
+  ];
+  if (g.structure && g.structure !== g.title) lines.push(`- Structure: ${g.structure}`);
+  lines.push(`- Meaning: ${firstClause(g.meaning, 160)}`);
+  if (g.tagLabels?.length) lines.push(`- Function: ${g.tagLabels.join('; ')}`);
+  return lines;
 }
 
 /**
- * Grammar Nuance Explanation Prompt Template
+ * "AI: More Examples". Output contract: {"examples":[{"jp","en"}]}, parsed by
+ * parseGrammarExamples. An object rather than a bare array because OpenAI's JSON
+ * mode only returns objects.
+ */
+export function getGrammarExamplesPrompt({
+  knownExamples = [],
+  ...g
+}: GrammarPromptItem & {
+  /** Japanese sentences the learner has already seen; the model must not repeat them. */
+  knownExamples?: string[];
+}) {
+  const rule = STUDY_LEVEL_RULES[g.level];
+  const known = knownExamples.filter(Boolean).slice(-MAX_KNOWN_EXAMPLES);
+  const lines = [
+    `You are an experienced Japanese teacher writing example sentences for an adult learner preparing for JLPT ${g.level}.`,
+    '',
+    ...grammarHeader(g),
+  ];
+  if (known.length) {
+    lines.push(
+      '- Already shown to the learner (do not repeat or lightly reword these):',
+      ...known.map((s) => `  • ${s}`)
+    );
+  }
+  lines.push(
+    '',
+    `TASK: write ${GRAMMAR_EXAMPLE_COUNT} new example sentences that use this grammar point.`,
+    '- Every sentence uses the target pattern as the structure describes, in a situation where a native speaker would really choose it — not a neutral frame with the pattern dropped in.',
+    '- Vary them: different situations (e.g. home, work or school, shopping, travel, news) and different subjects; where the structure allows, vary the form too (affirmative / negative, past / non-past, the different word classes it attaches to).',
+    `- Style: ${rule.style} Do not put a stiff written pattern into casual chat, or a casual one into a formal notice.`,
+    ...learnerScope(g.level, g.lesson),
+    `- One sentence each, at most ${rule.maxSentenceChars} Japanese characters.`,
+    PLAIN_JAPANESE_RULE,
+    '- "en": a natural English translation that makes the meaning of the pattern visible.',
+    '',
+    'OUTPUT: one JSON object only — no code fences, no other text:',
+    '{"examples":[{"jp":"…","en":"…"},{"jp":"…","en":"…"},{"jp":"…","en":"…"}]}'
+  );
+  return lines.join('\n');
+}
+
+/**
+ * "AI: Explain Nuances" (card and detail modal). Markdown, rendered by MarkdownViewer.
  */
 export function getGrammarNuancePrompt({
-  title,
-  meaning,
-  level,
-}: {
-  title: string;
-  meaning: string;
-  level: LevelType;
+  relatedPatterns = [],
+  example,
+  ...g
+}: GrammarPromptItem & {
+  /** Patterns from the same lesson that share a function tag: confusable candidates. */
+  relatedPatterns?: string[];
+  /** One example from the data, so the model anchors on the intended sense. */
+  example?: string;
 }) {
-  return `Act as an expert Japanese linguist. Briefly explain subtle nuances, typical conversational contexts, and common learner traps for "${title}" (${meaning}) at ${level} level. Keep it to one clear, insightful paragraph.`;
+  const lines = [
+    `You are an experienced Japanese teacher. Write a short nuance note on one grammar point for an adult learner preparing for JLPT ${g.level}. The learner already sees the meaning, structure and examples on the card, so do not restate them.`,
+    '',
+    ...grammarHeader(g),
+  ];
+  if (example) lines.push(`- Example from the lesson: ${example}`);
+  if (relatedPatterns.length) {
+    lines.push(`- Patterns from the same lesson with a similar function: ${relatedPatterns.join(', ')}`);
+  }
+  lines.push(
+    '',
+    'WRITE exactly these three parts:',
+    '**Nuance:** 1–2 sentences on what the pattern adds beyond its English gloss — speaker attitude, written vs spoken, formality, and what typically follows or cannot follow it.',
+    `**Compared with:** the 1–2 patterns a JLPT ${g.level} learner most often confuses it with, taken from ${g.level} or lower levels (prefer the same-lesson patterns above when they really are confusable). For each, one bullet: the difference in one line, then a minimal pair — the same sentence with each pattern — and what changes in meaning or naturalness.`,
+    '**Common mistake:** one typical learner error as ✗ wrong sentence → ✓ corrected sentence, with a one-line reason.',
+    '',
+    'ACCURACY AND LEVEL',
+    '- Describe real usage only. If a difference is a tendency rather than a rule, say "usually". Do not invent restrictions.',
+    ...learnerScope(g.level, g.lesson),
+    '',
+    markdownNoteRules(g.level, 160)
+  );
+  return lines.join('\n');
 }
 
 /**
- * Vocabulary Usage Help Prompt Template
+ * "AI: Explain Usage" on a vocab card. Markdown, rendered by MarkdownViewer.
  */
 export function getVocabHelpPrompt({
   word,
   reading,
   meaning,
   level,
+  lesson,
+  pos,
+  usageHint,
+  example,
 }: {
   word: string;
   reading: string;
   meaning: string;
   level: LevelType;
+  lesson?: number | null;
+  pos?: string;
+  /** Usage note moved out of the headword, e.g. "道に〜". */
+  usageHint?: string;
+  /** The example sentence already on the card. */
+  example?: string;
 }) {
-  return `Explain practical usage, common collocations, or register nuances for the Japanese word "${word}" (${reading}, meaning: "${meaning}") for a JLPT ${level} learner. Keep it to 1-2 concise sentences with 1 extra natural sample sentence.`;
+  const lines = [
+    `You are an experienced Japanese teacher. Write a short usage note on one word for an adult learner preparing for JLPT ${level}. The card already shows the word, its reading and English meaning, so do not restate them.`,
+    '',
+    `WORD (JLPT ${level}${lesson ? `, Lesson ${lesson}` : ''})`,
+    `- Word: ${word}${reading && reading !== word ? `（${reading}）` : ''}`,
+    `- Meaning: ${meaning}`,
+  ];
+  if (pos) lines.push(`- Part of speech: ${pos}`);
+  if (usageHint) lines.push(`- Typical use: ${usageHint}`);
+  if (level === 'N5' && /ます$/.test(word)) {
+    lines.push('- The headword is listed in ます-form, as N5 textbooks do; treat it as that verb.');
+  }
+  if (example) lines.push(`- Example already on the card (do not reuse it): ${example}`);
+  lines.push(
+    '',
+    'WRITE these parts (leave out "Watch out" if there is no real, common pitfall):',
+    '**Usage:** 1–2 sentences — the situations it is used in, its register (casual, polite, written) and, if one exists, how it differs from a near-synonym the learner is likely to know (name it).',
+    '**Collocations:** 2–3 frequent combinations with their particle, each with a short English gloss, e.g. 道に迷う（みちにまよう）— get lost.',
+    '**Watch out:** one common learner mistake — wrong particle, transitive/intransitive partner, a sense the English gloss suggests but the Japanese word does not have — as ✗ → ✓.',
+    '**Example:** one new natural sentence using the word, then its English translation on the next line.',
+    '',
+    'LEVEL',
+    ...learnerScope(level, lesson),
+    '',
+    markdownNoteRules(level, 110)
+  );
+  return lines.join('\n');
 }
 
+export interface KanjiPromptCompound {
+  word: string;
+  reading: string;
+  meaning: string;
+}
+
+const MAX_KANJI_COMPOUNDS = 4;
+
 /**
- * Kanji Mnemonic Story Prompt Template
+ * "AI: Create Mnemonic Story" on a kanji card. Markdown, rendered by MarkdownViewer.
+ * The story is a memory aid; the prompt forbids passing it off as etymology.
  */
 export function getKanjiMnemonicPrompt({
   kanji,
@@ -272,12 +503,46 @@ export function getKanjiMnemonicPrompt({
   radical,
   readings,
   level,
+  strokes,
+  compounds = [],
 }: {
   kanji: string;
   meaning: string;
   radical?: string;
+  /** e.g. "On: ジ | Kun: とき" — '.' or '・' separates the stem from okurigana. */
   readings: string;
   level: LevelType;
+  strokes?: number;
+  /** Words from the data that contain this kanji (already level-appropriate). */
+  compounds?: KanjiPromptCompound[];
 }) {
-  return `Create a vivid, easy-to-remember mnemonic story or visual breakdown for the JLPT ${level} Kanji "${kanji}" (Meaning: "${meaning}", ${readings}). Radical: "${radical || 'none'}". Keep the mnemonic hook to 2-3 engaging, memorable sentences.`;
+  const words = compounds
+    .filter((c) => !/^[〜～]|[〜～]$/.test(c.word))
+    .slice(0, MAX_KANJI_COMPOUNDS)
+    .map((c) => `${c.word}（${c.reading.replace(/\s*[[［][^\]］]*[\]］]/g, '').trim()}）${c.meaning}`);
+  const lines = [
+    `You are an experienced Japanese teacher. Write a mnemonic for one kanji for an adult learner preparing for JLPT ${level}.`,
+    '',
+    `KANJI (JLPT ${level}): ${kanji}`,
+    `- Meaning: ${meaning}`,
+    `- Readings: ${readings || 'none listed'} (a dot separates the kanji from its okurigana; "-" marks a prefix or suffix)`,
+  ];
+  if (radical) lines.push(`- Radical: ${radical}`);
+  if (strokes) lines.push(`- Strokes: ${strokes}`);
+  if (words.length) lines.push(`- Words with this kanji the learner meets: ${words.join('; ')}`);
+  lines.push(
+    '',
+    'WRITE these parts (leave out "Don\'t confuse" if there is no common look-alike):',
+    `**Parts:** the components you can actually see in ${kanji}${radical ? ', starting with the radical given above' : ''}. Name only real components; if a part is not a standard component, describe its shape ("a roof on top") instead of naming a character it is not.`,
+    `**Story:** 2–3 vivid sentences that link those parts to the meaning "${firstClause(meaning, 60)}".`,
+    '**Reading hook:** one sentence that ties the most useful reading to one of the words above (or another common word at this level), e.g. 時間（じかん）. Use only the readings listed. An English sound-alike is fine if marked as a sound hook.',
+    '**Don\'t confuse:** one common look-alike kanji and the part that tells them apart, e.g. 待 vs 持: 彳 "going" vs 扌 "hand".',
+    '',
+    'ACCURACY',
+    '- This is a memory aid, not history. Do not claim what the kanji "originally" depicted or meant, or how it evolved, unless it is a well-known pictograph (山, 日, 木, 人), and never present the story itself as its origin.',
+    '- Do not invent readings or meanings; use the ones listed.',
+    '',
+    markdownNoteRules(level, 100)
+  );
+  return lines.join('\n');
 }
