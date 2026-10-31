@@ -13,6 +13,8 @@ import {
   setCategory,
   setLevelScope,
   setTag,
+  functionBrowseState,
+  withQuery,
   toAbsoluteHref,
   toggleLevel,
   type SearchUrlState,
@@ -139,5 +141,46 @@ describe('level scope toggle (Only N3 | All levels)', () => {
     const viaRail = toggleLevel(state(), 'N4');
     expect(levelScope(viaRail, 'N4')).toBe('only');
     expect(levelScope(toggleLevel(viaRail, 'N5'), 'N4')).toBe('custom');
+  });
+});
+
+describe('function filters (BUG-02/05/06)', () => {
+  const cats = new Set(['comparison', 'degree', 'cause-reason']);
+
+  it('a category chip clears q and levels and lists the whole category', () => {
+    expect(functionBrowseState({ id: 'degree', tagIds: ['degree-extent', 'excessive-degree'] }, cats)).toEqual({
+      q: '',
+      levels: [],
+      types: ['grammar'],
+      cat: 'degree',
+    });
+  });
+
+  it('a tag chip writes tag=, never cat=', () => {
+    const s = functionBrowseState({ id: 'degree-extent', tagIds: ['degree-extent'] }, cats);
+    expect(s.tag).toBe('degree-extent');
+    expect(s.cat).toBeUndefined();
+    expect(serializeSearchState(s).toString()).toBe('type=grammar&tag=degree-extent');
+  });
+
+  it('rewrites a cold cat=<tag id> to tag= and drops unknown categories', () => {
+    expect(parseSearchParams(new URLSearchParams('cat=degree-extent'), cats).state).toEqual({
+      q: '',
+      levels: [],
+      types: ['grammar'],
+      tag: 'degree-extent',
+    });
+    const unknown = parseSearchParams(new URLSearchParams('q=a&cat=nope'), cats);
+    expect(unknown.state).toEqual({ q: 'a', levels: [], types: [] });
+    expect(unknown.dirty).toBe(true);
+    expect(parseSearchParams(new URLSearchParams('type=grammar&cat=degree'), cats).dirty).toBe(false);
+  });
+
+  it('typing a new query clears the function filter (and the grammar type it implied)', () => {
+    const browsing = state({ cat: 'comparison', types: ['grammar'], levels: ['N3'] });
+    expect(withQuery(browsing, 'although')).toEqual({ q: 'although', levels: ['N3'], types: [] });
+    const filtered = state({ q: 'a', types: ['vocab'], more: 'vocab' });
+    expect(withQuery(filtered, 'ab')).toEqual({ q: 'ab', levels: [], types: ['vocab'] });
+    expect(withQuery(filtered, 'a')).toBe(filtered);
   });
 });

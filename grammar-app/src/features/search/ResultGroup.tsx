@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { memo, type MouseEvent, type ReactNode } from 'react';
 import type { DocType, Level, SearchHit } from '../../services/search/types';
 import ResultRow from './ResultRow';
 import { moreOptionId, optionId, type GroupView } from './resultDisplay';
@@ -13,9 +13,8 @@ const accent: Record<DocType, string> = {
 export interface RowContext {
   rankLevel: Level;
   activeId: string | null;
-  fromSearch: string;
   showTranslations: boolean;
-  onOpen: (id: string) => void;
+  onOpen: (id: string, to: string, e: MouseEvent<HTMLAnchorElement>) => void;
 }
 
 interface ResultGroupProps extends RowContext {
@@ -36,7 +35,6 @@ export function ResultRows({ hits, ...ctx }: RowContextProps) {
       hit={hit}
       rankLevel={ctx.rankLevel}
       active={ctx.activeId === optionId(hit.uid)}
-      fromSearch={ctx.fromSearch}
       showTranslations={ctx.showTranslations}
       onOpen={ctx.onOpen}
     />
@@ -44,7 +42,7 @@ export function ResultRows({ hits, ...ctx }: RowContextProps) {
 }
 
 /** One type group: `<h2>Grammar 8 of 12</h2>`, rows, and the "Show all" option (03-ux §3.2). */
-export default function ResultGroup({ view, onFooter, note, ...ctx }: ResultGroupProps) {
+function ResultGroup({ view, onFooter, note, ...ctx }: ResultGroupProps) {
   const headingId = `search-group-${view.type}`;
   const footerId = moreOptionId(view.type);
   return (
@@ -54,7 +52,7 @@ export default function ResultGroup({ view, onFooter, note, ...ctx }: ResultGrou
         className={`px-4 py-2.5 border-b border-slate-200 border-l-[3px] ${accent[view.type]} bg-slate-50/80 text-sm font-bold text-slate-800 flex items-baseline gap-2`}
       >
         {S.typeLabel[view.type]}
-        <span className="text-xs font-semibold text-slate-500">{S.groupCount(view.rows.length, view.total)}</span>
+        <span className="text-xs font-semibold text-slate-600">{S.groupCount(view.rows.length, view.total)}</span>
       </h2>
       {note}
       <ResultRows hits={view.rows} {...ctx} />
@@ -85,3 +83,5 @@ export default function ResultGroup({ view, onFooter, note, ...ctx }: ResultGrou
     </div>
   );
 }
+
+export default memo(ResultGroup);

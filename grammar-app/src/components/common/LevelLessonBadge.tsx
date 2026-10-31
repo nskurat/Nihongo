@@ -1,16 +1,17 @@
-import { Link } from 'react-router-dom';
+import type { MouseEvent } from 'react';
+import { toAbsoluteHref } from '../../features/search/searchUrl';
 import type { DocType, Level } from '../../services/search/types';
 
 interface LevelLessonBadgeProps {
   level: Level;
   lesson: number;
   type: DocType;
-  /** When set, the badge is its own link (collapsed duplicates). */
+  /** Router path; when set the badge is its own link (collapsed duplicates). A plain <a> so a
+   * long result list doesn't subscribe every badge to the router; `onClick` navigates. */
   to?: string;
-  state?: unknown;
   /** Solid (primary occurrence) or outlined (other occurrences). */
   variant?: 'solid' | 'outline';
-  onClick?: () => void;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
   className?: string;
 }
 
@@ -31,7 +32,6 @@ export default function LevelLessonBadge({
   lesson,
   type,
   to,
-  state,
   variant = 'solid',
   onClick,
   className = '',
@@ -42,14 +42,14 @@ export default function LevelLessonBadge({
   const label = `${level} · L${lesson}`;
   if (!to) return <span className={cls}>{label}</span>;
   return (
-    <Link
-      to={to}
-      state={state}
+    <a
+      href={toAbsoluteHref(to)}
       onClick={onClick}
+      tabIndex={-1}
       aria-label={`${level} lesson ${lesson}`}
       className={`${cls} relative z-10 max-md:min-h-10 max-md:min-w-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2`}
     >
       {label}
-    </Link>
+    </a>
   );
 }

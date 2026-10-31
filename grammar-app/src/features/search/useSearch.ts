@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { startTransition, useCallback, useEffect, useMemo, useState } from 'react';
 import type { CategoryChip, Level, SearchHit, SearchOptions, SearchResponse } from '../../services/search/types';
 import { searchClient } from './searchClient';
 import type { SearchUrlState } from './searchUrl';
 
-export const DEBOUNCE_MS = 80;
+// Short: the worker query is cheap and stale replies are dropped; this only coalesces bursts (paste, fast typing).
+export const DEBOUNCE_MS = 16;
 export const STALE_AFTER_MS = 150;
 export const SLOW_AFTER_MS = 800;
 
@@ -82,38 +83,42 @@ export function useSearch(state: SearchUrlState, rankLevel: Level): UseSearchRes
   const request = useMemo(() => buildRequest(state, rankLevel, retryToken), [state, rankLevel, retryToken]);
   const key = requestKey(request);
 
-  const [debounced, setDebounced] = useState<{ key: string; request: Request }>({ key, request });
   const [settled, setSettled] = useState<Settled | null>(null);
   const [timerKey, setTimerKey] = useState<{ stale?: string; slow?: string }>({});
   const [categories, setCategories] = useState<CategoryChip[]>([]);
 
-  // Debounce: only typing is delayed; filter changes and empty/browse modes go at once.
+  // Run each distinct request. Typing bursts are coalesced by a short timer; superseded
+  // replies are dropped, and the worker query itself is cheap (BUG-10).
   useEffect(() => {
-    if (debounced.key === key) return;
-    const typing = request.mode === 'search' && request.q !== debounced.request.q;
-    const t = setTimeout(() => setDebounced({ key, request }), typing ? DEBOUNCE_MS : 0);
-    return () => clearTimeout(t);
-  }, [key, request, debounced]);
-
-  // Run the debounced request.
-  useEffect(() => {
-    const { key: k, request: r } = debounced;
+    const r = request;
     if (r.mode === 'empty') return;
     let cancelled = false;
-    const run =
-      r.mode === 'search'
-        ? searchClient.search(r.q, r.opts).then((response) => ({ key: k, response }))
-        : searchClient
-            .listByTag(r.opts.tag ?? r.opts.category ?? '', { ...r.opts, tag: undefined } as Omit<SearchOptions, 'tag'>)
-            .then((browseHits) => ({ key: k, browseHits }));
-    run.then(
-      (s) => !cancelled && setSettled(s),
-      (error: unknown) => !cancelled && setSettled({ key: k, error })
-    );
+    const k = key;
+    const t = setTimeout(() => {
+      const run =
+        r.mode === 'search'
+          ? searchClient.search(r.q, r.opts).then((response) => ({ key: k, response }))
+          : searchClient
+              .listByTag(r.opts.tag ?? r.opts.category ?? '', { ...r.opts, tag: undefined } as Omit<SearchOptions, 'tag'>)
+              .then((browseHits) => ({ key: k, browseHits }));
+      // Rendering a result set is the expensive part: keep it interruptible so keystrokes
+      // (urgent) never wait behind it.
+      run.then(
+        (res) => {
+          if (!cancelled) startTransition(() => setSettled(res));
+        },
+        (error: unknown) => {
+          if (!cancelled) startTransition(() => setSettled({ key: k, error }));
+        }
+      );
+    }, DEBOUNCE_MS);
     return () => {
       cancelled = true;
+      clearTimeout(t);
     };
-  }, [debounced]);
+    // `key` encodes the request; `request` is a fresh object for every URL render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
 
   // Stale / slow indicators.
   const loading = request.mode !== 'empty' && settled?.key !== key;

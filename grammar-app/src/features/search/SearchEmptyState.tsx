@@ -5,7 +5,7 @@ import { S } from './strings';
 interface SearchEmptyStateProps {
   categories: CategoryChip[];
   onHint: (q: string) => void;
-  onPickCategory: (id: string) => void;
+  onPickCategory: (chip: CategoryChip) => void;
 }
 
 /** Empty query: example hints, the browse panel and the coverage note (03-ux §2 F4, M3). */
@@ -27,7 +27,7 @@ export default function SearchEmptyState({ categories, onHint, onPickCategory }:
         ))}
       </div>
       <BrowseByFunction categories={categories} onPickCategory={onPickCategory} />
-      <p className="text-xs text-slate-500">{S.coverage}</p>
+      <p className="text-xs text-slate-600">{S.coverage}</p>
     </div>
   );
 }

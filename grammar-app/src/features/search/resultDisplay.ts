@@ -52,8 +52,9 @@ export function reasonLine(hit: SearchHit): ReasonLine | null {
     case 'deinflected': {
       const d = hit.deinflection;
       if (!d) return hit.via ? { to: hit.via, note: S.dictionaryForm } : null;
-      const en = d.steps.map((s) => s.en).join(', ');
-      const ja = d.steps.map((s) => s.ja).join('・');
+      // Steps are a sequence (可能・受身 → 否定 → 過去), not alternatives: labels may contain ・.
+      const en = d.steps.map((s) => s.en).join(' → ');
+      const ja = d.steps.map((s) => s.ja).join(' → ');
       const note = en ? `${en}${ja ? `（${ja}）` : ''}` : S.dictionaryForm;
       return { from: d.input, to: d.lemma, note };
     }
@@ -66,10 +67,7 @@ export function reasonLine(hit: SearchHit): ReasonLine | null {
       return hit.via ? { note: S.inCompound(hit.via) } : null;
     case 'kanjiFromWord':
       return hit.via ? { note: S.kanjiIn(hit.via) } : null;
-    case 'tag': {
-      const label = hit.via ?? '';
-      return label ? { note: S.viaTag(label) } : null;
-    }
+    // 'tag' hits only appear in the tag/category view, whose heading already names it.
     default:
       return null;
   }

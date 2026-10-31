@@ -9,6 +9,7 @@ import { parseLevel, getDefaultLesson, clampLessonForLevel, isSectionAvailable }
 import HeaderSearch, { MobileSearchButton, type SearchEntryState } from './HeaderSearch';
 import { isSearchPath, SEARCH_PATH } from '../../features/search/searchUrl';
 import { prefetchSearchIndex } from '../../features/search/searchClient';
+import { searchNav } from '../../features/search/searchUiStore';
 import { MD_QUERY, useMediaQuery } from '../../features/search/useMediaQuery';
 
 const LESSON_SECTIONS = ['grammar', 'vocab', 'kanji', 'reading'];
@@ -50,6 +51,8 @@ export default function Header() {
     // Focus synchronously inside the tap so iOS opens the keyboard, then route.
     searchInputRef.current?.focus();
     prefetchSearchIndex();
+    if (searchNav.entering) return;
+    searchNav.entering = true;
     const entry: SearchEntryState = { searchEntry: true };
     navigate(SEARCH_PATH, { state: entry });
   };

@@ -43,11 +43,19 @@ function parseTypes(raw: string | null): DocType[] {
 }
 
 /** Applies the cross-field rules: tag XOR cat, tag/cat imply grammar, `more` must be shown. */
-export function normaliseSearchState(input: SearchUrlState): SearchUrlState {
+/**
+ * `categoryIds` (the alias-category ids, known on the results page) lets a `cat=` that is
+ * really a tag id become `tag=`, and drops unknown categories. Without it any slug is kept.
+ */
+export function normaliseSearchState(input: SearchUrlState, categoryIds?: ReadonlySet<string>): SearchUrlState {
   const levels = LEVELS.filter((l) => input.levels.includes(l));
   let types = DOC_TYPES.filter((t) => input.types.includes(t));
-  const tag = input.tag && getTagMeta(input.tag) ? input.tag : undefined;
-  const cat = !tag && input.cat && CATEGORY_ID.test(input.cat) ? input.cat : undefined;
+  let tag = input.tag && getTagMeta(input.tag) ? input.tag : undefined;
+  let cat = !tag && input.cat && CATEGORY_ID.test(input.cat) ? input.cat : undefined;
+  if (cat && categoryIds && !categoryIds.has(cat)) {
+    if (getTagMeta(cat)) tag = cat;
+    cat = undefined;
+  }
   if (tag || cat) types = ['grammar'];
   // Selecting every type is the same as no type filter.
   if (types.length === DOC_TYPES.length) types = [];
@@ -60,8 +68,8 @@ export function normaliseSearchState(input: SearchUrlState): SearchUrlState {
   return out;
 }
 
-export function serializeSearchState(state: SearchUrlState): URLSearchParams {
-  const s = normaliseSearchState(state);
+export function serializeSearchState(state: SearchUrlState, categoryIds?: ReadonlySet<string>): URLSearchParams {
+  const s = normaliseSearchState(state, categoryIds);
   const params = new URLSearchParams();
   if (s.q) params.set('q', s.q);
   if (s.levels.length) params.set('level', s.levels.join(','));
@@ -80,7 +88,7 @@ export interface ParsedSearchParams {
   dirty: boolean;
 }
 
-export function parseSearchParams(params: URLSearchParams): ParsedSearchParams {
+export function parseSearchParams(params: URLSearchParams, categoryIds?: ReadonlySet<string>): ParsedSearchParams {
   const moreRaw = params.get('more')?.toLowerCase();
   const raw: SearchUrlState = {
     q: params.get('q') ?? '',
@@ -90,7 +98,7 @@ export function parseSearchParams(params: URLSearchParams): ParsedSearchParams {
     cat: params.get('cat')?.trim().toLowerCase() || undefined,
     more: DOC_TYPES.find((t) => t === moreRaw),
   };
-  const state = normaliseSearchState(raw);
+  const state = normaliseSearchState(raw, categoryIds);
   const canonical = serializeSearchState(state).toString();
   return { state, canonical, dirty: canonical !== params.toString() };
 }
@@ -150,6 +158,35 @@ export function levelScope(state: Pick<SearchUrlState, 'levels'>, rankLevel: Lev
 
 export function setLevelScope(state: SearchUrlState, scope: 'only' | 'all', rankLevel: Level): SearchUrlState {
   return normaliseSearchState({ ...state, levels: scope === 'only' ? [rankLevel] : [] });
+}
+
+/**
+ * State for a category / tag chip: every grammar point in it, with no query and no level
+ * filter, so "45 points" opens 45 (BUG-02). Tag chips (a single tag whose id is the chip
+ * id) write `tag=`; alias categories write `cat=` (BUG-06).
+ */
+export function functionBrowseState(chip: { id: string; tagIds: readonly string[] }, categoryIds?: ReadonlySet<string>): SearchUrlState {
+  const isTagChip = !!getTagMeta(chip.id) && chip.tagIds.length === 1 && chip.tagIds[0] === chip.id;
+  const asCategory = categoryIds ? categoryIds.has(chip.id) && !isTagChip : !isTagChip;
+  return normaliseSearchState(
+    asCategory ? { q: '', levels: [], types: ['grammar'], cat: chip.id } : { q: '', levels: [], types: ['grammar'], tag: chip.id },
+    categoryIds
+  );
+}
+
+/**
+ * A newly typed query. The function filter (tag/cat) belongs to the browse view it came
+ * from, so it is cleared when the query changes (BUG-05), together with the grammar type it
+ * implied and the expanded group.
+ */
+export function withQuery(state: SearchUrlState, q: string): SearchUrlState {
+  if (q === state.q) return state;
+  const hadFunction = !!(state.tag || state.cat);
+  return normaliseSearchState({
+    q,
+    levels: state.levels,
+    types: hadFunction ? [] : state.types,
+  });
 }
 
 export function clearFilters(state: SearchUrlState): SearchUrlState {

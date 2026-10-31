@@ -35,7 +35,7 @@ const FOCUS = 'focus-visible:outline-none focus-visible:ring-2 focus-visible:rin
 function Count({ n, on }: { n?: number; on: boolean }) {
   if (n === undefined) return null;
   return (
-    <span className={`text-[11px] font-bold px-1.5 rounded-full ${on ? 'bg-white/20' : 'bg-slate-100 text-slate-500'}`}>{n}</span>
+    <span className={`text-[11px] font-bold px-1.5 rounded-full ${on ? 'bg-black/25 text-white' : 'bg-slate-100 text-slate-700'}`}>{n}</span>
   );
 }
 
@@ -97,7 +97,7 @@ export default function SearchFilters({ state, facetCounts, functionLabel, rankL
         type="button"
         aria-pressed={on}
         onClick={() => onChange(toggleLevel(state, level))}
-        aria-label={count !== undefined ? `${level}, ${count} results` : level}
+        aria-label={count !== undefined ? `${level}, ${count} result${count === 1 ? '' : 's'}` : level}
         className={`${
           layout === 'rail' ? 'flex-1 flex-col py-1' : 'shrink-0 gap-1.5 px-3 py-1.5 max-md:min-h-10'
         } inline-flex items-center justify-center rounded-lg border text-xs font-bold transition-colors cursor-pointer ${
@@ -106,7 +106,7 @@ export default function SearchFilters({ state, facetCounts, functionLabel, rankL
       >
         <span>{level}</span>
         {count !== undefined && (
-          <span className={`text-[10px] font-semibold ${on ? 'text-indigo-100' : 'text-slate-500'}`}>{count}</span>
+          <span className={`text-[10px] font-semibold ${on ? 'text-indigo-100' : 'text-slate-600'}`}>{count}</span>
         )}
       </button>
     );
@@ -122,20 +122,20 @@ export default function SearchFilters({ state, facetCounts, functionLabel, rankL
         </div>
         <div className="p-4 space-y-5">
           <fieldset className="space-y-1.5">
-            <legend className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">{S.type}</legend>
+            <legend className="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">{S.type}</legend>
             {typeButton(null, 'rail')}
             {DOC_TYPES.map((t) => typeButton(t, 'rail'))}
           </fieldset>
           <fieldset>
-            <legend className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">{S.level}</legend>
+            <legend className="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">{S.level}</legend>
             <div className="flex gap-1">{LEVELS.map((l) => levelButton(l, 'rail'))}</div>
           </fieldset>
           <div>
-            <h3 className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">{S.function}</h3>
+            <h3 className="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">{S.function}</h3>
             {functionActive ? (
               <FunctionPill state={state} label={functionLabel} onChange={onChange} />
             ) : (
-              <p className="text-xs text-slate-500">{S.functionAny}</p>
+              <p className="text-xs text-slate-600">{S.functionAny}</p>
             )}
             <Link
               to={buildSearchPath({ types: ['grammar'] })}
