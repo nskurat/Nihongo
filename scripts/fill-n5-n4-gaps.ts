@@ -1,12 +1,16 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import {
+  buildCoverageIndex,
+  buildSourceIndex,
   byFrequency,
   cleanKunyomi,
+  cleanOnyomi,
   displayMeaning,
   isWordCovered,
   kanjiOf,
   pickCompounds,
   pickLesson,
+  refreshAppendedRow,
   stripAnnotation,
   strokeOrderLink,
   type Compound,
@@ -26,7 +30,9 @@ import {
  *  - words → the lesson that teaches their earliest kanji at that level, else the lesson
  *    with the fewest words.
  * Also fills `null` compound readings/meanings in existing kanji where the compound is a
- * list word. No example sentences are invented. Deterministic and idempotent.
+ * list word, normalises existing kanji readings (kun okurigana as "・", no prefix/suffix
+ * forms), and keeps previously appended words in step with the list's spelling and gloss
+ * (uids unchanged). No example sentences are invented. Deterministic and idempotent.
  */
 
 type Level = 'N5' | 'N4';
@@ -58,8 +64,19 @@ const files = Object.fromEntries(
   ])
 );
 const allKanji = () => new Set(Object.values(files).flatMap((f) => Object.values(f.kanji).flat().map((k) => k.kanji)));
-const allForms = () =>
-  new Set(Object.values(files).flatMap((f) => Object.values(f.vocab).flat().flatMap((v) => stripAnnotation(v.word).split(/[／/]/))));
+const coverage = () => buildCoverageIndex(Object.values(files).flatMap((f) => Object.values(f.vocab).flat()));
+
+// Appended rows (no example sentence) follow the list's current spelling and gloss.
+const sourceIndex = buildSourceIndex(srcVocab);
+const refreshed: string[] = [];
+for (const [lv, f] of Object.entries(files)) {
+  for (const row of Object.values(f.vocab).flat()) {
+    const update = refreshAppendedRow(row as VocabItem & { level: string }, sourceIndex);
+    if (!update) continue;
+    if (lv !== 'n3') refreshed.push(`${row.word}→${update.word}`);
+    Object.assign(row, update);
+  }
+}
 
 const gloss = new Map(srcVocab.filter((w) => w.kanji).map((w) => [w.kanji, w]));
 
@@ -73,6 +90,10 @@ function fill(level: Level): void {
     .map((w): Compound => ({ word: w.kanji, reading: w.kana, meaning: w.meaning }));
 
   // ---- kanji
+  for (const item of Object.values(kanjiFile).flat()) {
+    item.onyomi = cleanOnyomi(item.onyomi as string[]);
+    item.kunyomi = cleanKunyomi(item.kunyomi as string[]);
+  }
   const taught = allKanji();
   const missing = Object.entries(srcKanji).filter(([k, s]) => s.level === level && !taught.has(k)).sort(byFrequency).map(([k]) => k);
   const total = lessons.reduce((n, l) => n + kanjiFile[l].length, 0) + missing.length;
@@ -87,7 +108,7 @@ function fill(level: Level): void {
     kanjiFile[l].push({
       uid: `${lv}-kanji-${l}-${kanjiFile[l].length + 1}`,
       level, section: 'kanji', lesson: l, kanji: k,
-      onyomi: s.onyomi, kunyomi: cleanKunyomi(s.kunyomi), meaning: displayMeaning(s.meanings),
+      onyomi: cleanOnyomi(s.onyomi), kunyomi: cleanKunyomi(s.kunyomi), meaning: displayMeaning(s.meanings),
       strokes: s.strokes, radical: s.radical,
       ...(compounds.length ? { compounds } : {}),
       strokeOrderLink: strokeOrderLink(k),
@@ -108,11 +129,11 @@ function fill(level: Level): void {
   // ---- vocab
   const kanjiLesson = new Map<string, number>();
   for (const l of lessons) for (const k of kanjiFile[l]) if (!kanjiLesson.has(k.kanji)) kanjiLesson.set(k.kanji, l);
-  const forms = allForms();
+  const index = coverage();
   const seen = new Set<string>();
   const newWords = srcVocab.filter((w) => {
     const key = `${w.kanji}|${w.kana}`;
-    if (w.level !== level || seen.has(key) || isWordCovered(w, forms)) return false;
+    if (w.level !== level || seen.has(key) || isWordCovered(w, index)) return false;
     seen.add(key);
     return true;
   });
@@ -145,6 +166,7 @@ function fill(level: Level): void {
   }
 }
 
+console.log(`appended N5/N4 rows refreshed from the list: ${refreshed.length} ${refreshed.join(' ')}`);
 // N5 first, so N4 sees the words N5 just took.
 fill('N5');
 fill('N4');

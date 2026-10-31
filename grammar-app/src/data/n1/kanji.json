@@ -435,8 +435,7 @@
       "kanji": "応",
       "onyomi": [
         "オウ",
-        "ヨウ",
-        "-ノウ"
+        "ヨウ"
       ],
       "kunyomi": [
         "あた・る",
@@ -775,9 +774,9 @@
           "meaning": "attitude, conditions, tendency"
         },
         {
-          "word": "態と",
-          "reading": "わざと",
-          "meaning": "on purpose"
+          "word": "態々",
+          "reading": "わざわざ",
+          "meaning": "expressly, specially, doing something especially rather than incidentally"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%85%8B%23kanji"
@@ -2487,9 +2486,9 @@
           "meaning": "why, how"
         },
         {
-          "word": "其れ故",
-          "reading": "それゆえ",
-          "meaning": "therefore, for that reason, so"
+          "word": "何故なら",
+          "reading": "なぜなら",
+          "meaning": "because"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%95%85%23kanji"
@@ -3467,7 +3466,7 @@
           "meaning": "ceremony, rite, ritual"
         },
         {
-          "word": "御辞儀",
+          "word": "お辞儀",
           "reading": "おじぎ",
           "meaning": "bow"
         },
@@ -4308,7 +4307,6 @@
         "シ"
       ],
       "kunyomi": [
-        "シリング",
         "こころざ・す",
         "こころざし"
       ],
@@ -4462,19 +4460,19 @@
           "meaning": "act, deed, conduct"
         },
         {
-          "word": "為来り",
-          "reading": "しきたり",
-          "meaning": "customs"
-        },
-        {
           "word": "その為",
           "reading": "そのため",
           "meaning": "hence, for that reason"
         },
         {
-          "word": "為さる",
-          "reading": "なさる",
-          "meaning": "to do"
+          "word": "為替",
+          "reading": "かわせ",
+          "meaning": "money order, exchange"
+        },
+        {
+          "word": "為す",
+          "reading": "なす",
+          "meaning": "to accomplish, to do"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%82%BA%23kanji"
@@ -8129,14 +8127,14 @@
           "meaning": "to escape from, to be rescued from, to avoid, to evade, to avert, to elude, to be exempted, to be relieved"
         },
         {
-          "word": "御免なさい",
-          "reading": "ごめんなさい",
-          "meaning": "I beg your pardon, excuse me"
+          "word": "免税",
+          "reading": "めんぜい",
+          "meaning": "tax exemption"
         },
         {
-          "word": "御免ください",
-          "reading": "ごめんください",
-          "meaning": "May I come in?"
+          "word": "免許",
+          "reading": "めんきょ",
+          "meaning": "license, permit, certificate"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%85%8D%23kanji"
@@ -9566,7 +9564,7 @@
         {
           "word": "即する",
           "reading": "そくする",
-          "meaning": "to conform to, to agree with, to be adapted to,"
+          "meaning": "to conform to, to agree with, to be adapted to"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%B3%23kanji"
@@ -11452,8 +11450,7 @@
       "lesson": 10,
       "kanji": "縁",
       "onyomi": [
-        "エン",
-        "-ネン"
+        "エン"
       ],
       "kunyomi": [
         "ふち",
@@ -11585,11 +11582,6 @@
           "word": "矢鱈",
           "reading": "やたら",
           "meaning": "randomly, recklessly, blindly"
-        },
-        {
-          "word": "矢っ張り",
-          "reading": "やっぱり",
-          "meaning": "also, as I thought, still, in spite of, absolutely"
         },
         {
           "word": "矢印",
@@ -15347,7 +15339,7 @@
           "meaning": "viewing"
         },
         {
-          "word": "御覧なさい",
+          "word": "ご覧なさい",
           "reading": "ごらんなさい",
           "meaning": "(please) look, (please) try to do"
         }
@@ -16420,11 +16412,6 @@
           "word": "仰ぐ",
           "reading": "あおぐ",
           "meaning": "to look up (to), to respect; to ask for"
-        },
-        {
-          "word": "仰っしゃる",
-          "reading": "おっしゃる",
-          "meaning": "to say, to speak, to tell, to talk"
         },
         {
           "word": "信仰",
@@ -18176,11 +18163,6 @@
       "radical": "寸 (inch)",
       "compounds": [
         {
-          "word": "一寸",
-          "reading": "ちょっと",
-          "meaning": "(ateji) (adv int) (uk) just a minute, a short time, a while, just a little, somewhat, easily, readily, rath"
-        },
-        {
           "word": "寸法",
           "reading": "すんぽう",
           "meaning": "measurement, size, dimension"
@@ -18876,14 +18858,14 @@
           "meaning": "suddenly, all of a sudden"
         },
         {
-          "word": "如何に",
-          "reading": "いかに",
-          "meaning": "how?, in what way?, how much?, however, whatever"
-        },
-        {
           "word": "如何にも",
           "reading": "いかにも",
           "meaning": "indeed, really, phrase meaning agreement"
+        },
+        {
+          "word": "如何して",
+          "reading": "どうして",
+          "meaning": "why?, for what reason, how, in what way, for what purpose, what for"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A6%82%23kanji"
@@ -19376,11 +19358,6 @@
           "word": "呉れ呉れも",
           "reading": "くれぐれも",
           "meaning": "repeatedly, sincerely, earnestly"
-        },
-        {
-          "word": "呉れる",
-          "reading": "くれる",
-          "meaning": "to give"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%91%89%23kanji"
@@ -19413,11 +19390,6 @@
           "word": "凡ゆる",
           "reading": "あらゆる",
           "meaning": "all, every"
-        },
-        {
-          "word": "大凡",
-          "reading": "おおよそ",
-          "meaning": "about, approximately"
         },
         {
           "word": "平凡",
@@ -21693,18 +21665,6 @@
       "meaning": "or again, furthermore, on the other hand",
       "strokes": 2,
       "radical": "又 (again)",
-      "compounds": [
-        {
-          "word": "又は",
-          "reading": "または",
-          "meaning": "or, otherwise"
-        },
-        {
-          "word": "又",
-          "reading": "また",
-          "meaning": "again, and"
-        }
-      ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%88%23kanji"
     },
     {
@@ -22205,11 +22165,6 @@
           "word": "無沙汰",
           "reading": "ぶさた",
           "meaning": "neglecting to stay in contact"
-        },
-        {
-          "word": "御無沙汰",
-          "reading": "ごぶさた",
-          "meaning": "not writing or contacting for a while"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B2%99%23kanji"
@@ -25114,11 +25069,6 @@
           "word": "於",
           "reading": "お",
           "meaning": "at, in, on"
-        },
-        {
-          "word": "於いて",
-          "reading": "おいて",
-          "meaning": "at, in, on"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%96%BC%23kanji"
@@ -26652,7 +26602,7 @@
       ],
       "meaning": "comet",
       "strokes": 11,
-      "radical": "彐 (?)",
+      "radical": "彐 (snout)",
       "strokeOrderLink": "https://jisho.org/search/%E5%BD%97%23kanji"
     },
     {
@@ -28027,11 +27977,6 @@
           "word": "無沙汰",
           "reading": "ぶさた",
           "meaning": "neglecting to stay in contact"
-        },
-        {
-          "word": "御無沙汰",
-          "reading": "ごぶさた",
-          "meaning": "not writing or contacting for a while"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B1%B0%23kanji"

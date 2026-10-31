@@ -1029,7 +1029,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
-      "word": "朝御飯",
+      "word": "朝ご飯",
       "reading": "あさごはん",
       "meaning": "breakfast"
     },
@@ -1164,7 +1164,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
-      "word": "晩御飯",
+      "word": "晩ご飯",
       "reading": "ばんごはん",
       "meaning": "dinner, evening meal"
     },
@@ -1191,7 +1191,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
-      "word": "昼御飯",
+      "word": "昼ご飯",
       "reading": "ひるごはん",
       "meaning": "lunch, midday meal"
     },
@@ -1480,7 +1480,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
-      "word": "如何",
+      "word": "どう",
       "reading": "どう",
       "meaning": "how, in what way"
     },
@@ -2615,6 +2615,15 @@
       "word": "廊下",
       "reading": "ろうか",
       "meaning": "corridor"
+    },
+    {
+      "uid": "n5-vocab-7-37",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "上げる",
+      "reading": "あげる",
+      "meaning": "to raise, to lift"
     }
   ],
   "8": [
@@ -3113,7 +3122,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 9,
-      "word": "然し",
+      "word": "しかし",
       "reading": "しかし",
       "meaning": "However"
     },
@@ -3224,6 +3233,15 @@
       "word": "読む",
       "reading": "よむ",
       "meaning": "to read"
+    },
+    {
+      "uid": "n5-vocab-9-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "聞く",
+      "reading": "きく",
+      "meaning": "to hear, to listen, to ask"
     }
   ],
   "10": [
@@ -3800,7 +3818,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 11,
-      "word": "遣る",
+      "word": "やる",
       "reading": "やる",
       "meaning": "to do"
     },
@@ -5277,6 +5295,15 @@
       "word": "目",
       "reading": "め",
       "meaning": "eye(s)"
+    },
+    {
+      "uid": "n5-vocab-16-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "付ける",
+      "reading": "つける",
+      "meaning": "to turn on"
     }
   ],
   "17": [
@@ -5562,6 +5589,15 @@
       "word": "呼ぶ",
       "reading": "よぶ",
       "meaning": "to call (one's name); to invite"
+    },
+    {
+      "uid": "n5-vocab-17-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "無くす",
+      "reading": "なくす",
+      "meaning": "to lose something"
     }
   ],
   "18": [
@@ -5713,7 +5749,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 18,
-      "word": "有る",
+      "word": "ある",
       "reading": "ある",
       "meaning": "to be, to have"
     },
@@ -6622,7 +6658,7 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 21,
-      "word": "此方",
+      "word": "こっち",
       "reading": "こっち",
       "meaning": "this person or way"
     },
@@ -7009,6 +7045,15 @@
       "word": "洋服",
       "reading": "ようふく",
       "meaning": "Western-style clothes"
+    },
+    {
+      "uid": "n5-vocab-22-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "服",
+      "reading": "ふく",
+      "meaning": "clothes"
     }
   ],
   "23": [
@@ -7575,6 +7620,15 @@
       "word": "零",
       "reading": "れい",
       "meaning": "zero, nought"
+    },
+    {
+      "uid": "n5-vocab-24-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "家",
+      "reading": "いえ",
+      "meaning": "house, home"
     }
   ],
   "25": [

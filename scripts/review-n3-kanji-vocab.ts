@@ -1,12 +1,16 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import {
+  buildCoverageIndex,
+  buildSourceIndex,
   byFrequency,
   cleanKunyomi,
+  cleanOnyomi,
   displayMeaning,
   isWordCovered,
   kanjiOf,
   pickCompounds,
   pickLesson,
+  refreshAppendedRow,
   stripAnnotation,
   strokeOrderLink,
   type Compound,
@@ -102,7 +106,7 @@ function newKanjiItem(kanji: string, lesson: number): KanjiItem {
   const s = srcKanji[kanji];
   return {
     uid: '', level: 'N3', section: 'kanji', lesson, kanji,
-    onyomi: s.onyomi, kunyomi: cleanKunyomi(s.kunyomi), meaning: '', strokes: 0, radical: '',
+    onyomi: cleanOnyomi(s.onyomi), kunyomi: cleanKunyomi(s.kunyomi), meaning: '', strokes: 0, radical: '',
   };
 }
 
@@ -152,8 +156,8 @@ for (const l of lessons) {
       section: 'kanji',
       lesson: l,
       kanji: item.kanji,
-      onyomi: item.onyomi,
-      kunyomi: item.kunyomi,
+      onyomi: cleanOnyomi(item.onyomi),
+      kunyomi: cleanKunyomi(item.kunyomi),
       meaning: displayMeaning(s.meanings),
       strokes: s.strokes,
       radical: s.radical,
@@ -166,8 +170,17 @@ for (const l of lessons) {
 
 // ---- Vocab -----------------------------------------------------------------------
 
-const forms = new Set<string>();
-for (const v of [...lowerVocab, ...lessons.flatMap((l) => vocabFile[l] ?? [])]) forms.add(stripAnnotation(v.word));
+// Rows appended earlier (no example sentence) follow the list's current spelling and gloss.
+const sourceIndex = buildSourceIndex(srcVocab);
+const refreshedRows: string[] = [];
+for (const v of lessons.flatMap((l) => vocabFile[l] ?? [])) {
+  const update = refreshAppendedRow(v as VocabItem & { level: string }, sourceIndex);
+  if (!update) continue;
+  refreshedRows.push(update.word === v.word ? `${v.word}【${v.reading}】(gloss)` : `${v.word}→${update.word}`);
+  Object.assign(v, update);
+}
+
+const forms = buildCoverageIndex([...lowerVocab, ...lessons.flatMap((l) => vocabFile[l] ?? [])]);
 const seenWord = new Set<string>();
 const newWords = srcVocab.filter((w) => {
   const key = `${w.kanji}|${w.kana}`;
@@ -216,6 +229,7 @@ const vCounts = lessons.map((l) => vocabFile[l].length);
 console.log(`kanji: ${replaced.length} repeats replaced, ${missing.length - replaced.length} appended`);
 replaced.forEach((r) => console.log(`  replaced ${r}`));
 console.log(`kanji per lesson ${Math.min(...kCounts)}–${Math.max(...kCounts)}, total ${kCounts.reduce((a, b) => a + b, 0)}`);
+console.log(`appended rows refreshed from the list: ${refreshedRows.length} ${refreshedRows.join(' ')}`);
 console.log(`vocab: ${newWords.length} N3-list words appended, ${refilled} blank glosses refilled; per lesson ${Math.min(...vCounts)}–${Math.max(...vCounts)}, total ${vCounts.reduce((a, b) => a + b, 0)}`);
 const offList = lessons.flatMap((l) => kanjiFile[l]).filter((k) => srcKanji[k.kanji]?.level !== 'N3').map((k) => `${k.kanji}(${srcKanji[k.kanji]?.level ?? '—'})`);
 console.log(`kept non-N3-list kanji (textbook context): ${offList.length} ${offList.join(' ')}`);

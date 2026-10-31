@@ -625,7 +625,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 2,
-      "word": "先ず",
+      "word": "まず",
       "reading": "まず",
       "meaning": "first of all"
     },
@@ -1540,7 +1540,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 5,
-      "word": "呉れる",
+      "word": "くれる",
       "reading": "くれる",
       "meaning": "to give"
     },
@@ -1549,7 +1549,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 5,
-      "word": "御主人",
+      "word": "ご主人",
       "reading": "ごしゅじん",
       "meaning": "(honorable) your husband"
     },
@@ -2656,6 +2656,15 @@
       "word": "レジ",
       "reading": "レジ",
       "meaning": "register"
+    },
+    {
+      "uid": "n4-vocab-8-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "席",
+      "reading": "せき",
+      "meaning": "a seat"
     }
   ],
   "9": [
@@ -2919,7 +2928,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 9,
-      "word": "積もり",
+      "word": "つもり",
       "reading": "つもり",
       "meaning": "intention"
     },
@@ -3906,7 +3915,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 12,
-      "word": "筈",
+      "word": "はず",
       "reading": "はず",
       "meaning": "it should be so"
     },
@@ -4585,6 +4594,15 @@
       "word": "やっと",
       "reading": "やっと",
       "meaning": "at last, finally"
+    },
+    {
+      "uid": "n4-vocab-14-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "漬ける",
+      "reading": "つける",
+      "meaning": "to soak, to moisten, to pickle"
     }
   ],
   "15": [
@@ -7435,7 +7453,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 23,
-      "word": "程",
+      "word": "ほど",
       "reading": "ほど",
       "meaning": "degree, extent"
     },
@@ -8021,7 +8039,7 @@
       "level": "N4",
       "section": "vocab",
       "lesson": 25,
-      "word": "為",
+      "word": "ため",
       "reading": "ため",
       "meaning": "good, advantage, in order to"
     },

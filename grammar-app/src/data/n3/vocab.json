@@ -651,7 +651,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
-      "word": "お目出度う",
+      "word": "おめでとう",
       "reading": "おめでとう",
       "meaning": "Congratulations!, an auspicious occasion!"
     },
@@ -1266,6 +1266,15 @@
       "word": "ワイン",
       "reading": "ワイン",
       "meaning": "wine"
+    },
+    {
+      "uid": "n3-vocab-1-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "是非",
+      "reading": "ぜひ",
+      "meaning": "certainly, without fail"
     }
   ],
   "2": [
@@ -2577,6 +2586,15 @@
       "word": "例",
       "reading": "れい",
       "meaning": "instance, example, case"
+    },
+    {
+      "uid": "n3-vocab-2-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "不利",
+      "reading": "ふり",
+      "meaning": "disadvantage, drawback"
     }
   ],
   "3": [
@@ -3720,7 +3738,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
-      "word": "為る",
+      "word": "なる",
       "reading": "なる",
       "meaning": "to change, to be of use, to reach to"
     },
@@ -3876,6 +3894,15 @@
       "word": "わがまま",
       "reading": "わがまま",
       "meaning": "selfishness, egoism, willfulness"
+    },
+    {
+      "uid": "n3-vocab-3-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "幕",
+      "reading": "まく",
+      "meaning": "curtain, act (in play)"
     }
   ],
   "4": [
@@ -5197,7 +5224,7 @@
       "lesson": 4,
       "word": "来",
       "reading": "らい",
-      "meaning": ", for (10 days), next (year)"
+      "meaning": "for (10 days), next (year)"
     },
     {
       "uid": "n3-vocab-4-129",
@@ -5207,6 +5234,15 @@
       "word": "別れ",
       "reading": "わかれ",
       "meaning": "parting, separation, farewell"
+    },
+    {
+      "uid": "n3-vocab-4-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "元",
+      "reading": "もと",
+      "meaning": "origin, original; former"
     }
   ],
   "5": [
@@ -6046,7 +6082,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 5,
-      "word": "位",
+      "word": "くらい",
       "reading": "くらい",
       "meaning": "grade, rank, about"
     },
@@ -7801,6 +7837,15 @@
       "word": "連想",
       "reading": "れんそう",
       "meaning": "association (of ideas), suggestion"
+    },
+    {
+      "uid": "n3-vocab-6-131",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "就く",
+      "reading": "つく",
+      "meaning": "to settle in (place), to take (seat position), to study (under teacher)"
     }
   ],
   "7": [
@@ -9797,7 +9842,7 @@
       "lesson": 8,
       "word": "上",
       "reading": "かみ",
-      "meaning": "first volume; superior quality; governmental"
+      "meaning": "upper part, top; upper reaches (of a river); the authorities"
     },
     {
       "uid": "n3-vocab-8-70",
@@ -10338,6 +10383,15 @@
       "word": "脇",
       "reading": "わき",
       "meaning": "side"
+    },
+    {
+      "uid": "n3-vocab-8-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "基",
+      "reading": "もと",
+      "meaning": "basis"
     }
   ],
   "9": [
@@ -11256,7 +11310,7 @@
       "lesson": 9,
       "word": "下",
       "reading": "しも",
-      "meaning": "under, below, beneath"
+      "meaning": "lower part, bottom; lower reaches (of a river)"
     },
     {
       "uid": "n3-vocab-9-90",
@@ -11617,6 +11671,15 @@
       "word": "綿",
       "reading": "わた",
       "meaning": "cotton"
+    },
+    {
+      "uid": "n3-vocab-9-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "素",
+      "reading": "もと",
+      "meaning": "prime"
     }
   ],
   "10": [
@@ -12574,7 +12637,7 @@
       "lesson": 10,
       "word": "人工",
       "reading": "じんこう",
-      "meaning": "artificial, man made, human work,"
+      "meaning": "artificial, man made, human work"
     },
     {
       "uid": "n3-vocab-10-95",
@@ -12890,6 +12953,15 @@
       "word": "笑い",
       "reading": "わらい",
       "meaning": "laugh, laughter, smile"
+    },
+    {
+      "uid": "n3-vocab-10-130",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "夕べ",
+      "reading": "ゆうべ",
+      "meaning": "evening"
     }
   ],
   "11": [
@@ -13965,7 +14037,7 @@
       "lesson": 11,
       "word": "中",
       "reading": "ちゅう",
-      "meaning": "inside, middle, among"
+      "meaning": "medium, average; during, in the middle of"
     },
     {
       "uid": "n3-vocab-11-105",
@@ -14590,7 +14662,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 12,
-      "word": "或",
+      "word": "ある",
       "reading": "ある",
       "meaning": "a certain..., some..."
     },
@@ -14689,7 +14761,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 12,
-      "word": "何時も",
+      "word": "いつも",
       "reading": "いつも",
       "meaning": "always, usually, every time, never (with neg. verb)"
     },
@@ -14952,7 +15024,7 @@
       "lesson": 12,
       "word": "暮れ",
       "reading": "くれ",
-      "meaning": "year end,"
+      "meaning": "year end"
     },
     {
       "uid": "n3-vocab-12-79",
@@ -24190,6 +24262,15 @@
       "word": "離婚",
       "reading": "りこん",
       "meaning": "divorce"
+    },
+    {
+      "uid": "n3-vocab-18-129",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "罹る",
+      "reading": "かかる",
+      "meaning": "to suffer from"
     }
   ],
   "19": [
@@ -25526,6 +25607,15 @@
       "word": "冷静",
       "reading": "れいせい",
       "meaning": "calm, coolness"
+    },
+    {
+      "uid": "n3-vocab-19-129",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "効く",
+      "reading": "きく",
+      "meaning": "to be effective"
     }
   ],
   "20": [
@@ -29535,7 +29625,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
-      "word": "御",
+      "word": "お",
       "reading": "お",
       "meaning": "honourable"
     },
@@ -29627,7 +29717,7 @@
       "lesson": 22,
       "word": "下",
       "reading": "げ",
-      "meaning": "under, below, beneath"
+      "meaning": "lower (in rank or quality), inferior; second volume"
     },
     {
       "uid": "n3-vocab-22-79",
@@ -30057,7 +30147,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
-      "word": "様",
+      "word": "よう",
       "reading": "よう",
       "meaning": "way, manner, kind"
     },
@@ -30078,6 +30168,15 @@
       "word": "連続",
       "reading": "れんぞく",
       "meaning": "consecutive, continuity, continuing"
+    },
+    {
+      "uid": "n3-vocab-22-129",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "大した",
+      "reading": "たいした",
+      "meaning": "significant, great, considerable"
     }
   ],
   "23": [
@@ -30540,7 +30639,7 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 23,
-      "word": "何時か",
+      "word": "いつか",
       "reading": "いつか",
       "meaning": "sometime, someday, one day"
     },
@@ -31290,6 +31389,15 @@
       "word": "ロケット",
       "reading": "ロケット",
       "meaning": "locket, rocket"
+    },
+    {
+      "uid": "n3-vocab-23-129",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "取れる",
+      "reading": "とれる",
+      "meaning": "to come off, to be taken off"
     }
   ],
   "24": [
@@ -31718,7 +31826,7 @@
       "lesson": 24,
       "word": "いえ",
       "reading": "いえ",
-      "meaning": "TODO same as いいえ?"
+      "meaning": "no; well, um (softer いいえ)"
     },
     {
       "uid": "n3-vocab-24-42",
@@ -31835,7 +31943,7 @@
       "lesson": 24,
       "word": "後",
       "reading": "うしろ",
-      "meaning": "afterwards, since then, in the future"
+      "meaning": "back, behind, rear"
     },
     {
       "uid": "n3-vocab-24-55",
@@ -32502,6 +32610,15 @@
       "word": "輪",
       "reading": "わ",
       "meaning": "ring, hoop, circle"
+    },
+    {
+      "uid": "n3-vocab-24-129",
+      "level": "N3",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "除く",
+      "reading": "のぞく",
+      "meaning": "to remove, to exclude, to except"
     }
   ]
 }

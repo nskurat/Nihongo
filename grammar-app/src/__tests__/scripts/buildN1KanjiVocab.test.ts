@@ -66,6 +66,12 @@ describe('coverage by lower-level vocab', () => {
     expect(isWordCovered(word('', 'あっさり'), index)).toBe(true);
     expect(isWordCovered(word('', 'はし'), index)).toBe(false);
   });
+
+  it('matches a kanji spelling of a kana-written row when the glosses agree', () => {
+    const glossed = buildCoveredWordIndex([{ word: 'それ', reading: 'それ', meaning: 'that one' }]);
+    expect(isWordCovered({ ...word('其れ', 'それ'), meaning: 'it, that' }, glossed)).toBe(true);
+    expect(isWordCovered({ ...word('反れ', 'それ'), meaning: 'to deviate' }, glossed)).toBe(false);
+  });
 });
 
 describe('kanji fields', () => {

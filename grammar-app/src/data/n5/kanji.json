@@ -2341,10 +2341,10 @@
         "コウ"
       ],
       "kunyomi": [
-        "たか.い",
+        "たか・い",
         "たか",
-        "たか.まる",
-        "たか.める"
+        "たか・まる",
+        "たか・める"
       ],
       "meaning": "tall, high, expensive",
       "strokes": 10,
@@ -2383,7 +2383,7 @@
         "アン"
       ],
       "kunyomi": [
-        "やす.い"
+        "やす・い"
       ],
       "meaning": "cheap, peaceful",
       "strokes": 6,
@@ -2414,7 +2414,7 @@
       ],
       "kunyomi": [
         "おお",
-        "おお.きい"
+        "おお・きい"
       ],
       "meaning": "large, big, very much",
       "strokes": 3,
@@ -2473,7 +2473,7 @@
         "ショウ"
       ],
       "kunyomi": [
-        "ちい.さい",
+        "ちい・さい",
         "こ",
         "お"
       ],
@@ -2509,8 +2509,8 @@
         "シン"
       ],
       "kunyomi": [
-        "あたら.しい",
-        "あら.た",
+        "あたら・しい",
+        "あら・た",
         "にい"
       ],
       "meaning": "new",
@@ -2540,8 +2540,8 @@
         "コ"
       ],
       "kunyomi": [
-        "ふる.い",
-        "ふる.す"
+        "ふる・い",
+        "ふる・す"
       ],
       "meaning": "old",
       "strokes": 5,
@@ -2572,7 +2572,7 @@
       ],
       "kunyomi": [
         "あお",
-        "あお.い"
+        "あお・い"
       ],
       "meaning": "blue",
       "strokes": 8,
@@ -2603,7 +2603,7 @@
       ],
       "kunyomi": [
         "しろ",
-        "しろ.い",
+        "しろ・い",
         "しら"
       ],
       "meaning": "white",
@@ -2635,9 +2635,9 @@
       ],
       "kunyomi": [
         "あか",
-        "あか.い",
-        "あか.らむ",
-        "あか.らめる"
+        "あか・い",
+        "あか・らむ",
+        "あか・らめる"
       ],
       "meaning": "red",
       "strokes": 7,
@@ -2667,7 +2667,7 @@
       ],
       "kunyomi": [
         "くろ",
-        "くろ.い"
+        "くろ・い"
       ],
       "meaning": "black",
       "strokes": 11,
@@ -2702,9 +2702,9 @@
         "うえ",
         "うわ",
         "かみ",
-        "あ.げる",
-        "あ.がる",
-        "のぼ.る"
+        "あ・げる",
+        "あ・がる",
+        "のぼ・る"
       ],
       "meaning": "on, above, over; go up",
       "strokes": 3,
@@ -2742,10 +2742,10 @@
         "した",
         "しも",
         "もと",
-        "さ.げる",
-        "さ.がる",
-        "くだ.る",
-        "お.りる"
+        "さ・げる",
+        "さ・がる",
+        "くだ・る",
+        "お・りる"
       ],
       "meaning": "below, under; go down",
       "strokes": 3,
@@ -2942,8 +2942,8 @@
         "コウ"
       ],
       "kunyomi": [
-        "す.く",
-        "この.む"
+        "す・く",
+        "この・む"
       ],
       "meaning": "to like, favorite",
       "strokes": 6,
@@ -3051,9 +3051,9 @@
         "ジキ"
       ],
       "kunyomi": [
-        "た.べる",
-        "く.う",
-        "く.らう"
+        "た・べる",
+        "く・う",
+        "く・らう"
       ],
       "meaning": "to eat",
       "strokes": 9,
@@ -3092,7 +3092,7 @@
         "イン"
       ],
       "kunyomi": [
-        "の.む"
+        "の・む"
       ],
       "meaning": "to drink",
       "strokes": 12,
@@ -3183,7 +3183,7 @@
         "キン"
       ],
       "kunyomi": [
-        "ちか.い"
+        "ちか・い"
       ],
       "meaning": "nearby, close",
       "strokes": 7,
@@ -3340,8 +3340,8 @@
       "kunyomi": [
         "そと",
         "ほか",
-        "はず.す",
-        "はず.れる"
+        "はず・す",
+        "はず・れる"
       ],
       "meaning": "outside, foreign",
       "strokes": 5,
@@ -3473,7 +3473,7 @@
         "ショ"
       ],
       "kunyomi": [
-        "か.く"
+        "か・く"
       ],
       "meaning": "to write; books",
       "strokes": 10,
@@ -3508,8 +3508,8 @@
         "モン"
       ],
       "kunyomi": [
-        "き.く",
-        "き.こえる"
+        "き・く",
+        "き・こえる"
       ],
       "meaning": "to hear, to listen",
       "strokes": 14,
@@ -3545,7 +3545,7 @@
         "トウ"
       ],
       "kunyomi": [
-        "よ.む"
+        "よ・む"
       ],
       "meaning": "to read",
       "strokes": 14,
@@ -3574,9 +3574,9 @@
         "ケン"
       ],
       "kunyomi": [
-        "み.る",
-        "み.せる",
-        "み.える"
+        "み・る",
+        "み・せる",
+        "み・える"
       ],
       "meaning": "to see, to look, to watch",
       "strokes": 7,
@@ -3615,7 +3615,7 @@
         "ワ"
       ],
       "kunyomi": [
-        "はな.す",
+        "はな・す",
         "はなし"
       ],
       "meaning": "to speak, to talk",
@@ -3665,7 +3665,7 @@
         "バイ"
       ],
       "kunyomi": [
-        "か.う"
+        "か・う"
       ],
       "meaning": "to buy, to purchase",
       "strokes": 12,
@@ -3699,9 +3699,9 @@
         "キ"
       ],
       "kunyomi": [
-        "お.きる",
-        "お.こす",
-        "お.こる"
+        "お・きる",
+        "お・こす",
+        "お・こる"
       ],
       "meaning": "to get up, to wake up",
       "strokes": 10,
@@ -3725,8 +3725,8 @@
         "キ"
       ],
       "kunyomi": [
-        "かえ.る",
-        "かえ.す"
+        "かえ・る",
+        "かえ・す"
       ],
       "meaning": "to return",
       "strokes": 10,
@@ -3861,8 +3861,8 @@
         "シャ"
       ],
       "kunyomi": [
-        "うつ.す",
-        "うつ.る"
+        "うつ・す",
+        "うつ・る"
       ],
       "meaning": "to copy, to take a picture",
       "strokes": 5,
@@ -3939,9 +3939,9 @@
         "エイ"
       ],
       "kunyomi": [
-        "うつ.る",
-        "うつ.す",
-        "は.える"
+        "うつ・る",
+        "うつ・す",
+        "は・える"
       ],
       "meaning": "to project, to reflect",
       "strokes": 9,
@@ -4059,8 +4059,8 @@
         "ゴ"
       ],
       "kunyomi": [
-        "かた.る",
-        "かた.らう"
+        "かた・る",
+        "かた・らう"
       ],
       "meaning": "language; to narrate",
       "strokes": 14,
@@ -4109,7 +4109,7 @@
         "ソウ"
       ],
       "kunyomi": [
-        "おく.る"
+        "おく・る"
       ],
       "meaning": "to send, to transmit",
       "strokes": 9,
@@ -4136,7 +4136,7 @@
         "サイ"
       ],
       "kunyomi": [
-        "き.る"
+        "き・る"
       ],
       "meaning": "to cut",
       "strokes": 4,
@@ -4175,7 +4175,7 @@
         "タイ"
       ],
       "kunyomi": [
-        "か.す"
+        "か・す"
       ],
       "meaning": "to lend, to rent, to loan",
       "strokes": 12,
@@ -4199,7 +4199,7 @@
         "シャク"
       ],
       "kunyomi": [
-        "か.りる"
+        "か・りる"
       ],
       "meaning": "to borrow, to rent",
       "strokes": 10,
@@ -4351,10 +4351,10 @@
         "ゴウ"
       ],
       "kunyomi": [
-        "つよ.い",
-        "つよ.まる",
-        "つよ.める",
-        "し.いる"
+        "つよ・い",
+        "つよ・まる",
+        "つよ・める",
+        "し・いる"
       ],
       "meaning": "strong, tough",
       "strokes": 11,
@@ -4390,9 +4390,9 @@
         "ニュウ"
       ],
       "kunyomi": [
-        "はい.る",
-        "い.れる",
-        "い.る"
+        "はい・る",
+        "い・れる",
+        "い・る"
       ],
       "meaning": "to go in, to put in",
       "strokes": 2,
@@ -4427,8 +4427,8 @@
         "スイ"
       ],
       "kunyomi": [
-        "で.る",
-        "だ.す"
+        "で・る",
+        "だ・す"
       ],
       "meaning": "to go out, to put out",
       "strokes": 5,
@@ -4469,8 +4469,8 @@
         "フ"
       ],
       "kunyomi": [
-        "ある.く",
-        "あゆ.む"
+        "ある・く",
+        "あゆ・む"
       ],
       "meaning": "to walk",
       "strokes": 8,
@@ -4506,7 +4506,7 @@
         "タイ"
       ],
       "kunyomi": [
-        "ま.つ"
+        "ま・つ"
       ],
       "meaning": "to wait",
       "strokes": 9,
@@ -4530,8 +4530,8 @@
         "キョウ"
       ],
       "kunyomi": [
-        "おし.える",
-        "おそ.わる"
+        "おし・える",
+        "おそ・わる"
       ],
       "meaning": "to teach, to tell",
       "strokes": 11,
@@ -4585,8 +4585,8 @@
         "シ"
       ],
       "kunyomi": [
-        "と.まる",
-        "と.める"
+        "と・まる",
+        "と・める"
       ],
       "meaning": "to stop, to park",
       "strokes": 4,
@@ -4615,7 +4615,7 @@
         "シュウ"
       ],
       "kunyomi": [
-        "なら.う"
+        "なら・う"
       ],
       "meaning": "to learn (a skill)",
       "strokes": 11,
@@ -4641,7 +4641,7 @@
         "シ"
       ],
       "kunyomi": [
-        "つか.う"
+        "つか・う"
       ],
       "meaning": "to use, to utilize",
       "strokes": 8,
@@ -4676,7 +4676,7 @@
         "サ"
       ],
       "kunyomi": [
-        "つく.る"
+        "つく・る"
       ],
       "meaning": "to make, to produce",
       "strokes": 7,
@@ -4706,8 +4706,8 @@
         "リュウ"
       ],
       "kunyomi": [
-        "た.つ",
-        "た.てる"
+        "た・つ",
+        "た・てる"
       ],
       "meaning": "to stand, to establish",
       "strokes": 5,
@@ -4751,8 +4751,8 @@
         "バイ"
       ],
       "kunyomi": [
-        "う.る",
-        "う.れる"
+        "う・る",
+        "う・れる"
       ],
       "meaning": "to sell",
       "strokes": 7,
@@ -4784,12 +4784,12 @@
         "ミョウ"
       ],
       "kunyomi": [
-        "あか.るい",
-        "あき.らか",
-        "あ.ける",
-        "あ.く",
-        "あ.くる",
-        "あ.かす"
+        "あか・るい",
+        "あき・らか",
+        "あ・ける",
+        "あ・く",
+        "あ・くる",
+        "あ・かす"
       ],
       "meaning": "bright, light, clear",
       "strokes": 8,
@@ -4813,7 +4813,7 @@
         "アン"
       ],
       "kunyomi": [
-        "くら.い"
+        "くら・い"
       ],
       "meaning": "dark, dim",
       "strokes": 13,
@@ -4837,7 +4837,7 @@
         "チョウ"
       ],
       "kunyomi": [
-        "なが.い"
+        "なが・い"
       ],
       "meaning": "long; chief, head",
       "strokes": 8,
@@ -4886,7 +4886,7 @@
         "タン"
       ],
       "kunyomi": [
-        "みじか.い"
+        "みじか・い"
       ],
       "meaning": "short",
       "strokes": 12,
@@ -4937,9 +4937,9 @@
       ],
       "kunyomi": [
         "あし",
-        "た.りる",
-        "た.る",
-        "た.す"
+        "た・りる",
+        "た・る",
+        "た・す"
       ],
       "meaning": "leg, foot; to be sufficient",
       "strokes": 7,
@@ -4980,11 +4980,11 @@
         "コウ"
       ],
       "kunyomi": [
-        "ひろ.い",
-        "ひろ.まる",
-        "ひろ.める",
-        "ひろ.がる",
-        "ひろ.げる"
+        "ひろ・い",
+        "ひろ・まる",
+        "ひろ・める",
+        "ひろ・がる",
+        "ひろ・げる"
       ],
       "meaning": "spacious, wide, broad",
       "strokes": 5,
@@ -5008,7 +5008,7 @@
         "タ"
       ],
       "kunyomi": [
-        "おお.い"
+        "おお・い"
       ],
       "meaning": "a lot, plenty",
       "strokes": 6,
@@ -5032,8 +5032,8 @@
         "ショウ"
       ],
       "kunyomi": [
-        "すく.ない",
-        "すこ.し"
+        "すく・ない",
+        "すこ・し"
       ],
       "meaning": "a little, a few, a bit",
       "strokes": 4,
@@ -5063,7 +5063,7 @@
         "オ"
       ],
       "kunyomi": [
-        "わる.い"
+        "わる・い"
       ],
       "meaning": "bad, wicked, wrong, harmful",
       "strokes": 11,
@@ -5088,9 +5088,9 @@
         "チョウ"
       ],
       "kunyomi": [
-        "おも.い",
-        "かさ.ねる",
-        "かさ.なる"
+        "おも・い",
+        "かさ・ねる",
+        "かさ・なる"
       ],
       "meaning": "heavy",
       "strokes": 9,
@@ -5114,8 +5114,8 @@
         "ケイ"
       ],
       "kunyomi": [
-        "かる.い",
-        "かろ.やか"
+        "かる・い",
+        "かろ・やか"
       ],
       "meaning": "light, handy",
       "strokes": 12,
@@ -5140,9 +5140,9 @@
         "サッ"
       ],
       "kunyomi": [
-        "はや.い",
-        "はや.める",
-        "はや.まる"
+        "はや・い",
+        "はや・める",
+        "はや・まる"
       ],
       "meaning": "early",
       "strokes": 6,
@@ -5174,7 +5174,7 @@
         "ビン"
       ],
       "kunyomi": [
-        "たよ.り"
+        "たよ・り"
       ],
       "meaning": "convenience, mail, post",
       "strokes": 9,
@@ -5203,7 +5203,7 @@
         "リ"
       ],
       "kunyomi": [
-        "き.く"
+        "き・く"
       ],
       "meaning": "advantage",
       "strokes": 7,
@@ -5296,8 +5296,8 @@
       ],
       "kunyomi": [
         "おや",
-        "した.しい",
-        "した.しむ"
+        "した・しい",
+        "した・しむ"
       ],
       "meaning": "parent(s); close, intimate",
       "strokes": 16,
@@ -5332,7 +5332,7 @@
         "ウ"
       ],
       "kunyomi": [
-        "あ.る"
+        "あ・る"
       ],
       "meaning": "to exist",
       "strokes": 6,
@@ -5464,7 +5464,7 @@
         "ジ"
       ],
       "kunyomi": [
-        "つか.える"
+        "つか・える"
       ],
       "meaning": "to serve, to engage",
       "strokes": 5,
@@ -5839,9 +5839,9 @@
         "コウ"
       ],
       "kunyomi": [
-        "お.りる",
-        "お.ろす",
-        "ふ.る"
+        "お・りる",
+        "お・ろす",
+        "ふ・る"
       ],
       "meaning": "to get off; (rain) falls",
       "strokes": 10,
@@ -5875,7 +5875,7 @@
         "シ"
       ],
       "kunyomi": [
-        "おも.う"
+        "おも・う"
       ],
       "meaning": "to think, to consider, to guess",
       "strokes": 9,
@@ -5899,8 +5899,8 @@
         "シン"
       ],
       "kunyomi": [
-        "ね.る",
-        "ね.かす"
+        "ね・る",
+        "ね・かす"
       ],
       "meaning": "to sleep",
       "strokes": 13,
@@ -5924,8 +5924,8 @@
         "シュウ"
       ],
       "kunyomi": [
-        "お.わる",
-        "お.える"
+        "お・わる",
+        "お・える"
       ],
       "meaning": "to end, to finish",
       "strokes": 11,
@@ -5950,7 +5950,7 @@
         "ゴン"
       ],
       "kunyomi": [
-        "い.う",
+        "い・う",
         "こと"
       ],
       "meaning": "to say, to tell",
@@ -5975,7 +5975,7 @@
         "チ"
       ],
       "kunyomi": [
-        "し.る"
+        "し・る"
       ],
       "meaning": "to know, to be aware of",
       "strokes": 8,
@@ -6004,7 +6004,7 @@
         "ドウ"
       ],
       "kunyomi": [
-        "おな.じ"
+        "おな・じ"
       ],
       "meaning": "same, identical",
       "strokes": 6,
@@ -6141,7 +6141,7 @@
         "ト"
       ],
       "kunyomi": [
-        "はか.る"
+        "はか・る"
       ],
       "meaning": "chart, diagram, drawing",
       "strokes": 7,
@@ -6263,8 +6263,8 @@
         "ジュウ"
       ],
       "kunyomi": [
-        "す.む",
-        "す.まう"
+        "す・む",
+        "す・まう"
       ],
       "meaning": "to live (in)",
       "strokes": 7,
@@ -6352,10 +6352,10 @@
         "ジャク"
       ],
       "kunyomi": [
-        "き.る",
-        "き.せる",
-        "つ.く",
-        "つ.ける"
+        "き・る",
+        "き・せる",
+        "つ・く",
+        "つ・ける"
       ],
       "meaning": "to wear; to arrive",
       "strokes": 12,
@@ -6436,8 +6436,8 @@
         "ラク"
       ],
       "kunyomi": [
-        "たの.しい",
-        "たの.しむ"
+        "たの・しい",
+        "たの・しむ"
       ],
       "meaning": "to enjoy, joy; not laborious, easy",
       "strokes": 13,
@@ -6471,7 +6471,7 @@
         "ジ"
       ],
       "kunyomi": [
-        "も.つ"
+        "も・つ"
       ],
       "meaning": "to have, to own; to hold",
       "strokes": 9,
@@ -6682,8 +6682,8 @@
         "コン"
       ],
       "kunyomi": [
-        "た.てる",
-        "た.つ"
+        "た・てる",
+        "た・つ"
       ],
       "meaning": "to build",
       "strokes": 9,
@@ -6708,7 +6708,7 @@
         "ヘイ"
       ],
       "kunyomi": [
-        "や.む",
+        "や・む",
         "やまい"
       ],
       "meaning": "sickness, illness, disease",
@@ -6795,7 +6795,7 @@
         "ウン"
       ],
       "kunyomi": [
-        "はこ.ぶ"
+        "はこ・ぶ"
       ],
       "meaning": "to carry; fortune, luck, fate",
       "strokes": 12,
@@ -6829,8 +6829,8 @@
         "ジョウ"
       ],
       "kunyomi": [
-        "の.る",
-        "の.せる"
+        "の・る",
+        "の・せる"
       ],
       "meaning": "to get on, to ride, to drive",
       "strokes": 9,
@@ -7141,8 +7141,8 @@
         "ケイ"
       ],
       "kunyomi": [
-        "はか.る",
-        "はか.らう"
+        "はか・る",
+        "はか・らう"
       ],
       "meaning": "plot, scheme, plan; measure",
       "strokes": 9,
@@ -7282,10 +7282,10 @@
         "カイ"
       ],
       "kunyomi": [
-        "ひら.く",
-        "ひら.ける",
-        "あ.く",
-        "あ.ける"
+        "ひら・く",
+        "ひら・ける",
+        "あ・く",
+        "あ・ける"
       ],
       "meaning": "to open",
       "strokes": 12,
@@ -7314,10 +7314,10 @@
         "ヘイ"
       ],
       "kunyomi": [
-        "と.じる",
-        "と.ざす",
-        "し.める",
-        "し.まる"
+        "と・じる",
+        "と・ざす",
+        "し・める",
+        "し・まる"
       ],
       "meaning": "to close, to shut",
       "strokes": 11,
@@ -7346,7 +7346,7 @@
         "カ"
       ],
       "kunyomi": [
-        "うた.う",
+        "うた・う",
         "うた"
       ],
       "meaning": "to sing, song",
@@ -7404,7 +7404,7 @@
       ],
       "kunyomi": [
         "あじ",
-        "あじ.わう"
+        "あじ・わう"
       ],
       "meaning": "taste",
       "strokes": 8,
@@ -7453,7 +7453,7 @@
         "コウ"
       ],
       "kunyomi": [
-        "かんが.える"
+        "かんが・える"
       ],
       "meaning": "to think, to consider",
       "strokes": 6,

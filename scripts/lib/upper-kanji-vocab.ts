@@ -3,6 +3,16 @@
  * the build script does all I/O, so this module can be unit-tested from
  * grammar-app/src/__tests__/scripts/buildN1KanjiVocab.test.ts (vitest's root is grammar-app/).
  */
+import {
+  type CoverageIndex,
+  RADICAL_MEANING_RE,
+  buildCoverageIndex,
+  cleanKunyomi,
+  cleanOnyomi,
+  isWordCovered as isCovered,
+} from './jlptContent';
+
+export { cleanKunyomi, cleanOnyomi };
 
 export type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 
@@ -24,6 +34,7 @@ export interface SourceWord {
   kanji: string;
   kana: string;
   meaning: string;
+  listKanji?: string;
 }
 
 export interface Compound {
@@ -61,6 +72,7 @@ export interface BuiltVocab {
 export interface ExistingVocab {
   word: string;
   reading: string;
+  meaning?: string;
 }
 
 const codepointCompare = (a: string, b: string): number => (a < b ? -1 : a > b ? 1 : 0);
@@ -94,37 +106,19 @@ export function headword(word: SourceWord): string {
 }
 
 /**
- * Whether one of our lower-level vocab rows already teaches this word: matched on
- * the word form, or - for kana-only words - also on the reading of a row whose own
- * form is kana (a kana-only N1 word never counts as covered by a kanji row that
- * merely shares its reading, e.g. N1 はし vs. 箸).
+ * Whether one of our lower-level vocab rows already teaches this word — the shared
+ * rule in ./jlptContent: same written form (or textbook -ます form), or a kanji
+ * spelling of a word we write in kana with an overlapping gloss (其れ = それ). A
+ * kana-only word never counts as covered by a kanji row that merely shares its
+ * reading (N1 はし vs. 箸).
  */
-export function buildCoveredWordIndex(existing: ExistingVocab[]): {
-  forms: Set<string>;
-  kanaReadings: Set<string>;
-} {
-  const forms = new Set<string>();
-  const kanaReadings = new Set<string>();
-  for (const row of existing) {
-    const rowForms = normalizeVocabForms(row.word);
-    rowForms.forEach((form) => forms.add(form));
-    if (rowForms.every((form) => !/\p{Script=Han}/u.test(form))) {
-      normalizeVocabForms(row.reading).forEach((reading) => kanaReadings.add(reading));
-    }
-  }
-  return { forms, kanaReadings };
+export function buildCoveredWordIndex(existing: ExistingVocab[]): CoverageIndex {
+  return buildCoverageIndex(existing);
 }
 
-export function isWordCovered(
-  word: SourceWord,
-  index: { forms: Set<string>; kanaReadings: Set<string> }
-): boolean {
-  if (word.kanji) return index.forms.has(word.kanji);
-  return index.forms.has(word.kana) || index.kanaReadings.has(word.kana);
+export function isWordCovered(word: SourceWord, index: CoverageIndex): boolean {
+  return isCovered(word, index);
 }
-
-/** KANJIDIC lists the radical's own name as a meaning ("one radical (no. 1)"); not a gloss. */
-const RADICAL_MEANING_RE = /radical \(no\.\s*\d+\)/i;
 
 /**
  * The kanji's gloss: its first KANJIDIC meanings joined with ", " - four of them when
@@ -135,11 +129,6 @@ export function kanjiMeaning(meanings: string[]): string {
   const list = usable.length > 0 ? usable : meanings;
   const four = list.slice(0, 4).join(', ');
   return four.length <= 40 ? four : list.slice(0, 3).join(', ');
-}
-
-/** Drops KANJIDIC prefix/suffix forms ("ひと-", "-がわ"), which aren't standalone readings. */
-export function cleanKunyomi(kunyomi: string[]): string[] {
-  return kunyomi.filter((k) => !k.startsWith('-') && !k.endsWith('-'));
 }
 
 export function strokeOrderLink(kanji: string): string {
@@ -293,7 +282,7 @@ export function buildKanjiItem(
     section: 'kanji',
     lesson,
     kanji,
-    onyomi: source.onyomi,
+    onyomi: cleanOnyomi(source.onyomi),
     kunyomi: cleanKunyomi(source.kunyomi),
     meaning: kanjiMeaning(source.meanings),
     strokes: source.strokes,

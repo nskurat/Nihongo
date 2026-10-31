@@ -27,11 +27,20 @@ All take `--dry-run`.
 
 ## Rules and decisions
 
-- **Cumulative coverage.** A list item already taught anywhere at a lower level is not
-  repeated. A word counts as taught if its written form matches (bracketed usage notes like
-  `迷う [道に〜]` stripped), or its kana form matches a kana-written word. Matching on form
-  only, not form + reading, is deliberate: ~50 N1 words that share only a spelling with a
-  lower-level word (上手 うわて, 社 やしろ) are skipped rather than pulling in rare readings.
+- **Cumulative coverage.** A list item already taught anywhere at a lower level (N5–N3 for
+  N5–N2; N5–N2 for N1) is not repeated. One rule for all levels (`isWordCovered` in
+  `scripts/lib/jlptContent.ts`): a word counts as taught if its written form matches
+  (bracketed usage notes like `迷う [道に〜]` stripped, `／` pairs split), or a textbook
+  `-ます` form of it does (書く ↔ 書きます), or it is a kanji spelling of a word we write in
+  kana *and* the glosses share a content word (其れ = それ "that", but 肺 ≠ はい "yes").
+  Matching on form only, not form + reading, is deliberate: ~80 N1 words that share only a
+  spelling with a lower-level word (上手 うわて, 天皇 すめらぎ) are skipped rather than
+  pulling in rare readings.
+- **Spelling.** Waller writes many usually-kana words with rare kanji (何時も, 其れ,
+  お目出度う, 御辞儀). `PREFERRED_SPELLING` in `fetch-jlpt-sources.ts` maps them to the form
+  learners meet (いつも, それ, おめでとう, お辞儀); the original stays in `listKanji`.
+  Previously appended N5–N3 rows (rows without an example sentence) follow the list's
+  current spelling and gloss on the next run, uid unchanged.
 - **N5–N3 existing items are never moved or renumbered**; new items are appended, so
   uids (AI-cache keys) stay stable. Exception: the N3 review reused 24 kanji slots that held
   repeats; `store/aiCacheMigration.ts` drops cached mnemonics for exactly those uids.
@@ -47,21 +56,59 @@ All take `--dry-run`.
   that lesson's kanji.
 - **Kanji fields:** meaning = first 3–4 KANJIDIC meanings; radical as `辶 (walk)` (Kangxi
   names); prefix/suffix kunyomi (`-び`, `こ-`) dropped; `compounds` are real list words only
-  (own level first, then easier, then harder). 437 N1 kanji have no list word, so no compounds.
+  (own level first, then easier, then harder). 438 N1 kanji have no list word, so no compounds.
 - **No invented example sentences.** Appended words have word/reading/meaning only; filling
   examples is a planned follow-up.
-- **Glosses:** JMdict gloss where the word matches, else Waller's definition; 13 rows with
-  neither use a hand-written JMdict gloss table in `fetch-jlpt-sources.ts`.
+- **Glosses:** JMdict gloss where the word matches, else Waller's definition; 14 rows with
+  neither use a hand-written JMdict gloss table in `fetch-jlpt-sources.ts`, and 5 homograph
+  readings where the deck copied another reading's gloss (後 うしろ, 上 かみ, 下 げ/しも,
+  中 ちゅう) use `GLOSS_OVERRIDES`. Empty comma parts are tidied away.
+- **Kanji readings:** kunyomi okurigana marked with `・` (also normalised in the older N5/N4
+  rows), prefix/suffix forms and KANJIDIC's katakana unit readings (粉 デシメートル) dropped;
+  suffix-only onyomi (応 -ノウ) dropped; radical-name meanings ("branch radical (no. 65)")
+  dropped.
 
 ## Result (2026-10)
 
 | Level | Kanji | Words | Notes |
 |---|---|---|---|
-| N5 | 220 | 753 | +494 list words |
-| N4 | 299 | 761 | +21 kanji, +461 words |
-| N3 | 261 | 3,189 | all 367 N3-list kanji now covered across N5–N3 (was 203); +1,311 words |
-| N2 | 260 | 1,618 | new; 107 N2-list kanji already taught lower |
-| N1 | 1,174 | 3,116 | new; 58 N1-list kanji already taught lower |
+| N5 | 220 | 759 | +500 list words |
+| N4 | 299 | 763 | +21 kanji, +463 words |
+| N3 | 261 | 3,202 | all 367 N3-list kanji now covered across N5–N3 (was 203); +1,324 words |
+| N2 | 260 | 1,588 | new; 107 N2-list kanji, 222 list words already taught lower |
+| N1 | 1,174 | 2,859 | new; 58 N1-list kanji, 568 list words already taught lower (N5–N2) |
 
-Known gaps: 150 N4 kanji compounds still have null reading/meaning (they are phrases like
+Known gaps: 148 N4 kanji compounds still have null reading/meaning (they are phrases like
 `絵をかきます`, not list words); vocab example sentences for appended words.
+
+## Review (2026-10)
+
+Scripted audit of all five levels (readings format, meanings, strokes/radicals, compound
+validity, stroke-order links, empty/garbled glosses, kana readings, duplicates within and
+across levels, list coverage, lesson placement) plus a teacher's spot-check of 30 random
+items per level. Fixed through the pipeline (no hand edits):
+
+- N1 repeated ~240 basic words in rare kanji spellings (其れ, 此れ, 美味しい, 面白い,
+  有難う, 今日は) because the N2/N1 builder ignored kana-written lower rows; N1 also
+  re-taught 29 N2 words. Both now skipped (N2 −30 words, N1 −257).
+- Kana-only matching had hidden real gaps at N5–N4–N3 (家, 服, 聞く, 席, 幕, 元, 効く…
+  were skipped because an unrelated kana word shared the reading); now appended.
+- Wrong glosses: `いえ` "TODO same as いいえ?", 後 うしろ "afterwards", 上 かみ / 下 げ /
+  下 しも / 中 ちゅう copied from another reading; stray leading/trailing commas.
+- Rare spellings as headwords (何時も, お目出度う, 或, 御辞儀, 為る…) → common forms.
+- Kanji: `.`-style and affix kunyomi in N5/N4, katakana unit kunyomi, suffix onyomi,
+  radical-name meanings in N3, 彗 radical shown as `(?)`.
+
+Residual known issues (judgment calls, left as is):
+
+- N3 appended rows いつも and なる (n3-vocab-12-49, n3-vocab-3-112) duplicate N5 words now
+  that their rare spellings are gone; deleting them breaks "append-only". ある
+  (n3-vocab-12-38) is the different word "a certain".
+- ~25 N1 words are kanji spellings of lower kana words whose glosses don't overlap
+  (ふさわしい, よほど, みじめ, おかげ, ございます-style honorifics); and 是非, 大した, 夕べ,
+  無くす (N5–N3) were appended in kanji beside an existing kana textbook row.
+- Pre-existing textbook duplicates: 8 inside N3 (ちょうど, 取引先, ゼミ, 型…), 3 inside N5,
+  and 9 exact word+reading repeats across N5/N4/N3 (必要, 幸せ, チャンス…).
+- Waller's N1 list keeps some rare readings that don't collide with a lower form (側 かわ,
+  館 たち, 乾 ほし); glosses for 直 なお ("mischief") are odd but sourced.
+- 148 N4 compounds are textbook phrases with null reading/meaning (see validator warnings).

@@ -2078,14 +2078,14 @@
           "meaning": "round, circular"
         },
         {
-          "word": "丸で",
-          "reading": "まるで",
-          "meaning": "quite, entirely, completely, at all, as if, as though, so to speak"
-        },
-        {
           "word": "丸々",
           "reading": "まるまる",
           "meaning": "completely"
+        },
+        {
+          "word": "日の丸",
+          "reading": "ひのまる",
+          "meaning": "the Japanese flag"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%B8%23kanji"
@@ -6017,7 +6017,7 @@
         {
           "word": "缶詰",
           "reading": "かんづめ",
-          "meaning": "canning, canned goods,"
+          "meaning": "canning, canned goods"
         },
         {
           "word": "瓶詰",
@@ -8171,7 +8171,6 @@
         "フン"
       ],
       "kunyomi": [
-        "デシメートル",
         "こ",
         "こな"
       ],
@@ -8426,7 +8425,7 @@
         {
           "word": "缶詰",
           "reading": "かんづめ",
-          "meaning": "canning, canned goods,"
+          "meaning": "canning, canned goods"
         },
         {
           "word": "薬缶",

@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
+import { tidyGloss } from './lib/jlptContent';
 
 /**
  * Downloads the public JLPT reference lists and trims them into the two vendored files
@@ -75,6 +76,9 @@ interface KanjiDataEntry {
   readings_kun: string[];
 }
 
+// Classical radicals our Kangxi name table lists under a variant form.
+const RADICAL_ALIASES: Record<string, string> = { 彑: '彐' };
+
 async function buildKanji(): Promise<void> {
   const kanjiData: Record<string, KanjiDataEntry> = JSON.parse(await get(URLS.kanjiData));
   const radicalNames: Record<string, string> = JSON.parse(
@@ -94,12 +98,13 @@ async function buildKanji(): Promise<void> {
     const k = kanjium.get(kanji);
     const radical = k?.[1] || (radicalNames[kanji] ? kanji : '');
     const shown = k?.[2] || radical;
+    const radicalName = radicalNames[radical] ?? radicalNames[RADICAL_ALIASES[radical]] ?? '?';
     const meanings = k?.[16] ? k[16].split(';') : entry.meanings.map((m) => m.toLowerCase());
     out[kanji] = {
       level: `N${entry.jlpt_new}` as Level,
       strokes: entry.strokes,
       freq: entry.freq,
-      radical: radical ? `${shown} (${radicalNames[radical] ?? '?'})` : '',
+      radical: radical ? `${shown} (${radicalName})` : '',
       onyomi: entry.readings_on.map(hiraToKata),
       kunyomi: entry.readings_kun.map((r) => r.replace('.', '・')),
       meanings: meanings.filter((m) => !/^\((kokuji|extended shinjitai|ghost character)\)$/.test(m)),
@@ -126,11 +131,54 @@ const GLOSS_FIXES: Record<number, string> = {
   1294940: 'counter for years of age', // 歳
   1356740: 'counter for tatami mats', // 畳
 };
+GLOSS_FIXES[1583250] = 'no; well, um (softer いいえ)'; // いえ: Waller's cell reads "TODO same as いいえ?"
+
+// The JMdict-derived deck copied a homograph's gloss onto these readings (後 うしろ as
+// "afterwards", 上 かみ as "first volume"). Short glosses from each reading's own entry.
+const GLOSS_OVERRIDES: Record<number, string> = {
+  1269410: 'back, behind, rear', // 後 うしろ
+  1352150: 'upper part, top; upper reaches (of a river); the authorities', // 上 かみ
+  2080200: 'lower (in rank or quality), inferior; second volume', // 下 げ
+  2080210: 'lower part, bottom; lower reaches (of a river)', // 下 しも
+  1620400: 'medium, average; during, in the middle of', // 中 ちゅう
+};
+
+// Waller writes these usually-kana words (JMdict "uk") or old 御- forms with rare kanji
+// spellings; learners meet them as shown here. Key: Waller's kanji|kana, value: the
+// headword to use ('' = write in kana). The original spelling is kept as `listKanji`.
+export const PREFERRED_SPELLING: Record<string, string> = {
+  '何時|いつ': '', '此処|ここ': '', '此方|こっち': '', '此の|この': '', '其処|そこ': '',
+  '其の|その': '', '為る|する': '', '為る|なる': '', '如何|どう': '', '然し|しかし': '',
+  '遣る|やる': '', '有る|ある': '', '在る|ある': '', '先ず|まず': '', '呉れる|くれる': '',
+  '積もり|つもり': '', '筈|はず': '', '程|ほど': '', '為|ため': '', '或|ある': '',
+  '或る|ある': '', '或いは|あるいは': '', '何時か|いつか': '', '何時も|いつも': '',
+  '何時でも|いつでも': '', '何時までも|いつまでも': '', '何時の間にか|いつのまにか': 'いつの間にか',
+  'お目出度う|おめでとう': '', '位|くらい': '', '様|よう': '', '御|お': '', '御|ご': '',
+  '有難い|ありがたい': '', '有難う|ありがとう': '', '又は|または': '', '間も無く|まもなく': '間もなく',
+  '御飯|ごはん': 'ご飯', '朝御飯|あさごはん': '朝ご飯', '昼御飯|ひるごはん': '昼ご飯',
+  '晩御飯|ばんごはん': '晩ご飯', '御主人|ごしゅじん': 'ご主人', '御辞儀|おじぎ': 'お辞儀',
+  '御馳走|ごちそう': 'ご馳走', '御無沙汰|ごぶさた': 'ご無沙汰', '御免|ごめん': '', '御覧|ごらん': 'ご覧',
+  '御免ください|ごめんください': '', '御免なさい|ごめんなさい': '', '御覧なさい|ごらんなさい': 'ご覧なさい',
+  '御手洗い|おてあらい': 'お手洗い', '御負け|おまけ': '', '嗚呼|ああ': '', '彼方|あちら': '',
+  '彼処|あそこ': '', '彼の|あの': '', '彼方此方|あちこち': '', '彼方此方|あちらこちら': '', '彼此|あれこれ': '',
+  '何れ|いずれ': '', '何れ|どれ': '', '何方|どちら': '', '何方|どなた': '', '何処|どこ': '', '何処か|どこか': '',
+  '此れ|これ': '', '此れ等|これら': '', '其れ|それ': '', '其方|そちら': '', '其処で|そこで': '', '其処ら|そこら': '',
+  '其の儘|そのまま': '', '為来り|しきたり': '', '迚も|とても': '', '一寸|ちょっと': '', '屹度|きっと': '',
+  '流石|さすが': '', '大凡|おおよそ': '', '矢っ張り|やっぱり': '', '態と|わざと': '', '其れ故|それゆえ': '',
+  '若しかして|もしかして': '', '若しくは|もしくは': '', '為さる|なさる': '', '何れ何れ|どれどれ': '',
+  '依って|よって': '', '然も|さも': '', '然うして|そうして': '', '成る丈|なるたけ': '', '如何に|いかに': '',
+  '然して|そして': '', '然しながら|しかしながら': '', '於いて|おいて': '', '戴きます|いただきます': '',
+  '兎角|とかく': '', '仕舞|しまい': '', '仰っしゃる|おっしゃる': '', 'ご座います|ございます': '',
+  '余っ程|よっぽど': '', '丸で|まるで': '', '愛でたい|めでたい': '', 'お出でになる|おいでになる': '',
+  '苛める|いじめる': '', '填まる|はまる': '', 'お蔭|おかげ': '', '又|また': '', '上手い|うまい': '',
+  '不図|ふと': '', '中々|なかなか': '',
+};
+
 const usable = (m: string | undefined): string | undefined =>
-  m && m.trim() && m.trim() !== '#NAME?' ? m : undefined;
+  m && m.trim() && m.trim() !== '#NAME?' && !/^TODO\b/.test(m.trim()) ? m : undefined;
 
 async function buildVocab(): Promise<void> {
-  const out: { level: Level; jmdictSeq: number; kanji: string; kana: string; meaning: string }[] = [];
+  const out: { level: Level; jmdictSeq: number; kanji: string; kana: string; meaning: string; listKanji?: string }[] = [];
   for (const lv of LEVELS) {
     const level = lv.toUpperCase() as Level;
     const anki = new Map<string, string>();
@@ -141,12 +189,18 @@ async function buildVocab(): Promise<void> {
     for (const r of parseCsv(await get(URLS.waller(lv)))) {
       const word = r.kanji || r.kana;
       const meaning =
+        GLOSS_OVERRIDES[Number(r.jmdict_seq)] ??
         usable(anki.get(`${word}|${r.kana}`)) ??
         (r.kanji ? undefined : usable(anki.get(`${r.kana}|${r.kana}`))) ??
-        usable(r.waller_definition.split(',').map((s) => s.trim()).join(', ')) ??
+        usable(r.waller_definition) ??
         GLOSS_FIXES[Number(r.jmdict_seq)] ??
         '';
-      out.push({ level, jmdictSeq: Number(r.jmdict_seq), kanji: r.kanji, kana: r.kana, meaning });
+      const respelled = PREFERRED_SPELLING[`${r.kanji}|${r.kana}`];
+      if (respelled !== undefined) seenSpellings.add(`${r.kanji}|${r.kana}`);
+      out.push({
+        level, jmdictSeq: Number(r.jmdict_seq), kanji: respelled ?? r.kanji, kana: r.kana, meaning: tidyGloss(meaning),
+        ...(respelled !== undefined ? { listKanji: r.kanji } : {}),
+      });
     }
   }
   // A spelling variant without a gloss (清む beside 澄む, 棄てる beside 捨てる) is
@@ -159,5 +213,8 @@ async function buildVocab(): Promise<void> {
   console.log(`jlpt-vocab.json: ${out.length} words`);
 }
 
+const unused = () => Object.keys(PREFERRED_SPELLING).filter((key) => !seenSpellings.has(key));
+const seenSpellings = new Set<string>();
 await buildKanji();
 await buildVocab();
+if (unused().length) throw new Error(`PREFERRED_SPELLING keys not in the lists: ${unused().join(' ')}`);

@@ -1825,11 +1825,6 @@
           "meaning": "place, position"
         },
         {
-          "word": "位",
-          "reading": "くらい",
-          "meaning": "grade, rank, about"
-        },
-        {
           "word": "単位",
           "reading": "たんい",
           "meaning": "credit (for a course in school); unit, denomination"
@@ -1838,6 +1833,11 @@
           "word": "地位",
           "reading": "ちい",
           "meaning": "(social) position, status"
+        },
+        {
+          "word": "位",
+          "reading": "くらい",
+          "meaning": "grade, rank, about"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%8D%23kanji"
@@ -1983,11 +1983,6 @@
       "radical": "灬 (fire)",
       "compounds": [
         {
-          "word": "然し",
-          "reading": "しかし",
-          "meaning": "However"
-        },
-        {
           "word": "然る",
           "reading": "しかる",
           "meaning": "a particular"
@@ -2001,6 +1996,11 @@
           "word": "偶然",
           "reading": "ぐうぜん",
           "meaning": "(by) chance, unexpectedly"
+        },
+        {
+          "word": "自然",
+          "reading": "しぜん",
+          "meaning": "nature, spontaneous"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%84%B6%23kanji"
@@ -2664,16 +2664,6 @@
       "strokes": 5,
       "radical": "几 (table)",
       "compounds": [
-        {
-          "word": "此処",
-          "reading": "ここ",
-          "meaning": "Here"
-        },
-        {
-          "word": "其処",
-          "reading": "そこ",
-          "meaning": "that place"
-        },
         {
           "word": "処理",
           "reading": "しょり",
@@ -3581,7 +3571,7 @@
         {
           "word": "鬼",
           "reading": "おに",
-          "meaning": "ogre, demon, 'it' (e.g.,in a game of tag)"
+          "meaning": "ogre, demon, 'it' (e.g., in a game of tag)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%AC%BC%23kanji"
@@ -4081,11 +4071,6 @@
       "exampleEn": "A lot of snow accumulated in the garden.",
       "compounds": [
         {
-          "word": "積もり",
-          "reading": "つもり",
-          "meaning": "intention"
-        },
-        {
           "word": "積極的",
           "reading": "せっきょくてき",
           "meaning": "positive, active, proactive"
@@ -4410,7 +4395,7 @@
         {
           "word": "暮れ",
           "reading": "くれ",
-          "meaning": "year end,"
+          "meaning": "year end"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9A%AE%23kanji"
@@ -4828,7 +4813,7 @@
         {
           "word": "指す",
           "reading": "さす",
-          "meaning": "to point,"
+          "meaning": "to point"
         },
         {
           "word": "指導",
@@ -5154,7 +5139,7 @@
         "つか・える",
         "か・う"
       ],
-      "meaning": "branch, support, sustain, branch radical (no. 65)",
+      "meaning": "branch, support, sustain",
       "strokes": 4,
       "radical": "支 (branch)",
       "compounds": [
@@ -5232,11 +5217,6 @@
       "strokes": 12,
       "radical": "禾 (grain)",
       "compounds": [
-        {
-          "word": "程",
-          "reading": "ほど",
-          "meaning": "degree, extent"
-        },
         {
           "word": "程度",
           "reading": "ていど",
@@ -6422,8 +6402,7 @@
       "lesson": 17,
       "kanji": "王",
       "onyomi": [
-        "オウ",
-        "-ノウ"
+        "オウ"
       ],
       "kunyomi": [],
       "meaning": "king, rule, magnate",
@@ -6832,7 +6811,7 @@
         "か・ける",
         "か・く"
       ],
-      "meaning": "lack, gap, fail, yawning radical (no. 76)",
+      "meaning": "lack, gap, fail",
       "strokes": 4,
       "radical": "欠 (lack)",
       "compounds": [
@@ -8216,24 +8195,14 @@
       "radical": "彳 (step)",
       "compounds": [
         {
-          "word": "朝御飯",
-          "reading": "あさごはん",
-          "meaning": "breakfast"
+          "word": "御中",
+          "reading": "おんちゅう",
+          "meaning": "To:"
         },
         {
-          "word": "御飯",
-          "reading": "ごはん",
-          "meaning": "rice (cooked); meal"
-        },
-        {
-          "word": "晩御飯",
-          "reading": "ばんごはん",
-          "meaning": "dinner, evening meal"
-        },
-        {
-          "word": "昼御飯",
-          "reading": "ひるごはん",
-          "meaning": "lunch, midday meal"
+          "word": "御",
+          "reading": "お",
+          "meaning": "honourable"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BE%A1%23kanji"

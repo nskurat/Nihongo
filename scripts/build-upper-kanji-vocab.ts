@@ -25,9 +25,9 @@ import {
  *
  *   npx tsx scripts/build-upper-kanji-vocab.ts --level N2|N1 [--dry-run]
  *
- * Coverage: our study path is cumulative, so every N1-list kanji/word that our
- * N5/N4/N3 kanji or vocab files already teach is skipped (and listed in the output).
- * Rerun after any change to those files.
+ * Coverage: our study path is cumulative, so every list kanji/word that a lower level's
+ * kanji or vocab file already teaches (N5–N3, plus N2 for N1) is skipped (and listed in
+ * the output). Rerun after any change to those files.
  *
  * Distribution over N1's 32 lessons:
  *  - kanji by frequency rank (no rank last; ties by strokes, then codepoint), split evenly;
@@ -49,7 +49,8 @@ const LEVEL: 'N2' | 'N1' = levelArg;
 const N1_LESSONS = LESSONS[LEVEL];
 const VOCAB_CAP_FACTOR = 1.25;
 const DATA = 'grammar-app/src/data';
-const LOWER_LEVELS = ['n5', 'n4', 'n3'];
+// Everything below this level: N1 also skips what N2 already teaches.
+const LOWER_LEVELS = LEVEL === 'N1' ? ['n5', 'n4', 'n3', 'n2'] : ['n5', 'n4', 'n3'];
 
 const dryRun = process.argv.includes('--dry-run');
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(resolve(path), 'utf8')) as T;
@@ -120,11 +121,11 @@ for (const [lesson, words] of Object.entries(grouped)) {
 const sizes = (out: Record<string, unknown[]>) => Object.values(out).map((items) => items.length);
 const kanjiSizes = sizes(kanjiOut);
 const vocabSizes = sizes(vocabOut);
-console.log(`${LEVEL} kanji: ${teachKanji.length} of ${n1KanjiAll.length} (${skippedKanji.length} already in N5-N3 files)`);
+console.log(`${LEVEL} kanji: ${teachKanji.length} of ${n1KanjiAll.length} (${skippedKanji.length} already taught lower)`);
 console.log(`  per lesson ${Math.min(...kanjiSizes)}-${Math.max(...kanjiSizes)}; ${noCompounds} with no list word as a compound`);
 console.log(`  skipped: ${skippedKanji.join(' ') || '(none)'}`);
 console.log(
-  `${LEVEL} vocab: ${n1Words.length} (${skippedWords.length} already in N5-N3 files, ${duplicateWords} duplicate list rows)`
+  `${LEVEL} vocab: ${n1Words.length} (${skippedWords.length} already taught lower, ${duplicateWords} duplicate list rows)`
 );
 console.log(`  per lesson ${Math.min(...vocabSizes)}-${Math.max(...vocabSizes)} (cap ${cap}): ${vocabSizes.join(' ')}`);
 console.log(`  skipped: ${skippedWords.map(headword).join(' ') || '(none)'}`);
