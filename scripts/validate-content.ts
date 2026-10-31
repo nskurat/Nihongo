@@ -1,8 +1,7 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
 
-// N2 and N1 are grammar-only levels: there is no N2/N1 vocab or kanji file.
 type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
 
@@ -23,20 +22,18 @@ interface FileTarget {
   section: ContentSection;
 }
 
-const LEVELS: Level[] = ['N5', 'N4', 'N3'];
+const LEVELS = Object.keys(LESSON_RANGES) as Level[];
 const SECTIONS: ContentSection[] = ['grammar', 'vocab', 'kanji'];
 
-const FILES: FileTarget[] = [
-  ...LEVELS.flatMap((level) =>
-    SECTIONS.map((section) => ({
-      path: `grammar-app/src/data/${level.toLowerCase()}/${section}.json`,
-      level,
-      section,
-    }))
-  ),
-  { path: 'grammar-app/src/data/n2/grammar.json', level: 'N2', section: 'grammar' },
-  { path: 'grammar-app/src/data/n1/grammar.json', level: 'N1', section: 'grammar' },
-];
+// Every level has a grammar file; vocab/kanji files are validated wherever they exist
+// (the app offers a section exactly when its file exists - see utils/levels.ts).
+const FILES: FileTarget[] = LEVELS.flatMap((level) =>
+  SECTIONS.map((section) => ({
+    path: `grammar-app/src/data/${level.toLowerCase()}/${section}.json`,
+    level,
+    section,
+  }))
+).filter((target) => target.section === 'grammar' || existsSync(resolve(process.cwd(), target.path)));
 
 const baseItemSchema = z.object({
   uid: z.string(),

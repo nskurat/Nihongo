@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import TagBadge from '../../components/common/TagBadge';
-import { LevelType } from '../../types/japanese';
+import { LevelType, SectionType } from '../../types/japanese';
+import { isSectionAvailable } from '../../utils/levels';
 import { useGrammar } from './useGrammar';
 import { useAppStore } from '../../store/useAppStore';
 import { useActiveLessonScroll } from '../useActiveLessonScroll';
@@ -13,10 +14,26 @@ interface GrammarSectionProps {
   activeLesson: number;
 }
 
+const OTHER_SECTIONS: Array<[SectionType, string]> = [
+  ['vocab', 'Vocabulary'],
+  ['kanji', 'kanji'],
+  ['reading', 'reading practice'],
+];
+
+// ["Vocabulary", "kanji", "reading practice"] -> "Vocabulary, kanji and reading practice"
+function listSections(labels: string[]): string {
+  const [first, ...rest] = labels;
+  const sentence = rest.length === 0 ? first : `${[first, ...rest.slice(0, -1)].join(', ')} and ${rest[rest.length - 1]}`;
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+}
+
 export default function GrammarSection({ activeLevel, activeLesson }: GrammarSectionProps) {
   const navigate = useNavigate();
   const { showTranslations } = useAppStore();
-  
+  const missingSections = OTHER_SECTIONS.filter(([section]) => !isSectionAvailable(activeLevel, section)).map(
+    ([, label]) => label
+  );
+
   const {
     searchQuery,
     setSearchQuery,
@@ -107,9 +124,11 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
             <p className="text-slate-500 text-sm mt-1">
               Explore grammar patterns, conjugation formulas, nuances, and AI-powered examples.
             </p>
-            {(activeLevel === 'N2' || activeLevel === 'N1') && (
+            {missingSections.length > 0 && (
               <p className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md px-2.5 py-1.5 mt-2">
-                {activeLevel} covers grammar only. Vocabulary, kanji and reading practice are not available for {activeLevel} yet.
+                {missingSections.length === 3 && `${activeLevel} covers grammar only. `}
+                {listSections(missingSections)} {missingSections.length === 1 ? 'is' : 'are'} not available for{' '}
+                {activeLevel} yet.
               </p>
             )}
           </div>

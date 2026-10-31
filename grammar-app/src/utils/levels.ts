@@ -18,15 +18,25 @@ export const LESSON_RANGES: Record<LevelType, LessonRange> = {
 
 const ALL_SECTIONS: SectionType[] = ['grammar', 'vocab', 'kanji', 'reading'];
 
-// N2 and N1 are grammar-only: there is no N2/N1 vocab or kanji content, and
-// Reading Practice builds its prompts from a level's vocab.
-export const LEVEL_SECTIONS: Record<LevelType, SectionType[]> = {
-  N5: ALL_SECTIONS,
-  N4: ALL_SECTIONS,
-  N3: ALL_SECTIONS,
-  N2: ['grammar'],
-  N1: ['grammar'],
-};
+// A level offers grammar/vocab/kanji exactly when its data/{level}/{section}.json exists,
+// so adding a level's content file is what turns its tab on. Only the glob's keys are
+// read here; the files themselves stay lazy chunks loaded by StaticContentSource.
+const CONTENT_FILES = new Set(Object.keys(import.meta.glob('../data/*/*.json')));
+
+// Reading Practice's prompts and story library are tuned for N5-N3 only.
+const READING_LEVELS: LevelType[] = ['N5', 'N4', 'N3'];
+
+function levelOffers(level: LevelType, section: SectionType): boolean {
+  if (section === 'reading') return READING_LEVELS.includes(level);
+  return CONTENT_FILES.has(`../data/${level.toLowerCase()}/${section}.json`);
+}
+
+export const LEVEL_SECTIONS = Object.fromEntries(
+  (Object.keys(LESSON_RANGES) as LevelType[]).map((level) => [
+    level,
+    ALL_SECTIONS.filter((section) => levelOffers(level, section)),
+  ])
+) as Record<LevelType, SectionType[]>;
 
 export function isSectionAvailable(level: LevelType, section: SectionType): boolean {
   return LEVEL_SECTIONS[level].includes(section);
