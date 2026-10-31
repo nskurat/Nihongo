@@ -5,6 +5,7 @@ import VocabSection from './features/vocab/VocabSection';
 import KanjiSection from './features/kanji/KanjiSection';
 import ReadingSection from './features/reading/ReadingSection';
 import AiSettingsModal from './components/common/AiSettingsModal';
+import SearchPage from './features/search/SearchPage';
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
 import { parseLevel, clampLessonForLevel, fromLegacyLesson, isSectionAvailable } from './utils/levels';
@@ -67,6 +68,8 @@ export default function App() {
         <Header />
 
         <Routes>
+          {/* Declared explicitly: a one-segment path would otherwise fall to the legacy redirect. */}
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/:level/:section/:lesson" element={<ContentWrapper />} />
           <Route path="/:level/:section" element={<ContentWrapper />} />
           <Route path="/" element={<LegacyRedirect />} />

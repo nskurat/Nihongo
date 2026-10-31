@@ -1,5 +1,5 @@
-import { LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, Search, BookOpen, Layers } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { LayoutTemplate, ArrowRight, Sparkles, Lightbulb, Loader2, ListFilter, BookOpen, Layers } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import TagBadge from '../../components/common/TagBadge';
@@ -8,6 +8,12 @@ import { isSectionAvailable } from '../../utils/levels';
 import { useGrammar } from './useGrammar';
 import { useAppStore } from '../../store/useAppStore';
 import { useActiveLessonScroll } from '../useActiveLessonScroll';
+import { focusCardClass, useFocusItem } from '../useFocusItem';
+import { useScrollRestore } from '../useScrollRestore';
+import SearchReturnBar, { FromSearchPill } from '../search/SearchReturnBar';
+import SearchAllLevelsLink from '../search/SearchAllLevelsLink';
+import { buildSearchPath } from '../search/searchUrl';
+import { S } from '../search/strings';
 
 interface GrammarSectionProps {
   activeLevel: LevelType;
@@ -54,6 +60,8 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
     loadingExplanations,
   } = useGrammar(activeLevel, activeLesson);
   const lessonListRef = useActiveLessonScroll<HTMLUListElement>(activeLesson, totalLessons.length);
+  const focus = useFocusItem(!loading, () => setSearchQuery(''));
+  useScrollRestore(!loading);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in">
@@ -104,11 +112,21 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               );
             })}
           </ul>
+          <div className="hidden lg:block border-t border-slate-200 p-2">
+            <Link
+              to={buildSearchPath({ types: ['grammar'] })}
+              state={{ searchEntry: true }}
+              className="flex items-center px-3.5 py-2 max-md:min-h-10 rounded-lg text-sm font-semibold text-indigo-700 hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600"
+            >
+              {S.browseByFunction}
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Main Content Area */}
       <div className="lg:col-span-3 space-y-6">
+        <SearchReturnBar />
         {/* Banner */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
@@ -134,12 +152,13 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
-            {/* Search input */}
+            {/* Per-lesson filter (global search lives in the header) */}
             <div className="relative">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <ListFilter size={16} aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search grammar, title, formula..."
+                aria-label={S.filterLesson}
+                placeholder={S.filterLesson}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-56"
@@ -185,6 +204,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                 ? `No results match your search "${searchQuery}" in Lesson ${activeLesson}.`
                 : `Grammar patterns for Lesson ${activeLesson} are currently being prepared.`}
             </p>
+            {searchQuery.trim() && <SearchAllLevelsLink q={searchQuery} />}
           </div>
         )}
 
@@ -192,7 +212,9 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
         {filteredContent.map((item, index) => (
           <div
             key={item.uid}
-            className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-slate-300"
+            data-uid={item.uid}
+            tabIndex={-1}
+            className={`bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:border-slate-300 scroll-mt-32 max-md:scroll-mt-60 focus:outline-none ${focusCardClass(item.uid, focus)}`}
           >
             {/* Card Header */}
             <div className="bg-gradient-to-r from-indigo-50/80 via-white to-slate-50 p-5 border-b border-indigo-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -201,7 +223,10 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-indigo-950">{item.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-indigo-950">
+                    <span lang="ja">{item.title}</span>
+                    {focus.focusUid === item.uid && <FromSearchPill />}
+                  </h3>
                   <p className="text-indigo-600 font-medium mt-1 text-base flex items-center gap-1.5">
                     {showTranslations ? item.meaning : '••••••••••••'}
                   </p>
@@ -209,7 +234,7 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
                   {item.tags && item.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mt-2">
                       {item.tags.map(tagId => (
-                        <TagBadge key={tagId} tagId={tagId} />
+                        <TagBadge key={tagId} tagId={tagId} to={buildSearchPath({ tag: tagId })} />
                       ))}
                     </div>
                   )}
@@ -219,7 +244,8 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               {/* View Deep Dive breakdown button */}
               <button
                 onClick={() => setSelectedDetailItem(item)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-white hover:bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-lg border border-indigo-200 shadow-2xs transition-all cursor-pointer shrink-0"
+                data-focus-target={focus.focusUid === item.uid ? '' : undefined}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-white hover:bg-indigo-50 text-indigo-700 font-semibold text-xs rounded-lg border border-indigo-200 shadow-2xs transition-all cursor-pointer shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2"
               >
                 <Layers size={14} />
                 <span>Deep Dive</span>
