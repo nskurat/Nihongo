@@ -6,8 +6,15 @@ import {
   setReadingStorageAdapter,
   ACTIVE_STORAGE_KEY,
   HISTORY_STORAGE_KEY,
+  PROGRESS_STORAGE_KEY,
 } from '../readingStorage';
-import { ActiveReadings, ReadingPracticeData, ReadingHistoryEntry, SaveHistoryParams } from '../../../types/ai';
+import {
+  ActiveReadings,
+  ReadingPracticeData,
+  ReadingHistoryEntry,
+  ReadingProgress,
+  SaveHistoryParams,
+} from '../../../types/ai';
 
 // Mock in-memory storage simulating window.localStorage
 class MockStorage {
@@ -60,16 +67,42 @@ describe('Reading Storage Adapter Architecture', () => {
   describe('LocalStorageReadingAdapter Contract', () => {
     it('should save and retrieve active readings per level', async () => {
       const readings = {
-        N3: { level: 'N3' as const, lesson: 4, topic: 'T', data: mockReadingData, answers: { 1: 0 } },
+        N3: { storyId: 's1', level: 'N3' as const, lesson: 4, topic: 'T', data: mockReadingData },
       };
       await readingRepository.setActiveReadings(readings);
       expect(await readingRepository.getActiveReadings()).toEqual(readings);
       expect(mockStorage.getItem(ACTIVE_STORAGE_KEY)).toContain('テストの物語');
     });
 
+    it('should save and retrieve answers per story, removing the key when empty', async () => {
+      await readingRepository.setProgress({ s1: { 1: 0 }, s2: { 2: 1 } });
+      expect(await readingRepository.getProgress()).toEqual({ s1: { 1: 0 }, s2: { 2: 1 } });
+      await readingRepository.setProgress({});
+      expect(mockStorage.getItem(PROGRESS_STORAGE_KEY)).toBeNull();
+    });
+
+    it('should migrate legacy per-level answers onto the current passage story id', async () => {
+      const [saved] = await readingRepository.saveToHistory({ reading: mockReadingData, level: 'N3', id: 'story_n3' });
+      expect(saved.id).toBe('story_n3');
+      mockStorage.setItem(
+        ACTIVE_STORAGE_KEY,
+        JSON.stringify({ N3: { level: 'N3', lesson: null, topic: '', data: mockReadingData, answers: { 1: 0 } } })
+      );
+
+      expect(await readingRepository.getProgress()).toEqual({ story_n3: { 1: 0 } });
+      const active = await readingRepository.getActiveReadings();
+      expect(active.N3?.storyId).toBe('story_n3');
+
+      // Once the new shape is written the legacy answers are gone, but progress keeps them.
+      await readingRepository.setProgress(await readingRepository.getProgress());
+      await readingRepository.setActiveReadings(active);
+      expect(mockStorage.getItem(ACTIVE_STORAGE_KEY)).not.toContain('answers');
+      expect(await readingRepository.getProgress()).toEqual({ story_n3: { 1: 0 } });
+    });
+
     it('should remove the key when no level has an active reading', async () => {
       await readingRepository.setActiveReadings({
-        N4: { level: 'N4', lesson: null, topic: '', data: mockReadingData, answers: {} },
+        N4: { storyId: 's1', level: 'N4', lesson: null, topic: '', data: mockReadingData },
       });
       await readingRepository.setActiveReadings({});
       expect(await readingRepository.getActiveReadings()).toEqual({});
@@ -83,7 +116,7 @@ describe('Reading Storage Adapter Architecture', () => {
       const active = await readingRepository.getActiveReadings();
 
       expect(Object.keys(active)).toEqual(['N5']);
-      expect(active.N5).toMatchObject({ level: 'N5', lesson: 3, topic: 'Food', answers: {} });
+      expect(active.N5).toMatchObject({ level: 'N5', lesson: 3, topic: 'Food' });
       expect(active.N5?.data.title).toBe('テストの物語');
     });
 
@@ -171,9 +204,13 @@ describe('Reading Storage Adapter Architecture', () => {
         private cloudDb: ReadingHistoryEntry[] = [];
 
         async getActiveReadings(): Promise<ActiveReadings> {
-          return { N3: { level: 'N3', lesson: null, topic: '', data: mockReadingData, answers: {} } };
+          return { N3: { storyId: 'cloud_1', level: 'N3', lesson: null, topic: '', data: mockReadingData } };
         }
         async setActiveReadings(): Promise<void> {}
+        async getProgress(): Promise<ReadingProgress> {
+          return {};
+        }
+        async setProgress(): Promise<void> {}
         async getHistory(): Promise<ReadingHistoryEntry[]> {
           return this.cloudDb;
         }

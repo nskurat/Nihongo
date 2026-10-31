@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, startTransition } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   BookOpenCheck,
   Sparkles,
@@ -10,6 +10,7 @@ import {
   EyeOff,
   HelpCircle,
   RefreshCw,
+  RotateCcw,
   Award,
   Layers,
   ChevronDown,
@@ -28,13 +29,27 @@ import {
 } from 'lucide-react';
 import FuriganaText from '../../components/common/FuriganaText';
 import { generateReadingPractice, getActiveProviderId, getProvider } from '../../services/ai/registry';
-import { readingRepository } from '../../services/ai/readingStorage';
+import { createStoryId, readingRepository } from '../../services/ai/readingStorage';
 import { stripFurigana } from '../../services/ai/readingParser';
-import { filterLibrary, withAnswer, withReading } from '../../services/ai/readingSession';
+import {
+  LibraryFilter,
+  ReadingView,
+  filterLibrary,
+  openStoryLabel,
+  parseReadingView,
+  planOpenStory,
+  pruneProgress,
+  readingViewSearch,
+  scoreStory,
+  withReading,
+  withStoryAnswer,
+  withoutStoryAnswers,
+} from '../../services/ai/readingSession';
 import { LevelType } from '../../types/japanese';
 import {
   ActiveReadings,
   ReadingHistoryEntry,
+  ReadingProgress,
   ReadingQuestion,
   ReadingVocabEntry,
   ReadingGrammarNote,
@@ -55,26 +70,45 @@ interface ReadingSectionProps {
   activeLevel?: LevelType;
 }
 
+/** Clears one story's answers (and so its score). Shown only while the story has answers. */
+function StartOverButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      title="Clear your answers for this story and start the questions again"
+      className="px-3 py-1.5 min-h-10 sm:min-h-0 bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-bold text-xs rounded-xl transition-all inline-flex items-center gap-1.5 cursor-pointer"
+    >
+      <RotateCcw size={13} />
+      <span>Start over</span>
+    </button>
+  );
+}
+
 export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionProps) {
   const { setShowKeyModal } = useAiUiStore();
   const { grammarData, vocabData, allowedKanji } = useReadingData(activeLevel);
-  // Navigation tabs inside reading section: 'studio' | 'library'
-  const [activeTab, setActiveTab] = useState<'studio' | 'library'>('studio');
-
   const navigate = useNavigate();
+  // Studio vs Library, and the library's level filter, live in the URL (?view=library&filter=all)
+  // so the header level, the list shown and Back always agree. The filter defaults to - and
+  // follows - the header level.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { view: activeTab, filter: libraryFilterLevel } = parseReadingView(searchParams, activeLevel);
+  const setView = (view: ReadingView, filter: LibraryFilter = libraryFilterLevel) => {
+    const search = readingViewSearch(view, filter, activeLevel);
+    setSearchParams(new URLSearchParams(search), { replace: true });
+  };
+  const setActiveTab = (view: ReadingView) => setView(view, activeLevel);
+  const setLibraryFilterLevel = (filter: LibraryFilter) => setView('library', filter);
 
   // Generator configuration
   const [selectedLesson, setSelectedLesson] = useState<string>('all');
-  // Library filter & search. The level filter follows the header level by default.
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [libraryFilterLevel, setLibraryFilterLevel] = useState<'ALL' | LevelType>(activeLevel);
-  // Tracks the level the lesson scope and library filter were set for, so they reset
-  // when the level changes without an effect - adjusting state during render, per React's docs.
+  // Tracks the level the lesson scope was set for, so it resets when the level changes
+  // without an effect - adjusting state during render, per React's docs.
   const [scopedLevel, setScopedLevel] = useState<LevelType>(activeLevel);
   if (activeLevel !== scopedLevel) {
     setScopedLevel(activeLevel);
     setSelectedLesson('all');
-    setLibraryFilterLevel(activeLevel);
   }
   const [selectedTopic, setSelectedTopic] = useState<string>(PRESET_TOPICS[0].value);
   const [customTopic, setCustomTopic] = useState<string>('');
@@ -86,11 +120,12 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
   // Focus Modal for viewing a story directly from library
   const [modalStory, setModalStory] = useState<ReadingHistoryEntry | null>(null);
-  const [modalUserAnswers, setModalUserAnswers] = useState<Record<number, number>>({});
 
-  // Each level's current passage + answers. The passage shown is always the current
-  // level's own; switching level never relabels another level's passage.
+  // Each level's current passage. The passage shown is always the current level's own;
+  // switching level never relabels another level's passage.
   const [activeReadings, setActiveReadings] = useState<ActiveReadings>({});
+  // Answers per story id - shared by Studio and the quick reader, restored on reopen.
+  const [progress, setProgress] = useState<ReadingProgress>({});
   const [hydrated, setHydrated] = useState<boolean>(false);
   const [savedHistory, setSavedHistory] = useState<ReadingHistoryEntry[]>([]);
   // The level a generation was started for (null when idle), and the level an error belongs to.
@@ -106,7 +141,8 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
   const activeReading = activeReadings[activeLevel] ?? null;
   const readingData = activeReading?.data ?? null;
-  const userAnswers = activeReading?.answers ?? {};
+  const userAnswers = (activeReading && progress[activeReading.storyId]) || {};
+  const modalUserAnswers = (modalStory && progress[modalStory.id]) || {};
   const loading = generatingLevel !== null;
   const generatingHere = generatingLevel === activeLevel;
   const levelError = error?.level === activeLevel ? error.message : '';
@@ -116,9 +152,12 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   useEffect(() => {
     let isMounted = true;
     (async () => {
+      // Progress first: it reads the legacy per-level answers before anything rewrites them.
+      const storedProgress = await readingRepository.getProgress();
       const active = await readingRepository.getActiveReadings();
       const history = await readingRepository.getHistory();
       if (isMounted) {
+        setProgress(storedProgress);
         setActiveReadings(active);
         setSavedHistory(history);
         setHydrated(true);
@@ -129,36 +168,55 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
     };
   }, []);
 
-  // Persist the per-level passages (and answers) once they have been loaded
+  // Persist the per-level passages and per-story answers once they have been loaded
   useEffect(() => {
     if (hydrated) readingRepository.setActiveReadings(activeReadings);
   }, [activeReadings, hydrated]);
+  useEffect(() => {
+    if (hydrated) readingRepository.setProgress(progress);
+  }, [progress, hydrated]);
+
+  // Forget answers of stories that left the library and are nobody's current passage.
+  const syncLibrary = (history: ReadingHistoryEntry[]) => {
+    setSavedHistory(history);
+    setProgress((prev) => pruneProgress(prev, history, activeReadings));
+  };
 
   const handleClearHistory = async () => {
     if (window.confirm('Are you sure you want to clear your saved reading library?')) {
-      const cleared = await readingRepository.clearHistory();
-      setSavedHistory(cleared);
+      syncLibrary(await readingRepository.clearHistory());
     }
   };
 
   const handleDeleteHistoryItem = async (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    const updated = await readingRepository.deleteFromHistory(id);
-    setSavedHistory(updated);
+    syncLibrary(await readingRepository.deleteFromHistory(id));
     if (modalStory?.id === id) {
       setModalStory(null);
     }
   };
 
   const handleLoadIntoStudio = (item: ReadingHistoryEntry) => {
-    // The passage becomes its own level's current passage; if that isn't the level on
-    // screen, follow it there rather than showing it under the wrong level.
-    setActiveReadings((prev) => withReading(prev, item));
-    setShowExplanationEn({});
-    setActiveTab('studio');
-    if (item.level !== activeLevel) navigate(`/${item.level.toLowerCase()}/reading`);
-    if (modalStory) setModalStory(null);
+    // The story becomes its own level's current passage (its answers come with it, by
+    // story id). If that isn't the header level we navigate there. The passage, the view
+    // and the route must change in ONE transition: React Router commits navigation inside
+    // startTransition, so a plain setState here would render first - showing the old level's
+    // passage under the new URL - before the level caught up.
+    const plan = planOpenStory(activeReadings, item, activeLevel);
+    startTransition(() => {
+      setActiveReadings(plan.readings);
+      setShowExplanationEn({});
+      setModalStory(null);
+      if (plan.path) navigate(plan.path);
+      else setActiveTab('studio');
+    });
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleStartOver = (storyId: string) => {
+    setProgress((prev) => withoutStoryAnswers(prev, storyId));
+    setShowExplanationEn({});
+    setModalShowExplanationEn({});
   };
 
   const handleGenerate = async () => {
@@ -183,16 +241,21 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
         allowedKanji,
       });
 
-      setActiveReadings((prev) => withReading(prev, { level, lesson: lessonNum, topic: topicToUse, data: result }));
+      // The passage is saved to the library under the same id it is opened with, so its
+      // answers (keyed by story id) follow it whether it is reopened from Studio or the library.
+      const storyId = createStoryId();
+      setActiveReadings((prev) =>
+        withReading(prev, { storyId, level, lesson: lessonNum, topic: topicToUse, data: result })
+      );
       setShowExplanationEn({});
       const updatedHistory = await readingRepository.saveToHistory({
         reading: result,
+        id: storyId,
         level,
         lesson: lessonNum,
         topic: topicToUse,
       });
       setSavedHistory(updatedHistory);
-      setActiveTab('studio');
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       if (msg === 'MISSING_KEY') {
@@ -206,12 +269,15 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   };
 
   const handleSelectOption = (questionId: number, optionIndex: number) => {
-    setActiveReadings((prev) => withAnswer(prev, activeLevel, questionId, optionIndex));
+    if (!activeReading) return;
+    const { storyId } = activeReading;
+    setProgress((prev) => withStoryAnswer(prev, storyId, questionId, optionIndex));
   };
 
   const handleModalSelectOption = (questionId: number, optionIndex: number) => {
-    if (modalUserAnswers[questionId] !== undefined) return;
-    setModalUserAnswers((prev) => ({ ...prev, [questionId]: optionIndex }));
+    if (!modalStory) return;
+    const storyId = modalStory.id;
+    setProgress((prev) => withStoryAnswer(prev, storyId, questionId, optionIndex));
   };
 
   const handleCopyText = (text?: string) => {
@@ -224,8 +290,9 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
   // Score computation for Studio
   const questions = readingData?.questions || [];
-  const answeredCount = Object.keys(userAnswers).length;
-  const correctCount = questions.filter((q: ReadingQuestion) => userAnswers[q.id] === q.correctIndex).length;
+  const { answered: answeredCount, correct: correctCount } = readingData
+    ? scoreStory(readingData, userAnswers)
+    : { answered: 0, correct: 0 };
 
   const filteredLibrary = filterLibrary(savedHistory, libraryFilterLevel, searchQuery);
 
@@ -603,8 +670,11 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                   </div>
 
                   {answeredCount > 0 && (
-                    <div className="px-3.5 py-1.5 bg-indigo-50 rounded-xl border border-indigo-100 text-xs font-bold text-indigo-900">
-                      Score: {correctCount} / {questions.length} ({Math.round((correctCount / questions.length) * 100)}%)
+                    <div className="flex items-center gap-2">
+                      <div className="px-3.5 py-1.5 bg-indigo-50 rounded-xl border border-indigo-100 text-xs font-bold text-indigo-900">
+                        Score: {correctCount} / {questions.length} ({Math.round((correctCount / questions.length) * 100)}%)
+                      </div>
+                      <StartOverButton onClick={() => handleStartOver(activeReading.storyId)} />
                     </div>
                   )}
                 </div>
@@ -793,6 +863,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                   <button
                     key={lvl}
                     onClick={() => setLibraryFilterLevel(lvl)}
+                    aria-pressed={libraryFilterLevel === lvl}
                     className={`px-3 py-1 text-xs font-bold rounded-lg transition-all cursor-pointer ${
                       libraryFilterLevel === lvl
                         ? 'bg-white text-indigo-700 shadow-xs'
@@ -822,6 +893,23 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
             </div>
           </div>
 
+          {/* Cross-level notice: the list no longer matches the header level */}
+          {libraryFilterLevel !== activeLevel && (
+            <div className="-mt-3 px-1 text-xs text-slate-500 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>
+                Showing {libraryFilterLevel === 'ALL' ? 'all levels' : `${libraryFilterLevel} stories`} while you are
+                on <span className="font-semibold text-slate-700">{activeLevel}</span>. Opening a story from another
+                level switches to that level.
+              </span>
+              <button
+                onClick={() => setLibraryFilterLevel(activeLevel)}
+                className="font-bold text-indigo-700 hover:text-indigo-900 underline underline-offset-2 cursor-pointer"
+              >
+                Show {activeLevel} only
+              </button>
+            </div>
+          )}
+
           {/* Empty Library State */}
           {filteredLibrary.length === 0 && (
             <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-12 text-center space-y-4">
@@ -849,6 +937,9 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
             {filteredLibrary.map((item) => {
               const cleanJpTitle = stripFurigana(item.data?.title) || '日本語の物語';
               const cleanSnippet = stripFurigana(item.data?.japaneseText || '').slice(0, 110);
+              const crossLevel = item.level !== activeLevel;
+              const isCurrent = activeReadings[item.level]?.storyId === item.id;
+              const itemScore = scoreStory(item.data, progress[item.id] ?? {});
 
               return (
                 <div
@@ -922,9 +1013,21 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
                   {/* Footer Metadata & Actions */}
                   <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-1.5 text-slate-400 font-medium text-[11px]">
-                      <Clock size={12} />
-                      <span>{new Date(item.timestamp).toLocaleDateString()}</span>
+                    <div className="flex flex-col gap-1 text-slate-400 font-medium text-[11px]">
+                      <span className="flex items-center gap-1.5">
+                        <Clock size={12} />
+                        <span>{new Date(item.timestamp).toLocaleDateString()}</span>
+                      </span>
+                      {(isCurrent || itemScore.answered > 0) && (
+                        <span className="text-slate-500">
+                          {isCurrent && <span className="font-bold text-indigo-700">Current {item.level}</span>}
+                          {isCurrent && itemScore.answered > 0 && ' · '}
+                          {itemScore.answered > 0 &&
+                            (itemScore.answered === itemScore.total
+                              ? `Done ${itemScore.correct}/${itemScore.total}`
+                              : `${itemScore.answered}/${itemScore.total} answered`)}
+                        </span>
+                      )}
                     </div>
 
                     <div className="flex items-center gap-2">
@@ -933,10 +1036,14 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                           e.stopPropagation();
                           handleLoadIntoStudio(item);
                         }}
-                        className="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-xs rounded-xl border border-indigo-200 hover:border-indigo-600 transition-all cursor-pointer shadow-2xs"
-                        title="Load into Studio for full interactive practice & quiz"
+                        className="px-3 py-1.5 min-h-10 sm:min-h-0 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-xs rounded-xl border border-indigo-200 hover:border-indigo-600 transition-all cursor-pointer shadow-2xs"
+                        title={
+                          crossLevel
+                            ? `Switch to ${item.level} and open this story in its Practice Studio`
+                            : 'Load into Studio for full interactive practice & quiz'
+                        }
                       >
-                        Practice in Studio
+                        {openStoryLabel(item.level, activeLevel)}
                       </button>
                     </div>
                   </div>
@@ -983,7 +1090,9 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                   className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <Compass size={13} />
-                  <span>Open in Studio</span>
+                  <span>
+                    {modalStory.level === activeLevel ? 'Open in Studio' : openStoryLabel(modalStory.level, activeLevel)}
+                  </span>
                 </button>
                 <button
                   onClick={() => setModalStory(null)}
@@ -1010,10 +1119,15 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
               {/* Quick Questions in Modal */}
               <div className="pt-4 border-t border-slate-200 space-y-4">
-                <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
-                  <BookOpen size={16} className="text-indigo-600" />
-                  Comprehension Questions ({modalStory.data?.questions?.length || 0})
-                </h4>
+                <div className="flex items-center justify-between gap-2">
+                  <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <BookOpen size={16} className="text-indigo-600" />
+                    Comprehension Questions ({modalStory.data?.questions?.length || 0})
+                  </h4>
+                  {Object.keys(modalUserAnswers).length > 0 && (
+                    <StartOverButton onClick={() => handleStartOver(modalStory.id)} />
+                  )}
+                </div>
 
                 <div className="space-y-4">
                   {modalStory.data?.questions?.map((q: ReadingQuestion, idx: number) => {
