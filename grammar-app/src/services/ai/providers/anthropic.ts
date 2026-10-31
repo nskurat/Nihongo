@@ -20,7 +20,10 @@ export const anthropicProvider: AiProvider = {
 
     const payload = {
       model,
-      max_tokens: 1500,
+      // A reading set (passage + translation + 5 explained questions) runs to
+      // 3–5k output tokens at N2/N1; 1500 truncated the JSON mid-string.
+      // Only tokens actually generated are billed.
+      max_tokens: 8192,
       messages: [{ role: 'user', content: prompt }],
     };
 

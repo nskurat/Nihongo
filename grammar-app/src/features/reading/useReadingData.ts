@@ -1,18 +1,41 @@
 import { useEffect, useState } from 'react';
-import { LevelType, GrammarItem, VocabItem } from '../../types/japanese';
+import { LevelType, GrammarItem, VocabItem, KanjiItem } from '../../types/japanese';
 import { StudyItem } from '../../types/content';
 import { contentRepository } from '../../services/content/StaticContentSource';
 
 interface ReadingContentData {
   grammarData: Record<number, GrammarItem[]>;
   vocabData: Record<number, VocabItem[]>;
+  /** Kanji ceiling for the reading prompt; empty when the level has none. */
+  allowedKanji: string;
 }
 
-const EMPTY: ReadingContentData = { grammarData: {}, vocabData: {} };
+const EMPTY: ReadingContentData = { grammarData: {}, vocabData: {}, allowedKanji: '' };
+
+/**
+ * Levels whose reading prompt carries an explicit kanji list: the level's own
+ * kanji plus every lower level's. Only N5/N4, where the list is short and the
+ * model's own sense of "basic kanji" is least reliable.
+ */
+const KANJI_CEILING_LEVELS: Partial<Record<LevelType, LevelType[]>> = {
+  N5: ['N5'],
+  N4: ['N5', 'N4'],
+};
+
+async function loadKanjiCeiling(level: LevelType): Promise<string> {
+  const levels = KANJI_CEILING_LEVELS[level] ?? [];
+  const perLevel = await Promise.all(
+    levels.map(async (l) => Object.values(await loadLevelData<KanjiItem>(l, 'kanji')).flat())
+  );
+  return perLevel
+    .flat()
+    .map((k) => k.kanji)
+    .join('');
+}
 
 async function loadLevelData<T extends StudyItem>(
   level: LevelType,
-  section: 'grammar' | 'vocab'
+  section: 'grammar' | 'vocab' | 'kanji'
 ): Promise<Record<number, T[]>> {
   const lessons = await contentRepository.listLessons(level, section);
   const entries = await Promise.all(
@@ -38,8 +61,9 @@ export function useReadingData(level: LevelType): ReadingContentData {
     Promise.all([
       loadLevelData<GrammarItem>(level, 'grammar'),
       loadLevelData<VocabItem>(level, 'vocab'),
-    ]).then(([grammarData, vocabData]) => {
-      if (!cancelled) setData({ grammarData, vocabData });
+      loadKanjiCeiling(level),
+    ]).then(([grammarData, vocabData, allowedKanji]) => {
+      if (!cancelled) setData({ grammarData, vocabData, allowedKanji });
     });
 
     return () => {

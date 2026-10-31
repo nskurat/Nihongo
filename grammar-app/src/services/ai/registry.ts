@@ -205,21 +205,8 @@ export async function generateKanjiMnemonic({
   return await executeAiPrompt(prompt, { responseFormat: 'text' });
 }
 
-export async function generateReadingPractice({
-  level = 'N4',
-  lesson = null,
-  topic = 'Daily Life & Culture',
-  grammarList = [],
-  vocabList = [],
-}: BuildReadingPromptParams): Promise<ReadingPracticeData> {
-  const prompt = buildReadingPracticePrompt({
-    level,
-    lesson,
-    topic,
-    grammarList,
-    vocabList,
-  });
-
+export async function generateReadingPractice(params: BuildReadingPromptParams): Promise<ReadingPracticeData> {
+  const prompt = buildReadingPracticePrompt(params);
   const rawText = await executeAiPrompt(prompt, { responseFormat: 'json' });
   return parseReadingResponse(rawText);
 }
