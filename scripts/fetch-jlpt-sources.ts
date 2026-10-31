@@ -109,8 +109,28 @@ async function buildKanji(): Promise<void> {
   console.log(`jlpt-kanji.json: ${Object.keys(out).length} kanji`);
 }
 
+// Waller's list (and the Anki deck) have no usable gloss for these rows — an empty
+// cell or the spreadsheet error "#NAME?". Short glosses from their JMdict entries.
+const GLOSS_FIXES: Record<number, string> = {
+  2069620: 'yes, I see (polite reply); huh? (surprise)', // はあ
+  2022640: "one's turn; watch, guard", // 番
+  2088750: 'see you later, take care (to someone leaving)', // いってらっしゃい
+  1032880: 'overcoat', // オーバーコート
+  2167510: "I'm sorry to hear that", // おきのどくに
+  2847540: 'take care, all the best', // 元気でね
+  1609730: 'to hold in one\'s mouth', // 咥える
+  1006460: 'to slip out of place; to deviate, to be off', // ずれる
+  1632290: 'gently sloping; smooth, fluent', // なだらか
+  2197150: 'x-mark, cross (marking a wrong answer)', // ｘ
+  1194480: 'counter for months', // ヶ月
+  1294940: 'counter for years of age', // 歳
+  1356740: 'counter for tatami mats', // 畳
+};
+const usable = (m: string | undefined): string | undefined =>
+  m && m.trim() && m.trim() !== '#NAME?' ? m : undefined;
+
 async function buildVocab(): Promise<void> {
-  const out: unknown[] = [];
+  const out: { level: Level; jmdictSeq: number; kanji: string; kana: string; meaning: string }[] = [];
   for (const lv of LEVELS) {
     const level = lv.toUpperCase() as Level;
     const anki = new Map<string, string>();
@@ -121,12 +141,20 @@ async function buildVocab(): Promise<void> {
     for (const r of parseCsv(await get(URLS.waller(lv)))) {
       const word = r.kanji || r.kana;
       const meaning =
-        anki.get(`${word}|${r.kana}`) ??
-        (r.kanji ? undefined : anki.get(`${r.kana}|${r.kana}`)) ??
-        r.waller_definition.split(',').map((s) => s.trim()).join(', ');
+        usable(anki.get(`${word}|${r.kana}`)) ??
+        (r.kanji ? undefined : usable(anki.get(`${r.kana}|${r.kana}`))) ??
+        usable(r.waller_definition.split(',').map((s) => s.trim()).join(', ')) ??
+        GLOSS_FIXES[Number(r.jmdict_seq)] ??
+        '';
       out.push({ level, jmdictSeq: Number(r.jmdict_seq), kanji: r.kanji, kana: r.kana, meaning });
     }
   }
+  // A spelling variant without a gloss (清む beside 澄む, 棄てる beside 捨てる) is
+  // already covered by its glossed sibling, so it is dropped rather than shipped blank.
+  const glossed = new Set(out.filter((o) => o.meaning).map((o) => o.jmdictSeq));
+  const missing = out.filter((o) => !o.meaning && !glossed.has(o.jmdictSeq));
+  if (missing.length) throw new Error(`no gloss for: ${missing.map((o) => o.kanji || o.kana).join(' ')}`);
+  out.splice(0, out.length, ...out.filter((o) => o.meaning));
   writeFileSync('scripts/sources/jlpt-vocab.json', `[\n${out.map((o) => JSON.stringify(o)).join(',\n')}\n]\n`);
   console.log(`jlpt-vocab.json: ${out.length} words`);
 }

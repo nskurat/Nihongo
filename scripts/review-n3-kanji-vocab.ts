@@ -199,6 +199,16 @@ for (const l of lessons) {
   }
 }
 
+// Earlier source snapshots had blank glosses for a few words; refill them.
+const glossOf = new Map(srcVocab.map((w) => [`${w.kanji || w.kana}|${w.kana}`, w.meaning]));
+let refilled = 0;
+for (const l of lessons) {
+  for (const v of vocabFile[l]) {
+    const gloss = glossOf.get(`${v.word}|${v.reading}`);
+    if (!v.meaning.trim() && gloss) { v.meaning = gloss; refilled += 1; }
+  }
+}
+
 // ---- Report + write --------------------------------------------------------------
 
 const kCounts = lessons.map((l) => kanjiFile[l].length);
@@ -206,7 +216,7 @@ const vCounts = lessons.map((l) => vocabFile[l].length);
 console.log(`kanji: ${replaced.length} repeats replaced, ${missing.length - replaced.length} appended`);
 replaced.forEach((r) => console.log(`  replaced ${r}`));
 console.log(`kanji per lesson ${Math.min(...kCounts)}–${Math.max(...kCounts)}, total ${kCounts.reduce((a, b) => a + b, 0)}`);
-console.log(`vocab: ${newWords.length} N3-list words appended; per lesson ${Math.min(...vCounts)}–${Math.max(...vCounts)}, total ${vCounts.reduce((a, b) => a + b, 0)}`);
+console.log(`vocab: ${newWords.length} N3-list words appended, ${refilled} blank glosses refilled; per lesson ${Math.min(...vCounts)}–${Math.max(...vCounts)}, total ${vCounts.reduce((a, b) => a + b, 0)}`);
 const offList = lessons.flatMap((l) => kanjiFile[l]).filter((k) => srcKanji[k.kanji]?.level !== 'N3').map((k) => `${k.kanji}(${srcKanji[k.kanji]?.level ?? '—'})`);
 console.log(`kept non-N3-list kanji (textbook context): ${offList.length} ${offList.join(' ')}`);
 
