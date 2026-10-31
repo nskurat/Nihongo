@@ -1,10 +1,15 @@
-import { BookText, ArrowRight, Sparkles, Loader2, Search, Info } from 'lucide-react';
+import { BookText, ArrowRight, Sparkles, Loader2, ListFilter, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import { LevelType } from '../../types/japanese';
 import { useVocab } from './useVocab';
 import { useAppStore } from '../../store/useAppStore';
 import { useActiveLessonScroll } from '../useActiveLessonScroll';
+import { focusCardClass, useFocusItem } from '../useFocusItem';
+import { useScrollRestore } from '../useScrollRestore';
+import SearchReturnBar, { FromSearchPill } from '../search/SearchReturnBar';
+import SearchAllLevelsLink from '../search/SearchAllLevelsLink';
+import { S } from '../search/strings';
 
 interface VocabSectionProps {
   activeLevel: LevelType;
@@ -30,6 +35,8 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
     loadingVocabAi,
   } = useVocab(activeLevel, activeLesson);
   const lessonListRef = useActiveLessonScroll<HTMLUListElement>(activeLesson, totalLessons.length);
+  const focus = useFocusItem(!loading, () => setSearchQuery(''));
+  useScrollRestore(!loading);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in">
@@ -82,6 +89,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
 
       {/* Main Content Area */}
       <div className="lg:col-span-3 space-y-6">
+        <SearchReturnBar />
         {/* Banner */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
@@ -99,10 +107,11 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             {/* Search */}
             <div className="relative">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <ListFilter size={16} aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search word, reading, meaning..."
+                aria-label={S.filterLesson}
+                placeholder={S.filterLesson}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full sm:w-64"
@@ -148,6 +157,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                 ? `No results match your search "${searchQuery}".`
                 : `Vocabulary for Lesson ${activeLesson} is currently being prepared.`}
             </p>
+            {searchQuery.trim() && <SearchAllLevelsLink q={searchQuery} />}
           </div>
         )}
 
@@ -156,7 +166,9 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
           {filteredContent.map((item) => (
             <div
               key={item.uid}
-              className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-emerald-300 transition-all flex flex-col justify-between group"
+              data-uid={item.uid}
+              tabIndex={-1}
+              className={`bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-emerald-300 transition-all flex flex-col justify-between group scroll-mt-32 max-md:scroll-mt-60 focus:outline-none ${focusCardClass(item.uid, focus)}`}
             >
               <div className="p-4 md:p-5 flex-grow">
                 <div className="flex justify-between items-start mb-3">
@@ -165,7 +177,8 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
                       {item.reading}
                     </span>
                     <h3 className="text-2xl font-bold text-emerald-950 leading-none">
-                      {item.word}
+                      <span lang="ja">{item.word}</span>
+                      {focus.focusUid === item.uid && <FromSearchPill />}
                     </h3>
                   </div>
 

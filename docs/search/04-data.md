@@ -1,8 +1,9 @@
 # Global search: data model, index and adapter
 
 Status: draft for implementation · Inputs: `01-teacher.md`, `02-requirements.md`, `03-ux.md` §7.2,
-`services/content/*`, `types/*`, `data/*`. I measured every number below on the real data (2026-10-31:
-696 grammar, 9,437 vocab, 2,214 kanji = 12,347 items) with throwaway prototype scripts kept outside the repo.
+`services/content/*`, `types/*`, `data/*`. I measured every number below on the real data **at merge `36e400b`**
+(kanji/vocab review, PR #11: 696 grammar, 9,171 vocab (N5 759, N4 763, N3 3,202, N2 1,588, N1 2,859), 2,214 kanji =
+12,081 items) with throwaway prototype scripts kept outside the repo. §9 lists what changed since the first draft.
 Gzip is level 9, matching what GitHub Pages serves. Brotli is shown for reference only.
 
 **Decision in one paragraph.** A build-time script (`scripts/build-search-index.ts`) turns the 15 content
@@ -13,7 +14,7 @@ load time: normalised surface and reading, the long-vowel fold and English token
 hand-rolled. No search library is used, because none of them match the tier ranking and none of them handle
 Japanese without an n-gram index larger than the whole budget. Queries pass through a pure **QueryPlanner**
 (normalise → script → romaji → deinflect) that the static backend and any future database share. The DB adapter
-then replaces only the **matcher**. Measured size: **357 KB gzip** total (budget 400 KB), grammar shard **56 KB**
+then replaces only the **matcher**. Measured size: **349 KB gzip** total (budget 400 KB), grammar shard **56 KB**
 (budget 80 KB).
 
 ---
@@ -92,19 +93,19 @@ The key-derivation code (§2) runs **once in the build script** for both targets
 
 ### 2.3 ます → dictionary form (answers **Q-DE3**: infer at build time, no data migration for MVP)
 `pos` exists only on N5/N4 (559 rows), and 83 of those are a bare `verb`. Rule for every surface variant ending in
-`ます` (244 rows: N5 94, N4 134, N3–N1 16):
+`ます` (240 rows: N5 94, N4 134, N3–N1 12):
 
 | Order | Condition | Lemma | Rows (measured) |
 |---|---|---|---|
 | 0 | pos `expression`, or ends `ございます` (`おめでとう ございます`, `ご座います`) | none | — |
 | 1 | `…[てで]います` (`住んでいます`) | `…ている`. The te-form is deinflected on the query side | 3 |
 | 2 | stem ends `来`/`き` and pos III or kanji `来` | `…来る` / `くる` | 3 |
-| 3 | stem ends `し`, and pos III or no pos with no godan `…す` lemma in the corpus | `…する` (`勉強します→勉強する`) | 51 |
+| 3 | stem ends `し`, and pos III or no pos with no godan `…す` lemma in the corpus | `…する` (`勉強します→勉強する`) | 49 |
 | 4 | pos `Group II` → stem+`る`. pos `Group I` → i-row→u-row (`き→く, り→る, い→う…`) | | 43 + 65 |
 | 5 | stem ends in e-row kana or a bare kanji (`寝`, `見`) | ichidan, stem+`る` | 36 |
 | 6 | i-row stem, exactly one candidate (ichidan stem+`る` or godan) exists as a corpus word | that one | 41 |
 | 7 | i-row stem in `ICHIDAN_I_EXCEPTIONS` (いる/居る, 見る, 着る, 起きる, 借りる, 降りる, 浴びる, できる, 足りる, 生きる, 過ぎる, 信じる, 感じる, 落ちる, 伸びる, 閉じる…) | ichidan | 3 |
-| 8 | otherwise | godan (ichidan i-row verbs are a small closed set) | 11, all checked correct |
+| 8 | otherwise | godan (ichidan i-row verbs are a small closed set) | 10, all checked correct |
 
 The corpus check uses all cleaned vocab surfaces plus kanji `compounds` words. Both the lemma and the lemma
 reading (`たべる`) are stored, so `たべる`, `taberu` and `食べる` all hit `食べます` (T-28 verified). The build
@@ -116,9 +117,10 @@ N3–N1 rows are already in dictionary form: lemma = surface, nothing is stored.
 either. The deinflector reduces `高かった→高い`, and that string is a surface key.
 
 ### 2.4 Kanji readings
-Fold katakana. Strip affix markers `-` at either end (`-まわ.る`, `な.き-`). For kun readings, index both the
-**full reading** with the separators `. ・` removed (`まよう`, `あげる`) and the **stem** before the separator (`まよ`,
-`あ`). This covers all three separator styles: `.` 677 readings (N5/N4), `・` 1,468 (N3–N1 + 21 in N4), `-` 96 (N4).
+Fold katakana. For kun readings, index both the **full reading** with the separator removed (`まよう`, `あげる`)
+and the **stem** before it (`まよ`, `あ`). Since PR #11 every level uses `・` (2,077 readings) and affix readings are
+gone. The normaliser still accepts `.` and strips leading/trailing `-`, because that costs nothing and keeps the
+builder tolerant of future source refreshes.
 On'yomi → hiragana (`メイ→めい`). Under the single-kana guard (§3.5), only full readings count as exact. Stems do not.
 
 ### 2.5 Grammar title / structure keys
@@ -149,9 +151,9 @@ Title keys → `surface`. Structure keys that are not already title keys → `hi
   (`お酒` → alias `酒`, `さけ`). Kana-initial `おいしい` never matches the pattern. T-25 then ranks 酒 (exact) above お酒 (alias).
 - **Okurigana pairs** (`分る/分かる`, `終る/終わる`, `行なう/行う`, ~10 entries): a hand table in `search-aliases.json`
   (§6). Each entry adds the other spelling to `alias`.
-- **Kanji compounds**: 4,029 compound words, of which only **338** are not already a vocab surface. Ship only those
-  338 as `hint` on the kanji. The other 3,691 are reached by kanji-from-word decomposition (§3.4). This
-  saves 17 KB gzip.
+- **Kanji compounds**: 4,013 compound words, of which only **384** are not already a vocab surface. Ship only those
+  384 as `hint` on the kanji. The other 3,629 are reached by kanji-from-word decomposition (§3.4). This
+  saves 17 KB gzip (kanji shard 83.7 → 67.0 KB).
 
 ---
 
@@ -197,8 +199,8 @@ the UX reason line. Prototype results: `食べられない→食べる/食べま
 
 ### 3.4 Candidate generation (static backend)
 - **Exact**: hash map `key → postings[(doc, kind)]` over all key kinds.
-- **Prefix**: binary search over the sorted array of distinct keys (30.6k).
-- **Contains**: linear `indexOf` over the distinct keys, only when the query has ≥ 2 chars. It costs 1.7 ms on desktop for
+- **Prefix**: binary search over the sorted array of distinct keys (30.2k).
+- **Contains**: linear `indexOf` over the distinct keys, only when the query has ≥ 2 chars. It costs 2.3 ms on desktop for
   the worst case (2 kana). A mid-range phone at about 5× slower is well inside 50 ms.
 - **Pattern-in-query** (grammar only): grammar surface keys of ≥ 2 kana that occur **inside** the query. This is how
   `読まずに` surfaces 〜ずに (T-31), which plain contains matching misses.
@@ -219,19 +221,25 @@ the UX reason line. Prototype results: `食べられない→食べる/食べま
 | 7 | `collocation`, `compound`, structure | `hint` keys |
 | — | `tag` | `listByTag`: no tiers, ordered N5→N1, then lesson (T-10) |
 
-A doc keeps its best tier. Within a tier: **current level** first (from `lastLevel`), then lower levels nearest first
-(review), then higher levels nearest first. Then lesson ascending, then uid. **Single-kana guard**: a query of
-one kana runs tier 0 only (grammar surface, vocab word or reading, kanji full readings). It is capped at 40. `に` returns 22.
+A doc keeps its best tier. *(Fix round 2, orchestrator decision.)* Within a tier: **lower levels first** (N5 → N1, the
+learner's level gets no priority, so a rare current-level word never buries a core N5/N4 word), then shorter vocab headwords,
+then lesson, then position. Deinflected hits order by path length; irregular lemmas (する/来る/行く/ある/いい) go first, and a
+lemma must have a compatible word class (verb class from `pos`, the ます rule, or the dictionary form plus a godan-る exception
+list), so かえって → 帰る but never 変える. English hits use two density buckets; grammar in a matched category chip ranks
+first (its teacher-curated core points such as because → から, ので at the very top), and N5/N4 chip members are listed even
+without a meaning match. Groups are ordered by their best real hit (tier < 7); on a tie a Vocab verb/adjective beats Grammar.
+Patterns inside the query are capped at 2 grammar rows (whole kana runs, no bare morphemes). **Single-kana guard**: a query of
+one kana runs tier 0 only (grammar surface, vocab word or reading, kanji full readings). It is capped at 40.
 Duplicates are collapsed **after** ranking by `dupKey`. The best-ranked row is primary and the rest become `alsoAt`.
 
-**Two conflicts in the acceptance list.**
-(a) **T-33 vs T-34.** The PM wants the literal prefix `かえって来ます` above the deinflected 帰る/変える (T-33). The teacher
-puts deinflection above prefix, and T-34 needs that order: with prefix first, `きた` fills the top 8 vocab with
-汚い, 北半球, 帰宅, 期待… and pushes 来る and 着る out. **I keep deinflected above prefix and propose amending T-33**
-to "かえって来ます appears in the Vocabulary group".
-(b) **T-42 (`丁度` → zero results)** contradicts kanji-from-word (`丁度` decomposes into 丁 and 度, which are both kanji rows). I propose
-that when the only hits are `kanji-from-word`, the response carries `wordMatch: false` and the UI shows "No word
-matches 丁度. Kanji in your query: 丁 · 度". This needs PM and UX sign-off.
+**Two acceptance-list conflicts, now decided by the orchestrator (2026-10-31):**
+(a) **T-33 amended: deinflected ranks above literal prefix.** With prefix first, `きた` would fill the top 8 vocab with
+汚い, 北半球, 帰宅, 期待… and push 来る and 着る out (T-34). Under the decided order, `きた` returns 北 (exact), then
+来る, 来ます, 着ます, 着る (deinflected), then prefix hits. `かえって` returns 却って, then 帰る/変える (deinflected), then
+`かえって来ます` (prefix), still within the top 8. PM US-3 now says the same.
+(b) **T-42 decided: a "no word match" state.** `丁度` has no word row but decomposes into 丁 and 度, which are both kanji rows.
+When the only hits are `kanji-from-word`, the response sets `wordMatch: false` and the UI shows "No word matches 丁度.
+Kanji in your query: 丁 · 度", listing those kanji and suggesting a reading search (PM US-9).
 
 ---
 
@@ -258,23 +266,23 @@ Seven shards: `grammar` (with the tag list and alias categories), `kanji`, and `
 
 | Variant (all 7 shards) | Raw | **Gzip** | Brotli |
 |---|---|---|---|
-| A. Display fields only | 906 KB | 318 KB | 257 KB |
-| C. Everything precomputed (normalised, folded, English tokens, kanji reading keys) | 2,024 KB | **572 KB, over budget** | 444 KB |
-| **Recommended** (display + non-derivable keys + structure, extra compounds only) | 1,045 KB | **357 KB** | 289 KB |
+| A. Display fields only | 884 KB | 309 KB | 250 KB |
+| C. Everything precomputed (normalised, folded, English tokens, kanji reading keys) | 1,976 KB | **558 KB, over budget** | 433 KB |
+| **Recommended** (display + non-derivable keys + structure, extra compounds only) | 1,024 KB | **349 KB** | 282 KB |
 
 | Recommended shard | Docs | Raw | Gzip |
 |---|---|---|---|
 | grammar (+tags) | 696 | 184 KB | **56.5 KB** (budget 80) |
-| kanji | 2,214 | 195 KB | 67.1 KB |
-| vocab-N5 / N4 | 753 / 761 | 54 / 56 KB | 17.3 / 18.8 KB |
-| vocab-N3 / N2 / N1 | 3,189 / 1,618 / 3,116 | 223 / 112 / 221 KB | 77.0 / 40.2 / 79.8 KB |
+| kanji | 2,214 | 196 KB | 67.0 KB |
+| vocab-N5 / N4 | 759 / 763 | 54 / 56 KB | 17.4 / 18.8 KB |
+| vocab-N3 / N2 / N1 | 3,202 / 1,588 / 2,859 | 224 / 110 / 200 KB | 77.3 / 39.5 / 72.0 KB |
 
-**Q-DE7:** the budget holds only if cheap keys are derived in the worker (variant C fails at 572 KB). Load-time
-derivation for all 12,347 docs takes **250 ms in Node on a desktop** (JSON.parse of all shards: 6 ms. The rest is
+**Q-DE7:** the budget holds only if cheap keys are derived in the worker (variant C fails at 558 KB). Load-time
+derivation for all 12,081 docs takes **240–270 ms in Node on a desktop** (JSON.parse of all shards: 6 ms. The rest is
 `key()` with NFKC, English tokenising and map building). Estimated at 4–5× on a mid-range phone, that is 1.0–1.25 s for
 the whole corpus. That cost is why loading is progressive (§4.4). Levers measured if the budget tightens: shipping the full grammar `summary`
 for display costs +12.4 KB, so fetch it on demand through `contentRepository.getItem` instead. Short uids save only 5.7 KB,
-so keep full uids (DB primary key). Truncating meanings saves <1 KB, so not worth it. Headroom today is 43 KB. Example
+so keep full uids (DB primary key). Truncating meanings saves <1 KB, so not worth it. Headroom today is 51 KB. Example
 sentences are never indexed, so the planned vocab-example work does not grow the index.
 
 ### 4.3 Build, versioning, cache-busting (answers **Q-DE6**)
@@ -302,7 +310,7 @@ sentences are never indexed, so the planned vocab-example work does not grow the
   remaining vocab, with each shard indexed as it arrives. The response carries `status: 'partial' | 'ready'`, so the
   first query can answer from what has loaded and re-run itself once loading finishes. For first search on Fast 4G: grammar (56 KB) plus the
   current vocab arrives in ~0.4 s and indexes in ~0.1–0.3 s on a phone, and the full corpus is ready within the 1.5 s p75.
-  Worst case measured on desktop: **≤ 4.4 ms per query**. Memory is roughly 15–20 MB of maps (estimate, to be verified in DevTools).
+  Warm worst case measured on desktop: **2.3 ms per query** (2-kana contains scan; single cold runs up to ~8 ms). Memory is roughly 15–20 MB of maps (estimate, to be verified in DevTools).
 
 ### 4.5 Q-DE1: cold load of `/search`
 `npm run build` already copies `dist/index.html` to `dist/404.html`, so GitHub Pages serves the SPA for any sub-path
@@ -390,21 +398,24 @@ The teacher owns its content and engineering owns its validation:
 
 ## 7. Data quality issues that affect search
 
-| # | Issue (measured) | Effect | Fix |
-|---|---|---|---|
-| 1 | **言う stored with reading `ゆう`** (`n3-vocab-23-124`). Verified: `いう` returns no 言う row | `いう`, `いって`, `iu` miss it | Correct in `review-n3-kanji-vocab.ts`, re-run, `validate:data`. **No** override in the index builder |
-| 2 | **Brackets inside `reading`**: 206 rows (`[お]はなみ`, `きれい[な]`, `かける [迷惑を〜]`), while `迷う [道に〜]` stores a clean `まよう` | Inconsistent, but the builder strips both | Builder handles it (§2.2). Logged so a later script can unify the convention: reading mirrors the word's annotations |
-| 3 | **Reading covers only part of a slash pair**: `本社（ほんしゃ）／支店` → `してん`, `細い（ほそい）／太い` → `ふとい` | The parts mis-pair. 本社 is searchable only through the gloss | Script fix: word `本社／支店`, reading `ほんしゃ／してん` (uid unchanged) |
-| 4 | **Tilde**: 423 grammar titles and 220 vocab words use `〜`. One title uses ASCII `~さん` (N5) | None after `norm` | Optional one-line migration `~`→`〜` for display consistency |
-| 5 | **Romaji** only on 559 N5/N4 rows | None (romaji is never matched) | None. The field can be dropped in v2 |
-| 6 | **`pos`** only on N5/N4, in 30+ spellings (`Noun`/`noun`, `verb` ×83, `Verb (Group I) (phrase)`) | Lemma inference falls back to heuristics (§2.3) | v2 migration to a closed enum + `lemma`, after teacher review of the lemma report |
-| 7 | **Kunyomi separators**: `.` 677, `・` 1,468, `-` affixes 96 | None after §2.4 | Optional unify to one style in `build-upper-kanji-vocab.ts`/N5–N4 script (display only) |
-| 8 | **Spaces inside words** (`連れて 行きます`, `おめでとう ございます`) | None (`key()` strips them) | None |
-| 9 | **Cross-level duplicates** (~86 words, e.g. ちょうど ×3) | Clutter | Collapsed at query time by `dupKey` (§3.5) |
-| 10 | **150 N4 kanji compounds with null reading/meaning** (phrases like `絵をかきます`) | Only the compound word is indexed. A null reading is skipped | None for search |
+Status re-checked at merge `36e400b`. **Open** = still in the data. **Fixed** = gone after PR #11.
 
-#1–#3 should be logged in `docs/refactor/FINDINGS.md`. `validate:data` auto-logs warnings there, and the builder's report
-should use the same format.
+| # | Issue (measured) | Status | Effect | Fix |
+|---|---|---|---|---|
+| 1 | **言う stored with reading `ゆう`** (`n3-vocab-23-124`). Re-verified: `いう` still returns no 言う row | **Open** | `いう`, `いって`, `iu` miss it | Correct in `review-n3-kanji-vocab.ts`, re-run, `validate:data`. **No** override in the index builder |
+| 2 | **Brackets inside `reading`**: 206 rows (`[お]はなみ`, `きれい[な]`, `かける [迷惑を〜]`), while `迷う [道に〜]` stores a clean `まよう` | **Open** (unchanged) | Inconsistent, but the builder strips both | Builder handles it (§2.2). A later script can unify the convention: reading mirrors the word's annotations |
+| 3 | **Reading covers only part of a slash pair**: `本社（ほんしゃ）／支店` → `してん`, `細い（ほそい）／太い` → `ふとい` | **Open** | The parts mis-pair. 本社 is searchable only through the gloss | Script fix: word `本社／支店`, reading `ほんしゃ／してん` (uid unchanged) |
+| 4 | **Tilde**: 423 grammar titles and 220 vocab words use `〜`. One title uses ASCII `~さん` (N5) | **Open** (harmless) | None after `norm` | Optional one-line migration `~`→`〜` for display consistency |
+| 5 | **Romaji** only on 559 N5/N4 rows | Open (by design) | None (romaji is never matched) | None. The field can be dropped in v2 |
+| 6 | **`pos`** only on N5/N4 (559 rows), in 30+ spellings (`Noun`/`noun`, `verb` ×83, `Verb (Group I) (phrase)`) | **Open** | Lemma inference falls back to heuristics (§2.3) | v2 migration to a closed enum + `lemma`, after teacher review of the lemma report |
+| 7 | **Kunyomi separators**: was `.` 677, `・` 1,468, `-` affixes 96 | **Fixed** (all 2,077 use `・`, affix readings dropped) | — | Builder stays tolerant (§2.4) |
+| 8 | **Truncated N5 kun readings** (new find): stems stored without okurigana or separator, e.g. 分 `わ`, 行 `い`/`おこな`, 生 `い`/`う`, 来 `く`/`きた`. Same in the pre-merge data | **Open** | `わける`/`いく` do not reach kanji 分/行 through their reading. Only the vocab rows and kanji-from-word find them. A bare `わ`/`い` counts as a "full" reading under the single-kana guard | Script: restore okurigana from KANJIDIC (`わ・ける`, `い・く`) for N5 kanji. Teacher to confirm which readings to show |
+| 9 | **Spaces inside words** (`連れて 行きます`, `おめでとう ございます`) | Open (harmless) | None (`key()` strips them) | None |
+| 10 | **Cross-level duplicates**: 19 groups / 39 rows with identical word and reading (ちょうど ×3, いつも N5+N3, ある N5+N3, 必要 N4+N3…), plus same-level repeats (`休みます` N5 L4 and L11) | Open (fewer than the teacher's ~86, counted by word) | Clutter | Collapsed at query time by `dupKey` (§3.5) |
+| 11 | **147 N4 kanji compounds with null reading/meaning** (phrases like `絵をかきます`) | Open | Only the compound word is indexed. A null reading is skipped | None for search |
+
+#1, #3 and #8 should be logged in `docs/refactor/FINDINGS.md`. `validate:data` auto-logs warnings there, and the builder's
+report should use the same format.
 
 ---
 
@@ -418,10 +429,39 @@ should use the same format.
   dup collapse).
 - **Golden queries**: `golden.test.ts` builds the index **in memory** from the real `src/data` with `buildSearchIndex`
   (no files, no worker) and runs PM §5 T-01…T-42 as a table `{ query, opts, expect: { top?, contains?, notContains?,
-  exactly?, groupOrder?, totalMax? } }`. T-33 and T-42 follow the amendments in §3.5. The prototype already passes T-01–05, 08,
-  09, 15, 16, 19–30, 32, 34–40. T-31 needs pattern-in-query, which the prototype lacks. T-13 passes on meaning search.
+  exactly?, groupOrder?, totalMax? } }`. T-33 and T-42 follow the decisions in §3.5. Re-run at `36e400b`, the prototype passes T-01–05, 08, 09, 13
+  (meaning search), 15, 16, 19–23, 25–30, 32, 34–40. T-31 needs pattern-in-query, which the prototype lacks. **T-24 needs a
+  fixture update**: PR #11 replaced N1 `有難う` with the common spelling, so `ありがとう`/`arigatou` now find only the N5 row.
+  The prototype did not implement the T-42 "no word match" flag. Uids in the PM list that moved with the N2/N1 regeneration:
+  簡易 `n1-vocab-28-28` (was N1 L11, T-03; PM already updated), 分る `n2-vocab-8-57` (was N2 L12, T-02), 余程
+  `n1-vocab-3-81` (was N1 L4, T-40). Because N2/N1 uids are positional and regenerated, N2/N1 fixtures assert on
+  `{word, level}` and look the lesson up from the data, not from a hard-coded uid.
 - **Budget test**: gzip each built shard with `zlib` in vitest and assert ≤ 80 KB (grammar) and ≤ 400 KB (total). That
   catches content growth in CI. A worst-case keystroke query timing is reported (not asserted) to avoid flaky tests.
 - **Contract test**: one shared spec runs `listByTag('comparison')` (17, N5→N1 order) and a few goldens against any
   `BaseSearchSource`, so a future DB adapter must pass the same suite.
 - No test touches AI providers (AGENTS.md). The search code never imports `services/ai`.
+
+---
+
+## 9. Changes since the first draft (re-measured at merge `36e400b`)
+
+- **Sizes**: total 357 → **349 KB gzip**. N1 vocab dropped from 79.8 to 72.0 KB (2,859 rows instead of 3,116), and the
+  other shards moved by under 1 KB. Headroom is now 51 KB. Load/derive 240–270 ms (desktop Node). Warm worst-case query 2.3 ms.
+- **Decisions recorded** (§3.5): T-33 amended (deinflected above literal prefix), T-42 "no word match; kanji in your query".
+- **Fixed in the data**: kunyomi separators and affix readings (§7 #7). **Still open**: 言う/ゆう, the slash-pair readings,
+  bracketed readings, `pos`. **New find**: truncated N5 kun readings (§7 #8).
+- **What the new data changes in the design:**
+  1. *Common spellings replaced rare ones* (何時も→いつも, 有難う removed). More words are now written in kana only, which
+     reading-based matching already covers. Kanji spellings learners paste from older texts (`何時も`, `有難う`) now return
+     no word match. That is acceptable per the non-goals ("no general dictionary"), and the T-42 state handles it. If the
+     Waller spelling (`listKanji`, today only in `scripts/sources`) is ever copied into app data, the builder should index
+     it as an `alias` key (tier 1, `matchKind: 'variant'`, `via` = the rare spelling). That needs no schema change.
+  2. *Uniform `・` kunyomi* simplifies §2.4. The tolerant normaliser stays.
+  3. *N2/N1 uids are regenerated positionally* whenever lower levels change. The index must therefore always be rebuilt from the same
+     commit as the content (it is, via the build script and gitignored output), and golden fixtures must not hard-code N2/N1 uids (§8).
+  4. *The coverage rule removed most cross-level repeats*. Duplicate collapsing (`alsoAt`) still matters for 19 groups but is
+     less urgent (PM "Could" #15).
+  5. *ます derivation*: 240 rows (was 244). By rule: corpus check 41, default godan 10, exceptions list 3. All 10 default-godan
+     results were rechecked and are correct. No change to the rule order.
+
