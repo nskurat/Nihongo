@@ -55,7 +55,7 @@ interface ReadingSectionProps {
 
 export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionProps) {
   const { setShowKeyModal } = useAiUiStore();
-  const { grammarData, vocabData } = useReadingData(activeLevel);
+  const { grammarData, vocabData, allowedKanji } = useReadingData(activeLevel);
   // Navigation tabs inside reading section: 'studio' | 'library'
   const [activeTab, setActiveTab] = useState<'studio' | 'library'>('studio');
 
@@ -168,6 +168,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
         topic: topicToUse,
         grammarList,
         vocabList,
+        allowedKanji,
       });
 
       setReadingData(result);
