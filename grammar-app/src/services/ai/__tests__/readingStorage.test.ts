@@ -7,7 +7,7 @@ import {
   ACTIVE_STORAGE_KEY,
   HISTORY_STORAGE_KEY,
 } from '../readingStorage';
-import { ReadingPracticeData, ReadingHistoryEntry, SaveHistoryParams } from '../../../types/ai';
+import { ActiveReadings, ReadingPracticeData, ReadingHistoryEntry, SaveHistoryParams } from '../../../types/ai';
 
 // Mock in-memory storage simulating window.localStorage
 class MockStorage {
@@ -58,25 +58,38 @@ describe('Reading Storage Adapter Architecture', () => {
   });
 
   describe('LocalStorageReadingAdapter Contract', () => {
-    it('should save and retrieve active reading session', async () => {
-      await readingRepository.setActiveReading(mockReadingData);
-      const active = await readingRepository.getActiveReading();
-      expect(active).toEqual(mockReadingData);
+    it('should save and retrieve active readings per level', async () => {
+      const readings = {
+        N3: { level: 'N3' as const, lesson: 4, topic: 'T', data: mockReadingData, answers: { 1: 0 } },
+      };
+      await readingRepository.setActiveReadings(readings);
+      expect(await readingRepository.getActiveReadings()).toEqual(readings);
       expect(mockStorage.getItem(ACTIVE_STORAGE_KEY)).toContain('テストの物語');
     });
 
-    it('should clear active reading session when passing null', async () => {
-      await readingRepository.setActiveReading(mockReadingData);
-      await readingRepository.setActiveReading(null);
-      const active = await readingRepository.getActiveReading();
-      expect(active).toBeNull();
+    it('should remove the key when no level has an active reading', async () => {
+      await readingRepository.setActiveReadings({
+        N4: { level: 'N4', lesson: null, topic: '', data: mockReadingData, answers: {} },
+      });
+      await readingRepository.setActiveReadings({});
+      expect(await readingRepository.getActiveReadings()).toEqual({});
       expect(mockStorage.getItem(ACTIVE_STORAGE_KEY)).toBeNull();
+    });
+
+    it('should attribute a legacy bare active passage to its saved-library level', async () => {
+      mockStorage.setItem(ACTIVE_STORAGE_KEY, JSON.stringify(mockReadingData));
+      await readingRepository.saveToHistory({ reading: mockReadingData, level: 'N5', lesson: 3, topic: 'Food' });
+
+      const active = await readingRepository.getActiveReadings();
+
+      expect(Object.keys(active)).toEqual(['N5']);
+      expect(active.N5).toMatchObject({ level: 'N5', lesson: 3, topic: 'Food', answers: {} });
+      expect(active.N5?.data.title).toBe('テストの物語');
     });
 
     it('should handle corrupted JSON gracefully without throwing', async () => {
       mockStorage.setItem(ACTIVE_STORAGE_KEY, 'INVALID_JSON{[[:');
-      const active = await readingRepository.getActiveReading();
-      expect(active).toBeNull();
+      expect(await readingRepository.getActiveReadings()).toEqual({});
     });
 
     it('should archive reading stories to history library', async () => {
@@ -157,10 +170,10 @@ describe('Reading Storage Adapter Architecture', () => {
       class MockFirebaseAdapter extends BaseReadingStorageAdapter {
         private cloudDb: ReadingHistoryEntry[] = [];
 
-        async getActiveReading(): Promise<ReadingPracticeData | null> {
-          return mockReadingData;
+        async getActiveReadings(): Promise<ActiveReadings> {
+          return { N3: { level: 'N3', lesson: null, topic: '', data: mockReadingData, answers: {} } };
         }
-        async setActiveReading(): Promise<void> {}
+        async setActiveReadings(): Promise<void> {}
         async getHistory(): Promise<ReadingHistoryEntry[]> {
           return this.cloudDb;
         }
@@ -186,8 +199,8 @@ describe('Reading Storage Adapter Architecture', () => {
       // Swap adapter
       setReadingStorageAdapter(new MockFirebaseAdapter());
 
-      const active = await readingRepository.getActiveReading();
-      expect(active?.title).toBe('テストの物語');
+      const active = await readingRepository.getActiveReadings();
+      expect(active.N3?.data.title).toBe('テストの物語');
 
       const cloudHistory = await readingRepository.saveToHistory({ reading: mockReadingData });
       expect(cloudHistory).toHaveLength(1);

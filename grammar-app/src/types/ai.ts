@@ -71,6 +71,19 @@ export interface ReadingHistoryEntry {
   data: ReadingPracticeData;
 }
 
+/** A level's current Reading Studio passage, with the answers given so far. */
+export interface ActiveReading {
+  level: LevelType;
+  lesson: number | null;
+  topic: string;
+  data: ReadingPracticeData;
+  /** questionId -> chosen option index. Answers are final once given. */
+  answers: Record<number, number>;
+}
+
+/** Each level keeps its own current passage; switching level never relabels one. */
+export type ActiveReadings = Partial<Record<LevelType, ActiveReading>>;
+
 export interface SaveHistoryParams {
   reading: ReadingPracticeData;
   level?: LevelType;
