@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { GrammarExampleSentence } from '../services/ai/registry';
+import { V5_REPLACED_KANJI_UIDS, withoutKeys } from './aiCacheMigration';
 
 // State that should be persisted across sessions (so we don't spam the API)
 interface AiCacheState {
@@ -57,14 +58,24 @@ export const useAiCacheStore = create<AiCacheState>()(
       // v2 entries would attach cached text to the wrong item.
       // v4: the level audit moved, dropped and renumbered N3/N4 grammar points, so
       // v3 entries would do the same.
-      version: 4,
-      migrate: () =>
-        ({
+      // v5: the N3 kanji review reused 24 kanji slots; only their cached mnemonics
+      // are dropped, so a v4 cache otherwise survives intact.
+      version: 5,
+      migrate: (persisted, version) => {
+        const state = persisted as AiCacheState | undefined;
+        if (version === 4 && state) {
+          return {
+            ...state,
+            aiKanjiMnemonics: withoutKeys(state.aiKanjiMnemonics ?? {}, V5_REPLACED_KANJI_UIDS),
+          } as AiCacheState;
+        }
+        return {
           generatedExamples: {},
           aiExplanations: {},
           aiVocabNotes: {},
           aiKanjiMnemonics: {},
-        }) as AiCacheState,
+        } as AiCacheState;
+      },
     }
   )
 );
