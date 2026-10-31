@@ -156,7 +156,7 @@ export default function GrammarDetailModal({
                   ? 'Generating AI Nuance & Extra Sentences...'
                   : aiExplanation[item.uid]
                   ? 'Regenerate AI Nuance Notes'
-                  : 'Ask AI: Explain Nuance & Give Practice Sentences'}
+                  : 'Ask AI: Explain Nuance & Compare'}
               </button>
 
               {aiExplanation[item.uid] && (
