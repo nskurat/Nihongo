@@ -26,13 +26,18 @@ export default function Header() {
     : 'grammar') as SectionType;
   const activeLesson = rawLesson || String(getDefaultLesson(activeLevel));
 
-  const levels: Array<{ id: LevelType; label: string; desc: string }> = [
-    { id: 'N5', label: 'JLPT N5', desc: 'Beginner I' },
-    { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
-    { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
-    { id: 'N2', label: 'JLPT N2', desc: 'Upper Intermediate (grammar only)' },
-    { id: 'N1', label: 'JLPT N1', desc: 'Advanced (grammar only)' },
-  ];
+  const levels: Array<{ id: LevelType; label: string; desc: string }> = (
+    [
+      { id: 'N5', label: 'JLPT N5', desc: 'Beginner I' },
+      { id: 'N4', label: 'JLPT N4', desc: 'Beginner II' },
+      { id: 'N3', label: 'JLPT N3', desc: 'Intermediate I' },
+      { id: 'N2', label: 'JLPT N2', desc: 'Upper Intermediate' },
+      { id: 'N1', label: 'JLPT N1', desc: 'Advanced' },
+    ] as const
+  ).map((lvl) => ({
+    ...lvl,
+    desc: isSectionAvailable(lvl.id, 'vocab') ? lvl.desc : `${lvl.desc} (grammar only)`,
+  }));
 
   const allSections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
     { id: 'grammar', label: 'Grammar', icon: BookOpen },
