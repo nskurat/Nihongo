@@ -951,6 +951,39 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B5%8C%23kanji"
+    },
+    {
+      "uid": "n4-kanji-3-14",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 3,
+      "kanji": "験",
+      "onyomi": [
+        "ケン",
+        "ゲン"
+      ],
+      "kunyomi": [
+        "あかし",
+        "しるし",
+        "ため・す",
+        "ためし"
+      ],
+      "meaning": "verification, effect, testing, test",
+      "strokes": 18,
+      "radical": "馬 (horse)",
+      "compounds": [
+        {
+          "word": "経験",
+          "reading": "けいけん",
+          "meaning": "to experience"
+        },
+        {
+          "word": "試験",
+          "reading": "しけん",
+          "meaning": "an exam"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%A8%93%23kanji"
     }
   ],
   "4": [
@@ -2891,6 +2924,42 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%B3%AA%23kanji"
+    },
+    {
+      "uid": "n4-kanji-9-12",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 9,
+      "kanji": "問",
+      "onyomi": [
+        "モン"
+      ],
+      "kunyomi": [
+        "と・う",
+        "と・い",
+        "とん"
+      ],
+      "meaning": "question, ask, problem",
+      "strokes": 11,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "質問",
+          "reading": "しつもん",
+          "meaning": "question, inquiry"
+        },
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "meaning": "a problem"
+        },
+        {
+          "word": "質問します",
+          "reading": "しつもんします",
+          "meaning": "Ask a question"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%95%8F%23kanji"
     }
   ],
   "10": [
@@ -3149,6 +3218,38 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%8B%BE%23kanji"
+    },
+    {
+      "uid": "n4-kanji-10-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 10,
+      "kanji": "特",
+      "onyomi": [
+        "トク"
+      ],
+      "kunyomi": [],
+      "meaning": "special",
+      "strokes": 10,
+      "radical": "牜 (cow)",
+      "compounds": [
+        {
+          "word": "特に",
+          "reading": "とくに",
+          "meaning": "particularly"
+        },
+        {
+          "word": "特別",
+          "reading": "とくべつ",
+          "meaning": "special"
+        },
+        {
+          "word": "特急",
+          "reading": "とっきゅう",
+          "meaning": "limited express (train faster than an express)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%89%B9%23kanji"
     }
   ],
   "11": [
@@ -3768,6 +3869,97 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%BC%B8%23kanji"
+    },
+    {
+      "uid": "n4-kanji-12-10",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 12,
+      "kanji": "不",
+      "onyomi": [
+        "フ",
+        "ブ"
+      ],
+      "kunyomi": [],
+      "meaning": "negative, non-, bad, ugly",
+      "strokes": 4,
+      "radical": "一 (one)",
+      "compounds": [
+        {
+          "word": "不味い",
+          "reading": "まずい",
+          "meaning": "unpleasant"
+        },
+        {
+          "word": "不便",
+          "reading": "ふべん",
+          "meaning": "inconvenience"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%B8%8D%23kanji"
+    },
+    {
+      "uid": "n4-kanji-12-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 12,
+      "kanji": "世",
+      "onyomi": [
+        "セイ",
+        "セ",
+        "ソウ"
+      ],
+      "kunyomi": [
+        "よ"
+      ],
+      "meaning": "generation, world, society, public",
+      "strokes": 5,
+      "radical": "一 (one)",
+      "compounds": [
+        {
+          "word": "世界",
+          "reading": "せかい",
+          "meaning": "world"
+        },
+        {
+          "word": "世話",
+          "reading": "せわ",
+          "meaning": "to look after"
+        },
+        {
+          "word": "世界中",
+          "reading": "せかいじゅう",
+          "meaning": "All over the world"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E4%B8%96%23kanji"
+    },
+    {
+      "uid": "n4-kanji-12-12",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 12,
+      "kanji": "界",
+      "onyomi": [
+        "カイ"
+      ],
+      "kunyomi": [],
+      "meaning": "world, bounds",
+      "strokes": 9,
+      "radical": "田 (field)",
+      "compounds": [
+        {
+          "word": "世界",
+          "reading": "せかい",
+          "meaning": "world"
+        },
+        {
+          "word": "世界中",
+          "reading": "せかいじゅう",
+          "meaning": "All over the world"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%95%8C%23kanji"
     }
   ],
   "13": [
@@ -4378,6 +4570,73 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%80%94%23kanji"
+    },
+    {
+      "uid": "n4-kanji-14-12",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 14,
+      "kanji": "台",
+      "onyomi": [
+        "ダイ",
+        "タイ"
+      ],
+      "kunyomi": [
+        "うてな",
+        "われ",
+        "つかさ"
+      ],
+      "meaning": "pedestal, a stand, counter for machines and vehicles, stand",
+      "strokes": 5,
+      "radical": "口 (mouth)",
+      "compounds": [
+        {
+          "word": "台所",
+          "reading": "だいどころ",
+          "meaning": "kitchen"
+        },
+        {
+          "word": "台風",
+          "reading": "たいふう",
+          "meaning": "typhoon"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%8F%B0%23kanji"
+    },
+    {
+      "uid": "n4-kanji-14-13",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 14,
+      "kanji": "答",
+      "onyomi": [
+        "トウ"
+      ],
+      "kunyomi": [
+        "こた・える",
+        "こた・え"
+      ],
+      "meaning": "solution, answer",
+      "strokes": 12,
+      "radical": "⺮ (bamboo)",
+      "compounds": [
+        {
+          "word": "答える",
+          "reading": "こたえる",
+          "meaning": "to answer, to reply"
+        },
+        {
+          "word": "答",
+          "reading": "こたえ",
+          "meaning": "answer, response"
+        },
+        {
+          "word": "答えます",
+          "reading": "こたえます",
+          "meaning": "Answer [a question]"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%AD%94%23kanji"
     }
   ],
   "15": [
@@ -5337,6 +5596,41 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B2%B8%23kanji"
+    },
+    {
+      "uid": "n4-kanji-17-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 17,
+      "kanji": "始",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "はじ・める",
+        "はじ・まる"
+      ],
+      "meaning": "commence, begin",
+      "strokes": 8,
+      "radical": "女 (woman)",
+      "compounds": [
+        {
+          "word": "始まる",
+          "reading": "はじまる",
+          "meaning": "(something) begins"
+        },
+        {
+          "word": "始め",
+          "reading": "はじめ",
+          "meaning": "beginning"
+        },
+        {
+          "word": "始める",
+          "reading": "はじめる",
+          "meaning": "to start, to begin"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A7%8B%23kanji"
     }
   ],
   "18": [
@@ -5593,6 +5887,35 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%BF%8E%23kanji"
+    },
+    {
+      "uid": "n4-kanji-18-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 18,
+      "kanji": "研",
+      "onyomi": [
+        "ケン"
+      ],
+      "kunyomi": [
+        "と・ぐ"
+      ],
+      "meaning": "polish, study of, sharpen, grind",
+      "strokes": 9,
+      "radical": "石 (stone)",
+      "compounds": [
+        {
+          "word": "研究",
+          "reading": "けんきゅう",
+          "meaning": "study, research, investigation"
+        },
+        {
+          "word": "研究室",
+          "reading": "けんきゅうしつ",
+          "meaning": "the professor's office; laboratory"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%A0%94%23kanji"
     }
   ],
   "19": [
@@ -5853,6 +6176,68 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%AC%91%23kanji"
+    },
+    {
+      "uid": "n4-kanji-19-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 19,
+      "kanji": "究",
+      "onyomi": [
+        "キュウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "きわ・める"
+      ],
+      "meaning": "research, study, study exhaustively",
+      "strokes": 7,
+      "radical": "穴 (cave)",
+      "compounds": [
+        {
+          "word": "研究",
+          "reading": "けんきゅう",
+          "meaning": "study, research, investigation"
+        },
+        {
+          "word": "研究室",
+          "reading": "けんきゅうしつ",
+          "meaning": "the professor's office; laboratory"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%A9%B6%23kanji"
+    },
+    {
+      "uid": "n4-kanji-19-12",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 19,
+      "kanji": "洋",
+      "onyomi": [
+        "ヨウ"
+      ],
+      "kunyomi": [],
+      "meaning": "ocean, western style, western",
+      "strokes": 9,
+      "radical": "氵 (water)",
+      "compounds": [
+        {
+          "word": "洋服",
+          "reading": "ようふく",
+          "meaning": "Western-style clothes"
+        },
+        {
+          "word": "西洋",
+          "reading": "せいよう",
+          "meaning": "the West, Western countries"
+        },
+        {
+          "word": "和食／洋食",
+          "reading": "わしょく／ようしょく",
+          "meaning": "Japanese dish / Western dish"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%B4%8B%23kanji"
     }
   ],
   "20": [
@@ -5930,8 +6315,8 @@
       "compounds": [
         {
           "word": "皆さん",
-          "reading": null,
-          "meaning": null
+          "reading": "みなさん",
+          "meaning": "all of you, everyone"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%9A%86%23kanji"
@@ -6085,6 +6470,86 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B5%A1%23kanji"
+    },
+    {
+      "uid": "n4-kanji-20-10",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 20,
+      "kanji": "用",
+      "onyomi": [
+        "ヨウ"
+      ],
+      "kunyomi": [
+        "もち・いる"
+      ],
+      "meaning": "utilize, business, service, use",
+      "strokes": 5,
+      "radical": "用 (use)",
+      "compounds": [
+        {
+          "word": "用",
+          "reading": "よう",
+          "meaning": "errand, task, business (to take care of)"
+        },
+        {
+          "word": "用意",
+          "reading": "ようい",
+          "meaning": "preparation"
+        },
+        {
+          "word": "用事",
+          "reading": "ようじ",
+          "meaning": "business to take care of; tasks; errands"
+        },
+        {
+          "word": "利用",
+          "reading": "りよう",
+          "meaning": "use, utilization"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E7%94%A8%23kanji"
+    },
+    {
+      "uid": "n4-kanji-20-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 20,
+      "kanji": "急",
+      "onyomi": [
+        "キュウ"
+      ],
+      "kunyomi": [
+        "いそ・ぐ",
+        "いそ・ぎ",
+        "せ・く"
+      ],
+      "meaning": "hurry, emergency, sudden, steep",
+      "strokes": 9,
+      "radical": "心 (heart)",
+      "compounds": [
+        {
+          "word": "急ぐ",
+          "reading": "いそぐ",
+          "meaning": "to hurry, to be in a hurry, to rush"
+        },
+        {
+          "word": "急",
+          "reading": "きゅう",
+          "meaning": "urgent, sudden; steep"
+        },
+        {
+          "word": "急行",
+          "reading": "きゅうこう",
+          "meaning": "express train or bus"
+        },
+        {
+          "word": "特急",
+          "reading": "とっきゅう",
+          "meaning": "limited express (train faster than an express)"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%80%A5%23kanji"
     }
   ],
   "21": [
@@ -6291,6 +6756,106 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B8%A1%23kanji"
+    },
+    {
+      "uid": "n4-kanji-21-9",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 21,
+      "kanji": "場",
+      "onyomi": [
+        "ジョウ",
+        "チョウ"
+      ],
+      "kunyomi": [
+        "ば"
+      ],
+      "meaning": "location, place",
+      "strokes": 12,
+      "radical": "土 (earth)",
+      "compounds": [
+        {
+          "word": "売り場",
+          "reading": "うりば",
+          "meaning": "place where things are sold"
+        },
+        {
+          "word": "会場",
+          "reading": "かいじょう",
+          "meaning": "venue, meeting place"
+        },
+        {
+          "word": "工場",
+          "reading": "こうじょう",
+          "meaning": "factory"
+        },
+        {
+          "word": "駐車場",
+          "reading": "ちゅうしゃじょう",
+          "meaning": "parking lot"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%A0%B4%23kanji"
+    },
+    {
+      "uid": "n4-kanji-21-10",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 21,
+      "kanji": "公",
+      "onyomi": [
+        "コウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "おおやけ"
+      ],
+      "meaning": "public, prince, official, governmental",
+      "strokes": 4,
+      "radical": "八 (eight)",
+      "compounds": [
+        {
+          "word": "公園",
+          "reading": "こうえん",
+          "meaning": "a park"
+        },
+        {
+          "word": "公務員",
+          "reading": "こうむいん",
+          "meaning": "government worker, public servant"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E5%85%AC%23kanji"
+    },
+    {
+      "uid": "n4-kanji-21-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 21,
+      "kanji": "試",
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "こころ・みる",
+        "ため・す"
+      ],
+      "meaning": "test, try, attempt, experiment",
+      "strokes": 13,
+      "radical": "訁 (speech)",
+      "compounds": [
+        {
+          "word": "試合",
+          "reading": "しあい",
+          "meaning": "match, game, competition"
+        },
+        {
+          "word": "試験",
+          "reading": "しけん",
+          "meaning": "an exam"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E8%A9%A6%23kanji"
     }
   ],
   "22": [
@@ -6493,6 +7058,100 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%B9%23kanji"
+    },
+    {
+      "uid": "n4-kanji-22-9",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 22,
+      "kanji": "題",
+      "onyomi": [
+        "ダイ"
+      ],
+      "kunyomi": [],
+      "meaning": "topic, subject, title, problem",
+      "strokes": 18,
+      "radical": "頁 (leaf)",
+      "compounds": [
+        {
+          "word": "宿題",
+          "reading": "しゅくだい",
+          "meaning": "homework"
+        },
+        {
+          "word": "問題",
+          "reading": "もんだい",
+          "meaning": "a problem"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%A1%8C%23kanji"
+    },
+    {
+      "uid": "n4-kanji-22-10",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 22,
+      "kanji": "正",
+      "onyomi": [
+        "セイ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "ただ・しい",
+        "ただ・す",
+        "まさ",
+        "まさ・に"
+      ],
+      "meaning": "correct, justice, righteous, 10^40",
+      "strokes": 5,
+      "radical": "止 (stop)",
+      "compounds": [
+        {
+          "word": "正しい",
+          "reading": "ただしい",
+          "meaning": "correct"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E6%AD%A3%23kanji"
+    },
+    {
+      "uid": "n4-kanji-22-11",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 22,
+      "kanji": "飯",
+      "onyomi": [
+        "ハン"
+      ],
+      "kunyomi": [
+        "めし"
+      ],
+      "meaning": "meal, boiled rice, cooked rice",
+      "strokes": 12,
+      "radical": "飠 (eat)",
+      "compounds": [
+        {
+          "word": "朝御飯",
+          "reading": "あさごはん",
+          "meaning": "breakfast"
+        },
+        {
+          "word": "御飯",
+          "reading": "ごはん",
+          "meaning": "rice (cooked); meal"
+        },
+        {
+          "word": "晩御飯",
+          "reading": "ばんごはん",
+          "meaning": "dinner, evening meal"
+        },
+        {
+          "word": "昼御飯",
+          "reading": "ひるごはん",
+          "meaning": "lunch, midday meal"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%A3%AF%23kanji"
     }
   ],
   "23": [
@@ -6594,7 +7253,7 @@
         {
           "word": "留学生",
           "reading": "りゅうがくせい",
-          "meaning": null
+          "meaning": "international student"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%95%99%23kanji"
@@ -6728,6 +7387,37 @@
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%B9%85%23kanji"
+    },
+    {
+      "uid": "n4-kanji-23-10",
+      "level": "N4",
+      "section": "kanji",
+      "lesson": 23,
+      "kanji": "集",
+      "onyomi": [
+        "シュウ"
+      ],
+      "kunyomi": [
+        "あつ・まる",
+        "あつ・める",
+        "つど・う"
+      ],
+      "meaning": "gather, meet, congregate, swarm",
+      "strokes": 12,
+      "radical": "隹 (short tailed bird)",
+      "compounds": [
+        {
+          "word": "集る",
+          "reading": "あつまる",
+          "meaning": "to gather"
+        },
+        {
+          "word": "集める",
+          "reading": "あつめる",
+          "meaning": "to collect, to gather (v.t.), to assemble"
+        }
+      ],
+      "strokeOrderLink": "https://jisho.org/search/%E9%9B%86%23kanji"
     }
   ],
   "24": [
