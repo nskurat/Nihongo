@@ -108,6 +108,8 @@ describe('masuForms', () => {
     expect(masuForms('見る')).toEqual(['見ます', '見ります']);
     expect(masuForms('勉強する')).toEqual(['勉強します']);
     expect(masuForms('来る')).toEqual(['来ます']);
+    expect(masuForms('なさる')).toEqual(['なさいます']);
+    expect(masuForms('おっしゃる')).toEqual(['おっしゃいます']);
     expect(masuForms('本')).toEqual([]);
   });
 });

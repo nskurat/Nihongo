@@ -18,6 +18,8 @@ npx tsx scripts/fill-n5-n4-gaps.ts                  # append missing N5/N4-list 
 npx tsx scripts/review-n3-kanji-vocab.ts            # repair N3 kanji, append missing N3 items
 npx tsx scripts/build-upper-kanji-vocab.ts --level N2   # regenerate N2 kanji + vocab
 npx tsx scripts/build-upper-kanji-vocab.ts --level N1   # regenerate N1 kanji + vocab
+npx tsx scripts/fix-search-data.ts                  # reading fixes that matter for search
+npx tsx scripts/dedupe-vocab.ts                     # drop the same word taught twice (食べる beside 食べます)
 npm run validate:data
 ```
 
@@ -112,3 +114,16 @@ Residual known issues (judgment calls, left as is):
 - Waller's N1 list keeps some rare readings that don't collide with a lower form (側 かわ,
   館 たち, 乾 ほし); glosses for 直 なお ("mischief") are odd but sourced.
 - 148 N4 compounds are textbook phrases with null reading/meaning (see validator warnings).
+
+## Redundant vocab (2026-10-31)
+
+`scripts/dedupe-vocab.ts` removed 111 rows that taught a word already taught elsewhere
+(rules in `scripts/lib/vocabDedupe.ts`): mostly list-derived dictionary forms beside the
+textbook ます row (食べる / 食べます — the ます row keeps the example sentence, and search
+finds it by its dictionary form), plus exact textbook repeats with the same meaning (必要,
+ちょうど, 取引先). Kept on purpose: different usages (先 vs 〜先, 取る [写真を〜] vs
+[時間を〜]), homographs with different meanings (かけます "call" / "put on"), and three
+reviewed distinct senses (N3 ある "a certain", N5 やる "to do", N3 吹く "play"). Later uids in
+the 50 affected lessons were renumbered; `store/aiCacheMigration.ts` (v6) drops cached vocab
+notes under shifted uids only.
+

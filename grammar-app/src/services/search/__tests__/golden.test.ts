@@ -8,6 +8,7 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import type { DocType, Level, SearchHit, SearchOptions, SearchResponse } from '../types';
 import { realIndex } from './realIndex';
+import { titleAliases } from './dedupedAliases';
 
 const { source } = realIndex();
 
@@ -27,7 +28,9 @@ async function run(q: string, opts: Partial<SearchOptions> = {}): Promise<Search
 
 function matches(h: SearchHit, r: Ref): boolean {
   if (r.uid) return h.uid === r.uid;
-  return h.title === r.t && h.level === r.level && (r.lesson === undefined || h.lesson === r.lesson);
+  if (h.title === r.t) return h.level === r.level && (r.lesson === undefined || h.lesson === r.lesson);
+  // A dictionary form removed by scripts/dedupe-vocab.ts is now taught by its ます row.
+  return titleAliases(h.title).includes(r.t);
 }
 
 /** A ref is present when it is a row or a collapsed duplicate (alsoAt) of one. */
@@ -57,14 +60,14 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-01 わかります: exact row, 分かる as lemma hit, grammar N5 L9', async () => {
     const r = await run('わかります');
     expectTop(r, 'vocab', { t: 'わかります', level: 'N5', uid: 'n5-vocab-9-1' });
-    const wakaru = r.groups.vocab.find((h) => h.uid === 'n5-vocab-4-41');
+    const wakaru = r.groups.vocab.find((h) => h.title === '分かる' && h.level === 'N5' && h.lesson === 4);
     expect(wakaru?.matchKind).toMatch(/lemma|deinflected/);
     expect(r.groups.grammar.some((h) => h.level === 'N5' && h.lesson === 9 && h.title.startsWith('N が あります／わかります'))).toBe(true);
   });
 
   it('T-02 わかる: 分かる top, 分る N2 L8 and わかります', async () => {
     const r = await run('わかる');
-    expectTop(r, 'vocab', { t: '分かる', level: 'N5', uid: 'n5-vocab-4-41' });
+    expectTop(r, 'vocab', { t: '分かる', level: 'N5', lesson: 4 });
     expectContains(r, 'vocab', [{ t: '分る', level: 'N2', lesson: 8 }, { t: 'わかります', level: 'N5', uid: 'n5-vocab-9-1' }]);
   });
 
@@ -288,7 +291,7 @@ describe('§5 acceptance list (golden queries)', () => {
 
   it('T-30 待たされた → 待つ (causative-passive, past)', async () => {
     const r = await run('待たされた');
-    const h = r.groups.vocab.find((x) => x.title === '待つ' && x.level === 'N5' && x.lesson === 14);
+    const h = r.groups.vocab.find((x) => titleAliases(x.title).includes('待つ') && x.level === 'N5' && x.lesson === 14);
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['causative-passive', 'past']);
     expect(h?.deinflection?.steps.map((s) => s.ja)).toEqual(['使役受身', '過去']);
   });
@@ -307,7 +310,8 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-33 (amended) かえって: 帰る first among deinflections, never 変える (its te-form is 変えて)', async () => {
     const r = await run('かえって');
     const deinflected = r.groups.vocab.filter((h) => h.matchKind === 'deinflected');
-    expect(deinflected[0]).toMatchObject({ title: '帰る', level: 'N5' });
+    expect(titleAliases(deinflected[0].title)).toContain('帰る');
+    expect(deinflected[0].level).toBe('N5');
     for (const ichidan of ['変える', '替える', '換える', '代える']) expect(r.groups.vocab.some((h) => h.title === ichidan)).toBe(false);
     const prefix = r.groups.vocab.findIndex((h) => h.title === 'かえって来ます' && h.level === 'N4');
     expect(prefix).toBeGreaterThan(r.groups.vocab.indexOf(deinflected[deinflected.length - 1]));
@@ -317,7 +321,7 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-34 きた: 北 first, then 来る and 着る above every prefix hit; kanji 来 and 北', async () => {
     const r = await run('きた');
     expectTop(r, 'vocab', { t: '北', level: 'N5', lesson: 20 });
-    const idx = (t: string) => r.groups.vocab.findIndex((h) => h.title === t && h.level === 'N5');
+    const idx = (t: string) => r.groups.vocab.findIndex((h) => titleAliases(h.title).includes(t) && h.level === 'N5');
     const firstPrefix = r.groups.vocab.findIndex((h) => h.matchKind === 'prefix');
     expect(idx('来る')).toBeGreaterThan(0);
     expect(idx('着る')).toBeGreaterThan(0);
@@ -379,11 +383,12 @@ describe('§5 acceptance list (golden queries)', () => {
     ]);
   });
 
-  it('T-41 ちょうど: N4 L21, N3 L1, N3 L15 collapsed into one row with badges', async () => {
+  // The N3 L1 / L15 repeats were removed by scripts/dedupe-vocab.ts; one row remains.
+  it('T-41 ちょうど: one row, N4 L21 (repeats removed)', async () => {
     const r = await run('ちょうど');
     const row = r.groups.vocab.find((h) => h.title === 'ちょうど');
     const at = [row, ...(row?.alsoAt ?? [])].map((x) => `${x?.level}-${x?.lesson}`).sort();
-    expect(at).toEqual(['N3-1', 'N3-15', 'N4-21'].sort());
+    expect(at).toEqual(['N4-21']);
   });
 
   it('T-42 丁度: no word match; kanji 丁 and 度 listed', async () => {

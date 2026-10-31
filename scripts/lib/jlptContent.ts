@@ -144,6 +144,8 @@ const GODAN_MASU: Record<string, string> = {
 export function masuForms(word: string): string[] {
   if (word === '来る' || word === 'くる') return [word === 'くる' ? 'きます' : '来ます'];
   if (word.endsWith('する')) return [`${word.slice(0, -2)}します`];
+  // ラ行特殊 honorifics: なさる → なさいます, おっしゃる → おっしゃいます (not なさります).
+  if (/(なさ|おっしゃ|くださ|いらっしゃ|ござ)る$/.test(word)) return [`${word.slice(0, -1)}います`];
   const stem = word.slice(0, -1);
   const last = word.slice(-1);
   if (!stem || !GODAN_MASU[last]) return [];
