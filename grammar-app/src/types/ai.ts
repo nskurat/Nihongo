@@ -6,6 +6,12 @@ export interface AiModelOption {
   id: string;
   name: string;
   isDefault?: boolean;
+  maxInputTokens?: number;
+  maxOutputTokens?: number;
+  /** Set when the provider retires the model within ~90 days (YYYY-MM-DD). */
+  deprecationDate?: string;
+  /** Reasoning-class model; OpenAI rejects sampling params such as temperature for these. */
+  reasoning?: boolean;
 }
 
 export interface AiPromptOptions {
