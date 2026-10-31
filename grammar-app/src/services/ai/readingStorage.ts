@@ -1,9 +1,10 @@
 import {
-  ReadingPracticeData,
+  ActiveReadings,
   ReadingHistoryEntry,
   SaveHistoryParams,
 } from '../../types/ai';
 import { fromLegacyLesson } from '../../utils/levels';
+import { normalizeActiveReadings } from './readingSession';
 
 export const ACTIVE_STORAGE_KEY = 'nihongo_reading_active';
 export const HISTORY_STORAGE_KEY = 'nihongo_reading_history';
@@ -18,8 +19,9 @@ export interface StorageLike {
  * Base Abstract Adapter (Contract Interface)
  */
 export abstract class BaseReadingStorageAdapter {
-  abstract getActiveReading(): Promise<ReadingPracticeData | null>;
-  abstract setActiveReading(reading: ReadingPracticeData | null): Promise<void>;
+  /** Each level's current Studio passage (and its answers), keyed by level. */
+  abstract getActiveReadings(): Promise<ActiveReadings>;
+  abstract setActiveReadings(readings: ActiveReadings): Promise<void>;
   abstract getHistory(): Promise<ReadingHistoryEntry[]>;
   abstract saveToHistory(params: SaveHistoryParams): Promise<ReadingHistoryEntry[]>;
   abstract deleteFromHistory(id: string): Promise<ReadingHistoryEntry[]>;
@@ -62,25 +64,27 @@ export class LocalStorageReadingAdapter extends BaseReadingStorageAdapter {
     }
   }
 
-  async getActiveReading(): Promise<ReadingPracticeData | null> {
+  async getActiveReadings(): Promise<ActiveReadings> {
     try {
       const raw = this._getItem(ACTIVE_STORAGE_KEY);
-      return raw ? (JSON.parse(raw) as ReadingPracticeData) : null;
+      if (!raw) return {};
+      // Older builds stored one bare passage here; normalize maps it onto its level.
+      return normalizeActiveReadings(JSON.parse(raw), await this.getHistory());
     } catch (e) {
-      console.error('LocalStorageAdapter: failed to get active reading', e);
-      return null;
+      console.error('LocalStorageAdapter: failed to get active readings', e);
+      return {};
     }
   }
 
-  async setActiveReading(reading: ReadingPracticeData | null): Promise<void> {
+  async setActiveReadings(readings: ActiveReadings): Promise<void> {
     try {
-      if (reading) {
-        this._setItem(ACTIVE_STORAGE_KEY, JSON.stringify(reading));
+      if (Object.keys(readings).length > 0) {
+        this._setItem(ACTIVE_STORAGE_KEY, JSON.stringify(readings));
       } else {
         this._removeItem(ACTIVE_STORAGE_KEY);
       }
     } catch (e) {
-      console.error('LocalStorageAdapter: failed to set active reading', e);
+      console.error('LocalStorageAdapter: failed to set active readings', e);
     }
   }
 
@@ -177,8 +181,8 @@ export function setReadingStorageAdapter(adapter: BaseReadingStorageAdapter): vo
  * Facade Repository Methods used by React components
  */
 export const readingRepository = {
-  getActiveReading: () => currentAdapter.getActiveReading(),
-  setActiveReading: (reading: ReadingPracticeData | null) => currentAdapter.setActiveReading(reading),
+  getActiveReadings: () => currentAdapter.getActiveReadings(),
+  setActiveReadings: (readings: ActiveReadings) => currentAdapter.setActiveReadings(readings),
   getHistory: () => currentAdapter.getHistory(),
   saveToHistory: (params: SaveHistoryParams) => currentAdapter.saveToHistory(params),
   deleteFromHistory: (id: string) => currentAdapter.deleteFromHistory(id),
