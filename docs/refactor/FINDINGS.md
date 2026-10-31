@@ -22,6 +22,27 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   `compound.reading`, and `compound.meaning` renders as nothing when `null` — but
   needs real content to fill in. Full list in the auto-generated section below.
 
+### Search (found building the global search index, `docs/search/04-data.md` §7)
+
+- `src/data/{n5,n3}/vocab.json` — 206 rows carry brackets inside `reading` (`[お]はなみ`,
+  `きれい[な]`, `かける [迷惑を〜]`) while others store a clean reading (`迷う [道に〜]` →
+  `まよう`). The index builder strips both, so search is unaffected; a later script could
+  make `reading` mirror the word's annotations consistently.
+- `src/data/{n5,n4}/vocab.json` — `pos` exists only on N5/N4 (559 rows) in 30+ spellings
+  (`verb` ×83 with no group). ます → dictionary-form lemmas are inferred at build time
+  instead; the derived table (240 rows) is written to
+  `src/generated/search/search-index-report.tsv` for teacher review before a v2 migration
+  adds a closed `pos` enum + `lemma`.
+- `src/data/n5/grammar.json` — one title uses ASCII `~さん` among 423 `〜` titles.
+  Harmless for search (normalised); an optional `~`→`〜` migration would tidy display.
+- `src/data/n5/kanji.json` — some N5 kun readings are still bare prefix/counter forms
+  (日 か, 一 ひと, 小 お, 真 ま, 千 ち). Real readings, kept on purpose by
+  `scripts/fix-search-data.ts`; a fuller KANJIDIC refresh could add `ひと・つ` etc.
+- Kana-only queries for verbs reach every homophone in the data (かえって → 帰る, 変える,
+  替える, 換える, 代える, 反る, 返る), so a literal prefix hit such as かえって来ます can
+  sit behind "Show all". Without reliable `pos` the godan/ichidan te-form difference
+  cannot be used to prune; the v2 `pos` migration would allow it.
+
 ### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
 
 Found reviewing the merged Phase 0–2 work, 2026-08-25.
@@ -48,6 +69,14 @@ Found reviewing the merged Phase 0–2 work, 2026-08-25.
   still points only at `services/ai/readingStorage.ts`.
 
 ## Resolved
+
+- Search data quality (`docs/search/04-data.md` §7 #1, #3, #8) — fixed by
+  `scripts/fix-search-data.ts` (tables in `scripts/lib/searchDataFixes.ts`; idempotent,
+  uids unchanged): 言う `n3-vocab-23-124` reading ゆう → いう; slash pairs
+  `本社（ほんしゃ）／支店`【してん】 and `細い（ほそい）／太い`【ふとい】 → `本社／支店`
+  【ほんしゃ／してん】, `細い／太い`【ほそい／ふとい】; 13 N5 kanji with bare kun stems get
+  their okurigana back (分 わ → わ・かる, わ・ける; 行 い/おこな → い・く, おこな・う;
+  来 く/きた → く・る, きた・る; 学, 会, 休, 去, 自, 転, 動, 後, 生, 半).
 
 - N5/N4 gaps vs Waller's lists — 21 missing N4 kanji and 494 N5 / 461 N4 words
   appended by `scripts/fill-n5-n4-gaps.ts`.

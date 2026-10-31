@@ -45,3 +45,6 @@ _site/
 
 # Agent worktrees
 .claude/worktrees/
+
+# Generated search index (scripts/build-search-index.ts, run by predev/prebuild)
+grammar-app/src/generated/

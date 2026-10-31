@@ -4,12 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "tsx scripts/build-search-index.ts --quiet",
     "dev": "vite grammar-app",
+    "prebuild": "tsx scripts/build-search-index.ts",
     "build": "vite build && cp dist/index.html dist/404.html && cp serve.json dist/",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint grammar-app",
     "validate:data": "tsx scripts/validate-content.ts",
+    "build:search-index": "tsx scripts/build-search-index.ts",
     "preview": "vite preview",
     "serve": "npx serve dist",
     "start": "npx serve dist"
