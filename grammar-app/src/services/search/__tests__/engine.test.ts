@@ -97,6 +97,10 @@ describe('SearchEngine (fixture)', () => {
     const r = e.search('although', opts);
     expect(r.categories).toEqual([{ id: 'concession-contrast', label: 'Concession / Contrast', count: 2, tagIds: ['concession-contrast'] }]);
     expect(e.listByTag('concession-contrast').map((h) => h.uid)).toEqual(['n3-grammar-8-1', 'n2-grammar-4-1']);
+    expect(e.listByTag('concession-contrast')[0].via).toBe('Concession / Contrast');
+    // An alias-category id (not a tag id) works too: `cat=` with no query.
+    expect(e.listByTag('time-sequence').map((h) => h.uid)).toEqual(['n5-grammar-4-1']);
+    expect(e.listByTag('time-sequence')[0].via).toBe('Time / sequence');
     const withCat = e.search('', { ...opts, category: 'concession-contrast' });
     expect(withCat.totals.grammar).toBe(2);
     expect(e.listCategories().find((c) => c.id === 'concession-contrast')?.count).toBe(2);

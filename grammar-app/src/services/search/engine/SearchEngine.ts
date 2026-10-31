@@ -173,6 +173,14 @@ export class SearchEngine {
     return isTag ? [id] : [];
   }
 
+  /** Display label of a tag id or alias category id (the `via` of tag hits). */
+  private labelFor(id: string, preferTag: boolean): string | undefined {
+    const i = this.tagIds.indexOf(id);
+    const cat = ALIAS_CATEGORIES.find((c) => c.id === id);
+    if (preferTag && i >= 0) return this.tagLabels[i];
+    return cat?.label ?? (i >= 0 ? this.tagLabels[i] : undefined);
+  }
+
   private docsWithTags(tags: string[]): Set<number> {
     const out = new Set<number>();
     for (const t of tags) for (const d of this.tagDocs.get(t) ?? []) out.add(d);
@@ -221,7 +229,8 @@ export class SearchEngine {
         const y = this.docs[b];
         return levelIndex(x.level) - levelIndex(y.level) || x.lesson - y.lesson || x.pos - y.pos;
       });
-    return docs.map((d) => this.toHit(d, { tier: 0, sub: 0, kind: 'tag', field: 'tag' }, false));
+    const via = this.labelFor(tag, true);
+    return docs.map((d) => this.toHit(d, { tier: 0, sub: 0, kind: 'tag', field: 'tag', via }, false));
   }
 
   // ------------------------------------------------------------------ search
@@ -264,7 +273,8 @@ export class SearchEngine {
     const tagFilter = opts.tag ? this.tagsFor(opts.tag, true) : opts.category ? this.tagsFor(opts.category, false) : null;
     // A function filter with no query lists that function's grammar (`?tag=comparison`).
     if (!q && tagFilter) {
-      for (const d of this.docsWithTags(tagFilter)) consider(d, { tier: 0, sub: 0, kind: 'tag', field: 'tag' });
+      const via = opts.tag ? this.labelFor(opts.tag, true) : this.labelFor(opts.category ?? '', false);
+      for (const d of this.docsWithTags(tagFilter)) consider(d, { tier: 0, sub: 0, kind: 'tag', field: 'tag', via });
     }
 
     const scored: Scored[] = [...best.entries()].map(([d, c]) => ({ d, c }));
