@@ -15,7 +15,8 @@
     "build:search-index": "tsx scripts/build-search-index.ts",
     "preview": "vite preview",
     "serve": "npx serve dist",
-    "start": "npx serve dist"
+    "start": "npx serve dist",
+    "update:models": "tsx scripts/update-model-catalog.ts"
   },
   "dependencies": {
     "dompurify": "^3.4.14",

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   BookOpenCheck,
   Sparkles,
@@ -29,9 +30,10 @@ import FuriganaText from '../../components/common/FuriganaText';
 import { generateReadingPractice, getActiveProviderId, getProvider } from '../../services/ai/registry';
 import { readingRepository } from '../../services/ai/readingStorage';
 import { stripFurigana } from '../../services/ai/readingParser';
+import { filterLibrary, withAnswer, withReading } from '../../services/ai/readingSession';
 import { LevelType } from '../../types/japanese';
 import {
-  ReadingPracticeData,
+  ActiveReadings,
   ReadingHistoryEntry,
   ReadingQuestion,
   ReadingVocabEntry,
@@ -59,14 +61,20 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   // Navigation tabs inside reading section: 'studio' | 'library'
   const [activeTab, setActiveTab] = useState<'studio' | 'library'>('studio');
 
+  const navigate = useNavigate();
+
   // Generator configuration
   const [selectedLesson, setSelectedLesson] = useState<string>('all');
-  // Tracks the level a lesson selection was made for, so it can reset when the level
-  // changes without an effect - adjusting state during render, per React's docs.
-  const [selectedLessonLevel, setSelectedLessonLevel] = useState<LevelType>(activeLevel);
-  if (activeLevel !== selectedLessonLevel) {
-    setSelectedLessonLevel(activeLevel);
+  // Library filter & search. The level filter follows the header level by default.
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [libraryFilterLevel, setLibraryFilterLevel] = useState<'ALL' | LevelType>(activeLevel);
+  // Tracks the level the lesson scope and library filter were set for, so they reset
+  // when the level changes without an effect - adjusting state during render, per React's docs.
+  const [scopedLevel, setScopedLevel] = useState<LevelType>(activeLevel);
+  if (activeLevel !== scopedLevel) {
+    setScopedLevel(activeLevel);
     setSelectedLesson('all');
+    setLibraryFilterLevel(activeLevel);
   }
   const [selectedTopic, setSelectedTopic] = useState<string>(PRESET_TOPICS[0].value);
   const [customTopic, setCustomTopic] = useState<string>('');
@@ -76,39 +84,44 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   const [showTranslation, setShowTranslation] = useState<boolean>(false);
   const [showGlossary, setShowGlossary] = useState<boolean>(false);
 
-  // Library filter & search
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [libraryFilterLevel, setLibraryFilterLevel] = useState<'ALL' | LevelType>('ALL');
-
   // Focus Modal for viewing a story directly from library
   const [modalStory, setModalStory] = useState<ReadingHistoryEntry | null>(null);
   const [modalUserAnswers, setModalUserAnswers] = useState<Record<number, number>>({});
 
-  // Active Passage & Library State
-  const [loading, setLoading] = useState<boolean>(false);
-  const [readingData, setReadingData] = useState<ReadingPracticeData | null>(null);
+  // Each level's current passage + answers. The passage shown is always the current
+  // level's own; switching level never relabels another level's passage.
+  const [activeReadings, setActiveReadings] = useState<ActiveReadings>({});
+  const [hydrated, setHydrated] = useState<boolean>(false);
   const [savedHistory, setSavedHistory] = useState<ReadingHistoryEntry[]>([]);
-  const [error, setError] = useState<string>('');
+  // The level a generation was started for (null when idle), and the level an error belongs to.
+  const [generatingLevel, setGeneratingLevel] = useState<LevelType | null>(null);
+  const [error, setError] = useState<{ level: LevelType; message: string } | null>(null);
   const [copied, setCopied] = useState<boolean>(false);
 
-  // Quiz state for studio
-  const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
-  const [showExplanations, setShowExplanations] = useState<Record<number, boolean>>({});
   const [showExplanationEn, setShowExplanationEn] = useState<Record<number, boolean>>({});
   const [modalShowExplanationEn, setModalShowExplanationEn] = useState<Record<number, boolean>>({});
 
   const totalLessons = Object.keys(grammarData).map(Number).sort((a, b) => a - b);
   const activeProvider = getProvider(getActiveProviderId());
 
-  // Load initial reading & history from repository on mount
+  const activeReading = activeReadings[activeLevel] ?? null;
+  const readingData = activeReading?.data ?? null;
+  const userAnswers = activeReading?.answers ?? {};
+  const loading = generatingLevel !== null;
+  const generatingHere = generatingLevel === activeLevel;
+  const levelError = error?.level === activeLevel ? error.message : '';
+  const levelLibraryCount = savedHistory.filter((h) => h.level === activeLevel).length;
+
+  // Load each level's current passage & the library from the repository on mount
   useEffect(() => {
     let isMounted = true;
     (async () => {
-      const active = await readingRepository.getActiveReading();
+      const active = await readingRepository.getActiveReadings();
       const history = await readingRepository.getHistory();
       if (isMounted) {
-        if (active) setReadingData(active);
-        if (history) setSavedHistory(history);
+        setActiveReadings(active);
+        setSavedHistory(history);
+        setHydrated(true);
       }
     })();
     return () => {
@@ -116,13 +129,10 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
     };
   }, []);
 
-  // Sync active reading state to storage whenever it changes
+  // Persist the per-level passages (and answers) once they have been loaded
   useEffect(() => {
-    if (readingData !== null) {
-      readingRepository.setActiveReading(readingData);
-    }
-  }, [readingData]);
-
+    if (hydrated) readingRepository.setActiveReadings(activeReadings);
+  }, [activeReadings, hydrated]);
 
   const handleClearHistory = async () => {
     if (window.confirm('Are you sure you want to clear your saved reading library?')) {
@@ -141,19 +151,21 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   };
 
   const handleLoadIntoStudio = (item: ReadingHistoryEntry) => {
-    setReadingData(item.data);
-    setUserAnswers({});
-    setShowExplanations({});
+    // The passage becomes its own level's current passage; if that isn't the level on
+    // screen, follow it there rather than showing it under the wrong level.
+    setActiveReadings((prev) => withReading(prev, item));
+    setShowExplanationEn({});
     setActiveTab('studio');
+    if (item.level !== activeLevel) navigate(`/${item.level.toLowerCase()}/reading`);
     if (modalStory) setModalStory(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleGenerate = async () => {
-    setLoading(true);
-    setError('');
-    setUserAnswers({});
-    setShowExplanations({});
+    // Captured so a result that arrives after a level switch lands on the level it was made for.
+    const level = activeLevel;
+    setGeneratingLevel(level);
+    setError(null);
 
     try {
       const topicToUse = customTopic.trim() || selectedTopic;
@@ -163,7 +175,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
       const vocabList = lessonNum && vocabData[lessonNum] ? vocabData[lessonNum] : [];
 
       const result = await generateReadingPractice({
-        level: activeLevel,
+        level,
         lesson: lessonNum,
         topic: topicToUse,
         grammarList,
@@ -171,10 +183,11 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
         allowedKanji,
       });
 
-      setReadingData(result);
+      setActiveReadings((prev) => withReading(prev, { level, lesson: lessonNum, topic: topicToUse, data: result }));
+      setShowExplanationEn({});
       const updatedHistory = await readingRepository.saveToHistory({
         reading: result,
-        level: activeLevel,
+        level,
         lesson: lessonNum,
         topic: topicToUse,
       });
@@ -185,17 +198,15 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
       if (msg === 'MISSING_KEY') {
         setShowKeyModal(true);
       } else {
-        setError(msg || 'Failed to generate reading practice.');
+        setError({ level, message: msg || 'Failed to generate reading practice.' });
       }
     } finally {
-      setLoading(false);
+      setGeneratingLevel(null);
     }
   };
 
   const handleSelectOption = (questionId: number, optionIndex: number) => {
-    if (userAnswers[questionId] !== undefined) return;
-    setUserAnswers((prev) => ({ ...prev, [questionId]: optionIndex }));
-    setShowExplanations((prev) => ({ ...prev, [questionId]: true }));
+    setActiveReadings((prev) => withAnswer(prev, activeLevel, questionId, optionIndex));
   };
 
   const handleModalSelectOption = (questionId: number, optionIndex: number) => {
@@ -216,17 +227,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
   const answeredCount = Object.keys(userAnswers).length;
   const correctCount = questions.filter((q: ReadingQuestion) => userAnswers[q.id] === q.correctIndex).length;
 
-  // Filtered Library calculation
-  const filteredLibrary = savedHistory.filter((item) => {
-    const matchesLevel = libraryFilterLevel === 'ALL' || item.level === libraryFilterLevel;
-    const q = searchQuery.toLowerCase().trim();
-    const matchesSearch =
-      !q ||
-      (item.data?.title && item.data.title.toLowerCase().includes(q)) ||
-      (item.data?.titleEn && item.data.titleEn.toLowerCase().includes(q)) ||
-      (item.topic && item.topic.toLowerCase().includes(q));
-    return matchesLevel && matchesSearch;
-  });
+  const filteredLibrary = filterLibrary(savedHistory, libraryFilterLevel, searchQuery);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 space-y-6 animate-fade-in">
@@ -359,12 +360,12 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
             </div>
 
             {/* Error Banner */}
-            {error && (
+            {levelError && (
               <div className="p-4 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-start gap-2.5 animate-fade-in">
                 <AlertCircle size={16} className="text-rose-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <span className="font-bold block">Generation Error</span>
-                  {error}
+                  {levelError}
                 </div>
               </div>
             )}
@@ -377,13 +378,51 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                 className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
-                <span>{loading ? 'Generating 150-Word Passage & 5 Comprehension Questions...' : 'Generate Reading Material'}</span>
+                <span>
+                  {generatingHere
+                    ? 'Generating 150-Word Passage & 5 Comprehension Questions...'
+                    : loading
+                    ? `Generating ${generatingLevel} passage...`
+                    : `Generate ${activeLevel} Reading Material`}
+                </span>
               </button>
             </div>
           </div>
 
+          {/* Announces async generation results to screen readers */}
+          <p className="sr-only" role="status" aria-live="polite">
+            {generatingHere ? `Generating ${activeLevel} passage` : readingData ? `${activeLevel} passage ready` : ''}
+          </p>
+
+          {/* Empty state: this level has no current passage yet */}
+          {!readingData && hydrated && !generatingHere && (
+            <div className="bg-white rounded-2xl border border-dashed border-slate-300 p-8 md:p-10 text-center space-y-4 animate-fade-in">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mx-auto">
+                <BookOpen size={28} />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-slate-800">No {activeLevel} passage yet</h4>
+                <p className="text-xs text-slate-500 max-w-md mx-auto mt-1">
+                  Use <span className="font-semibold">Generate {activeLevel} Reading Material</span> above to create one
+                  {' '}(this calls {activeProvider.name} with your API key){levelLibraryCount > 0 ? ', or reopen a saved one.' : '.'}
+                </p>
+              </div>
+              {levelLibraryCount > 0 && (
+                <button
+                  onClick={() => setActiveTab('library')}
+                  className="px-5 py-2.5 min-h-10 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-xs rounded-xl border border-indigo-200 hover:border-indigo-600 transition-all inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <History size={14} />
+                  <span>
+                    Open {activeLevel} library ({levelLibraryCount})
+                  </span>
+                </button>
+              )}
+            </div>
+          )}
+
           {/* Reading Material Display */}
-          {readingData && (
+          {readingData && activeReading && (
             <div className="space-y-6 animate-fade-in">
               {/* Passage Card */}
               <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -392,8 +431,11 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="px-2 py-0.5 bg-indigo-500/30 border border-indigo-400/30 text-indigo-200 text-[10px] font-bold rounded uppercase">
-                        {activeLevel} Passage
+                        {activeReading.level} Passage
                       </span>
+                      {activeReading.lesson && (
+                        <span className="text-[11px] text-indigo-200 font-medium">• Lesson {activeReading.lesson}</span>
+                      )}
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
                       <FuriganaText text={readingData.title} mode={furiganaMode} />
@@ -647,7 +689,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                         </div>
 
                         {/* Explanation reveal upon answering with Furigana and toggleable English */}
-                        {isAnswered && showExplanations[q.id] && (
+                        {isAnswered && (
                           <div className="mt-4 p-4 bg-slate-50/80 rounded-xl border border-slate-200 text-xs space-y-2 animate-fade-in">
                             <div className="flex items-center justify-between gap-2">
                               <div className="flex items-center gap-1.5 font-bold text-indigo-950 text-xs">

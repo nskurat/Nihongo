@@ -1,4 +1,9 @@
 import { AiProvider, AiPromptOptions } from '../../../types/ai';
+import { MODEL_CATALOG, getDefaultModelId, toModelOptions } from '../modelCatalog';
+
+// The floating alias never goes stale: Google moves it to the newest stable Flash.
+const models = toModelOptions(MODEL_CATALOG.providers.gemini, 'gemini-flash-latest');
+const DEFAULT_MODEL = getDefaultModelId(models);
 
 export const geminiProvider: AiProvider = {
   id: 'gemini',
@@ -6,19 +11,17 @@ export const geminiProvider: AiProvider = {
   description: 'Fast, high-quality reasoning and bilingual generation powered by Google Flash models.',
   website: 'https://aistudio.google.com/app/apikey',
   requiresKey: true,
-  models: [
-    { id: 'gemini-3.7-flash', name: 'Gemini 3.7 Flash (Fast & Advanced)', isDefault: true },
-    { id: 'gemini-3.6-flash', name: 'Gemini 3.6 Flash' },
-  ],
+  models,
 
   async executePrompt(prompt: string, options: AiPromptOptions = {}): Promise<string> {
-    const { apiKey, model = 'gemini-3.7-flash' } = options;
+    const { apiKey, model = DEFAULT_MODEL } = options;
 
     if (!apiKey) {
       throw new Error('MISSING_KEY');
     }
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+    // The key travels in a header, not the query string, so it stays out of URLs and logs.
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
 
     const payload: Record<string, unknown> = {
       contents: [{ parts: [{ text: prompt }] }],
@@ -30,7 +33,7 @@ export const geminiProvider: AiProvider = {
 
     const res = await fetch(endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
       body: JSON.stringify(payload),
     });
 

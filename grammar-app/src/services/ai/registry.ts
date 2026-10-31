@@ -97,19 +97,29 @@ export function setStoredModel(providerId: AiProviderId, modelId: string): void 
   }
 }
 
-export async function executeAiPrompt(prompt: string, options: AiPromptOptions = {}): Promise<string> {
-  const activeId = getActiveProviderId();
-  const provider = getProvider(activeId);
+export interface ExecuteAiPromptOptions extends AiPromptOptions {
+  /**
+   * Provider to call. Defaults to the saved active provider. Pass it whenever `apiKey` or
+   * `model` belong to a provider other than the saved one: key, model and endpoint are all
+   * resolved from this one id, so one provider's key is never sent to another.
+   */
+  providerId?: AiProviderId;
+}
 
-  const apiKey = options.apiKey || getStoredApiKey(activeId);
-  const model = options.model || getStoredModel(activeId);
+export async function executeAiPrompt(prompt: string, options: ExecuteAiPromptOptions = {}): Promise<string> {
+  const { providerId, ...promptOptions } = options;
+  const id = providerId ?? getActiveProviderId();
+  const provider = getProvider(id);
+
+  const apiKey = promptOptions.apiKey || getStoredApiKey(id);
+  const model = promptOptions.model || getStoredModel(id);
 
   if (provider.requiresKey && !apiKey) {
     throw new Error('MISSING_KEY');
   }
 
   return await provider.executePrompt(prompt, {
-    ...options,
+    ...promptOptions,
     apiKey,
     model,
   });

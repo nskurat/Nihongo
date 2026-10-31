@@ -1,4 +1,9 @@
 import { AiProvider, AiPromptOptions } from '../../../types/ai';
+import { MODEL_CATALOG, getDefaultModelId, isOpenAiReasoningModel, toModelOptions } from '../modelCatalog';
+
+// Default to the newest non-reasoning model: it accepts every parameter this provider sends.
+const models = toModelOptions(MODEL_CATALOG.providers.openai, undefined, (m) => !m.reasoning);
+const DEFAULT_MODEL = getDefaultModelId(models);
 
 export const openaiProvider: AiProvider = {
   id: 'openai',
@@ -6,14 +11,10 @@ export const openaiProvider: AiProvider = {
   description: 'Industry-standard language models with structured JSON and nuanced Japanese output.',
   website: 'https://platform.openai.com/api-keys',
   requiresKey: true,
-  models: [
-    { id: 'gpt-4o-mini', name: 'GPT-4o Mini (Fast & Affordable)', isDefault: true },
-    { id: 'gpt-4o', name: 'GPT-4o (High Intelligence)' },
-    { id: 'gpt-3.5-turbo', name: 'GPT-3.5 Turbo' },
-  ],
+  models,
 
   async executePrompt(prompt: string, options: AiPromptOptions = {}): Promise<string> {
-    const { apiKey, model = 'gpt-4o-mini', temperature = 0.7 } = options;
+    const { apiKey, model = DEFAULT_MODEL, temperature = 0.7 } = options;
 
     if (!apiKey) {
       throw new Error('MISSING_KEY');
@@ -25,8 +26,12 @@ export const openaiProvider: AiProvider = {
         { role: 'system', content: 'You are an expert Japanese educator.' },
         { role: 'user', content: prompt },
       ],
-      temperature,
     };
+
+    // Reasoning models (o-series, GPT-5+) reject any temperature but the default.
+    if (!isOpenAiReasoningModel(model, models)) {
+      payload.temperature = temperature;
+    }
 
     if (options.responseFormat === 'json') {
       payload.response_format = { type: 'json_object' };

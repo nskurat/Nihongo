@@ -6,6 +6,12 @@ export interface AiModelOption {
   id: string;
   name: string;
   isDefault?: boolean;
+  maxInputTokens?: number;
+  maxOutputTokens?: number;
+  /** Set when the provider retires the model within ~90 days (YYYY-MM-DD). */
+  deprecationDate?: string;
+  /** Reasoning-class model; OpenAI rejects sampling params such as temperature for these. */
+  reasoning?: boolean;
 }
 
 export interface AiPromptOptions {
@@ -64,6 +70,19 @@ export interface ReadingHistoryEntry {
   topic: string;
   data: ReadingPracticeData;
 }
+
+/** A level's current Reading Studio passage, with the answers given so far. */
+export interface ActiveReading {
+  level: LevelType;
+  lesson: number | null;
+  topic: string;
+  data: ReadingPracticeData;
+  /** questionId -> chosen option index. Answers are final once given. */
+  answers: Record<number, number>;
+}
+
+/** Each level keeps its own current passage; switching level never relabels one. */
+export type ActiveReadings = Partial<Record<LevelType, ActiveReading>>;
 
 export interface SaveHistoryParams {
   reading: ReadingPracticeData;
