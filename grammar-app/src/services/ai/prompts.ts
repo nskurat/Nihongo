@@ -4,7 +4,7 @@ import { LevelType } from '../../types/japanese';
  * Static Prompt Templates and JSON Schemas for AI Services
  */
 
-export const READING_PRACTICE_SYSTEM_PROMPT = `You are an expert Japanese language educator specializing in JLPT N5, N4, and N3 reading comprehension.
+export const READING_PRACTICE_SYSTEM_PROMPT = `You are an expert Japanese language educator specializing in JLPT N5–N1 reading comprehension.
 
 Generate a captivating, natural Japanese reading passage and a 5-question multiple choice reading comprehension test.`;
 
@@ -36,13 +36,24 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
   ]
 }`;
 
-export const READING_PRACTICE_RULES = [
-  '1. Passage Length: Around 150 words (approx. 250–350 Japanese characters).',
+// N5–N3 keep the original ~150-word passage; N2/N1 reading tasks are longer and denser.
+const READING_PASSAGE_LENGTH: Record<LevelType, string> = {
+  N5: 'Around 150 words (approx. 250–350 Japanese characters).',
+  N4: 'Around 150 words (approx. 250–350 Japanese characters).',
+  N3: 'Around 150 words (approx. 250–350 Japanese characters).',
+  N2: 'Around 250 words (approx. 450–600 Japanese characters), an essay, article or explanatory text.',
+  N1: 'Around 350 words (approx. 600–800 Japanese characters), an editorial, essay or abstract argument.',
+};
+
+export function getReadingPracticeRules(level: LevelType): string {
+  return [
+  `1. Passage Length: ${READING_PASSAGE_LENGTH[level]}`,
   '2. Furigana Notation: For all Kanji, write the reading in brackets directly after the kanji, like this: 漢字[かんじ] or 京都[きょうと]へ行[い]きました. Do not add brackets to pure Hiragana/Katakana words.',
   '3. Comprehension Questions: Exactly 5 multiple-choice questions testing reading comprehension, main idea, and specific details. Questions and options must be strictly in Japanese with NO English translations (true immersion).',
   '4. Each question must have exactly 4 options (A, B, C, D) and specify the 0-based "correctIndex" (0, 1, 2, or 3).',
   '5. Explanations: Provide a Japanese explanation with bracketed furigana in "explanationJp", and its clear English translation in "explanationEn".',
-].join('\n');
+  ].join('\n');
+}
 
 /**
  * Grammar Example Sentences Prompt Template

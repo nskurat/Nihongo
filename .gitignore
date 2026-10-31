@@ -42,3 +42,6 @@ _site/
 # Build tooling
 *.tsbuildinfo
 .eslintcache
+
+# Agent worktrees
+.claude/worktrees/

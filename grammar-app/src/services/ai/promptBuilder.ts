@@ -1,7 +1,7 @@
 import { LevelType, GrammarItem, VocabItem } from '../../types/japanese';
 import {
   READING_PRACTICE_SYSTEM_PROMPT,
-  READING_PRACTICE_RULES,
+  getReadingPracticeRules,
   READING_PRACTICE_SCHEMA_TEMPLATE,
 } from './prompts';
 
@@ -62,7 +62,7 @@ export function buildReadingPracticePrompt({
     `THEME / TOPIC: "${topic}"`,
     '',
     'REQUIREMENTS:',
-    READING_PRACTICE_RULES,
+    getReadingPracticeRules(level),
     '',
     'CRITICAL: Return ONLY a valid JSON object matching the exact schema below. Do NOT wrap in conversational text or markdown code fences.',
     '',

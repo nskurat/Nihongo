@@ -178,13 +178,13 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                         <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
                           <Languages size={12} /> Onyomi
                         </div>
-                        <div className="font-semibold text-slate-700">{item.onyomi || '—'}</div>
+                        <div className="font-semibold text-slate-700">{item.onyomi?.length ? item.onyomi.join('、') : '—'}</div>
                       </div>
                       <div>
                         <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
                           <Layers size={12} /> Kunyomi
                         </div>
-                        <div className="font-semibold text-slate-700">{item.kunyomi || '—'}</div>
+                        <div className="font-semibold text-slate-700">{item.kunyomi?.length ? item.kunyomi.join('、') : '—'}</div>
                       </div>
                     </div>
                     

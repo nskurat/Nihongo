@@ -129,6 +129,285 @@
       "meaning": "Pleased to meet you (used at the end of a self-introduction)",
       "exampleJp": "サントスです。どうぞよろしくお願いします。",
       "exampleEn": "I am Santos. Pleased to meet you."
+    },
+    {
+      "uid": "n5-vocab-1-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "明日",
+      "reading": "あした",
+      "meaning": "tomorrow"
+    },
+    {
+      "uid": "n5-vocab-1-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "いいえ",
+      "reading": "いいえ",
+      "meaning": "no, not at all"
+    },
+    {
+      "uid": "n5-vocab-1-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "一日",
+      "reading": "いちにち",
+      "meaning": "one day (duration)"
+    },
+    {
+      "uid": "n5-vocab-1-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "五日",
+      "reading": "いつか",
+      "meaning": "five days; fifth day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "一昨日",
+      "reading": "おととい",
+      "meaning": "the day before yesterday"
+    },
+    {
+      "uid": "n5-vocab-1-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "火曜日",
+      "reading": "かようび",
+      "meaning": "Tuesday"
+    },
+    {
+      "uid": "n5-vocab-1-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "川",
+      "reading": "かわ",
+      "meaning": "River"
+    },
+    {
+      "uid": "n5-vocab-1-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "昨日",
+      "reading": "きのう",
+      "meaning": "yesterday"
+    },
+    {
+      "uid": "n5-vocab-1-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "金曜日",
+      "reading": "きんようび",
+      "meaning": "Friday"
+    },
+    {
+      "uid": "n5-vocab-1-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "月曜日",
+      "reading": "げつようび",
+      "meaning": "Monday"
+    },
+    {
+      "uid": "n5-vocab-1-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "九日",
+      "reading": "ここのか",
+      "meaning": "nine days; ninth day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "今月",
+      "reading": "こんげつ",
+      "meaning": "this month"
+    },
+    {
+      "uid": "n5-vocab-1-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "水曜日",
+      "reading": "すいようび",
+      "meaning": "Wednesday"
+    },
+    {
+      "uid": "n5-vocab-1-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "先月",
+      "reading": "せんげつ",
+      "meaning": "last month"
+    },
+    {
+      "uid": "n5-vocab-1-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "一日",
+      "reading": "ついたち",
+      "meaning": "one day; first day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "十日",
+      "reading": "とおか",
+      "meaning": "ten days; tenth day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "土曜日",
+      "reading": "どようび",
+      "meaning": "Saturday"
+    },
+    {
+      "uid": "n5-vocab-1-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "七日",
+      "reading": "なのか",
+      "meaning": "seven days; seventh day (of the month)"
+    },
+    {
+      "uid": "n5-vocab-1-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "日曜日",
+      "reading": "にちようび",
+      "meaning": "Sunday"
+    },
+    {
+      "uid": "n5-vocab-1-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "二十日",
+      "reading": "はつか",
+      "meaning": "twenty days, twentieth (day of the month)"
+    },
+    {
+      "uid": "n5-vocab-1-31",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "一月",
+      "reading": "ひとつき",
+      "meaning": "one month"
+    },
+    {
+      "uid": "n5-vocab-1-32",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "二日",
+      "reading": "ふつか",
+      "meaning": "two days; second day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-33",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "毎月",
+      "reading": "まいげつ",
+      "meaning": "every month"
+    },
+    {
+      "uid": "n5-vocab-1-34",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "毎月",
+      "reading": "まいつき",
+      "meaning": "every month"
+    },
+    {
+      "uid": "n5-vocab-1-35",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "水",
+      "reading": "みず",
+      "meaning": "water"
+    },
+    {
+      "uid": "n5-vocab-1-36",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "三日",
+      "reading": "みっか",
+      "meaning": "three days, third day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-37",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "六日",
+      "reading": "むいか",
+      "meaning": "six days; sixth day of month"
+    },
+    {
+      "uid": "n5-vocab-1-38",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "木曜日",
+      "reading": "もくようび",
+      "meaning": "Thursday"
+    },
+    {
+      "uid": "n5-vocab-1-39",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "八日",
+      "reading": "ようか",
+      "meaning": "eight days; eighth day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-40",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "四日",
+      "reading": "よっか",
+      "meaning": "four days; fourth day of the month"
+    },
+    {
+      "uid": "n5-vocab-1-41",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "来月",
+      "reading": "らいげつ",
+      "meaning": "next month"
     }
   ],
   "2": [
@@ -261,6 +540,339 @@
       "meaning": "Thank you [very much]",
       "exampleJp": "どうもありがとうございます。",
       "exampleEn": "Thank you very much."
+    },
+    {
+      "uid": "n5-vocab-2-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "暑い",
+      "reading": "あつい",
+      "meaning": "hot (in reference to weather), warm"
+    },
+    {
+      "uid": "n5-vocab-2-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "いかが",
+      "reading": "いかが",
+      "meaning": "how, in what way"
+    },
+    {
+      "uid": "n5-vocab-2-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "一",
+      "reading": "いち",
+      "meaning": "one"
+    },
+    {
+      "uid": "n5-vocab-2-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "一緒",
+      "reading": "いっしょ",
+      "meaning": "together"
+    },
+    {
+      "uid": "n5-vocab-2-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "五つ",
+      "reading": "いつつ",
+      "meaning": "five things"
+    },
+    {
+      "uid": "n5-vocab-2-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "一昨年",
+      "reading": "おととし",
+      "meaning": "year before last"
+    },
+    {
+      "uid": "n5-vocab-2-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "九",
+      "reading": "きゅう",
+      "meaning": "nine"
+    },
+    {
+      "uid": "n5-vocab-2-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "九",
+      "reading": "く",
+      "meaning": "nine"
+    },
+    {
+      "uid": "n5-vocab-2-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "五",
+      "reading": "ご",
+      "meaning": "five"
+    },
+    {
+      "uid": "n5-vocab-2-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "九つ",
+      "reading": "ここのつ",
+      "meaning": "nine things"
+    },
+    {
+      "uid": "n5-vocab-2-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "三",
+      "reading": "さん",
+      "meaning": "three"
+    },
+    {
+      "uid": "n5-vocab-2-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "四",
+      "reading": "し",
+      "meaning": "four"
+    },
+    {
+      "uid": "n5-vocab-2-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "七",
+      "reading": "しち",
+      "meaning": "seven"
+    },
+    {
+      "uid": "n5-vocab-2-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "十",
+      "reading": "じゅう",
+      "meaning": "ten"
+    },
+    {
+      "uid": "n5-vocab-2-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "千",
+      "reading": "せん",
+      "meaning": "thousand"
+    },
+    {
+      "uid": "n5-vocab-2-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "十",
+      "reading": "とお",
+      "meaning": "Ten"
+    },
+    {
+      "uid": "n5-vocab-2-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "七",
+      "reading": "なな",
+      "meaning": "Seven"
+    },
+    {
+      "uid": "n5-vocab-2-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "七つ",
+      "reading": "ななつ",
+      "meaning": "seven things"
+    },
+    {
+      "uid": "n5-vocab-2-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "二",
+      "reading": "に",
+      "meaning": "two"
+    },
+    {
+      "uid": "n5-vocab-2-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "二十歳",
+      "reading": "はたち",
+      "meaning": "20 years old"
+    },
+    {
+      "uid": "n5-vocab-2-31",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "八",
+      "reading": "はち",
+      "meaning": "eight"
+    },
+    {
+      "uid": "n5-vocab-2-32",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "一つ",
+      "reading": "ひとつ",
+      "meaning": "one thing"
+    },
+    {
+      "uid": "n5-vocab-2-33",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "一人",
+      "reading": "ひとり",
+      "meaning": "one person"
+    },
+    {
+      "uid": "n5-vocab-2-34",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "百",
+      "reading": "ひゃく",
+      "meaning": "hundred"
+    },
+    {
+      "uid": "n5-vocab-2-35",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "二つ",
+      "reading": "ふたつ",
+      "meaning": "two things"
+    },
+    {
+      "uid": "n5-vocab-2-36",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "二人",
+      "reading": "ふたり",
+      "meaning": "two people"
+    },
+    {
+      "uid": "n5-vocab-2-37",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "円い",
+      "reading": "まるい",
+      "meaning": "round, circular"
+    },
+    {
+      "uid": "n5-vocab-2-38",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "万",
+      "reading": "まん",
+      "meaning": "ten thousand"
+    },
+    {
+      "uid": "n5-vocab-2-39",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "万年筆",
+      "reading": "まんねんひつ",
+      "meaning": "fountain pen"
+    },
+    {
+      "uid": "n5-vocab-2-40",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "三つ",
+      "reading": "みっつ",
+      "meaning": "three things"
+    },
+    {
+      "uid": "n5-vocab-2-41",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "六つ",
+      "reading": "むっつ",
+      "meaning": "six things"
+    },
+    {
+      "uid": "n5-vocab-2-42",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "もう一度",
+      "reading": "もういちど",
+      "meaning": "again"
+    },
+    {
+      "uid": "n5-vocab-2-43",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "八百屋",
+      "reading": "やおや",
+      "meaning": "greengrocer"
+    },
+    {
+      "uid": "n5-vocab-2-44",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "八つ",
+      "reading": "やっつ",
+      "meaning": "eight things"
+    },
+    {
+      "uid": "n5-vocab-2-45",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "四つ",
+      "reading": "よっつ",
+      "meaning": "four things"
+    },
+    {
+      "uid": "n5-vocab-2-46",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "四",
+      "reading": "よん",
+      "meaning": "Four"
+    },
+    {
+      "uid": "n5-vocab-2-47",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "六",
+      "reading": "ろく",
+      "meaning": "six"
     }
   ],
   "3": [
@@ -393,6 +1005,231 @@
       "meaning": "Give me [~], please",
       "exampleJp": "これをください。",
       "exampleEn": "I'll take this, please."
+    },
+    {
+      "uid": "n5-vocab-3-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "会う",
+      "reading": "あう",
+      "meaning": "to meet, to see"
+    },
+    {
+      "uid": "n5-vocab-3-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "朝",
+      "reading": "あさ",
+      "meaning": "morning"
+    },
+    {
+      "uid": "n5-vocab-3-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "朝ご飯",
+      "reading": "あさごはん",
+      "meaning": "breakfast"
+    },
+    {
+      "uid": "n5-vocab-3-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "生まれる",
+      "reading": "うまれる",
+      "meaning": "to be born"
+    },
+    {
+      "uid": "n5-vocab-3-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "外国",
+      "reading": "がいこく",
+      "meaning": "foreign country; abroad"
+    },
+    {
+      "uid": "n5-vocab-3-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "外国人",
+      "reading": "がいこくじん",
+      "meaning": "foreigner"
+    },
+    {
+      "uid": "n5-vocab-3-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "学生",
+      "reading": "がくせい",
+      "meaning": "student"
+    },
+    {
+      "uid": "n5-vocab-3-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "学校",
+      "reading": "がっこう",
+      "meaning": "a school"
+    },
+    {
+      "uid": "n5-vocab-3-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "国",
+      "reading": "くに",
+      "meaning": "country; place of origin"
+    },
+    {
+      "uid": "n5-vocab-3-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "今朝",
+      "reading": "けさ",
+      "meaning": "this morning"
+    },
+    {
+      "uid": "n5-vocab-3-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "今年",
+      "reading": "ことし",
+      "meaning": "this year"
+    },
+    {
+      "uid": "n5-vocab-3-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "今週",
+      "reading": "こんしゅう",
+      "meaning": "this week"
+    },
+    {
+      "uid": "n5-vocab-3-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "今晩",
+      "reading": "こんばん",
+      "meaning": "tonight, this evening"
+    },
+    {
+      "uid": "n5-vocab-3-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "先",
+      "reading": "さき",
+      "meaning": "future; recent, previous"
+    },
+    {
+      "uid": "n5-vocab-3-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "先週",
+      "reading": "せんしゅう",
+      "meaning": "last week"
+    },
+    {
+      "uid": "n5-vocab-3-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "大学",
+      "reading": "だいがく",
+      "meaning": "college; university"
+    },
+    {
+      "uid": "n5-vocab-3-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "晩",
+      "reading": "ばん",
+      "meaning": "evening"
+    },
+    {
+      "uid": "n5-vocab-3-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "晩ご飯",
+      "reading": "ばんごはん",
+      "meaning": "dinner, evening meal"
+    },
+    {
+      "uid": "n5-vocab-3-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "人",
+      "reading": "ひと",
+      "meaning": "man, person"
+    },
+    {
+      "uid": "n5-vocab-3-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "昼",
+      "reading": "ひる",
+      "meaning": "noon, daytime"
+    },
+    {
+      "uid": "n5-vocab-3-31",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "昼ご飯",
+      "reading": "ひるごはん",
+      "meaning": "lunch, midday meal"
+    },
+    {
+      "uid": "n5-vocab-3-32",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "本",
+      "reading": "ほん",
+      "meaning": "book"
+    },
+    {
+      "uid": "n5-vocab-3-33",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "本棚",
+      "reading": "ほんだな",
+      "meaning": "bookshelf"
+    },
+    {
+      "uid": "n5-vocab-3-34",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "毎朝",
+      "reading": "まいあさ",
+      "meaning": "every morning"
+    },
+    {
+      "uid": "n5-vocab-3-35",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "毎晩",
+      "reading": "まいばん",
+      "meaning": "every night"
     }
   ],
   "4": [
@@ -538,6 +1375,276 @@
       "meaning": "That's tough, isn't it? (used to express sympathy)",
       "exampleJp": "毎日10時まで働きます。…大変ですね。",
       "exampleEn": "I work until ten every day. — That's tough, isn't it?"
+    },
+    {
+      "uid": "n5-vocab-4-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "行く",
+      "reading": "いく",
+      "meaning": "to go"
+    },
+    {
+      "uid": "n5-vocab-4-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "押す",
+      "reading": "おす",
+      "meaning": "to push, to press, to stamp (e.g., a passport)"
+    },
+    {
+      "uid": "n5-vocab-4-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "鍵",
+      "reading": "かぎ",
+      "meaning": "a lock; a key"
+    },
+    {
+      "uid": "n5-vocab-4-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "キロ",
+      "reading": "キロ",
+      "meaning": "Kilogram"
+    },
+    {
+      "uid": "n5-vocab-4-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "銀行",
+      "reading": "ぎんこう",
+      "meaning": "bank"
+    },
+    {
+      "uid": "n5-vocab-4-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "来る",
+      "reading": "くる",
+      "meaning": "to come"
+    },
+    {
+      "uid": "n5-vocab-4-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "午後",
+      "reading": "ごご",
+      "meaning": "afternoon, P.M."
+    },
+    {
+      "uid": "n5-vocab-4-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "午前",
+      "reading": "ごぜん",
+      "meaning": "morning, A.M."
+    },
+    {
+      "uid": "n5-vocab-4-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "自分",
+      "reading": "じぶん",
+      "meaning": "myself, oneself"
+    },
+    {
+      "uid": "n5-vocab-4-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "多分",
+      "reading": "たぶん",
+      "meaning": "perhaps, probably, maybe"
+    },
+    {
+      "uid": "n5-vocab-4-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "出来る",
+      "reading": "できる",
+      "meaning": "to be able to"
+    },
+    {
+      "uid": "n5-vocab-4-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "どう",
+      "reading": "どう",
+      "meaning": "how, in what way"
+    },
+    {
+      "uid": "n5-vocab-4-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "時々",
+      "reading": "ときどき",
+      "meaning": "sometimes"
+    },
+    {
+      "uid": "n5-vocab-4-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "時計",
+      "reading": "とけい",
+      "meaning": "a watch; a clock"
+    },
+    {
+      "uid": "n5-vocab-4-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "何の",
+      "reading": "どの",
+      "meaning": "which"
+    },
+    {
+      "uid": "n5-vocab-4-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "夏休み",
+      "reading": "なつやすみ",
+      "meaning": "summer vacation"
+    },
+    {
+      "uid": "n5-vocab-4-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "何",
+      "reading": "なに",
+      "meaning": "what"
+    },
+    {
+      "uid": "n5-vocab-4-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "名前",
+      "reading": "なまえ",
+      "meaning": "name"
+    },
+    {
+      "uid": "n5-vocab-4-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "何",
+      "reading": "なん",
+      "meaning": "what"
+    },
+    {
+      "uid": "n5-vocab-4-31",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "半",
+      "reading": "はん",
+      "meaning": "half (e.g., にじはん | half-past two)"
+    },
+    {
+      "uid": "n5-vocab-4-32",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "毎週",
+      "reading": "まいしゅう",
+      "meaning": "every week"
+    },
+    {
+      "uid": "n5-vocab-4-33",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "毎年",
+      "reading": "まいとし",
+      "meaning": "every year"
+    },
+    {
+      "uid": "n5-vocab-4-34",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "毎年",
+      "reading": "まいねん",
+      "meaning": "every year"
+    },
+    {
+      "uid": "n5-vocab-4-35",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "休み",
+      "reading": "やすみ",
+      "meaning": "holiday; day off; absence"
+    },
+    {
+      "uid": "n5-vocab-4-36",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "休む",
+      "reading": "やすむ",
+      "meaning": "to rest, to have a break, to get time off"
+    },
+    {
+      "uid": "n5-vocab-4-37",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "行く",
+      "reading": "ゆく",
+      "meaning": "to go"
+    },
+    {
+      "uid": "n5-vocab-4-38",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "来週",
+      "reading": "らいしゅう",
+      "meaning": "next week"
+    },
+    {
+      "uid": "n5-vocab-4-39",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "来年",
+      "reading": "らいねん",
+      "meaning": "next year"
+    },
+    {
+      "uid": "n5-vocab-4-40",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "旅行",
+      "reading": "りょこう",
+      "meaning": "travel, trip"
+    },
+    {
+      "uid": "n5-vocab-4-41",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "分かる",
+      "reading": "わかる",
+      "meaning": "to understand"
     }
   ],
   "5": [
@@ -683,6 +1790,159 @@
       "meaning": "You're welcome, don't mention it",
       "exampleJp": "ありがとうございます。…どういたしまして。",
       "exampleEn": "Thank you. — You're welcome."
+    },
+    {
+      "uid": "n5-vocab-5-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "池",
+      "reading": "いけ",
+      "meaning": "pond"
+    },
+    {
+      "uid": "n5-vocab-5-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "遅い",
+      "reading": "おそい",
+      "meaning": "slow; (to be) late"
+    },
+    {
+      "uid": "n5-vocab-5-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "傘",
+      "reading": "かさ",
+      "meaning": "umbrella, parasol"
+    },
+    {
+      "uid": "n5-vocab-5-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "去年",
+      "reading": "きょねん",
+      "meaning": "last year"
+    },
+    {
+      "uid": "n5-vocab-5-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "車",
+      "reading": "くるま",
+      "meaning": "car, vehicle"
+    },
+    {
+      "uid": "n5-vocab-5-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "寒い",
+      "reading": "さむい",
+      "meaning": "cold (in reference to weather)"
+    },
+    {
+      "uid": "n5-vocab-5-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "自転車",
+      "reading": "じてんしゃ",
+      "meaning": "bicycle"
+    },
+    {
+      "uid": "n5-vocab-5-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "自動車",
+      "reading": "じどうしゃ",
+      "meaning": "automobile"
+    },
+    {
+      "uid": "n5-vocab-5-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "違う",
+      "reading": "ちがう",
+      "meaning": "to be different; to differ; wrong"
+    },
+    {
+      "uid": "n5-vocab-5-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "でも",
+      "reading": "でも",
+      "meaning": "but, however"
+    },
+    {
+      "uid": "n5-vocab-5-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "電気",
+      "reading": "でんき",
+      "meaning": "electricity, (electric) light"
+    },
+    {
+      "uid": "n5-vocab-5-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "電話",
+      "reading": "でんわ",
+      "meaning": "a telephone"
+    },
+    {
+      "uid": "n5-vocab-5-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "動物",
+      "reading": "どうぶつ",
+      "meaning": "animal"
+    },
+    {
+      "uid": "n5-vocab-5-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "年",
+      "reading": "とし",
+      "meaning": "year, age"
+    },
+    {
+      "uid": "n5-vocab-5-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "曲る",
+      "reading": "まがる",
+      "meaning": "to turn, to bend"
+    },
+    {
+      "uid": "n5-vocab-5-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "野菜",
+      "reading": "やさい",
+      "meaning": "vegetable"
+    },
+    {
+      "uid": "n5-vocab-5-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "冷蔵庫",
+      "reading": "れいぞうこ",
+      "meaning": "refrigerator"
     }
   ],
   "6": [
@@ -841,6 +2101,150 @@
       "meaning": "cherry-blossom viewing",
       "exampleJp": "あした 花見を します。",
       "exampleEn": "I'm going cherry-blossom viewing tomorrow."
+    },
+    {
+      "uid": "n5-vocab-6-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "青",
+      "reading": "あお",
+      "meaning": "blue"
+    },
+    {
+      "uid": "n5-vocab-6-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "青い",
+      "reading": "あおい",
+      "meaning": "blue"
+    },
+    {
+      "uid": "n5-vocab-6-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "赤",
+      "reading": "あか",
+      "meaning": "red"
+    },
+    {
+      "uid": "n5-vocab-6-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "赤い",
+      "reading": "あかい",
+      "meaning": "red"
+    },
+    {
+      "uid": "n5-vocab-6-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "大勢",
+      "reading": "おおぜい",
+      "meaning": "great number of people"
+    },
+    {
+      "uid": "n5-vocab-6-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "黒",
+      "reading": "くろ",
+      "meaning": "black"
+    },
+    {
+      "uid": "n5-vocab-6-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "黒い",
+      "reading": "くろい",
+      "meaning": "black; dark"
+    },
+    {
+      "uid": "n5-vocab-6-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "白",
+      "reading": "しろ",
+      "meaning": "white"
+    },
+    {
+      "uid": "n5-vocab-6-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "白い",
+      "reading": "しろい",
+      "meaning": "white"
+    },
+    {
+      "uid": "n5-vocab-6-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "大好き",
+      "reading": "だいすき",
+      "meaning": "very like-able, like very much"
+    },
+    {
+      "uid": "n5-vocab-6-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "大切",
+      "reading": "たいせつ",
+      "meaning": "important"
+    },
+    {
+      "uid": "n5-vocab-6-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "大変",
+      "reading": "たいへん",
+      "meaning": "very; difficult, hard"
+    },
+    {
+      "uid": "n5-vocab-6-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "小さい",
+      "reading": "ちいさい",
+      "meaning": "small, little"
+    },
+    {
+      "uid": "n5-vocab-6-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "古い",
+      "reading": "ふるい",
+      "meaning": "old (in reference to objects, not people), aged, ancient"
+    },
+    {
+      "uid": "n5-vocab-6-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "易しい",
+      "reading": "やさしい",
+      "meaning": "easy, plain, simple"
+    },
+    {
+      "uid": "n5-vocab-6-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "安い",
+      "reading": "やすい",
+      "meaning": "inexpensive; cheap (things)"
     }
   ],
   "7": [
@@ -986,6 +2390,240 @@
       "meaning": "already / not yet",
       "exampleJp": "もう 昼ごはんを 食べましたか。…いいえ、まだです。",
       "exampleEn": "Have you finished lunch? …No, not yet."
+    },
+    {
+      "uid": "n5-vocab-7-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "いす",
+      "reading": "いす",
+      "meaning": "chair"
+    },
+    {
+      "uid": "n5-vocab-7-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "上着",
+      "reading": "うわぎ",
+      "meaning": "coat, jacket"
+    },
+    {
+      "uid": "n5-vocab-7-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "お母さん",
+      "reading": "おかあさん",
+      "meaning": "mother (formal)"
+    },
+    {
+      "uid": "n5-vocab-7-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "お菓子",
+      "reading": "おかし",
+      "meaning": "confections, sweets, snack"
+    },
+    {
+      "uid": "n5-vocab-7-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "お父さん",
+      "reading": "おとうさん",
+      "meaning": "father (formal)"
+    },
+    {
+      "uid": "n5-vocab-7-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "男の子",
+      "reading": "おとこのこ",
+      "meaning": "boy"
+    },
+    {
+      "uid": "n5-vocab-7-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "伯母さん",
+      "reading": "おばさん",
+      "meaning": "Aunt"
+    },
+    {
+      "uid": "n5-vocab-7-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "女の子",
+      "reading": "おんなのこ",
+      "meaning": "girl"
+    },
+    {
+      "uid": "n5-vocab-7-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "買い物",
+      "reading": "かいもの",
+      "meaning": "shopping"
+    },
+    {
+      "uid": "n5-vocab-7-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "果物",
+      "reading": "くだもの",
+      "meaning": "fruit"
+    },
+    {
+      "uid": "n5-vocab-7-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "靴下",
+      "reading": "くつした",
+      "meaning": "socks"
+    },
+    {
+      "uid": "n5-vocab-7-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "子供",
+      "reading": "こども",
+      "meaning": "child(ren)"
+    },
+    {
+      "uid": "n5-vocab-7-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "食堂",
+      "reading": "しょくどう",
+      "meaning": "cafeteria, dining hall"
+    },
+    {
+      "uid": "n5-vocab-7-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "建物",
+      "reading": "たてもの",
+      "meaning": "building"
+    },
+    {
+      "uid": "n5-vocab-7-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "食べ物",
+      "reading": "たべもの",
+      "meaning": "food"
+    },
+    {
+      "uid": "n5-vocab-7-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "食べる",
+      "reading": "たべる",
+      "meaning": "to eat"
+    },
+    {
+      "uid": "n5-vocab-7-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "地下鉄",
+      "reading": "ちかてつ",
+      "meaning": "underground train, subway"
+    },
+    {
+      "uid": "n5-vocab-7-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "手",
+      "reading": "て",
+      "meaning": "hand"
+    },
+    {
+      "uid": "n5-vocab-7-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "手紙",
+      "reading": "てがみ",
+      "meaning": "letter"
+    },
+    {
+      "uid": "n5-vocab-7-31",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "とり肉",
+      "reading": "とりにく",
+      "meaning": "chicken meat"
+    },
+    {
+      "uid": "n5-vocab-7-32",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "肉",
+      "reading": "にく",
+      "meaning": "meat"
+    },
+    {
+      "uid": "n5-vocab-7-33",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "飲み物",
+      "reading": "のみもの",
+      "meaning": "drink, beverage"
+    },
+    {
+      "uid": "n5-vocab-7-34",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "飲む",
+      "reading": "のむ",
+      "meaning": "to drink"
+    },
+    {
+      "uid": "n5-vocab-7-35",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "物",
+      "reading": "もの",
+      "meaning": "thing (concrete object)"
+    },
+    {
+      "uid": "n5-vocab-7-36",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "廊下",
+      "reading": "ろうか",
+      "meaning": "corridor"
+    },
+    {
+      "uid": "n5-vocab-7-37",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "上げる",
+      "reading": "あげる",
+      "meaning": "to raise, to lift"
     }
   ],
   "8": [
@@ -1144,6 +2782,150 @@
       "meaning": "which one (of three or more)",
       "exampleJp": "ミラーさんの 傘は どれですか。",
       "exampleEn": "Which is Mr. Miller's umbrella?"
+    },
+    {
+      "uid": "n5-vocab-8-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "男",
+      "reading": "おとこ",
+      "meaning": "man, male"
+    },
+    {
+      "uid": "n5-vocab-8-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "女",
+      "reading": "おんな",
+      "meaning": "woman, female"
+    },
+    {
+      "uid": "n5-vocab-8-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "キログラム",
+      "reading": "キログラム",
+      "meaning": "Kilogram"
+    },
+    {
+      "uid": "n5-vocab-8-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "玄関",
+      "reading": "げんかん",
+      "meaning": "entrance (to a house or a building)"
+    },
+    {
+      "uid": "n5-vocab-8-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "塩",
+      "reading": "しお",
+      "meaning": "salt"
+    },
+    {
+      "uid": "n5-vocab-8-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "吸う",
+      "reading": "すう",
+      "meaning": "to breathe in, to suck"
+    },
+    {
+      "uid": "n5-vocab-8-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "そうして",
+      "reading": "そうして",
+      "meaning": "And"
+    },
+    {
+      "uid": "n5-vocab-8-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "ちゃわん",
+      "reading": "ちゃわん",
+      "meaning": "rice bowl"
+    },
+    {
+      "uid": "n5-vocab-8-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "テレビ",
+      "reading": "テレビ",
+      "meaning": "television, TV"
+    },
+    {
+      "uid": "n5-vocab-8-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "並ぶ",
+      "reading": "ならぶ",
+      "meaning": "to line up, to stand in a line (v.i.)"
+    },
+    {
+      "uid": "n5-vocab-8-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "歯",
+      "reading": "は",
+      "meaning": "tooth"
+    },
+    {
+      "uid": "n5-vocab-8-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "速い",
+      "reading": "はやい",
+      "meaning": "fast, quick"
+    },
+    {
+      "uid": "n5-vocab-8-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "左",
+      "reading": "ひだり",
+      "meaning": "left hand side"
+    },
+    {
+      "uid": "n5-vocab-8-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "マッチ",
+      "reading": "マッチ",
+      "meaning": "match"
+    },
+    {
+      "uid": "n5-vocab-8-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "右",
+      "reading": "みぎ",
+      "meaning": "right hand side"
+    },
+    {
+      "uid": "n5-vocab-8-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "レコード",
+      "reading": "レコード",
+      "meaning": "record"
     }
   ],
   "9": [
@@ -1289,6 +3071,177 @@
       "meaning": "why",
       "exampleJp": "どうして 早く 帰りましたか。",
       "exampleEn": "Why did you go home early?"
+    },
+    {
+      "uid": "n5-vocab-9-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "痛い",
+      "reading": "いたい",
+      "meaning": "hurt; painful; sore"
+    },
+    {
+      "uid": "n5-vocab-9-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "起きる",
+      "reading": "おきる",
+      "meaning": "to get up (e.g., from sleeping); to happen"
+    },
+    {
+      "uid": "n5-vocab-9-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "買う",
+      "reading": "かう",
+      "meaning": "to buy"
+    },
+    {
+      "uid": "n5-vocab-9-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "帰る",
+      "reading": "かえる",
+      "meaning": "to go back, to go home, to return"
+    },
+    {
+      "uid": "n5-vocab-9-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "公園",
+      "reading": "こうえん",
+      "meaning": "a park"
+    },
+    {
+      "uid": "n5-vocab-9-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "しかし",
+      "reading": "しかし",
+      "meaning": "However"
+    },
+    {
+      "uid": "n5-vocab-9-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "すぐに",
+      "reading": "すぐに",
+      "meaning": "immediately, soon"
+    },
+    {
+      "uid": "n5-vocab-9-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "そして",
+      "reading": "そして",
+      "meaning": "And"
+    },
+    {
+      "uid": "n5-vocab-9-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "ちょっと",
+      "reading": "ちょっと",
+      "meaning": "a little, somewhat; just a little, somewhat"
+    },
+    {
+      "uid": "n5-vocab-9-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "戸",
+      "reading": "と",
+      "meaning": "door (Japanese style)"
+    },
+    {
+      "uid": "n5-vocab-9-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "図書館",
+      "reading": "としょかん",
+      "meaning": "library"
+    },
+    {
+      "uid": "n5-vocab-9-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "友達",
+      "reading": "ともだち",
+      "meaning": "friend"
+    },
+    {
+      "uid": "n5-vocab-9-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "葉書",
+      "reading": "はがき",
+      "meaning": "postcard"
+    },
+    {
+      "uid": "n5-vocab-9-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "話",
+      "reading": "はなし",
+      "meaning": "talk (chat), story"
+    },
+    {
+      "uid": "n5-vocab-9-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "話す",
+      "reading": "はなす",
+      "meaning": "to speak"
+    },
+    {
+      "uid": "n5-vocab-9-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "見せる",
+      "reading": "みせる",
+      "meaning": "to show, to display"
+    },
+    {
+      "uid": "n5-vocab-9-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "見る",
+      "reading": "みる",
+      "meaning": "to see, to look"
+    },
+    {
+      "uid": "n5-vocab-9-29",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "読む",
+      "reading": "よむ",
+      "meaning": "to read"
+    },
+    {
+      "uid": "n5-vocab-9-30",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "聞く",
+      "reading": "きく",
+      "meaning": "to hear, to listen, to ask"
     }
   ],
   "10": [
@@ -1434,6 +3387,159 @@
       "meaning": "the most 〜",
       "exampleJp": "いちばん 上に 何が ありますか。",
       "exampleEn": "What is at the top?"
+    },
+    {
+      "uid": "n5-vocab-10-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "いちばん",
+      "reading": "いちばん",
+      "meaning": "best, first"
+    },
+    {
+      "uid": "n5-vocab-10-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "映画",
+      "reading": "えいが",
+      "meaning": "movie, film"
+    },
+    {
+      "uid": "n5-vocab-10-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "映画館",
+      "reading": "えいがかん",
+      "meaning": "movie theater, cinema"
+    },
+    {
+      "uid": "n5-vocab-10-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "英語",
+      "reading": "えいご",
+      "meaning": "English (language)"
+    },
+    {
+      "uid": "n5-vocab-10-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "お茶",
+      "reading": "おちゃ",
+      "meaning": "(green) tea"
+    },
+    {
+      "uid": "n5-vocab-10-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "紙",
+      "reading": "かみ",
+      "meaning": "paper"
+    },
+    {
+      "uid": "n5-vocab-10-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "喫茶店",
+      "reading": "きっさてん",
+      "meaning": "café"
+    },
+    {
+      "uid": "n5-vocab-10-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "紅茶",
+      "reading": "こうちゃ",
+      "meaning": "black tea"
+    },
+    {
+      "uid": "n5-vocab-10-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "写真",
+      "reading": "しゃしん",
+      "meaning": "a picture; a photograph"
+    },
+    {
+      "uid": "n5-vocab-10-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "茶色",
+      "reading": "ちゃいろ",
+      "meaning": "brown"
+    },
+    {
+      "uid": "n5-vocab-10-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "並べる",
+      "reading": "ならべる",
+      "meaning": "to put (things) side by side; to line up"
+    },
+    {
+      "uid": "n5-vocab-10-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "パーティー",
+      "reading": "パーティー",
+      "meaning": "a party"
+    },
+    {
+      "uid": "n5-vocab-10-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "貼る",
+      "reading": "はる",
+      "meaning": "to post; to paste; to attach"
+    },
+    {
+      "uid": "n5-vocab-10-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "フォーク",
+      "reading": "フォーク",
+      "meaning": "fork"
+    },
+    {
+      "uid": "n5-vocab-10-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "丸い",
+      "reading": "まるい",
+      "meaning": "round, circular"
+    },
+    {
+      "uid": "n5-vocab-10-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "店",
+      "reading": "みせ",
+      "meaning": "store, shop"
+    },
+    {
+      "uid": "n5-vocab-10-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "レストラン",
+      "reading": "レストラン",
+      "meaning": "restaurant"
     }
   ],
   "11": [
@@ -1553,6 +3659,177 @@
       "meaning": "in total",
       "exampleJp": "全部で 500円です。",
       "exampleEn": "That's 500 yen in all."
+    },
+    {
+      "uid": "n5-vocab-11-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "あさって",
+      "reading": "あさって",
+      "meaning": "day after tomorrow"
+    },
+    {
+      "uid": "n5-vocab-11-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "熱い",
+      "reading": "あつい",
+      "meaning": "hot (objects)"
+    },
+    {
+      "uid": "n5-vocab-11-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "いつも",
+      "reading": "いつも",
+      "meaning": "always, usually, every time, never (with neg. verb)"
+    },
+    {
+      "uid": "n5-vocab-11-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "おなか",
+      "reading": "おなか",
+      "meaning": "stomach"
+    },
+    {
+      "uid": "n5-vocab-11-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "貸す",
+      "reading": "かす",
+      "meaning": "to lend"
+    },
+    {
+      "uid": "n5-vocab-11-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "借りる",
+      "reading": "かりる",
+      "meaning": "to borrow, to owe"
+    },
+    {
+      "uid": "n5-vocab-11-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "切符",
+      "reading": "きっぷ",
+      "meaning": "a ticket"
+    },
+    {
+      "uid": "n5-vocab-11-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "静か",
+      "reading": "しずか",
+      "meaning": "quiet, calm"
+    },
+    {
+      "uid": "n5-vocab-11-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "ストーブ",
+      "reading": "ストーブ",
+      "meaning": "heater (lit: stove)"
+    },
+    {
+      "uid": "n5-vocab-11-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "そちら",
+      "reading": "そちら",
+      "meaning": "over there"
+    },
+    {
+      "uid": "n5-vocab-11-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "疲れる",
+      "reading": "つかれる",
+      "meaning": "to get (become) tired; to become fatigued"
+    },
+    {
+      "uid": "n5-vocab-11-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "ドア",
+      "reading": "ドア",
+      "meaning": "door (Western style)"
+    },
+    {
+      "uid": "n5-vocab-11-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "なる",
+      "reading": "なる",
+      "meaning": "to become"
+    },
+    {
+      "uid": "n5-vocab-11-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "はい",
+      "reading": "はい",
+      "meaning": "yes"
+    },
+    {
+      "uid": "n5-vocab-11-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "晴れ",
+      "reading": "はれ",
+      "meaning": "clear (sunny) weather"
+    },
+    {
+      "uid": "n5-vocab-11-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "風呂",
+      "reading": "ふろ",
+      "meaning": "bath"
+    },
+    {
+      "uid": "n5-vocab-11-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "緑",
+      "reading": "みどり",
+      "meaning": "green"
+    },
+    {
+      "uid": "n5-vocab-11-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "やる",
+      "reading": "やる",
+      "meaning": "to do"
+    },
+    {
+      "uid": "n5-vocab-11-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "ワイシャツ",
+      "reading": "ワイシャツ",
+      "meaning": "shirt (lit: white shirt), business shirt"
     }
   ],
   "12": [
@@ -1685,6 +3962,168 @@
       "meaning": "for the first time",
       "exampleJp": "初めて 祇園祭を 見ました。",
       "exampleEn": "I saw the Gion Festival for the first time."
+    },
+    {
+      "uid": "n5-vocab-12-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "あっち",
+      "reading": "あっち",
+      "meaning": "over there"
+    },
+    {
+      "uid": "n5-vocab-12-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "雨",
+      "reading": "あめ",
+      "meaning": "rain"
+    },
+    {
+      "uid": "n5-vocab-12-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "お風呂",
+      "reading": "おふろ",
+      "meaning": "a bath"
+    },
+    {
+      "uid": "n5-vocab-12-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "風",
+      "reading": "かぜ",
+      "meaning": "wind, breeze"
+    },
+    {
+      "uid": "n5-vocab-12-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "花瓶",
+      "reading": "かびん",
+      "meaning": "(flower) vase"
+    },
+    {
+      "uid": "n5-vocab-12-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "交差点",
+      "reading": "こうさてん",
+      "meaning": "intersection"
+    },
+    {
+      "uid": "n5-vocab-12-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "質問",
+      "reading": "しつもん",
+      "meaning": "question, inquiry"
+    },
+    {
+      "uid": "n5-vocab-12-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "スプーン",
+      "reading": "スプーン",
+      "meaning": "spoon"
+    },
+    {
+      "uid": "n5-vocab-12-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "そっち",
+      "reading": "そっち",
+      "meaning": "over there"
+    },
+    {
+      "uid": "n5-vocab-12-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "次",
+      "reading": "つぎ",
+      "meaning": "next"
+    },
+    {
+      "uid": "n5-vocab-12-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "トイレ",
+      "reading": "トイレ",
+      "meaning": "bathroom; toilet"
+    },
+    {
+      "uid": "n5-vocab-12-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "賑やか",
+      "reading": "にぎやか",
+      "meaning": "bustling, busy"
+    },
+    {
+      "uid": "n5-vocab-12-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "履く",
+      "reading": "はく",
+      "meaning": "to wear, to put on trousers"
+    },
+    {
+      "uid": "n5-vocab-12-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "花",
+      "reading": "はな",
+      "meaning": "flower"
+    },
+    {
+      "uid": "n5-vocab-12-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "ページ",
+      "reading": "ページ",
+      "meaning": "a page"
+    },
+    {
+      "uid": "n5-vocab-12-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "勉強",
+      "reading": "べんきょう",
+      "meaning": "to study"
+    },
+    {
+      "uid": "n5-vocab-12-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "夕飯",
+      "reading": "ゆうはん",
+      "meaning": "dinner, supper, evening meal"
+    },
+    {
+      "uid": "n5-vocab-12-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "忘れる",
+      "reading": "わすれる",
+      "meaning": "to forget"
     }
   ],
   "13": [
@@ -1817,6 +4256,168 @@
       "meaning": "(I'm) thirsty",
       "exampleJp": "のどが かわきましたから、何か 飲みたいです。",
       "exampleEn": "I'm thirsty. I want to drink something."
+    },
+    {
+      "uid": "n5-vocab-13-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "あの",
+      "reading": "あの",
+      "meaning": "that over there; like that, that way; um..."
+    },
+    {
+      "uid": "n5-vocab-13-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "歩く",
+      "reading": "あるく",
+      "meaning": "to walk"
+    },
+    {
+      "uid": "n5-vocab-13-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "入口",
+      "reading": "いりぐち",
+      "meaning": "entrance"
+    },
+    {
+      "uid": "n5-vocab-13-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "風邪",
+      "reading": "かぜ",
+      "meaning": "cold, flu"
+    },
+    {
+      "uid": "n5-vocab-13-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "キロメートル",
+      "reading": "キロメートル",
+      "meaning": "Kilometer"
+    },
+    {
+      "uid": "n5-vocab-13-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "交番",
+      "reading": "こうばん",
+      "meaning": "police box"
+    },
+    {
+      "uid": "n5-vocab-13-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "散歩",
+      "reading": "さんぽ",
+      "meaning": "to stroll"
+    },
+    {
+      "uid": "n5-vocab-13-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "スポーツ",
+      "reading": "スポーツ",
+      "meaning": "sport(s)"
+    },
+    {
+      "uid": "n5-vocab-13-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "それから",
+      "reading": "それから",
+      "meaning": "and then, after that"
+    },
+    {
+      "uid": "n5-vocab-13-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "机",
+      "reading": "つくえ",
+      "meaning": "desk"
+    },
+    {
+      "uid": "n5-vocab-13-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "出かける",
+      "reading": "でかける",
+      "meaning": "to go out; to depart"
+    },
+    {
+      "uid": "n5-vocab-13-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "出口",
+      "reading": "でぐち",
+      "meaning": "an exit"
+    },
+    {
+      "uid": "n5-vocab-13-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "箱",
+      "reading": "はこ",
+      "meaning": "box"
+    },
+    {
+      "uid": "n5-vocab-13-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "晴れる",
+      "reading": "はれる",
+      "meaning": "to be sunny"
+    },
+    {
+      "uid": "n5-vocab-13-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "ベッド",
+      "reading": "ベッド",
+      "meaning": "bed"
+    },
+    {
+      "uid": "n5-vocab-13-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "皆さん",
+      "reading": "みなさん",
+      "meaning": "all of you, everyone"
+    },
+    {
+      "uid": "n5-vocab-13-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "雪",
+      "reading": "ゆき",
+      "meaning": "snow"
+    },
+    {
+      "uid": "n5-vocab-13-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "渡す",
+      "reading": "わたす",
+      "meaning": "to hand (something) over (v.t.); to get across"
     }
   ],
   "14": [
@@ -1975,6 +4576,150 @@
       "meaning": "straight",
       "exampleJp": "まっすぐ 行って ください。",
       "exampleEn": "Please go straight."
+    },
+    {
+      "uid": "n5-vocab-14-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "教える",
+      "reading": "おしえる",
+      "meaning": "to teach, to inform, to instruct"
+    },
+    {
+      "uid": "n5-vocab-14-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "カップ",
+      "reading": "カップ",
+      "meaning": "cup"
+    },
+    {
+      "uid": "n5-vocab-14-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "靴",
+      "reading": "くつ",
+      "meaning": "shoes, footwear"
+    },
+    {
+      "uid": "n5-vocab-14-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "コーヒー",
+      "reading": "コーヒー",
+      "meaning": "coffee"
+    },
+    {
+      "uid": "n5-vocab-14-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "死ぬ",
+      "reading": "しぬ",
+      "meaning": "to die"
+    },
+    {
+      "uid": "n5-vocab-14-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "ズボン",
+      "reading": "ズボン",
+      "meaning": "trousers"
+    },
+    {
+      "uid": "n5-vocab-14-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "台所",
+      "reading": "だいどころ",
+      "meaning": "kitchen"
+    },
+    {
+      "uid": "n5-vocab-14-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "勤める",
+      "reading": "つとめる",
+      "meaning": "to work (for)"
+    },
+    {
+      "uid": "n5-vocab-14-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "どうぞ",
+      "reading": "どうぞ",
+      "meaning": "please, kindly, by all means"
+    },
+    {
+      "uid": "n5-vocab-14-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "止まる",
+      "reading": "とまる",
+      "meaning": "to come to a halt"
+    },
+    {
+      "uid": "n5-vocab-14-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "習う",
+      "reading": "ならう",
+      "meaning": "to learn"
+    },
+    {
+      "uid": "n5-vocab-14-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "パン",
+      "reading": "パン",
+      "meaning": "bread"
+    },
+    {
+      "uid": "n5-vocab-14-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "ペット",
+      "reading": "ペット",
+      "meaning": "pet"
+    },
+    {
+      "uid": "n5-vocab-14-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "待つ",
+      "reading": "まつ",
+      "meaning": "to wait"
+    },
+    {
+      "uid": "n5-vocab-14-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "良く",
+      "reading": "よく",
+      "meaning": "often, well"
+    },
+    {
+      "uid": "n5-vocab-14-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "練習",
+      "reading": "れんしゅう",
+      "meaning": "to practice"
     }
   ],
   "15": [
@@ -2094,6 +4839,177 @@
       "meaning": "especially",
       "exampleJp": "お父さんが 特に よかったですね。",
       "exampleEn": "The father was particularly good, wasn't he?"
+    },
+    {
+      "uid": "n5-vocab-15-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "遊ぶ",
+      "reading": "あそぶ",
+      "meaning": "to play; to spend time pleasantly; to hang out"
+    },
+    {
+      "uid": "n5-vocab-15-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "あびる",
+      "reading": "あびる",
+      "meaning": "to bathe, to shower"
+    },
+    {
+      "uid": "n5-vocab-15-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "要る",
+      "reading": "いる",
+      "meaning": "to need"
+    },
+    {
+      "uid": "n5-vocab-15-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "売る",
+      "reading": "うる",
+      "meaning": "to sell (v.t.)"
+    },
+    {
+      "uid": "n5-vocab-15-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "カメラ",
+      "reading": "カメラ",
+      "meaning": "camera"
+    },
+    {
+      "uid": "n5-vocab-15-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "曇り",
+      "reading": "くもり",
+      "meaning": "cloudiness, cloudy weather"
+    },
+    {
+      "uid": "n5-vocab-15-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "答える",
+      "reading": "こたえる",
+      "meaning": "to answer, to reply"
+    },
+    {
+      "uid": "n5-vocab-15-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "作文",
+      "reading": "さくぶん",
+      "meaning": "essay; composition"
+    },
+    {
+      "uid": "n5-vocab-15-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "スリッパ",
+      "reading": "スリッパ",
+      "meaning": "Slippers"
+    },
+    {
+      "uid": "n5-vocab-15-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "たくさん",
+      "reading": "たくさん",
+      "meaning": "many"
+    },
+    {
+      "uid": "n5-vocab-15-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "立つ",
+      "reading": "たつ",
+      "meaning": "to stand up"
+    },
+    {
+      "uid": "n5-vocab-15-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "使う",
+      "reading": "つかう",
+      "meaning": "to use"
+    },
+    {
+      "uid": "n5-vocab-15-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "作る",
+      "reading": "つくる",
+      "meaning": "to make, to create"
+    },
+    {
+      "uid": "n5-vocab-15-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "箸",
+      "reading": "はし",
+      "meaning": "chopsticks"
+    },
+    {
+      "uid": "n5-vocab-15-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "ハンカチ",
+      "reading": "ハンカチ",
+      "meaning": "handkerchief"
+    },
+    {
+      "uid": "n5-vocab-15-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "辺",
+      "reading": "へん",
+      "meaning": "area, vicinity"
+    },
+    {
+      "uid": "n5-vocab-15-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "耳",
+      "reading": "みみ",
+      "meaning": "ear"
+    },
+    {
+      "uid": "n5-vocab-15-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "横",
+      "reading": "よこ",
+      "meaning": "beside; side; width"
+    },
+    {
+      "uid": "n5-vocab-15-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "より",
+      "reading": "より",
+      "meaning": "Used for comparison."
     }
   ],
   "16": [
@@ -2226,6 +5142,168 @@
       "meaning": "in what way, how",
       "exampleJp": "大学まで どうやって 行きますか。",
       "exampleEn": "How do you go to your university?"
+    },
+    {
+      "uid": "n5-vocab-16-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "明い",
+      "reading": "あかるい",
+      "meaning": "bright"
+    },
+    {
+      "uid": "n5-vocab-16-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "足",
+      "reading": "あし",
+      "meaning": "foot, leg"
+    },
+    {
+      "uid": "n5-vocab-16-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "お弁当",
+      "reading": "おべんとう",
+      "meaning": "a boxed lunch"
+    },
+    {
+      "uid": "n5-vocab-16-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "カレー",
+      "reading": "カレー",
+      "meaning": "curry (abbr. for curry and rice)"
+    },
+    {
+      "uid": "n5-vocab-16-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "曇る",
+      "reading": "くもる",
+      "meaning": "to become cloudy, to become dim"
+    },
+    {
+      "uid": "n5-vocab-16-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "暗い",
+      "reading": "くらい",
+      "meaning": "dark, gloomy"
+    },
+    {
+      "uid": "n5-vocab-16-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "締める",
+      "reading": "しめる",
+      "meaning": "to tie, to fasten, to tighten"
+    },
+    {
+      "uid": "n5-vocab-16-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "座る",
+      "reading": "すわる",
+      "meaning": "to sit"
+    },
+    {
+      "uid": "n5-vocab-16-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "タクシー",
+      "reading": "タクシー",
+      "meaning": "taxi"
+    },
+    {
+      "uid": "n5-vocab-16-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "つまらない",
+      "reading": "つまらない",
+      "meaning": "boring, dull; insignificant"
+    },
+    {
+      "uid": "n5-vocab-16-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "どこ",
+      "reading": "どこ",
+      "meaning": "where, what place"
+    },
+    {
+      "uid": "n5-vocab-16-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "長い",
+      "reading": "ながい",
+      "meaning": "long, lengthy"
+    },
+    {
+      "uid": "n5-vocab-16-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "始まる",
+      "reading": "はじまる",
+      "meaning": "(something) begins"
+    },
+    {
+      "uid": "n5-vocab-16-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "番号",
+      "reading": "ばんごう",
+      "meaning": "number, series of digits"
+    },
+    {
+      "uid": "n5-vocab-16-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "ペン",
+      "reading": "ペン",
+      "meaning": "pen"
+    },
+    {
+      "uid": "n5-vocab-16-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "短い",
+      "reading": "みじかい",
+      "meaning": "short (length)"
+    },
+    {
+      "uid": "n5-vocab-16-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "目",
+      "reading": "め",
+      "meaning": "eye(s)"
+    },
+    {
+      "uid": "n5-vocab-16-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "付ける",
+      "reading": "つける",
+      "meaning": "to turn on"
     }
   ],
   "17": [
@@ -2358,6 +5436,168 @@
       "meaning": "Take care of yourself.",
       "exampleJp": "お大事に。",
       "exampleEn": "Take care of yourself."
+    },
+    {
+      "uid": "n5-vocab-17-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "あまり",
+      "reading": "あまり",
+      "meaning": "not very"
+    },
+    {
+      "uid": "n5-vocab-17-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "色",
+      "reading": "いろ",
+      "meaning": "color"
+    },
+    {
+      "uid": "n5-vocab-17-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "覚える",
+      "reading": "おぼえる",
+      "meaning": "to learn, to commit to memory, to remember, to memorize"
+    },
+    {
+      "uid": "n5-vocab-17-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "カレンダー",
+      "reading": "カレンダー",
+      "meaning": "calendar"
+    },
+    {
+      "uid": "n5-vocab-17-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "クラス",
+      "reading": "クラス",
+      "meaning": "a class"
+    },
+    {
+      "uid": "n5-vocab-17-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "コップ",
+      "reading": "コップ",
+      "meaning": "a tumbler; a glass"
+    },
+    {
+      "uid": "n5-vocab-17-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "じゃ",
+      "reading": "じゃ",
+      "meaning": "well then…"
+    },
+    {
+      "uid": "n5-vocab-17-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "少し",
+      "reading": "すこし",
+      "meaning": "little, few"
+    },
+    {
+      "uid": "n5-vocab-17-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "背広",
+      "reading": "せびろ",
+      "meaning": "men's suit"
+    },
+    {
+      "uid": "n5-vocab-17-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "冷たい",
+      "reading": "つめたい",
+      "meaning": "cold (things, people)"
+    },
+    {
+      "uid": "n5-vocab-17-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "所",
+      "reading": "ところ",
+      "meaning": "place"
+    },
+    {
+      "uid": "n5-vocab-17-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "ニュース",
+      "reading": "ニュース",
+      "meaning": "news"
+    },
+    {
+      "uid": "n5-vocab-17-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "初め",
+      "reading": "はじめ",
+      "meaning": "beginning"
+    },
+    {
+      "uid": "n5-vocab-17-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "早い",
+      "reading": "はやい",
+      "meaning": "early"
+    },
+    {
+      "uid": "n5-vocab-17-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "ボールペン",
+      "reading": "ボールペン",
+      "meaning": "ball-point pen"
+    },
+    {
+      "uid": "n5-vocab-17-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "観る",
+      "reading": "みる",
+      "meaning": "to see, to watch"
+    },
+    {
+      "uid": "n5-vocab-17-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "呼ぶ",
+      "reading": "よぶ",
+      "meaning": "to call (one's name); to invite"
+    },
+    {
+      "uid": "n5-vocab-17-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "無くす",
+      "reading": "なくす",
+      "meaning": "to lose something"
     }
   ],
   "18": [
@@ -2503,6 +5743,159 @@
       "meaning": "by all means",
       "exampleJp": "ぜひ 北海道へ 行きたいです。",
       "exampleEn": "I want to go to Hokkaido very much."
+    },
+    {
+      "uid": "n5-vocab-18-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "ある",
+      "reading": "ある",
+      "meaning": "to be, to have"
+    },
+    {
+      "uid": "n5-vocab-18-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "おまわりさん",
+      "reading": "おまわりさん",
+      "meaning": "policeman (friendly term)"
+    },
+    {
+      "uid": "n5-vocab-18-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "河",
+      "reading": "かわ",
+      "meaning": "River"
+    },
+    {
+      "uid": "n5-vocab-18-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "グラム",
+      "reading": "グラム",
+      "meaning": "gram"
+    },
+    {
+      "uid": "n5-vocab-18-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "コピー",
+      "reading": "コピー",
+      "meaning": "to copy"
+    },
+    {
+      "uid": "n5-vocab-18-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "じゃあ",
+      "reading": "じゃあ",
+      "meaning": "well then…"
+    },
+    {
+      "uid": "n5-vocab-18-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "せっけん",
+      "reading": "せっけん",
+      "meaning": "soap"
+    },
+    {
+      "uid": "n5-vocab-18-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "縦",
+      "reading": "たて",
+      "meaning": "length, height"
+    },
+    {
+      "uid": "n5-vocab-18-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "テープ",
+      "reading": "テープ",
+      "meaning": "tape"
+    },
+    {
+      "uid": "n5-vocab-18-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "どっち",
+      "reading": "どっち",
+      "meaning": "which one, which way"
+    },
+    {
+      "uid": "n5-vocab-18-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "庭",
+      "reading": "にわ",
+      "meaning": "garden"
+    },
+    {
+      "uid": "n5-vocab-18-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "始め",
+      "reading": "はじめ",
+      "meaning": "beginning"
+    },
+    {
+      "uid": "n5-vocab-18-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "弾く",
+      "reading": "ひく",
+      "meaning": "to play (a string instrument or piano)"
+    },
+    {
+      "uid": "n5-vocab-18-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "ほか",
+      "reading": "ほか",
+      "meaning": "other, the rest"
+    },
+    {
+      "uid": "n5-vocab-18-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "みんな",
+      "reading": "みんな",
+      "meaning": "all, everyone, everybody"
+    },
+    {
+      "uid": "n5-vocab-18-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "郵便局",
+      "reading": "ゆうびんきょく",
+      "meaning": "post office"
+    },
+    {
+      "uid": "n5-vocab-18-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "両親",
+      "reading": "りょうしん",
+      "meaning": "parents (lit., both parents)"
     }
   ],
   "19": [
@@ -2635,6 +6028,159 @@
       "meaning": "gradually",
       "exampleJp": "だんだん 暑く なります。",
       "exampleEn": "It's going to get hotter and hotter."
+    },
+    {
+      "uid": "n5-vocab-19-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "飴",
+      "reading": "あめ",
+      "meaning": "(hard) candy"
+    },
+    {
+      "uid": "n5-vocab-19-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "絵",
+      "reading": "え",
+      "meaning": "a painting; a picture; a drawing"
+    },
+    {
+      "uid": "n5-vocab-19-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "おもしろい",
+      "reading": "おもしろい",
+      "meaning": "Interesting"
+    },
+    {
+      "uid": "n5-vocab-19-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "黄色",
+      "reading": "きいろ",
+      "meaning": "yellow"
+    },
+    {
+      "uid": "n5-vocab-19-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "警官",
+      "reading": "けいかん",
+      "meaning": "police officer"
+    },
+    {
+      "uid": "n5-vocab-19-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "困る",
+      "reading": "こまる",
+      "meaning": "to be bothered, to have difficulty"
+    },
+    {
+      "uid": "n5-vocab-19-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "仕事",
+      "reading": "しごと",
+      "meaning": "work, job, occupation, employment"
+    },
+    {
+      "uid": "n5-vocab-19-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "ゼロ",
+      "reading": "ゼロ",
+      "meaning": "zero"
+    },
+    {
+      "uid": "n5-vocab-19-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "頼む",
+      "reading": "たのむ",
+      "meaning": "to request, to ask (a favor)"
+    },
+    {
+      "uid": "n5-vocab-19-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "地図",
+      "reading": "ちず",
+      "meaning": "a map"
+    },
+    {
+      "uid": "n5-vocab-19-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "とても",
+      "reading": "とても",
+      "meaning": "very (much), greatly, exceedingly"
+    },
+    {
+      "uid": "n5-vocab-19-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "西",
+      "reading": "にし",
+      "meaning": "west"
+    },
+    {
+      "uid": "n5-vocab-19-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "走る",
+      "reading": "はしる",
+      "meaning": "to run"
+    },
+    {
+      "uid": "n5-vocab-19-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "東",
+      "reading": "ひがし",
+      "meaning": "east"
+    },
+    {
+      "uid": "n5-vocab-19-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "ポケット",
+      "reading": "ポケット",
+      "meaning": "pocket"
+    },
+    {
+      "uid": "n5-vocab-19-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "南",
+      "reading": "みなみ",
+      "meaning": "South"
+    },
+    {
+      "uid": "n5-vocab-19-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "ラジオ",
+      "reading": "ラジオ",
+      "meaning": "radio"
     }
   ],
   "20": [
@@ -2767,6 +6313,159 @@
       "meaning": "〜, but (informal equivalent of が)",
       "exampleJp": "辛いけど、おいしい。",
       "exampleEn": "It's hot but tasty."
+    },
+    {
+      "uid": "n5-vocab-20-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "洗う",
+      "reading": "あらう",
+      "meaning": "to wash"
+    },
+    {
+      "uid": "n5-vocab-20-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "ええ",
+      "reading": "ええ",
+      "meaning": "yes"
+    },
+    {
+      "uid": "n5-vocab-20-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "泳ぐ",
+      "reading": "およぐ",
+      "meaning": "to swim"
+    },
+    {
+      "uid": "n5-vocab-20-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "黄色い",
+      "reading": "きいろい",
+      "meaning": "yellow"
+    },
+    {
+      "uid": "n5-vocab-20-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "北",
+      "reading": "きた",
+      "meaning": "north"
+    },
+    {
+      "uid": "n5-vocab-20-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "口",
+      "reading": "くち",
+      "meaning": "job opening; mouth"
+    },
+    {
+      "uid": "n5-vocab-20-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "シャツ",
+      "reading": "シャツ",
+      "meaning": "shirt"
+    },
+    {
+      "uid": "n5-vocab-20-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "洗濯",
+      "reading": "せんたく",
+      "meaning": "washing, laundry"
+    },
+    {
+      "uid": "n5-vocab-20-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "たばこ",
+      "reading": "たばこ",
+      "meaning": "tobacco, cigarettes"
+    },
+    {
+      "uid": "n5-vocab-20-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "テーブル",
+      "reading": "テーブル",
+      "meaning": "table"
+    },
+    {
+      "uid": "n5-vocab-20-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "どなた",
+      "reading": "どなた",
+      "meaning": "who"
+    },
+    {
+      "uid": "n5-vocab-20-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "脱ぐ",
+      "reading": "ぬぐ",
+      "meaning": "to take off (clothes)"
+    },
+    {
+      "uid": "n5-vocab-20-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "バス",
+      "reading": "バス",
+      "meaning": "bus; bath; bass"
+    },
+    {
+      "uid": "n5-vocab-20-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "低い",
+      "reading": "ひくい",
+      "meaning": "short, low"
+    },
+    {
+      "uid": "n5-vocab-20-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "ポスト",
+      "reading": "ポスト",
+      "meaning": "mailbox; post, position"
+    },
+    {
+      "uid": "n5-vocab-20-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "村",
+      "reading": "むら",
+      "meaning": "village"
+    },
+    {
+      "uid": "n5-vocab-20-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "ラジカセ",
+      "reading": "ラジカセ",
+      "meaning": "radio cassette player"
     }
   ],
   "21": [
@@ -2899,6 +6598,168 @@
       "meaning": "There is no other choice. / It can't be helped.",
       "exampleJp": "しかたが ありません。",
       "exampleEn": "It can't be helped."
+    },
+    {
+      "uid": "n5-vocab-21-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "いい",
+      "reading": "いい",
+      "meaning": "good"
+    },
+    {
+      "uid": "n5-vocab-21-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "エレベーター",
+      "reading": "エレベーター",
+      "meaning": "elevator"
+    },
+    {
+      "uid": "n5-vocab-21-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "降りる",
+      "reading": "おりる",
+      "meaning": "to get off"
+    },
+    {
+      "uid": "n5-vocab-21-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "終る",
+      "reading": "おわる",
+      "meaning": "to finish, to close"
+    },
+    {
+      "uid": "n5-vocab-21-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "方",
+      "reading": "かた",
+      "meaning": "-- honorific form for 人 (ひと) --; way of doing"
+    },
+    {
+      "uid": "n5-vocab-21-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "漢字",
+      "reading": "かんじ",
+      "meaning": "kanji; Chinese character"
+    },
+    {
+      "uid": "n5-vocab-21-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "こっち",
+      "reading": "こっち",
+      "meaning": "this person or way"
+    },
+    {
+      "uid": "n5-vocab-21-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "言葉",
+      "reading": "ことば",
+      "meaning": "language; word(s); expression(s)"
+    },
+    {
+      "uid": "n5-vocab-21-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "字引",
+      "reading": "じびき",
+      "meaning": "dictionary"
+    },
+    {
+      "uid": "n5-vocab-21-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "知る",
+      "reading": "しる",
+      "meaning": "to know, to understand"
+    },
+    {
+      "uid": "n5-vocab-21-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "鳥",
+      "reading": "とり",
+      "meaning": "chicken (lit., bird)"
+    },
+    {
+      "uid": "n5-vocab-21-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "温い",
+      "reading": "ぬるい",
+      "meaning": "lukewarm"
+    },
+    {
+      "uid": "n5-vocab-21-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "寝る",
+      "reading": "ねる",
+      "meaning": "to sleep; to go to sleep; to go to bed"
+    },
+    {
+      "uid": "n5-vocab-21-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "暇",
+      "reading": "ひま",
+      "meaning": "free time, leisure"
+    },
+    {
+      "uid": "n5-vocab-21-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "降る",
+      "reading": "ふる",
+      "meaning": "to precipitate, to fall (e.g., rain, snow, etc.)"
+    },
+    {
+      "uid": "n5-vocab-21-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "方",
+      "reading": "ほう",
+      "meaning": "Used for comparison."
+    },
+    {
+      "uid": "n5-vocab-21-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "メートル",
+      "reading": "メートル",
+      "meaning": "meter"
+    },
+    {
+      "uid": "n5-vocab-21-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "夕方",
+      "reading": "ゆうがた",
+      "meaning": "late afternoon (typically just before dinner time), evening"
     }
   ],
   "22": [
@@ -3031,6 +6892,168 @@
       "meaning": "Congratulations.",
       "exampleJp": "お誕生日 おめでとう ございます。",
       "exampleEn": "Happy birthday."
+    },
+    {
+      "uid": "n5-vocab-22-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "鉛筆",
+      "reading": "えんぴつ",
+      "meaning": "pencil"
+    },
+    {
+      "uid": "n5-vocab-22-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "階段",
+      "reading": "かいだん",
+      "meaning": "stairs"
+    },
+    {
+      "uid": "n5-vocab-22-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "消える",
+      "reading": "きえる",
+      "meaning": "to vanish, to disappear"
+    },
+    {
+      "uid": "n5-vocab-22-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "着る",
+      "reading": "きる",
+      "meaning": "to put on (clothes above your waist); to wear"
+    },
+    {
+      "uid": "n5-vocab-22-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "咲く",
+      "reading": "さく",
+      "meaning": "to bloom"
+    },
+    {
+      "uid": "n5-vocab-22-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "シャワー",
+      "reading": "シャワー",
+      "meaning": "shower"
+    },
+    {
+      "uid": "n5-vocab-22-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "住む",
+      "reading": "すむ",
+      "meaning": "to reside, to live in"
+    },
+    {
+      "uid": "n5-vocab-22-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "楽しい",
+      "reading": "たのしい",
+      "meaning": "enjoyable, fun"
+    },
+    {
+      "uid": "n5-vocab-22-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "テープレコーダー",
+      "reading": "テープレコーダー",
+      "meaning": "tape recorder"
+    },
+    {
+      "uid": "n5-vocab-22-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "ナイフ",
+      "reading": "ナイフ",
+      "meaning": "knife"
+    },
+    {
+      "uid": "n5-vocab-22-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "ネクタイ",
+      "reading": "ネクタイ",
+      "meaning": "tie, necktie"
+    },
+    {
+      "uid": "n5-vocab-22-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "バター",
+      "reading": "バター",
+      "meaning": "butter"
+    },
+    {
+      "uid": "n5-vocab-22-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "フィルム",
+      "reading": "フィルム",
+      "meaning": "film (roll of)"
+    },
+    {
+      "uid": "n5-vocab-22-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "ボタン",
+      "reading": "ボタン",
+      "meaning": "button"
+    },
+    {
+      "uid": "n5-vocab-22-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "町",
+      "reading": "まち",
+      "meaning": "town; city"
+    },
+    {
+      "uid": "n5-vocab-22-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "良い",
+      "reading": "よい",
+      "meaning": "good"
+    },
+    {
+      "uid": "n5-vocab-22-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "洋服",
+      "reading": "ようふく",
+      "meaning": "Western-style clothes"
+    },
+    {
+      "uid": "n5-vocab-22-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "服",
+      "reading": "ふく",
+      "meaning": "clothes"
     }
   ],
   "23": [
@@ -3163,6 +7186,159 @@
       "meaning": "bridge",
       "exampleJp": "橋を 渡ります。",
       "exampleEn": "I cross the bridge."
+    },
+    {
+      "uid": "n5-vocab-23-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "秋",
+      "reading": "あき",
+      "meaning": "fall (season)"
+    },
+    {
+      "uid": "n5-vocab-23-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "お皿",
+      "reading": "おさら",
+      "meaning": "plate, dish"
+    },
+    {
+      "uid": "n5-vocab-23-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "返す",
+      "reading": "かえす",
+      "meaning": "to return something"
+    },
+    {
+      "uid": "n5-vocab-23-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "ギター",
+      "reading": "ギター",
+      "meaning": "guitar"
+    },
+    {
+      "uid": "n5-vocab-23-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "消す",
+      "reading": "けす",
+      "meaning": "to erase, to delete, to turn off power"
+    },
+    {
+      "uid": "n5-vocab-23-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "差す",
+      "reading": "さす",
+      "meaning": "to raise (stretch out) hands, to raise (e.g., umbrella)"
+    },
+    {
+      "uid": "n5-vocab-23-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "授業",
+      "reading": "じゅぎょう",
+      "meaning": "a class (of school)"
+    },
+    {
+      "uid": "n5-vocab-23-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "掃除",
+      "reading": "そうじ",
+      "meaning": "to clean, to sweep"
+    },
+    {
+      "uid": "n5-vocab-23-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "卵",
+      "reading": "たまご",
+      "meaning": "egg"
+    },
+    {
+      "uid": "n5-vocab-23-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "テスト",
+      "reading": "テスト",
+      "meaning": "test"
+    },
+    {
+      "uid": "n5-vocab-23-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "鳴く",
+      "reading": "なく",
+      "meaning": "to make sound (animal)"
+    },
+    {
+      "uid": "n5-vocab-23-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "夏",
+      "reading": "なつ",
+      "meaning": "summer"
+    },
+    {
+      "uid": "n5-vocab-23-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "乗る",
+      "reading": "のる",
+      "meaning": "to get on, to ride in, to board"
+    },
+    {
+      "uid": "n5-vocab-23-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "春",
+      "reading": "はる",
+      "meaning": "spring"
+    },
+    {
+      "uid": "n5-vocab-23-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "病院",
+      "reading": "びょういん",
+      "meaning": "hospital"
+    },
+    {
+      "uid": "n5-vocab-23-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "冬",
+      "reading": "ふゆ",
+      "meaning": "winter"
+    },
+    {
+      "uid": "n5-vocab-23-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "ラジオカセット",
+      "reading": "ラジオカセット",
+      "meaning": "radio cassette player"
     }
   ],
   "24": [
@@ -3282,6 +7458,177 @@
       "meaning": "by oneself",
       "exampleJp": "全部 自分で 作りました。",
       "exampleEn": "I made it all by myself."
+    },
+    {
+      "uid": "n5-vocab-24-10",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "あちら",
+      "reading": "あちら",
+      "meaning": "this way (polite)"
+    },
+    {
+      "uid": "n5-vocab-24-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "兄",
+      "reading": "あに",
+      "meaning": "(my) older brother (humble)"
+    },
+    {
+      "uid": "n5-vocab-24-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "姉",
+      "reading": "あね",
+      "meaning": "(my) older sister (humble)"
+    },
+    {
+      "uid": "n5-vocab-24-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "妹",
+      "reading": "いもうと",
+      "meaning": "younger sister (humble)"
+    },
+    {
+      "uid": "n5-vocab-24-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "海",
+      "reading": "うみ",
+      "meaning": "sea, beach"
+    },
+    {
+      "uid": "n5-vocab-24-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "奥さん",
+      "reading": "おくさん",
+      "meaning": "(someone else's) wife (hon.)"
+    },
+    {
+      "uid": "n5-vocab-24-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "弟",
+      "reading": "おとうと",
+      "meaning": "younger brother"
+    },
+    {
+      "uid": "n5-vocab-24-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "お兄さん",
+      "reading": "おにいさん",
+      "meaning": "(someone else's) older brother (formal)"
+    },
+    {
+      "uid": "n5-vocab-24-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "お姉さん",
+      "reading": "おねえさん",
+      "meaning": "older sister (formal)"
+    },
+    {
+      "uid": "n5-vocab-24-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "家族",
+      "reading": "かぞく",
+      "meaning": "family, members of a family"
+    },
+    {
+      "uid": "n5-vocab-24-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "では",
+      "reading": "では",
+      "meaning": "then, well, so"
+    },
+    {
+      "uid": "n5-vocab-24-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "なぜ",
+      "reading": "なぜ",
+      "meaning": "why (same as どうして)"
+    },
+    {
+      "uid": "n5-vocab-24-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "ノート",
+      "reading": "ノート",
+      "meaning": "notebook"
+    },
+    {
+      "uid": "n5-vocab-24-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "働く",
+      "reading": "はたらく",
+      "meaning": "to work"
+    },
+    {
+      "uid": "n5-vocab-24-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "封筒",
+      "reading": "ふうとう",
+      "meaning": "envelope"
+    },
+    {
+      "uid": "n5-vocab-24-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "ホテル",
+      "reading": "ホテル",
+      "meaning": "hotel"
+    },
+    {
+      "uid": "n5-vocab-24-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "もっと",
+      "reading": "もっと",
+      "meaning": "more"
+    },
+    {
+      "uid": "n5-vocab-24-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "零",
+      "reading": "れい",
+      "meaning": "zero, nought"
+    },
+    {
+      "uid": "n5-vocab-24-28",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "家",
+      "reading": "いえ",
+      "meaning": "house, home"
     }
   ],
   "25": [
@@ -3414,6 +7761,159 @@
       "meaning": "Best of luck. (said before a long separation)",
       "exampleJp": "どうぞ お元気で。",
       "exampleEn": "Best of luck."
+    },
+    {
+      "uid": "n5-vocab-25-11",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "開く",
+      "reading": "あく",
+      "meaning": "to open, to become open"
+    },
+    {
+      "uid": "n5-vocab-25-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "開ける",
+      "reading": "あける",
+      "meaning": "to open (v.t.)"
+    },
+    {
+      "uid": "n5-vocab-25-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "歌",
+      "reading": "うた",
+      "meaning": "a song"
+    },
+    {
+      "uid": "n5-vocab-25-14",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "meaning": "milk"
+    },
+    {
+      "uid": "n5-vocab-25-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "結婚",
+      "reading": "けっこん",
+      "meaning": "Marriage"
+    },
+    {
+      "uid": "n5-vocab-25-16",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "砂糖",
+      "reading": "さとう",
+      "meaning": "sugar"
+    },
+    {
+      "uid": "n5-vocab-25-17",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "閉まる",
+      "reading": "しまる",
+      "meaning": "to close, to be closed"
+    },
+    {
+      "uid": "n5-vocab-25-18",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "閉める",
+      "reading": "しめる",
+      "meaning": "to close, to shut"
+    },
+    {
+      "uid": "n5-vocab-25-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "誰",
+      "reading": "だれ",
+      "meaning": "who"
+    },
+    {
+      "uid": "n5-vocab-25-20",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "デパート",
+      "reading": "デパート",
+      "meaning": "(abbr.) department store"
+    },
+    {
+      "uid": "n5-vocab-25-21",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "など",
+      "reading": "など",
+      "meaning": "et cetera"
+    },
+    {
+      "uid": "n5-vocab-25-22",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "登る",
+      "reading": "のぼる",
+      "meaning": "to climb"
+    },
+    {
+      "uid": "n5-vocab-25-23",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "鼻",
+      "reading": "はな",
+      "meaning": "nose"
+    },
+    {
+      "uid": "n5-vocab-25-24",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "プール",
+      "reading": "プール",
+      "meaning": "swimming pool"
+    },
+    {
+      "uid": "n5-vocab-25-25",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "部屋",
+      "reading": "へや",
+      "meaning": "a room"
+    },
+    {
+      "uid": "n5-vocab-25-26",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "不味い",
+      "reading": "まずい",
+      "meaning": "unpleasant"
+    },
+    {
+      "uid": "n5-vocab-25-27",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "窓",
+      "reading": "まど",
+      "meaning": "window"
     }
   ]
 }

@@ -21,7 +21,7 @@ describe('lesson numbering', () => {
   });
 });
 
-describe('grammar-only levels', () => {
+describe('N2 and N1', () => {
   it('parses N2 and N1 and keeps their lessons in range', () => {
     expect(parseLevel('n2')).toBe('N2');
     expect(parseLevel('n1')).toBe('N1');
@@ -30,11 +30,19 @@ describe('grammar-only levels', () => {
     expect(clampLessonForLevel('N1', 32)).toBe(32);
   });
 
-  it('offers only grammar for N2/N1 and every section elsewhere', () => {
+  it('offers a section exactly where its content exists', () => {
     expect(isSectionAvailable('N2', 'grammar')).toBe(true);
-    expect(isSectionAvailable('N1', 'kanji')).toBe(false);
-    expect(isSectionAvailable('N2', 'vocab')).toBe(false);
-    expect(isSectionAvailable('N2', 'reading')).toBe(false);
+    expect(isSectionAvailable('N2', 'vocab')).toBe(true);
+    expect(isSectionAvailable('N2', 'kanji')).toBe(true);
     expect(isSectionAvailable('N3', 'kanji')).toBe(true);
+    expect(isSectionAvailable('N1', 'grammar')).toBe(true);
+    expect(isSectionAvailable('N1', 'vocab')).toBe(true);
+    expect(isSectionAvailable('N1', 'kanji')).toBe(true);
+  });
+
+  it('offers Reading Practice wherever grammar and vocab both exist', () => {
+    expect(isSectionAvailable('N2', 'reading')).toBe(true);
+    expect(isSectionAvailable('N3', 'reading')).toBe(true);
+    expect(isSectionAvailable('N1', 'reading')).toBe(true);
   });
 });

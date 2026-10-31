@@ -78,7 +78,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
   // Library filter & search
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [libraryFilterLevel, setLibraryFilterLevel] = useState<'ALL' | 'N5' | 'N4' | 'N3'>('ALL');
+  const [libraryFilterLevel, setLibraryFilterLevel] = useState<'ALL' | LevelType>('ALL');
 
   // Focus Modal for viewing a story directly from library
   const [modalStory, setModalStory] = useState<ReadingHistoryEntry | null>(null);
@@ -746,7 +746,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
 
               {/* Level Filter */}
               <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
-                {(['ALL', 'N5', 'N4', 'N3'] as const).map((lvl) => (
+                {(['ALL', 'N5', 'N4', 'N3', 'N2', 'N1'] as const).map((lvl) => (
                   <button
                     key={lvl}
                     onClick={() => setLibraryFilterLevel(lvl)}
@@ -819,7 +819,11 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                       <div className="flex flex-wrap items-center gap-1.5">
                         <span
                           className={`px-2.5 py-0.5 text-xs font-bold rounded-lg ${
-                            item.level === 'N3'
+                            item.level === 'N1'
+                              ? 'bg-rose-100 text-rose-800 border border-rose-200/80'
+                              : item.level === 'N2'
+                              ? 'bg-amber-100 text-amber-800 border border-amber-200/80'
+                              : item.level === 'N3'
                               ? 'bg-purple-100 text-purple-800 border border-purple-200/80'
                               : item.level === 'N5'
                               ? 'bg-emerald-100 text-emerald-800 border border-emerald-200/80'

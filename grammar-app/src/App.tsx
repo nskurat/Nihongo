@@ -25,7 +25,7 @@ function ContentWrapper() {
     fromLegacyLesson(parsedLevel, parseInt(lesson || '', 10))
   );
 
-  // Sections a level has no content for (e.g. N2/N1 vocab) fall back to its grammar
+  // Sections a level has no content for (e.g. N2 vocab) fall back to its grammar
   if (!isSectionAvailable(parsedLevel, parsedSection)) {
     return <Navigate to={`/${parsedLevel.toLowerCase()}/grammar/${parsedLesson}`} replace />;
   }

@@ -52,4 +52,11 @@ describe('AI Reading Prompt Builder', () => {
     expect(prompt).toContain('〜てたまらない');
     expect(prompt).toContain('絶望 (ぜつぼう: despair)');
   });
+
+  it('scales passage length for N2/N1 and keeps N5-N3 unchanged', () => {
+    expect(buildReadingPracticePrompt({ level: 'N3' })).toContain('Around 150 words');
+    expect(buildReadingPracticePrompt({ level: 'N2' })).toContain('Around 250 words');
+    expect(buildReadingPracticePrompt({ level: 'N1' })).toContain('Around 350 words');
+    expect(buildReadingPracticePrompt({ level: 'N1' })).toContain('JLPT N5–N1');
+  });
 });
