@@ -1,10 +1,15 @@
-import { Search, Sparkles, Loader2, Info, Layers, Hash, Languages, ArrowRight, ExternalLink } from 'lucide-react';
+import { ListFilter, Sparkles, Loader2, Info, Layers, Hash, Languages, ArrowRight, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import { LevelType, KanjiCompound } from '../../types/japanese';
 import { useKanji } from './useKanji';
 import { useAppStore } from '../../store/useAppStore';
 import { useActiveLessonScroll } from '../useActiveLessonScroll';
+import { focusCardClass, useFocusItem } from '../useFocusItem';
+import { useScrollRestore } from '../useScrollRestore';
+import SearchReturnBar, { FromSearchPill } from '../search/SearchReturnBar';
+import SearchAllLevelsLink from '../search/SearchAllLevelsLink';
+import { S } from '../search/strings';
 
 interface KanjiSectionProps {
   activeLevel: LevelType;
@@ -30,6 +35,8 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
     loadingKanjiAi,
   } = useKanji(activeLevel, activeLesson);
   const lessonListRef = useActiveLessonScroll<HTMLUListElement>(activeLesson, totalLessons.length);
+  const focus = useFocusItem(!loading, () => setSearchQuery(''));
+  useScrollRestore(!loading);
 
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in">
@@ -82,6 +89,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
 
       {/* Main Content Area */}
       <div className="lg:col-span-3 space-y-6">
+        <SearchReturnBar />
         {/* Banner */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
@@ -99,10 +107,11 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             {/* Search */}
             <div className="relative">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <ListFilter size={16} aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search kanji, reading, meaning..."
+                aria-label={S.filterLesson}
+                placeholder={S.filterLesson}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-9 pr-3 py-1.5 max-md:py-2.5 text-xs max-md:text-[16px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 w-full sm:w-64"
@@ -148,6 +157,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                 ? `No results match your search "${searchQuery}".`
                 : `Kanji for Lesson ${activeLesson} are currently being prepared.`}
             </p>
+            {searchQuery.trim() && <SearchAllLevelsLink q={searchQuery} />}
           </div>
         )}
 
@@ -156,11 +166,18 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
           {filteredContent.map((item) => (
             <div
               key={item.uid}
-              className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-rose-300 transition-all flex flex-col md:flex-row group"
+              data-uid={item.uid}
+              tabIndex={-1}
+              className={`bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:border-rose-300 transition-all flex flex-col md:flex-row group scroll-mt-32 max-md:scroll-mt-60 focus:outline-none ${focusCardClass(item.uid, focus)}`}
             >
               {/* Left Canvas - The Kanji itself */}
               <div className="bg-gradient-to-br from-rose-50 to-white md:w-48 p-6 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-rose-100 shrink-0">
-                <div className="text-7xl font-bold text-slate-800 drop-shadow-sm mb-3">
+                {focus.focusUid === item.uid && (
+                  <div className="mb-2 -ml-2">
+                    <FromSearchPill />
+                  </div>
+                )}
+                <div lang="ja" className="text-7xl font-bold text-slate-800 drop-shadow-sm mb-3">
                   {item.kanji}
                 </div>
                 <div className="bg-rose-100/80 text-rose-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide border border-rose-200">
