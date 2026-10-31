@@ -5,14 +5,17 @@
 import { describe, expect, it } from 'vitest';
 import type { DocType, SearchHit, SearchOptions, SearchResponse } from '../types';
 import { realIndex } from './realIndex';
+import { titleAliases } from './dedupedAliases';
 
 const { source } = realIndex();
 const run = (q: string, opts: Partial<SearchOptions> = {}): Promise<SearchResponse> =>
   source.search(q, { rankLevel: 'N5', ...opts });
 
-const titles = (list: SearchHit[]) => list.map((h) => h.title);
-const has = (r: SearchResponse, type: DocType, title: string) => r.groups[type].some((h) => h.title === title);
-const idx = (r: SearchResponse, type: DocType, title: string) => r.groups[type].findIndex((h) => h.title === title);
+const titles = (list: SearchHit[]) => list.flatMap((h) => titleAliases(h.title));
+const has = (r: SearchResponse, type: DocType, title: string) =>
+  r.groups[type].some((h) => titleAliases(h.title).includes(title));
+const idx = (r: SearchResponse, type: DocType, title: string) =>
+  r.groups[type].findIndex((h) => titleAliases(h.title).includes(title));
 const deinflected = (r: SearchResponse) => r.groups.vocab.filter((h) => h.matchKind === 'deinflected');
 
 describe('teacher regression set (06-teacher-review §3)', () => {
@@ -57,7 +60,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
   });
   it('#8 いって → 行く first; 要る, 言う present; いつ and います absent', async () => {
     const r = await run('いって');
-    expect(r.groups.vocab[0].title).toBe('行く');
+    expect(titleAliases(r.groups.vocab[0].title)).toContain('行く');
     expect(titles(r.groups.vocab)).toEqual(expect.arrayContaining(['要る', '言う']));
     expect(has(r, 'vocab', 'いつ')).toBe(false);
     expect(has(r, 'vocab', 'います')).toBe(false);
@@ -104,7 +107,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(has(r, 'vocab', '殊に')).toBe(false);
   });
   it('#17 見れる → 見る with a ら抜き step', async () => {
-    const h = (await run('見れる')).groups.vocab.find((x) => x.title === '見る');
+    const h = (await run('見れる')).groups.vocab.find((x) => titleAliases(x.title).includes('見る'));
     expect(h?.deinflection?.steps.map((s) => s.en).join(' ')).toContain('ら抜き');
   });
   // ---- F5 missing rules
@@ -117,7 +120,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     ['#24', '食べるなら', '食べる'],
   ])('%s %s → %s', async (_n, q, lemma) => {
     const r = await run(q);
-    expect(deinflected(r).some((h) => h.title === lemma)).toBe(true);
+    expect(deinflected(r).some((h) => titleAliases(h.title).includes(lemma))).toBe(true);
   });
   it('#18b 食べちゃった also reaches 食べます', async () => {
     expect(has(await run('食べちゃった'), 'vocab', '食べます')).toBe(true);
@@ -236,7 +239,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
   // ---- F9 honorific lemmas
   it('#50 いらっしゃって → lemma いらっしゃる (not いらっしゃう)', async () => {
     const r = await run('いらっしゃって');
-    const h = r.groups.vocab.find((x) => x.title === 'いらっしゃいます');
+    const h = r.groups.vocab.find((x) => titleAliases(x.title).includes('いらっしゃいます'));
     expect(h?.deinflection?.lemma).toBe('いらっしゃる');
   });
   // ---- F11 chips
@@ -256,23 +259,23 @@ describe('teacher regression set (06-teacher-review §3)', () => {
   });
   // ---- F15 locked-in behaviour
   it('#54 食べさせられた → 食べる: causative-passive → past', async () => {
-    const h = (await run('食べさせられた')).groups.vocab.find((x) => x.title === '食べる');
+    const h = (await run('食べさせられた')).groups.vocab.find((x) => titleAliases(x.title).includes('食べる'));
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['causative-passive', 'past']);
   });
   it('#55 高くなかった → 高い: negative → past', async () => {
-    const h = (await run('高くなかった')).groups.vocab.find((x) => x.title === '高い');
+    const h = (await run('高くなかった')).groups.vocab.find((x) => titleAliases(x.title).includes('高い'));
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['negative', 'past']);
   });
   it.each(['来られる', 'こられる'])('#56 %s → 来る: potential/passive', async (q) => {
-    const h = (await run(q)).groups.vocab.find((x) => x.title === '来る');
+    const h = (await run(q)).groups.vocab.find((x) => titleAliases(x.title).includes('来る'));
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['potential/passive']);
   });
   it('#57 行こう → 行く: volitional', async () => {
-    const h = (await run('行こう')).groups.vocab.find((x) => x.title === '行く');
+    const h = (await run('行こう')).groups.vocab.find((x) => titleAliases(x.title).includes('行く'));
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['volitional']);
   });
   it('#58 読みながら → 読む: while (ながら)', async () => {
-    const h = (await run('読みながら')).groups.vocab.find((x) => x.title === '読む');
+    const h = (await run('読みながら')).groups.vocab.find((x) => titleAliases(x.title).includes('読む'));
     expect(h?.deinflection?.steps.map((s) => s.en)).toEqual(['while (ながら)']);
   });
   it('#59 よかった → いい top (deinflected)', async () => {
@@ -293,7 +296,9 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(r.totals.grammar + r.totals.vocab + r.totals.kanji).toBeLessThanOrEqual(40);
   });
   it('#63 ﾀﾍﾞﾙ → 食べる exact', async () => {
-    expect((await run('ﾀﾍﾞﾙ')).groups.vocab[0]).toMatchObject({ title: '食べる', matchKind: 'exact' });
+    const top = (await run('ﾀﾍﾞﾙ')).groups.vocab[0];
+    expect(titleAliases(top.title)).toContain('食べる');
+    expect(top.matchKind).toMatch(/exact|lemma/); // 食べる is now taught by its ます row
   });
   it('#64 mei → 明, 名, 迷 exact', async () => {
     expect(titles((await run('mei')).groups.kanji.slice(0, 3))).toEqual(['明', '名', '迷']);

@@ -37,3 +37,77 @@ export function withoutKeys<T>(entries: Record<string, T>, keys: readonly string
   const drop = new Set(keys);
   return Object.fromEntries(Object.entries(entries).filter(([k]) => !drop.has(k)));
 }
+
+// v6: scripts/dedupe-vocab.ts removed redundant vocab rows (食べる beside 食べます …).
+// Positional uids after a removed row shifted, so for each listed lesson every vocab uid
+// at or after the given position may now name a different word; their cached notes go.
+export const V6_FIRST_SHIFTED_VOCAB_UIDS: readonly string[] = [
+  'n3-vocab-1-35',
+  'n3-vocab-11-123',
+  'n3-vocab-12-49',
+  'n3-vocab-15-5',
+  'n3-vocab-2-70',
+  'n3-vocab-22-10',
+  'n3-vocab-3-112',
+  'n3-vocab-4-110',
+  'n3-vocab-6-87',
+  'n3-vocab-7-68',
+  'n4-vocab-1-14',
+  'n4-vocab-10-16',
+  'n4-vocab-11-22',
+  'n4-vocab-12-29',
+  'n4-vocab-13-21',
+  'n4-vocab-14-23',
+  'n4-vocab-15-13',
+  'n4-vocab-18-27',
+  'n4-vocab-19-28',
+  'n4-vocab-2-15',
+  'n4-vocab-20-13',
+  'n4-vocab-21-13',
+  'n4-vocab-24-13',
+  'n4-vocab-25-14',
+  'n4-vocab-3-1',
+  'n4-vocab-4-20',
+  'n4-vocab-5-18',
+  'n4-vocab-6-17',
+  'n4-vocab-7-26',
+  'n4-vocab-8-25',
+  'n4-vocab-9-26',
+  'n5-vocab-11-2',
+  'n5-vocab-12-28',
+  'n5-vocab-13-24',
+  'n5-vocab-14-13',
+  'n5-vocab-15-10',
+  'n5-vocab-16-4',
+  'n5-vocab-17-27',
+  'n5-vocab-18-12',
+  'n5-vocab-19-16',
+  'n5-vocab-21-23',
+  'n5-vocab-22-14',
+  'n5-vocab-23-13',
+  'n5-vocab-24-23',
+  'n5-vocab-25-22',
+  'n5-vocab-3-11',
+  'n5-vocab-4-12',
+  'n5-vocab-5-20',
+  'n5-vocab-7-27',
+  'n5-vocab-9-13',
+];
+
+const UID_RE = /^(.+)-(\d+)$/;
+
+/** Drops entries whose uid sits at or after the first shifted position of its lesson. */
+export function withoutShiftedUids<T>(entries: Record<string, T>, firstShifted: readonly string[]): Record<string, T> {
+  const from = new Map<string, number>();
+  for (const uid of firstShifted) {
+    const m = UID_RE.exec(uid);
+    if (m) from.set(m[1], Number(m[2]));
+  }
+  return Object.fromEntries(
+    Object.entries(entries).filter(([uid]) => {
+      const m = UID_RE.exec(uid);
+      const start = m ? from.get(m[1]) : undefined;
+      return start === undefined || Number(m![2]) < start;
+    })
+  );
+}
