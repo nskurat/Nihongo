@@ -32,7 +32,8 @@ describe('N2 and N1', () => {
 
   it('offers a section exactly where its content exists', () => {
     expect(isSectionAvailable('N2', 'grammar')).toBe(true);
-    expect(isSectionAvailable('N2', 'vocab')).toBe(false);
+    expect(isSectionAvailable('N2', 'vocab')).toBe(true);
+    expect(isSectionAvailable('N2', 'kanji')).toBe(true);
     expect(isSectionAvailable('N3', 'kanji')).toBe(true);
     expect(isSectionAvailable('N1', 'grammar')).toBe(true);
     expect(isSectionAvailable('N1', 'vocab')).toBe(true);
@@ -40,7 +41,7 @@ describe('N2 and N1', () => {
   });
 
   it('offers Reading Practice wherever grammar and vocab both exist', () => {
-    expect(isSectionAvailable('N2', 'reading')).toBe(isSectionAvailable('N2', 'vocab'));
+    expect(isSectionAvailable('N2', 'reading')).toBe(true);
     expect(isSectionAvailable('N3', 'reading')).toBe(true);
     expect(isSectionAvailable('N1', 'reading')).toBe(true);
   });

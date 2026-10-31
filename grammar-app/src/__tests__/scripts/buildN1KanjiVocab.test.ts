@@ -17,7 +17,7 @@ import {
   pickCompounds,
   splitEvenly,
   strokeOrderLink,
-} from '../../../../scripts/lib/n1-kanji-vocab';
+} from '../../../../scripts/lib/upper-kanji-vocab';
 
 const kanji = (over: Partial<SourceKanji> = {}): SourceKanji => ({
   level: 'N1',

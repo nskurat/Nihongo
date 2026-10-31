@@ -16,14 +16,14 @@ import {
   isWordCovered,
   pickCompounds,
   splitEvenly,
-} from './lib/n1-kanji-vocab';
+} from './lib/upper-kanji-vocab';
 
 /**
  * Generates grammar-app/src/data/n1/kanji.json and vocab.json from the vendored
  * JLPT lists in scripts/sources/ (Waller's N1 lists, KANJIDIC, JMdict). Offline and
  * deterministic: rerunning it on unchanged inputs rewrites identical files.
  *
- *   npx tsx scripts/build-n1-kanji-vocab.ts [--dry-run]
+ *   npx tsx scripts/build-upper-kanji-vocab.ts --level N2|N1 [--dry-run]
  *
  * Coverage: our study path is cumulative, so every N1-list kanji/word that our
  * N5/N4/N3 kanji or vocab files already teach is skipped (and listed in the output).
@@ -39,7 +39,14 @@ import {
  * Vocab rows carry no example sentences: the lists have none and we don't invent them.
  */
 
-const N1_LESSONS = 32; // grammar-app/src/utils/levels.ts LESSON_RANGES.N1
+// grammar-app/src/utils/levels.ts LESSON_RANGES
+const LESSONS: Record<'N2' | 'N1', number> = { N2: 26, N1: 32 };
+const levelArg = process.argv[process.argv.indexOf('--level') + 1];
+if (!process.argv.includes('--level') || (levelArg !== 'N2' && levelArg !== 'N1')) {
+  throw new Error('usage: npx tsx scripts/build-upper-kanji-vocab.ts --level N2|N1 [--dry-run]');
+}
+const LEVEL: 'N2' | 'N1' = levelArg;
+const N1_LESSONS = LESSONS[LEVEL];
 const VOCAB_CAP_FACTOR = 1.25;
 const DATA = 'grammar-app/src/data';
 const LOWER_LEVELS = ['n5', 'n4', 'n3'];
@@ -62,7 +69,7 @@ for (const level of LOWER_LEVELS) {
 }
 
 // ---- kanji ----
-const n1KanjiAll = Object.entries(sourceKanji).filter(([, k]) => k.level === 'N1');
+const n1KanjiAll = Object.entries(sourceKanji).filter(([, k]) => k.level === LEVEL);
 const skippedKanji = n1KanjiAll.filter(([ch]) => lowerKanji.has(ch)).map(([ch]) => ch);
 const teachKanji = n1KanjiAll.filter(([ch]) => !lowerKanji.has(ch)).sort(compareKanjiForTeaching);
 
@@ -74,9 +81,9 @@ kanjiGroups.forEach((group, i) => {
   const lesson = i + 1;
   kanjiOut[String(lesson)] = group.map(([ch, source], j) => {
     kanjiLesson.set(ch, lesson);
-    const compounds = pickCompounds(ch, sourceWords);
+    const compounds = pickCompounds(ch, sourceWords, 4, LEVEL);
     if (compounds.length === 0) noCompounds += 1;
-    return buildKanjiItem(ch, source, lesson, j + 1, compounds);
+    return buildKanjiItem(ch, source, lesson, j + 1, compounds, LEVEL);
   });
 });
 
@@ -87,7 +94,7 @@ const n1Words: SourceWord[] = [];
 const skippedWords: SourceWord[] = [];
 const noGloss: SourceWord[] = [];
 let duplicateWords = 0;
-for (const word of sourceWords.filter((w) => w.level === 'N1').sort(compareWordsByKana)) {
+for (const word of sourceWords.filter((w) => w.level === LEVEL).sort(compareWordsByKana)) {
   const key = `${headword(word)}|${word.kana}`;
   if (seenWords.has(key)) {
     duplicateWords += 1;
@@ -106,18 +113,18 @@ const wordLessons = assignVocabLessons(n1Words, kanjiLesson, { lessonCount: N1_L
 const grouped = groupByLesson(n1Words, wordLessons, N1_LESSONS);
 const vocabOut: Record<string, ReturnType<typeof buildVocabItem>[]> = {};
 for (const [lesson, words] of Object.entries(grouped)) {
-  vocabOut[lesson] = words.map((word, j) => buildVocabItem(word, Number(lesson), j + 1));
+  vocabOut[lesson] = words.map((word, j) => buildVocabItem(word, Number(lesson), j + 1, LEVEL));
 }
 
 // ---- report ----
 const sizes = (out: Record<string, unknown[]>) => Object.values(out).map((items) => items.length);
 const kanjiSizes = sizes(kanjiOut);
 const vocabSizes = sizes(vocabOut);
-console.log(`N1 kanji: ${teachKanji.length} of ${n1KanjiAll.length} (${skippedKanji.length} already in N5-N3 files)`);
+console.log(`${LEVEL} kanji: ${teachKanji.length} of ${n1KanjiAll.length} (${skippedKanji.length} already in N5-N3 files)`);
 console.log(`  per lesson ${Math.min(...kanjiSizes)}-${Math.max(...kanjiSizes)}; ${noCompounds} with no list word as a compound`);
 console.log(`  skipped: ${skippedKanji.join(' ') || '(none)'}`);
 console.log(
-  `N1 vocab: ${n1Words.length} (${skippedWords.length} already in N5-N3 files, ${duplicateWords} duplicate list rows)`
+  `${LEVEL} vocab: ${n1Words.length} (${skippedWords.length} already in N5-N3 files, ${duplicateWords} duplicate list rows)`
 );
 console.log(`  per lesson ${Math.min(...vocabSizes)}-${Math.max(...vocabSizes)} (cap ${cap}): ${vocabSizes.join(' ')}`);
 console.log(`  skipped: ${skippedWords.map(headword).join(' ') || '(none)'}`);
@@ -126,7 +133,7 @@ console.log(`  dropped (no usable gloss in the list): ${noGloss.map((w) => `${he
 if (dryRun) {
   console.log('\n--dry-run: nothing written.');
 } else {
-  writeFileSync(resolve(`${DATA}/n1/kanji.json`), `${JSON.stringify(kanjiOut, null, 2)}\n`);
-  writeFileSync(resolve(`${DATA}/n1/vocab.json`), `${JSON.stringify(vocabOut, null, 2)}\n`);
-  console.log(`\nWrote ${DATA}/n1/kanji.json and ${DATA}/n1/vocab.json.`);
+  writeFileSync(resolve(`${DATA}/${LEVEL.toLowerCase()}/kanji.json`), `${JSON.stringify(kanjiOut, null, 2)}\n`);
+  writeFileSync(resolve(`${DATA}/${LEVEL.toLowerCase()}/vocab.json`), `${JSON.stringify(vocabOut, null, 2)}\n`);
+  console.log(`\nWrote ${DATA}/${LEVEL.toLowerCase()}/kanji.json and ${DATA}/${LEVEL.toLowerCase()}/vocab.json.`);
 }

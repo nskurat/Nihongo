@@ -1,5 +1,5 @@
 /**
- * Pure, side-effect-free helpers for scripts/build-n1-kanji-vocab.ts. No node:fs here:
+ * Pure, side-effect-free helpers for scripts/build-upper-kanji-vocab.ts --level N1. No node:fs here:
  * the build script does all I/O, so this module can be unit-tested from
  * grammar-app/src/__tests__/scripts/buildN1KanjiVocab.test.ts (vitest's root is grammar-app/).
  */
@@ -34,7 +34,7 @@ export interface Compound {
 
 export interface BuiltKanji {
   uid: string;
-  level: 'N1';
+  level: JlptLevel;
   section: 'kanji';
   lesson: number;
   kanji: string;
@@ -49,7 +49,7 @@ export interface BuiltKanji {
 
 export interface BuiltVocab {
   uid: string;
-  level: 'N1';
+  level: JlptLevel;
   section: 'vocab';
   lesson: number;
   word: string;
@@ -174,20 +174,26 @@ export function splitEvenly<T>(items: T[], parts: number): T[][] {
   return groups;
 }
 
-const COMPOUND_LEVEL_PREFERENCE: JlptLevel[] = ['N1', 'N2', 'N3', 'N4', 'N5'];
+const ALL_LEVELS: JlptLevel[] = ['N1', 'N2', 'N3', 'N4', 'N5'];
+/** The level itself first, then easier levels (N2 → N3 …), then harder ones. */
+export function compoundLevelPreference(level: JlptLevel): JlptLevel[] {
+  const i = ALL_LEVELS.indexOf(level);
+  return [...ALL_LEVELS.slice(i), ...ALL_LEVELS.slice(0, i).reverse()];
+}
 
 /**
  * Up to `max` real list words written with the kanji, preferring N1 words, then N2,
  * N3, N4, N5; within a level shorter words first, then by kana. Never invented: an
  * empty result means no list word uses the kanji.
  */
-export function pickCompounds(kanji: string, words: SourceWord[], max = 4): Compound[] {
+export function pickCompounds(kanji: string, words: SourceWord[], max = 4, level: JlptLevel = 'N1'): Compound[] {
+  const pref = compoundLevelPreference(level);
   const seen = new Set<string>();
   return words
     .filter((w) => w.kanji.includes(kanji) && hasUsableGloss(w))
     .sort(
       (a, b) =>
-        COMPOUND_LEVEL_PREFERENCE.indexOf(a.level) - COMPOUND_LEVEL_PREFERENCE.indexOf(b.level) ||
+        pref.indexOf(a.level) - pref.indexOf(b.level) ||
         a.kanji.length - b.kanji.length ||
         codepointCompare(a.kana, b.kana) ||
         a.jmdictSeq - b.jmdictSeq
@@ -278,11 +284,12 @@ export function buildKanjiItem(
   source: SourceKanji,
   lesson: number,
   position: number,
-  compounds: Compound[]
+  compounds: Compound[],
+  level: JlptLevel = 'N1'
 ): BuiltKanji {
   return {
-    uid: `n1-kanji-${lesson}-${position}`,
-    level: 'N1',
+    uid: `${level.toLowerCase()}-kanji-${lesson}-${position}`,
+    level,
     section: 'kanji',
     lesson,
     kanji,
@@ -296,10 +303,15 @@ export function buildKanjiItem(
   };
 }
 
-export function buildVocabItem(word: SourceWord, lesson: number, position: number): BuiltVocab {
+export function buildVocabItem(
+  word: SourceWord,
+  lesson: number,
+  position: number,
+  level: JlptLevel = 'N1'
+): BuiltVocab {
   return {
-    uid: `n1-vocab-${lesson}-${position}`,
-    level: 'N1',
+    uid: `${level.toLowerCase()}-vocab-${lesson}-${position}`,
+    level,
     section: 'vocab',
     lesson,
     word: headword(word),

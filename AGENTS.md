@@ -6,7 +6,7 @@ it is loaded into every session. Details belong in `docs/refactor/`, not here.
 ## What this is
 
 A static, client-only study portal for JLPT N5–N1: grammar (all levels),
-vocabulary and kanji reference (N5–N3, N1) plus AI-generated reading practice (any level with grammar + vocab). React 19 + Vite +
+vocabulary, kanji and AI-generated reading practice (all levels). React 19 + Vite +
 Tailwind v4 + zustand + react-router. No backend. Deployed to GitHub Pages at
 `https://nskurat.github.io/Nihongo/` by `.github/workflows/deploy.yml` on push to `main`.
 
@@ -36,8 +36,8 @@ grammar-app/
     components/common/  Header, modals, MarkdownViewer, FuriganaText, TagBadge
     services/ai/        Provider registry, prompts, parsers, storage adapter
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
-    data/{n5,n4,n3,n1}/ grammar|vocab|kanji.json, keyed by lesson number (N1 built by scripts/build-n1-kanji-vocab.ts)
-    data/n2/grammar.json  N2 is grammar-only. A section shows wherever its data file exists (utils/levels.ts)
+    data/{n5..n1}/      grammar|vocab|kanji.json, keyed by lesson number. A section shows wherever
+                        its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
 ```
