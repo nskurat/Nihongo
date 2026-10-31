@@ -3,14 +3,15 @@ import { ArrowLeft, Search, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAppStore } from '../../store/useAppStore';
 import { prefetchSearchIndex } from '../../features/search/searchClient';
-import { useSearchUiStore } from '../../features/search/searchUiStore';
+import { searchNav, useSearchUiStore } from '../../features/search/searchUiStore';
 import { isComposingKey, isSearchShortcut, isTypingTarget } from '../../features/search/keyboard';
 import {
-  buildSearchPath,
+  EMPTY_SEARCH_STATE,
   parseSearchParams,
   SEARCH_PATH,
   serializeSearchState,
   toAbsoluteHref,
+  withQuery,
 } from '../../features/search/searchUrl';
 import { S } from '../../features/search/strings';
 
@@ -28,7 +29,7 @@ export interface SearchEntryState {
 }
 
 function hasModalOpen(): boolean {
-  return !!document.querySelector('[aria-modal="true"], [role="dialog"]');
+  return !!document.querySelector('[aria-modal="true"], [role="dialog"], [role="alertdialog"]');
 }
 
 /**
@@ -40,7 +41,10 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
   const location = useLocation();
   const navigate = useNavigate();
   const lastLesson = useAppStore((s) => s.lastLesson);
-  const { items, activeId, move, markOpened } = useSearchUiStore();
+  const items = useSearchUiStore((s) => s.items);
+  const activeId = useSearchUiStore((s) => s.activeId);
+  const move = useSearchUiStore((s) => s.move);
+  const markOpened = useSearchUiStore((s) => s.markOpened);
 
   const urlQ = onSearch ? (new URLSearchParams(location.search).get('q') ?? '') : '';
   const [value, setValue] = useState(urlQ);
@@ -48,6 +52,11 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
   // Values this input wrote to the URL that the router hasn't reflected back yet.
   const [pending, setPending] = useState<string[]>([]);
   const composing = useRef(false);
+  // Set by the push that enters /search; until the router has rendered /search, further
+  // keystrokes replace that entry instead of pushing more (BUG-07: fast typing / paste).
+  useEffect(() => {
+    searchNav.entering = false;
+  }, [onSearch]);
 
   // Mirror URL → input only when q changes from outside (Back, hint chips, leaving search).
   // Our own writes arrive asynchronously and may lag fast typing, so they are ignored.
@@ -64,13 +73,15 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
   const commit = (q: string) => {
     const nextUrlQ = onSearch || q.trim() ? q : urlQ;
     if (nextUrlQ !== urlQ) setPending((p) => [...p, nextUrlQ]);
-    if (onSearch) {
-      const { state } = parseSearchParams(new URLSearchParams(location.search));
-      const qs = serializeSearchState({ ...state, q, more: q === state.q ? state.more : undefined }).toString();
-      navigate(qs ? `${SEARCH_PATH}?${qs}` : SEARCH_PATH, { replace: true, state: location.state });
+    const entry: SearchEntryState = { searchEntry: true };
+    if (onSearch || searchNav.entering) {
+      // On /search (or already on the way there): replace, keeping filters for a refined query.
+      const base = onSearch ? parseSearchParams(new URLSearchParams(location.search)).state : EMPTY_SEARCH_STATE;
+      const qs = serializeSearchState(withQuery(base, q)).toString();
+      navigate(qs ? `${SEARCH_PATH}?${qs}` : SEARCH_PATH, { replace: true, state: onSearch ? location.state : entry });
     } else if (q.trim()) {
-      const entry: SearchEntryState = { searchEntry: true };
-      navigate(buildSearchPath({ q }), { state: entry });
+      searchNav.entering = true;
+      navigate(`${SEARCH_PATH}?${serializeSearchState({ ...EMPTY_SEARCH_STATE, q })}`, { state: entry });
     }
   };
 
@@ -100,7 +111,8 @@ export default function HeaderSearch({ onSearch, isDesktop, inputRef }: HeaderSe
       input.focus();
       input.select();
       prefetchSearchIndex();
-      if (!isDesktop && !onSearch) {
+      if (!isDesktop && !onSearch && !searchNav.entering) {
+        searchNav.entering = true;
         const entry: SearchEntryState = { searchEntry: true };
         navigate(SEARCH_PATH, { state: entry });
       }

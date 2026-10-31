@@ -1,19 +1,18 @@
 import { ArrowLeft } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { S } from './strings';
+import { useSearchUiStore, type FromSearchState } from './searchUiStore';
 
-/** History state set on links opened from the results page. */
-export interface FromSearchState {
-  fromSearch?: string;
-}
+
 
 /** `← Back to results for "…"`, only when arrived from the results page (never for shared links). */
 export default function SearchReturnBar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const resultsPath = useSearchUiStore((s) => s.resultsPath);
   const from = (location.state as FromSearchState | null)?.fromSearch;
   if (!from) return null;
-  const q = new URLSearchParams(from.split('?')[1] ?? '').get('q') ?? '';
+  const q = new URLSearchParams(resultsPath.split('?')[1] ?? '').get('q') ?? '';
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 px-2 py-1.5">

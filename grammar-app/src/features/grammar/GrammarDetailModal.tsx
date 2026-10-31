@@ -45,6 +45,9 @@ export default function GrammarDetailModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in overflow-y-auto">
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="grammar-detail-title"
         className="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-scale-up my-auto"
         onClick={(e) => e.stopPropagation()}
       >
@@ -65,7 +68,7 @@ export default function GrammarDetailModal({
             <span className="text-xs text-slate-400 font-mono">ID: {item.uid}</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h2 id="grammar-detail-title" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             {item.title}
           </h2>
 

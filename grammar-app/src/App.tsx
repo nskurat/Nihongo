@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import Header from './components/common/Header';
 import GrammarSection from './features/grammar/GrammarSection';
@@ -5,13 +6,16 @@ import VocabSection from './features/vocab/VocabSection';
 import KanjiSection from './features/kanji/KanjiSection';
 import ReadingSection from './features/reading/ReadingSection';
 import AiSettingsModal from './components/common/AiSettingsModal';
-import SearchPage from './features/search/SearchPage';
+
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
 import { parseLevel, clampLessonForLevel, fromLegacyLesson, isSectionAvailable } from './utils/levels';
 import { parseLegacyUrl } from './utils/legacyUrl';
 
 const DEFAULT_ROUTE = '/n3/grammar/1';
+
+// The results page is its own chunk: lesson pages pay nothing for it.
+const SearchPage = lazy(() => import('./features/search/SearchPage'));
 
 // Wrap the route contents to extract URL params and sync with UI
 function ContentWrapper() {
@@ -69,7 +73,14 @@ export default function App() {
 
         <Routes>
           {/* Declared explicitly: a one-segment path would otherwise fall to the legacy redirect. */}
-          <Route path="/search" element={<SearchPage />} />
+          <Route
+            path="/search"
+            element={
+              <Suspense fallback={<div className="max-w-6xl mx-auto p-6" aria-busy="true" />}>
+                <SearchPage />
+              </Suspense>
+            }
+          />
           <Route path="/:level/:section/:lesson" element={<ContentWrapper />} />
           <Route path="/:level/:section" element={<ContentWrapper />} />
           <Route path="/" element={<LegacyRedirect />} />

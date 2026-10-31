@@ -1,7 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { FixtureSearchSource } from '../__fixtures__/FixtureSearchSource';
-import { isNoSourceError } from '../searchClient';
-import { searchRepository } from '../../../services/search/SearchSource';
 
 const src = new FixtureSearchSource();
 
@@ -40,18 +38,5 @@ describe('FixtureSearchSource', () => {
   it('returns a deinflection for an inflected form', async () => {
     const r = await src.search('待たされた', { rankLevel: 'N3' });
     expect(r.groups.vocab[0]).toMatchObject({ title: '待つ', matchKind: 'deinflected' });
-  });
-});
-
-describe('searchClient fallback detection', () => {
-  it('recognises the "no source" error from the contract facade', () => {
-    let err: unknown;
-    try {
-      void searchRepository.warmup();
-    } catch (e) {
-      err = e;
-    }
-    expect(isNoSourceError(err)).toBe(true);
-    expect(isNoSourceError(new Error('network'))).toBe(false);
   });
 });

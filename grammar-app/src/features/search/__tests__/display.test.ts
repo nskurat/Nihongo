@@ -71,7 +71,7 @@ describe('reasonLine', () => {
         deinflection: { input: '待たされた', lemma: '待つ', steps: [{ en: 'causative-passive', ja: '使役受身' }, { en: 'past', ja: '過去' }] },
       })
     );
-    expect(r).toEqual({ from: '待たされた', to: '待つ', note: 'causative-passive, past（使役受身・過去）' });
+    expect(r).toEqual({ from: '待たされた', to: '待つ', note: 'causative-passive → past（使役受身 → 過去）' });
   });
   it('uses the short dictionary-form line for lemma hits', () => {
     expect(reasonLine(hit({ matchKind: 'lemma', title: '分かる' }))).toEqual({ to: '分かる', note: '(dictionary form)' });

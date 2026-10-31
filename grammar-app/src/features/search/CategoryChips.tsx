@@ -4,7 +4,7 @@ import { S } from './strings';
 
 interface CategoryChipsProps {
   categories: CategoryChip[];
-  onPick: (id: string) => void;
+  onPick: (chip: CategoryChip) => void;
   /** Hide counts until the index has loaded them. */
   showCounts?: boolean;
   className?: string;
@@ -19,7 +19,7 @@ export default function CategoryChips({ categories, onPick, showCounts = true, c
         <li key={c.id}>
           <button
             type="button"
-            onClick={() => onPick(c.id)}
+            onClick={() => onPick(c)}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-semibold hover:bg-indigo-100 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2"
           >
             <Layers size={14} aria-hidden="true" />

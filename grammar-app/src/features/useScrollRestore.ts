@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
 
 const positions = new Map<string, number>();
+const SETTLE_MS = 120;
 
 /** Whether a scroll position was recorded for this history entry (a Back into it restores). */
 export function hasSavedScroll(key: string): boolean {
@@ -23,20 +24,23 @@ export function useScrollRestore(ready: boolean, { scrollTopOnPush = false } = {
   const { key } = useLocation();
   const navType = useNavigationType();
 
-  // Record continuously: by the time an unmount cleanup runs, the next page may already
-  // have changed the document height and clamped scrollY.
+  // Record once scrolling has settled. A scroll that the *next* page causes (the document
+  // shrinking and clamping scrollY during navigation) never settles before this page's
+  // cleanup runs, so it can't overwrite the position the learner left at (BUG-08).
   useEffect(() => {
-    let raf = 0;
+    // A REPLACE (typing, filters) keeps the page where it is: start this entry from there.
+    if (navType === 'REPLACE' && !positions.has(key)) positions.set(key, window.scrollY);
+    let timer: ReturnType<typeof setTimeout> | undefined;
     const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => positions.set(key, window.scrollY));
+      clearTimeout(timer);
+      timer = setTimeout(() => positions.set(key, window.scrollY), SETTLE_MS);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
-      cancelAnimationFrame(raf);
+      clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
     };
-  }, [key]);
+  }, [key, navType]);
 
   useEffect(() => {
     if (!ready) return;

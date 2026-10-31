@@ -134,6 +134,9 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="ai-settings-title"
         className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden animate-scale-up flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
@@ -144,7 +147,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
               <Bot size={22} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              <h3 id="ai-settings-title" className="text-xl font-bold text-white flex items-center gap-2">
                 AI Provider Settings
               </h3>
               <p className="text-xs text-slate-300 mt-0.5">
