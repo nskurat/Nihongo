@@ -66,7 +66,8 @@ describe('SearchEngine (fixture)', () => {
     const taberu = e.search('食べる', opts).groups.vocab[0];
     expect(taberu).toMatchObject({ uid: 'n5-vocab-6-1', matchKind: 'lemma', tier: 1 });
     const sake = e.search('さけ', opts).groups.vocab.map((h) => [h.uid, h.matchKind]);
-    expect(sake).toEqual([['n3-vocab-10-1', 'exact'], ['n5-vocab-6-2', 'lemma']]);
+    // Exact and lemma share a band ranked by level (D3): the N5 lemma row leads.
+    expect(sake).toEqual([['n5-vocab-6-2', 'lemma'], ['n3-vocab-10-1', 'exact']]);
     const de = e.search('食べられない', opts).groups.vocab[0];
     expect(de.matchKind).toBe('deinflected');
     expect(de.deinflection).toMatchObject({ input: '食べられない', lemma: '食べる' });
@@ -163,12 +164,17 @@ describe('rank', () => {
     expect(order).toEqual(['N5', 'N4', 'N3', 'N2', 'N1']);
   });
 
-  it('orders groups by their best hit, vocab winning a verb tie', () => {
+  it('orders groups by their best hit: basic level, then the word, wins an exact tie', () => {
     const d: DocType[] = ['grammar', 'vocab', 'kanji'];
-    expect(orderGroups(d, { grammar: { tier: 0, sub: 0 }, vocab: { tier: 0, sub: 0 } }, true)).toEqual(['vocab', 'grammar', 'kanji']);
-    expect(orderGroups(d, { grammar: { tier: 0, sub: 0 }, vocab: { tier: 0, sub: 0 } }, false)).toEqual(['grammar', 'vocab', 'kanji']);
-    expect(orderGroups(d, { grammar: { tier: 4, sub: 0 }, vocab: { tier: 2, sub: 0 } }, false)).toEqual(['vocab', 'grammar', 'kanji']);
-    expect(orderGroups(d, { kanji: { tier: 0, sub: 0 } }, false)).toEqual(['kanji', 'grammar', 'vocab']);
+    const g = (tier: number, level = 0) => ({ tier, sub: 0, level });
+    // Same level: the word leads (だれ, わかります).
+    expect(orderGroups(d, { grammar: g(0), vocab: g(0) })).toEqual(['vocab', 'grammar', 'kanji']);
+    // The more basic exact hit leads (ます → Vます N5 over 増す N3).
+    expect(orderGroups(d, { grammar: g(0, 0), vocab: g(0, 2) })).toEqual(['grammar', 'vocab', 'kanji']);
+    expect(orderGroups(d, { grammar: g(4), vocab: g(2) })).toEqual(['vocab', 'grammar', 'kanji']);
+    expect(orderGroups(d, { kanji: g(0) })).toEqual(['kanji', 'grammar', 'vocab']);
+    // A kanji reading never leads over a word's lemma hit (たべる → 食べます before 食).
+    expect(orderGroups(['vocab', 'kanji', 'grammar'], { kanji: g(0), vocab: g(1) })).toEqual(['vocab', 'kanji', 'grammar']);
   });
 
   it('tier, then sub, then level, lesson, position', () => {

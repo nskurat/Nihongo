@@ -9,7 +9,7 @@ type ContentSection = 'grammar' | 'vocab' | 'kanji';
 // the app's Vite/browser TS project, so this is a deliberate plain-value copy
 // rather than an import - keep it in sync if the ranges ever change.
 const LESSON_RANGES: Record<Level, { min: number; max: number }> = {
-  N5: { min: 1, max: 25 },
+  N5: { min: 1, max: 26 },
   N4: { min: 1, max: 25 },
   N3: { min: 1, max: 24 },
   N2: { min: 1, max: 26 },

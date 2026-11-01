@@ -1,0 +1,53 @@
+[
+  {
+    "level": "N3",
+    "lesson": 8,
+    "title": "〜わりに（は）",
+    "meaning": "Considering ~ / For ~ (more or less than expected)",
+    "structure": "Plain form (な-adj + な / N + の) + わりに（は）",
+    "explanation": "States that the result is not what you would expect from the first part: better or worse than its age, price, effort and so on.",
+    "examples": [
+      { "jp": "この店は 値段のわりに おいしい。", "en": "This restaurant is good for the price." },
+      { "jp": "父は 年のわりには 若く 見える。", "en": "My father looks young for his age." },
+      { "jp": "よく 勉強したわりに、点数が 悪かった。", "en": "Considering how much I studied, my score was bad." }
+    ],
+    "summary": "わりに compares a result with what its premise leads you to expect; it can praise or complain.",
+    "bold": ["わりには", "わりに"],
+    "note": "Unlike のに or くせに, わりに measures against an expected standard rather than blaming anyone, so it fits neutral judgements (値段のわりに, 年のわりに). It follows a noun with の, a な-adjective with な, or a plain verb/い-adjective.",
+    "tags": ["concession-contrast", "comparison"]
+  },
+  {
+    "level": "N3",
+    "lesson": 11,
+    "title": "〜なんて",
+    "meaning": "Things like ~ / Such a thing as ~ (surprise, contempt or modesty)",
+    "structure": "N / plain form + なんて",
+    "explanation": "Picks out a thing or an event and shows the speaker's feeling about it: surprise, disbelief, contempt, or modesty about oneself. Casual.",
+    "examples": [
+      { "jp": "宿題を 忘れるなんて、信じられない。", "en": "I can't believe you forgot your homework." },
+      { "jp": "テストなんて 大嫌いだ。", "en": "I hate things like tests." },
+      { "jp": "私なんて まだまだです。", "en": "Someone like me still has a long way to go." }
+    ],
+    "summary": "なんて marks something with surprise or contempt (or self-deprecation); it replaces は/が/を in casual speech.",
+    "bold": ["なんて"],
+    "note": "なんて is the casual, emotional cousin of など. After a clause it expresses surprise or disbelief (忘れるなんて). After a noun it belittles the thing (テストなんて) or, about oneself, is modest (私なんて). Compare 〜なんか, which does the same mostly after nouns.",
+    "tags": ["emotion-expression", "emphasis-assertion", "colloquial"]
+  },
+  {
+    "level": "N3",
+    "lesson": 11,
+    "title": "〜なんか",
+    "meaning": "Things like ~ / The likes of ~ (casual, often dismissive)",
+    "structure": "N + なんか",
+    "explanation": "A casual など: gives an example (お茶なんか どう?) or shows that the speaker looks down on the thing, or modestly on themself.",
+    "examples": [
+      { "jp": "お茶なんか どうですか。", "en": "How about some tea or something?" },
+      { "jp": "あんな 人なんか 知らない。", "en": "I don't know (and don't care about) someone like that." },
+      { "jp": "僕なんか まだ 初心者です。", "en": "Someone like me is still a beginner." }
+    ],
+    "summary": "なんか is casual など: an example, or a dismissive / modest 'the likes of'.",
+    "bold": ["なんか"],
+    "note": "In suggestions なんか softens the example (お茶なんか). With a negative it dismisses (人なんか 知らない). It follows nouns; after a clause use なんて instead.",
+    "tags": ["listing-examples", "emotion-expression", "colloquial"]
+  }
+]

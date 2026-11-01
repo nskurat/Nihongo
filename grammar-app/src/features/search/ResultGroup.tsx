@@ -47,8 +47,11 @@ function ResultGroup({ view, onFooter, note, ...ctx }: ResultGroupProps) {
   const footerId = moreOptionId(view.type);
   return (
     <div role="group" aria-labelledby={headingId} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      {/* Inside role=listbox only groups and options are allowed (axe aria-required-children):
+          the visual heading is presentational and names the group through aria-labelledby. */}
       <h2
         id={headingId}
+        role="presentation"
         className={`px-4 py-2.5 border-b border-slate-200 border-l-[3px] ${accent[view.type]} bg-slate-50/80 text-sm font-bold text-slate-800 flex items-baseline gap-2`}
       >
         {S.typeLabel[view.type]}

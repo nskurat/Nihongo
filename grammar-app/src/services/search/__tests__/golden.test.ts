@@ -135,24 +135,25 @@ describe('§5 acceptance list (golden queries)', () => {
     expect(r.groups.grammar.slice(0, 2).map((h) => h.title)).toEqual(['けど／けれども', 'V／い-adj／な-adj plain form／N（だ→な）＋ のに、〜']);
   });
 
-  it('T-10 ?tag=comparison: exactly 17, N5 → N1', async () => {
+  // 17 → 18: 〜わりに（は） N3 L8 added for the 2026-11 regression (R15).
+  it('T-10 ?tag=comparison: exactly 18, N5 → N1', async () => {
     const list = await source.listByTag('comparison');
-    expect(list).toHaveLength(17);
+    expect(list).toHaveLength(18);
     expect(list[0].title).toBe('Aは Bより adjective です');
     expect(list[0].level).toBe('N5');
     expect(list[0].lesson).toBe(12);
-    expect(list[16].title).toBe('〜きっての');
-    expect(list[16].level).toBe('N1');
-    expect(list[16].lesson).toBe(26);
+    expect(list[17].title).toBe('〜きっての');
+    expect(list[17].level).toBe('N1');
+    expect(list[17].lesson).toBe(26);
     expect(present(list, { t: '〜に比べて', level: 'N3', lesson: 18 })).toBe(true);
     // Same list through search() with a tag filter and no query.
     const viaSearch = await run('', { tag: 'comparison', limitPerType: Infinity });
     expect(viaSearch.groups.grammar.map((h) => h.uid)).toEqual(list.map((h) => h.uid));
   });
 
-  it('T-11 comparison typed: chip "Comparison · 17", grammar has 〜に比べて', async () => {
+  it('T-11 comparison typed: chip "Comparison · 18", grammar has 〜に比べて', async () => {
     const r = await run('comparison');
-    expect(r.categories.map((c) => [c.label, c.count])).toContainEqual(['Comparison', 17]);
+    expect(r.categories.map((c) => [c.label, c.count])).toContainEqual(['Comparison', 18]);
     expectContains(r, 'grammar', [{ t: '〜に比べて', level: 'N3', lesson: 18 }]);
   });
 
@@ -184,10 +185,10 @@ describe('§5 acceptance list (golden queries)', () => {
     ]);
   });
 
-  it('T-14 contrast: chip "Concession / Contrast · 49"; に対して and にひきかえ by meaning; 反面 via the chip', async () => {
+  it('T-14 contrast: chip "Concession / Contrast · 50" (49 + 〜わりに); に対して and にひきかえ by meaning; 反面 via the chip', async () => {
     const r = await run('contrast');
     const chip = r.categories.find((c) => c.label === 'Concession / Contrast');
-    expect(chip?.count).toBe(49);
+    expect(chip?.count).toBe(50);
     expectContains(r, 'grammar', [{ t: '〜にひきかえ', level: 'N1', lesson: 21 }]);
     // Amended: chip members now appear in the results, so 〜反面 (meaning "On the other
     // hand") is in the group; with 56 rows it and 〜に対して sit behind "Show all".
@@ -259,12 +260,14 @@ describe('§5 acceptance list (golden queries)', () => {
     }
   });
 
-  it('T-25 さけ: 酒 above お酒', async () => {
+  // Amended (owner decision D3, docs/search/07-regression.md): exact and lemma hits rank
+  // by level, so the N5 word お酒 leads and 酒 N3 follows.
+  it('T-25 さけ: お酒 N5 above 酒 N3', async () => {
     const r = await run('さけ');
     const sake = r.groups.vocab.findIndex((h) => h.title === '酒' && h.level === 'N3');
     const osake = r.groups.vocab.findIndex((h) => h.title === 'お酒' && h.level === 'N5');
-    expect(sake).toBeGreaterThanOrEqual(0);
-    expect(osake).toBeGreaterThan(sake);
+    expect(osake).toBe(0);
+    expect(sake).toBeGreaterThan(osake);
   });
 
   it('T-26 たくしー → タクシー', async () => {
@@ -345,14 +348,13 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(await run('kitte'), 'vocab', { t: '切手', level: 'N5', lesson: 11 });
   });
 
-  it('T-37 lost: 迷子 and 迷う in the top 8, 無くなる in the group; kanji 迷', async () => {
+  it('T-37 lost: 迷子, 迷う and 無くなる in the top 8; kanji 迷', async () => {
     expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [
       { t: '迷子', level: 'N3', lesson: 8 },
       { t: '迷う [道に〜]', level: 'N3', lesson: 1 },
     ]);
-    // 19 glosses match; 無くなる ("to disappear, to get lost") is a sparse gloss, ranked later.
-    const r = await run('lost', { limitPerType: Infinity });
-    expectContains(r, 'vocab', [{ t: '無くなる', level: 'N4', lesson: 13 }]);
+    // D1 (docs/search/07-regression.md): core N5/N4 words make the visible top 8.
+    expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [{ t: '無くなる', level: 'N4', lesson: 13 }]);
     expectContains(await run('lost'), 'kanji', [{ t: '迷', level: 'N3', lesson: 1 }]);
   });
 
@@ -410,5 +412,76 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-44 (data side) 〜ものの hit carries the uid for ?focus=', async () => {
     const r = await run('ものの');
     expect(r.groups.grammar[0].uid).toMatch(/^n2-grammar-4-\d+$/);
+  });
+});
+
+/** docs/search/07-regression.md: the browser regression's open items and owner decisions. */
+describe('regression 2026-11 (R1–R14, D1–D3)', () => {
+  const top = (list: SearchHit[], n: number) => list.slice(0, n).map((h) => h.title);
+
+  it('R1 direct meaning hits rank above chip members that merely share the function', async () => {
+    const soon = await run('as soon as');
+    expect(top(soon.groups.grammar, 5)).toEqual(expect.arrayContaining(['〜次第（だ／で）', '〜か〜ないかのうちに']));
+    expect(top(soon.groups.grammar, 5)).not.toContain('今 -時-分です');
+    const acc = await run('according to');
+    expect(acc.groups.grammar[0].title).toBe('〜によると／〜によれば');
+    const even = await run('even', { limitPerType: Infinity });
+    expect(even.groups.grammar.findIndex((h) => h.title === '〜さえ')).toBeLessThan(4);
+  });
+
+  it('R2 a word leads over a kanji reading or a same-level grammar fragment', async () => {
+    for (const q of ['たべる', 'taberu', 'のむ']) expect((await run(q)).groupOrder[0]).toBe('vocab');
+    for (const q of ['いくら', 'だれ']) expect((await run(q)).groupOrder[0]).toBe('vocab');
+  });
+
+  it('D2 an exact grammar key leads over a derived or rarer word (みたい, ます)', async () => {
+    expect((await run('みたい')).groupOrder[0]).toBe('grammar');
+    expect((await run('ます')).groupOrder[0]).toBe('grammar');
+    expect((await run('わかります')).groupOrder[0]).toBe('vocab');
+  });
+
+  it('R3 kana readings find grammar written in kanji', async () => {
+    expectTop(await run('うえで'), 'grammar', { t: '〜上で', level: 'N3' });
+    expectContains(await run('しだい'), 'grammar', [{ t: '〜次第（だ／で）', level: 'N2' }]);
+    expectTop(await run('ぎみ'), 'grammar', { t: '〜気味（ぎみ）', level: 'N3' });
+  });
+
+  it('R4 plain-form look-ups find grammar titled in ます/です', async () => {
+    expectContains(await run('たほうがいい'), 'grammar', [{ t: 'Vた-form／Vない-form ない + ほうがいいです', level: 'N4' }]);
+    expectContains(await run('かもしれない'), 'grammar', [{ t: 'plain form + かもしれません', level: 'N4' }]);
+  });
+
+  it('R5 いく is not いい; ii is romaji for いい', async () => {
+    expect((await run('いく')).groups.vocab.some((h) => h.title === 'いい')).toBe(false);
+    expectTop(await run('ii'), 'vocab', { t: 'いい', level: 'N5' });
+    expectTop(await run('いいです'), 'vocab', { t: 'いい', level: 'N5' });
+  });
+
+  it('R6 / D1 / D3 exact and lemma hits rank core levels first', async () => {
+    expect((await run('いる')).groups.vocab[0].title).toBe('います');
+    const bun = await run('分');
+    expect(top(bun.groups.vocab, 3)).toEqual(expect.arrayContaining(['自分']));
+    expect(bun.groups.vocab[0].title).not.toBe('分');
+  });
+
+  it('R9 / R10 no kanji-in-phrase rows for kana queries, no 2-kana noise inside other keys', async () => {
+    expect((await run('です')).groups.kanji).toHaveLength(0);
+    expect((await run('さい')).groups.grammar.some((h) => h.title.includes('ください'))).toBe(false);
+    expect((await run('だけ')).groups.kanji.some((h) => h.title === '砕')).toBe(false);
+    expect((await run('きいた')).groups.kanji.some((h) => h.title === '北')).toBe(false);
+    expect((await run('すき')).groups.grammar.some((h) => h.title.includes('きる'))).toBe(false);
+  });
+
+  it('R7 / R8 / R15 content: 行く reads いく, core expressions at N5, new grammar points', async () => {
+    expectTop(await run('iku'), 'vocab', { t: '行く', level: 'N5', lesson: 4 });
+    expectTop(await run('nihongo'), 'vocab', { t: '日本語', level: 'N5', lesson: 26 });
+    expectTop(await run('こんにちは'), 'vocab', { t: 'こんにちは', level: 'N5', lesson: 26 });
+    expectTop(await run('わりに'), 'grammar', { t: '〜わりに（は）', level: 'N3' });
+    expectTop(await run('なんて'), 'grammar', { t: '〜なんて', level: 'N3' });
+    expectContains(await run('なきゃ'), 'grammar', [{ t: 'Vない-formなければ なりません', level: 'N4' }]);
+  });
+
+  it('R14 want → the たい point first', async () => {
+    expect((await run('want')).groups.grammar[0].title).toBe('V ます-form たいです');
   });
 });

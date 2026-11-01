@@ -56,6 +56,8 @@ export function deinflect(word: string): Deinflection[] {
         const stem = node.w.slice(0, node.w.length - rule.from.length);
         if (!stem && rule.to.length <= 1) continue; // a bare suffix is not a word (ます → る)
         if (!rule.to && !stemAllowed(stem, rule.label)) continue;
+        // いい inflects on よい only: いく / いかった are not forms of いい (R5); いいです is.
+        if (stem + rule.to === 'いい' && !node.w.startsWith('いい') && !rule.from.startsWith('よ')) continue;
         // After a stripped auxiliary the te-form itself is not a step worth showing.
         const label = node.type === 'aux' && rule.label === L.te ? null : rule.label;
         emit(node, stem + rule.to, label, rule.out, next);

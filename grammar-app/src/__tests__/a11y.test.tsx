@@ -71,8 +71,13 @@ describe('axe: pages', () => {
   it('search results have no violations', async () => {
     renderWithRouter(<App />, { route: '/search?q=より' });
     await waitFor(() => expect(screen.getAllByRole('option').length).toBeGreaterThan(0));
-    // Known: the group <h2>s sit inside role=listbox (docs/backlog.md, "Accessibility").
-    expect(await axeViolations(document.body, { exempt: ['aria-required-children'] })).toEqual([]);
+    expect(await axeViolations()).toEqual([]);
+  });
+
+  it('a function (tag) view with level subheadings has no violations', async () => {
+    renderWithRouter(<App />, { route: '/search?type=grammar&tag=comparison' });
+    await waitFor(() => expect(screen.getAllByRole('option').length).toBeGreaterThan(0));
+    expect(await axeViolations()).toEqual([]);
   });
 });
 

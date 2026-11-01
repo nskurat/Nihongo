@@ -1,5 +1,6 @@
 import { kataToHira } from '../normalize';
 import { masuToDict } from './masuToDict';
+import { kanaVariants } from './grammarReadings';
 
 /**
  * Search keys of a grammar title or structure (docs/search/04-data.md §2.5).
@@ -28,8 +29,28 @@ function expandOptional(s: string): string[] {
   return forms;
 }
 
+/** `気味（ぎみ）` → `ぎみ`: the title spelled with its bracketed reading (null when it has none). */
+const READING_PAREN_RUN = /[一-鿿々]+[（(]([ぁ-ゖ]+)[）)]/g;
+function bracketReading(raw: string): string | null {
+  const spelled = raw.replace(READING_PAREN_RUN, '$1');
+  return spelled === raw ? null : spelled;
+}
+
+/**
+ * Keys of a grammar title or structure: the written form, its bracketed reading and its
+ * curated kana reading (regression R3: うえで finds 〜上で, ぎみ finds 〜気味（ぎみ）).
+ */
 export function grammarKeys(raw: string | undefined): string[] {
   if (!raw) return [];
+  const keys: string[] = [];
+  const spelled = bracketReading(raw);
+  for (const variant of [raw, ...(spelled ? [spelled] : []), ...kanaVariants(raw)]) {
+    for (const k of keysOf(variant)) if (!keys.includes(k)) keys.push(k);
+  }
+  return keys;
+}
+
+function keysOf(raw: string): string[] {
   const keys: string[] = [];
   const add = (k: string) => {
     if (k && !keys.includes(k)) keys.push(k);
@@ -54,7 +75,13 @@ export function grammarKeys(raw: string | undefined): string[] {
 
 const NO_CORPUS: ReadonlySet<string> = new Set();
 
-/** Plain-form variants of a polite key: しまいます → しまう, はずです → はずだ, はず. */
+/** Godan dictionary ending → its negative stem (書く → 書か, 買う → 買わ). */
+const A_ROW: Record<string, string> = { う: 'わ', く: 'か', ぐ: 'が', す: 'さ', つ: 'た', ぬ: 'な', ぶ: 'ば', む: 'ま', る: 'ら' };
+
+/**
+ * Plain-form variants of a polite key: しまいます → しまう, はずです → はずだ, はず,
+ * かもしれません → かもしれない (R4), みたいだ → みたい (D2: the bare key answers みたい).
+ */
 export function plainForms(k: string): string[] {
   const out: string[] = [];
   const masu = k.endsWith('ました') ? `${k.slice(0, -3)}ます` : k;
@@ -63,6 +90,16 @@ export function plainForms(k: string): string[] {
     const m = masuToDict(masu, masu, undefined, NO_CORPUS);
     if (m) out.push(m.lemma);
   }
+  if (k.endsWith('ません') && k.length > 3) {
+    const stem = k.slice(0, -3);
+    if (stem.endsWith('し')) out.push(`${stem.slice(0, -1)}しない`);
+    else {
+      const m = masuToDict(`${stem}ます`, `${stem}ます`, undefined, NO_CORPUS);
+      if (m?.lemma.endsWith('る') && m.lemma.slice(0, -1) === stem) out.push(`${stem}ない`);
+      else if (m && A_ROW[m.lemma.slice(-1)]) out.push(`${m.lemma.slice(0, -1)}${A_ROW[m.lemma.slice(-1)]}ない`);
+    }
+  }
+  if (k.endsWith('だ') && k.length > 2 && !k.endsWith('んだ')) out.push(k.slice(0, -1));
   for (const [polite, plain] of [['です', 'だ'], ['でした', 'だった'], ['でしょう', 'だろう']]) {
     if (k.endsWith(polite) && k.length > polite.length) {
       const base = k.slice(0, -polite.length);
@@ -96,7 +133,11 @@ export function grammarPatternKeys(title: string): string[] {
       const trimmed = form.trim().replace(/^〜/, '');
       if (/^[ぁ-ゖー]+(〜[ぁ-ゖー]+)+$/.test(trimmed)) add(trimmed);
       for (const run of form.match(JP_RUN) ?? []) {
-        if (/^[ぁ-ゖー]{2,}$/.test(run) && !MORPHEMES.has(run)) add(run);
+        if (/^[ぁ-ゖー]{2,}$/.test(run) && !MORPHEMES.has(run)) {
+          add(run);
+          // Plain forms too, so たほうがいい finds `…ほうがいいです` (R4).
+          for (const p of plainForms(run)) if (p.length > 2 && !MORPHEMES.has(p)) add(p);
+        }
       }
     }
   }

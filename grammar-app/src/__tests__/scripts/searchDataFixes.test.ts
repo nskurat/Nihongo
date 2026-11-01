@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyKunFixes,
+  applyMeaningMarkerFixes,
+  stripPosMarkers,
   applyTitleTildeFixes,
   applyVocabFixes,
   type FixReport,
@@ -12,7 +14,7 @@ const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x));
 
 // Small hand-written rows shaped like the real files - no src/data import.
 const vocab = (): LessonFile => ({
-  23: [{ uid: 'n3-vocab-23-124', word: '言う', reading: 'ゆう', meaning: 'to say' }],
+  4: [{ uid: 'n5-vocab-4-34', word: '行く', reading: 'ゆく', meaning: 'to go' }],
   9: [
     { uid: 'n4-vocab-9-2', word: '気が付きます', reading: 'きつきます', romaji: 'kitsukimasu', meaning: 'to notice' },
     { uid: 'n4-vocab-9-5', word: '細い（ほそい）／太い', reading: 'ふとい', romaji: 'futoi', meaning: 'thin / thick' },
@@ -25,8 +27,8 @@ describe('applyVocabFixes', () => {
     const file = vocab();
     const r = report();
     applyVocabFixes(file, r);
-    expect(file[23][0].reading).toBe('いう');
-    expect(file[23][0]).not.toHaveProperty('romaji');
+    expect(file[4][0].reading).toBe('いく');
+    expect(file[4][0]).not.toHaveProperty('romaji');
     expect(file[9][0]).toMatchObject({ reading: 'きがつきます', romaji: 'kigatsukimasu' });
     expect(r.skipped).toEqual([]);
   });
@@ -56,12 +58,12 @@ describe('applyVocabFixes', () => {
   });
 
   it('skips, and reports, a row whose content no longer matches the guard', () => {
-    const file: LessonFile = { 23: [{ uid: 'n3-vocab-23-124', word: '言う', reading: 'いいう' }] };
+    const file: LessonFile = { 4: [{ uid: 'n5-vocab-4-34', word: '行き', reading: 'ゆき' }] };
     const r = report();
     applyVocabFixes(file, r);
-    expect(file[23][0].reading).toBe('いいう');
+    expect(file[4][0].reading).toBe('ゆき');
     expect(r.changed).toEqual([]);
-    expect(r.skipped).toEqual(['n3-vocab-23-124: expected 言う【ゆう】, found 言う【いいう】']);
+    expect(r.skipped).toEqual(['n5-vocab-4-34: expected 行く【ゆく】, found 行き【ゆき】']);
   });
 });
 
@@ -115,6 +117,26 @@ describe('applyTitleTildeFixes', () => {
     expect(r.changed).toEqual(['n5-grammar-1-6 ~さん → 〜さん', 'n5-grammar-1-7 ～ちゃん → 〜ちゃん']);
     const again = report();
     applyTitleTildeFixes(file, again);
+    expect(again.changed).toEqual([]);
+  });
+});
+
+describe('stripPosMarkers / applyMeaningMarkerFixes (regression R16)', () => {
+  it('drops JMdict part-of-speech markers and empty language tags, keeps senses and usage notes', () => {
+    expect(stripPosMarkers('(n) (a) joy, (a) delight')).toBe('joy, delight');
+    expect(stripPosMarkers('(1) holiday, rest, (2) (exp) Good night')).toBe('(1) holiday, rest, (2) Good night');
+    expect(stripPosMarkers('(pt:) (n) playing cards (pt: carta)')).toBe('playing cards (pt: carta)');
+    expect(stripPosMarkers('(male) (vulg.) to eat')).toBe('(male) (vulg.) to eat');
+    expect(stripPosMarkers('minute(s)')).toBe('minute(s)');
+  });
+
+  it('rewrites meanings in place and is idempotent', () => {
+    const file: LessonFile = { 1: [{ uid: 'n2-vocab-1-24', word: '小便', meaning: '(col) urine' }] };
+    const r = report();
+    applyMeaningMarkerFixes(file, r);
+    expect(file[1][0].meaning).toBe('urine');
+    const again = report();
+    applyMeaningMarkerFixes(file, again);
     expect(again.changed).toEqual([]);
   });
 });

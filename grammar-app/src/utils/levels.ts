@@ -9,7 +9,8 @@ interface LessonRange {
 // Every level numbers its lessons independently from 1.
 // Exported as the single source of truth for scripts/validate-content.ts.
 export const LESSON_RANGES: Record<LevelType, LessonRange> = {
-  N5: { min: 1, max: 25, default: 1 },
+  // N5 lesson 26 is "Core expressions" (greetings, 日本語): vocab only, scripts/lib/coreExpressions.ts.
+  N5: { min: 1, max: 26, default: 1 },
   N4: { min: 1, max: 25, default: 1 },
   N3: { min: 1, max: 24, default: 1 },
   N2: { min: 1, max: 26, default: 1 },
