@@ -110,3 +110,17 @@ export function applyKunFixes(file: LessonFile, report: FixReport): void {
     }
   }
 }
+
+/**
+ * Grammar titles use the wave dash 〜 for "something goes here" (423 of 424 N5 titles);
+ * an ASCII ~ or full-width ～ is the same mark typed differently. Display-only: search
+ * already normalises all three.
+ */
+export function applyTitleTildeFixes(file: LessonFile, report: FixReport): void {
+  for (const row of rowsOf(file)) {
+    if (typeof row.title !== 'string' || !/[~～]/.test(row.title)) continue;
+    const before = row.title;
+    row.title = before.replace(/[~～]/g, '〜');
+    report.changed.push(`${String(row.uid)} ${before} → ${String(row.title)}`);
+  }
+}

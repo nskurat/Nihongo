@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyKunFixes,
+  applyTitleTildeFixes,
   applyVocabFixes,
   type FixReport,
   type LessonFile,
@@ -96,5 +97,24 @@ describe('applyKunFixes', () => {
     const r = report();
     applyKunFixes(file, r);
     expect(r.changed).toEqual([]);
+  });
+});
+
+describe('applyTitleTildeFixes', () => {
+  it('turns ASCII and full-width tildes in titles into 〜, once', () => {
+    const file: LessonFile = {
+      1: [
+        { uid: 'n5-grammar-1-6', title: '~さん' },
+        { uid: 'n5-grammar-1-7', title: '～ちゃん' },
+        { uid: 'n5-grammar-1-8', title: '〜は〜です' },
+      ],
+    };
+    const r = report();
+    applyTitleTildeFixes(file, r);
+    expect(file[1].map((row) => row.title)).toEqual(['〜さん', '〜ちゃん', '〜は〜です']);
+    expect(r.changed).toEqual(['n5-grammar-1-6 ~さん → 〜さん', 'n5-grammar-1-7 ～ちゃん → 〜ちゃん']);
+    const again = report();
+    applyTitleTildeFixes(file, again);
+    expect(again.changed).toEqual([]);
   });
 });

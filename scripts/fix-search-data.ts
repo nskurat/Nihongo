@@ -1,10 +1,17 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { applyKunFixes, applyVocabFixes, type FixReport, type LessonFile } from './lib/searchDataFixes';
+import {
+  applyKunFixes,
+  applyTitleTildeFixes,
+  applyVocabFixes,
+  type FixReport,
+  type LessonFile,
+} from './lib/searchDataFixes';
 
 /**
  * Data-quality fixes global search depends on (docs/search/04-data.md §7 #1, #3, #8):
  * 言う read as ゆう, slash pairs whose reading covers one half only, and N5 kun readings
- * stored as bare stems. Tables live in scripts/lib/searchDataFixes.ts.
+ * stored as bare stems, and grammar titles typed with ~ instead of 〜. Tables live in
+ * scripts/lib/searchDataFixes.ts.
  *
  *   npx tsx scripts/fix-search-data.ts [--dry-run]
  *
@@ -22,6 +29,7 @@ const targets: { path: string; apply: (f: LessonFile, r: FixReport) => void }[] 
   { path: `${DATA}/n5/kanji.json`, apply: applyKunFixes },
   { path: `${DATA}/n4/vocab.json`, apply: applyVocabFixes },
   { path: `${DATA}/n3/vocab.json`, apply: applyVocabFixes },
+  ...['n5', 'n4', 'n3', 'n2', 'n1'].map((level) => ({ path: `${DATA}/${level}/grammar.json`, apply: applyTitleTildeFixes })),
 ];
 
 for (const { path, apply } of targets) {
