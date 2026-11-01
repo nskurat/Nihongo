@@ -1,0 +1,45 @@
+name: CI
+
+# The same gates deploy.yml runs on main, but on every pull request, so a
+# failing typecheck, lint, test or content check is caught before merge rather
+# than by a failed deploy. Nothing is published from here.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Validate content
+        run: npm run validate:data
+
+      - name: Build site
+        run: npm run build
