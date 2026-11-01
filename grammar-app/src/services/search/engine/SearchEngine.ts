@@ -576,7 +576,10 @@ export class SearchEngine {
       // fuller gloss (D1: lost → 無くなる "to disappear, to get lost"); a stem-only match
       // (lose weight) still is.
       const coreWord = doc.type === 'vocab' && LOWER_LEVELS.has(doc.level) && terms.some((t) => content.includes(t));
-      let sub = (isPhrase || terms.length === 1 ? 0 : 1) + (dense || coreWord ? 0 : 0.5);
+      // A grammar meaning written as an explanation sentence ("Confirms a word … the speaker
+      // wants to …") mentions the word in passing; a gloss ("Want someone to do") is about it.
+      const explanation = doc.type === 'grammar' && !dense && /\.\s*$/.test(doc.meaning);
+      let sub = (isPhrase || terms.length === 1 ? 0 : 1) + (dense || coreWord ? 0 : 0.5) + (explanation ? 0.25 : 0);
       let tier: number = summaryOnly ? TIER.summary : TIER.english;
       if (cats.members.has(d)) {
         tier = TIER.english;

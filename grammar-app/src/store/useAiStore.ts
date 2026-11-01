@@ -25,8 +25,9 @@ export const useAiArtifactStore = create<AiArtifactState>()(
       name: 'ai-generation-cache',
       // v1–v3 keyed by ids that collided across levels or were renumbered (start empty);
       // v4–v7 survive minus uids later content changes reassigned (aiCacheMigration.ts);
-      // v8 replaces the four per-feature maps with one artifact map.
-      version: 8,
+      // v8 replaces the four per-feature maps with one artifact map; v9 renames vocab
+      // notes whose uids moved (core expressions, vocab dedupe).
+      version: 9,
       partialize: (state) => ({ artifacts: state.artifacts }),
       migrate: (persisted, version) => migrateAiCache(persisted, version) as unknown as AiArtifactState,
     }

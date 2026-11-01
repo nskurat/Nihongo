@@ -5677,21 +5677,12 @@
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
-      "word": "さようなら",
-      "reading": "さようなら",
-      "meaning": "good-bye"
-    },
-    {
-      "uid": "n2-vocab-11-20",
-      "level": "N2",
-      "section": "vocab",
-      "lesson": 11,
       "word": "しっぽ",
       "reading": "しっぽ",
       "meaning": "tail (animal)"
     },
     {
-      "uid": "n2-vocab-11-21",
+      "uid": "n2-vocab-11-20",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5700,7 +5691,7 @@
       "meaning": "national holiday"
     },
     {
-      "uid": "n2-vocab-11-22",
+      "uid": "n2-vocab-11-21",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5709,7 +5700,7 @@
       "meaning": "acquaintance"
     },
     {
-      "uid": "n2-vocab-11-23",
+      "uid": "n2-vocab-11-22",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5718,7 +5709,7 @@
       "meaning": "practical use, utility"
     },
     {
-      "uid": "n2-vocab-11-24",
+      "uid": "n2-vocab-11-23",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5727,7 +5718,7 @@
       "meaning": "presumption, assumption, estimation"
     },
     {
-      "uid": "n2-vocab-11-25",
+      "uid": "n2-vocab-11-24",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5736,7 +5727,7 @@
       "meaning": "in a line, in a row"
     },
     {
-      "uid": "n2-vocab-11-26",
+      "uid": "n2-vocab-11-25",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5745,7 +5736,7 @@
       "meaning": "ancestor"
     },
     {
-      "uid": "n2-vocab-11-27",
+      "uid": "n2-vocab-11-26",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5754,7 +5745,7 @@
       "meaning": "measurement"
     },
     {
-      "uid": "n2-vocab-11-28",
+      "uid": "n2-vocab-11-27",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5763,7 +5754,7 @@
       "meaning": "hence, for that reason"
     },
     {
-      "uid": "n2-vocab-11-29",
+      "uid": "n2-vocab-11-28",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5772,7 +5763,7 @@
       "meaning": "to fold (e.g., clothes, umbrella)"
     },
     {
-      "uid": "n2-vocab-11-30",
+      "uid": "n2-vocab-11-29",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5781,7 +5772,7 @@
       "meaning": "gradation, grade, stage"
     },
     {
-      "uid": "n2-vocab-11-31",
+      "uid": "n2-vocab-11-30",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5790,7 +5781,7 @@
       "meaning": "area, zone"
     },
     {
-      "uid": "n2-vocab-11-32",
+      "uid": "n2-vocab-11-31",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5799,7 +5790,7 @@
       "meaning": "regulation, adjustment, control"
     },
     {
-      "uid": "n2-vocab-11-33",
+      "uid": "n2-vocab-11-32",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5808,7 +5799,7 @@
       "meaning": "to follow, to come after, to come next (to)"
     },
     {
-      "uid": "n2-vocab-11-34",
+      "uid": "n2-vocab-11-33",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5817,7 +5808,7 @@
       "meaning": "notebook"
     },
     {
-      "uid": "n2-vocab-11-35",
+      "uid": "n2-vocab-11-34",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5826,7 +5817,7 @@
       "meaning": "electro-magnetic wave"
     },
     {
-      "uid": "n2-vocab-11-36",
+      "uid": "n2-vocab-11-35",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5835,7 +5826,7 @@
       "meaning": "ridge, (mountain) pass, difficult part"
     },
     {
-      "uid": "n2-vocab-11-37",
+      "uid": "n2-vocab-11-36",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5844,7 +5835,7 @@
       "meaning": "the same rank, equality, apposition"
     },
     {
-      "uid": "n2-vocab-11-38",
+      "uid": "n2-vocab-11-37",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5853,7 +5844,7 @@
       "meaning": "impertinent, impudent"
     },
     {
-      "uid": "n2-vocab-11-39",
+      "uid": "n2-vocab-11-38",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5862,7 +5853,7 @@
       "meaning": "sleep-wear, pajamas"
     },
     {
-      "uid": "n2-vocab-11-40",
+      "uid": "n2-vocab-11-39",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5871,7 +5862,7 @@
       "meaning": "to lengthen, to stretch, to reach out, to grow (beard)"
     },
     {
-      "uid": "n2-vocab-11-41",
+      "uid": "n2-vocab-11-40",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5880,7 +5871,7 @@
       "meaning": "to be prolonged"
     },
     {
-      "uid": "n2-vocab-11-42",
+      "uid": "n2-vocab-11-41",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5889,7 +5880,7 @@
       "meaning": "to measure, to weigh, to survey"
     },
     {
-      "uid": "n2-vocab-11-43",
+      "uid": "n2-vocab-11-42",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5898,7 +5889,7 @@
       "meaning": "as was expected, really"
     },
     {
-      "uid": "n2-vocab-11-44",
+      "uid": "n2-vocab-11-43",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5907,7 +5898,7 @@
       "meaning": "shop, stand"
     },
     {
-      "uid": "n2-vocab-11-45",
+      "uid": "n2-vocab-11-44",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5916,7 +5907,7 @@
       "meaning": "for the present, once, for the time being"
     },
     {
-      "uid": "n2-vocab-11-46",
+      "uid": "n2-vocab-11-45",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5925,7 +5916,7 @@
       "meaning": "balloon"
     },
     {
-      "uid": "n2-vocab-11-47",
+      "uid": "n2-vocab-11-46",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5934,7 +5925,7 @@
       "meaning": "irregularity, unsteadiness"
     },
     {
-      "uid": "n2-vocab-11-48",
+      "uid": "n2-vocab-11-47",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5943,7 +5934,7 @@
       "meaning": "water fountain"
     },
     {
-      "uid": "n2-vocab-11-49",
+      "uid": "n2-vocab-11-48",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5952,7 +5943,7 @@
       "meaning": "direction, way"
     },
     {
-      "uid": "n2-vocab-11-50",
+      "uid": "n2-vocab-11-49",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5961,7 +5952,7 @@
       "meaning": "bandage"
     },
     {
-      "uid": "n2-vocab-11-51",
+      "uid": "n2-vocab-11-50",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5970,7 +5961,7 @@
       "meaning": "to bend, to crook, to lean"
     },
     {
-      "uid": "n2-vocab-11-52",
+      "uid": "n2-vocab-11-51",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5979,7 +5970,7 @@
       "meaning": "to overlook, to look down on something"
     },
     {
-      "uid": "n2-vocab-11-53",
+      "uid": "n2-vocab-11-52",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5988,7 +5979,7 @@
       "meaning": "purple color, violet"
     },
     {
-      "uid": "n2-vocab-11-54",
+      "uid": "n2-vocab-11-53",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -5997,7 +5988,7 @@
       "meaning": "sticky rice cake"
     },
     {
-      "uid": "n2-vocab-11-55",
+      "uid": "n2-vocab-11-54",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6006,7 +5997,7 @@
       "meaning": "(sudden) evening shower (rain)"
     },
     {
-      "uid": "n2-vocab-11-56",
+      "uid": "n2-vocab-11-55",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6015,7 +6006,7 @@
       "meaning": "to call out to, to accost, to address (crowd), to appeal"
     },
     {
-      "uid": "n2-vocab-11-57",
+      "uid": "n2-vocab-11-56",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6024,7 +6015,7 @@
       "meaning": "Japanese soup bowl, wooden bowl"
     },
     {
-      "uid": "n2-vocab-11-58",
+      "uid": "n2-vocab-11-57",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6033,7 +6024,7 @@
       "meaning": "cleaning, dry cleaning, laundry service"
     },
     {
-      "uid": "n2-vocab-11-59",
+      "uid": "n2-vocab-11-58",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6042,7 +6033,7 @@
       "meaning": "smart, stylish, slim"
     },
     {
-      "uid": "n2-vocab-11-60",
+      "uid": "n2-vocab-11-59",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -6051,7 +6042,7 @@
       "meaning": "vinyl"
     },
     {
-      "uid": "n2-vocab-11-61",
+      "uid": "n2-vocab-11-60",
       "level": "N2",
       "section": "vocab",
       "lesson": 11,
@@ -9986,21 +9977,12 @@
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
-      "word": "いってらっしゃい",
-      "reading": "いってらっしゃい",
-      "meaning": "see you later, take care (to someone leaving)"
-    },
-    {
-      "uid": "n2-vocab-19-9",
-      "level": "N2",
-      "section": "vocab",
-      "lesson": 19,
       "word": "受け持つ",
       "reading": "うけもつ",
       "meaning": "to take (be in) charge of"
     },
     {
-      "uid": "n2-vocab-19-10",
+      "uid": "n2-vocab-19-9",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10009,7 +9991,7 @@
       "meaning": "sales"
     },
     {
-      "uid": "n2-vocab-19-11",
+      "uid": "n2-vocab-19-10",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10018,7 +10000,7 @@
       "meaning": "about, approximately"
     },
     {
-      "uid": "n2-vocab-19-12",
+      "uid": "n2-vocab-19-11",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10027,7 +10009,7 @@
       "meaning": "outing"
     },
     {
-      "uid": "n2-vocab-19-13",
+      "uid": "n2-vocab-19-12",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10036,7 +10018,7 @@
       "meaning": "meeting hall, assembly hall"
     },
     {
-      "uid": "n2-vocab-19-14",
+      "uid": "n2-vocab-19-13",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10045,7 +10027,7 @@
       "meaning": "sea bathing, seawater bath"
     },
     {
-      "uid": "n2-vocab-19-15",
+      "uid": "n2-vocab-19-14",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10054,7 +10036,7 @@
       "meaning": "probability"
     },
     {
-      "uid": "n2-vocab-19-16",
+      "uid": "n2-vocab-19-15",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10063,7 +10045,7 @@
       "meaning": "parenthesis, brackets"
     },
     {
-      "uid": "n2-vocab-19-17",
+      "uid": "n2-vocab-19-16",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10072,7 +10054,7 @@
       "meaning": "roof tile"
     },
     {
-      "uid": "n2-vocab-19-18",
+      "uid": "n2-vocab-19-17",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10081,7 +10063,7 @@
       "meaning": "locomotive, engine"
     },
     {
-      "uid": "n2-vocab-19-19",
+      "uid": "n2-vocab-19-18",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10090,7 +10072,7 @@
       "meaning": "tightly, fully"
     },
     {
-      "uid": "n2-vocab-19-20",
+      "uid": "n2-vocab-19-19",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10099,7 +10081,7 @@
       "meaning": "repeatedly, sincerely, earnestly"
     },
     {
-      "uid": "n2-vocab-19-21",
+      "uid": "n2-vocab-19-20",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10108,7 +10090,7 @@
       "meaning": "vulgar, indecent, coarse"
     },
     {
-      "uid": "n2-vocab-19-22",
+      "uid": "n2-vocab-19-21",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10117,16 +10099,7 @@
       "meaning": "high class, high grade"
     },
     {
-      "uid": "n2-vocab-19-23",
-      "level": "N2",
-      "section": "vocab",
-      "lesson": 19,
-      "word": "こんばんは",
-      "reading": "こんばんは",
-      "meaning": "good evening"
-    },
-    {
-      "uid": "n2-vocab-19-24",
+      "uid": "n2-vocab-19-22",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10135,7 +10108,7 @@
       "meaning": "creation, preparation, to make"
     },
     {
-      "uid": "n2-vocab-19-25",
+      "uid": "n2-vocab-19-23",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10144,7 +10117,7 @@
       "meaning": "noise (jarring, grating)"
     },
     {
-      "uid": "n2-vocab-19-26",
+      "uid": "n2-vocab-19-24",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10153,7 +10126,7 @@
       "meaning": "deadline"
     },
     {
-      "uid": "n2-vocab-19-27",
+      "uid": "n2-vocab-19-25",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10162,7 +10135,7 @@
       "meaning": "trading company"
     },
     {
-      "uid": "n2-vocab-19-28",
+      "uid": "n2-vocab-19-26",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10171,7 +10144,7 @@
       "meaning": "application, request, petition"
     },
     {
-      "uid": "n2-vocab-19-29",
+      "uid": "n2-vocab-19-27",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10180,7 +10153,7 @@
       "meaning": "serious condition, critical condition"
     },
     {
-      "uid": "n2-vocab-19-30",
+      "uid": "n2-vocab-19-28",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10189,7 +10162,7 @@
       "meaning": "crack, gap, opening"
     },
     {
-      "uid": "n2-vocab-19-31",
+      "uid": "n2-vocab-19-29",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10198,7 +10171,7 @@
       "meaning": "growth (of a plant)"
     },
     {
-      "uid": "n2-vocab-19-32",
+      "uid": "n2-vocab-19-30",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10207,7 +10180,7 @@
       "meaning": "difference, discrepancy, variation"
     },
     {
-      "uid": "n2-vocab-19-33",
+      "uid": "n2-vocab-19-31",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10216,7 +10189,7 @@
       "meaning": "increase, growth"
     },
     {
-      "uid": "n2-vocab-19-34",
+      "uid": "n2-vocab-19-32",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10225,7 +10198,7 @@
       "meaning": "to collect, to gather, to save"
     },
     {
-      "uid": "n2-vocab-19-35",
+      "uid": "n2-vocab-19-33",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10234,7 +10207,7 @@
       "meaning": "geological features"
     },
     {
-      "uid": "n2-vocab-19-36",
+      "uid": "n2-vocab-19-34",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10243,7 +10216,7 @@
       "meaning": "direct connection"
     },
     {
-      "uid": "n2-vocab-19-37",
+      "uid": "n2-vocab-19-35",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10252,7 +10225,7 @@
       "meaning": "to be smashed, to go bankrupt"
     },
     {
-      "uid": "n2-vocab-19-38",
+      "uid": "n2-vocab-19-36",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10261,7 +10234,7 @@
       "meaning": "from one to another"
     },
     {
-      "uid": "n2-vocab-19-39",
+      "uid": "n2-vocab-19-37",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10270,7 +10243,7 @@
       "meaning": "to happen to pass by"
     },
     {
-      "uid": "n2-vocab-19-40",
+      "uid": "n2-vocab-19-38",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10279,7 +10252,7 @@
       "meaning": "fairy tale"
     },
     {
-      "uid": "n2-vocab-19-41",
+      "uid": "n2-vocab-19-39",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10288,7 +10261,7 @@
       "meaning": "porcelain bowl, bowl of rice with food on top"
     },
     {
-      "uid": "n2-vocab-19-42",
+      "uid": "n2-vocab-19-40",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10297,7 +10270,7 @@
       "meaning": "South America"
     },
     {
-      "uid": "n2-vocab-19-43",
+      "uid": "n2-vocab-19-41",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10306,7 +10279,7 @@
       "meaning": "up-train (going to Tokyo), ascent"
     },
     {
-      "uid": "n2-vocab-19-44",
+      "uid": "n2-vocab-19-42",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10315,7 +10288,7 @@
       "meaning": "to accost a person, to talk (to someone)"
     },
     {
-      "uid": "n2-vocab-19-45",
+      "uid": "n2-vocab-19-43",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10324,7 +10297,7 @@
       "meaning": "day trip"
     },
     {
-      "uid": "n2-vocab-19-46",
+      "uid": "n2-vocab-19-44",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10333,7 +10306,7 @@
       "meaning": "sunrise"
     },
     {
-      "uid": "n2-vocab-19-47",
+      "uid": "n2-vocab-19-45",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10342,7 +10315,7 @@
       "meaning": "sign, mark, symbol"
     },
     {
-      "uid": "n2-vocab-19-48",
+      "uid": "n2-vocab-19-46",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10351,7 +10324,7 @@
       "meaning": "to hang, to suspend, to swing"
     },
     {
-      "uid": "n2-vocab-19-49",
+      "uid": "n2-vocab-19-47",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10360,7 +10333,7 @@
       "meaning": "to unfasten"
     },
     {
-      "uid": "n2-vocab-19-50",
+      "uid": "n2-vocab-19-48",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10369,7 +10342,7 @@
       "meaning": "street corner"
     },
     {
-      "uid": "n2-vocab-19-51",
+      "uid": "n2-vocab-19-49",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10378,7 +10351,7 @@
       "meaning": "shameful, indecent"
     },
     {
-      "uid": "n2-vocab-19-52",
+      "uid": "n2-vocab-19-50",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10387,7 +10360,7 @@
       "meaning": "to be blessed with, to be rich in"
     },
     {
-      "uid": "n2-vocab-19-53",
+      "uid": "n2-vocab-19-51",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10396,7 +10369,7 @@
       "meaning": "questions and answers, dialogue"
     },
     {
-      "uid": "n2-vocab-19-54",
+      "uid": "n2-vocab-19-52",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10405,7 +10378,7 @@
       "meaning": "bathrobe, informal summer kimono"
     },
     {
-      "uid": "n2-vocab-19-55",
+      "uid": "n2-vocab-19-53",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10414,7 +10387,7 @@
       "meaning": "loose, lenient, slow"
     },
     {
-      "uid": "n2-vocab-19-56",
+      "uid": "n2-vocab-19-54",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10423,7 +10396,7 @@
       "meaning": "science"
     },
     {
-      "uid": "n2-vocab-19-57",
+      "uid": "n2-vocab-19-55",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10432,7 +10405,7 @@
       "meaning": "interview"
     },
     {
-      "uid": "n2-vocab-19-58",
+      "uid": "n2-vocab-19-56",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10441,7 +10414,7 @@
       "meaning": "chorus"
     },
     {
-      "uid": "n2-vocab-19-59",
+      "uid": "n2-vocab-19-57",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10450,7 +10423,7 @@
       "meaning": "double"
     },
     {
-      "uid": "n2-vocab-19-60",
+      "uid": "n2-vocab-19-58",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,
@@ -10459,7 +10432,7 @@
       "meaning": "brooch"
     },
     {
-      "uid": "n2-vocab-19-61",
+      "uid": "n2-vocab-19-59",
       "level": "N2",
       "section": "vocab",
       "lesson": 19,

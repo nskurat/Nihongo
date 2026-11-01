@@ -66,6 +66,16 @@ export function vocabVariants(raw: string): VocabVariants {
   return { parts, variants: all, hints };
 }
 
+/**
+ * A kana set phrase → its casual short form, which learners type and hear as often
+ * (おはようございます → おはよう, ごちそうさまでした → ごちそうさま, おやすみなさい → おやすみ).
+ * Lets the N5 phrase rank with an exact hit on the short form (regression leftover).
+ */
+export function casualPhraseAlias(surface: string): string | null {
+  const m = /^([ぁ-ゖー]{2,})(ございます|でした|なさい)$/.exec(surface);
+  return m ? m[1] : null;
+}
+
 /** お/ご/御 + kanji noun → the form without the prefix (`お酒` → 酒). Kana-initial おいしい never matches. */
 export function honorificAlias(surface: string): string | null {
   return /^[おご御][一-鿿]/.test(surface) ? surface.slice(1) : null;

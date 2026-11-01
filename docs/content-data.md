@@ -20,9 +20,8 @@ npx tsx scripts/review-n3-kanji-vocab.ts            # repair N3 kanji, append mi
 npx tsx scripts/build-upper-kanji-vocab.ts --level N2   # regenerate N2 kanji + vocab
 npx tsx scripts/build-upper-kanji-vocab.ts --level N1   # regenerate N1 kanji + vocab
 npx tsx scripts/fix-search-data.ts                  # reading fixes that matter for search, JMdict POS markers
-npx tsx scripts/add-core-expressions.ts             # N5 lesson 26 "Core expressions" (greetings, 日本語)
+npx tsx scripts/add-core-expressions.ts             # N5 greetings + 日本語 into lessons 1, 3 and 7
 npx tsx scripts/dedupe-vocab.ts                     # drop the same word taught twice (食べる beside 食べます)
-                                                    # ⚠ see docs/backlog.md §3 before running: it now shifts uids
 npm run validate:data
 ```
 
@@ -119,6 +118,18 @@ Residual known issues (judgment calls, left as is):
 - Waller's N1 list keeps some rare readings that don't collide with a lower form (側 かわ,
   館 たち, 乾 ほし); glosses for 直 なお ("mischief") are odd but sourced.
 - 148 N4 compounds are textbook phrases with null reading/meaning (see validator warnings).
+
+## Core expressions and the second dedupe (2026-11-01)
+
+The search regression (`docs/search/07-regression.md` R8) found 日本語 missing and the N5
+greetings only at N2/N3. `scripts/add-core-expressions.ts` adds 15 teacher-authored rows
+(`scripts/lib/coreExpressions.ts`) to the N5 lessons that teach them in the Minna no Nihongo
+sequence: greetings with the introductions (L1), 日本語 and ごめんなさい with countries and
+すみません (L3), home and visiting expressions (L7). They briefly shipped as a separate lesson
+26; the script moved them and removed it. A dedupe run then dropped the six rows they (and
+行く, now read いく) duplicated: N5 L4 行く (kept: 行きます), N3 こんにちは/ごめんなさい, N2
+こんばんは/さようなら/いってらっしゃい. `store/aiCacheMigration.ts` (v9) renames cached vocab notes
+to the new uids instead of dropping them; a removed row's note moves to its kept twin.
 
 ## Redundant vocab (2026-10-31)
 

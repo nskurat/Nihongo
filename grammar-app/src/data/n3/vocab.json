@@ -838,21 +838,12 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
-      "word": "ごめんなさい",
-      "reading": "ごめんなさい",
-      "meaning": "I beg your pardon, excuse me, I'm sorry"
-    },
-    {
-      "uid": "n3-vocab-1-83",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 1,
       "word": "最高",
       "reading": "さいこう",
       "meaning": "highest, supreme, the most"
     },
     {
-      "uid": "n3-vocab-1-84",
+      "uid": "n3-vocab-1-83",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -861,7 +852,7 @@
       "meaning": "roughly, in round numbers"
     },
     {
-      "uid": "n3-vocab-1-85",
+      "uid": "n3-vocab-1-84",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -870,7 +861,7 @@
       "meaning": "jeans"
     },
     {
-      "uid": "n3-vocab-1-86",
+      "uid": "n3-vocab-1-85",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -879,7 +870,7 @@
       "meaning": "tongue"
     },
     {
-      "uid": "n3-vocab-1-87",
+      "uid": "n3-vocab-1-86",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -888,7 +879,7 @@
       "meaning": "sisters"
     },
     {
-      "uid": "n3-vocab-1-88",
+      "uid": "n3-vocab-1-87",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -897,7 +888,7 @@
       "meaning": "surroundings, circumference, environs"
     },
     {
-      "uid": "n3-vocab-1-89",
+      "uid": "n3-vocab-1-88",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -906,7 +897,7 @@
       "meaning": "lodging"
     },
     {
-      "uid": "n3-vocab-1-90",
+      "uid": "n3-vocab-1-89",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -915,7 +906,7 @@
       "meaning": "small"
     },
     {
-      "uid": "n3-vocab-1-91",
+      "uid": "n3-vocab-1-90",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -924,7 +915,7 @@
       "meaning": "passenger"
     },
     {
-      "uid": "n3-vocab-1-92",
+      "uid": "n3-vocab-1-91",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -933,7 +924,7 @@
       "meaning": "books"
     },
     {
-      "uid": "n3-vocab-1-93",
+      "uid": "n3-vocab-1-92",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -942,7 +933,7 @@
       "meaning": "height (of body), stature"
     },
     {
-      "uid": "n3-vocab-1-94",
+      "uid": "n3-vocab-1-93",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -951,7 +942,7 @@
       "meaning": "figure, shape, appearance"
     },
     {
-      "uid": "n3-vocab-1-95",
+      "uid": "n3-vocab-1-94",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -960,7 +951,7 @@
       "meaning": "(logical) true, regular"
     },
     {
-      "uid": "n3-vocab-1-96",
+      "uid": "n3-vocab-1-95",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -969,7 +960,7 @@
       "meaning": "life"
     },
     {
-      "uid": "n3-vocab-1-97",
+      "uid": "n3-vocab-1-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -978,7 +969,7 @@
       "meaning": "selection, choice"
     },
     {
-      "uid": "n3-vocab-1-98",
+      "uid": "n3-vocab-1-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -987,7 +978,7 @@
       "meaning": "organization; structure; tissue"
     },
     {
-      "uid": "n3-vocab-1-99",
+      "uid": "n3-vocab-1-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -996,7 +987,7 @@
       "meaning": "ambassador"
     },
     {
-      "uid": "n3-vocab-1-100",
+      "uid": "n3-vocab-1-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1005,7 +996,7 @@
       "meaning": "a little (same as 少し (すこし))"
     },
     {
-      "uid": "n3-vocab-1-101",
+      "uid": "n3-vocab-1-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1014,7 +1005,7 @@
       "meaning": "often, repeatedly, frequently"
     },
     {
-      "uid": "n3-vocab-1-102",
+      "uid": "n3-vocab-1-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1023,7 +1014,7 @@
       "meaning": "basement, underground"
     },
     {
-      "uid": "n3-vocab-1-103",
+      "uid": "n3-vocab-1-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1032,7 +1023,7 @@
       "meaning": "center, core"
     },
     {
-      "uid": "n3-vocab-1-104",
+      "uid": "n3-vocab-1-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1041,7 +1032,7 @@
       "meaning": "sequel, continuation"
     },
     {
-      "uid": "n3-vocab-1-105",
+      "uid": "n3-vocab-1-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1050,7 +1041,7 @@
       "meaning": "always (same as いつも) (written expression)"
     },
     {
-      "uid": "n3-vocab-1-106",
+      "uid": "n3-vocab-1-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1059,7 +1050,7 @@
       "meaning": "to fit, to suit"
     },
     {
-      "uid": "n3-vocab-1-107",
+      "uid": "n3-vocab-1-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1068,7 +1059,7 @@
       "meaning": "appropriate, adequate, relevance"
     },
     {
-      "uid": "n3-vocab-1-108",
+      "uid": "n3-vocab-1-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1077,7 +1068,7 @@
       "meaning": "applying"
     },
     {
-      "uid": "n3-vocab-1-109",
+      "uid": "n3-vocab-1-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1086,7 +1077,7 @@
       "meaning": "1000 ton"
     },
     {
-      "uid": "n3-vocab-1-110",
+      "uid": "n3-vocab-1-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1095,7 +1086,7 @@
       "meaning": "tear"
     },
     {
-      "uid": "n3-vocab-1-111",
+      "uid": "n3-vocab-1-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1104,7 +1095,7 @@
       "meaning": "ordinary, regular, everyday"
     },
     {
-      "uid": "n3-vocab-1-112",
+      "uid": "n3-vocab-1-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1113,7 +1104,7 @@
       "meaning": "to place on (something), to take on board"
     },
     {
-      "uid": "n3-vocab-1-113",
+      "uid": "n3-vocab-1-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1122,7 +1113,7 @@
       "meaning": "to measure, to weigh, to survey"
     },
     {
-      "uid": "n3-vocab-1-114",
+      "uid": "n3-vocab-1-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1131,7 +1122,7 @@
       "meaning": "work, labor"
     },
     {
-      "uid": "n3-vocab-1-115",
+      "uid": "n3-vocab-1-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1140,7 +1131,7 @@
       "meaning": "extent, scope, range"
     },
     {
-      "uid": "n3-vocab-1-116",
+      "uid": "n3-vocab-1-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1149,7 +1140,7 @@
       "meaning": "emergency, extraordinary, unusual"
     },
     {
-      "uid": "n3-vocab-1-117",
+      "uid": "n3-vocab-1-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1158,7 +1149,7 @@
       "meaning": "flute, whistle"
     },
     {
-      "uid": "n3-vocab-1-118",
+      "uid": "n3-vocab-1-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1167,7 +1158,7 @@
       "meaning": "plus"
     },
     {
-      "uid": "n3-vocab-1-119",
+      "uid": "n3-vocab-1-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1176,7 +1167,7 @@
       "meaning": "gem, jewel"
     },
     {
-      "uid": "n3-vocab-1-120",
+      "uid": "n3-vocab-1-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1185,7 +1176,7 @@
       "meaning": "bone"
     },
     {
-      "uid": "n3-vocab-1-121",
+      "uid": "n3-vocab-1-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1194,7 +1185,7 @@
       "meaning": "mistake"
     },
     {
-      "uid": "n3-vocab-1-122",
+      "uid": "n3-vocab-1-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1203,7 +1194,7 @@
       "meaning": "souvenir"
     },
     {
-      "uid": "n3-vocab-1-123",
+      "uid": "n3-vocab-1-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1212,7 +1203,7 @@
       "meaning": "to order, to command, to appoint"
     },
     {
-      "uid": "n3-vocab-1-124",
+      "uid": "n3-vocab-1-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1221,7 +1212,7 @@
       "meaning": "order, command, decree"
     },
     {
-      "uid": "n3-vocab-1-125",
+      "uid": "n3-vocab-1-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1230,7 +1221,7 @@
       "meaning": "in a word, after all, in short …"
     },
     {
-      "uid": "n3-vocab-1-126",
+      "uid": "n3-vocab-1-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1239,7 +1230,7 @@
       "meaning": "(hon) good, OK, all right, fine, very well, will do, may, can"
     },
     {
-      "uid": "n3-vocab-1-127",
+      "uid": "n3-vocab-1-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -1248,7 +1239,7 @@
       "meaning": "wine"
     },
     {
-      "uid": "n3-vocab-1-128",
+      "uid": "n3-vocab-1-127",
       "level": "N3",
       "section": "vocab",
       "lesson": 1,
@@ -13761,21 +13752,12 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
-      "word": "こんにちは",
-      "reading": "こんにちは",
-      "meaning": "hello, good day (daytime greeting)"
-    },
-    {
-      "uid": "n3-vocab-11-85",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 11,
       "word": "叫ぶ",
       "reading": "さけぶ",
       "meaning": "to shout, to cry"
     },
     {
-      "uid": "n3-vocab-11-86",
+      "uid": "n3-vocab-11-85",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13784,7 +13766,7 @@
       "meaning": "uproar, disturbance"
     },
     {
-      "uid": "n3-vocab-11-87",
+      "uid": "n3-vocab-11-86",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13793,7 +13775,7 @@
       "meaning": "stimulus, impetus, incentive"
     },
     {
-      "uid": "n3-vocab-11-88",
+      "uid": "n3-vocab-11-87",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13802,7 +13784,7 @@
       "meaning": "automatic, self-motion"
     },
     {
-      "uid": "n3-vocab-11-89",
+      "uid": "n3-vocab-11-88",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13811,7 +13793,7 @@
       "meaning": "debt, loan, liabilities"
     },
     {
-      "uid": "n3-vocab-11-90",
+      "uid": "n3-vocab-11-89",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13820,7 +13802,7 @@
       "meaning": "resident, housing"
     },
     {
-      "uid": "n3-vocab-11-91",
+      "uid": "n3-vocab-11-90",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13829,7 +13811,7 @@
       "meaning": "Prime Minister"
     },
     {
-      "uid": "n3-vocab-11-92",
+      "uid": "n3-vocab-11-91",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13838,7 +13820,7 @@
       "meaning": "a little; short (time) (formal for 少し (すこし))"
     },
     {
-      "uid": "n3-vocab-11-93",
+      "uid": "n3-vocab-11-92",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13847,7 +13829,7 @@
       "meaning": "food, foodstuff"
     },
     {
-      "uid": "n3-vocab-11-94",
+      "uid": "n3-vocab-11-93",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13856,7 +13838,7 @@
       "meaning": "relative(s)"
     },
     {
-      "uid": "n3-vocab-11-95",
+      "uid": "n3-vocab-11-94",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13865,7 +13847,7 @@
       "meaning": "level, standard"
     },
     {
-      "uid": "n3-vocab-11-96",
+      "uid": "n3-vocab-11-95",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13874,7 +13856,7 @@
       "meaning": "stand"
     },
     {
-      "uid": "n3-vocab-11-97",
+      "uid": "n3-vocab-11-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13883,7 +13865,7 @@
       "meaning": "luxury, extravagance"
     },
     {
-      "uid": "n3-vocab-11-98",
+      "uid": "n3-vocab-11-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13892,7 +13874,7 @@
       "meaning": "good, virtue"
     },
     {
-      "uid": "n3-vocab-11-99",
+      "uid": "n3-vocab-11-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13901,7 +13883,7 @@
       "meaning": "to pour (into)"
     },
     {
-      "uid": "n3-vocab-11-100",
+      "uid": "n3-vocab-11-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13910,7 +13892,7 @@
       "meaning": "big, great"
     },
     {
-      "uid": "n3-vocab-11-101",
+      "uid": "n3-vocab-11-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13919,7 +13901,7 @@
       "meaning": "(railway) schedule; diamond"
     },
     {
-      "uid": "n3-vocab-11-102",
+      "uid": "n3-vocab-11-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13928,7 +13910,7 @@
       "meaning": "to stand up"
     },
     {
-      "uid": "n3-vocab-11-103",
+      "uid": "n3-vocab-11-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13937,7 +13919,7 @@
       "meaning": "step, stair, grade"
     },
     {
-      "uid": "n3-vocab-11-104",
+      "uid": "n3-vocab-11-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13946,7 +13928,7 @@
       "meaning": "medium, average; during, in the middle of"
     },
     {
-      "uid": "n3-vocab-11-105",
+      "uid": "n3-vocab-11-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13955,7 +13937,7 @@
       "meaning": "commuting to school"
     },
     {
-      "uid": "n3-vocab-11-106",
+      "uid": "n3-vocab-11-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13964,7 +13946,7 @@
       "meaning": "painful, heart-breaking"
     },
     {
-      "uid": "n3-vocab-11-107",
+      "uid": "n3-vocab-11-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13973,7 +13955,7 @@
       "meaning": "iron"
     },
     {
-      "uid": "n3-vocab-11-108",
+      "uid": "n3-vocab-11-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13982,7 +13964,7 @@
       "meaning": "weather"
     },
     {
-      "uid": "n3-vocab-11-109",
+      "uid": "n3-vocab-11-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -13991,7 +13973,7 @@
       "meaning": "independence (e.g., Ind. Day), self-support"
     },
     {
-      "uid": "n3-vocab-11-110",
+      "uid": "n3-vocab-11-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14000,7 +13982,7 @@
       "meaning": "Saturday"
     },
     {
-      "uid": "n3-vocab-11-111",
+      "uid": "n3-vocab-11-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14009,7 +13991,7 @@
       "meaning": "subject, contents, detail"
     },
     {
-      "uid": "n3-vocab-11-112",
+      "uid": "n3-vocab-11-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14018,7 +14000,7 @@
       "meaning": "to grasp, to seize, to mold sushi"
     },
     {
-      "uid": "n3-vocab-11-113",
+      "uid": "n3-vocab-11-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14027,7 +14009,7 @@
       "meaning": "sunlight"
     },
     {
-      "uid": "n3-vocab-11-114",
+      "uid": "n3-vocab-11-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14036,7 +14018,7 @@
       "meaning": "value, price, cost"
     },
     {
-      "uid": "n3-vocab-11-115",
+      "uid": "n3-vocab-11-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14045,7 +14027,7 @@
       "meaning": "path, pass (in games)"
     },
     {
-      "uid": "n3-vocab-11-116",
+      "uid": "n3-vocab-11-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14054,7 +14036,7 @@
       "meaning": "to part, to separate"
     },
     {
-      "uid": "n3-vocab-11-117",
+      "uid": "n3-vocab-11-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14063,7 +14045,7 @@
       "meaning": "field, plain"
     },
     {
-      "uid": "n3-vocab-11-118",
+      "uid": "n3-vocab-11-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14072,7 +14054,7 @@
       "meaning": "bottle"
     },
     {
-      "uid": "n3-vocab-11-119",
+      "uid": "n3-vocab-11-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14081,7 +14063,7 @@
       "meaning": "stage (theater)"
     },
     {
-      "uid": "n3-vocab-11-120",
+      "uid": "n3-vocab-11-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14090,7 +14072,7 @@
       "meaning": "to decrease (in size or number), to diminish"
     },
     {
-      "uid": "n3-vocab-11-121",
+      "uid": "n3-vocab-11-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14099,7 +14081,7 @@
       "meaning": "ball; bowl"
     },
     {
-      "uid": "n3-vocab-11-122",
+      "uid": "n3-vocab-11-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14108,7 +14090,7 @@
       "meaning": "space, room, pause"
     },
     {
-      "uid": "n3-vocab-11-123",
+      "uid": "n3-vocab-11-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14117,7 +14099,7 @@
       "meaning": "disregard, ignore"
     },
     {
-      "uid": "n3-vocab-11-124",
+      "uid": "n3-vocab-11-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14126,7 +14108,7 @@
       "meaning": "to raise, to lift up, to flatter"
     },
     {
-      "uid": "n3-vocab-11-125",
+      "uid": "n3-vocab-11-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14135,7 +14117,7 @@
       "meaning": "superiority, excellence"
     },
     {
-      "uid": "n3-vocab-11-126",
+      "uid": "n3-vocab-11-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14144,7 +14126,7 @@
       "meaning": "easy, simple, plain"
     },
     {
-      "uid": "n3-vocab-11-127",
+      "uid": "n3-vocab-11-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
@@ -14153,7 +14135,7 @@
       "meaning": "studying abroad"
     },
     {
-      "uid": "n3-vocab-11-128",
+      "uid": "n3-vocab-11-127",
       "level": "N3",
       "section": "vocab",
       "lesson": 11,
