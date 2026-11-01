@@ -1,6 +1,7 @@
 /**
- * Pure migration helpers for the persisted AI cache (useAiCacheStore).
+ * Pure migration helpers for the persisted AI cache (useAiArtifactStore).
  */
+import { ArtifactCache, LegacyAiMaps, fromLegacyMaps } from '../services/ai/artifactCache';
 
 // v5: the N3 kanji review (scripts/review-n3-kanji-vocab.ts) reused these slots, which
 // held kanji already taught in N4/N5 or repeated within N3, for missing N3-list kanji.
@@ -173,4 +174,26 @@ export function withoutShiftedUids<T>(entries: Record<string, T>, firstShifted: 
       return start === undefined || Number(m![2]) < start;
     })
   );
+}
+
+/**
+ * Migrates any persisted AI cache to the v8 shape (one artifact map). v4–v7 keep their
+ * entries, minus the uids later content changes reassigned; anything older starts empty
+ * (its keys were the pre-uid ids, which collide across levels).
+ */
+export function migrateAiCache(persisted: unknown, version: number): { artifacts: ArtifactCache } {
+  if (version >= 8) {
+    const artifacts = (persisted as { artifacts?: ArtifactCache } | undefined)?.artifacts;
+    return { artifacts: artifacts ?? {} };
+  }
+  const maps = persisted as LegacyAiMaps | undefined;
+  if (!maps || version < 4) return { artifacts: {} };
+
+  const mnemonics =
+    version === 4 ? withoutKeys(maps.aiKanjiMnemonics ?? {}, V5_REPLACED_KANJI_UIDS) : maps.aiKanjiMnemonics ?? {};
+  let notes = maps.aiVocabNotes ?? {};
+  if (version < 6) notes = withoutShiftedUids(notes, V6_FIRST_SHIFTED_VOCAB_UIDS);
+  if (version < 7) notes = withoutShiftedUids(notes, V7_FIRST_SHIFTED_VOCAB_UIDS);
+
+  return { artifacts: fromLegacyMaps({ ...maps, aiKanjiMnemonics: mnemonics, aiVocabNotes: notes }) };
 }

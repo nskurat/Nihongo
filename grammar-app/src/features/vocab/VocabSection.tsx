@@ -1,5 +1,6 @@
 import { Sparkles, Loader2, Info } from 'lucide-react';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
+import AiErrorNote from '../../components/common/AiErrorNote';
 import { LevelType } from '../../types/japanese';
 import { useVocab } from './useVocab';
 import { useAppStore } from '../../store/useAppStore';
@@ -27,8 +28,7 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
     error,
     retry,
     handleGenerateVocabHelp,
-    aiVocabNotes,
-    loadingVocabAi,
+    vocabNotes,
   } = useVocab(activeLevel, activeLesson);
   const focus = useFocusItem(!loading, () => setSearchQuery(''));
   useScrollRestore(!loading);
@@ -86,12 +86,12 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
               )}
 
               {/* AI Explanation Note if it exists */}
-              {aiVocabNotes[item.uid] && (
+              {vocabNotes.get(item.uid) && (
                 <div className="mt-4 bg-emerald-50/50 p-3 rounded-lg border border-emerald-100 text-xs text-slate-700 animate-fade-in">
                   <div className="font-bold text-emerald-800 mb-1 flex items-center gap-1">
                     <Info size={14} /> Usage Note
                   </div>
-                  <MarkdownViewer content={aiVocabNotes[item.uid]} />
+                  <MarkdownViewer content={vocabNotes.get(item.uid) ?? ''} />
                 </div>
               )}
             </div>
@@ -100,21 +100,26 @@ export default function VocabSection({ activeLevel, activeLesson }: VocabSection
             <div className="bg-slate-50/80 px-4 py-2.5 border-t border-slate-100 flex justify-end">
               <button
                 onClick={() => handleGenerateVocabHelp(item)}
-                disabled={loadingVocabAi[item.uid] || !!aiVocabNotes[item.uid]}
+                disabled={vocabNotes.isLoading(item.uid) || !!vocabNotes.get(item.uid)}
                 className="flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-white hover:bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold transition-colors border border-slate-200 hover:border-emerald-200 disabled:opacity-50 cursor-pointer shadow-2xs"
               >
-                {loadingVocabAi[item.uid] ? (
+                {vocabNotes.isLoading(item.uid) ? (
                   <Loader2 className="animate-spin" size={13} />
                 ) : (
                   <Sparkles size={13} />
                 )}
-                {loadingVocabAi[item.uid]
+                {vocabNotes.isLoading(item.uid)
                   ? 'Thinking...'
-                  : aiVocabNotes[item.uid]
+                  : vocabNotes.get(item.uid)
                   ? 'Note Generated'
                   : 'AI: Explain Usage'}
               </button>
             </div>
+            {vocabNotes.errorOf(item.uid) && (
+              <div className="bg-slate-50/80 px-4 pb-3">
+                <AiErrorNote message={vocabNotes.errorOf(item.uid)} />
+              </div>
+            )}
           </div>
         ))}
       </div>

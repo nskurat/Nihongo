@@ -2,6 +2,7 @@ import { Sparkles, Lightbulb, Loader2, BookOpen, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
+import AiErrorNote from '../../components/common/AiErrorNote';
 import TagBadge from '../../components/common/TagBadge';
 import { LevelType } from '../../types/japanese';
 import { isSectionAvailable } from '../../utils/levels';
@@ -47,10 +48,8 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
     retry,
     handleGenerateExamples,
     handleExplainNuance,
-    generatedExamples,
-    aiExplanations,
-    loadingExamples,
-    loadingExplanations,
+    examples,
+    nuance,
   } = useGrammar(activeLevel, activeLesson);
   const focus = useFocusItem(!loading, () => setSearchQuery(''));
   useScrollRestore(!loading);
@@ -175,13 +174,13 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               )}
 
               {/* AI Generated Sentences if generated */}
-              {generatedExamples[item.uid] && generatedExamples[item.uid].length > 0 && (
+              {(examples.get(item.uid)?.length ?? 0) > 0 && (
                 <div className="space-y-2 pt-2 border-t border-amber-100 animate-fade-in">
                   <h4 className="text-xs font-bold text-amber-700 uppercase tracking-wider flex items-center gap-1">
                     <Sparkles size={13} /> AI Practice Examples
                   </h4>
                   <div className="space-y-2">
-                    {generatedExamples[item.uid].map((ex, idx) => (
+                    {(examples.get(item.uid) ?? []).map((ex, idx) => (
                       <div key={idx} className="bg-amber-50/50 p-2.5 rounded-lg border border-amber-100">
                         <div className="font-bold text-slate-900 text-sm">{ex.jp}</div>
                         {showTranslations && <div className="text-slate-600 text-xs mt-0.5">{ex.en}</div>}
@@ -195,43 +194,44 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
               <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => handleGenerateExamples(item)}
-                  disabled={loadingExamples[item.uid]}
+                  disabled={examples.isLoading(item.uid)}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-semibold transition-colors border border-amber-200/80 disabled:opacity-50 cursor-pointer"
                 >
-                  {loadingExamples[item.uid] ? (
+                  {examples.isLoading(item.uid) ? (
                     <Loader2 className="animate-spin" size={14} />
                   ) : (
                     <Sparkles size={14} />
                   )}
-                  {loadingExamples[item.uid] ? 'Generating...' : 'AI: More Examples'}
+                  {examples.isLoading(item.uid) ? 'Generating...' : 'AI: More Examples'}
                 </button>
 
                 <button
                   onClick={() => handleExplainNuance(item)}
-                  disabled={loadingExplanations[item.uid] || !!aiExplanations[item.uid]}
+                  disabled={nuance.isLoading(item.uid) || !!nuance.get(item.uid)}
                   className="flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg text-xs font-semibold transition-colors border border-indigo-200/80 disabled:opacity-50 cursor-pointer"
                 >
-                  {loadingExplanations[item.uid] ? (
+                  {nuance.isLoading(item.uid) ? (
                     <Loader2 className="animate-spin" size={14} />
                   ) : (
                     <Lightbulb size={14} />
                   )}
-                  {loadingExplanations[item.uid]
+                  {nuance.isLoading(item.uid)
                     ? 'Analyzing...'
-                    : aiExplanations[item.uid]
+                    : nuance.get(item.uid)
                     ? 'Nuance Explained'
                     : 'AI: Explain Nuances'}
                 </button>
               </div>
+              <AiErrorNote message={examples.errorOf(item.uid) ?? nuance.errorOf(item.uid)} />
 
               {/* AI Nuance Explanation Box */}
-              {aiExplanations[item.uid] && (
+              {nuance.get(item.uid) && (
                 <div className="mt-4 bg-gradient-to-r from-indigo-50/70 to-slate-50 p-4 md:p-5 rounded-xl border border-indigo-100 text-slate-700 text-xs md:text-sm leading-relaxed shadow-xs">
                   <h5 className="font-bold flex items-center gap-2 mb-2 text-indigo-900 text-sm">
                     <Lightbulb size={16} className="text-amber-500" />
                     Linguist's Note & Nuance
                   </h5>
-                  <MarkdownViewer content={aiExplanations[item.uid]} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
+                  <MarkdownViewer content={nuance.get(item.uid) ?? ''} className="text-xs md:text-sm text-slate-700 leading-relaxed" />
                 </div>
               )}
             </div>
@@ -248,8 +248,9 @@ export default function GrammarSection({ activeLevel, activeLesson }: GrammarSec
           activeLevel={activeLevel}
           showTranslations={showTranslations}
           onGenerateExplanation={handleExplainNuance}
-          loadingExplanation={loadingExplanations}
-          aiExplanation={aiExplanations}
+          loadingExplanation={nuance.isLoading(selectedDetailItem.uid)}
+          aiExplanation={nuance.get(selectedDetailItem.uid)}
+          explanationError={nuance.errorOf(selectedDetailItem.uid)}
         />
       )}
     </>

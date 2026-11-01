@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
+import { useAiArtifacts } from '../useAiArtifacts';
 import { LevelType, KanjiItem } from '../../types/japanese';
 import { generateKanjiMnemonic } from '../../services/ai/registry';
 import { useContentQuery } from '../useContentQuery';
@@ -39,24 +39,9 @@ export function useKanji(activeLevel: LevelType, activeLesson: number) {
       )
     : currentContent;
 
-  // AI State - the store is keyed by each item's own uid; see useGrammar.ts.
-  const { aiKanjiMnemonics, setKanjiMnemonic } = useAiCacheStore();
-  const { loadingKanjiAi, setLoadingKanjiAi, handleApiError } = useAiUiStore();
-
-  const handleGenerateKanjiMnemonic = async (kanjiItem: KanjiItem) => {
-    const uid = kanjiItem.uid;
-    setLoadingKanjiAi(uid, true);
-    try {
-      const text = await generateKanjiMnemonic({ kanji: kanjiItem, level: activeLevel });
-      if (text) {
-        setKanjiMnemonic(uid, text);
-      }
-    } catch (error) {
-      handleApiError(error);
-    } finally {
-      setLoadingKanjiAi(uid, false);
-    }
-  };
+  const mnemonics = useAiArtifacts('kanji-mnemonic');
+  const handleGenerateKanjiMnemonic = (kanjiItem: KanjiItem) =>
+    mnemonics.generate(kanjiItem.uid, () => generateKanjiMnemonic({ kanji: kanjiItem, level: activeLevel }));
 
   return {
     searchQuery,
@@ -69,7 +54,6 @@ export function useKanji(activeLevel: LevelType, activeLesson: number) {
     error,
     retry,
     handleGenerateKanjiMnemonic,
-    aiKanjiMnemonics,
-    loadingKanjiAi,
+    mnemonics,
   };
 }

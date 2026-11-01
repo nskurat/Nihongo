@@ -1,146 +1,77 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { GrammarExampleSentence } from '../services/ai/registry';
-import {
-  V5_REPLACED_KANJI_UIDS,
-  V6_FIRST_SHIFTED_VOCAB_UIDS,
-  V7_FIRST_SHIFTED_VOCAB_UIDS,
-  withoutKeys,
-  withoutShiftedUids,
-} from './aiCacheMigration';
+import { ArtifactCache, ArtifactData, ArtifactKind, putArtifact } from '../services/ai/artifactCache';
+import { AiError, isMissingKey, toAiError } from '../services/ai/errors';
+import { migrateAiCache } from './aiCacheMigration';
 
-// State that should be persisted across sessions (so we don't spam the API)
-interface AiCacheState {
-  generatedExamples: Record<string, GrammarExampleSentence[]>;
-  aiExplanations: Record<string, string>;
-  aiVocabNotes: Record<string, string>;
-  aiKanjiMnemonics: Record<string, string>;
-
-  // Actions
-  addExamples: (id: string, examples: GrammarExampleSentence[]) => void;
-  setExplanation: (id: string, explanation: string) => void;
-  setVocabNote: (id: string, note: string) => void;
-  setKanjiMnemonic: (id: string, mnemonic: string) => void;
+/**
+ * Everything AI has generated for study items, persisted so a paid-for result is never
+ * requested twice. One map for every kind (see services/ai/artifactCache.ts), capped by
+ * entry count and size, least-recently-generated evicted first.
+ */
+interface AiArtifactState {
+  artifacts: ArtifactCache;
+  put: <K extends ArtifactKind>(kind: K, uid: string, data: ArtifactData[K]) => void;
 }
 
-export const useAiCacheStore = create<AiCacheState>()(
+export const useAiArtifactStore = create<AiArtifactState>()(
   persist(
     (set) => ({
-      generatedExamples: {},
-      aiExplanations: {},
-      aiVocabNotes: {},
-      aiKanjiMnemonics: {},
-
-      addExamples: (id, newExamples) =>
-        set((state) => ({
-          generatedExamples: {
-            ...state.generatedExamples,
-            [id]: [...(state.generatedExamples[id] || []), ...newExamples],
-          },
-        })),
-
-      setExplanation: (id, explanation) =>
-        set((state) => ({
-          aiExplanations: { ...state.aiExplanations, [id]: explanation },
-        })),
-
-      setVocabNote: (id, note) =>
-        set((state) => ({
-          aiVocabNotes: { ...state.aiVocabNotes, [id]: note },
-        })),
-
-      setKanjiMnemonic: (id, mnemonic) =>
-        set((state) => ({
-          aiKanjiMnemonics: { ...state.aiKanjiMnemonics, [id]: mnemonic },
-        })),
+      artifacts: {},
+      put: (kind, uid, data) => set((state) => ({ artifacts: putArtifact(state.artifacts, kind, uid, data, Date.now()) })),
     }),
     {
-      name: 'ai-generation-cache', // unique name for localStorage
-      // v1 cached entries by the data's own id, which collides across levels
-      // (N5 and N3 grammar both start at "1-1") - see utils/uid.ts. Cached
-      // text isn't worth migrating; v2 keys are shaped differently anyway,
-      // so a version bump with no old-shape entries just starts empty.
-      // v3: N4 uids were renumbered (n4-grammar-30-1 became n4-grammar-5-1), so
-      // v2 entries would attach cached text to the wrong item.
-      // v4: the level audit moved, dropped and renumbered N3/N4 grammar points, so
-      // v3 entries would do the same.
-      // v5: the N3 kanji review reused 24 kanji slots; only their cached mnemonics
-      // are dropped, so a v4 cache otherwise survives intact.
-      // v6: redundant vocab rows were removed and later uids in those lessons shifted;
-      // only vocab notes under shifted uids are dropped.
-      // v7: cumulative N5/N4 coverage shifted N2/N1 (and one N3) vocab uids; same treatment.
-      version: 7,
-      migrate: (persisted, version) => {
-        const state = persisted as AiCacheState | undefined;
-        if (version >= 4 && version <= 6 && state) {
-          const kanji = version === 4 ? withoutKeys(state.aiKanjiMnemonics ?? {}, V5_REPLACED_KANJI_UIDS) : state.aiKanjiMnemonics ?? {};
-          let notes = state.aiVocabNotes ?? {};
-          if (version < 6) notes = withoutShiftedUids(notes, V6_FIRST_SHIFTED_VOCAB_UIDS);
-          notes = withoutShiftedUids(notes, V7_FIRST_SHIFTED_VOCAB_UIDS);
-          return { ...state, aiKanjiMnemonics: kanji, aiVocabNotes: notes } as AiCacheState;
-        }
-        return {
-          generatedExamples: {},
-          aiExplanations: {},
-          aiVocabNotes: {},
-          aiKanjiMnemonics: {},
-        } as AiCacheState;
-      },
+      // Same key as before: v7 data (four maps) migrates in place, nothing lost.
+      name: 'ai-generation-cache',
+      // v1–v3 keyed by ids that collided across levels or were renumbered (start empty);
+      // v4–v7 survive minus uids later content changes reassigned (aiCacheMigration.ts);
+      // v8 replaces the four per-feature maps with one artifact map.
+      version: 8,
+      partialize: (state) => ({ artifacts: state.artifacts }),
+      migrate: (persisted, version) => migrateAiCache(persisted, version) as unknown as AiArtifactState,
     }
   )
 );
 
-// State for ephemeral data like loading indicators and modal toggles
+/** Ephemeral AI UI state: request status per artifact, the key modal, the last error. */
 interface AiUiState {
-  loadingExamples: Record<string, boolean>;
-  loadingExplanations: Record<string, boolean>;
-  loadingVocabAi: Record<string, boolean>;
-  loadingKanjiAi: Record<string, boolean>;
-  
+  /** artifactKey → a request is in flight. */
+  pending: Record<string, boolean>;
+  /** artifactKey → the last failure (cleared when a retry starts). */
+  errors: Record<string, AiError>;
   showKeyModal: boolean;
   apiError: string;
 
-  // Actions
-  setLoadingExamples: (id: string, loading: boolean) => void;
-  setLoadingExplanations: (id: string, loading: boolean) => void;
-  setLoadingVocabAi: (id: string, loading: boolean) => void;
-  setLoadingKanjiAi: (id: string, loading: boolean) => void;
-  
+  setPending: (key: string, pending: boolean) => void;
+  setError: (key: string, error: AiError | null) => void;
   setShowKeyModal: (show: boolean) => void;
   setApiError: (error: string) => void;
+  /** A missing key opens AI settings; anything else is remembered for the settings modal. */
   handleApiError: (error: unknown) => void;
 }
 
 export const useAiUiStore = create<AiUiState>((set) => ({
-  loadingExamples: {},
-  loadingExplanations: {},
-  loadingVocabAi: {},
-  loadingKanjiAi: {},
+  pending: {},
+  errors: {},
   showKeyModal: false,
   apiError: '',
 
-  setLoadingExamples: (id, loading) =>
-    set((state) => ({ loadingExamples: { ...state.loadingExamples, [id]: loading } })),
-  
-  setLoadingExplanations: (id, loading) =>
-    set((state) => ({ loadingExplanations: { ...state.loadingExplanations, [id]: loading } })),
-  
-  setLoadingVocabAi: (id, loading) =>
-    set((state) => ({ loadingVocabAi: { ...state.loadingVocabAi, [id]: loading } })),
-  
-  setLoadingKanjiAi: (id, loading) =>
-    set((state) => ({ loadingKanjiAi: { ...state.loadingKanjiAi, [id]: loading } })),
-
+  setPending: (key, pending) => set((state) => ({ pending: { ...state.pending, [key]: pending } })),
+  setError: (key, error) =>
+    set((state) => {
+      const errors = { ...state.errors };
+      if (error) errors[key] = error;
+      else delete errors[key];
+      return { errors };
+    }),
   setShowKeyModal: (show) => set({ showKeyModal: show }),
   setApiError: (error) => set({ apiError: error }),
-  
-  // Centralized error handler
+
   handleApiError: (error: unknown) => {
-    const msg = error instanceof Error ? error.message : String(error);
-    if (msg === 'MISSING_KEY') {
+    if (isMissingKey(error)) {
       set({ showKeyModal: true, apiError: '' });
     } else {
-      set({ apiError: msg });
+      set({ apiError: toAiError(error).message });
       console.error('AI Error:', error);
     }
   },

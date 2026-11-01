@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
+import { useAiArtifacts } from '../useAiArtifacts';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
 import { getTagMeta } from '../../utils/tags';
@@ -47,44 +47,21 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
       })
     : currentContent;
 
-  // AI State - the store is keyed by each item's own uid, which is globally
-  // unique, so it's read directly with no remapping.
-  const { generatedExamples, aiExplanations, addExamples, setExplanation } = useAiCacheStore();
-  const { loadingExamples, loadingExplanations, setLoadingExamples, setLoadingExplanations, handleApiError } = useAiUiStore();
+  // AI results, cached per item uid (store/useAiStore.ts). Examples accumulate: each
+  // press asks for new sentences and appends them.
+  const examples = useAiArtifacts('grammar-examples');
+  const nuance = useAiArtifacts('grammar-nuance');
 
-  const handleGenerateExamples = async (grammar: GrammarItem) => {
-    const uid = grammar.uid;
-    setLoadingExamples(uid, true);
-    try {
-      const newExamples = await generateGrammarExamples({
-        grammar,
-        level: activeLevel,
-        previous: generatedExamples[uid] ?? [],
-      });
-      if (newExamples && newExamples.length > 0) {
-        addExamples(uid, newExamples);
-      }
-    } catch (error) {
-      handleApiError(error);
-    } finally {
-      setLoadingExamples(uid, false);
-    }
-  };
+  const handleGenerateExamples = (grammar: GrammarItem) =>
+    examples.generate(grammar.uid, async (current = []) => [
+      ...current,
+      ...(await generateGrammarExamples({ grammar, level: activeLevel, previous: current })),
+    ]);
 
-  const handleExplainNuance = async (grammar: GrammarItem) => {
-    const uid = grammar.uid;
-    setLoadingExplanations(uid, true);
-    try {
-      const text = await generateGrammarNuance({ grammar, level: activeLevel, lessonItems: currentContent });
-      if (text) {
-        setExplanation(uid, text);
-      }
-    } catch (error) {
-      handleApiError(error);
-    } finally {
-      setLoadingExplanations(uid, false);
-    }
-  };
+  const handleExplainNuance = (grammar: GrammarItem) =>
+    nuance.generate(grammar.uid, () =>
+      generateGrammarNuance({ grammar, level: activeLevel, lessonItems: currentContent })
+    );
 
   return {
     searchQuery,
@@ -101,10 +78,7 @@ export function useGrammar(activeLevel: LevelType, activeLesson: number) {
     // AI functions
     handleGenerateExamples,
     handleExplainNuance,
-    // AI state
-    generatedExamples,
-    aiExplanations,
-    loadingExamples,
-    loadingExplanations,
+    examples,
+    nuance,
   };
 }

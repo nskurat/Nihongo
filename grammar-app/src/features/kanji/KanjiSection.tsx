@@ -1,5 +1,6 @@
 import { Sparkles, Loader2, Info, Layers, Hash, Languages, ExternalLink } from 'lucide-react';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
+import AiErrorNote from '../../components/common/AiErrorNote';
 import { LevelType, KanjiCompound } from '../../types/japanese';
 import { useKanji } from './useKanji';
 import { useAppStore } from '../../store/useAppStore';
@@ -27,8 +28,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
     error,
     retry,
     handleGenerateKanjiMnemonic,
-    aiKanjiMnemonics,
-    loadingKanjiAi,
+    mnemonics,
   } = useKanji(activeLevel, activeLesson);
   const focus = useFocusItem(!loading, () => setSearchQuery(''));
   useScrollRestore(!loading);
@@ -113,12 +113,12 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                 </div>
 
                 {/* AI Generated Mnemonic */}
-                {aiKanjiMnemonics[item.uid] && (
+                {mnemonics.get(item.uid) && (
                   <div className="mt-2 bg-rose-50/50 p-3.5 rounded-lg border border-rose-100 text-sm text-slate-700 animate-fade-in shadow-xs mb-4">
                     <div className="font-bold text-rose-800 mb-1.5 flex items-center gap-1.5 text-xs uppercase tracking-wider">
                       <Info size={14} className="text-rose-500" /> Story / Mnemonic Hook
                     </div>
-                    <MarkdownViewer content={aiKanjiMnemonics[item.uid]} />
+                    <MarkdownViewer content={mnemonics.get(item.uid) ?? ''} />
                   </div>
                 )}
               </div>
@@ -127,17 +127,17 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
               <div className="pt-3 border-t border-slate-100 mt-auto flex items-center justify-between">
                 <button
                   onClick={() => handleGenerateKanjiMnemonic(item)}
-                  disabled={loadingKanjiAi[item.uid] || !!aiKanjiMnemonics[item.uid]}
+                  disabled={mnemonics.isLoading(item.uid) || !!mnemonics.get(item.uid)}
                   className="flex items-center gap-1.5 px-3 py-1.5 max-md:min-h-10 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg text-xs font-semibold transition-colors border border-rose-200/80 disabled:opacity-50 cursor-pointer shadow-2xs"
                 >
-                  {loadingKanjiAi[item.uid] ? (
+                  {mnemonics.isLoading(item.uid) ? (
                     <Loader2 className="animate-spin" size={14} />
                   ) : (
                     <Sparkles size={14} />
                   )}
-                  {loadingKanjiAi[item.uid]
+                  {mnemonics.isLoading(item.uid)
                     ? 'Creating Story...'
-                    : aiKanjiMnemonics[item.uid]
+                    : mnemonics.get(item.uid)
                     ? 'Mnemonic Saved'
                     : 'AI: Create Mnemonic Story'}
                 </button>
@@ -152,6 +152,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                   <ExternalLink size={12} />
                 </a>
               </div>
+              <AiErrorNote message={mnemonics.errorOf(item.uid)} />
             </div>
           </div>
         ))}
