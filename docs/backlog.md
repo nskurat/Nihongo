@@ -50,21 +50,12 @@ Decisions to make before writing the spec:
 
 ## 3. Search
 
-The 2026-11-01 browser regression (`docs/search/07-regression.md`) is implemented; what is left:
+The 2026-11-01 browser regression (`docs/search/07-regression.md`) is implemented, leftovers
+included. Nice to have:
 
-- **Duplicate rows after the content additions** — `scripts/dedupe-vocab.ts` (last pipeline
-  step) would now remove 6 rows: 行く N5 L4 (it reads いく now, beside 行きます N5 L5) and the
-  N2/N3 copies of the new N5 core expressions (こんにちは N3 L11, こんばんは N2 L19, さようなら
-  N2 L11, いってらっしゃい N2 L19, ごめんなさい N3 L1). That shifts positional uids in 5 lessons,
-  so it needs an AI-cache migration like `store/aiCacheMigration.ts` v6 first; until then search
-  collapses each pair into one row with two badges. Do not run the full pipeline before that.
-- **N5 lesson 26 is vocab-only** — switching to Grammar or Kanji on `/n5/*/26` shows the
-  "being prepared" empty state; a lesson-aware tab switch (fall back to the section's last
-  lesson) would avoid it.
-- **Small ranking leftovers** — `おはよう` lists the N2 abbreviation (exact) above
-  おはようございます N5 L26 (prefix); `want` keeps "Word(s) ですか" in its grammar top 4 (its
-  gloss uses "wants").
-- **Nice to have** — radical filter (teacher F13); respelling 斯う/然る (teacher F12).
+- **Radical filter** for kanji search (teacher F13).
+- **Respellings** 斯う/然る (teacher F12): old kanji spellings of こう/そう that a learner may
+  paste from older texts.
 
 ## 4. Content data
 

@@ -67,7 +67,7 @@ grammar-app/
 ## Constraints
 
 - **Lessons are numbered independently per level**, always from 1, with different
-  maxima: N5 = 1–26 (26 = vocab-only "Core expressions"), N4 = 1–25, N3 = 1–24, N2 = 1–26, N1 = 1–32. Never assume a max. Source of truth:
+  maxima: N5 = 1–25, N4 = 1–25, N3 = 1–24, N2 = 1–26, N1 = 1–32. Never assume a max. Source of truth:
   `utils/levels.ts` (`LESSON_RANGES`, also the single source `scripts/validate-content.ts`
   mirrors). Text cross-references to another level's lesson name it, e.g. "N5 Lesson 23".
 - **`src/data/*.json` is generated content.** Do not hand-edit rows to make code or

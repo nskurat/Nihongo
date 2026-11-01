@@ -472,16 +472,26 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
     expect((await run('すき')).groups.grammar.some((h) => h.title.includes('きる'))).toBe(false);
   });
 
-  it('R7 / R8 / R15 content: 行く reads いく, core expressions at N5, new grammar points', async () => {
+  it('R7 / R8 / R15 content: 行く reads いく, core expressions in N5 lessons 1/3/7, new grammar points', async () => {
     expectTop(await run('iku'), 'vocab', { t: '行く', level: 'N5', lesson: 4 });
-    expectTop(await run('nihongo'), 'vocab', { t: '日本語', level: 'N5', lesson: 26 });
-    expectTop(await run('こんにちは'), 'vocab', { t: 'こんにちは', level: 'N5', lesson: 26 });
+    expectTop(await run('nihongo'), 'vocab', { t: '日本語', level: 'N5', lesson: 3 });
+    expectTop(await run('こんにちは'), 'vocab', { t: 'こんにちは', level: 'N5', lesson: 1 });
+    // The N2/N3 copies were deduped: one row, at N5 only.
+    expect((await run('こんにちは')).groups.vocab.filter((h) => h.title === 'こんにちは')).toHaveLength(1);
     expectTop(await run('わりに'), 'grammar', { t: '〜わりに（は）', level: 'N3' });
     expectTop(await run('なんて'), 'grammar', { t: '〜なんて', level: 'N3' });
     expectContains(await run('なきゃ'), 'grammar', [{ t: 'Vない-formなければ なりません', level: 'N4' }]);
   });
 
-  it('R14 want → the たい point first', async () => {
-    expect((await run('want')).groups.grammar[0].title).toBe('V ます-form たいです');
+  it('R14 want → the たい point first; a gloss match before an explanation-sentence match', async () => {
+    const g = (await run('want')).groups.grammar.map((h) => h.title);
+    expect(g[0]).toBe('V ます-form たいです');
+    expect(g.indexOf('V-て ほしい / V-ないで ほしい')).toBeLessThan(g.indexOf('Word(s) ですか'));
+  });
+
+  it('a set phrase leads its casual short form (おはよう → おはようございます N5)', async () => {
+    for (const [q, top] of [['おはよう', 'おはようございます'], ['ごめん', 'ごめんなさい'], ['おやすみ', 'おやすみなさい']]) {
+      expect((await run(q)).groups.vocab[0].title).toBe(top);
+    }
   });
 });

@@ -426,6 +426,84 @@
       "word": "山",
       "reading": "やま",
       "meaning": "mountain"
+    },
+    {
+      "uid": "n5-vocab-1-44",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "おはようございます",
+      "reading": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "pos": "expression",
+      "meaning": "Good morning",
+      "exampleJp": "先生、おはようございます。",
+      "exampleEn": "Good morning, teacher."
+    },
+    {
+      "uid": "n5-vocab-1-45",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "こんにちは",
+      "reading": "こんにちは",
+      "romaji": "konnichiwa",
+      "pos": "expression",
+      "meaning": "Hello, good afternoon",
+      "exampleJp": "こんにちは。いい 天気ですね。",
+      "exampleEn": "Hello. Nice weather, isn't it?"
+    },
+    {
+      "uid": "n5-vocab-1-46",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "こんばんは",
+      "reading": "こんばんは",
+      "romaji": "konbanwa",
+      "pos": "expression",
+      "meaning": "Good evening",
+      "exampleJp": "こんばんは。今日は 寒いですね。",
+      "exampleEn": "Good evening. It's cold today, isn't it?"
+    },
+    {
+      "uid": "n5-vocab-1-47",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "おやすみなさい",
+      "reading": "おやすみなさい",
+      "romaji": "oyasuminasai",
+      "pos": "expression",
+      "meaning": "Good night",
+      "exampleJp": "もう 寝ます。おやすみなさい。",
+      "exampleEn": "I'm going to bed now. Good night."
+    },
+    {
+      "uid": "n5-vocab-1-48",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "さようなら",
+      "reading": "さようなら",
+      "romaji": "sayounara",
+      "pos": "expression",
+      "meaning": "Goodbye",
+      "exampleJp": "さようなら。また 来週。",
+      "exampleEn": "Goodbye. See you next week."
+    },
+    {
+      "uid": "n5-vocab-1-49",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "お願いします",
+      "reading": "おねがいします",
+      "romaji": "onegai shimasu",
+      "pos": "expression",
+      "meaning": "Please (when asking for something)",
+      "exampleJp": "コーヒーを お願いします。",
+      "exampleEn": "A coffee, please."
     }
   ],
   "2": [
@@ -1266,6 +1344,32 @@
       "word": "本当",
       "reading": "ほんとう",
       "meaning": "real, true"
+    },
+    {
+      "uid": "n5-vocab-3-38",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "日本語",
+      "reading": "にほんご",
+      "romaji": "nihongo",
+      "pos": "noun",
+      "meaning": "Japanese (language)",
+      "exampleJp": "毎日 日本語を 勉強して います。",
+      "exampleEn": "I study Japanese every day."
+    },
+    {
+      "uid": "n5-vocab-3-39",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "ごめんなさい",
+      "reading": "ごめんなさい",
+      "romaji": "gomennasai",
+      "pos": "expression",
+      "meaning": "I'm sorry",
+      "exampleJp": "おそく なって、ごめんなさい。",
+      "exampleEn": "I'm sorry I'm late."
     }
   ],
   "4": [
@@ -1615,21 +1719,12 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
-      "word": "行く",
-      "reading": "いく",
-      "meaning": "to go"
-    },
-    {
-      "uid": "n5-vocab-4-35",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 4,
       "word": "来週",
       "reading": "らいしゅう",
       "meaning": "next week"
     },
     {
-      "uid": "n5-vocab-4-36",
+      "uid": "n5-vocab-4-35",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -1638,7 +1733,7 @@
       "meaning": "next year"
     },
     {
-      "uid": "n5-vocab-4-37",
+      "uid": "n5-vocab-4-36",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -1647,7 +1742,7 @@
       "meaning": "travel, trip"
     },
     {
-      "uid": "n5-vocab-4-38",
+      "uid": "n5-vocab-4-37",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -1656,7 +1751,7 @@
       "meaning": "to understand"
     },
     {
-      "uid": "n5-vocab-4-39",
+      "uid": "n5-vocab-4-38",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -1665,7 +1760,7 @@
       "meaning": "afterwards (later); in the future; the rest; since then"
     },
     {
-      "uid": "n5-vocab-4-40",
+      "uid": "n5-vocab-4-39",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -1674,7 +1769,7 @@
       "meaning": "year after next"
     },
     {
-      "uid": "n5-vocab-4-41",
+      "uid": "n5-vocab-4-40",
       "level": "N5",
       "section": "vocab",
       "lesson": 4,
@@ -2696,6 +2791,97 @@
       "word": "豚肉",
       "reading": "ぶたにく",
       "meaning": "pork"
+    },
+    {
+      "uid": "n5-vocab-7-39",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "いただきます",
+      "reading": "いただきます",
+      "romaji": "itadakimasu",
+      "pos": "expression",
+      "meaning": "(said before eating) Thank you for the food",
+      "exampleJp": "みんなで「いただきます」と 言って、食べました。",
+      "exampleEn": "We all said 'itadakimasu' and ate."
+    },
+    {
+      "uid": "n5-vocab-7-40",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "ごちそうさまでした",
+      "reading": "ごちそうさまでした",
+      "romaji": "gochisousama deshita",
+      "pos": "expression",
+      "meaning": "(said after eating) Thank you for the meal",
+      "exampleJp": "ごちそうさまでした。とても おいしかったです。",
+      "exampleEn": "Thank you for the meal. It was delicious."
+    },
+    {
+      "uid": "n5-vocab-7-41",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "いってきます",
+      "reading": "いってきます",
+      "romaji": "ittekimasu",
+      "pos": "expression",
+      "meaning": "(said when leaving home) I'm off, see you later",
+      "exampleJp": "「いってきます。」「いってらっしゃい。」",
+      "exampleEn": "\"I'm off.\" \"See you later.\""
+    },
+    {
+      "uid": "n5-vocab-7-42",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "いってらっしゃい",
+      "reading": "いってらっしゃい",
+      "romaji": "itterasshai",
+      "pos": "expression",
+      "meaning": "(said to someone leaving home) See you later, take care",
+      "exampleJp": "母は 毎朝「いってらっしゃい」と 言います。",
+      "exampleEn": "My mother says 'itterasshai' every morning."
+    },
+    {
+      "uid": "n5-vocab-7-43",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "ただいま",
+      "reading": "ただいま",
+      "romaji": "tadaima",
+      "pos": "expression",
+      "meaning": "(said on coming home) I'm home",
+      "exampleJp": "ただいま。おなかが すきました。",
+      "exampleEn": "I'm home. I'm hungry."
+    },
+    {
+      "uid": "n5-vocab-7-44",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "おかえりなさい",
+      "reading": "おかえりなさい",
+      "romaji": "okaerinasai",
+      "pos": "expression",
+      "meaning": "(said to someone coming home) Welcome home",
+      "exampleJp": "おかえりなさい。ごはんが できて いますよ。",
+      "exampleEn": "Welcome home. Dinner is ready."
+    },
+    {
+      "uid": "n5-vocab-7-45",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "失礼します",
+      "reading": "しつれいします",
+      "romaji": "shitsurei shimasu",
+      "pos": "expression",
+      "meaning": "Excuse me (when entering or leaving a room)",
+      "exampleJp": "「失礼します。」と 言って、部屋に 入りました。",
+      "exampleEn": "I said 'excuse me' and went into the room."
     }
   ],
   "8": [
@@ -8149,203 +8335,6 @@
       "word": "灰皿",
       "reading": "はいざら",
       "meaning": "ashtray"
-    }
-  ],
-  "26": [
-    {
-      "uid": "n5-vocab-26-1",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "日本語",
-      "reading": "にほんご",
-      "romaji": "nihongo",
-      "pos": "noun",
-      "meaning": "Japanese (language)",
-      "exampleJp": "毎日 日本語を 勉強して います。",
-      "exampleEn": "I study Japanese every day."
-    },
-    {
-      "uid": "n5-vocab-26-2",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "おはようございます",
-      "reading": "おはようございます",
-      "romaji": "ohayou gozaimasu",
-      "pos": "expression",
-      "meaning": "Good morning",
-      "exampleJp": "先生、おはようございます。",
-      "exampleEn": "Good morning, teacher."
-    },
-    {
-      "uid": "n5-vocab-26-3",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "こんにちは",
-      "reading": "こんにちは",
-      "romaji": "konnichiwa",
-      "pos": "expression",
-      "meaning": "Hello, good afternoon",
-      "exampleJp": "こんにちは。いい 天気ですね。",
-      "exampleEn": "Hello. Nice weather, isn't it?"
-    },
-    {
-      "uid": "n5-vocab-26-4",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "こんばんは",
-      "reading": "こんばんは",
-      "romaji": "konbanwa",
-      "pos": "expression",
-      "meaning": "Good evening",
-      "exampleJp": "こんばんは。今日は 寒いですね。",
-      "exampleEn": "Good evening. It's cold today, isn't it?"
-    },
-    {
-      "uid": "n5-vocab-26-5",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "おやすみなさい",
-      "reading": "おやすみなさい",
-      "romaji": "oyasuminasai",
-      "pos": "expression",
-      "meaning": "Good night",
-      "exampleJp": "もう 寝ます。おやすみなさい。",
-      "exampleEn": "I'm going to bed now. Good night."
-    },
-    {
-      "uid": "n5-vocab-26-6",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "さようなら",
-      "reading": "さようなら",
-      "romaji": "sayounara",
-      "pos": "expression",
-      "meaning": "Goodbye",
-      "exampleJp": "さようなら。また 来週。",
-      "exampleEn": "Goodbye. See you next week."
-    },
-    {
-      "uid": "n5-vocab-26-7",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "いただきます",
-      "reading": "いただきます",
-      "romaji": "itadakimasu",
-      "pos": "expression",
-      "meaning": "(said before eating) Thank you for the food",
-      "exampleJp": "みんなで「いただきます」と 言って、食べました。",
-      "exampleEn": "We all said 'itadakimasu' and ate."
-    },
-    {
-      "uid": "n5-vocab-26-8",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "ごちそうさまでした",
-      "reading": "ごちそうさまでした",
-      "romaji": "gochisousama deshita",
-      "pos": "expression",
-      "meaning": "(said after eating) Thank you for the meal",
-      "exampleJp": "ごちそうさまでした。とても おいしかったです。",
-      "exampleEn": "Thank you for the meal. It was delicious."
-    },
-    {
-      "uid": "n5-vocab-26-9",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "いってきます",
-      "reading": "いってきます",
-      "romaji": "ittekimasu",
-      "pos": "expression",
-      "meaning": "(said when leaving home) I'm off, see you later",
-      "exampleJp": "「いってきます。」「いってらっしゃい。」",
-      "exampleEn": "\"I'm off.\" \"See you later.\""
-    },
-    {
-      "uid": "n5-vocab-26-10",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "いってらっしゃい",
-      "reading": "いってらっしゃい",
-      "romaji": "itterasshai",
-      "pos": "expression",
-      "meaning": "(said to someone leaving home) See you later, take care",
-      "exampleJp": "母は 毎朝「いってらっしゃい」と 言います。",
-      "exampleEn": "My mother says 'itterasshai' every morning."
-    },
-    {
-      "uid": "n5-vocab-26-11",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "ただいま",
-      "reading": "ただいま",
-      "romaji": "tadaima",
-      "pos": "expression",
-      "meaning": "(said on coming home) I'm home",
-      "exampleJp": "ただいま。おなかが すきました。",
-      "exampleEn": "I'm home. I'm hungry."
-    },
-    {
-      "uid": "n5-vocab-26-12",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "おかえりなさい",
-      "reading": "おかえりなさい",
-      "romaji": "okaerinasai",
-      "pos": "expression",
-      "meaning": "(said to someone coming home) Welcome home",
-      "exampleJp": "おかえりなさい。ごはんが できて いますよ。",
-      "exampleEn": "Welcome home. Dinner is ready."
-    },
-    {
-      "uid": "n5-vocab-26-13",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "ごめんなさい",
-      "reading": "ごめんなさい",
-      "romaji": "gomennasai",
-      "pos": "expression",
-      "meaning": "I'm sorry",
-      "exampleJp": "おそく なって、ごめんなさい。",
-      "exampleEn": "I'm sorry I'm late."
-    },
-    {
-      "uid": "n5-vocab-26-14",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "失礼します",
-      "reading": "しつれいします",
-      "romaji": "shitsurei shimasu",
-      "pos": "expression",
-      "meaning": "Excuse me (when entering or leaving a room)",
-      "exampleJp": "「失礼します。」と 言って、部屋に 入りました。",
-      "exampleEn": "I said 'excuse me' and went into the room."
-    },
-    {
-      "uid": "n5-vocab-26-15",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 26,
-      "word": "お願いします",
-      "reading": "おねがいします",
-      "romaji": "onegai shimasu",
-      "pos": "expression",
-      "meaning": "Please (when asking for something)",
-      "exampleJp": "コーヒーを お願いします。",
-      "exampleEn": "A coffee, please."
     }
   ]
 }

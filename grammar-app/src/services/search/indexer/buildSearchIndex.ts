@@ -4,7 +4,7 @@ import { OKURIGANA_PAIRS } from '../aliases';
 import { enTokens } from '../english';
 import { grammarKeys } from '../keys/grammarKeys';
 import { isMasuExpression, masuToDict, type MasuRule } from '../keys/masuToDict';
-import { honorificAlias, vocabVariants } from '../keys/vocabVariants';
+import { casualPhraseAlias, honorificAlias, vocabVariants } from '../keys/vocabVariants';
 import { defaultClassOf, dictClass, masuRuleClass, mergeClasses, posClass } from '../keys/wordClass';
 import { key } from '../normalize';
 import {
@@ -176,6 +176,8 @@ export function buildSearchIndex(content: SearchContent, contentHash = 'dev'): S
         if (/^[おご]/.test(r0)) addAlias(r0.slice(1));
       }
       for (const w of [...wv.variants, ...lemmas]) for (const other of okurigana.get(w) ?? []) addAlias(other);
+      const casual = casualPhraseAlias(first);
+      if (casual) addAlias(casual);
       if (aliases.length) extra.a = aliases;
 
       docs.push(Object.keys(extra).length ? [v.uid, v.word, v.reading, v.meaning, extra] : [v.uid, v.word, v.reading, v.meaning]);
