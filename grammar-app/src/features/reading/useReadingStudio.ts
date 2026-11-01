@@ -18,6 +18,7 @@ import {
 import { LevelType } from '../../types/japanese';
 import { ActiveReadings, ReadingHistoryEntry, ReadingProgress } from '../../types/ai';
 import { useAiUiStore } from '../../store/useAiStore';
+import { isMissingKey } from '../../services/ai/errors';
 import { useReadingData } from './useReadingData';
 
 export const PRESET_TOPICS = [
@@ -209,7 +210,7 @@ export function useReadingStudio(activeLevel: LevelType) {
       setSavedHistory(updatedHistory);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
-      if (msg === 'MISSING_KEY') {
+      if (isMissingKey(err)) {
         setShowKeyModal(true);
       } else {
         setError({ level, message: msg || 'Failed to generate reading practice.' });

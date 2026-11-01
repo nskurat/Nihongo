@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { blockedFetch, NETWORK_BLOCKED } from '../setup.node';
-import { executeAiPrompt, setStoredApiKey } from '../../services/ai/registry';
+import { executeAiPrompt, retryPolicy, setStoredApiKey } from '../../services/ai/registry';
 
 const memoryStorage = () => {
   const data = new Map<string, string>();
@@ -25,8 +25,11 @@ describe('network guard', () => {
     vi.stubGlobal('localStorage', memoryStorage());
     setStoredApiKey('gemini', 'test-key-not-real');
 
-    await expect(executeAiPrompt('こんにちは')).rejects.toThrow();
-    expect(blockedFetch).toHaveBeenCalledTimes(1);
+    retryPolicy.delayMs = 0;
+    // A blocked fetch reads as a network failure, which gets its one retry: two attempts,
+    // both stopped here, and the caller sees a typed network error.
+    await expect(executeAiPrompt('こんにちは')).rejects.toMatchObject({ name: 'AiError', kind: 'network' });
+    expect(blockedFetch).toHaveBeenCalledTimes(2);
     expect(String(blockedFetch.mock.calls[0][0])).toContain('generativelanguage.googleapis.com');
     expect(blockedFetch.mock.results[0].type).toBe('throw');
   });

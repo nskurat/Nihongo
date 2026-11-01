@@ -5,6 +5,7 @@ import { openaiProvider } from './providers/openai';
 import { anthropicProvider } from './providers/anthropic';
 import { buildReadingPracticePrompt, BuildReadingPromptParams } from './promptBuilder';
 import { parseReadingResponse } from './readingParser';
+import { AiError, missingKeyError, parseReply, toAiError } from './errors';
 import {
   GrammarExampleSentence,
   cleanMarkdownNote,
@@ -118,15 +119,28 @@ export async function executeAiPrompt(prompt: string, options: ExecuteAiPromptOp
   const model = promptOptions.model || getStoredModel(id);
 
   if (provider.requiresKey && !apiKey) {
-    throw new Error('MISSING_KEY');
+    throw missingKeyError();
   }
 
-  return await provider.executePrompt(prompt, {
-    ...promptOptions,
-    apiKey,
-    model,
-  });
+  const call = () => provider.executePrompt(prompt, { ...promptOptions, apiKey, model });
+  try {
+    return await call();
+  } catch (first) {
+    const err = toAiError(first);
+    // One retry for failures that may pass on their own (429, 5xx, network); a second
+    // failure is reported. Auth and bad replies would only fail - and bill - again.
+    if (!err.retryable) throw err;
+    await new Promise((resolve) => setTimeout(resolve, retryPolicy.delayMs));
+    try {
+      return await call();
+    } catch (second) {
+      throw toAiError(second);
+    }
+  }
 }
+
+/** Wait before the single retry. Tests set it to 0. */
+export const retryPolicy = { delayMs: 1500 };
 
 // -------------------------------------------------------------
 // High-Level Domain Services
@@ -146,7 +160,12 @@ export async function generateGrammarExamples({
 }): Promise<GrammarExampleSentence[]> {
   const { prompt, known } = grammarExamplesPromptFor(grammar, level, previous);
   const text = await executeAiPrompt(prompt, { responseFormat: 'json' });
-  return parseGrammarExamples(text, known);
+  const examples = parseReply(() => parseGrammarExamples(text, known));
+  if (examples.length === 0) {
+    // Paid for but nothing to show: say so rather than silently adding nothing.
+    throw new AiError('bad-response', 'The reply had no usable example sentences.');
+  }
+  return examples;
 }
 
 export async function generateGrammarNuance({
@@ -188,5 +207,5 @@ export async function generateKanjiMnemonic({
 export async function generateReadingPractice(params: BuildReadingPromptParams): Promise<ReadingPracticeData> {
   const prompt = buildReadingPracticePrompt(params);
   const rawText = await executeAiPrompt(prompt, { responseFormat: 'json' });
-  return parseReadingResponse(rawText);
+  return parseReply(() => parseReadingResponse(rawText));
 }

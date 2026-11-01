@@ -1,5 +1,9 @@
 import { AiProvider, AiPromptOptions } from '../../../types/ai';
+import { missingKeyError, requestJson } from '../errors';
 import { MODEL_CATALOG, getDefaultModelId, toModelOptions } from '../modelCatalog';
+
+/** The part of a generateContent reply this app reads. */
+type ProviderReply = { candidates?: { content?: { parts?: { text?: string }[] } }[] };
 
 // The floating alias never goes stale: Google moves it to the newest stable Flash.
 const models = toModelOptions(MODEL_CATALOG.providers.gemini, 'gemini-flash-latest');
@@ -17,7 +21,7 @@ export const geminiProvider: AiProvider = {
     const { apiKey, model = DEFAULT_MODEL } = options;
 
     if (!apiKey) {
-      throw new Error('MISSING_KEY');
+      throw missingKeyError();
     }
 
     // The key travels in a header, not the query string, so it stays out of URLs and logs.
@@ -31,18 +35,11 @@ export const geminiProvider: AiProvider = {
       payload.generationConfig = { responseMimeType: 'application/json' };
     }
 
-    const res = await fetch(endpoint, {
+    const data = (await requestJson('Gemini', endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
       body: JSON.stringify(payload),
-    });
-
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      throw new Error(errData.error?.message || `Gemini API returned status ${res.status}`);
-    }
-
-    const data = await res.json();
+    })) as ProviderReply;
     return data.candidates?.[0]?.content?.parts?.[0]?.text || '';
   },
 };
