@@ -29,7 +29,10 @@ function matchesQuery(item: StudyItem, query: string): boolean {
  * pair is its own lazily-imported chunk (`import.meta.glob`), so switching
  * level or section fetches exactly one new file and switching back fetches
  * none - the in-flight promise itself is the cache entry, so concurrent
- * callers for the same chunk share one request.
+ * callers for the same chunk share one request. A failed load is evicted so a
+ * new attempt is possible, but in a browser the failed `import()` itself is
+ * remembered by the module map until reload - which is why the sections' Retry
+ * reloads the page for 'load-failed' (components/layout/SectionLayout.tsx).
  */
 export class StaticContentSource extends BaseContentSource {
   private modules: Record<string, ChunkImporter>;
