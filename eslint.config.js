@@ -23,4 +23,19 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Omitting fields by destructuring them into `_name` and keeping `...rest` is
+    // the idiom the content scripts use; only that shape is exempt.
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { ignoreRestSiblings: true, varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+      ],
+    },
+  },
+  {
+    // Test helpers mix components and functions; fast refresh never loads them.
+    files: ['grammar-app/src/test/**', '**/__tests__/**', '**/*.test.{ts,tsx}'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+  },
 ]);

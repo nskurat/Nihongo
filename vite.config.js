@@ -30,7 +30,35 @@ export default defineConfig(({ command, isPreview }) => {
     },
     test: {
       globals: true,
-      environment: 'node',
+      // Split by file type, not folder: pure-logic tests (`*.test.ts`, including the
+      // ones under features/) stay on the fast node project; rendered component
+      // tests (`*.test.tsx`) get a DOM.
+      projects: [
+        {
+          extends: true,
+          test: {
+            name: 'node',
+            environment: 'node',
+            include: ['src/**/*.test.ts'],
+            setupFiles: ['src/test/setup.node.ts'],
+          },
+        },
+        {
+          extends: true,
+          test: {
+            name: 'jsdom',
+            environment: 'jsdom',
+            include: ['src/**/*.test.tsx'],
+            setupFiles: ['src/test/setup.node.ts', 'src/test/setup.dom.ts'],
+          },
+        },
+      ],
+      coverage: {
+        provider: 'v8',
+        include: ['src/**/*.{ts,tsx}'],
+        exclude: ['src/**/__tests__/**', 'src/test/**', 'src/**/*.d.ts', 'src/data/**', 'src/generated/**'],
+        reporter: ['text-summary', 'text'],
+      },
     },
   };
 });

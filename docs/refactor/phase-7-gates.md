@@ -10,8 +10,8 @@ automatically.
 
 ## Scope sketch
 
-- ~~CI on pull requests~~ — done early in Phase 2b (`.github/workflows/ci.yml`); add the
-  jsdom test project to it once Phase 3 lands.
+- ~~CI on pull requests~~ — done early in Phase 2b (`.github/workflows/ci.yml`); `npm test`
+  runs both test projects, so the jsdom tests are already gated.
 - A bundle-size budget enforced in CI so the single-file regression cannot return quietly.
   Baseline is the number Phase 2 records in its PR description.
 - An error boundary at the app root with a recoverable fallback — there is none today,

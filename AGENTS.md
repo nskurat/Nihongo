@@ -18,7 +18,8 @@ Run from the repo root (`Nihongo/`). There is no nested `package.json`.
 |---|---|
 | `npm run dev` | Vite dev server (root is `grammar-app/`) |
 | `npm run build` | Builds into `dist/` |
-| `npm test` | Vitest, run once |
+| `npm test` | Vitest, run once: `node` project (`*.test.ts`) + `jsdom` project (`*.test.tsx`) |
+| `npm run test:node` / `test:coverage` | Fast logic tests only / coverage report |
 | `npm run typecheck` | `tsc --noEmit` — must stay clean |
 | `npm run lint` | ESLint — must stay clean |
 | `npm run validate:data` | Zod-validates every content JSON file; warnings auto-log to `docs/refactor/FINDINGS.md` |
@@ -44,6 +45,7 @@ grammar-app/
                         its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
+    test/               Test setup (fetch blocked), renderWithRouter, fixtures, mockAi()
 ```
 
 ## Conventions
