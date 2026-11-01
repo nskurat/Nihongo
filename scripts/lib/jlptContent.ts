@@ -182,7 +182,11 @@ export function isWordCovered(word: SourceWord, index: CoverageIndex): boolean {
   const head = word.kanji || word.kana;
   if (index.forms.has(head) || masuForms(head).some((f) => index.forms.has(f))) return true;
   if (!word.kanji) return false;
-  return (index.kanaGlosses.get(word.kana) ?? []).some((g) => glossesOverlap(g, word.meaning));
+  // A kanji spelling of a word we teach in kana — as is (其れ = それ) or as its ます form
+  // (掛かる = かかります, 居る = います) — when the glosses agree (肺 ≠ はい "yes").
+  return [word.kana, ...masuForms(word.kana)].some((kana) =>
+    (index.kanaGlosses.get(kana) ?? []).some((g) => glossesOverlap(g, word.meaning))
+  );
 }
 
 /** Frequency order: most frequent first, unranked last, then strokes, then codepoint. */

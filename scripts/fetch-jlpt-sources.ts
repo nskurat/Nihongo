@@ -147,7 +147,7 @@ const GLOSS_OVERRIDES: Record<number, string> = {
 // spellings; learners meet them as shown here. Key: Waller's kanji|kana, value: the
 // headword to use ('' = write in kana). The original spelling is kept as `listKanji`.
 export const PREFERRED_SPELLING: Record<string, string> = {
-  '何時|いつ': '', '此処|ここ': '', '此方|こっち': '', '此の|この': '', '其処|そこ': '',
+  '丁度|ちょうど': '', '何時|いつ': '', '此処|ここ': '', '此方|こっち': '', '此の|この': '', '其処|そこ': '',
   '其の|その': '', '為る|する': '', '為る|なる': '', '如何|どう': '', '然し|しかし': '',
   '遣る|やる': '', '有る|ある': '', '在る|ある': '', '先ず|まず': '', '呉れる|くれる': '',
   '積もり|つもり': '', '筈|はず': '', '程|ほど': '', '為|ため': '', '或|ある': '',

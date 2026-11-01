@@ -29,12 +29,14 @@ All take `--dry-run`.
 
 ## Rules and decisions
 
-- **Cumulative coverage.** A list item already taught anywhere at a lower level (N5–N3 for
-  N5–N2; N5–N2 for N1) is not repeated. One rule for all levels (`isWordCovered` in
+- **Cumulative coverage.** A list item already taught at the same or a lower level is not
+  repeated (N5 checks N5; N4 checks N5–N4; N3 checks N5–N3; N2 checks N5–N3; N1 checks
+  N5–N2) — an N5-list word taught only in a higher level's textbook lessons still belongs in N5. One rule for all levels (`isWordCovered` in
   `scripts/lib/jlptContent.ts`): a word counts as taught if its written form matches
   (bracketed usage notes like `迷う [道に〜]` stripped, `／` pairs split), or a textbook
   `-ます` form of it does (書く ↔ 書きます), or it is a kanji spelling of a word we write in
-  kana *and* the glosses share a content word (其れ = それ "that", but 肺 ≠ はい "yes").
+  kana — as is or as its ます form — *and* the glosses share a content word (其れ = それ,
+  掛かる = かかります, 居る = います; but 肺 ≠ はい "yes").
   Matching on form only, not form + reading, is deliberate: ~80 N1 words that share only a
   spelling with a lower-level word (上手 うわて, 天皇 すめらぎ) are skipped rather than
   pulling in rare readings.
@@ -126,4 +128,23 @@ finds it by its dictionary form), plus exact textbook repeats with the same mean
 reviewed distinct senses (N3 ある "a certain", N5 やる "to do", N3 吹く "play"). Later uids in
 the 50 affected lessons were renumbered; `store/aiCacheMigration.ts` (v6) drops cached vocab
 notes under shifted uids only.
+
+## Cumulative N5/N4 coverage (2026-11-01)
+
+`fill-n5-n4-gaps.ts` used to treat an N5/N4-list word as taught if any of N5–N3 had it, so
+core words taught only in higher textbook lessons were missing from their own level. Now
+coverage is the level itself and below: N5 +72 words (今日, 山, 魚, 甘い, 言う, 夜, 声…, incl.
+晴れる/死ぬ/答える/曇る/呼ぶ/困る/頼む/咲く lost in the dedupe), N4 +78. `dedupe-vocab.ts`
+never removes a row in favour of a higher-level one, so a lower-level list row and a higher
+textbook repeat both stay (search shows them as one result with both badges). N2 −4 and N1
+−4 words that N5/N4 now teach; 分る left N2 (variant of 分かる). Spelling: 丁度 → ちょうど.
+AI-cache v7 drops vocab notes under the shifted N2/N1 (and one N3) uids.
+
+| Level | Words |
+|---|---|
+| N5 | 786 |
+| N4 | 792 |
+| N3 | 3,184 |
+| N2 | 1,584 |
+| N1 | 2,855 |
 

@@ -382,7 +382,7 @@
 {"level":"N5","jmdictSeq":1421290,"kanji":"地図","kana":"ちず","meaning":"a map"},
 {"level":"N5","jmdictSeq":1422720,"kanji":"茶色","kana":"ちゃいろ","meaning":"brown"},
 {"level":"N5","jmdictSeq":1597530,"kanji":"","kana":"ちゃわん","meaning":"rice bowl"},
-{"level":"N5","jmdictSeq":1427340,"kanji":"丁度","kana":"ちょうど","meaning":"just, right, exactly"},
+{"level":"N5","jmdictSeq":1427340,"kanji":"","kana":"ちょうど","meaning":"just, right, exactly","listKanji":"丁度"},
 {"level":"N5","jmdictSeq":1163940,"kanji":"","kana":"ちょっと","meaning":"a little, somewhat; just a little, somewhat"},
 {"level":"N5","jmdictSeq":2225040,"kanji":"一日","kana":"ついたち","meaning":"one day; first day of the month"},
 {"level":"N5","jmdictSeq":1305990,"kanji":"使う","kana":"つかう","meaning":"to use"},

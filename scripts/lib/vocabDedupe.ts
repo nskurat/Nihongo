@@ -72,6 +72,8 @@ export function findRedundant(rows: DedupeRow[], masuLemma: MasuLemmaFn): Remova
     for (const r of g) {
       if (r === keep) continue;
       const listRow = !r.exampleJp;
+      // Never remove a row in favour of one taught at a higher level (cumulative study).
+      if (LEVEL_ORDER.indexOf(keep.level) > LEVEL_ORDER.indexOf(r.level)) continue;
       if (listRow && !KEEP_DISTINCT.has(`${r.level}:${bare(r.word)}`)) out.push({ row: r, keptBy: keep });
       else if (!listRow && r.word.trim() === keep.word.trim() && glossesOverlap(r.meaning, keep.meaning)) {
         out.push({ row: r, keptBy: keep });

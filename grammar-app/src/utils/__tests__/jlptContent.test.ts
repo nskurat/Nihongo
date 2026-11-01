@@ -88,6 +88,12 @@ describe('isWordCovered', () => {
     expect(isWordCovered(w('其れ', 'それ', 'it, that'), index)).toBe(true);
     expect(isWordCovered(w('肺', 'はい', 'lung'), index)).toBe(false);
   });
+  it('matches a kanji spelling of a verb we teach as a kana ます form', () => {
+    const kana = buildCoverageIndex([{ word: 'かかります', meaning: 'take (time or money)' }, { word: 'います', meaning: 'be, exist (animate)' }]);
+    expect(isWordCovered(w('掛かる', 'かかる', 'to take (time, money)'), kana)).toBe(true);
+    expect(isWordCovered(w('居る', 'いる', 'to be (animate), to exist'), kana)).toBe(true);
+    expect(isWordCovered(w('要る', 'いる', 'to need'), kana)).toBe(false);
+  });
 });
 
 describe('glossesOverlap', () => {

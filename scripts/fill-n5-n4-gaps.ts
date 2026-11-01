@@ -64,7 +64,12 @@ const files = Object.fromEntries(
   ])
 );
 const allKanji = () => new Set(Object.values(files).flatMap((f) => Object.values(f.kanji).flat().map((k) => k.kanji)));
-const coverage = () => buildCoverageIndex(Object.values(files).flatMap((f) => Object.values(f.vocab).flat()));
+// Cumulative study: a word counts as taught for a level only if that level or a lower one
+// teaches it — an N5-list word taught only by an N4/N3 textbook row still belongs in N5.
+const coverage = (level: Level) =>
+  buildCoverageIndex(
+    (level === 'N5' ? (['n5'] as const) : (['n5', 'n4'] as const)).flatMap((lv) => Object.values(files[lv].vocab).flat())
+  );
 
 // Appended rows (no example sentence) follow the list's current spelling and gloss.
 const sourceIndex = buildSourceIndex(srcVocab);
@@ -129,7 +134,7 @@ function fill(level: Level): void {
   // ---- vocab
   const kanjiLesson = new Map<string, number>();
   for (const l of lessons) for (const k of kanjiFile[l]) if (!kanjiLesson.has(k.kanji)) kanjiLesson.set(k.kanji, l);
-  const index = coverage();
+  const index = coverage(level);
   const seen = new Set<string>();
   const newWords = srcVocab.filter((w) => {
     const key = `${w.kanji}|${w.kana}`;
