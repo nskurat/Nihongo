@@ -38,7 +38,14 @@ export interface VocabItem extends StudyItem {
   word: string;
   reading: string;
   romaji?: string;
+  /**
+   * Part of speech, N5/N4 only: one value of the closed set in scripts/lib/vocabPos.ts
+   * (`verb-godan`, `na-adjective` …), or one per part joined with ` / ` for a ／ pair.
+   */
   pos?: string;
+  /** Dictionary form of a ます row (食べます → 食べる); ／-joined like `word` for pairs. */
+  lemma?: string;
+  lemmaReading?: string;
   meaning: string;
   exampleJp?: string;
   exampleEn?: string;

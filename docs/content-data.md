@@ -21,6 +21,9 @@ npx tsx scripts/build-upper-kanji-vocab.ts --level N2   # regenerate N2 kanji + 
 npx tsx scripts/build-upper-kanji-vocab.ts --level N1   # regenerate N1 kanji + vocab
 npx tsx scripts/fix-search-data.ts                  # reading fixes that matter for search, JMdict POS markers
 npx tsx scripts/add-core-expressions.ts             # N5 greetings + 日本語 into lessons 1, 3 and 7
+npx tsx scripts/fix-n4-compounds.ts                 # N4 kanji compounds: clean phrase, reading, meaning
+npx tsx scripts/normalise-vocab-readings.ts         # readings mirror the word's [notes] in kana
+npx tsx scripts/migrate-vocab-pos.ts                # closed pos set + stored ます lemmas (N5/N4)
 npx tsx scripts/dedupe-vocab.ts                     # drop the same word taught twice (食べる beside 食べます)
 npm run validate:data
 ```
@@ -118,6 +121,28 @@ Residual known issues (judgment calls, left as is):
 - Waller's N1 list keeps some rare readings that don't collide with a lower form (側 かわ,
   館 たち, 乾 ほし); glosses for 直 なお ("mischief") are odd but sourced.
 - 148 N4 compounds are textbook phrases with null reading/meaning (see validator warnings).
+
+## Content-data cleanup (2026-11-01)
+
+- **N4 kanji compounds** — 148 textbook phrases had no reading or meaning, and many had
+  English fragments in the word (`夢を見ます dream a`). `scripts/lib/n4CompoundFixes.ts` is
+  the teacher-written table (clean phrase, hiragana reading, gloss); the validator now reports
+  no warnings.
+- **Readings mirror notes** — a word's bracketed note (`迷う [道に〜]`) is repeated in kana in
+  the reading (`まよう [みちに〜]`); 98 readings changed. Note readings: `scripts/lib/readingNotes.ts`.
+- **N5 counting readings** — 一–九 gained their native counting forms (ひと・つ … ここの・つ),
+  `N5_KUN_ADDITIONS` in `scripts/lib/searchDataFixes.ts`.
+- **`pos` + lemma** — N5/N4 `pos` uses a closed set (`scripts/lib/vocabPos.ts`: noun,
+  verb-godan, na-adjective …; ` / ` per part for ／ pairs) instead of 35 spellings, and ます rows
+  store `lemma` / `lemmaReading`. The 236 lemmas are the ones search used to infer, reviewed
+  by the teacher; search now reads them (index output identical). Labels for display and
+  prompts: `utils/pos.ts`.
+- **Near-repeats** — `SAME_WORD_SPELLINGS` (`scripts/lib/jlptContent.ts`: 相応しい = ふさわしい …)
+  and `SAME_SENSE` (`scripts/lib/vocabDedupe.ts`: チャンス, 幸せ, めったに, しっかり) are the
+  reviewed exceptions to the gloss-overlap rule; dedupe merged 21 rows (しっかり N4 took over the
+  N3 example), and the coverage check stops the N1 regeneration from re-adding them. Kept apart
+  on purpose: 夕べ "evening" vs ゆうべ "last night", 無くす vs なくす [戦争を〜], しっかり "sensible",
+  and homophones (肺 / はい, 設ける / もうける). AI cache v10 renames notes to the new uids.
 
 ## Core expressions and the second dedupe (2026-11-01)
 

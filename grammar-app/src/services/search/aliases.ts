@@ -150,3 +150,19 @@ export function aliasKey(s: string): string {
     .replace(/[^a-z0-9']+/g, ' ')
     .trim();
 }
+
+/**
+ * Kanji spellings of a word the course teaches in kana, reviewed by the teacher (2026-11-01).
+ * Their glosses are worded differently (相応しい "appropriate" vs ふさわしい "worthy of"), so
+ * the content scripts' gloss check alone misses them: scripts/lib/jlptContent.ts treats the
+ * kana row as covering them (the N1 regeneration doesn't re-add them) and
+ * scripts/lib/vocabDedupe.ts merges existing copies. Search indexes each spelling as an alias
+ * of the kana row, so a learner who meets 余程 in a text still finds よほど. Homophones that
+ * are different words (肺 vs はい, 設ける vs もうける "earn") are not listed.
+ */
+export const SAME_WORD_SPELLINGS: Readonly<Record<string, string>> = {
+  相応しい: 'ふさわしい', 素早い: 'すばやい', 善し悪し: 'よしあし', ご馳走さま: 'ごちそうさま', 惨め: 'みじめ',
+  やり遂げる: 'やりとげる', お洒落: 'おしゃれ', この頃: 'このごろ', その外: 'そのほか', 恐らく: 'おそらく',
+  慌てる: 'あわてる', 今更: 'いまさら', 当てはまる: 'あてはまる', 余程: 'よほど', 呆れる: 'あきれる',
+  是非: 'ぜひ', 大した: 'たいした',
+};

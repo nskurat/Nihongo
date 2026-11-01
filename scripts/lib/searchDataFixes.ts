@@ -8,8 +8,6 @@ export type LessonFile = Record<string, Json[]>;
 
 /** §7 #1: vocab readings that are wrong for the word (uid-keyed, guarded by the old value). */
 export const VOCAB_READING_FIXES: { uid: string; word: string; from: string; to: string; romaji?: string }[] = [
-  // Regression R7: ゆく is the literary reading; N5 learners say and type いく.
-  { uid: 'n5-vocab-4-34', word: '行く', from: 'ゆく', to: 'いく' },
   // Teacher review F9: the readings drop part of the phrase (が, します).
   { uid: 'n4-vocab-9-2', word: '気が付きます', from: 'きつきます', to: 'きがつきます', romaji: 'kigatsukimasu' },
   { uid: 'n4-vocab-16-6', word: '親切にします', from: 'しんせつに', to: 'しんせつにします', romaji: 'shinsetsu ni shimasu' },
@@ -64,6 +62,11 @@ export interface FixReport {
   skipped: string[];
 }
 
+/** Example sentences that only repeat the word (the validator's "meaning is identical to exampleEn"). */
+export const VOCAB_EXAMPLE_FIXES: { uid: string; word: string; fromJp: string; exampleJp: string; exampleEn: string }[] = [
+  { uid: 'n5-vocab-17-10', word: 'お大事に', fromJp: 'お大事に。', exampleJp: 'かぜですか。どうぞ お大事に。', exampleEn: 'A cold? Please take care of yourself.' },
+];
+
 /**
  * Regression R16: JMdict part-of-speech markers (`(n)`, `(a)`, `(col)`, `(exp)`…) left in a
  * few N2/N1 glosses. They mean nothing to a learner and match English searches for "a".
@@ -97,6 +100,14 @@ function rowsOf(file: LessonFile): Json[] {
 /** Applies the vocab fixes in place. Idempotent: an already-fixed row is left untouched. */
 export function applyVocabFixes(file: LessonFile, report: FixReport): void {
   const byUid = new Map(rowsOf(file).map((r) => [r.uid as string, r]));
+  for (const fix of VOCAB_EXAMPLE_FIXES) {
+    const row = byUid.get(fix.uid);
+    if (row?.word === fix.word && row.exampleJp === fix.fromJp) {
+      row.exampleJp = fix.exampleJp;
+      row.exampleEn = fix.exampleEn;
+      report.changed.push(`${fix.uid} ${fix.word}: example ${fix.exampleJp}`);
+    }
+  }
   for (const fix of VOCAB_READING_FIXES) {
     const row = byUid.get(fix.uid);
     if (!row) continue;
@@ -123,13 +134,26 @@ export function applyVocabFixes(file: LessonFile, report: FixReport): void {
 }
 
 /** Replaces bare N5 kun stems by their full readings, keeping order and dropping repeats. */
+/**
+ * Native counting forms N5 learners use daily (ひとつ, ふたつ …), missing beside the bare
+ * stems (一 ひと). KANJIDIC lists them; where it has two (み・つ / みっ・つ), the everyday
+ * one. Bare prefix readings (一 ひと, 小 お, 目 ま) stay: every level writes kun readings
+ * without KANJIDIC's hyphen markers.
+ */
+export const N5_KUN_ADDITIONS: Record<string, string[]> = {
+  一: ['ひと・つ'], 二: ['ふた・つ'], 三: ['みっ・つ'], 四: ['よっ・つ'], 五: ['いつ・つ'],
+  六: ['むっ・つ'], 七: ['なな・つ'], 八: ['やっ・つ'], 九: ['ここの・つ'],
+};
+
 export function applyKunFixes(file: LessonFile, report: FixReport): void {
   for (const row of rowsOf(file)) {
-    const table = N5_KUN_OKURIGANA[row.kanji as string];
-    if (!table || !Array.isArray(row.kunyomi)) continue;
+    const table = N5_KUN_OKURIGANA[row.kanji as string] ?? {};
+    const extra = N5_KUN_ADDITIONS[row.kanji as string] ?? [];
+    if (!Array.isArray(row.kunyomi)) continue;
     const before = row.kunyomi as string[];
     const after: string[] = [];
     for (const r of before) for (const x of table[r] ?? [r]) if (!after.includes(x)) after.push(x);
+    for (const x of extra) if (!after.includes(x)) after.push(x);
     if (after.join('|') !== before.join('|')) {
       row.kunyomi = after;
       report.changed.push(`${String(row.uid)} ${String(row.kanji)} ${before.join('、')} → ${after.join('、')}`);

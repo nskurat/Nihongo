@@ -46,7 +46,14 @@ const removals = findRedundant(rows, (word, reading) => masuToDict(word, reading
 
 const shifted: string[] = [];
 const byLesson = new Map<string, Set<number>>();
-for (const { row, keptBy } of removals) {
+for (const { row, keptBy, moveExample } of removals) {
+  if (moveExample) {
+    const from = files[row.level][String(row.lesson)][row.index];
+    const to = files[keptBy.level][String(keptBy.lesson)][keptBy.index];
+    to.exampleJp = from.exampleJp;
+    to.exampleEn = from.exampleEn;
+    console.log(`  ↳ example moved to ${keptBy.level} L${keptBy.lesson} ${keptBy.word}: ${String(from.exampleJp)}`);
+  }
   console.log(`  - ${row.level} L${row.lesson} ${row.word} (${row.meaning})  ⇐ ${keptBy.level} L${keptBy.lesson} ${keptBy.word}`);
   const k = `${row.level}|${row.lesson}`;
   byLesson.set(k, new Set([...(byLesson.get(k) ?? []), row.index]));

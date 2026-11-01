@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod';
+import { isPosValue } from './lib/vocabPos';
 
 type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
 type ContentSection = 'grammar' | 'vocab' | 'kanji';
@@ -58,7 +59,9 @@ const vocabItemSchema = baseItemSchema.extend({
   word: z.string(),
   reading: z.string(),
   romaji: z.string().optional(),
-  pos: z.string().optional(),
+  pos: z.string().refine(isPosValue, 'pos must be from scripts/lib/vocabPos.ts POS_VALUES').optional(),
+  lemma: z.string().optional(),
+  lemmaReading: z.string().optional(),
   meaning: z.string(),
   exampleJp: z.string().optional(),
   exampleEn: z.string().optional(),

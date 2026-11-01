@@ -244,7 +244,7 @@ group, at any rank, without "Show all".
 | T-37 | `lost` | *(Amended 2026-11, owner decision D1: core items on top.)* Vocab top 8 contains 無くなる N4 L13, 迷子 N3 L8, 迷う N3 L1. Kanji contains 迷 N3 L1 | US-2 |
 | T-38 | `even` | Grammar does **not** contain `A(place)で Bが あります` N5 L21 (meaning has "event" only) | US-2 |
 | T-39 | `に` (single kana) | Grammar contains `N(time)に V` N5 L4 and `N(person)に あげます、etc.` N5 L7. Vocab only exact readings (二 N5 L2 `n5-vocab-2-29`, 荷 N1 L17 `n1-vocab-17-61`). Total ≤ 40 results | US-9 |
-| T-40 | `よほど` | Vocab contains `よっぽど/よほど` N3 L17, よほど N3 L22, 余程 N1 L3 (`n1-vocab-3-81`) | US-4 |
+| T-40 | `よほど` | *(Amended 2026-11: 余程 N1 merged into よほど N3.)* Vocab contains `よっぽど/よほど` N3 L17 and よほど N3 L22 | US-4 |
 | T-41 | `ちょうど` | *(Amended 2026-11: the N3 rows were deduped.)* One row with two badges, N5 L22 and N4 L21 | US-7 |
 | T-42 | `丁度` | *(Amended.)* No vocab or grammar hit. The "No word matches 丁度" state lists the kanji 丁 N1 L11 (`n1-kanji-11-6`) and 度 N5 L22 (`n5-kanji-22-6`). Suggests trying the reading. No AI offer | US-9 |
 | T-43 | Fresh browser opens `…/search?q=ものの&level=N2` (cold load through the `404.html` fallback) | Same results as T-15 filtered to N2. Title and focus OK. `…/search?q=ばかり&level=N2,N3` lists only N2 and N3 points | US-11 |

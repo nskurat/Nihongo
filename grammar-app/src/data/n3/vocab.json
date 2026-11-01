@@ -6,7 +6,7 @@
       "section": "vocab",
       "lesson": 1,
       "word": "迷う [道に〜]",
-      "reading": "まよう",
+      "reading": "まよう [みちに〜]",
       "meaning": "lose [one's way]",
       "exampleJp": "東京駅で道に迷いました。",
       "exampleEn": "I lost my way at Tokyo Station."
@@ -39,7 +39,7 @@
       "section": "vocab",
       "lesson": 1,
       "word": "明るい [性格が〜]",
-      "reading": "あかるい",
+      "reading": "あかるい [せいかくが〜]",
       "meaning": "cheerful [personality]",
       "exampleJp": "彼女はとても明るい性格です。",
       "exampleEn": "She has a very cheerful personality."
@@ -182,7 +182,7 @@
       "section": "vocab",
       "lesson": 1,
       "word": "〜中 [留守〜]",
-      "reading": "ちゅう",
+      "reading": "ちゅう [るす〜]",
       "meaning": "while [while out]",
       "exampleJp": "留守中に荷物が届いた。",
       "exampleEn": "A package arrived while I was out."
@@ -391,7 +391,7 @@
       "section": "vocab",
       "lesson": 1,
       "word": "つける [名前を〜]",
-      "reading": "つける [名前を〜]",
+      "reading": "つける [なまえを〜]",
       "meaning": "apply, give [a name to]",
       "exampleJp": "犬に可愛い名前をつける。",
       "exampleEn": "Give a cute name to the dog."
@@ -512,7 +512,7 @@
       "section": "vocab",
       "lesson": 1,
       "word": "取る [湿気を〜]",
-      "reading": "とる",
+      "reading": "とる [しっけを〜]",
       "meaning": "remove [moisture]",
       "exampleJp": "エアコンで部屋の湿気を取る。",
       "exampleEn": "Remove the room's moisture with an air conditioner."
@@ -1237,15 +1237,6 @@
       "word": "ワイン",
       "reading": "ワイン",
       "meaning": "wine"
-    },
-    {
-      "uid": "n3-vocab-1-127",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 1,
-      "word": "是非",
-      "reading": "ぜひ",
-      "meaning": "certainly, without fail"
     }
   ],
   "2": [
@@ -1288,7 +1279,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "守る [地球を〜]",
-      "reading": "まもる",
+      "reading": "まもる [ちきゅうを〜]",
       "meaning": "protect [the earth]",
       "exampleJp": "私たちは地球の自然を守るべきだ。",
       "exampleEn": "We should protect the earth's nature."
@@ -1442,7 +1433,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "分ける [ごみを〜]",
-      "reading": "わける",
+      "reading": "わける [ごみを〜]",
       "meaning": "separate [rubbish]",
       "exampleJp": "燃えるゴミと燃えないゴミを分ける。",
       "exampleEn": "Separate burnable and non-burnable rubbish."
@@ -1563,7 +1554,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "飛ぶ [空を〜]",
-      "reading": "とぶ",
+      "reading": "とぶ [そらを〜]",
       "meaning": "fly [in the sky]",
       "exampleJp": "飛行機が空を飛んでいる。",
       "exampleEn": "An airplane is flying in the sky."
@@ -1618,7 +1609,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "つける [腕に〜]",
-      "reading": "つける [腕に〜]",
+      "reading": "つける [うでに〜]",
       "meaning": "attach to [one's arm], wear",
       "exampleJp": "腕に時計をつける。",
       "exampleEn": "Wear a watch on one's arm."
@@ -1772,7 +1763,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "引く [線を〜]",
-      "reading": "ひく",
+      "reading": "ひく [せんを〜]",
       "meaning": "draw [a line]",
       "exampleJp": "ノートに定規で線を引く。",
       "exampleEn": "Draw a line in the notebook with a ruler."
@@ -2025,7 +2016,7 @@
       "section": "vocab",
       "lesson": 2,
       "word": "取る [バランスを〜]",
-      "reading": "とる",
+      "reading": "とる [バランスを〜]",
       "meaning": "achieve [a balance]",
       "exampleJp": "栄養のバランスを取る。",
       "exampleEn": "Achieve a nutritional balance."
@@ -2566,7 +2557,7 @@
       "section": "vocab",
       "lesson": 3,
       "word": "声 [市民の〜]",
-      "reading": "こえ",
+      "reading": "こえ [しみんの〜]",
       "meaning": "voice [of the people], opinion",
       "exampleJp": "市長は市民の声を聞くべきだ。",
       "exampleEn": "The mayor should listen to the voices of the citizens."
@@ -2588,7 +2579,7 @@
       "section": "vocab",
       "lesson": 3,
       "word": "振る [彼女を〜]",
-      "reading": "ふる",
+      "reading": "ふる [かのじょを〜]",
       "meaning": "dump, jilt [a girlfriend]",
       "exampleJp": "彼はついに彼女を振った。",
       "exampleEn": "He finally dumped his girlfriend."
@@ -2621,7 +2612,7 @@
       "section": "vocab",
       "lesson": 3,
       "word": "切る [電話を〜]",
-      "reading": "きる",
+      "reading": "きる [でんわを〜]",
       "meaning": "hang up [the phone]",
       "exampleJp": "用事が終わったらすぐに電話を切る。",
       "exampleEn": "Hang up the phone as soon as the business is done."
@@ -2665,7 +2656,7 @@
       "section": "vocab",
       "lesson": 3,
       "word": "取る [時間を〜]",
-      "reading": "とる",
+      "reading": "とる [じかんを〜]",
       "meaning": "set aside [time]",
       "exampleJp": "面接のために時間を取る。",
       "exampleEn": "Set aside time for an interview."
@@ -2742,7 +2733,7 @@
       "section": "vocab",
       "lesson": 3,
       "word": "〜用 [学生〜]",
-      "reading": "よう",
+      "reading": "よう [がくせい〜]",
       "meaning": "for use by [students]",
       "exampleJp": "これは子供用の自転車です。",
       "exampleEn": "This is a bicycle for children."
@@ -2961,17 +2952,6 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
-      "word": "幸せ",
-      "reading": "しあわせ",
-      "meaning": "happiness",
-      "exampleJp": "家族と一緒にいる時が一番幸せです。",
-      "exampleEn": "I am happiest when I'm with my family."
-    },
-    {
-      "uid": "n3-vocab-3-39",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 3,
       "word": "感じる",
       "reading": "かんじる",
       "meaning": "feel",
@@ -2979,7 +2959,7 @@
       "exampleEn": "Feel the autumn wind."
     },
     {
-      "uid": "n3-vocab-3-40",
+      "uid": "n3-vocab-3-39",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -2990,7 +2970,7 @@
       "exampleEn": "I overslept and was late for school."
     },
     {
-      "uid": "n3-vocab-3-41",
+      "uid": "n3-vocab-3-40",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3001,7 +2981,7 @@
       "exampleEn": "It is dangerous here, so please do not enter."
     },
     {
-      "uid": "n3-vocab-3-42",
+      "uid": "n3-vocab-3-41",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3012,7 +2992,7 @@
       "exampleEn": "A baby's sleeping face is cute."
     },
     {
-      "uid": "n3-vocab-3-43",
+      "uid": "n3-vocab-3-42",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3023,7 +3003,7 @@
       "exampleEn": "Interview a famous athlete."
     },
     {
-      "uid": "n3-vocab-3-44",
+      "uid": "n3-vocab-3-43",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3034,7 +3014,7 @@
       "exampleEn": "I am in charge of this project."
     },
     {
-      "uid": "n3-vocab-3-45",
+      "uid": "n3-vocab-3-44",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3045,7 +3025,7 @@
       "exampleEn": "Go drinking with people from my part-time workplace."
     },
     {
-      "uid": "n3-vocab-3-46",
+      "uid": "n3-vocab-3-45",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3056,7 +3036,7 @@
       "exampleEn": "Book a hotel at the travel destination."
     },
     {
-      "uid": "n3-vocab-3-47",
+      "uid": "n3-vocab-3-46",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3067,7 +3047,7 @@
       "exampleEn": "Consult with the convenience store manager."
     },
     {
-      "uid": "n3-vocab-3-48",
+      "uid": "n3-vocab-3-47",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3078,7 +3058,7 @@
       "exampleEn": "Training for new employees begins."
     },
     {
-      "uid": "n3-vocab-3-49",
+      "uid": "n3-vocab-3-48",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3089,7 +3069,7 @@
       "exampleEn": "Discuss future plans."
     },
     {
-      "uid": "n3-vocab-3-50",
+      "uid": "n3-vocab-3-49",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3100,7 +3080,7 @@
       "exampleEn": "Commute taking one hour by train."
     },
     {
-      "uid": "n3-vocab-3-51",
+      "uid": "n3-vocab-3-50",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3111,7 +3091,7 @@
       "exampleEn": "I have worked very hard until now."
     },
     {
-      "uid": "n3-vocab-3-52",
+      "uid": "n3-vocab-3-51",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3122,7 +3102,7 @@
       "exampleEn": "Make an effort to reduce the amount of rubbish."
     },
     {
-      "uid": "n3-vocab-3-53",
+      "uid": "n3-vocab-3-52",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3133,7 +3113,7 @@
       "exampleEn": "Next month, I will move to a new apartment."
     },
     {
-      "uid": "n3-vocab-3-54",
+      "uid": "n3-vocab-3-53",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3144,7 +3124,7 @@
       "exampleEn": "I traveled to several European countries."
     },
     {
-      "uid": "n3-vocab-3-55",
+      "uid": "n3-vocab-3-54",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3155,7 +3135,7 @@
       "exampleEn": "I want to build a cheerful household."
     },
     {
-      "uid": "n3-vocab-3-56",
+      "uid": "n3-vocab-3-55",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3166,7 +3146,7 @@
       "exampleEn": "I am resigning due to family circumstances."
     },
     {
-      "uid": "n3-vocab-3-57",
+      "uid": "n3-vocab-3-56",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3177,7 +3157,7 @@
       "exampleEn": "My younger sister goes to kindergarten."
     },
     {
-      "uid": "n3-vocab-3-58",
+      "uid": "n3-vocab-3-57",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3188,7 +3168,7 @@
       "exampleEn": "I often take a daytime nap in the afternoon on holidays."
     },
     {
-      "uid": "n3-vocab-3-59",
+      "uid": "n3-vocab-3-58",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3199,7 +3179,7 @@
       "exampleEn": "I plan to return to America next year."
     },
     {
-      "uid": "n3-vocab-3-60",
+      "uid": "n3-vocab-3-59",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3210,7 +3190,7 @@
       "exampleEn": "The customer has come to visit our office."
     },
     {
-      "uid": "n3-vocab-3-61",
+      "uid": "n3-vocab-3-60",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3221,7 +3201,7 @@
       "exampleEn": "A new product of the new smartphone was announced."
     },
     {
-      "uid": "n3-vocab-3-62",
+      "uid": "n3-vocab-3-61",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3232,7 +3212,7 @@
       "exampleEn": "The new school term has begun."
     },
     {
-      "uid": "n3-vocab-3-63",
+      "uid": "n3-vocab-3-62",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3243,7 +3223,7 @@
       "exampleEn": "Participate in a piano presentation/recital."
     },
     {
-      "uid": "n3-vocab-3-64",
+      "uid": "n3-vocab-3-63",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3254,7 +3234,7 @@
       "exampleEn": "I will love you indefinitely."
     },
     {
-      "uid": "n3-vocab-3-65",
+      "uid": "n3-vocab-3-64",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3265,7 +3245,7 @@
       "exampleEn": "Recently the economy has been getting better."
     },
     {
-      "uid": "n3-vocab-3-66",
+      "uid": "n3-vocab-3-65",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3276,7 +3256,7 @@
       "exampleEn": "I cannot wait any longer."
     },
     {
-      "uid": "n3-vocab-3-67",
+      "uid": "n3-vocab-3-66",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3287,18 +3267,18 @@
       "exampleEn": "There are many animals in the forest."
     },
     {
-      "uid": "n3-vocab-3-68",
+      "uid": "n3-vocab-3-67",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
       "word": "受ける [インタビューを〜]",
-      "reading": "うける",
+      "reading": "うける [インタビューを〜]",
       "meaning": "be interviewed, receive [an interview]",
       "exampleJp": "テレビのインタビューを受ける。",
       "exampleEn": "Be interviewed by the TV."
     },
     {
-      "uid": "n3-vocab-3-69",
+      "uid": "n3-vocab-3-68",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3307,7 +3287,7 @@
       "meaning": "love, affection"
     },
     {
-      "uid": "n3-vocab-3-70",
+      "uid": "n3-vocab-3-69",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3316,7 +3296,7 @@
       "meaning": "to be sad, to mourn for, to regret"
     },
     {
-      "uid": "n3-vocab-3-71",
+      "uid": "n3-vocab-3-70",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3325,7 +3305,7 @@
       "meaning": "sightseeing"
     },
     {
-      "uid": "n3-vocab-3-72",
+      "uid": "n3-vocab-3-71",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3334,7 +3314,7 @@
       "meaning": "observation, survey"
     },
     {
-      "uid": "n3-vocab-3-73",
+      "uid": "n3-vocab-3-72",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3343,7 +3323,7 @@
       "meaning": "emotion(s), feeling(s), sentiment"
     },
     {
-      "uid": "n3-vocab-3-74",
+      "uid": "n3-vocab-3-73",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3352,7 +3332,7 @@
       "meaning": "class, grade, rank"
     },
     {
-      "uid": "n3-vocab-3-75",
+      "uid": "n3-vocab-3-74",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3361,7 +3341,7 @@
       "meaning": "to hate, to dislike, to loathe"
     },
     {
-      "uid": "n3-vocab-3-76",
+      "uid": "n3-vocab-3-75",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3370,7 +3350,7 @@
       "meaning": "muscle, sinews"
     },
     {
-      "uid": "n3-vocab-3-77",
+      "uid": "n3-vocab-3-76",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3379,7 +3359,7 @@
       "meaning": "pain, agony"
     },
     {
-      "uid": "n3-vocab-3-78",
+      "uid": "n3-vocab-3-77",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3388,7 +3368,7 @@
       "meaning": "to suffer, to groan, to be worried"
     },
     {
-      "uid": "n3-vocab-3-79",
+      "uid": "n3-vocab-3-78",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3397,7 +3377,7 @@
       "meaning": "criminal case, (police) detective"
     },
     {
-      "uid": "n3-vocab-3-80",
+      "uid": "n3-vocab-3-79",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3406,7 +3386,7 @@
       "meaning": "construction, foundation"
     },
     {
-      "uid": "n3-vocab-3-81",
+      "uid": "n3-vocab-3-80",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3415,7 +3395,7 @@
       "meaning": "exchange, swap"
     },
     {
-      "uid": "n3-vocab-3-82",
+      "uid": "n3-vocab-3-81",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3424,7 +3404,7 @@
       "meaning": "happiness, blessedness"
     },
     {
-      "uid": "n3-vocab-3-83",
+      "uid": "n3-vocab-3-82",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3433,7 +3413,7 @@
       "meaning": "to exceed, to cross over, to cross"
     },
     {
-      "uid": "n3-vocab-3-84",
+      "uid": "n3-vocab-3-83",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3442,7 +3422,7 @@
       "meaning": "to go over (e.g., with audience)"
     },
     {
-      "uid": "n3-vocab-3-85",
+      "uid": "n3-vocab-3-84",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3451,7 +3431,7 @@
       "meaning": "least, lowest, worst"
     },
     {
-      "uid": "n3-vocab-3-86",
+      "uid": "n3-vocab-3-85",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3460,7 +3440,7 @@
       "meaning": "well; now (typically used when switching to a new, usually more important topic)"
     },
     {
-      "uid": "n3-vocab-3-87",
+      "uid": "n3-vocab-3-86",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3469,7 +3449,7 @@
       "meaning": "immediately, readily, directly"
     },
     {
-      "uid": "n3-vocab-3-88",
+      "uid": "n3-vocab-3-87",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3478,7 +3458,7 @@
       "meaning": "situation, present state of affairs"
     },
     {
-      "uid": "n3-vocab-3-89",
+      "uid": "n3-vocab-3-88",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3487,7 +3467,7 @@
       "meaning": "to finish, to close, to do something completely"
     },
     {
-      "uid": "n3-vocab-3-90",
+      "uid": "n3-vocab-3-89",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3496,7 +3476,7 @@
       "meaning": "religion"
     },
     {
-      "uid": "n3-vocab-3-91",
+      "uid": "n3-vocab-3-90",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3505,7 +3485,7 @@
       "meaning": "claim, insistence, assertion"
     },
     {
-      "uid": "n3-vocab-3-92",
+      "uid": "n3-vocab-3-91",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3514,7 +3494,7 @@
       "meaning": "prize, award"
     },
     {
-      "uid": "n3-vocab-3-93",
+      "uid": "n3-vocab-3-92",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3523,7 +3503,7 @@
       "meaning": "information, (military) intelligence"
     },
     {
-      "uid": "n3-vocab-3-94",
+      "uid": "n3-vocab-3-93",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3532,7 +3512,7 @@
       "meaning": "castle"
     },
     {
-      "uid": "n3-vocab-3-95",
+      "uid": "n3-vocab-3-94",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3541,7 +3521,7 @@
       "meaning": "character, personality, talented man"
     },
     {
-      "uid": "n3-vocab-3-96",
+      "uid": "n3-vocab-3-95",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3550,7 +3530,7 @@
       "meaning": "to rescue from, to help out of"
     },
     {
-      "uid": "n3-vocab-3-97",
+      "uid": "n3-vocab-3-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3559,7 +3539,7 @@
       "meaning": "cause, reason, fault"
     },
     {
-      "uid": "n3-vocab-3-98",
+      "uid": "n3-vocab-3-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3568,7 +3548,7 @@
       "meaning": "claim, demand, request"
     },
     {
-      "uid": "n3-vocab-3-99",
+      "uid": "n3-vocab-3-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3577,7 +3557,7 @@
       "meaning": "noise"
     },
     {
-      "uid": "n3-vocab-3-100",
+      "uid": "n3-vocab-3-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3586,7 +3566,7 @@
       "meaning": "and"
     },
     {
-      "uid": "n3-vocab-3-101",
+      "uid": "n3-vocab-3-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3595,7 +3575,7 @@
       "meaning": "cabinet minister"
     },
     {
-      "uid": "n3-vocab-3-102",
+      "uid": "n3-vocab-3-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3604,7 +3584,7 @@
       "meaning": "free of charge, mere, only"
     },
     {
-      "uid": "n3-vocab-3-103",
+      "uid": "n3-vocab-3-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3613,7 +3593,7 @@
       "meaning": "ball, sphere, coin"
     },
     {
-      "uid": "n3-vocab-3-104",
+      "uid": "n3-vocab-3-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3622,7 +3602,7 @@
       "meaning": "difference, discrepancy"
     },
     {
-      "uid": "n3-vocab-3-105",
+      "uid": "n3-vocab-3-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3631,7 +3611,7 @@
       "meaning": "order, request"
     },
     {
-      "uid": "n3-vocab-3-106",
+      "uid": "n3-vocab-3-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3640,7 +3620,7 @@
       "meaning": "work, employment"
     },
     {
-      "uid": "n3-vocab-3-107",
+      "uid": "n3-vocab-3-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3649,7 +3629,7 @@
       "meaning": "presentation, submission, filing"
     },
     {
-      "uid": "n3-vocab-3-108",
+      "uid": "n3-vocab-3-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3658,7 +3638,7 @@
       "meaning": "electron; electronic"
     },
     {
-      "uid": "n3-vocab-3-109",
+      "uid": "n3-vocab-3-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3667,7 +3647,7 @@
       "meaning": "city"
     },
     {
-      "uid": "n3-vocab-3-110",
+      "uid": "n3-vocab-3-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3676,7 +3656,7 @@
       "meaning": "top"
     },
     {
-      "uid": "n3-vocab-3-111",
+      "uid": "n3-vocab-3-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3685,7 +3665,7 @@
       "meaning": "tunnel"
     },
     {
-      "uid": "n3-vocab-3-112",
+      "uid": "n3-vocab-3-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3694,7 +3674,7 @@
       "meaning": "root"
     },
     {
-      "uid": "n3-vocab-3-113",
+      "uid": "n3-vocab-3-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3703,7 +3683,7 @@
       "meaning": "knock; fungo (baseball)"
     },
     {
-      "uid": "n3-vocab-3-114",
+      "uid": "n3-vocab-3-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3712,7 +3692,7 @@
       "meaning": "clapping hands, applause"
     },
     {
-      "uid": "n3-vocab-3-115",
+      "uid": "n3-vocab-3-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3721,7 +3701,7 @@
       "meaning": "discovery, detection, finding"
     },
     {
-      "uid": "n3-vocab-3-116",
+      "uid": "n3-vocab-3-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3730,7 +3710,7 @@
       "meaning": "light"
     },
     {
-      "uid": "n3-vocab-3-117",
+      "uid": "n3-vocab-3-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3739,7 +3719,7 @@
       "meaning": "string, cord"
     },
     {
-      "uid": "n3-vocab-3-118",
+      "uid": "n3-vocab-3-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3748,7 +3728,7 @@
       "meaning": "facial expression"
     },
     {
-      "uid": "n3-vocab-3-119",
+      "uid": "n3-vocab-3-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3757,7 +3737,7 @@
       "meaning": "to shiver, to shake, to quake"
     },
     {
-      "uid": "n3-vocab-3-120",
+      "uid": "n3-vocab-3-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3766,7 +3746,7 @@
       "meaning": "change, modification, alteration"
     },
     {
-      "uid": "n3-vocab-3-121",
+      "uid": "n3-vocab-3-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3775,7 +3755,7 @@
       "meaning": "cheek (of face)"
     },
     {
-      "uid": "n3-vocab-3-122",
+      "uid": "n3-vocab-3-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3784,7 +3764,7 @@
       "meaning": "festival, feast"
     },
     {
-      "uid": "n3-vocab-3-123",
+      "uid": "n3-vocab-3-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3793,7 +3773,7 @@
       "meaning": "strange, unusual"
     },
     {
-      "uid": "n3-vocab-3-124",
+      "uid": "n3-vocab-3-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3802,7 +3782,7 @@
       "meaning": "to request, to ask for; to seek, to search for"
     },
     {
-      "uid": "n3-vocab-3-125",
+      "uid": "n3-vocab-3-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3811,7 +3791,7 @@
       "meaning": "friendship, fellowship"
     },
     {
-      "uid": "n3-vocab-3-126",
+      "uid": "n3-vocab-3-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3820,7 +3800,7 @@
       "meaning": "request, demand"
     },
     {
-      "uid": "n3-vocab-3-127",
+      "uid": "n3-vocab-3-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -3829,7 +3809,7 @@
       "meaning": "selfishness, egoism, willfulness"
     },
     {
-      "uid": "n3-vocab-3-128",
+      "uid": "n3-vocab-3-127",
       "level": "N3",
       "section": "vocab",
       "lesson": 3,
@@ -4131,7 +4111,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "苦しい [生活が〜]",
-      "reading": "くるしい",
+      "reading": "くるしい [せいかつが〜]",
       "meaning": "hard [life]",
       "exampleJp": "物価が上がって、生活が苦しい。",
       "exampleEn": "Prices have gone up, and life is hard."
@@ -4186,7 +4166,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "出る [製品が〜]",
-      "reading": "でる",
+      "reading": "でる [せいひんが〜]",
       "meaning": "[product] come on sale",
       "exampleJp": "来月、新しいスマートフォンが出るらしい。",
       "exampleEn": "It seems a new smartphone will come on sale next month."
@@ -4307,7 +4287,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "受ける [伝言を〜]",
-      "reading": "うける",
+      "reading": "うける [でんごんを〜]",
       "meaning": "receive [a message]",
       "exampleJp": "母からの伝言を受けた。",
       "exampleEn": "I received a message from my mother."
@@ -4318,7 +4298,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "入れる [メッセージを〜]",
-      "reading": "いれる",
+      "reading": "いれる [メッセージを〜]",
       "meaning": "leave [a message]",
       "exampleJp": "電話に出なかったので、メッセージを入れた。",
       "exampleEn": "He didn't answer the phone, so I left a message."
@@ -4329,7 +4309,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "差し上げる [電話を〜]",
-      "reading": "さしあげる",
+      "reading": "さしあげる [でんわを〜]",
       "meaning": "give [a call]",
       "exampleJp": "後でこちらからお電話を差し上げます。",
       "exampleEn": "I will give you a call from here later."
@@ -4351,7 +4331,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "出る [電話に〜]",
-      "reading": "でる",
+      "reading": "でる [でんわに〜]",
       "meaning": "answer [the telephone]",
       "exampleJp": "電話が鳴ったが、忙しくて誰も出なかった。",
       "exampleEn": "The phone rang, but we were busy and no one answered."
@@ -4373,7 +4353,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "入る [仕事が〜]",
-      "reading": "はいる",
+      "reading": "はいる [しごとが〜]",
       "meaning": "[work] come in",
       "exampleJp": "今日は夕方から急な仕事が入った。",
       "exampleEn": "Urgent work came in from the evening today."
@@ -4450,7 +4430,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "〜状 [招待〜]",
-      "reading": "〜じょう",
+      "reading": "〜じょう [しょうたい〜]",
       "meaning": "letter, note, card [of invitation]",
       "exampleJp": "友達から結婚式の招待状をもらった。",
       "exampleEn": "I received an invitation letter for a wedding from a friend."
@@ -4461,7 +4441,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "遠い [電話が〜]",
-      "reading": "とおい",
+      "reading": "とおい [でんわが〜]",
       "meaning": "faint, hard to hear [voice on telephone]",
       "exampleJp": "電波が悪くて、お電話が遠いです。",
       "exampleEn": "The signal is bad, and your voice is faint."
@@ -4582,7 +4562,7 @@
       "section": "vocab",
       "lesson": 4,
       "word": "大〜 [好き/嫌い]",
-      "reading": "だい〜",
+      "reading": "だい〜 [すき/きらい]",
       "meaning": "greatly [like/dislike]",
       "exampleJp": "彼女は甘いお菓子が大好きだ。",
       "exampleEn": "She greatly likes sweet snacks."
@@ -5253,7 +5233,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "改札 [〜口]",
-      "reading": "かいさつ",
+      "reading": "かいさつ [〜ぐち]",
       "meaning": "ticket [inspection] barrier",
       "exampleJp": "駅の改札口で友達と待ち合わせる。",
       "exampleEn": "Meet up with a friend at the station's ticket barrier."
@@ -5275,7 +5255,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "かかってくる [電話が〜]",
-      "reading": "かかってくる [電話が〜]",
+      "reading": "かかってくる [でんわが〜]",
       "meaning": "[telephone] ring",
       "exampleJp": "夜遅くに知らない番号から電話がかかってきた。",
       "exampleEn": "The phone rang from an unknown number late at night."
@@ -5286,7 +5266,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "切れる [電話が〜]",
-      "reading": "きれる",
+      "reading": "きれる [でんわが〜]",
       "meaning": "[telephone] stop ringing, be cut off",
       "exampleJp": "電車がトンネルに入って、電話が切れた。",
       "exampleEn": "The train entered a tunnel, and the phone was cut off."
@@ -5297,7 +5277,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "挙げる [例を〜]",
-      "reading": "あげる",
+      "reading": "あげる [れいを〜]",
       "meaning": "give [an example]",
       "exampleJp": "分かりやすい例を挙げて説明してください。",
       "exampleEn": "Please give an easy-to-understand example and explain."
@@ -5319,7 +5299,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "なくす [戦争を〜]",
-      "reading": "なくす [戦争を〜]",
+      "reading": "なくす [せんそうを〜]",
       "meaning": "get rid of [war]",
       "exampleJp": "平和のために世界から戦争をなくしたい。",
       "exampleEn": "For the sake of peace, I want to get rid of war from the world."
@@ -5374,7 +5354,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "沿う [川に〜]",
-      "reading": "そう",
+      "reading": "そう [かわに〜]",
       "meaning": "~ along [a river]",
       "exampleJp": "休日は川に沿って長い距離を歩く。",
       "exampleEn": "On holidays, I walk a long distance along the river."
@@ -5396,7 +5376,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "出る [大通りに〜]",
-      "reading": "でる",
+      "reading": "でる [おおどおりに〜]",
       "meaning": "come out [on the main street]",
       "exampleJp": "この細い道をまっすぐ行くと、大通りに出る。",
       "exampleEn": "If you go straight on this narrow road, you'll come out on the main street."
@@ -5462,7 +5442,7 @@
       "section": "vocab",
       "lesson": 5,
       "word": "分かれる [道が〜]",
-      "reading": "わかれる",
+      "reading": "わかれる [みちが〜]",
       "meaning": "[road] divide",
       "exampleJp": "道が二つに分かれているので、右へ進む。",
       "exampleEn": "The road is divided into two, so proceed to the right."
@@ -6596,7 +6576,7 @@
       "section": "vocab",
       "lesson": 6,
       "word": "取る [ビタミンを〜]",
-      "reading": "とる",
+      "reading": "とる [ビタミンを〜]",
       "meaning": "take [a vitamin]",
       "exampleJp": "野菜が苦手なので、サプリメントでビタミンを取る。",
       "exampleEn": "Since I'm bad with vegetables, I take vitamins with supplements."
@@ -6662,7 +6642,7 @@
       "section": "vocab",
       "lesson": 6,
       "word": "振る [手を〜]",
-      "reading": "ふる",
+      "reading": "ふる [てを〜]",
       "meaning": "wave [one's hand]",
       "exampleJp": "駅で別れるとき、友達に大きく手を振る。",
       "exampleEn": "When parting at the station, wave widely to a friend."
@@ -6849,7 +6829,7 @@
       "section": "vocab",
       "lesson": 6,
       "word": "出す [費用を〜]",
-      "reading": "だす",
+      "reading": "だす [ひようを〜]",
       "meaning": "allow [an expense]",
       "exampleJp": "親が私の留学の費用を出してくれた。",
       "exampleEn": "My parents paid the expenses for my studying abroad."
@@ -6970,7 +6950,7 @@
       "section": "vocab",
       "lesson": 6,
       "word": "〜会 [講演〜]",
-      "reading": "〜かい",
+      "reading": "〜かい [こうえん〜]",
       "meaning": "[lecture] meeting",
       "exampleJp": "明日はホテルで会社の忘年会がある。",
       "exampleEn": "Tomorrow is the company's year-end meeting at a hotel."
@@ -7770,7 +7750,7 @@
       "section": "vocab",
       "lesson": 7,
       "word": "出す [料理を〜]",
-      "reading": "だす",
+      "reading": "だす [りょうりを〜]",
       "meaning": "serve [food]",
       "exampleJp": "お客さんに美味しい料理を出す。",
       "exampleEn": "Serve delicious food to the guests."
@@ -7957,7 +7937,7 @@
       "section": "vocab",
       "lesson": 7,
       "word": "〜部 [医学〜]",
-      "reading": "〜ぶ",
+      "reading": "〜ぶ [いがく〜]",
       "meaning": "[medical] faculty (department)",
       "exampleJp": "彼は工学部の学生です。",
       "exampleEn": "He is a student of the engineering department."
@@ -8232,7 +8212,7 @@
       "section": "vocab",
       "lesson": 7,
       "word": "受ける [誘いを〜]",
-      "reading": "うける",
+      "reading": "うける [さそいを〜]",
       "meaning": "accept [an invitation]",
       "exampleJp": "友達からのパーティーの誘いを受ける。",
       "exampleEn": "Accept a party invitation from a friend."
@@ -8265,7 +8245,7 @@
       "section": "vocab",
       "lesson": 7,
       "word": "空く [時間が〜]",
-      "reading": "あく",
+      "reading": "あく [じかんが〜]",
       "meaning": "be free [have some free time]",
       "exampleJp": "明日の午後は少し時間が空いています。",
       "exampleEn": "I have some free time tomorrow afternoon."
@@ -9062,7 +9042,7 @@
       "section": "vocab",
       "lesson": 8,
       "word": "取る [ノートを〜]",
-      "reading": "とる",
+      "reading": "とる [ノートを〜]",
       "meaning": "take [notes]",
       "exampleJp": "授業中に大切なポイントのノートを取る。",
       "exampleEn": "Take notes of important points during class."
@@ -9139,7 +9119,7 @@
       "section": "vocab",
       "lesson": 8,
       "word": "取る [免許を〜]",
-      "reading": "とる",
+      "reading": "とる [めんきょを〜]",
       "meaning": "get [a license]",
       "exampleJp": "自動車学校に通って免許を取る。",
       "exampleEn": "Attend a driving school to get a license."
@@ -9359,7 +9339,7 @@
       "section": "vocab",
       "lesson": 8,
       "word": "与える [ダメージを〜]",
-      "reading": "あたえる",
+      "reading": "あたえる [ダメージを〜]",
       "meaning": "cause [damage]",
       "exampleJp": "台風が農作物に大きなダメージを与えた。",
       "exampleEn": "The typhoon caused major damage to the crops."
@@ -9425,7 +9405,7 @@
       "section": "vocab",
       "lesson": 8,
       "word": "受ける [ダメージを〜]",
-      "reading": "うける",
+      "reading": "うける [ダメージを〜]",
       "meaning": "receive, sustain [damage]",
       "exampleJp": "地震で多くの建物がダメージを受けた。",
       "exampleEn": "Many buildings sustained damage from the earthquake."
@@ -10804,7 +10784,7 @@
       "section": "vocab",
       "lesson": 9,
       "word": "載る [例文が〜]",
-      "reading": "のる",
+      "reading": "のる [れいぶんが〜]",
       "meaning": "[examples] be given",
       "exampleJp": "辞書にはたくさんの例文が載っている。",
       "exampleEn": "Many example sentences are given in the dictionary."
@@ -10847,17 +10827,6 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
-      "word": "しっかり",
-      "reading": "しっかり",
-      "meaning": "reliably, properly",
-      "exampleJp": "テストの前に、しっかり復習してください。",
-      "exampleEn": "Please review properly before the test."
-    },
-    {
-      "uid": "n3-vocab-9-52",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 9,
       "word": "留守番をする",
       "reading": "るすばんをする",
       "meaning": "stay and look after [a house] while everyone else is out",
@@ -10865,7 +10834,7 @@
       "exampleEn": "Stay and look after the house while parents are out shopping."
     },
     {
-      "uid": "n3-vocab-9-53",
+      "uid": "n3-vocab-9-52",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10876,7 +10845,7 @@
       "exampleEn": "She is wearing cute floral patterned clothes."
     },
     {
-      "uid": "n3-vocab-9-54",
+      "uid": "n3-vocab-9-53",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10887,7 +10856,7 @@
       "exampleEn": "English is used as a global common language."
     },
     {
-      "uid": "n3-vocab-9-55",
+      "uid": "n3-vocab-9-54",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10898,7 +10867,7 @@
       "exampleEn": "His piano performance is truly wonderful."
     },
     {
-      "uid": "n3-vocab-9-56",
+      "uid": "n3-vocab-9-55",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10909,7 +10878,7 @@
       "exampleEn": "Invent new technology and get a patent."
     },
     {
-      "uid": "n3-vocab-9-57",
+      "uid": "n3-vocab-9-56",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10920,7 +10889,7 @@
       "exampleEn": "The economy was bad, and that company went into bankruptcy."
     },
     {
-      "uid": "n3-vocab-9-58",
+      "uid": "n3-vocab-9-57",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10931,7 +10900,7 @@
       "exampleEn": "I want to win the lottery and become a millionaire."
     },
     {
-      "uid": "n3-vocab-9-59",
+      "uid": "n3-vocab-9-58",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10940,7 +10909,7 @@
       "meaning": "to show, to appear, to reveal"
     },
     {
-      "uid": "n3-vocab-9-60",
+      "uid": "n3-vocab-9-59",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10949,7 +10918,7 @@
       "meaning": "expression, indication, sign"
     },
     {
-      "uid": "n3-vocab-9-61",
+      "uid": "n3-vocab-9-60",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10958,7 +10927,7 @@
       "meaning": "market, fair"
     },
     {
-      "uid": "n3-vocab-9-62",
+      "uid": "n3-vocab-9-61",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10967,7 +10936,7 @@
       "meaning": "market, bazaar"
     },
     {
-      "uid": "n3-vocab-9-63",
+      "uid": "n3-vocab-9-62",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10976,7 +10945,7 @@
       "meaning": "printing"
     },
     {
-      "uid": "n3-vocab-9-64",
+      "uid": "n3-vocab-9-63",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10985,7 +10954,7 @@
       "meaning": "impression"
     },
     {
-      "uid": "n3-vocab-9-65",
+      "uid": "n3-vocab-9-64",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -10994,7 +10963,7 @@
       "meaning": "to store to pay, to supply"
     },
     {
-      "uid": "n3-vocab-9-66",
+      "uid": "n3-vocab-9-65",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11003,7 +10972,7 @@
       "meaning": "magnification, enlargement"
     },
     {
-      "uid": "n3-vocab-9-67",
+      "uid": "n3-vocab-9-66",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11012,7 +10981,7 @@
       "meaning": "adjustment; addition and subtraction"
     },
     {
-      "uid": "n3-vocab-9-68",
+      "uid": "n3-vocab-9-67",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11021,7 +10990,7 @@
       "meaning": "feel disappointed, be dejected, lose heart"
     },
     {
-      "uid": "n3-vocab-9-69",
+      "uid": "n3-vocab-9-68",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11030,7 +10999,7 @@
       "meaning": "god"
     },
     {
-      "uid": "n3-vocab-9-70",
+      "uid": "n3-vocab-9-69",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11039,7 +11008,7 @@
       "meaning": "poor, pitiable, pathetic"
     },
     {
-      "uid": "n3-vocab-9-71",
+      "uid": "n3-vocab-9-70",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11048,7 +11017,7 @@
       "meaning": "member of the Diet, congress, or parliament"
     },
     {
-      "uid": "n3-vocab-9-72",
+      "uid": "n3-vocab-9-71",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11057,7 +11026,7 @@
       "meaning": "returning home"
     },
     {
-      "uid": "n3-vocab-9-73",
+      "uid": "n3-vocab-9-72",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11066,7 +11035,7 @@
       "meaning": "settlement, conclusion, rule"
     },
     {
-      "uid": "n3-vocab-9-74",
+      "uid": "n3-vocab-9-73",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11075,7 +11044,7 @@
       "meaning": "sudden, precipitous, radical"
     },
     {
-      "uid": "n3-vocab-9-75",
+      "uid": "n3-vocab-9-74",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11084,7 +11053,7 @@
       "meaning": "absorption, suction"
     },
     {
-      "uid": "n3-vocab-9-76",
+      "uid": "n3-vocab-9-75",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11093,7 +11062,7 @@
       "meaning": "(male) (vulg.) to eat"
     },
     {
-      "uid": "n3-vocab-9-77",
+      "uid": "n3-vocab-9-76",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11102,7 +11071,7 @@
       "meaning": "glass; grass"
     },
     {
-      "uid": "n3-vocab-9-78",
+      "uid": "n3-vocab-9-77",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11111,7 +11080,7 @@
       "meaning": "to append, to sum up, to add (up)"
     },
     {
-      "uid": "n3-vocab-9-79",
+      "uid": "n3-vocab-9-78",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11120,7 +11089,7 @@
       "meaning": "to join in, to accede to"
     },
     {
-      "uid": "n3-vocab-9-80",
+      "uid": "n3-vocab-9-79",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11129,7 +11098,7 @@
       "meaning": "today, present-day"
     },
     {
-      "uid": "n3-vocab-9-81",
+      "uid": "n3-vocab-9-80",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11138,7 +11107,7 @@
       "meaning": "actual spot, scene, field"
     },
     {
-      "uid": "n3-vocab-9-82",
+      "uid": "n3-vocab-9-81",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11147,7 +11116,7 @@
       "meaning": "language study"
     },
     {
-      "uid": "n3-vocab-9-83",
+      "uid": "n3-vocab-9-82",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11156,7 +11125,7 @@
       "meaning": "parcel, package"
     },
     {
-      "uid": "n3-vocab-9-84",
+      "uid": "n3-vocab-9-83",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11165,7 +11134,7 @@
       "meaning": "difficulty, distress"
     },
     {
-      "uid": "n3-vocab-9-85",
+      "uid": "n3-vocab-9-84",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11174,7 +11143,7 @@
       "meaning": "cherry blossom, cherry tree"
     },
     {
-      "uid": "n3-vocab-9-86",
+      "uid": "n3-vocab-9-85",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11183,7 +11152,7 @@
       "meaning": "to leave, to go away"
     },
     {
-      "uid": "n3-vocab-9-87",
+      "uid": "n3-vocab-9-86",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11192,7 +11161,7 @@
       "meaning": "participation"
     },
     {
-      "uid": "n3-vocab-9-88",
+      "uid": "n3-vocab-9-87",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11201,7 +11170,7 @@
       "meaning": "approval, agreement"
     },
     {
-      "uid": "n3-vocab-9-89",
+      "uid": "n3-vocab-9-88",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11210,7 +11179,7 @@
       "meaning": "lower part, bottom; lower reaches (of a river)"
     },
     {
-      "uid": "n3-vocab-9-90",
+      "uid": "n3-vocab-9-89",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11219,7 +11188,7 @@
       "meaning": "harvest, crop, ingathering"
     },
     {
-      "uid": "n3-vocab-9-91",
+      "uid": "n3-vocab-9-90",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11228,7 +11197,7 @@
       "meaning": "income, revenue"
     },
     {
-      "uid": "n3-vocab-9-92",
+      "uid": "n3-vocab-9-91",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11237,7 +11206,7 @@
       "meaning": "honesty, integrity, frankness"
     },
     {
-      "uid": "n3-vocab-9-93",
+      "uid": "n3-vocab-9-92",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11246,7 +11215,7 @@
       "meaning": "trader, shopkeeper, merchant"
     },
     {
-      "uid": "n3-vocab-9-94",
+      "uid": "n3-vocab-9-93",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11255,7 +11224,7 @@
       "meaning": "trade, business, commerce"
     },
     {
-      "uid": "n3-vocab-9-95",
+      "uid": "n3-vocab-9-94",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11264,7 +11233,7 @@
       "meaning": "mark; symbol; evidence"
     },
     {
-      "uid": "n3-vocab-9-96",
+      "uid": "n3-vocab-9-95",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11273,7 +11242,7 @@
       "meaning": "muscle, string, line"
     },
     {
-      "uid": "n3-vocab-9-97",
+      "uid": "n3-vocab-9-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11282,7 +11251,7 @@
       "meaning": "official, formal"
     },
     {
-      "uid": "n3-vocab-9-98",
+      "uid": "n3-vocab-9-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11291,7 +11260,7 @@
       "meaning": "set"
     },
     {
-      "uid": "n3-vocab-9-99",
+      "uid": "n3-vocab-9-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11300,7 +11269,7 @@
       "meaning": "increase, addition"
     },
     {
-      "uid": "n3-vocab-9-100",
+      "uid": "n3-vocab-9-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11309,7 +11278,7 @@
       "meaning": "respect, esteem, regard"
     },
     {
-      "uid": "n3-vocab-9-101",
+      "uid": "n3-vocab-9-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11318,7 +11287,7 @@
       "meaning": "most part, majority"
     },
     {
-      "uid": "n3-vocab-9-102",
+      "uid": "n3-vocab-9-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11327,7 +11296,7 @@
       "meaning": "at once, immediately"
     },
     {
-      "uid": "n3-vocab-9-103",
+      "uid": "n3-vocab-9-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11336,7 +11305,7 @@
       "meaning": "to rely on, to have recourse to, to depend on"
     },
     {
-      "uid": "n3-vocab-9-104",
+      "uid": "n3-vocab-9-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11345,7 +11314,7 @@
       "meaning": "tea"
     },
     {
-      "uid": "n3-vocab-9-105",
+      "uid": "n3-vocab-9-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11354,7 +11323,7 @@
       "meaning": "finally, at last"
     },
     {
-      "uid": "n3-vocab-9-106",
+      "uid": "n3-vocab-9-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11363,7 +11332,7 @@
       "meaning": "to pack, to shorten, to work out (details)"
     },
     {
-      "uid": "n3-vocab-9-107",
+      "uid": "n3-vocab-9-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11372,7 +11341,7 @@
       "meaning": "conjuring trick, magic"
     },
     {
-      "uid": "n3-vocab-9-108",
+      "uid": "n3-vocab-9-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11381,7 +11350,7 @@
       "meaning": "child, servant, foolishness"
     },
     {
-      "uid": "n3-vocab-9-109",
+      "uid": "n3-vocab-9-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11390,7 +11359,7 @@
       "meaning": "arrival"
     },
     {
-      "uid": "n3-vocab-9-110",
+      "uid": "n3-vocab-9-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11399,7 +11368,7 @@
       "meaning": "friend, companion, pal"
     },
     {
-      "uid": "n3-vocab-9-111",
+      "uid": "n3-vocab-9-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11408,7 +11377,7 @@
       "meaning": "scene; view; prospect; outlook"
     },
     {
-      "uid": "n3-vocab-9-112",
+      "uid": "n3-vocab-9-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11417,7 +11386,7 @@
       "meaning": "odour, scent, smell, stench"
     },
     {
-      "uid": "n3-vocab-9-113",
+      "uid": "n3-vocab-9-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11426,7 +11395,7 @@
       "meaning": "year"
     },
     {
-      "uid": "n3-vocab-9-114",
+      "uid": "n3-vocab-9-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11435,7 +11404,7 @@
       "meaning": "percent"
     },
     {
-      "uid": "n3-vocab-9-115",
+      "uid": "n3-vocab-9-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11444,7 +11413,7 @@
       "meaning": "end (e.g., of street), edge, margin"
     },
     {
-      "uid": "n3-vocab-9-116",
+      "uid": "n3-vocab-9-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11453,7 +11422,7 @@
       "meaning": "announcement; publication; presentation"
     },
     {
-      "uid": "n3-vocab-9-117",
+      "uid": "n3-vocab-9-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11462,7 +11431,7 @@
       "meaning": "aviation, flight"
     },
     {
-      "uid": "n3-vocab-9-118",
+      "uid": "n3-vocab-9-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11471,7 +11440,7 @@
       "meaning": "expression, presentation"
     },
     {
-      "uid": "n3-vocab-9-119",
+      "uid": "n3-vocab-9-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11480,7 +11449,7 @@
       "meaning": "insufficiency, shortage"
     },
     {
-      "uid": "n3-vocab-9-120",
+      "uid": "n3-vocab-9-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11489,7 +11458,7 @@
       "meaning": "wall, fence"
     },
     {
-      "uid": "n3-vocab-9-121",
+      "uid": "n3-vocab-9-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11498,7 +11467,7 @@
       "meaning": "rowing boat"
     },
     {
-      "uid": "n3-vocab-9-122",
+      "uid": "n3-vocab-9-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11507,7 +11476,7 @@
       "meaning": "the person himself"
     },
     {
-      "uid": "n3-vocab-9-123",
+      "uid": "n3-vocab-9-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11516,7 +11485,7 @@
       "meaning": "circle"
     },
     {
-      "uid": "n3-vocab-9-124",
+      "uid": "n3-vocab-9-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11525,7 +11494,7 @@
       "meaning": "to face"
     },
     {
-      "uid": "n3-vocab-9-125",
+      "uid": "n3-vocab-9-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11534,7 +11503,7 @@
       "meaning": "letter (of alphabet), character"
     },
     {
-      "uid": "n3-vocab-9-126",
+      "uid": "n3-vocab-9-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11543,7 +11512,7 @@
       "meaning": "courage, bravery, boldness"
     },
     {
-      "uid": "n3-vocab-9-127",
+      "uid": "n3-vocab-9-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11552,7 +11521,7 @@
       "meaning": "to cross (e.g., arms), to traverse"
     },
     {
-      "uid": "n3-vocab-9-128",
+      "uid": "n3-vocab-9-127",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11561,7 +11530,7 @@
       "meaning": "clever, shrewd, bright"
     },
     {
-      "uid": "n3-vocab-9-129",
+      "uid": "n3-vocab-9-128",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11570,7 +11539,7 @@
       "meaning": "cotton"
     },
     {
-      "uid": "n3-vocab-9-130",
+      "uid": "n3-vocab-9-129",
       "level": "N3",
       "section": "vocab",
       "lesson": 9,
@@ -11586,7 +11555,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "もうける [お金を〜]",
-      "reading": "もうける [お金を〜]",
+      "reading": "もうける [おかねを〜]",
       "meaning": "make [money], earn",
       "exampleJp": "彼は株でたくさんのお金をもうけた。",
       "exampleEn": "He made a lot of money in stocks."
@@ -11641,7 +11610,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "当たる [宝くじが〜]",
-      "reading": "あたる",
+      "reading": "あたる [たからくじが〜]",
       "meaning": "win [a lottery]",
       "exampleJp": "宝くじが当たったら、世界一周旅行をしたい。",
       "exampleEn": "If I win the lottery, I want to travel around the world."
@@ -11707,7 +11676,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "通じる [電話が〜]",
-      "reading": "つうじる",
+      "reading": "つうじる [でんわが〜]",
       "meaning": "get through [on the telephone]",
       "exampleJp": "何度かけても電話が通じない。",
       "exampleEn": "No matter how many times I call, the phone doesn't get through."
@@ -11817,7 +11786,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "出す [修理に〜]",
-      "reading": "だす",
+      "reading": "だす [しゅうりに〜]",
       "meaning": "send [for repair]",
       "exampleJp": "壊れたパソコンを修理に出す。",
       "exampleEn": "Send the broken computer for repair."
@@ -11872,7 +11841,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "入る [電源が〜]",
-      "reading": "はいる",
+      "reading": "はいる [でんげんが〜]",
       "meaning": "[power] be on",
       "exampleJp": "パソコンの電源が入らない。",
       "exampleEn": "The computer's power won't turn on."
@@ -11916,7 +11885,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "〜代 [60〜]",
-      "reading": "〜だい",
+      "reading": "〜だい [60〜]",
       "meaning": "-ies [sixties, etc.]",
       "exampleJp": "私の父は今、60代です。",
       "exampleEn": "My father is in his 60s now."
@@ -12180,7 +12149,7 @@
       "section": "vocab",
       "lesson": 10,
       "word": "深く [呼吸する]",
-      "reading": "ふかく",
+      "reading": "ふかく [こきゅうする]",
       "meaning": "[breathe] deeply",
       "exampleJp": "緊張をほぐすために深く呼吸する。",
       "exampleEn": "Breathe deeply to relieve tension."
@@ -12945,7 +12914,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "大〜 [〜家族]",
-      "reading": "だい〜",
+      "reading": "だい〜 [〜かぞく]",
       "meaning": "large [family]",
       "exampleJp": "この大都市には多くの人が住んでいる。",
       "exampleEn": "Many people live in this large city."
@@ -13022,7 +12991,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "出す [元気を〜]",
-      "reading": "だす",
+      "reading": "だす [げんきを〜]",
       "meaning": "cheer oneself up",
       "exampleJp": "失敗しても、元気を出して頑張ろう。",
       "exampleEn": "Even if you fail, cheer up and try your best."
@@ -13066,7 +13035,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "寄付する [病院に車いすを〜]",
-      "reading": "きふする",
+      "reading": "きふする [びょういんにくるまいすを〜]",
       "meaning": "donate [a wheelchair to the hospital]",
       "exampleJp": "ボランティア団体にお金を寄付する。",
       "exampleEn": "Donate money to a volunteer organization."
@@ -13209,7 +13178,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "つながる [電話が〜]",
-      "reading": "つながる [電話が〜]",
+      "reading": "つながる [でんわが〜]",
       "meaning": "connect, get through [on the telephone]",
       "exampleJp": "山の中ではスマートフォンがつながらない。",
       "exampleEn": "Smartphones don't connect in the mountains."
@@ -13341,7 +13310,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "軽く [体操する]",
-      "reading": "かるく",
+      "reading": "かるく [たいそうする]",
       "meaning": "[do] light [exercise]",
       "exampleJp": "毎朝、起きたら軽く体操をする。",
       "exampleEn": "Every morning, I do light exercise after waking up."
@@ -13363,7 +13332,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "酔う [乗り物に〜]",
-      "reading": "よう",
+      "reading": "よう [のりものに〜]",
       "meaning": "feel [travel] sick",
       "exampleJp": "私は船に酔いやすいので、薬を飲む。",
       "exampleEn": "I easily get seasick, so I take medicine."
@@ -13528,7 +13497,7 @@
       "section": "vocab",
       "lesson": 11,
       "word": "積もる [雪が〜]",
-      "reading": "つもる",
+      "reading": "つもる [ゆきが〜]",
       "meaning": "[snow] accumulate",
       "exampleJp": "道路に雪が5センチ積もった。",
       "exampleEn": "5 centimeters of snow accumulated on the road."
@@ -14294,7 +14263,7 @@
       "section": "vocab",
       "lesson": 12,
       "word": "当たる [日が〜]",
-      "reading": "あたる",
+      "reading": "あたる [ひが〜]",
       "meaning": "get [sunshine]",
       "exampleJp": "植物は日が当たらないと育たない。",
       "exampleEn": "Plants won't grow if they don't get sunshine."
@@ -14404,7 +14373,7 @@
       "section": "vocab",
       "lesson": 12,
       "word": "ぐっすり [〜眠る]",
-      "reading": "ぐっすり [〜眠る]",
+      "reading": "ぐっすり [〜ねむる]",
       "meaning": "soundly [sleep]",
       "exampleJp": "疲れていたので、朝までぐっすり眠った。",
       "exampleEn": "I was tired, so I slept soundly until morning."
@@ -14426,7 +14395,7 @@
       "section": "vocab",
       "lesson": 12,
       "word": "かける [迷惑を〜]",
-      "reading": "かける [迷惑を〜]",
+      "reading": "かける [めいわくを〜]",
       "meaning": "cause [trouble]",
       "exampleJp": "夜遅くに電話をして迷惑をかけた。",
       "exampleEn": "I caused trouble by calling late at night."
@@ -15935,7 +15904,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "広げる [話を〜]",
-      "reading": "ひろげる",
+      "reading": "ひろげる [はなしを〜]",
       "meaning": "broaden [the topic]",
       "exampleJp": "趣味の話をして話題を広げる。",
       "exampleEn": "Broaden the topic by talking about hobbies."
@@ -16023,7 +15992,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "落ちる [売上げが〜]",
-      "reading": "おちる",
+      "reading": "おちる [うりあげが〜]",
       "meaning": "[sales] drop",
       "exampleJp": "景気が悪くて売上げが落ちている。",
       "exampleEn": "The economy is bad and sales are dropping."
@@ -16056,7 +16025,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "関係 [音楽〜]",
-      "reading": "かんけい",
+      "reading": "かんけい [おんがく〜]",
       "meaning": "[music] related",
       "exampleJp": "将来は音楽関係の仕事に就きたい。",
       "exampleEn": "I want to get a music-related job in the future."
@@ -16177,7 +16146,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "〜奴 [いい〜]",
-      "reading": "〜やつ",
+      "reading": "〜やつ [いい〜]",
       "meaning": "[good] bloke, fellow",
       "exampleJp": "彼は本当にいい奴だ。",
       "exampleEn": "He is a really good bloke."
@@ -16298,7 +16267,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "不〜 [〜愉快]",
-      "reading": "ふ〜",
+      "reading": "ふ〜 [〜ゆかい]",
       "meaning": "un- [uncomfortable, unpleasant]",
       "exampleJp": "相手を不愉快にさせる発言は避ける。",
       "exampleEn": "Avoid remarks that make the other person uncomfortable."
@@ -16320,7 +16289,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "〜心 [親切〜]",
-      "reading": "〜しん",
+      "reading": "〜しん [しんせつ〜]",
       "meaning": "[kind] -heartedness",
       "exampleJp": "親切心から彼を助けた。",
       "exampleEn": "I helped him out of kind-heartedness."
@@ -16331,7 +16300,7 @@
       "section": "vocab",
       "lesson": 13,
       "word": "〜性 [人間〜]",
-      "reading": "〜せい",
+      "reading": "〜せい [にんげん〜]",
       "meaning": "-ity [humanity]",
       "exampleJp": "この仕事には人間性が求められる。",
       "exampleEn": "Humanity is required for this job."
@@ -16715,7 +16684,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "受ける [アニメが〜]",
-      "reading": "うける",
+      "reading": "うける [アニメが〜]",
       "meaning": "[anime] be well received",
       "exampleJp": "その映画は若者にとても受けている。",
       "exampleEn": "That movie is very well received by young people."
@@ -16858,7 +16827,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "代 [1960年〜]",
-      "reading": "だい",
+      "reading": "だい [1960ねん〜]",
       "meaning": "era [the 1960s]",
       "exampleJp": "彼は1990年代の音楽が好きだ。",
       "exampleEn": "He likes 1990s music."
@@ -17243,7 +17212,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "打つ [あいづちを〜]",
-      "reading": "うつ",
+      "reading": "うつ [あいづちを〜]",
       "meaning": "give [a response]",
       "exampleJp": "友達の話に大きくあいづちを打った。",
       "exampleEn": "I gave a big response to my friend's story."
@@ -17276,7 +17245,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "触れる [手に〜]",
-      "reading": "ふれる",
+      "reading": "ふれる [てに〜]",
       "meaning": "touch",
       "exampleJp": "作品には手を触れないでください。",
       "exampleEn": "Please do not touch the artwork."
@@ -17540,7 +17509,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "通う [血が〜]",
-      "reading": "かよう",
+      "reading": "かよう [ちが〜]",
       "meaning": "[blood] circulate",
       "exampleJp": "彼は血が通った暖かい人だ。",
       "exampleEn": "He is a warm person with circulating blood (warm-hearted)."
@@ -17584,7 +17553,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "投げ出す [身を〜]",
-      "reading": "なげだす",
+      "reading": "なげだす [みを〜]",
       "meaning": "sacrifice [oneself]",
       "exampleJp": "子供を助けるために身を投げ出した。",
       "exampleEn": "Sacrificed oneself to save the child."
@@ -17683,7 +17652,7 @@
       "section": "vocab",
       "lesson": 14,
       "word": "〜後 [何日〜]",
-      "reading": "〜ご",
+      "reading": "〜ご [なんにち〜]",
       "meaning": "[~ days] later",
       "exampleJp": "何日か後に結果が分かります。",
       "exampleEn": "We will know the result a few days later."
@@ -18226,7 +18195,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "経つ [時間が〜]",
-      "reading": "たつ",
+      "reading": "たつ [じかんが〜]",
       "meaning": "pass [time ~]",
       "exampleJp": "あっという間に時間が経ってしまった。",
       "exampleEn": "Time has passed in the blink of an eye."
@@ -18281,7 +18250,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "落ちる [能率が〜]",
-      "reading": "おちる",
+      "reading": "おちる [のうりつが〜]",
       "meaning": "[efficiency] drop",
       "exampleJp": "疲れていると仕事の能率が落ちる。",
       "exampleEn": "When you are tired, work efficiency drops."
@@ -18413,7 +18382,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "当たる [法則が〜]",
-      "reading": "あたる",
+      "reading": "あたる [ほうそくが〜]",
       "meaning": "[rule] prove correct",
       "exampleJp": "彼が言った法則がぴったり当たった。",
       "exampleEn": "The rule he stated proved completely correct."
@@ -18468,7 +18437,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "上がる [脈拍が〜]",
-      "reading": "あがる",
+      "reading": "あがる [みゃくはくが〜]",
       "meaning": "[pulse] rise, increase",
       "exampleJp": "緊張して脈拍が上がる。",
       "exampleEn": "Getting nervous, my pulse increases."
@@ -18556,7 +18525,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "示す [興味を〜]",
-      "reading": "しめす",
+      "reading": "しめす [きょうみを〜]",
       "meaning": "[interest] show",
       "exampleJp": "彼は新しい技術に強い興味を示した。",
       "exampleEn": "He showed strong interest in the new technology."
@@ -18600,7 +18569,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "腕 [太鼓の〜]",
-      "reading": "うで",
+      "reading": "うで [たいこの〜]",
       "meaning": "[drumming] skill",
       "exampleJp": "彼の太鼓の腕はプロ並みだ。",
       "exampleEn": "His drumming skill is on par with a professional."
@@ -18754,7 +18723,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "あげる [成果を〜]",
-      "reading": "あげる",
+      "reading": "あげる [せいかを〜]",
       "meaning": "achieve [results]",
       "exampleJp": "仕事で大きな成果をあげる。",
       "exampleEn": "Achieve a big result at work."
@@ -18776,7 +18745,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "結ぶ [実を〜]",
-      "reading": "むすぶ",
+      "reading": "むすぶ [みを〜]",
       "meaning": "grow [fruit], bear fruit",
       "exampleJp": "長年の研究がようやく実を結んだ。",
       "exampleEn": "The years of research have finally borne fruit."
@@ -18798,7 +18767,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "磨く [腕を〜]",
-      "reading": "みがく",
+      "reading": "みがく [うでを〜]",
       "meaning": "polish [skill]",
       "exampleJp": "料理の腕を磨くために教室に通う。",
       "exampleEn": "Attend classes to polish my cooking skills."
@@ -18809,7 +18778,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "〜好き [太鼓〜]",
-      "reading": "〜ずき",
+      "reading": "〜ずき [たいこ〜]",
       "meaning": "[taiko-] lover",
       "exampleJp": "彼は無類の車好きだ。",
       "exampleEn": "He is an unparalleled car lover."
@@ -18853,7 +18822,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "〜感 [リズム〜]",
-      "reading": "〜かん",
+      "reading": "〜かん [リズム〜]",
       "meaning": "sense of [rhythm]",
       "exampleJp": "彼はリズム感がある。",
       "exampleEn": "He has a sense of rhythm."
@@ -18864,7 +18833,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "甘える [お言葉に〜]",
-      "reading": "あまえる",
+      "reading": "あまえる [おことばに〜]",
       "meaning": "presume upon [an offer]",
       "exampleJp": "お言葉に甘えて、ご馳走になります。",
       "exampleEn": "Presuming upon your kind offer, I will let you treat me."
@@ -19194,7 +19163,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "出る [選挙に〜]",
-      "reading": "でる",
+      "reading": "でる [せんきょに〜]",
       "meaning": "stand [for election]",
       "exampleJp": "彼は次の選挙に出るつもりだ。",
       "exampleEn": "He intends to stand for the next election."
@@ -19271,7 +19240,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "一家 [音楽〜]",
-      "reading": "いっか",
+      "reading": "いっか [おんがく〜]",
       "meaning": "[musical] family",
       "exampleJp": "彼は有名な音楽一家に生まれた。",
       "exampleEn": "He was born into a famous musical family."
@@ -19315,7 +19284,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "かく [汗を〜]",
-      "reading": "かく",
+      "reading": "かく [あせを〜]",
       "meaning": "work up [a sweat]",
       "exampleJp": "運動をしてたくさん汗をかいた。",
       "exampleEn": "I exercised and worked up a lot of sweat."
@@ -19491,7 +19460,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "つながり [人と人との〜]",
-      "reading": "つながり",
+      "reading": "つながり [ひととひととの〜]",
       "meaning": "connections [between people]",
       "exampleJp": "人と人とのつながりを大切にしたい。",
       "exampleEn": "I want to value connections between people."
@@ -19634,7 +19603,7 @@
       "section": "vocab",
       "lesson": 15,
       "word": "込める [意味を〜]",
-      "reading": "こめる",
+      "reading": "こめる [いみを〜]",
       "meaning": "give [meaning], put into",
       "exampleJp": "感謝の気持ちを込めて手紙を書く。",
       "exampleEn": "Write a letter putting feelings of gratitude into it."
@@ -20892,17 +20861,6 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
-      "word": "チャンス",
-      "reading": "チャンス",
-      "meaning": "opportunity",
-      "exampleJp": "これは成功するための大きなチャンスだ。",
-      "exampleEn": "This is a big opportunity to succeed."
-    },
-    {
-      "uid": "n3-vocab-16-96",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 16,
       "word": "ウェブサイト",
       "reading": "ウェブサイト",
       "meaning": "website",
@@ -20910,7 +20868,7 @@
       "exampleEn": "Create the company's new website."
     },
     {
-      "uid": "n3-vocab-16-97",
+      "uid": "n3-vocab-16-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20921,7 +20879,7 @@
       "exampleEn": "A system to prevent the improper use of credit cards."
     },
     {
-      "uid": "n3-vocab-16-98",
+      "uid": "n3-vocab-16-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20932,7 +20890,7 @@
       "exampleEn": "The loss from the fraud incident exceeded 1 million yen."
     },
     {
-      "uid": "n3-vocab-16-99",
+      "uid": "n3-vocab-16-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20943,7 +20901,7 @@
       "exampleEn": "An enormous amount of money was stolen."
     },
     {
-      "uid": "n3-vocab-16-100",
+      "uid": "n3-vocab-16-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20954,7 +20912,7 @@
       "exampleEn": "The party cost is 3000 yen per person."
     },
     {
-      "uid": "n3-vocab-16-101",
+      "uid": "n3-vocab-16-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20965,7 +20923,7 @@
       "exampleEn": "Be careful of money troubles with friends."
     },
     {
-      "uid": "n3-vocab-16-102",
+      "uid": "n3-vocab-16-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20976,7 +20934,7 @@
       "exampleEn": "Fail and lose confidence."
     },
     {
-      "uid": "n3-vocab-16-103",
+      "uid": "n3-vocab-16-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20987,7 +20945,7 @@
       "exampleEn": "He currently lives in Tokyo."
     },
     {
-      "uid": "n3-vocab-16-104",
+      "uid": "n3-vocab-16-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -20998,7 +20956,7 @@
       "exampleEn": "Make a free e-mail address for work."
     },
     {
-      "uid": "n3-vocab-16-105",
+      "uid": "n3-vocab-16-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21009,7 +20967,7 @@
       "exampleEn": "The cause of the accident is still unknown at present."
     },
     {
-      "uid": "n3-vocab-16-106",
+      "uid": "n3-vocab-16-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21020,7 +20978,7 @@
       "exampleEn": "Check the written email and send it."
     },
     {
-      "uid": "n3-vocab-16-107",
+      "uid": "n3-vocab-16-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21031,7 +20989,7 @@
       "exampleEn": "He is creating a new original story."
     },
     {
-      "uid": "n3-vocab-16-108",
+      "uid": "n3-vocab-16-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21042,7 +21000,7 @@
       "exampleEn": "Build up a trusting relationship with customers."
     },
     {
-      "uid": "n3-vocab-16-109",
+      "uid": "n3-vocab-16-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21053,7 +21011,7 @@
       "exampleEn": "A thief entered the convenience store late at night."
     },
     {
-      "uid": "n3-vocab-16-110",
+      "uid": "n3-vocab-16-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21064,7 +21022,7 @@
       "exampleEn": "Do the procedures to leave the country at the airport."
     },
     {
-      "uid": "n3-vocab-16-111",
+      "uid": "n3-vocab-16-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21075,7 +21033,7 @@
       "exampleEn": "Put a letter addressed to a friend in the postbox."
     },
     {
-      "uid": "n3-vocab-16-112",
+      "uid": "n3-vocab-16-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21086,7 +21044,7 @@
       "exampleEn": "Register a new name in the address book."
     },
     {
-      "uid": "n3-vocab-16-113",
+      "uid": "n3-vocab-16-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21097,7 +21055,7 @@
       "exampleEn": "Sell and buy cars on the Internet."
     },
     {
-      "uid": "n3-vocab-16-114",
+      "uid": "n3-vocab-16-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21108,7 +21066,7 @@
       "exampleEn": "Mass-produce products in a factory."
     },
     {
-      "uid": "n3-vocab-16-115",
+      "uid": "n3-vocab-16-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21119,7 +21077,7 @@
       "exampleEn": "The fleeing thief is finally caught by the police."
     },
     {
-      "uid": "n3-vocab-16-116",
+      "uid": "n3-vocab-16-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21128,7 +21086,7 @@
       "meaning": "to give into custody, to deposit"
     },
     {
-      "uid": "n3-vocab-16-117",
+      "uid": "n3-vocab-16-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21137,7 +21095,7 @@
       "meaning": "harm, damage"
     },
     {
-      "uid": "n3-vocab-16-118",
+      "uid": "n3-vocab-16-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21146,7 +21104,7 @@
       "meaning": "right, privilege"
     },
     {
-      "uid": "n3-vocab-16-119",
+      "uid": "n3-vocab-16-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21155,7 +21113,7 @@
       "meaning": "obstacle, impediment"
     },
     {
-      "uid": "n3-vocab-16-120",
+      "uid": "n3-vocab-16-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21164,7 +21122,7 @@
       "meaning": "equipment, device, facilities"
     },
     {
-      "uid": "n3-vocab-16-121",
+      "uid": "n3-vocab-16-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21173,7 +21131,7 @@
       "meaning": "damage, loss"
     },
     {
-      "uid": "n3-vocab-16-122",
+      "uid": "n3-vocab-16-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21182,7 +21140,7 @@
       "meaning": "great war, great battle"
     },
     {
-      "uid": "n3-vocab-16-123",
+      "uid": "n3-vocab-16-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21191,7 +21149,7 @@
       "meaning": "arrest, apprehension, capture"
     },
     {
-      "uid": "n3-vocab-16-124",
+      "uid": "n3-vocab-16-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21200,7 +21158,7 @@
       "meaning": "battle, fight"
     },
     {
-      "uid": "n3-vocab-16-125",
+      "uid": "n3-vocab-16-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21209,7 +21167,7 @@
       "meaning": "to fight, to compete, to battle"
     },
     {
-      "uid": "n3-vocab-16-126",
+      "uid": "n3-vocab-16-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21218,7 +21176,7 @@
       "meaning": "age, years"
     },
     {
-      "uid": "n3-vocab-16-127",
+      "uid": "n3-vocab-16-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21227,7 +21185,7 @@
       "meaning": "sale, selling, marketing"
     },
     {
-      "uid": "n3-vocab-16-128",
+      "uid": "n3-vocab-16-127",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21236,7 +21194,7 @@
       "meaning": "damage"
     },
     {
-      "uid": "n3-vocab-16-129",
+      "uid": "n3-vocab-16-128",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21245,7 +21203,7 @@
       "meaning": "call, visit"
     },
     {
-      "uid": "n3-vocab-16-130",
+      "uid": "n3-vocab-16-129",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -21254,7 +21212,7 @@
       "meaning": "satisfaction"
     },
     {
-      "uid": "n3-vocab-16-131",
+      "uid": "n3-vocab-16-130",
       "level": "N3",
       "section": "vocab",
       "lesson": 16,
@@ -24909,7 +24867,7 @@
       "section": "vocab",
       "lesson": 19,
       "word": "使命[感]",
-      "reading": "しめいかん",
+      "reading": "しめいかん[かん]",
       "meaning": "[sense of] mission",
       "exampleJp": "医者としての使命感を持って働く。",
       "exampleEn": "Work with a sense of mission as a doctor."
@@ -29255,17 +29213,6 @@
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
-      "word": "めったに",
-      "reading": "めったに",
-      "meaning": "rarely",
-      "exampleJp": "彼は忙しいので、めったに映画を見に行かない。",
-      "exampleEn": "Because he is busy, he rarely goes to see a movie."
-    },
-    {
-      "uid": "n3-vocab-22-51",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 22,
       "word": "よほど",
       "reading": "よほど",
       "meaning": "pretty",
@@ -29273,7 +29220,7 @@
       "exampleEn": "He seemed pretty tired and went to sleep immediately."
     },
     {
-      "uid": "n3-vocab-22-52",
+      "uid": "n3-vocab-22-51",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29284,7 +29231,7 @@
       "exampleEn": "Receiving a present, she is in a good mood."
     },
     {
-      "uid": "n3-vocab-22-53",
+      "uid": "n3-vocab-22-52",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29295,7 +29242,7 @@
       "exampleEn": "Work is busy and stress builds up."
     },
     {
-      "uid": "n3-vocab-22-54",
+      "uid": "n3-vocab-22-53",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29306,7 +29253,7 @@
       "exampleEn": "If you work without taking a break, stress builds up."
     },
     {
-      "uid": "n3-vocab-22-55",
+      "uid": "n3-vocab-22-54",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29317,7 +29264,7 @@
       "exampleEn": "His words sharply went to the heart of the problem."
     },
     {
-      "uid": "n3-vocab-22-56",
+      "uid": "n3-vocab-22-55",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29328,7 +29275,7 @@
       "exampleEn": "Participate in ecology activities that protect the global environment."
     },
     {
-      "uid": "n3-vocab-22-57",
+      "uid": "n3-vocab-22-56",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29339,7 +29286,7 @@
       "exampleEn": "He was influenced by the thought of a famous philosopher."
     },
     {
-      "uid": "n3-vocab-22-58",
+      "uid": "n3-vocab-22-57",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29350,7 +29297,7 @@
       "exampleEn": "The train will arrive at the platform soon."
     },
     {
-      "uid": "n3-vocab-22-59",
+      "uid": "n3-vocab-22-58",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29361,7 +29308,7 @@
       "exampleEn": "That kind of problem should be solved immediately."
     },
     {
-      "uid": "n3-vocab-22-60",
+      "uid": "n3-vocab-22-59",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29372,7 +29319,7 @@
       "exampleEn": "The factory is in trouble due to a lack of young labor force."
     },
     {
-      "uid": "n3-vocab-22-61",
+      "uid": "n3-vocab-22-60",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29383,7 +29330,7 @@
       "exampleEn": "Earn living expenses by oneself without depending on parents."
     },
     {
-      "uid": "n3-vocab-22-62",
+      "uid": "n3-vocab-22-61",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29394,7 +29341,7 @@
       "exampleEn": "The company must protect the rights of workers."
     },
     {
-      "uid": "n3-vocab-22-63",
+      "uid": "n3-vocab-22-62",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29405,7 +29352,7 @@
       "exampleEn": "Flexibly accept new culture from overseas."
     },
     {
-      "uid": "n3-vocab-22-64",
+      "uid": "n3-vocab-22-63",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29416,7 +29363,7 @@
       "exampleEn": "Check the working conditions properly before changing jobs."
     },
     {
-      "uid": "n3-vocab-22-65",
+      "uid": "n3-vocab-22-64",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29427,7 +29374,7 @@
       "exampleEn": "My body got tired from long hours of work."
     },
     {
-      "uid": "n3-vocab-22-66",
+      "uid": "n3-vocab-22-65",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29436,7 +29383,7 @@
       "meaning": "postponement, adjournment"
     },
     {
-      "uid": "n3-vocab-22-67",
+      "uid": "n3-vocab-22-66",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29445,7 +29392,7 @@
       "meaning": "honourable"
     },
     {
-      "uid": "n3-vocab-22-68",
+      "uid": "n3-vocab-22-67",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29454,7 +29401,7 @@
       "meaning": "very young, childish"
     },
     {
-      "uid": "n3-vocab-22-69",
+      "uid": "n3-vocab-22-68",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29463,7 +29410,7 @@
       "meaning": "to restrict, to limit, to confine"
     },
     {
-      "uid": "n3-vocab-22-70",
+      "uid": "n3-vocab-22-69",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29472,7 +29419,7 @@
       "meaning": "term (school)"
     },
     {
-      "uid": "n3-vocab-22-71",
+      "uid": "n3-vocab-22-70",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29481,7 +29428,7 @@
       "meaning": "expectation, anticipation, hope"
     },
     {
-      "uid": "n3-vocab-22-72",
+      "uid": "n3-vocab-22-71",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29490,7 +29437,7 @@
       "meaning": "hope, wish, aspiration"
     },
     {
-      "uid": "n3-vocab-22-73",
+      "uid": "n3-vocab-22-72",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29499,7 +29446,7 @@
       "meaning": "cooperation, collaboration"
     },
     {
-      "uid": "n3-vocab-22-74",
+      "uid": "n3-vocab-22-73",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29508,7 +29455,7 @@
       "meaning": "prohibition, ban"
     },
     {
-      "uid": "n3-vocab-22-75",
+      "uid": "n3-vocab-22-74",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29517,7 +29464,7 @@
       "meaning": "to rot, to go bad"
     },
     {
-      "uid": "n3-vocab-22-76",
+      "uid": "n3-vocab-22-75",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29526,7 +29473,7 @@
       "meaning": "to repeat, to do something over again"
     },
     {
-      "uid": "n3-vocab-22-77",
+      "uid": "n3-vocab-22-76",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29535,7 +29482,7 @@
       "meaning": "lower (in rank or quality), inferior; second volume"
     },
     {
-      "uid": "n3-vocab-22-78",
+      "uid": "n3-vocab-22-77",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29544,7 +29491,7 @@
       "meaning": "ticket, certificate"
     },
     {
-      "uid": "n3-vocab-22-79",
+      "uid": "n3-vocab-22-78",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29553,7 +29500,7 @@
       "meaning": "limit, bound"
     },
     {
-      "uid": "n3-vocab-22-80",
+      "uid": "n3-vocab-22-79",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29562,7 +29509,7 @@
       "meaning": "high speed, high gear"
     },
     {
-      "uid": "n3-vocab-22-81",
+      "uid": "n3-vocab-22-80",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29571,7 +29518,7 @@
       "meaning": "quite, very"
     },
     {
-      "uid": "n3-vocab-22-82",
+      "uid": "n3-vocab-22-81",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29580,7 +29527,7 @@
       "meaning": "flour, powder"
     },
     {
-      "uid": "n3-vocab-22-83",
+      "uid": "n3-vocab-22-82",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29589,7 +29536,7 @@
       "meaning": "service, support system; goods or services without charge"
     },
     {
-      "uid": "n3-vocab-22-84",
+      "uid": "n3-vocab-22-83",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29598,7 +29545,7 @@
       "meaning": "to invite (someone to do something with you); to tempt, to lure"
     },
     {
-      "uid": "n3-vocab-22-85",
+      "uid": "n3-vocab-22-84",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29607,7 +29554,7 @@
       "meaning": "oxygen"
     },
     {
-      "uid": "n3-vocab-22-86",
+      "uid": "n3-vocab-22-85",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29616,7 +29563,7 @@
       "meaning": "oneself"
     },
     {
-      "uid": "n3-vocab-22-87",
+      "uid": "n3-vocab-22-86",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29625,7 +29572,7 @@
       "meaning": "often, again and again, frequently"
     },
     {
-      "uid": "n3-vocab-22-88",
+      "uid": "n3-vocab-22-87",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29634,7 +29581,7 @@
       "meaning": "funds, capital"
     },
     {
-      "uid": "n3-vocab-22-89",
+      "uid": "n3-vocab-22-88",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29643,7 +29590,7 @@
       "meaning": "important, essential"
     },
     {
-      "uid": "n3-vocab-22-90",
+      "uid": "n3-vocab-22-89",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29652,7 +29599,7 @@
       "meaning": "turn (in line), order of things"
     },
     {
-      "uid": "n3-vocab-22-91",
+      "uid": "n3-vocab-22-90",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29661,7 +29608,7 @@
       "meaning": "improvement, advance"
     },
     {
-      "uid": "n3-vocab-22-92",
+      "uid": "n3-vocab-22-91",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29670,7 +29617,7 @@
       "meaning": "study, den"
     },
     {
-      "uid": "n3-vocab-22-93",
+      "uid": "n3-vocab-22-92",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29679,7 +29626,7 @@
       "meaning": "heart"
     },
     {
-      "uid": "n3-vocab-22-94",
+      "uid": "n3-vocab-22-93",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29688,7 +29635,7 @@
       "meaning": "extremely"
     },
     {
-      "uid": "n3-vocab-22-95",
+      "uid": "n3-vocab-22-94",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29697,7 +29644,7 @@
       "meaning": "that is, namely, e.g."
     },
     {
-      "uid": "n3-vocab-22-96",
+      "uid": "n3-vocab-22-95",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29706,7 +29653,7 @@
       "meaning": "government, administration"
     },
     {
-      "uid": "n3-vocab-22-97",
+      "uid": "n3-vocab-22-96",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29715,7 +29662,7 @@
       "meaning": "the entire nation, country-wide, nation-wide"
     },
     {
-      "uid": "n3-vocab-22-98",
+      "uid": "n3-vocab-22-97",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29724,7 +29671,7 @@
       "meaning": "without change, as it is (e.g., now)"
     },
     {
-      "uid": "n3-vocab-22-99",
+      "uid": "n3-vocab-22-98",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29733,7 +29680,7 @@
       "meaning": "other (esp. places and things)"
     },
     {
-      "uid": "n3-vocab-22-100",
+      "uid": "n3-vocab-22-99",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29742,7 +29689,7 @@
       "meaning": "but, however"
     },
     {
-      "uid": "n3-vocab-22-101",
+      "uid": "n3-vocab-22-100",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29751,7 +29698,7 @@
       "meaning": "valley"
     },
     {
-      "uid": "n3-vocab-22-102",
+      "uid": "n3-vocab-22-101",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29760,7 +29707,7 @@
       "meaning": "area, region"
     },
     {
-      "uid": "n3-vocab-22-103",
+      "uid": "n3-vocab-22-102",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29769,7 +29716,7 @@
       "meaning": "suspension, stoppage, discontinuance"
     },
     {
-      "uid": "n3-vocab-22-104",
+      "uid": "n3-vocab-22-103",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29778,7 +29725,7 @@
       "meaning": "in succession, one by one"
     },
     {
-      "uid": "n3-vocab-22-105",
+      "uid": "n3-vocab-22-104",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29787,7 +29734,7 @@
       "meaning": "outflow, coming (going) out, graduate (of)"
     },
     {
-      "uid": "n3-vocab-22-106",
+      "uid": "n3-vocab-22-105",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29796,7 +29743,7 @@
       "meaning": "fixed term"
     },
     {
-      "uid": "n3-vocab-22-107",
+      "uid": "n3-vocab-22-106",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29805,7 +29752,7 @@
       "meaning": "morals"
     },
     {
-      "uid": "n3-vocab-22-108",
+      "uid": "n3-vocab-22-107",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29814,7 +29761,7 @@
       "meaning": "old people, the aged"
     },
     {
-      "uid": "n3-vocab-22-109",
+      "uid": "n3-vocab-22-108",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29823,7 +29770,7 @@
       "meaning": "playing cards (lit: trump)"
     },
     {
-      "uid": "n3-vocab-22-110",
+      "uid": "n3-vocab-22-109",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29832,7 +29779,7 @@
       "meaning": "nothing"
     },
     {
-      "uid": "n3-vocab-22-111",
+      "uid": "n3-vocab-22-110",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29841,7 +29788,7 @@
       "meaning": "Japan"
     },
     {
-      "uid": "n3-vocab-22-112",
+      "uid": "n3-vocab-22-111",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29850,7 +29797,7 @@
       "meaning": "eaves"
     },
     {
-      "uid": "n3-vocab-22-113",
+      "uid": "n3-vocab-22-112",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29859,7 +29806,7 @@
       "meaning": "wish, desire, (a) hope"
     },
     {
-      "uid": "n3-vocab-22-114",
+      "uid": "n3-vocab-22-113",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29868,7 +29815,7 @@
       "meaning": "to desire, to wish for; to view"
     },
     {
-      "uid": "n3-vocab-22-115",
+      "uid": "n3-vocab-22-114",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29877,7 +29824,7 @@
       "meaning": "one's turn; watch, guard"
     },
     {
-      "uid": "n3-vocab-22-116",
+      "uid": "n3-vocab-22-115",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29886,7 +29833,7 @@
       "meaning": "crowd of people"
     },
     {
-      "uid": "n3-vocab-22-117",
+      "uid": "n3-vocab-22-116",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29895,7 +29842,7 @@
       "meaning": "nothing, naught, nil, zero"
     },
     {
-      "uid": "n3-vocab-22-118",
+      "uid": "n3-vocab-22-117",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29904,7 +29851,7 @@
       "meaning": "writing brush"
     },
     {
-      "uid": "n3-vocab-22-119",
+      "uid": "n3-vocab-22-118",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29913,7 +29860,7 @@
       "meaning": "Act (law: the X Act)"
     },
     {
-      "uid": "n3-vocab-22-120",
+      "uid": "n3-vocab-22-119",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29922,7 +29869,7 @@
       "meaning": "other (esp. places and things)"
     },
     {
-      "uid": "n3-vocab-22-121",
+      "uid": "n3-vocab-22-120",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29931,7 +29878,7 @@
       "meaning": "to increase, to gain"
     },
     {
-      "uid": "n3-vocab-22-122",
+      "uid": "n3-vocab-22-121",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29940,7 +29887,7 @@
       "meaning": "thick, close"
     },
     {
-      "uid": "n3-vocab-22-123",
+      "uid": "n3-vocab-22-122",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29949,7 +29896,7 @@
       "meaning": "master, expert"
     },
     {
-      "uid": "n3-vocab-22-124",
+      "uid": "n3-vocab-22-123",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29958,7 +29905,7 @@
       "meaning": "role, position"
     },
     {
-      "uid": "n3-vocab-22-125",
+      "uid": "n3-vocab-22-124",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29967,7 +29914,7 @@
       "meaning": "way, manner, kind"
     },
     {
-      "uid": "n3-vocab-22-126",
+      "uid": "n3-vocab-22-125",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
@@ -29976,22 +29923,13 @@
       "meaning": "expectation, forecast"
     },
     {
-      "uid": "n3-vocab-22-127",
+      "uid": "n3-vocab-22-126",
       "level": "N3",
       "section": "vocab",
       "lesson": 22,
       "word": "連続",
       "reading": "れんぞく",
       "meaning": "consecutive, continuity, continuing"
-    },
-    {
-      "uid": "n3-vocab-22-128",
-      "level": "N3",
-      "section": "vocab",
-      "lesson": 22,
-      "word": "大した",
-      "reading": "たいした",
-      "meaning": "significant, great, considerable"
     }
   ],
   "23": [
@@ -31224,7 +31162,7 @@
       "section": "vocab",
       "lesson": 24,
       "word": "はまる[型に〜]",
-      "reading": "はまる[型に〜]",
+      "reading": "はまる[かたに〜]",
       "meaning": "conform [to a tradition]",
       "exampleJp": "彼は型にはまったつまらない考え方をする。",
       "exampleEn": "He has a boring, conform-to-tradition way of thinking."

@@ -1,3 +1,4 @@
+import { posLabel } from '../../utils/pos';
 import { GrammarItem, KanjiItem, LevelType, VocabItem } from '../../types/japanese';
 import { getTagMeta } from '../../utils/tags';
 import {
@@ -199,7 +200,7 @@ export function vocabHelpPromptFor(vocab: VocabItem, level: LevelType): string {
     meaning: vocab.meaning.replace(/\[/g, '(').replace(/\]/g, ')'),
     level,
     lesson: vocab.lesson,
-    pos: vocab.pos,
+    pos: vocab.pos ? posLabel(vocab.pos) : undefined,
     example: vocab.exampleJp,
   });
 }

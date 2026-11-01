@@ -153,7 +153,7 @@ describe('vocab usage prompt', () => {
     expect(prompt).toContain('Word: 帰ります（かえります）');
     expect(prompt).toContain('listed in ます-form');
     expect(prompt).toContain('do not reuse it): うちへ帰ります。');
-    expect(prompt).toContain('Part of speech: Verb (Group I)');
+    expect(prompt).toContain('Part of speech: Verb (Group I, godan)');
     expect(prompt).toContain('studied N5 Lessons 1–5 only');
     for (const label of ['**Usage:**', '**Collocations:**', '**Watch out:**', '**Example:**']) {
       expect(prompt).toContain(label);
@@ -203,7 +203,8 @@ describe('kanji mnemonic prompt', () => {
   });
 
   it('N4 絵: a compound with null reading/meaning is left out, not crashed on', () => {
-    const k = row<KanjiItem>(n4Kanji, 'n4-kanji-1-1'); // only compound: 絵をかきます, reading/meaning null
+    // The real row was filled in (scripts/fix-n4-compounds.ts); the type still allows null.
+    const k: KanjiItem = { ...row<KanjiItem>(n4Kanji, 'n4-kanji-1-1'), compounds: [{ word: '絵をかきます', reading: null, meaning: null }] };
     const prompt = kanjiMnemonicPromptFor(k, 'N4');
     expect(prompt).toContain('KANJI (JLPT N4): 絵');
     expect(prompt).not.toContain('絵をかきます');

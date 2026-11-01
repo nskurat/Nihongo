@@ -1,3 +1,5 @@
+import { SAME_WORD_SPELLINGS } from '../../grammar-app/src/services/search/aliases';
+
 /**
  * Pure, side-effect-free helpers shared by the JLPT kanji/vocab content scripts.
  * Unit-tested in grammar-app/src/utils/__tests__/jlptContent.test.ts.
@@ -178,10 +180,14 @@ export function buildCoverageIndex(rows: { word: string; meaning?: string }[]): 
  * a textbook -ます form), or it is a kanji spelling of a word we write in kana — same
  * reading and an overlapping gloss (其れ = それ, but 肺 ≠ はい "yes").
  */
+
 export function isWordCovered(word: SourceWord, index: CoverageIndex): boolean {
   const head = word.kanji || word.kana;
   if (index.forms.has(head) || masuForms(head).some((f) => index.forms.has(f))) return true;
   if (!word.kanji) return false;
+  // Reviewed spellings of a word we already teach in kana, whatever their glosses say.
+  const kanaForm = SAME_WORD_SPELLINGS[word.kanji];
+  if (kanaForm && index.forms.has(kanaForm)) return true;
   // A kanji spelling of a word we teach in kana — as is (其れ = それ) or as its ます form
   // (掛かる = かかります, 居る = います) — when the glosses agree (肺 ≠ はい "yes").
   return [word.kana, ...masuForms(word.kana)].some((kana) =>

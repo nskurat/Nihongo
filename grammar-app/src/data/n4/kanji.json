@@ -17,8 +17,8 @@
       "compounds": [
         {
           "word": "絵をかきます",
-          "reading": null,
-          "meaning": null
+          "reading": "えをかきます",
+          "meaning": "draw a picture"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B5%B5%23kanji"
@@ -466,9 +466,9 @@
       "radical": "夕 (evening, sunset)",
       "compounds": [
         {
-          "word": "夢を見ます dream a",
-          "reading": null,
-          "meaning": "dream"
+          "word": "夢を見ます",
+          "reading": "ゆめをみます",
+          "meaning": "have a dream"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%A2%23kanji"
@@ -494,9 +494,9 @@
       "radical": "囗 (enclosure)",
       "compounds": [
         {
-          "word": "1日に1回 once a",
-          "reading": null,
-          "meaning": "day"
+          "word": "1日に1回",
+          "reading": "いちにちにいっかい",
+          "meaning": "once a day"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%9B%9E%23kanji"
@@ -519,7 +519,7 @@
       "compounds": [
         {
           "word": "泳ぎます",
-          "reading": null,
+          "reading": "およぎます",
           "meaning": "swim"
         }
       ],
@@ -543,8 +543,8 @@
       "compounds": [
         {
           "word": "いすに座ります",
-          "reading": null,
-          "meaning": null
+          "reading": "いすにすわります",
+          "meaning": "sit on a chair"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BA%A7%23kanji"
@@ -567,8 +567,8 @@
       "compounds": [
         {
           "word": "駅まで走ります",
-          "reading": null,
-          "meaning": null
+          "reading": "えきまではしります",
+          "meaning": "run to the station"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%B5%B0%23kanji"
@@ -589,9 +589,9 @@
       "radical": "彳 (step)",
       "compounds": [
         {
-          "word": "役に立ちます be",
-          "reading": null,
-          "meaning": "useful"
+          "word": "役に立ちます",
+          "reading": "やくにたちます",
+          "meaning": "be useful"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BD%B9%23kanji"
@@ -875,7 +875,7 @@
       "compounds": [
         {
           "word": "選びます",
-          "reading": null,
+          "reading": "えらびます",
           "meaning": "choose"
         }
       ],
@@ -904,8 +904,8 @@
       "compounds": [
         {
           "word": "大学に通います",
-          "reading": null,
-          "meaning": null
+          "reading": "だいがくにかよいます",
+          "meaning": "go to university (regularly)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%80%9A%23kanji"
@@ -1142,9 +1142,9 @@
       "radical": "艸",
       "compounds": [
         {
-          "word": "落とします drop,",
-          "reading": null,
-          "meaning": "lose"
+          "word": "落とします",
+          "reading": "おとします",
+          "meaning": "drop, lose"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%90%BD%23kanji"
@@ -1167,9 +1167,9 @@
       "radical": "水 (water)",
       "compounds": [
         {
-          "word": "消えます go",
-          "reading": null,
-          "meaning": "off"
+          "word": "消えます",
+          "reading": "きえます",
+          "meaning": "go off, go out (a light, a fire)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B6%88%23kanji"
@@ -1196,9 +1196,9 @@
       "radical": "水 (water)",
       "compounds": [
         {
-          "word": "汚れます get",
-          "reading": null,
-          "meaning": "dirty"
+          "word": "汚れます",
+          "reading": "よごれます",
+          "meaning": "get dirty"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B1%9A%23kanji"
@@ -1224,9 +1224,9 @@
       "radical": "刀 (knife, sword)",
       "compounds": [
         {
-          "word": "割れます break,",
-          "reading": null,
-          "meaning": "smash"
+          "word": "割れます",
+          "reading": "われます",
+          "meaning": "break, smash"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%89%B2%23kanji"
@@ -1479,9 +1479,9 @@
       "radical": "网 (net)",
       "compounds": [
         {
-          "word": "置きます put,",
-          "reading": null,
-          "meaning": "place"
+          "word": "置きます",
+          "reading": "おきます",
+          "meaning": "put, place"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%BD%AE%23kanji"
@@ -1508,7 +1508,7 @@
       "compounds": [
         {
           "word": "掛けます",
-          "reading": null,
+          "reading": "かけます",
           "meaning": "hang"
         }
       ],
@@ -1531,9 +1531,9 @@
       "radical": "片",
       "compounds": [
         {
-          "word": "片づけます tidy",
-          "reading": null,
-          "meaning": "up"
+          "word": "片づけます",
+          "reading": "かたづけます",
+          "meaning": "tidy up"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%89%87%23kanji"
@@ -1833,9 +1833,9 @@
       "radical": "又",
       "compounds": [
         {
-          "word": "試験を受けます take an",
-          "reading": null,
-          "meaning": "exam"
+          "word": "試験を受けます",
+          "reading": "しけんをうけます",
+          "meaning": "take an exam"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%97%23kanji"
@@ -1913,9 +1913,9 @@
       "radical": "辵",
       "compounds": [
         {
-          "word": "連れて行きます take (someone)",
-          "reading": null,
-          "meaning": "along"
+          "word": "連れて行きます",
+          "reading": "つれていきます",
+          "meaning": "take (someone) along"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%80%A3%23kanji"
@@ -1942,7 +1942,7 @@
       "compounds": [
         {
           "word": "残ります",
-          "reading": null,
+          "reading": "のこります",
           "meaning": "remain"
         }
       ],
@@ -2143,9 +2143,9 @@
       "radical": "力",
       "compounds": [
         {
-          "word": "試合に勝ちます win a",
-          "reading": null,
-          "meaning": "match"
+          "word": "試合に勝ちます",
+          "reading": "しあいにかちます",
+          "meaning": "win a match"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8B%9D%23kanji"
@@ -2169,9 +2169,9 @@
       "radical": "貝 (shell)",
       "compounds": [
         {
-          "word": "試合に負けます lose a",
-          "reading": null,
-          "meaning": "match"
+          "word": "試合に負けます",
+          "reading": "しあいにまけます",
+          "meaning": "lose a match"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%B2%A0%23kanji"
@@ -2198,9 +2198,9 @@
       "radical": "糸",
       "compounds": [
         {
-          "word": "雨が続きます rain",
-          "reading": null,
-          "meaning": "continues"
+          "word": "雨が続きます",
+          "reading": "あめがつづきます",
+          "meaning": "the rain continues"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B6%9A%23kanji"
@@ -2228,9 +2228,9 @@
       "radical": "目",
       "compounds": [
         {
-          "word": "時計が直ります the clock gets",
-          "reading": null,
-          "meaning": "fixed"
+          "word": "時計が直ります",
+          "reading": "とけいがなおります",
+          "meaning": "the clock gets fixed"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%9B%B4%23kanji"
@@ -2256,9 +2256,9 @@
       "radical": "水 (water)",
       "compounds": [
         {
-          "word": "病気が治ります recover from",
-          "reading": null,
-          "meaning": "illness"
+          "word": "病気が治ります",
+          "reading": "びょうきがなおります",
+          "meaning": "recover from an illness"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B2%BB%23kanji"
@@ -2285,9 +2285,9 @@
       "radical": "癶",
       "compounds": [
         {
-          "word": "山に登ります climb a",
-          "reading": null,
-          "meaning": "mountain"
+          "word": "山に登ります",
+          "reading": "やまにのぼります",
+          "meaning": "climb a mountain"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%99%BB%23kanji"
@@ -2310,9 +2310,9 @@
       "radical": "戸 (door, house)",
       "compounds": [
         {
-          "word": "会社に戻ります return to the",
-          "reading": null,
-          "meaning": "office"
+          "word": "会社に戻ります",
+          "reading": "かいしゃにもどります",
+          "meaning": "return to the office"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%88%BB%23kanji"
@@ -2495,7 +2495,7 @@
       "compounds": [
         {
           "word": "触ります",
-          "reading": null,
+          "reading": "さわります",
           "meaning": "touch"
         }
       ],
@@ -2519,8 +2519,8 @@
       "compounds": [
         {
           "word": "たばこを吸います",
-          "reading": null,
-          "meaning": "smoke"
+          "reading": "たばこをすいます",
+          "meaning": "smoke a cigarette"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%B8%23kanji"
@@ -2548,8 +2548,8 @@
       "compounds": [
         {
           "word": "伝えます",
-          "reading": null,
-          "meaning": "convey"
+          "reading": "つたえます",
+          "meaning": "convey, tell"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%BC%9D%23kanji"
@@ -2572,7 +2572,7 @@
       "compounds": [
         {
           "word": "投げます",
-          "reading": null,
+          "reading": "なげます",
           "meaning": "throw"
         }
       ],
@@ -2597,9 +2597,9 @@
       "radical": "曰",
       "compounds": [
         {
-          "word": "右へ曲がります turn",
-          "reading": null,
-          "meaning": "right"
+          "word": "右へ曲がります",
+          "reading": "みぎへまがります",
+          "meaning": "turn right"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9B%B2%23kanji"
@@ -2805,7 +2805,7 @@
       "compounds": [
         {
           "word": "踊ります",
-          "reading": null,
+          "reading": "おどります",
           "meaning": "dance"
         }
       ],
@@ -2829,9 +2829,9 @@
       "radical": "石",
       "compounds": [
         {
-          "word": "歯を磨きます brush",
-          "reading": null,
-          "meaning": "teeth"
+          "word": "歯を磨きます",
+          "reading": "はをみがきます",
+          "meaning": "brush one's teeth"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%A3%A8%23kanji"
@@ -2854,9 +2854,9 @@
       "radical": "手",
       "compounds": [
         {
-          "word": "乗り換えます transfer,",
-          "reading": null,
-          "meaning": "change (trains)"
+          "word": "乗り換えます",
+          "reading": "のりかえます",
+          "meaning": "transfer, change (trains)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%8F%9B%23kanji"
@@ -2946,8 +2946,8 @@
       "compounds": [
         {
           "word": "島に住んでいます",
-          "reading": null,
-          "meaning": null
+          "reading": "しまにすんでいます",
+          "meaning": "live on an island"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%B3%B6%23kanji"
@@ -2970,8 +2970,8 @@
       "compounds": [
         {
           "word": "村の学校",
-          "reading": null,
-          "meaning": null
+          "reading": "むらのがっこう",
+          "meaning": "the village school"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9D%91%23kanji"
@@ -2994,8 +2994,8 @@
       "compounds": [
         {
           "word": "葉の色が変わります",
-          "reading": null,
-          "meaning": null
+          "reading": "はのいろがかわります",
+          "meaning": "the leaves change colour"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%91%89%23kanji"
@@ -3019,8 +3019,8 @@
       "compounds": [
         {
           "word": "緑が多いです",
-          "reading": null,
-          "meaning": null
+          "reading": "みどりがおおいです",
+          "meaning": "there is a lot of greenery"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B7%91%23kanji"
@@ -3076,8 +3076,8 @@
       "compounds": [
         {
           "word": "向こうの島",
-          "reading": null,
-          "meaning": null
+          "reading": "むこうのしま",
+          "meaning": "the island over there"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%91%23kanji"
@@ -3101,8 +3101,8 @@
       "compounds": [
         {
           "word": "珍しい動物",
-          "reading": null,
-          "meaning": null
+          "reading": "めずらしいどうぶつ",
+          "meaning": "a rare animal"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%8F%8D%23kanji"
@@ -3127,8 +3127,8 @@
       "compounds": [
         {
           "word": "色が変わります",
-          "reading": null,
-          "meaning": null
+          "reading": "いろがかわります",
+          "meaning": "the colour changes"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%89%23kanji"
@@ -3151,8 +3151,8 @@
       "compounds": [
         {
           "word": "ごみを捨てます",
-          "reading": null,
-          "meaning": null
+          "reading": "ごみをすてます",
+          "meaning": "throw away rubbish"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%8D%A8%23kanji"
@@ -3176,8 +3176,8 @@
       "compounds": [
         {
           "word": "道で拾いました",
-          "reading": null,
-          "meaning": null
+          "reading": "みちでひろいました",
+          "meaning": "picked (it) up on the street"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%8B%BE%23kanji"
@@ -3282,8 +3282,8 @@
       "compounds": [
         {
           "word": "耳が痛いです",
-          "reading": null,
-          "meaning": null
+          "reading": "みみがいたいです",
+          "meaning": "my ear hurts"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%80%B3%23kanji"
@@ -3309,8 +3309,8 @@
       "compounds": [
         {
           "word": "歯を磨きます",
-          "reading": null,
-          "meaning": null
+          "reading": "はをみがきます",
+          "meaning": "brush one's teeth"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%AD%AF%23kanji"
@@ -3358,8 +3358,8 @@
       "compounds": [
         {
           "word": "野菜ジュース",
-          "reading": null,
-          "meaning": null
+          "reading": "やさいジュース",
+          "meaning": "vegetable juice"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%8F%9C%23kanji"
@@ -3384,8 +3384,8 @@
       "compounds": [
         {
           "word": "低いテーブル",
-          "reading": null,
-          "meaning": null
+          "reading": "ひくいテーブル",
+          "meaning": "a low table"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%BD%8E%23kanji"
@@ -3410,8 +3410,8 @@
       "compounds": [
         {
           "word": "太いひも",
-          "reading": null,
-          "meaning": null
+          "reading": "ふといひも",
+          "meaning": "a thick string"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A4%AA%23kanji"
@@ -3437,8 +3437,8 @@
       "compounds": [
         {
           "word": "体が弱いです",
-          "reading": null,
-          "meaning": null
+          "reading": "からだがよわいです",
+          "meaning": "have a weak constitution"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BC%B1%23kanji"
@@ -3467,8 +3467,8 @@
       "compounds": [
         {
           "word": "若い人",
-          "reading": null,
-          "meaning": null
+          "reading": "わかいひと",
+          "meaning": "a young person"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%8B%A5%23kanji"
@@ -3492,8 +3492,8 @@
       "compounds": [
         {
           "word": "別な料理",
-          "reading": null,
-          "meaning": null
+          "reading": "べつなりょうり",
+          "meaning": "a different dish"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%88%A5%23kanji"
@@ -3518,8 +3518,8 @@
       "compounds": [
         {
           "word": "ワープロを打ちます",
-          "reading": null,
-          "meaning": null
+          "reading": "ワープロをうちます",
+          "meaning": "type on a word processor"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%89%93%23kanji"
@@ -3547,8 +3547,8 @@
       "compounds": [
         {
           "word": "5時を過ぎます",
-          "reading": null,
-          "meaning": null
+          "reading": "ごじをすぎます",
+          "meaning": "pass five o'clock"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%81%8E%23kanji"
@@ -3575,8 +3575,8 @@
       "compounds": [
         {
           "word": "サイズが違います",
-          "reading": null,
-          "meaning": null
+          "reading": "サイズがちがいます",
+          "meaning": "the size is different"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%81%95%23kanji"
@@ -3599,8 +3599,8 @@
       "compounds": [
         {
           "word": "必ず連絡してください",
-          "reading": null,
-          "meaning": null
+          "reading": "かならずれんらくしてください",
+          "meaning": "be sure to get in touch"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BF%85%23kanji"
@@ -3628,8 +3628,8 @@
       "compounds": [
         {
           "word": "米を洗います",
-          "reading": null,
-          "meaning": null
+          "reading": "こめをあらいます",
+          "meaning": "wash rice"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%B1%B3%23kanji"
@@ -3652,8 +3652,8 @@
       "compounds": [
         {
           "word": "古いお寺",
-          "reading": null,
-          "meaning": null
+          "reading": "ふるいおてら",
+          "meaning": "an old temple"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%AF%BA%23kanji"
@@ -3676,8 +3676,8 @@
       "compounds": [
         {
           "word": "船に乗ります",
-          "reading": null,
-          "meaning": null
+          "reading": "ふねにのります",
+          "meaning": "get on a ship"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%88%B9%23kanji"
@@ -3724,8 +3724,8 @@
       "compounds": [
         {
           "word": "子どもを呼びます",
-          "reading": null,
-          "meaning": null
+          "reading": "こどもをよびます",
+          "meaning": "call a child"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%91%BC%23kanji"
@@ -3750,8 +3750,8 @@
       "compounds": [
         {
           "word": "買い物を頼みます",
-          "reading": null,
-          "meaning": null
+          "reading": "かいものをたのみます",
+          "meaning": "ask (someone) to do the shopping"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%A0%BC%23kanji"
@@ -3940,8 +3940,8 @@
       "compounds": [
         {
           "word": "木の枝",
-          "reading": null,
-          "meaning": null
+          "reading": "きのえだ",
+          "meaning": "a tree branch"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9E%9D%23kanji"
@@ -3988,8 +3988,8 @@
       "compounds": [
         {
           "word": "卵を買います",
-          "reading": null,
-          "meaning": null
+          "reading": "たまごをかいます",
+          "meaning": "buy eggs"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%B5%23kanji"
@@ -4012,8 +4012,8 @@
       "compounds": [
         {
           "word": "新しい橋",
-          "reading": null,
-          "meaning": null
+          "reading": "あたらしいはし",
+          "meaning": "a new bridge"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%A9%8B%23kanji"
@@ -4037,8 +4037,8 @@
       "compounds": [
         {
           "word": "本を2冊借ります",
-          "reading": null,
-          "meaning": null
+          "reading": "ほんをにさつかります",
+          "meaning": "borrow two books"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%86%8A%23kanji"
@@ -4059,8 +4059,8 @@
       "compounds": [
         {
           "word": "日本製",
-          "reading": null,
-          "meaning": null
+          "reading": "にほんせい",
+          "meaning": "made in Japan"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%A3%BD%23kanji"
@@ -4111,8 +4111,8 @@
       "compounds": [
         {
           "word": "難しい問題",
-          "reading": null,
-          "meaning": null
+          "reading": "むずかしいもんだい",
+          "meaning": "a difficult problem"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%9B%A3%23kanji"
@@ -4137,8 +4137,8 @@
       "compounds": [
         {
           "word": "易しい日本語",
-          "reading": null,
-          "meaning": null
+          "reading": "やさしいにほんご",
+          "meaning": "easy Japanese"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%98%93%23kanji"
@@ -4194,8 +4194,8 @@
       "compounds": [
         {
           "word": "子どもを育てます",
-          "reading": null,
-          "meaning": null
+          "reading": "こどもをそだてます",
+          "meaning": "bring up a child"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%82%B2%23kanji"
@@ -4222,8 +4222,8 @@
       "compounds": [
         {
           "word": "母が亡くなりました",
-          "reading": null,
-          "meaning": null
+          "reading": "ははがなくなりました",
+          "meaning": "my mother passed away"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%BA%A1%23kanji"
@@ -4279,8 +4279,8 @@
       "compounds": [
         {
           "word": "狭い部屋",
-          "reading": null,
-          "meaning": null
+          "reading": "せまいへや",
+          "meaning": "a small room"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%8B%AD%23kanji"
@@ -4337,8 +4337,8 @@
       "compounds": [
         {
           "word": "恥ずかしい話",
-          "reading": null,
-          "meaning": null
+          "reading": "はずかしいはなし",
+          "meaning": "an embarrassing story"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%81%A5%23kanji"
@@ -4361,8 +4361,8 @@
       "compounds": [
         {
           "word": "困ったことがあります",
-          "reading": null,
-          "meaning": null
+          "reading": "こまったことがあります",
+          "meaning": "have a problem"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%9B%B0%23kanji"
@@ -4385,8 +4385,8 @@
       "compounds": [
         {
           "word": "火事で2人死にました",
-          "reading": null,
-          "meaning": null
+          "reading": "かじでふたりしにました",
+          "meaning": "two people died in the fire"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%AD%BB%23kanji"
@@ -4437,8 +4437,8 @@
       "compounds": [
         {
           "word": "ビルが倒れました",
-          "reading": null,
-          "meaning": null
+          "reading": "ビルがたおれました",
+          "meaning": "the building collapsed"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%80%92%23kanji"
@@ -4466,8 +4466,8 @@
       "compounds": [
         {
           "word": "人が並んでいます",
-          "reading": null,
-          "meaning": null
+          "reading": "ひとがならんでいます",
+          "meaning": "people are standing in line"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%B8%A6%23kanji"
@@ -4639,8 +4639,8 @@
       "compounds": [
         {
           "word": "サイズが合います",
-          "reading": null,
-          "meaning": null
+          "reading": "サイズがあいます",
+          "meaning": "the size fits"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%88%23kanji"
@@ -4666,8 +4666,8 @@
       "compounds": [
         {
           "word": "紙の表",
-          "reading": null,
-          "meaning": null
+          "reading": "かみのおもて",
+          "meaning": "the front of the paper"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%A1%A8%23kanji"
@@ -4691,8 +4691,8 @@
       "compounds": [
         {
           "word": "本を返します",
-          "reading": null,
-          "meaning": null
+          "reading": "ほんをかえします",
+          "meaning": "return a book"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%BF%94%23kanji"
@@ -4717,8 +4717,8 @@
       "compounds": [
         {
           "word": "次の電車",
-          "reading": null,
-          "meaning": null
+          "reading": "つぎのでんしゃ",
+          "meaning": "the next train"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%AC%A1%23kanji"
@@ -4740,8 +4740,8 @@
       "compounds": [
         {
           "word": "りんごを5個買います",
-          "reading": null,
-          "meaning": null
+          "reading": "りんごをごこかいます",
+          "meaning": "buy five apples"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%80%8B%23kanji"
@@ -4766,8 +4766,8 @@
       "compounds": [
         {
           "word": "危ない所",
-          "reading": null,
-          "meaning": null
+          "reading": "あぶないところ",
+          "meaning": "a dangerous place"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8D%B1%23kanji"
@@ -4841,8 +4841,8 @@
       "compounds": [
         {
           "word": "予定を決めます",
-          "reading": null,
-          "meaning": null
+          "reading": "よていをきめます",
+          "meaning": "decide on a plan"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B1%BA%23kanji"
@@ -4865,8 +4865,8 @@
       "compounds": [
         {
           "word": "道が込んでいます",
-          "reading": null,
-          "meaning": null
+          "reading": "みちがこんでいます",
+          "meaning": "the road is busy"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%BE%BC%23kanji"
@@ -4921,8 +4921,8 @@
       "compounds": [
         {
           "word": "地図で道を調べます",
-          "reading": null,
-          "meaning": null
+          "reading": "ちずでみちをしらべます",
+          "meaning": "look up the way on a map"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%AA%BF%23kanji"
@@ -4947,8 +4947,8 @@
       "compounds": [
         {
           "word": "初めて日本へ来ました",
-          "reading": null,
-          "meaning": null
+          "reading": "はじめてにほんへきました",
+          "meaning": "came to Japan for the first time"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%88%9D%23kanji"
@@ -4974,8 +4974,8 @@
       "compounds": [
         {
           "word": "お祝いをします",
-          "reading": null,
-          "meaning": null
+          "reading": "おいわいをします",
+          "meaning": "celebrate"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%A5%9D%23kanji"
@@ -5021,8 +5021,8 @@
       "compounds": [
         {
           "word": "お見舞いに行きます",
-          "reading": null,
-          "meaning": null
+          "reading": "おみまいにいきます",
+          "meaning": "visit (someone) in hospital"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%88%9E%23kanji"
@@ -5047,8 +5047,8 @@
       "compounds": [
         {
           "word": "お土産を買います",
-          "reading": null,
-          "meaning": null
+          "reading": "おみやげをかいます",
+          "meaning": "buy a souvenir"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%94%A3%23kanji"
@@ -5098,8 +5098,8 @@
       "compounds": [
         {
           "word": "靴をはきます",
-          "reading": null,
-          "meaning": null
+          "reading": "くつをはきます",
+          "meaning": "put on shoes"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%9D%B4%23kanji"
@@ -5224,8 +5224,8 @@
       "compounds": [
         {
           "word": "はさみを取ってください",
-          "reading": null,
-          "meaning": null
+          "reading": "はさみをとってください",
+          "meaning": "please pass me the scissors"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%96%23kanji"
@@ -5249,8 +5249,8 @@
       "compounds": [
         {
           "word": "靴を取り替えます",
-          "reading": null,
-          "meaning": null
+          "reading": "くつをとりかえます",
+          "meaning": "exchange shoes"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9B%BF%23kanji"
@@ -5277,8 +5277,8 @@
       "compounds": [
         {
           "word": "大きい石",
-          "reading": null,
-          "meaning": null
+          "reading": "おおきいいし",
+          "meaning": "a big stone"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%9F%B3%23kanji"
@@ -5435,8 +5435,8 @@
       "compounds": [
         {
           "word": "厚い本",
-          "reading": null,
-          "meaning": null
+          "reading": "あついほん",
+          "meaning": "a thick book"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8E%9A%23kanji"
@@ -5464,8 +5464,8 @@
       "compounds": [
         {
           "word": "薄いノート",
-          "reading": null,
-          "meaning": null
+          "reading": "うすいノート",
+          "meaning": "a thin notebook"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%96%84%23kanji"
@@ -5489,8 +5489,8 @@
       "compounds": [
         {
           "word": "プレゼントを包みます",
-          "reading": null,
-          "meaning": null
+          "reading": "プレゼントをつつみます",
+          "meaning": "wrap a present"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8C%85%23kanji"
@@ -5514,8 +5514,8 @@
       "compounds": [
         {
           "word": "お湯を沸かします",
-          "reading": null,
-          "meaning": null
+          "reading": "おゆをわかします",
+          "meaning": "boil water"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B2%B8%23kanji"
@@ -5596,8 +5596,8 @@
       "compounds": [
         {
           "word": "シャツを2枚買います",
-          "reading": null,
-          "meaning": null
+          "reading": "シャツをにまいかいます",
+          "meaning": "buy two shirts"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9E%9A%23kanji"
@@ -5620,8 +5620,8 @@
       "compounds": [
         {
           "word": "暑い日",
-          "reading": null,
-          "meaning": null
+          "reading": "あついひ",
+          "meaning": "a hot day"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9A%91%23kanji"
@@ -5644,8 +5644,8 @@
       "compounds": [
         {
           "word": "寒い日",
-          "reading": null,
-          "meaning": null
+          "reading": "さむいひ",
+          "meaning": "a cold day"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%AF%92%23kanji"
@@ -5672,8 +5672,8 @@
       "compounds": [
         {
           "word": "暖かい部屋",
-          "reading": null,
-          "meaning": null
+          "reading": "あたたかいへや",
+          "meaning": "a warm room"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%9A%96%23kanji"
@@ -5701,8 +5701,8 @@
       "compounds": [
         {
           "word": "涼しい風",
-          "reading": null,
-          "meaning": null
+          "reading": "すずしいかぜ",
+          "meaning": "a cool breeze"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B6%BC%23kanji"
@@ -5725,8 +5725,8 @@
       "compounds": [
         {
           "word": "花が咲きます",
-          "reading": null,
-          "meaning": null
+          "reading": "はながさきます",
+          "meaning": "flowers bloom"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%92%B2%23kanji"
@@ -5751,8 +5751,8 @@
       "compounds": [
         {
           "word": "お金を払います",
-          "reading": null,
-          "meaning": null
+          "reading": "おかねをはらいます",
+          "meaning": "pay money"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%89%95%23kanji"
@@ -5778,8 +5778,8 @@
       "compounds": [
         {
           "word": "人が増えます",
-          "reading": null,
-          "meaning": null
+          "reading": "ひとがふえます",
+          "meaning": "the number of people increases"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A2%97%23kanji"
@@ -5802,8 +5802,8 @@
       "compounds": [
         {
           "word": "友達を迎えに行きます",
-          "reading": null,
-          "meaning": null
+          "reading": "ともだちをむかえにいきます",
+          "meaning": "go to meet a friend"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%BF%8E%23kanji"
@@ -5861,8 +5861,8 @@
       "compounds": [
         {
           "word": "頭が痛いです",
-          "reading": null,
-          "meaning": null
+          "reading": "あたまがいたいです",
+          "meaning": "I have a headache"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%A0%AD%23kanji"
@@ -5885,8 +5885,8 @@
       "compounds": [
         {
           "word": "かわいい顔",
-          "reading": null,
-          "meaning": null
+          "reading": "かわいいかお",
+          "meaning": "a cute face"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%A1%94%23kanji"
@@ -5909,8 +5909,8 @@
       "compounds": [
         {
           "word": "長い髪",
-          "reading": null,
-          "meaning": null
+          "reading": "ながいかみ",
+          "meaning": "long hair"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%AB%AA%23kanji"
@@ -5931,8 +5931,8 @@
       "compounds": [
         {
           "word": "2倍になりました",
-          "reading": null,
-          "meaning": null
+          "reading": "にばいになりました",
+          "meaning": "it doubled"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%80%8D%23kanji"
@@ -5984,8 +5984,8 @@
       "compounds": [
         {
           "word": "スイッチを押します",
-          "reading": null,
-          "meaning": null
+          "reading": "スイッチをおします",
+          "meaning": "press a switch"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%8A%BC%23kanji"
@@ -6011,8 +6011,8 @@
       "compounds": [
         {
           "word": "頭が痛いです",
-          "reading": null,
-          "meaning": null
+          "reading": "あたまがいたいです",
+          "meaning": "I have a headache"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%97%9B%23kanji"
@@ -6038,8 +6038,8 @@
       "compounds": [
         {
           "word": "静かな部屋",
-          "reading": null,
-          "meaning": null
+          "reading": "しずかなへや",
+          "meaning": "a quiet room"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%9D%99%23kanji"
@@ -6062,8 +6062,8 @@
       "compounds": [
         {
           "word": "子どもが泣きます",
-          "reading": null,
-          "meaning": null
+          "reading": "こどもがなきます",
+          "meaning": "a child cries"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B3%A3%23kanji"
@@ -6087,8 +6087,8 @@
       "compounds": [
         {
           "word": "赤ちゃんが笑います",
-          "reading": null,
-          "meaning": null
+          "reading": "あかちゃんがわらいます",
+          "meaning": "the baby laughs"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%AC%91%23kanji"
@@ -6176,8 +6176,8 @@
       "compounds": [
         {
           "word": "贈り物をします",
-          "reading": null,
-          "meaning": null
+          "reading": "おくりものをします",
+          "meaning": "give a present"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%B4%88%23kanji"
@@ -6206,8 +6206,8 @@
       "compounds": [
         {
           "word": "試験の点",
-          "reading": null,
-          "meaning": null
+          "reading": "しけんのてん",
+          "meaning": "exam score"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%82%B9%23kanji"
@@ -6257,8 +6257,8 @@
       "compounds": [
         {
           "word": "特急は速いです",
-          "reading": null,
-          "meaning": null
+          "reading": "とっきゅうははやいです",
+          "meaning": "the limited express is fast"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%80%9F%23kanji"
@@ -6306,8 +6306,8 @@
       "compounds": [
         {
           "word": "漢字を覚えます",
-          "reading": null,
-          "meaning": null
+          "reading": "かんじをおぼえます",
+          "meaning": "memorise kanji"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%A6%9A%23kanji"
@@ -6330,8 +6330,8 @@
       "compounds": [
         {
           "word": "本屋で働きます",
-          "reading": null,
-          "meaning": null
+          "reading": "ほんやではたらきます",
+          "meaning": "work at a bookshop"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%83%8D%23kanji"
@@ -6486,8 +6486,8 @@
       "compounds": [
         {
           "word": "かぜの薬",
-          "reading": null,
-          "meaning": null
+          "reading": "かぜのくすり",
+          "meaning": "cold medicine"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E8%96%AC%23kanji"
@@ -6509,7 +6509,7 @@
         {
           "word": "一億",
           "reading": "いちおく",
-          "meaning": null
+          "meaning": "one hundred million"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%84%84%23kanji"
@@ -6534,8 +6534,8 @@
       "compounds": [
         {
           "word": "彼はインド人です",
-          "reading": null,
-          "meaning": null
+          "reading": "かれはインドじんです",
+          "meaning": "he is Indian"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BD%BC%23kanji"
@@ -6558,8 +6558,8 @@
       "compounds": [
         {
           "word": "手を洗います",
-          "reading": null,
-          "meaning": null
+          "reading": "てをあらいます",
+          "meaning": "wash one's hands"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B4%97%23kanji"
@@ -6612,8 +6612,8 @@
       "compounds": [
         {
           "word": "洗濯物が乾きます",
-          "reading": null,
-          "meaning": null
+          "reading": "せんたくものがかわきます",
+          "meaning": "the laundry dries"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%B9%BE%23kanji"
@@ -6638,8 +6638,8 @@
       "compounds": [
         {
           "word": "パンを焼きます",
-          "reading": null,
-          "meaning": null
+          "reading": "パンをやきます",
+          "meaning": "bake bread, make toast"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%84%BC%23kanji"
@@ -6663,8 +6663,8 @@
       "compounds": [
         {
           "word": "メモを渡します",
-          "reading": null,
-          "meaning": null
+          "reading": "メモをわたします",
+          "meaning": "hand over a note"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B8%A1%23kanji"
@@ -6791,8 +6791,8 @@
       "compounds": [
         {
           "word": "お祭りが好きです",
-          "reading": null,
-          "meaning": null
+          "reading": "おまつりがすきです",
+          "meaning": "I like festivals"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%A5%AD%23kanji"
@@ -6837,8 +6837,8 @@
       "compounds": [
         {
           "word": "小さい庭",
-          "reading": null,
-          "meaning": null
+          "reading": "ちいさいにわ",
+          "meaning": "a small garden"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BA%AD%23kanji"
@@ -6913,8 +6913,8 @@
       "compounds": [
         {
           "word": "80歳です",
-          "reading": null,
-          "meaning": null
+          "reading": "はちじゅっさいです",
+          "meaning": "be eighty years old"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%AD%B3%23kanji"
@@ -6941,8 +6941,8 @@
       "compounds": [
         {
           "word": "火事は怖いです",
-          "reading": null,
-          "meaning": null
+          "reading": "かじはこわいです",
+          "meaning": "fires are frightening"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%80%96%23kanji"
@@ -6965,8 +6965,8 @@
       "compounds": [
         {
           "word": "風が吹きます",
-          "reading": null,
-          "meaning": null
+          "reading": "かぜがふきます",
+          "meaning": "the wind blows"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%B9%23kanji"
@@ -7135,8 +7135,8 @@
       "compounds": [
         {
           "word": "娘が3人います",
-          "reading": null,
-          "meaning": null
+          "reading": "むすめがさんにんいます",
+          "meaning": "have three daughters"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%A8%98%23kanji"
@@ -7188,8 +7188,8 @@
       "compounds": [
         {
           "word": "君の本",
-          "reading": null,
-          "meaning": null
+          "reading": "きみのほん",
+          "meaning": "your book (casual)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%90%9B%23kanji"
@@ -7216,8 +7216,8 @@
       "compounds": [
         {
           "word": "社長は忙しいです",
-          "reading": null,
-          "meaning": null
+          "reading": "しゃちょうはいそがしいです",
+          "meaning": "the company president is busy"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%BF%99%23kanji"
@@ -7241,8 +7241,8 @@
       "compounds": [
         {
           "word": "荷物を届けます",
-          "reading": null,
-          "meaning": null
+          "reading": "にもつをとどけます",
+          "meaning": "deliver a parcel"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%B1%8A%23kanji"
@@ -7267,8 +7267,8 @@
       "compounds": [
         {
           "word": "子どもと遊びます",
-          "reading": null,
-          "meaning": null
+          "reading": "こどもとあそびます",
+          "meaning": "play with a child"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%81%8A%23kanji"
@@ -7292,8 +7292,8 @@
       "compounds": [
         {
           "word": "久しぶりですね",
-          "reading": null,
-          "meaning": null
+          "reading": "ひさしぶりですね",
+          "meaning": "long time no see"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%B9%85%23kanji"
@@ -7423,8 +7423,8 @@
       "compounds": [
         {
           "word": "1階",
-          "reading": null,
-          "meaning": null
+          "reading": "いっかい",
+          "meaning": "first floor, ground floor"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E9%9A%8E%23kanji"
@@ -7449,8 +7449,8 @@
       "compounds": [
         {
           "word": "田中様",
-          "reading": null,
-          "meaning": null
+          "reading": "たなかさま",
+          "meaning": "Mr./Ms. Tanaka (respectful)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%A7%98%23kanji"
@@ -7473,8 +7473,8 @@
       "compounds": [
         {
           "word": "お食事を召し上がります",
-          "reading": null,
-          "meaning": null
+          "reading": "おしょくじをめしあがります",
+          "meaning": "have a meal (respectful)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%AC%23kanji"
@@ -7498,8 +7498,8 @@
       "compounds": [
         {
           "word": "花屋に寄ります",
-          "reading": null,
-          "meaning": null
+          "reading": "はなやによります",
+          "meaning": "stop by a flower shop"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%AF%84%23kanji"
@@ -7523,8 +7523,8 @@
       "compounds": [
         {
           "word": "目が疲れました",
-          "reading": null,
-          "meaning": null
+          "reading": "めがつかれました",
+          "meaning": "my eyes are tired"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%96%B2%23kanji"
@@ -7550,8 +7550,8 @@
       "compounds": [
         {
           "word": "貿易会社に勤めています",
-          "reading": null,
-          "meaning": null
+          "reading": "ぼうえきがいしゃにつとめています",
+          "meaning": "work for a trading company"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8B%A4%23kanji"
@@ -7575,8 +7575,8 @@
       "compounds": [
         {
           "word": "ホテルに泊まります",
-          "reading": null,
-          "meaning": null
+          "reading": "ホテルにとまります",
+          "meaning": "stay at a hotel"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E6%B3%8A%23kanji"
@@ -7672,8 +7672,8 @@
       "compounds": [
         {
           "word": "私の意見",
-          "reading": null,
-          "meaning": null
+          "reading": "わたしのいけん",
+          "meaning": "my opinion"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%A7%81%23kanji"
@@ -7774,8 +7774,8 @@
       "compounds": [
         {
           "word": "私が参ります",
-          "reading": null,
-          "meaning": null
+          "reading": "わたしがまいります",
+          "meaning": "I will go (humble)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E5%8F%82%23kanji"
@@ -7798,8 +7798,8 @@
       "compounds": [
         {
           "word": "あした伺います",
-          "reading": null,
-          "meaning": null
+          "reading": "あしたうかがいます",
+          "meaning": "I will visit tomorrow (humble)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E4%BC%BA%23kanji"
@@ -7823,8 +7823,8 @@
       "compounds": [
         {
           "word": "ミラーと申します",
-          "reading": null,
-          "meaning": null
+          "reading": "ミラーともうします",
+          "meaning": "my name is Miller (humble)"
         }
       ],
       "strokeOrderLink": "https://jisho.org/search/%E7%94%B3%23kanji"
