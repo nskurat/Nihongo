@@ -30,6 +30,7 @@ import n5Vocab from '../../../data/n5/vocab.json';
 import n3Vocab from '../../../data/n3/vocab.json';
 import n1Vocab from '../../../data/n1/vocab.json';
 import n5Kanji from '../../../data/n5/kanji.json';
+import n4Kanji from '../../../data/n4/kanji.json';
 import n3Kanji from '../../../data/n3/kanji.json';
 import n1Kanji from '../../../data/n1/kanji.json';
 
@@ -199,6 +200,15 @@ describe('kanji mnemonic prompt', () => {
     const prompt = kanjiMnemonicPromptFor(k, 'N3');
     expect(prompt).toContain('悲観的（ひかんてき）');
     expect(prompt).not.toContain('[な]');
+  });
+
+  it('N4 絵: a compound with null reading/meaning is left out, not crashed on', () => {
+    const k = row<KanjiItem>(n4Kanji, 'n4-kanji-1-1'); // only compound: 絵をかきます, reading/meaning null
+    const prompt = kanjiMnemonicPromptFor(k, 'N4');
+    expect(prompt).toContain('KANJI (JLPT N4): 絵');
+    expect(prompt).not.toContain('絵をかきます');
+    expect(prompt).not.toContain('Words with this kanji');
+    expect(prompt).not.toMatch(/null/);
   });
 
   it('N1 盤: on-reading only, at most 4 compounds, affix compounds dropped', () => {

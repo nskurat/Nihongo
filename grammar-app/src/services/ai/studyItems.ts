@@ -212,6 +212,10 @@ export function kanjiMnemonicPromptFor(kanji: KanjiItem, level: LevelType): stri
     readings: formatKanjiReadings(kanji),
     level,
     strokes: kanji.strokes,
-    compounds: kanji.compounds,
+    // Compounds with no reading/meaning in the data (150 N4 rows) can't be
+    // shown to the model as word（reading）meaning, so they are left out.
+    compounds: (kanji.compounds ?? []).flatMap((c) =>
+      c.reading !== null && c.meaning !== null ? [{ word: c.word, reading: c.reading, meaning: c.meaning }] : []
+    ),
   });
 }
