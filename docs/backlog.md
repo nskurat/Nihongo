@@ -5,7 +5,8 @@ something is done, delete it here; the PR carries the record. Finished refactor 
 (0–5, 7) and their specs live in git history (`git log -- docs/refactor/`).
 
 Anything out of scope that you notice while working goes here as a short entry: what, where,
-why it matters.
+why it matters. Items parked for the far future are in `docs/backlog-later.md`, which regular
+work doesn't need to read.
 
 ## 1. Flashcards and quizzes (next feature, formerly Phase 6)
 
@@ -45,36 +46,51 @@ Decisions to make before writing the spec:
   reports `aria-required-children` (critical). The layout is the one `docs/search/03-ux.md`
   §3.2 specifies, so the fix is a search-UX decision (heading out of the listbox, or
   `role="presentation"` on it and the group named by `aria-label`). `src/__tests__/a11y.test.tsx`
-  exempts that one rule on the search page; remove the exemption with the fix.
+  exempts that one rule on the search page; remove the exemption with the fix. The browser run
+  found the same in the tag view (`<h3>` level subheadings); see Search R12.
 - **Colour contrast** (the axe gate can't measure it in jsdom). From the Tailwind palette:
   `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in `GeneratorPanel.tsx` and
   the `SectionLayout.tsx` banner subtitle; `text-indigo-200` header copy and idle section tabs
-  on `bg-indigo-600` (≈4.2:1). A palette change across sections — a design decision.
+  on `bg-indigo-600` (4.32:1 measured in Chromium, 2026-11-01). A palette change across sections — a design decision.
 - **Manual pass not yet run** — the checklist in `docs/a11y.md` (screen reader, 200% zoom,
   320 px, reduced motion) has not been walked end to end.
 
 ## 3. Search
 
-- **Not re-run after the fix round**: QA's full browser regression (T-01…T-47, a11y, perf at
-  Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden
-  queries were re-checked (2026-10-31).
-- **Performance** — first search unthrottled desktop ~0.94 s p75 (budget 0.5 s); Fast 4G +
-  CPU×4 1.20 s (ものの) / 1.67 s (食べる) p75. The cost is cold worker indexing; a precomputed
-  key format or lazy per-level indexing would cut it. Warm keystroke → results p95
-  ~160–200 ms at CPU×4 (target 100 ms; QA BUG-10): layout/paint of the list and the page
-  re-render per URL change.
-- **Ranking** — kana-only verb queries reach every homophone (かえって → 帰る, 変える, 替える,
-  換える, 代える, 反る, 返る), so a literal prefix hit such as かえって来ます can sit behind
-  "Show all"; needs the `pos` migration (section 4) to prune by godan/ichidan te-form.
-  `が`/`けど` in the "although" chip are ranked by curated core keys in `aliases.ts`; the core
-  table needs teacher sign-off. Duplicate rows such as 行く/ゆく are not collapsed (teacher F14).
-- **Missing features** — "Did you mean kan'i?" (`didYouMean`, QA BUG-13; also `sannen`-style
-  n+vowel romaji returning nothing); `CategoryChip.description` so the category view can
-  show one; radical filter (teacher F13).
-- **Display** — lemma hits read "わかります → わかる · polite" rather than "→ 分かる (dictionary
-  form)" (QA BUG-17; depends on the engine's `deinflection`/`via` payload). Mobile: the
-  filter chip row is visually first but later in tab order.
-- **Content gaps found by the teacher** — F16 (日本語, N5 greetings), F12 respelling 斯う/然る.
+Browser regression by QA and the teacher, 2026-11-01: `docs/search/07-regression.md` (evidence,
+proposed fixes, IDs). Awaiting the owner's review, then implementation.
+
+- **Decisions first**:
+  - D1: must core N4/N5 words make the visible top 8 (T-37 `lost`)?
+  - D2: should Grammar lead when the query equals a grammar key (`みたい`, `ます`)?
+  - D3: are rare exact hits ranked by level (分 → Edo coin)?
+  - D4: where do new N5 rows go (日本語, greetings)?
+  - D5: sign-off of the `が`/`けど` core keys.
+- **Must**:
+  - R1: category-chip members outrank direct meaning hits (`as soon as`, `according to`, `even`).
+  - R2: the group order lets kanji or a contained grammar key lead over the exact word
+    (`たべる`, `いくら`, `だれ`).
+  - R3: kana readings of kanji grammar titles aren't searchable (`うえで`, `しだい`, `ぎみ`).
+  - R4: plain-form look-ups miss ます/です grammar (`たほうがいい`, `かもしれない`).
+  - R5: `いく` → いい "adverbial" is a wrong lemma; `ii` reads as English.
+  - R6: homophones ignore level (`いる` → 炒る above います).
+  - R7: 行く N5 L4 is stored with the reading ゆく (content).
+  - R8: 日本語 and the N5 greetings are missing (content).
+- **Should**:
+  - R9: "kanji in <phrase>" noise.
+  - R10: short-kana substring noise (`すき`, `さい`, `だけ`).
+  - R11: the lemma reason line should show the dictionary-form word.
+  - R12: axe label mismatch on level filters, and headings in the listbox.
+  - R13: an exact grammar key loses to vocab.
+  - R14: English matches inside other words (`want` → "Word(s) ですか").
+- **Nice**:
+  - R15: grammar gaps (〜わりに, 〜なんか／〜なんて, なきゃ).
+  - R16: 8 vocab meanings with JMdict part-of-speech markers.
+  - R17: rare exact hits lead (分 → 分(ぶ)).
+  - Radical filter (teacher F13).
+  - Respelling 斯う/然る (teacher F12).
+- **Spec housekeeping**: amend T-02, T-03, T-27, T-28 and T-41 in `02-requirements.md` §5 (the
+  content cleanups changed them; list in the report).
 
 ## 4. Content data
 
@@ -92,7 +108,6 @@ Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by h
 - **Readings with brackets** — 206 rows in `{n5,n3}/vocab.json` carry brackets inside
   `reading` (`[お]はなみ`, `きれい[な]`, `かける [迷惑を〜]`) while others store a clean reading.
   Search strips both; a script could make `reading` mirror the word's annotations.
-- **JMdict POS markers** — `(n) (a)` left inside some N1/N2 vocab meanings (QA BUG-12).
 - **Vocab near-repeats** — textbook pairs with differently worded glosses: チャンス (N5/N3),
   幸せ (N4/N3), めったに ×2 and しっかり ×2 (N3); ~25 N1 kanji spellings of lower kana words
   whose glosses don't overlap (ふさわしい, よほど, みじめ…); 是非, 大した, 夕べ, 無くす appended in
