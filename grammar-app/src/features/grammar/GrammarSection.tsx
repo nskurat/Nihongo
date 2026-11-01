@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import GrammarDetailModal from './GrammarDetailModal';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
 import TagBadge from '../../components/common/TagBadge';
-import { LevelType, SectionType } from '../../types/japanese';
+import { LevelType } from '../../types/japanese';
 import { isSectionAvailable } from '../../utils/levels';
+import { SECTIONS } from '../../utils/sections';
 import { useGrammar } from './useGrammar';
 import { useAppStore } from '../../store/useAppStore';
 import { focusCardClass, useFocusItem } from '../useFocusItem';
@@ -19,11 +20,7 @@ interface GrammarSectionProps {
   activeLesson: number;
 }
 
-const OTHER_SECTIONS: Array<[SectionType, string]> = [
-  ['vocab', 'Vocabulary'],
-  ['kanji', 'kanji'],
-  ['reading', 'reading practice'],
-];
+const OTHER_SECTIONS = SECTIONS.filter((s) => s.id !== 'grammar');
 
 // ["Vocabulary", "kanji", "reading practice"] -> "Vocabulary, kanji and reading practice"
 function listSections(labels: string[]): string {
@@ -34,9 +31,7 @@ function listSections(labels: string[]): string {
 
 export default function GrammarSection({ activeLevel, activeLesson }: GrammarSectionProps) {
   const { showTranslations } = useAppStore();
-  const missingSections = OTHER_SECTIONS.filter(([section]) => !isSectionAvailable(activeLevel, section)).map(
-    ([, label]) => label
-  );
+  const missingSections = OTHER_SECTIONS.filter((s) => !isSectionAvailable(activeLevel, s.id)).map((s) => s.noun);
 
   const {
     searchQuery,

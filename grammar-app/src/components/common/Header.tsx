@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import { BookOpen, BookText, Eye, EyeOff, GraduationCap, Languages, Bot, BookOpenCheck } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { Eye, EyeOff, GraduationCap, Bot } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getActiveProviderId, getProvider, getStoredApiKey } from '../../services/ai/registry';
 import { LevelType, SectionType } from '../../types/japanese';
 import { useAppStore } from '../../store/useAppStore';
 import { useAiUiStore } from '../../store/useAiStore';
 import { parseLevel, getDefaultLesson, clampLessonForLevel, isSectionAvailable } from '../../utils/levels';
+import { SECTIONS } from '../../utils/sections';
 import HeaderSearch, { MobileSearchButton, type SearchEntryState } from './HeaderSearch';
 import { isSearchPath, SEARCH_PATH } from '../../features/search/searchUrl';
 import { prefetchSearchIndex } from '../../features/search/searchClient';
@@ -70,13 +71,7 @@ export default function Header() {
     desc: isSectionAvailable(lvl.id, 'vocab') ? lvl.desc : `${lvl.desc} (grammar only)`,
   }));
 
-  const allSections: Array<{ id: SectionType; label: string; icon: React.ComponentType<{ size?: number }> }> = [
-    { id: 'grammar', label: 'Grammar', icon: BookOpen },
-    { id: 'vocab', label: 'Vocabulary', icon: BookText },
-    { id: 'kanji', label: 'Kanji', icon: Languages },
-    { id: 'reading', label: 'Reading Practice', icon: BookOpenCheck },
-  ];
-  const sections = allSections.filter((sec) => isSectionAvailable(activeLevel, sec.id));
+  const sections = SECTIONS.filter((sec) => isSectionAvailable(activeLevel, sec.id));
 
   const provider = getProvider(getActiveProviderId());
   const hasKey = !provider.requiresKey || !!getStoredApiKey(provider.id);
@@ -181,6 +176,7 @@ export default function Header() {
             <button
               key={sec.id}
               onClick={() => handleSectionChange(sec.id)}
+              aria-current={isActive ? 'page' : undefined}
               className={`flex items-center gap-2 px-5 py-2.5 font-semibold text-sm border-b-2 transition-all cursor-pointer whitespace-nowrap ${
                 isActive
                   ? 'border-white text-white bg-white/10 rounded-t-lg'
