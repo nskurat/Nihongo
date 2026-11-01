@@ -14,8 +14,6 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   Kept as-is on purpose: moving items would renumber lessons people have studied.
 - `src/data/n3/kanji.json` — 77 kanji kept from the textbook lessons are N2/N1 on
   Waller's lists (printed by `scripts/review-n3-kanji-vocab.ts`); kept for lesson context.
-- `grammar-app/index.html` — Google Fonts is loaded from a CDN, which breaks the
-  offline-capable premise of the app. Consider self-hosting Inter.
 - `src/data/n4/kanji.json` — 150 `compounds[]` entries have a literal `null` for
   `reading` and/or `meaning` instead of a string (found by Phase 1's content
   validator). Code is safe since Phase 2b (`KanjiCompound` fields typed nullable, card
@@ -33,8 +31,6 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   instead; the derived table (240 rows) is written to
   `src/generated/search/search-index-report.tsv` for teacher review before a v2 migration
   adds a closed `pos` enum + `lemma`.
-- `src/data/n5/grammar.json` — one title uses ASCII `~さん` among 423 `〜` titles.
-  Harmless for search (normalised); an optional `~`→`〜` migration would tidy display.
 - `src/data/n5/kanji.json` — some N5 kun readings are still bare prefix/counter forms
   (日 か, 一 ひと, 小 お, 真 ま, 千 ち). Real readings, kept on purpose by
   `scripts/fix-search-data.ts`; a fuller KANJIDIC refresh could add `ひと・つ` etc.
@@ -60,14 +56,10 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
 
 ### Code (found running Phase 2b, 2026-11-01)
 
-- `services/content/StaticContentSource.ts` — Retry can't recover from a real network
-  failure in the browser: Chromium caches a failed dynamic `import()` per module URL, so
-  re-calling the importer rejects again without a request (seen in Playwright on
-  `n3/kanji.json`). The source's evict-and-retry is correct and unit-tested; the fix is a
-  cache-busted re-import or a page reload on the second failure.
-- `features/search/SearchPage.tsx` is 428 lines, the one component over Phase 4's 400-line
-  bar. It belongs to the global search feature, which Phase 4 didn't touch; split its
-  results list and filters out when search is next worked on.
+- `scripts/lib/searchDataFixes.ts` — the `n3-vocab-23-124` 言う reading fix is obsolete:
+  the 2026-11-01 cumulative-coverage run removed that 言う row, so the uid now names 行き and
+  `fix-search-data.ts` prints a harmless "skipped" line each run. Drop the entry (and its
+  test fixture) next time the table is touched.
 
 ### Backlog (deferred during the 2026-10-31/11-01 sessions)
 
@@ -88,15 +80,24 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   sentences show no furigana (would need `FuriganaText` + bracket notation).
 - **Reading Practice** (`docs/reading-library-nav-ux.md`) — "your N3 passage is ready" notice
   when a generation finishes on another level; per-level history switcher; story id in the
-  URL; per-level furigana/English toggles; library filter by in-progress. Two acceptance
-  criteria (result arriving after a mid-generation level switch, errors staying on their level)
-  were only code-reviewed — needs a mock at `executeAiPrompt`.
-- **Tooling** — `npm run typecheck` covers `grammar-app/src` only; `scripts/` runs through
-  `tsx`, which strips types without checking them. Adding `scripts` to `tsconfig.json`'s
-  `include` needs a pass over whatever errors it surfaces.
+  URL; per-level furigana/English toggles; library filter by in-progress.
 
 ## Resolved
 
+- Quick wins (2026-11-01):
+  - Google Fonts link removed from `index.html`. Inter was downloaded but never applied
+    (35 faces registered, none loaded; text renders in the system stack), so nothing
+    changes on screen and the app makes no external request. Adopting Inter would be a
+    design change, not a fix.
+  - Retry after a failed lesson chunk reloads the page: browsers keep a failed `import()`
+    in the module map, so re-importing never worked. Verified in Playwright (blocked
+    `n3/kanji.json`, unblocked, Retry → same lesson loads).
+  - `scripts/` is typechecked (`tsconfig.json` include); it was already clean.
+  - `~さん` → `〜さん` via a general title rule in `fix-search-data.ts` (one row changed).
+  - Reading's two code-reviewed criteria (result after a mid-generation level switch,
+    errors staying on their level) now have tests.
+  - `SearchPage.tsx` split (428 → 287 lines, panels in `SearchPanels.tsx`); no component
+    is over 400 lines.
 - Phase 5 (2026-11-01): AI failures other than a missing key were only logged, so a
   grammar/vocab/kanji AI button just stopped spinning; they now show inline with what to
   do. Unusable grammar-example replies (previously a silent no-op after a paid call) are a

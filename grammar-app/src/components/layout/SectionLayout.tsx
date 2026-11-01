@@ -9,6 +9,13 @@ import SearchAllLevelsLink from '../../features/search/SearchAllLevelsLink';
 import { S } from '../../features/search/strings';
 import { sectionTheme, sidebarHeading, StudySection } from './sectionTheme';
 
+/**
+ * A lesson chunk that failed to load can't be re-imported: the browser's module map keeps
+ * the failure for the page's lifetime, so a second `import()` rejects without a request.
+ * Reloading is the only retry that can work, and it keeps the URL, so the same lesson opens.
+ */
+const reloadPage = () => window.location.reload();
+
 interface SectionLayoutProps {
   section: StudySection;
   level: LevelType;
@@ -162,7 +169,7 @@ export default function SectionLayout({
               {error.kind === 'not-found' ? `Lesson ${lesson} wasn't found.` : 'Something went wrong loading this content.'}
             </p>
             <button
-              onClick={retry}
+              onClick={error.kind === 'load-failed' ? reloadPage : retry}
               className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 max-md:min-h-10 ${c.retry} font-semibold text-xs rounded-lg border cursor-pointer`}
             >
               Retry

@@ -1,5 +1,6 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from '../../../App';
 import { renderWithRouter } from '../../../test/renderWithRouter';
 import { restoreContentSource } from '../../../test/fixtures';
@@ -43,5 +44,16 @@ describe('SectionLayout on a failed level', () => {
     expect(screen.getByRole('button', { name: 'Retry' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: 'N5 Lessons' })).toBeInTheDocument();
     expect(screen.queryByText(/\(1–1\)/)).not.toBeInTheDocument();
+  });
+});
+
+describe('Retry after a failed chunk', () => {
+  it('reloads the page, since the browser would not re-import a failed module', async () => {
+    const reload = vi.fn();
+    vi.spyOn(window, 'location', 'get').mockReturnValue({ ...window.location, reload });
+    setContentSource(new FailingSource());
+    renderWithRouter(<App />, { route: '/n5/grammar/1' });
+    await userEvent.click(await screen.findByRole('button', { name: 'Retry' }));
+    expect(reload).toHaveBeenCalledTimes(1);
   });
 });
