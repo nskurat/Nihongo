@@ -22,14 +22,13 @@ Dependency-ordered. Do not start one before its predecessor has landed.
 
 | # | Phase | Spec | Effort | Ready to offload |
 |---|---|---|---|---|
-| 4 | UI consolidation | `phase-4-ui.md` | 1–2 d | Next — write the full spec first |
-| 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Spec it; parallel with 4 |
+| 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Next — write the full spec first |
 | 6 | Flashcards + quizzes | `phase-6-features.md` | 2–3 d | Design first |
-| 7 | CI + accessibility gates | `phase-7-gates.md` | ½–1 d | Spec after 4 |
+| 7 | CI + accessibility gates | `phase-7-gates.md` | ½–1 d | Spec it (4 has landed) |
 
 Phase 3's characterization tests (`features/__tests__/sections.test.tsx`,
-`features/reading/__tests__/ReadingSection.test.tsx`) are Phase 4's safety net: a failure
-after a refactor means behaviour changed.
+`features/reading/__tests__/ReadingSection.test.tsx`) are the safety net for every later
+phase: a failure after a refactor means behaviour changed.
 
 ## Done
 
@@ -39,7 +38,8 @@ after a refactor means behaviour changed.
 | 1 | Item identity | [#2](https://github.com/nskurat/Nihongo/pull/2) | `uid` on all 3,403 items, `StudyItem` base type, `validate:data` zod gate in CI, N5 lesson range fixed (1–25) |
 | 2 | Content layer | [#3](https://github.com/nskurat/Nihongo/pull/3) | `ContentSource` repository + lazy per-level chunks, single-file bundle dropped, legacy `id` removed, ~133 KB initial transfer |
 | 2b | Content-layer fixes | [#24](https://github.com/nskurat/Nihongo/pull/24) | `useLessonList` (no stale level, errors reach the panel), nullable `KanjiCompound`, dead API trimmed, CI on PRs. Deviations: built on the session branch, not `refactor/phase-2b-…`; one-line `services/ai/studyItems.ts` fix (the nullable type exposed a live crash); acceptance tests run as pure-logic node tests (no jsdom before Phase 3); browser retry limit logged in FINDINGS |
-| 3 | Test harness | branch `claude/cool-heisenberg-l4bgrr` | Vitest `node` + `jsdom` projects, fetch guard on every test, `renderWithRouter` / fixtures / `mockAi()` in `src/test/`, 19 characterization tests; `ReadingSection.tsx` 83.6% line coverage, suite ~9 s. Deviations: projects split by file type (`*.test.ts` node, `*.test.tsx` jsdom), not folder; `mockAi()` spies on each provider's `executePrompt`, one level under `executeAiPrompt`, whose in-module callers `vi.mock` can't intercept; the spec's header example (N3 24 → N4) was wrong — 24 is in range and kept, an out-of-range lesson resets to the default, now both tested |
+| 3 | Test harness | [#25](https://github.com/nskurat/Nihongo/pull/25) | Vitest `node` + `jsdom` projects, fetch guard on every test, `renderWithRouter` / fixtures / `mockAi()` in `src/test/`, 19 characterization tests; `ReadingSection.tsx` 83.6% line coverage, suite ~9 s. Deviations: projects split by file type (`*.test.ts` node, `*.test.tsx` jsdom), not folder; `mockAi()` spies on each provider's `executePrompt`, one level under `executeAiPrompt`, whose in-module callers `vi.mock` can't intercept; the spec's header example (N3 24 → N4) was wrong — 24 is in range and kept, an out-of-range lesson resets to the default, now both tested |
+| 4 | UI consolidation | branch `claude/cool-heisenberg-l4bgrr` | `Modal` (native `<dialog>`), `SectionLayout` + `sectionTheme` (complete Tailwind literals), `ReadingSection` 1,228 → 93 lines over `useReadingStudio` + 5 components with one shared `QuestionList`, header tabs from `utils/sections.ts`. Phase 3 tests passed unedited after every commit; pages screenshot-identical apart from anti-aliasing. Intended changes: backdrop click closes every modal, the story reader gained Escape, sidebar heading drops the fake `(1–1)`, Reading shows a lesson-load failure, the reader's options use the studio's badge/icons. Deviations: no generic `Card`/`Badge`/`Button` (fewer than two callers each); `SearchPage.tsx` (428 lines, out of scope) left over the 400-line bar and logged |
 
 Their specs were deleted once merged. `git log --diff-filter=D -- docs/refactor/` finds
 them if the detail is ever needed; the PR descriptions carry the verified results.
@@ -61,6 +61,9 @@ These are settled. An agent must not revisit them.
 - Storage abstractions follow `services/ai/readingStorage.ts` and
   `services/content/ContentSource.ts`: an abstract base class, an async facade, and a
   swap function. Same shape for progress in Phase 6.
+- Dialogs use `components/common/Modal.tsx` (native `<dialog>`); study sections render
+  through `components/layout/SectionLayout.tsx`, coloured by `sectionTheme` (complete
+  Tailwind class literals, never interpolated).
 - Markdown styling uses the existing `.markdown-prose` rules in `index.css`.
   No `@tailwindcss/typography` dependency.
 - Sanitizer is `dompurify` v3.

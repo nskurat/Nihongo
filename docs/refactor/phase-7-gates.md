@@ -1,7 +1,7 @@
 # Phase 7 — CI and accessibility gates
 
-> **Not ready to offload.** Outline only. Spec after Phase 4, since most of the
-> accessibility work lands in the primitives that phase creates.
+> **Not ready to offload.** Outline only. Phase 4 has landed (`Modal`, `SectionLayout`),
+> so the accessibility pass can build on them; write the full spec first.
 
 ## Intent
 

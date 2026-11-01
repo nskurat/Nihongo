@@ -65,11 +65,9 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   re-calling the importer rejects again without a request (seen in Playwright on
   `n3/kanji.json`). The source's evict-and-retry is correct and unit-tested; the fix is a
   cache-busted re-import or a page reload on the second failure.
-- `features/{grammar,vocab,kanji}/*Section.tsx` — the sidebar header reads e.g.
-  `N4 Lessons (1–1)` while its list is loading or failed (`|| 1` fallback). It never
-  shows another level's range any more; a skeleton belongs to Phase 4's shared sidebar.
-- `features/reading/useReadingData.ts` returns `error` now, but `ReadingSection.tsx`
-  doesn't render it — a failed chunk shows an empty lesson picker. Wire it in Phase 4.
+- `features/search/SearchPage.tsx` is 428 lines, the one component over Phase 4's 400-line
+  bar. It belongs to the global search feature, which Phase 4 didn't touch; split its
+  results list and filters out when search is next worked on.
 
 ### Backlog (deferred during the 2026-10-31/11-01 sessions)
 
@@ -99,6 +97,12 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
 
 ## Resolved
 
+- Phase 4 (2026-11-01): `Modal` on native `<dialog>` (focus trap, Escape, scroll lock,
+  focus return) for all three dialogs; `SectionLayout` + `sectionTheme` for grammar, vocab
+  and kanji; `ReadingSection` split (1,228 → 93 lines) with one shared `QuestionList`;
+  header tabs from `utils/sections.ts`. Two items from the Phase 2b findings closed with it:
+  the sidebar heading no longer shows a fake `(1–1)` while loading or failed, and Reading
+  shows an alert when its lessons fail to load.
 - Phase 3 (2026-11-01): test harness and characterization tests landed. Folded in from the
   tooling backlog: `npm run lint` now covers `scripts/` (rest-sibling omits allowed),
   `scripts/lib/searchDataFixes.ts` has unit tests, `docs/search/04-data.md` names

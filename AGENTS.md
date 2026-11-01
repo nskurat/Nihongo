@@ -34,7 +34,8 @@ grammar-app/
     main.tsx            BrowserRouter mount
     App.tsx             Routes: /:level/:section/:lesson
     features/           grammar | vocab | kanji | reading | search — Section.tsx + use*.ts each
-    components/common/  Header, modals, MarkdownViewer, FuriganaText, TagBadge
+    components/common/  Header, Modal (native <dialog>, use for every dialog), MarkdownViewer, FuriganaText
+    components/layout/  SectionLayout + sectionTheme: the shell grammar/vocab/kanji render through
     services/ai/        Provider registry, prompts, parsers, model catalog, storage adapters
     services/content/   ContentSource + StaticContentSource, lazy per-level chunks; the only
                         way components reach src/data (via contentRepository)
@@ -44,7 +45,7 @@ grammar-app/
     data/{n5..n1}/      grammar|vocab|kanji.json, keyed by lesson number. A section shows wherever
                         its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
     types/              japanese.ts (domain), ai.ts (AI + reading)
-    utils/              levels.ts (lesson ranges), tags.ts (taxonomy index)
+    utils/              levels.ts (lesson ranges), sections.ts (section registry), tags.ts (taxonomy)
     test/               Test setup (fetch blocked), renderWithRouter, fixtures, mockAi()
 ```
 
