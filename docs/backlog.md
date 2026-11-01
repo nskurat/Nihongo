@@ -41,13 +41,6 @@ Decisions to make before writing the spec:
 
 ## 2. Accessibility
 
-- **Search results listbox** — `features/search/ResultGroup.tsx` puts each group's `<h2>`
-  inside `#search-results` (`role="listbox"`); ARIA allows only `group`/`option` there, so axe
-  reports `aria-required-children` (critical). The layout is the one `docs/search/03-ux.md`
-  §3.2 specifies, so the fix is a search-UX decision (heading out of the listbox, or
-  `role="presentation"` on it and the group named by `aria-label`). `src/__tests__/a11y.test.tsx`
-  exempts that one rule on the search page; remove the exemption with the fix. The browser run
-  found the same in the tag view (`<h3>` level subheadings); see Search R12.
 - **Colour contrast** (the axe gate can't measure it in jsdom). From the Tailwind palette:
   `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in `GeneratorPanel.tsx` and
   the `SectionLayout.tsx` banner subtitle; `text-indigo-200` header copy and idle section tabs
@@ -57,40 +50,21 @@ Decisions to make before writing the spec:
 
 ## 3. Search
 
-Browser regression by QA and the teacher, 2026-11-01: `docs/search/07-regression.md` (evidence,
-proposed fixes, IDs). Awaiting the owner's review, then implementation.
+The 2026-11-01 browser regression (`docs/search/07-regression.md`) is implemented; what is left:
 
-- **Decisions first**:
-  - D1: must core N4/N5 words make the visible top 8 (T-37 `lost`)?
-  - D2: should Grammar lead when the query equals a grammar key (`みたい`, `ます`)?
-  - D3: are rare exact hits ranked by level (分 → Edo coin)?
-  - D4: where do new N5 rows go (日本語, greetings)?
-  - D5: sign-off of the `が`/`けど` core keys.
-- **Must**:
-  - R1: category-chip members outrank direct meaning hits (`as soon as`, `according to`, `even`).
-  - R2: the group order lets kanji or a contained grammar key lead over the exact word
-    (`たべる`, `いくら`, `だれ`).
-  - R3: kana readings of kanji grammar titles aren't searchable (`うえで`, `しだい`, `ぎみ`).
-  - R4: plain-form look-ups miss ます/です grammar (`たほうがいい`, `かもしれない`).
-  - R5: `いく` → いい "adverbial" is a wrong lemma; `ii` reads as English.
-  - R6: homophones ignore level (`いる` → 炒る above います).
-  - R7: 行く N5 L4 is stored with the reading ゆく (content).
-  - R8: 日本語 and the N5 greetings are missing (content).
-- **Should**:
-  - R9: "kanji in <phrase>" noise.
-  - R10: short-kana substring noise (`すき`, `さい`, `だけ`).
-  - R11: the lemma reason line should show the dictionary-form word.
-  - R12: axe label mismatch on level filters, and headings in the listbox.
-  - R13: an exact grammar key loses to vocab.
-  - R14: English matches inside other words (`want` → "Word(s) ですか").
-- **Nice**:
-  - R15: grammar gaps (〜わりに, 〜なんか／〜なんて, なきゃ).
-  - R16: 8 vocab meanings with JMdict part-of-speech markers.
-  - R17: rare exact hits lead (分 → 分(ぶ)).
-  - Radical filter (teacher F13).
-  - Respelling 斯う/然る (teacher F12).
-- **Spec housekeeping**: amend T-02, T-03, T-27, T-28 and T-41 in `02-requirements.md` §5 (the
-  content cleanups changed them; list in the report).
+- **Duplicate rows after the content additions** — `scripts/dedupe-vocab.ts` (last pipeline
+  step) would now remove 6 rows: 行く N5 L4 (it reads いく now, beside 行きます N5 L5) and the
+  N2/N3 copies of the new N5 core expressions (こんにちは N3 L11, こんばんは N2 L19, さようなら
+  N2 L11, いってらっしゃい N2 L19, ごめんなさい N3 L1). That shifts positional uids in 5 lessons,
+  so it needs an AI-cache migration like `store/aiCacheMigration.ts` v6 first; until then search
+  collapses each pair into one row with two badges. Do not run the full pipeline before that.
+- **N5 lesson 26 is vocab-only** — switching to Grammar or Kanji on `/n5/*/26` shows the
+  "being prepared" empty state; a lesson-aware tab switch (fall back to the section's last
+  lesson) would avoid it.
+- **Small ranking leftovers** — `おはよう` lists the N2 abbreviation (exact) above
+  おはようございます N5 L26 (prefix); `want` keeps "Word(s) ですか" in its grammar top 4 (its
+  gloss uses "wants").
+- **Nice to have** — radical filter (teacher F13); respelling 斯う/然る (teacher F12).
 
 ## 4. Content data
 

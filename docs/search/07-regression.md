@@ -1,5 +1,12 @@
 # Global search: browser regression (QA + Japanese teacher)
 
+> **Resolved 2026-11-01.** Owner decisions: D1 core items on top, D2 grammar first for an exact
+> grammar key unless a basic word matches exactly (teacher's condition), D3 exact hits by level,
+> D4 a separate N5 lesson (26, "Core expressions"), D5 signed off. R1–R17 are implemented, with
+> engine-level tests in `golden.test.ts` ("regression 2026-11") and the axe gate covering the
+> search page and tag view with no exemption. Re-checked in Chromium on the production build.
+> Leftovers are in `docs/backlog.md` §3. The sections below are the report as reviewed.
+
 2026-11-01, on `main` after Phase 7. Production build (`npm run build`, `vite preview`), driven by
 Playwright in Chromium at 1280 px and 390 px (touch). Queries were **typed into the header search
 field** the way a learner does, and the results were read from the screen (group order, the
