@@ -22,6 +22,14 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   `compound.reading`, and `compound.meaning` renders as nothing when `null` — but
   needs real content to fill in. Full list in the auto-generated section below.
 
+- `scripts/fill-n5-n4-gaps.ts` — counts an N5/N4-list word as taught if *any* of N5–N3
+  teaches it, so ~75 core N5 words (今日, 山, 魚, 甘い, 言う, 夜…) and ~79 N4 words taught
+  only in a higher level's textbook lessons are missing from N5/N4. Since the 2026-10-31
+  dedupe this includes 8 N5 words whose only row is now an N4 ます row (晴れる, 死ぬ, 答える,
+  曇る, 呼ぶ, 困る, 頼む, 咲く). Fix: coverage = current level and below; first make
+  coverage link rare kanji spellings to kana ます rows (掛かる↔かかります, 居る↔います,
+  する↔します) or the fix re-creates duplicates.
+
 ### Search (found building the global search index, `docs/search/04-data.md` §7)
 
 - `src/data/{n5,n3}/vocab.json` — 206 rows carry brackets inside `reading` (`[お]はなみ`,

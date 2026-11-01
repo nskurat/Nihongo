@@ -145,6 +145,15 @@ describe('masuToDict (§2.3 rule table)', () => {
     expect(lemma('きます', 'きます', 'Verb (Group III)')).toMatchObject({ lemma: 'くる', rule: 'kuru' });
     expect(lemma('勉強します', 'べんきょうします', 'Verb (Group III)')).toMatchObject({ lemma: '勉強する', rule: 'suru' });
     expect(lemma('勉強します', 'べんきょうします', 'verb')).toMatchObject({ lemma: '勉強する', rule: 'suru' });
+    expect(lemma('コピーします', 'コピーします', 'verb')).toMatchObject({ lemma: 'コピーする', rule: 'suru' });
+  });
+
+  it('one kanji + します is godan す even when the す-form is not in the corpus', () => {
+    // Regression: after scripts/dedupe-vocab.ts removed 話す/貸す/返す/回す, the corpus check no
+    // longer rescued them and they were read as 話する etc.
+    expect(lemma('話します', 'はなします', 'verb')).toMatchObject({ lemma: '話す', lemmaReading: 'はなす' });
+    expect(lemma('貸します', 'かします', 'verb')).toMatchObject({ lemma: '貸す' });
+    expect(lemma('起こします', 'おこします', 'verb')).toMatchObject({ lemma: '起こす' });
   });
 
   it('pos groups', () => {

@@ -75,7 +75,12 @@ export function masuToDict(word: string, reading: string, pos: string | undefine
     return { lemma: `${w.slice(0, -1)}${w.endsWith('来') ? '来る' : 'くる'}`, lemmaReading: `${r.slice(0, -1)}くる`, rule: 'kuru' };
   }
   const go = godan(w);
-  if (w.endsWith('し') && (grp === 3 || (grp === 0 && w.length > 1 && !(go && corpus.has(go))))) {
+  // Without pos, only a noun-like stem (katakana, or two or more kanji: 勉強し, コピーし) is a
+  // する verb; one kanji or a kana-ending stem is godan す (話し → 話す, 起こし → 起こす).
+  // Structural, so it doesn't depend on whether 話す also happens to be in the corpus.
+  const stem = w.slice(0, -1);
+  const nounLike = /^[\u30A0-\u30FFー]+$/.test(stem) || /^[\u4E00-\u9FFF々]{2,}$/.test(stem);
+  if (w.endsWith('し') && (grp === 3 || (grp === 0 && nounLike && !(go && corpus.has(go))))) {
     return { lemma: `${w.slice(0, -1)}する`, lemmaReading: `${r.slice(0, -1)}する`, rule: 'suru' };
   }
   const ichi: MasuLemma = { lemma: `${w}る`, lemmaReading: `${r}る`, rule: 'ichidan(pos)' };
