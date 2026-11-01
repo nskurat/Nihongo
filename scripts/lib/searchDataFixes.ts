@@ -8,8 +8,8 @@ export type LessonFile = Record<string, Json[]>;
 
 /** §7 #1: vocab readings that are wrong for the word (uid-keyed, guarded by the old value). */
 export const VOCAB_READING_FIXES: { uid: string; word: string; from: string; to: string; romaji?: string }[] = [
-  // Waller's N3 list spells the colloquial pronunciation; the dictionary reading is いう.
-  { uid: 'n3-vocab-23-124', word: '言う', from: 'ゆう', to: 'いう' },
+  // Regression R7: ゆく is the literary reading; N5 learners say and type いく.
+  { uid: 'n5-vocab-4-34', word: '行く', from: 'ゆく', to: 'いく' },
   // Teacher review F9: the readings drop part of the phrase (が, します).
   { uid: 'n4-vocab-9-2', word: '気が付きます', from: 'きつきます', to: 'きがつきます', romaji: 'kigatsukimasu' },
   { uid: 'n4-vocab-16-6', word: '親切にします', from: 'しんせつに', to: 'しんせつにします', romaji: 'shinsetsu ni shimasu' },
@@ -62,6 +62,32 @@ export const N5_KUN_OKURIGANA: Record<string, Record<string, string[]>> = {
 export interface FixReport {
   changed: string[];
   skipped: string[];
+}
+
+/**
+ * Regression R16: JMdict part-of-speech markers (`(n)`, `(a)`, `(col)`, `(exp)`…) left in a
+ * few N2/N1 glosses. They mean nothing to a learner and match English searches for "a".
+ * Numbered senses `(1)` and usage notes such as `(male)` or `(hon)` stay.
+ */
+const POS_MARKER = /\((?:n|a|v\d?|vt|vi|adj(?:-[a-z]+)?|adv|col|exp|uk|n-adv|vs|int|pn|prt|conj|aux)\)\s*/g;
+
+/** An empty language tag left in front of the gloss (`(pt:) playing cards (pt: carta)`). */
+const EMPTY_LANG_TAG = /^\([a-z]{2}:\)\s*/;
+
+export function stripPosMarkers(meaning: string): string {
+  return meaning.replace(POS_MARKER, '').replace(EMPTY_LANG_TAG, '').replace(/\s{2,}/g, ' ').replace(/,\s*,/g, ',').trim();
+}
+
+/** Applies `stripPosMarkers` to every vocab meaning. Idempotent. */
+export function applyMeaningMarkerFixes(file: LessonFile, report: FixReport): void {
+  for (const row of rowsOf(file)) {
+    if (typeof row.meaning !== 'string') continue;
+    const after = stripPosMarkers(row.meaning);
+    if (after !== row.meaning) {
+      report.changed.push(`${String(row.uid)} ${row.meaning} → ${after}`);
+      row.meaning = after;
+    }
+  }
 }
 
 function rowsOf(file: LessonFile): Json[] {

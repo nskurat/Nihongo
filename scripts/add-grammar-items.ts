@@ -50,7 +50,7 @@ const taxonomy = readJson<{ facets: Record<string, { tags: Record<string, unknow
 );
 const knownTags = new Set(Object.values(taxonomy.facets).flatMap((facet) => Object.keys(facet.tags)));
 
-const RANGES: Record<Level, number> = { N5: 25, N4: 25, N3: 24, N2: 26, N1: 32 };
+const RANGES: Record<Level, number> = { N5: 26, N4: 25, N3: 24, N2: 26, N1: 32 };
 const REQUIRED = ['title', 'meaning', 'structure', 'explanation', 'summary'] as const;
 
 const items = batchFiles.flatMap((file) => readJson<NewItem[]>(file));

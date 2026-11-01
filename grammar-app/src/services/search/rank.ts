@@ -44,8 +44,18 @@ export interface Rankable {
   pos: number;
 }
 
+/**
+ * Exact and lemma hits form one band in which level decides first (owner decisions D1/D3,
+ * docs/search/07-regression.md): a core N5 word reached through its ます-row or dictionary
+ * form (います, お酒) ranks above a rarer word whose reading is the query (炒る N2, 酒 N3).
+ * Below that band, tier and sub-order come before level as before.
+ */
+const band = (tier: number) => (tier <= TIER.lemma ? 0 : tier);
+
 export function compareHits(current: Level) {
   return (a: Rankable, b: Rankable): number =>
+    band(a.tier) - band(b.tier) ||
+    (band(a.tier) === 0 ? levelRank(a.level, current) - levelRank(b.level, current) : 0) ||
     a.tier - b.tier ||
     a.sub - b.sub ||
     levelRank(a.level, current) - levelRank(b.level, current) ||
@@ -76,25 +86,41 @@ export function groupOrderFor(script: Script, opts: { singleKanji: boolean; roma
 export interface GroupBest {
   tier: number;
   sub: number;
+  /** Level of the group's best hit (N5 = 0). */
+  level: number;
 }
 
 /**
- * Orders groups by their best hit (teacher review F4, QA BUG-03): the group with the
- * strongest match comes first. Weak matches (tier ≥ 7: hints, structure, patterns inside
- * the query) are not passed in. Ties keep the script default, except that a Vocab exact
- * hit on a verb/adjective beats a Grammar exact hit (わかります, いきます).
+ * A kanji whose reading is the query is a weaker answer than a word with that reading
+ * (たべる → 食べます before 食; regression R2). Applied only to group order.
  */
-export function orderGroups(defaults: DocType[], best: Partial<Record<DocType, GroupBest>>, vocabWinsTie: boolean): DocType[] {
-  const score = (t: DocType) => best[t] ?? { tier: Infinity, sub: 0 };
+const KANJI_GROUP_PENALTY = 1.5;
+
+/**
+ * Orders groups by their best hit (teacher review F4, QA BUG-03, regression R2/D2): the
+ * group with the strongest match comes first. Weak matches (tier ≥ 7: hints, structure,
+ * patterns inside the query) are not passed in. When Vocab and Grammar both have an
+ * exact/lemma hit, the more basic one leads (ます → Vます N5 over 増す N3; いくら → いくら N5
+ * over the N4 point), and at the same level the word leads (だれ → 誰, わかります). Other ties
+ * keep the script default.
+ */
+export function orderGroups(defaults: DocType[], best: Partial<Record<DocType, GroupBest>>): DocType[] {
+  const score = (t: DocType) => {
+    const b = best[t];
+    if (!b) return { tier: Infinity, sub: 0, level: 0 };
+    return t === 'kanji' ? { ...b, tier: b.tier + KANJI_GROUP_PENALTY } : b;
+  };
+  const wordAndGrammar = (a: DocType, b: DocType) =>
+    (a === 'vocab' && b === 'grammar') || (a === 'grammar' && b === 'vocab');
   return [...defaults].sort((a, b) => {
     const x = score(a);
     const y = score(b);
+    if (wordAndGrammar(a, b) && x.tier <= TIER.lemma && y.tier <= TIER.lemma) {
+      if (x.level !== y.level) return x.level - y.level;
+      return a === 'vocab' ? -1 : 1;
+    }
     if (x.tier !== y.tier) return x.tier - y.tier;
     if (x.tier !== Infinity && x.sub !== y.sub) return x.sub - y.sub;
-    if (vocabWinsTie && x.tier !== Infinity) {
-      if (a === 'vocab' && b === 'grammar') return -1;
-      if (a === 'grammar' && b === 'vocab') return 1;
-    }
     return defaults.indexOf(a) - defaults.indexOf(b);
   });
 }

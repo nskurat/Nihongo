@@ -118,6 +118,7 @@ export function FunctionRows({ hits, ctx }: { hits: SearchHit[]; ctx: RowContext
         <div key={level} role="group" aria-labelledby={`search-level-${level}`}>
           <h3
             id={`search-level-${level}`}
+            role="presentation"
             className="px-4 py-2 bg-slate-50/80 border-y border-slate-200 first:border-t-0 border-l-[3px] border-l-indigo-500 text-xs font-bold text-slate-700"
           >
             {level} · {rows.length}

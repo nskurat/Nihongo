@@ -97,16 +97,21 @@ export default function SearchFilters({ state, facetCounts, functionLabel, rankL
         type="button"
         aria-pressed={on}
         onClick={() => onChange(toggleLevel(state, level))}
-        aria-label={count !== undefined ? `${level}, ${count} result${count === 1 ? '' : 's'}` : level}
         className={`${
           layout === 'rail' ? 'flex-1 flex-col py-1' : 'shrink-0 gap-1.5 px-3 py-1.5 max-md:min-h-10'
         } inline-flex items-center justify-center rounded-lg border text-xs font-bold transition-colors cursor-pointer ${
           on ? 'bg-indigo-600 text-white border-indigo-600' : OFF
         } ${FOCUS}`}
       >
+        {/* The name is the visible text plus a hidden noun ("N5 4 results"), so voice control
+            can target what it sees (axe label-content-name-mismatch). */}
         <span>{level}</span>
         {count !== undefined && (
-          <span className={`text-[10px] font-semibold ${on ? 'text-indigo-100' : 'text-slate-600'}`}>{count}</span>
+          <>
+            {' '}
+            <span className={`text-[10px] font-semibold ${on ? 'text-indigo-100' : 'text-slate-600'}`}>{count}</span>
+            <span className="sr-only"> {count === 1 ? 'result' : 'results'}</span>
+          </>
         )}
       </button>
     );

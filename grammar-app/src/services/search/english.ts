@@ -7,7 +7,9 @@
 export const STOPWORDS = new Set(
   (
     'a an the of to in on at for by with and or is are be as it its one s sb sth someone something etc eg e g ie i ' +
-    "one's oneself"
+    "one's oneself " +
+    // Roman numerals (Group II) are labels, not words: `ii` is romaji for いい (R5).
+    'ii iii iv'
   )
     .split(' ')
     // Single letters are placeholders (N, V, A) or noise, never a search word.

@@ -73,6 +73,28 @@ describe('reasonLine', () => {
     );
     expect(r).toEqual({ from: '待たされた', to: '待つ', note: 'causative-passive → past（使役受身 → 過去）' });
   });
+  it('names the dictionary-form word as written when only the polite ending was removed (R11)', () => {
+    const r = reasonLine(
+      hit({
+        matchKind: 'deinflected',
+        title: '分かる',
+        reading: 'わかる',
+        deinflection: { input: 'わかります', lemma: 'わかる', steps: [{ en: 'polite', ja: '丁寧' }] },
+      })
+    );
+    expect(r).toEqual({ from: 'わかります', to: '分かる', note: '(dictionary form)' });
+  });
+  it('keeps the kana key for a ます-row (its title is not the dictionary form)', () => {
+    const r = reasonLine(
+      hit({
+        matchKind: 'deinflected',
+        title: '食べます',
+        reading: 'たべます',
+        deinflection: { input: 'たべたい', lemma: 'たべる', steps: [{ en: 'want to (たい)', ja: '希望' }] },
+      })
+    );
+    expect(r?.to).toBe('たべる');
+  });
   it('uses the short dictionary-form line for lemma hits', () => {
     expect(reasonLine(hit({ matchKind: 'lemma', title: '分かる' }))).toEqual({ to: '分かる', note: '(dictionary form)' });
   });

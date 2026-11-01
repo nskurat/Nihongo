@@ -401,14 +401,18 @@ export class SearchEngine {
       if (kind === K.lemma) consider(d, { tier: TIER.lemma, sub: 0, kind: 'lemma', field: 'title', via: doc.lemma[0] });
       else if (kind === K.alias) consider(d, { tier: TIER.lemma, sub: 0, kind: 'lemma', field: 'title', needle: k, via: k });
       else if (kind === K.compound) {
-        if (!singleKanji) consider(d, { tier: TIER.hint, sub: 0, kind: 'compound', field: 'compound', via: k });
+        // "kanji in <example phrase>" only answers a query written in kanji (R9: です → 緑 is noise).
+        if (!singleKanji && hasKanji(k)) consider(d, { tier: TIER.hint, sub: 0, kind: 'compound', field: 'compound', via: k });
       } else if (kind === K.hint) consider(d, { tier: TIER.hint, sub: 0, kind: 'compound', field: 'title', needle: k, via: k });
       else if (kind === K.structure) consider(d, { tier: TIER.hint, sub: 0, kind: 'exact', field: 'structure', needle: k });
-      else consider(d, { tier: TIER.exact, sub: kind === K.stem ? 1 : 0, kind: 'exact', field: fieldOf(kind), needle: k });
+      else if (singleKanji && doc.type === 'vocab') {
+        // A single kanji lists its words by level (D3): 分(ぶ, N3) the word does not outrank 自分 N5.
+        consider(d, { tier: TIER.prefix, sub: 0, kind: 'exact', field: fieldOf(kind), needle: k });
+      } else consider(d, { tier: TIER.exact, sub: kind === K.stem ? 1 : 0, kind: 'exact', field: fieldOf(kind), needle: k });
     }
     if (oneKana) return true;
 
-    if (isKana(k.slice(-1))) this.matchDeinflected(k, consider);
+    const reachedWord = isKana(k.slice(-1)) && this.matchDeinflected(k, consider);
 
     const keys = this.keys();
     // Prefix: binary search, then walk.
@@ -433,8 +437,9 @@ export class SearchEngine {
         }
       }
     }
-    // Long-vowel-folded reading.
-    if (isKana(k) && k.length >= 2) {
+    // Long-vowel-folded reading; not for an inflected form that already reached its word
+    // (R10: きいた is 聞いた, not 北 "similar reading").
+    if (isKana(k) && k.length >= 2 && !(reachedWord && k.length >= 3)) {
       for (const d of this.folded.get(foldLong(k)) ?? []) {
         consider(d, { tier: TIER.folded, sub: 0, kind: 'folded', field: 'reading', via: this.docs[d].readings[0] });
       }
@@ -513,6 +518,11 @@ export class SearchEngine {
       const kind = (p % KINDS) as Kind;
       // A single kanji's own row is the answer; other kanji via compounds are noise (日 → 語).
       if (singleKanji && kind === K.compound) continue;
+      // Kanji-in-phrase rows only for queries written in kanji (R9).
+      if (kind === K.compound && !hasKanji(needle)) continue;
+      // A 2-kana query inside a longer grammar key or kanji reading is noise (R10: さい in
+      // ください, だけ in くだける); words keep their contains matches.
+      if (shortKana && how === 'contains' && this.docs[d].type !== 'vocab') continue;
       // 2-kana queries do not match inside katakana loanwords (ぷん → オープン).
       if (shortKana && how === 'contains' && KATAKANA_WORD.test(this.docs[d].title)) continue;
       const low = LOW_KINDS.has(kind);
@@ -562,7 +572,11 @@ export class SearchEngine {
       const content = doc.phrase.split(' ').filter((w) => w && !STOPWORDS.has(w));
       const matched = content.filter((w) => enForms.has(foldPlural(w))).length;
       const dense = content.length > 0 && matched / content.length >= 0.5;
-      let sub = (isPhrase || terms.length === 1 ? 0 : 1) + (dense ? 0 : 0.5);
+      // A core N5/N4 word whose gloss has the very word typed is not pushed down for a
+      // fuller gloss (D1: lost → 無くなる "to disappear, to get lost"); a stem-only match
+      // (lose weight) still is.
+      const coreWord = doc.type === 'vocab' && LOWER_LEVELS.has(doc.level) && terms.some((t) => content.includes(t));
+      let sub = (isPhrase || terms.length === 1 ? 0 : 1) + (dense || coreWord ? 0 : 0.5);
       let tier: number = summaryOnly ? TIER.summary : TIER.english;
       if (cats.members.has(d)) {
         tier = TIER.english;
@@ -577,13 +591,15 @@ export class SearchEngine {
         via: summaryOnly ? 'summary' : undefined,
       });
     }
-    // Chip members the words themselves missed: core points and N5/N4 first, the rest last.
+    // Chip members the words themselves missed: core points first; the others after every
+    // direct meaning hit (regression R1: `as soon as` lists 〜次第, 〜とたん before N5 time
+    // grammar that merely shares the chip), N5/N4 before the rest.
     const via = cats.chips.map((c) => c.label).join(' · ') || undefined;
     for (const d of cats.members) {
       if (hits.has(d)) continue;
       const core = cats.core.has(d);
       const basic = LOWER_LEVELS.has(this.docs[d].level);
-      consider(d, { tier: TIER.english, sub: core ? -2 : basic ? -1 : 0.75, kind: 'tag', field: 'tag', via });
+      consider(d, { tier: TIER.english, sub: core ? -2 : basic ? 1.6 : 1.75, kind: 'tag', field: 'tag', via });
     }
     return hits.size;
   }
@@ -633,19 +649,26 @@ export class SearchEngine {
 
     // Group order: by each group's best real match (tier < 7), script default on ties.
     const bestByType: Partial<Record<DocType, GroupBest>> = {};
-    let vocabVerbExact = false;
     for (const s of filtered) {
       if (s.c.tier >= TIER.hint) continue;
       const t = this.docs[s.d].type;
       const b = bestByType[t];
-      if (!b || s.c.tier < b.tier || (s.c.tier === b.tier && s.c.sub < b.sub)) bestByType[t] = { tier: s.c.tier, sub: s.c.sub };
-      if (t === 'vocab' && s.c.tier <= TIER.lemma && (this.docs[s.d].lemma.length > 0 || /[15ksi]/.test(this.docs[s.d].cls))) vocabVerbExact = true;
+      const level = levelIndex(this.docs[s.d].level);
+      const tierOf = (tier: number) => (tier <= TIER.lemma ? 0 : tier);
+      // Exact and lemma hits count as one band, the most basic first (as in compareHits).
+      if (
+        !b ||
+        tierOf(s.c.tier) < tierOf(b.tier) ||
+        (tierOf(s.c.tier) === tierOf(b.tier) && (tierOf(s.c.tier) === 0 ? level < b.level : s.c.tier < b.tier || (s.c.tier === b.tier && s.c.sub < b.sub)))
+      ) {
+        bestByType[t] = { tier: s.c.tier, sub: s.c.sub, level };
+      }
     }
     let groupOrder: DocType[];
     if (meta.tagListing) groupOrder = ['grammar', 'vocab', 'kanji'];
     else if (meta.singleKanji) groupOrder = meta.defaults;
     else if (meta.katakana) groupOrder = ['vocab', 'grammar', 'kanji'];
-    else groupOrder = orderGroups(meta.defaults, bestByType, vocabVerbExact);
+    else groupOrder = orderGroups(meta.defaults, bestByType);
 
     const groups = emptyByType<SearchHit[]>(() => []);
     const totals = emptyByType(() => 0);

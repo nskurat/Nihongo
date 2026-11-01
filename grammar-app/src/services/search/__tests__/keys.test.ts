@@ -54,7 +54,8 @@ describe('grammarKeys', () => {
 
   it('drops Latin parentheses, reading glosses and anything after →', () => {
     expect(grammarKeys('N(place)で V')).toEqual(['で']);
-    expect(grammarKeys('上（じょう）')).toEqual(['上']);
+    // The bracketed reading is a key too (R3: ぎみ finds 〜気味（ぎみ）).
+    expect(grammarKeys('上（じょう）')).toEqual(['上', 'じょう']);
     expect(grammarKeys('い-adj（〜い→さ）')).toEqual(['い']);
     expect(grammarKeys(undefined)).toEqual([]);
   });
@@ -180,5 +181,24 @@ describe('masuToDict (§2.3 rule table)', () => {
     expect(isMasuExpression('おめでとうございます', undefined)).toBe(true);
     expect(isMasuExpression('いってきます', 'Expression')).toBe(true);
     expect(masuToDict('食べる', 'たべる', undefined, corpus)).toBeNull();
+  });
+});
+
+describe('grammar keys for kana and plain-form look-ups (regression R3, R4, D2)', () => {
+  it('indexes the bracketed reading and the curated kana reading of kanji titles', () => {
+    expect(grammarKeys('〜気味（ぎみ）')).toContain('ぎみ');
+    expect(grammarKeys('〜上で')).toContain('うえで');
+    expect(grammarKeys('〜次第（だ／で）')).toContain('しだい');
+    expect(grammarKeys('〜得る／〜得ない')).toEqual(expect.arrayContaining(['える', 'うる', 'えない']));
+  });
+
+  it('adds plain forms of ません and the bare stem of だ', () => {
+    expect(grammarKeys('plain form + かもしれません')).toContain('かもしれない');
+    expect(grammarKeys('Vない-formなければ なりません')).toContain('ならない');
+    expect(grammarKeys('〜みたいだ / みたいに / みたいな')).toContain('みたい');
+  });
+
+  it('lets a plain form match inside a longer query', () => {
+    expect(grammarPatternKeys('Vた-form／Vない-form ない + ほうがいいです')).toContain('ほうがいい');
   });
 });

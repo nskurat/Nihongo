@@ -206,8 +206,8 @@ group, at any rank, without "Show all".
 | # | Query / state | Expected | Story |
 |---|---|---|---|
 | T-01 | `わかります` | Vocab: わかります N5 L9 (`n5-vocab-9-1`) top. 分かる N5 L4 (`n5-vocab-4-41`) as lemma hit. Grammar contains `N が あります／わかります…` N5 L9 | US-3 |
-| T-02 | `わかる` | Vocab top 分かる N5 L4. Contains 分る N2 L8 (`n2-vocab-8-57`) and わかります N5 L9 | US-2/3 |
-| T-03 | `kan'i` | Vocab top 簡易 かんい N1 L28 (`n1-vocab-28-28`) | US-2 |
+| T-02 | `わかる` | *(Amended 2026-11: 分る N2 was removed by the vocab dedupe.)* Vocab top 分かる N5 L4. Contains わかります N5 L9 | US-2/3 |
+| T-03 | `kan'i` | Vocab top 簡易 かんい N1 (L26 since the N1 regeneration) | US-2 |
 | T-04 | `kani` | 簡易 **not** in results | US-2 |
 | T-05 | `因` | Kanji group first. 因 N3 L21 (`n3-kanji-21-12`) is result #1 | US-6 |
 | T-06 | `分` | Kanji group first: 分 N5 L4. Vocab contains 自分 N5 L4, 十分 N4 L7, 半分 N4 L19. Grammar contains `今 -時-分です` N5 L4 | US-6/7 |
@@ -229,10 +229,10 @@ group, at any rank, without "Show all".
 | T-22 | `迷惑` | Vocab top 迷惑 N3 L12. `かける [迷惑を〜]` N3 L12 ranked below it. Kanji contains 迷 N3 L1 and 惑 N1 L4 | US-4/6 |
 | T-23 | `花見` | Vocab contains `[お]花見` N5 L6 | US-4 |
 | T-24 | `ありがとう` / `arigatou` | Vocab top `[どうも]ありがとう[ございます]` N5 L2 (`n5-vocab-2-10`). The PR #11 review removed N1 有難う, so it is the only row | US-4 |
-| T-25 | `さけ` | Vocab: 酒 N3 L10 above お酒 N5 L6 | US-4 |
+| T-25 | `さけ` | *(Amended 2026-11, owner decision D3: exact and lemma hits rank by level.)* Vocab: お酒 N5 L6 first, 酒 N3 L10 after it | US-4 |
 | T-26 | `たくしー` | Vocab top タクシー N5 L16 | US-2 |
-| T-27 | `ミル` | Vocab contains 見る N5 L9 (and 見ます N5 L6 via lemma) | US-2/3 |
-| T-28 | `食べる` / `taberu` | Vocab contains 食べる N5 L7 and 食べます N5 L6 | US-3 |
+| T-27 | `ミル` | *(Amended 2026-11: the N5 見る row was merged into 見ます.)* Vocab contains 見ます N5 L6 ("also written 見る") | US-2/3 |
+| T-28 | `食べる` / `taberu` | *(Amended 2026-11: the N5 食べる row was merged into 食べます.)* Vocab top 食べます N5 L6 ("also written 食べる"), and the Vocab group comes before Kanji | US-3 |
 | T-29 | `食べられない` | 食べる N5 L7 and 食べます N5 L6 with the path "→ 食べる (potential/passive, negative)" | US-3 |
 | T-30 | `待たされた` | 待つ N5 L14, path shows causative-passive, past | US-3 |
 | T-31 | `読まずに` | Vocab 読む N5 L9. Grammar contains 〜ずに N3 L10 | US-3/5 |
@@ -241,11 +241,11 @@ group, at any rank, without "Show all".
 | T-34 | `きた` | Vocab: 北 N5 L20 (exact reading きた) first. Then 来る N5 L4 and 着る N5 L22 (deinflected tier) above every prefix hit (帰宅, 期待…). Kanji contains 来 N5 L4 and 北 N5 L20 (kun きた) | US-3/6 |
 | T-35 | `kyoushitsu`, `kyōshitsu`, `kyousitu` | Vocab top 教室 N5 L3. `kyoshitsu` also finds it (Should #12, folded tier) | US-2 |
 | T-36 | `jouzu` / `zyouzu` / `kitte` | 上手[な] N5 L9 / 上手[な] N5 L9 / 切手 N5 L11 | US-2 |
-| T-37 | `lost` | Vocab contains 迷子 N3 L8, 無くなる N4 L13, 迷う N3 L1 (stem "lose"). Kanji contains 迷 N3 L1 | US-2 |
+| T-37 | `lost` | *(Amended 2026-11, owner decision D1: core items on top.)* Vocab top 8 contains 無くなる N4 L13, 迷子 N3 L8, 迷う N3 L1. Kanji contains 迷 N3 L1 | US-2 |
 | T-38 | `even` | Grammar does **not** contain `A(place)で Bが あります` N5 L21 (meaning has "event" only) | US-2 |
 | T-39 | `に` (single kana) | Grammar contains `N(time)に V` N5 L4 and `N(person)に あげます、etc.` N5 L7. Vocab only exact readings (二 N5 L2 `n5-vocab-2-29`, 荷 N1 L17 `n1-vocab-17-61`). Total ≤ 40 results | US-9 |
 | T-40 | `よほど` | Vocab contains `よっぽど/よほど` N3 L17, よほど N3 L22, 余程 N1 L3 (`n1-vocab-3-81`) | US-4 |
-| T-41 | `ちょうど` | Three rows N4 L21, N3 L1, N3 L15. With Could #15: one row with 3 badges | US-7 |
+| T-41 | `ちょうど` | *(Amended 2026-11: the N3 rows were deduped.)* One row with two badges, N5 L22 and N4 L21 | US-7 |
 | T-42 | `丁度` | *(Amended.)* No vocab or grammar hit. The "No word matches 丁度" state lists the kanji 丁 N1 L11 (`n1-kanji-11-6`) and 度 N5 L22 (`n5-kanji-22-6`). Suggests trying the reading. No AI offer | US-9 |
 | T-43 | Fresh browser opens `…/search?q=ものの&level=N2` (cold load through the `404.html` fallback) | Same results as T-15 filtered to N2. Title and focus OK. `…/search?q=ばかり&level=N2,N3` lists only N2 and N3 points | US-11 |
 | T-44 | Activate result 〜ものの in T-15 | URL `/n2/grammar/4?focus=n2-grammar-4-1`. Card scrolled into view and highlighted, with **no** modal open. Back returns to results with the query intact | US-7/11 |

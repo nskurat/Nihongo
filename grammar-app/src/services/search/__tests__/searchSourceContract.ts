@@ -6,9 +6,9 @@ import type { BaseSearchSource } from '../SearchSource';
  * the static worker source, the in-memory source, and any future database adapter.
  */
 export function searchSourceContract(make: () => BaseSearchSource): void {
-  it('contract: listByTag("comparison") → 17 points, N5 → N1', async () => {
+  it('contract: listByTag("comparison") → 18 points, N5 → N1', async () => {
     const list = await make().listByTag('comparison');
-    expect(list).toHaveLength(17);
+    expect(list).toHaveLength(18);
     const order = list.map((h) => ['N5', 'N4', 'N3', 'N2', 'N1'].indexOf(h.level) * 1000 + h.lesson);
     expect([...order].sort((a, b) => a - b)).toEqual(order);
   });
@@ -25,6 +25,6 @@ export function searchSourceContract(make: () => BaseSearchSource): void {
 
   it('contract: listCategories lists the alias categories with counts', async () => {
     const cats = await make().listCategories();
-    expect(cats.find((c) => c.id === 'comparison')?.count).toBe(17);
+    expect(cats.find((c) => c.id === 'comparison')?.count).toBe(18);
   });
 }

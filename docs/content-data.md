@@ -1,7 +1,8 @@
 # Kanji & vocabulary content: sources, pipeline, decisions
 
 How `grammar-app/src/data/*/{kanji,vocab}.json` were built and the rules to keep when
-changing them. Grammar is authored separately (`scripts/add-grammar-items.ts`).
+changing them. Grammar is authored separately (`scripts/add-grammar-items.ts`). Authored batches are kept in `scripts/batches/`
+(e.g. `grammar-2026-11-search-gaps.json`: 〜わりに（は）, 〜なんて, 〜なんか).
 
 ## Sources
 
@@ -18,8 +19,10 @@ npx tsx scripts/fill-n5-n4-gaps.ts                  # append missing N5/N4-list 
 npx tsx scripts/review-n3-kanji-vocab.ts            # repair N3 kanji, append missing N3 items
 npx tsx scripts/build-upper-kanji-vocab.ts --level N2   # regenerate N2 kanji + vocab
 npx tsx scripts/build-upper-kanji-vocab.ts --level N1   # regenerate N1 kanji + vocab
-npx tsx scripts/fix-search-data.ts                  # reading fixes that matter for search
+npx tsx scripts/fix-search-data.ts                  # reading fixes that matter for search, JMdict POS markers
+npx tsx scripts/add-core-expressions.ts             # N5 lesson 26 "Core expressions" (greetings, 日本語)
 npx tsx scripts/dedupe-vocab.ts                     # drop the same word taught twice (食べる beside 食べます)
+                                                    # ⚠ see docs/backlog.md §3 before running: it now shifts uids
 npm run validate:data
 ```
 

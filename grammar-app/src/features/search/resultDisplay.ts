@@ -55,8 +55,13 @@ export function reasonLine(hit: SearchHit): ReasonLine | null {
       // Steps are a sequence (可能・受身 → 否定 → 過去), not alternatives: labels may contain ・.
       const en = d.steps.map((s) => s.en).join(' → ');
       const ja = d.steps.map((s) => s.ja).join(' → ');
-      const note = en ? `${en}${ja ? `（${ja}）` : ''}` : S.dictionaryForm;
-      return { from: d.input, to: d.lemma, note };
+      // Only the polite ending was removed (わかります → わかる): name the dictionary form.
+      const politeOnly = d.steps.length === 1 && d.steps[0].en === 'polite';
+      const note = en && !politeOnly ? `${en}${ja ? `（${ja}）` : ''}` : S.dictionaryForm;
+      // Show the word as it is written (→ 分かる), not its kana key (R11), when this row is
+      // the dictionary form itself; a ます-row keeps the plain key (→ たべる).
+      const word = hit.type === 'vocab' && hit.reading === d.lemma && !hit.title.endsWith('ます') ? hit.title : d.lemma;
+      return { from: d.input, to: word, note };
     }
     case 'lemma':
       if (hit.via && hit.via !== hit.title) return { note: S.alsoWritten(hit.via) };
