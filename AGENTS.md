@@ -32,9 +32,11 @@ grammar-app/
   src/
     main.tsx            BrowserRouter mount
     App.tsx             Routes: /:level/:section/:lesson
-    features/           grammar | vocab | kanji | reading — Section.tsx + use*.ts each
+    features/           grammar | vocab | kanji | reading | search — Section.tsx + use*.ts each
     components/common/  Header, modals, MarkdownViewer, FuriganaText, TagBadge
-    services/ai/        Provider registry, prompts, parsers, storage adapter
+    services/ai/        Provider registry, prompts, parsers, model catalog, storage adapters
+    services/search/    Global search: normalise/romaji/deinflect, index builder, ranking, worker
+                        (design + QA: docs/search/; index built by scripts/build-search-index.ts)
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
     data/{n5..n1}/      grammar|vocab|kanji.json, keyed by lesson number. A section shows wherever
                         its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
@@ -68,6 +70,12 @@ grammar-app/
   telemetry, proxies or key transmission of any kind without being asked.
 - The app is served from the `/Nihongo/` sub-path. Paths must never be hardcoded —
   derive from `import.meta.env.BASE_URL`.
+
+## Where things are recorded
+
+- Open issues and the deferred backlog: `docs/refactor/FINDINGS.md`.
+- Content pipeline, sources and decisions: `docs/content-data.md`.
+- Role skills for reviews: `.claude/skills/{japanese-teacher,product-manager,ux-designer}`.
 
 ## Refactor in progress
 
