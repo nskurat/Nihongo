@@ -42,10 +42,11 @@ export default function GeneratorPanel({ studio }: { studio: ReadingStudio }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Lesson Scope Selector */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+            <label htmlFor="reading-lesson-scope" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
               Lesson Grammar Scope
             </label>
             <select
+              id="reading-lesson-scope"
               value={selectedLesson}
               onChange={(e) => setSelectedLesson(e.target.value)}
               className="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
@@ -64,10 +65,11 @@ export default function GeneratorPanel({ studio }: { studio: ReadingStudio }) {
 
           {/* Topic Selector */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+            <label htmlFor="reading-topic" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
               Preset Theme / Topic
             </label>
             <select
+              id="reading-topic"
               value={selectedTopic}
               onChange={(e) => {
                 setSelectedTopic(e.target.value);
@@ -86,10 +88,11 @@ export default function GeneratorPanel({ studio }: { studio: ReadingStudio }) {
 
         {/* Custom Topic Input */}
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label htmlFor="reading-custom-topic" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
             Or Enter a Custom Topic / Scenario (Optional)
           </label>
           <input
+            id="reading-custom-topic"
             type="text"
             value={customTopic}
             onChange={(e) => setCustomTopic(e.target.value)}

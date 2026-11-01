@@ -120,11 +120,16 @@ export default function Header() {
           </div>
 
           {/* Level Switcher (Pill Selector) */}
-          <div className="flex items-center bg-indigo-800/60 p-1 rounded-xl border border-indigo-400/30 max-md:w-full">
+          <div
+            role="group"
+            aria-label="JLPT level"
+            className="flex items-center bg-indigo-800/60 p-1 rounded-xl border border-indigo-400/30 max-md:w-full"
+          >
             {levels.map((lvl) => (
               <button
                 key={lvl.id}
                 onClick={() => handleLevelChange(lvl.id)}
+                aria-pressed={activeLevel === lvl.id}
                 className={`px-3 py-1 max-md:min-h-10 max-md:flex-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeLevel === lvl.id
                     ? 'bg-white text-indigo-700 shadow-md transform scale-105'

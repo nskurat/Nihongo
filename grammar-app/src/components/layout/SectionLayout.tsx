@@ -84,37 +84,39 @@ export default function SectionLayout({
             )}
           </div>
 
-          <ul
-            ref={lessonListRef}
-            className={`flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin ${c.scrollThumb}`}
-          >
-            {lessons.map((n) => {
-              const active = lesson === n;
-              return (
-                <li key={n} className="min-w-fit">
-                  <button
-                    onClick={() => navigate(`/${level.toLowerCase()}/${section}/${n}`)}
-                    aria-current={active ? 'true' : undefined}
-                    className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
-                      active ? c.lessonActive : c.lessonIdle
-                    }`}
-                  >
-                    <span>Lesson {n}</span>
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={`text-xs px-1.5 py-0.5 rounded-full ${
-                          active ? c.countActive : 'bg-slate-100 text-slate-500'
-                        }`}
-                      >
-                        {lessonCounts[n] || 0}
-                      </span>
-                      {active && <ArrowRight size={14} className="hidden lg:block" />}
-                    </div>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+          <nav aria-label={`${level} lessons`}>
+            <ul
+              ref={lessonListRef}
+              className={`flex flex-row lg:flex-col p-2 gap-1.5 overflow-x-auto lg:overflow-y-auto lg:max-h-[70vh] scrollbar-thin ${c.scrollThumb}`}
+            >
+              {lessons.map((n) => {
+                const active = lesson === n;
+                return (
+                  <li key={n} className="min-w-fit">
+                    <button
+                      onClick={() => navigate(`/${level.toLowerCase()}/${section}/${n}`)}
+                      aria-current={active ? 'true' : undefined}
+                      className={`w-full flex items-center justify-between text-left px-3.5 py-2.5 rounded-lg transition-all text-sm cursor-pointer ${
+                        active ? c.lessonActive : c.lessonIdle
+                      }`}
+                    >
+                      <span>Lesson {n}</span>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`text-xs px-1.5 py-0.5 rounded-full ${
+                            active ? c.countActive : 'bg-slate-100 text-slate-500'
+                          }`}
+                        >
+                          {lessonCounts[n] || 0}
+                        </span>
+                        {active && <ArrowRight size={14} className="hidden lg:block" />}
+                      </div>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
           {sidebarFooter}
         </div>
       </div>
@@ -158,13 +160,13 @@ export default function SectionLayout({
 
         {loading && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3 animate-pulse">
-            <h4 className="text-lg font-bold text-slate-700">Loading Lesson {lesson}…</h4>
+            <h3 className="text-lg font-bold text-slate-700">Loading Lesson {lesson}…</h3>
           </div>
         )}
 
         {!loading && error && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-red-300 text-center space-y-3">
-            <h4 className="text-lg font-bold text-red-700">Couldn't load this lesson</h4>
+            <h3 className="text-lg font-bold text-red-700">Couldn't load this lesson</h3>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
               {error.kind === 'not-found' ? `Lesson ${lesson} wasn't found.` : 'Something went wrong loading this content.'}
             </p>
@@ -179,7 +181,7 @@ export default function SectionLayout({
 
         {!loading && !error && shownCount === 0 && (
           <div className="bg-white p-12 rounded-xl border border-dashed border-slate-300 text-center space-y-3">
-            <h4 className="text-lg font-bold text-slate-700">{theme.emptyTitle}</h4>
+            <h3 className="text-lg font-bold text-slate-700">{theme.emptyTitle}</h3>
             <p className="text-sm text-slate-500 max-w-md mx-auto">
               {searchQuery ? theme.emptySearch(searchQuery, lesson) : theme.emptyPreparing(lesson)}
             </p>

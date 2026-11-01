@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import Header from './components/common/Header';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import GrammarSection from './features/grammar/GrammarSection';
 import VocabSection from './features/vocab/VocabSection';
 import KanjiSection from './features/kanji/KanjiSection';
@@ -65,27 +66,40 @@ function LegacyRedirect() {
 
 export default function App() {
   const { showKeyModal, setShowKeyModal, apiError } = useAiUiStore();
+  const { pathname } = useLocation();
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans flex flex-col justify-between">
       <div>
+        {/* First tab stop: jumps past the header's level, section and search controls. */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-white focus:text-indigo-700 focus:font-semibold focus:shadow-lg"
+        >
+          Skip to content
+        </a>
         <Header />
 
-        <Routes>
-          {/* Declared explicitly: a one-segment path would otherwise fall to the legacy redirect. */}
-          <Route
-            path="/search"
-            element={
-              <Suspense fallback={<div className="max-w-6xl mx-auto p-6" aria-busy="true" />}>
-                <SearchPage />
-              </Suspense>
-            }
-          />
-          <Route path="/:level/:section/:lesson" element={<ContentWrapper />} />
-          <Route path="/:level/:section" element={<ContentWrapper />} />
-          <Route path="/" element={<LegacyRedirect />} />
-          <Route path="*" element={<LegacyRedirect />} />
-        </Routes>
+        <div id="main-content" tabIndex={-1} className="outline-none">
+          {/* A crashed page keeps the header usable; navigating anywhere clears it. */}
+          <ErrorBoundary resetKey={pathname}>
+            <Routes>
+              {/* Declared explicitly: a one-segment path would otherwise fall to the legacy redirect. */}
+              <Route
+                path="/search"
+                element={
+                  <Suspense fallback={<div className="max-w-6xl mx-auto p-6" aria-busy="true" />}>
+                    <SearchPage />
+                  </Suspense>
+                }
+              />
+              <Route path="/:level/:section/:lesson" element={<ContentWrapper />} />
+              <Route path="/:level/:section" element={<ContentWrapper />} />
+              <Route path="/" element={<LegacyRedirect />} />
+              <Route path="*" element={<LegacyRedirect />} />
+            </Routes>
+          </ErrorBoundary>
+        </div>
       </div>
 
       <footer className="mt-12 py-6 border-t border-slate-200 bg-white/50 text-center text-xs text-slate-500">

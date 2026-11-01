@@ -43,6 +43,7 @@ export default function GrammarDetailModal({
           onClick={onClose}
           className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer"
           title="Close modal"
+          aria-label="Close"
         >
           <X size={18} />
         </button>

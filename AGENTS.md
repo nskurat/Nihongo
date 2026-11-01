@@ -23,6 +23,7 @@ Run from the repo root (`Nihongo/`). There is no nested `package.json`.
 | `npm run typecheck` | `tsc --noEmit` — must stay clean |
 | `npm run lint` | ESLint — must stay clean |
 | `npm run validate:data` | Zod-validates every content JSON file; warnings auto-log to `docs/refactor/FINDINGS.md` |
+| `npm run check:bundle` | After `build`: fails if the initial load or any lazy chunk is over its gzipped budget |
 
 ## Layout
 
@@ -34,7 +35,7 @@ grammar-app/
     main.tsx            BrowserRouter mount
     App.tsx             Routes: /:level/:section/:lesson
     features/           grammar | vocab | kanji | reading | search — Section.tsx + use*.ts each
-    components/common/  Header, Modal (native <dialog>, use for every dialog), MarkdownViewer, FuriganaText
+    components/common/  Header, Modal (native <dialog>, use for every dialog), ErrorBoundary, MarkdownViewer, FuriganaText
     components/layout/  SectionLayout + sectionTheme: the shell grammar/vocab/kanji render through
     services/ai/        Provider registry, prompts, parsers, model catalog, AiError, artifact cache
     services/content/   ContentSource + StaticContentSource, lazy per-level chunks; the only
@@ -46,7 +47,7 @@ grammar-app/
                         its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), sections.ts (section registry), tags.ts (taxonomy)
-    test/               Test setup (fetch blocked), renderWithRouter, fixtures, mockAi()
+    test/               Test setup (fetch blocked), renderWithRouter, fixtures, mockAi(), axeViolations()
 ```
 
 ## Conventions
@@ -58,6 +59,8 @@ grammar-app/
   `utils/` as side-effect-free modules **with unit tests**. Components stay thin.
 - State that belongs in the URL stays in the URL (level, section, lesson). zustand is
   for genuine cross-cutting UI state only.
+- Accessibility is gated: a new page or dialog gets an `axeViolations()` case in
+  `src/__tests__/a11y.test.tsx`; contrast and screen-reader checks are manual (`docs/a11y.md`).
 - New external data or storage goes behind an adapter interface — see
   `services/ai/readingStorage.ts` and `services/content/ContentSource.ts` for the pattern.
 

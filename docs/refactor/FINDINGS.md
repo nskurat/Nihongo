@@ -61,6 +61,20 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   `fix-search-data.ts` prints a harmless "skipped" line each run. Drop the entry (and its
   test fixture) next time the table is touched.
 
+### Accessibility (found running Phase 7, 2026-11-01)
+
+- **Search results listbox** — `features/search/ResultGroup.tsx` puts each group's `<h2>`
+  inside `#search-results` (`role="listbox"`); ARIA allows only `group`/`option` there, so axe
+  reports `aria-required-children` (critical). The layout is the one `docs/search/03-ux.md`
+  §3.2 specifies, so the fix is a search-UX decision (e.g. heading out of the listbox, or
+  `role="presentation"` on it and the group named by `aria-label`). `src/__tests__/a11y.test.tsx`
+  exempts that one rule on the search page until then; remove the exemption with the fix.
+- **Colour contrast is unchecked by the gate** — jsdom can't compute it. Measured from the
+  Tailwind palette: `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in
+  `GeneratorPanel.tsx` and the `SectionLayout.tsx` banner subtitle, and `text-indigo-200`
+  header copy and idle section tabs on `bg-indigo-600` (≈4.2:1). Not fixed: a palette change
+  across sections is a design decision, not a gate.
+
 ### Backlog (deferred during the 2026-10-31/11-01 sessions)
 
 - **Vocab examples** — list-derived vocab rows (~5,000 across N5–N1, no `exampleJp`) have
