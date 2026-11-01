@@ -20,9 +20,9 @@ const deinflected = (r: SearchResponse) => r.groups.vocab.filter((h) => h.matchK
 
 describe('teacher regression set (06-teacher-review §3)', () => {
   // ---- F1 verb class
-  it('#1 して → します first; 知る and 刷る absent', async () => {
+  it('#1 して → する/します first; 知る and 刷る absent', async () => {
     const r = await run('して');
-    expect(deinflected(r)[0].title).toBe('します');
+    expect(['する', 'します']).toContain(deinflected(r)[0].title); // N5 teaches する since cumulative coverage
     for (const t of ['知る', '刷る', '知ります／知っています']) expect(has(r, 'vocab', t), t).toBe(false);
   });
   it('#2 しない → します; 知る absent', async () => {

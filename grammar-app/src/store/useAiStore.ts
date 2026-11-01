@@ -4,6 +4,7 @@ import { GrammarExampleSentence } from '../services/ai/registry';
 import {
   V5_REPLACED_KANJI_UIDS,
   V6_FIRST_SHIFTED_VOCAB_UIDS,
+  V7_FIRST_SHIFTED_VOCAB_UIDS,
   withoutKeys,
   withoutShiftedUids,
 } from './aiCacheMigration';
@@ -67,16 +68,16 @@ export const useAiCacheStore = create<AiCacheState>()(
       // are dropped, so a v4 cache otherwise survives intact.
       // v6: redundant vocab rows were removed and later uids in those lessons shifted;
       // only vocab notes under shifted uids are dropped.
-      version: 6,
+      // v7: cumulative N5/N4 coverage shifted N2/N1 (and one N3) vocab uids; same treatment.
+      version: 7,
       migrate: (persisted, version) => {
         const state = persisted as AiCacheState | undefined;
-        if ((version === 4 || version === 5) && state) {
+        if (version >= 4 && version <= 6 && state) {
           const kanji = version === 4 ? withoutKeys(state.aiKanjiMnemonics ?? {}, V5_REPLACED_KANJI_UIDS) : state.aiKanjiMnemonics ?? {};
-          return {
-            ...state,
-            aiKanjiMnemonics: kanji,
-            aiVocabNotes: withoutShiftedUids(state.aiVocabNotes ?? {}, V6_FIRST_SHIFTED_VOCAB_UIDS),
-          } as AiCacheState;
+          let notes = state.aiVocabNotes ?? {};
+          if (version < 6) notes = withoutShiftedUids(notes, V6_FIRST_SHIFTED_VOCAB_UIDS);
+          notes = withoutShiftedUids(notes, V7_FIRST_SHIFTED_VOCAB_UIDS);
+          return { ...state, aiKanjiMnemonics: kanji, aiVocabNotes: notes } as AiCacheState;
         }
         return {
           generatedExamples: {},

@@ -299,6 +299,42 @@
       "word": "湯",
       "reading": "ゆ",
       "meaning": "hot water"
+    },
+    {
+      "uid": "n4-vocab-1-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "お嬢さん",
+      "reading": "おじょうさん",
+      "meaning": "(someone's) daughter (polite)"
+    },
+    {
+      "uid": "n4-vocab-1-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "盛ん",
+      "reading": "さかん",
+      "meaning": "prosperous, active, thriving"
+    },
+    {
+      "uid": "n4-vocab-1-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "例えば",
+      "reading": "たとえば",
+      "meaning": "for example, e.g."
+    },
+    {
+      "uid": "n4-vocab-1-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 1,
+      "word": "遠く",
+      "reading": "とおく",
+      "meaning": "far away, distant"
     }
   ],
   "2": [
@@ -628,6 +664,15 @@
       "word": "夢",
       "reading": "ゆめ",
       "meaning": "a dream"
+    },
+    {
+      "uid": "n4-vocab-2-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 2,
+      "word": "訳",
+      "reading": "わけ",
+      "meaning": "reason; explanation"
     }
   ],
   "3": [
@@ -944,6 +989,33 @@
       "word": "優しい",
       "reading": "やさしい",
       "meaning": "kind (person), gentle (person), easy (problem)"
+    },
+    {
+      "uid": "n4-vocab-3-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "通う",
+      "reading": "かよう",
+      "meaning": "to go back and forth; to commute"
+    },
+    {
+      "uid": "n4-vocab-3-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "眠る",
+      "reading": "ねむる",
+      "meaning": "to sleep"
+    },
+    {
+      "uid": "n4-vocab-3-33",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 3,
+      "word": "普通",
+      "reading": "ふつう",
+      "meaning": "common; usual"
     }
   ],
   "4": [
@@ -1264,6 +1336,33 @@
       "word": "割れる",
       "reading": "われる",
       "meaning": "to break"
+    },
+    {
+      "uid": "n4-vocab-4-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "血",
+      "reading": "ち",
+      "meaning": "blood"
+    },
+    {
+      "uid": "n4-vocab-4-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "汚れる",
+      "reading": "よごれる",
+      "meaning": "to become dirty"
+    },
+    {
+      "uid": "n4-vocab-4-33",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 4,
+      "word": "割合",
+      "reading": "わりあい",
+      "meaning": "rate, ratio, percentage"
     }
   ],
   "5": [
@@ -1584,6 +1683,24 @@
       "word": "予約",
       "reading": "よやく",
       "meaning": "reservation"
+    },
+    {
+      "uid": "n4-vocab-5-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "チェック",
+      "reading": "チェック",
+      "meaning": "to check"
+    },
+    {
+      "uid": "n4-vocab-5-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 5,
+      "word": "引っ越す",
+      "reading": "ひっこす",
+      "meaning": "to move to a new place of residence"
     }
   ],
   "6": [
@@ -1913,6 +2030,33 @@
       "word": "連絡",
       "reading": "れんらく",
       "meaning": "communication, contact, connection"
+    },
+    {
+      "uid": "n4-vocab-6-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "空く",
+      "reading": "あく",
+      "meaning": "to open, to become empty (vacant)"
+    },
+    {
+      "uid": "n4-vocab-6-33",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "残念",
+      "reading": "ざんねん",
+      "meaning": "regret; regrettable"
+    },
+    {
+      "uid": "n4-vocab-6-34",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 6,
+      "word": "空く",
+      "reading": "すく",
+      "meaning": "to be empty (in reference to people), to be less crowded"
     }
   ],
   "7": [
@@ -2233,6 +2377,24 @@
       "word": "戻る",
       "reading": "もどる",
       "meaning": "to return (v.i.); to come back"
+    },
+    {
+      "uid": "n4-vocab-7-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "最後",
+      "reading": "さいご",
+      "meaning": "last, end"
+    },
+    {
+      "uid": "n4-vocab-7-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 7,
+      "word": "最も",
+      "reading": "もっとも",
+      "meaning": "most"
     }
   ],
   "8": [
@@ -2544,6 +2706,24 @@
       "word": "席",
       "reading": "せき",
       "meaning": "a seat"
+    },
+    {
+      "uid": "n4-vocab-8-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "以外",
+      "reading": "いがい",
+      "meaning": "other than, with the exception of, excepting"
+    },
+    {
+      "uid": "n4-vocab-8-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 8,
+      "word": "店員",
+      "reading": "てんいん",
+      "meaning": "clerk; shop-employee"
     }
   ],
   "9": [
@@ -2846,6 +3026,51 @@
       "word": "レポート",
       "reading": "レポート",
       "meaning": "report"
+    },
+    {
+      "uid": "n4-vocab-9-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "音",
+      "reading": "おと",
+      "meaning": "sound, note"
+    },
+    {
+      "uid": "n4-vocab-9-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "踊り",
+      "reading": "おどり",
+      "meaning": "dance"
+    },
+    {
+      "uid": "n4-vocab-9-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "どんどん",
+      "reading": "どんどん",
+      "meaning": "quickly and steadily; at a rapid pace"
+    },
+    {
+      "uid": "n4-vocab-9-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "苦い",
+      "reading": "にがい",
+      "meaning": "bitter"
+    },
+    {
+      "uid": "n4-vocab-9-33",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 9,
+      "word": "番組",
+      "reading": "ばんぐみ",
+      "meaning": "broadcast program"
     }
   ],
   "10": [
@@ -3139,6 +3364,42 @@
       "word": "向かう",
       "reading": "むかう",
       "meaning": "to face, to go towards"
+    },
+    {
+      "uid": "n4-vocab-10-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "糸",
+      "reading": "いと",
+      "meaning": "thread"
+    },
+    {
+      "uid": "n4-vocab-10-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "驚く",
+      "reading": "おどろく",
+      "meaning": "to be surprised, to be astonished"
+    },
+    {
+      "uid": "n4-vocab-10-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "差し上げる",
+      "reading": "さしあげる",
+      "meaning": "-- humble expression for あげる --"
+    },
+    {
+      "uid": "n4-vocab-10-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 10,
+      "word": "鳴る",
+      "reading": "なる",
+      "meaning": "to sound, to ring (v.i.)"
     }
   ],
   "11": [
@@ -3441,6 +3702,42 @@
       "word": "別れる",
       "reading": "わかれる",
       "meaning": "to part from, to separate"
+    },
+    {
+      "uid": "n4-vocab-11-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "打つ",
+      "reading": "うつ",
+      "meaning": "to hit, to strike"
+    },
+    {
+      "uid": "n4-vocab-11-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "工場",
+      "reading": "こうじょう",
+      "meaning": "factory"
+    },
+    {
+      "uid": "n4-vocab-11-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "盗む",
+      "reading": "ぬすむ",
+      "meaning": "to steal; to rob"
+    },
+    {
+      "uid": "n4-vocab-11-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 11,
+      "word": "別",
+      "reading": "べつ",
+      "meaning": "distinction, different"
     }
   ],
   "12": [
@@ -3761,6 +4058,15 @@
       "word": "輸入",
       "reading": "ゆにゅう",
       "meaning": "import"
+    },
+    {
+      "uid": "n4-vocab-12-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 12,
+      "word": "乗り物",
+      "reading": "のりもの",
+      "meaning": "vehicle"
     }
   ],
   "13": [
@@ -4054,6 +4360,42 @@
       "word": "ワープロ",
       "reading": "ワープロ",
       "meaning": "word processor"
+    },
+    {
+      "uid": "n4-vocab-13-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "内",
+      "reading": "うち",
+      "meaning": "within, inside"
+    },
+    {
+      "uid": "n4-vocab-13-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "親",
+      "reading": "おや",
+      "meaning": "a parent"
+    },
+    {
+      "uid": "n4-vocab-13-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "市",
+      "reading": "し",
+      "meaning": "city"
+    },
+    {
+      "uid": "n4-vocab-13-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 13,
+      "word": "日",
+      "reading": "ひ",
+      "meaning": "sun, sunshine, day"
     }
   ],
   "14": [
@@ -4356,6 +4698,33 @@
       "word": "漬ける",
       "reading": "つける",
       "meaning": "to soak, to moisten, to pickle"
+    },
+    {
+      "uid": "n4-vocab-14-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "比べる",
+      "reading": "くらべる",
+      "meaning": "to compare"
+    },
+    {
+      "uid": "n4-vocab-14-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "時代",
+      "reading": "じだい",
+      "meaning": "age, period, epoch, era"
+    },
+    {
+      "uid": "n4-vocab-14-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 14,
+      "word": "髭",
+      "reading": "ひげ",
+      "meaning": "beard"
     }
   ],
   "15": [
@@ -4622,6 +4991,78 @@
       "word": "止む",
       "reading": "やむ",
       "meaning": "to cease, to stop"
+    },
+    {
+      "uid": "n4-vocab-15-25",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "間",
+      "reading": "あいだ",
+      "meaning": "space, interval"
+    },
+    {
+      "uid": "n4-vocab-15-26",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "アフリカ",
+      "reading": "アフリカ",
+      "meaning": "Africa"
+    },
+    {
+      "uid": "n4-vocab-15-27",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "生きる",
+      "reading": "いきる",
+      "meaning": "to live"
+    },
+    {
+      "uid": "n4-vocab-15-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "美しい",
+      "reading": "うつくしい",
+      "meaning": "beautiful, lovely"
+    },
+    {
+      "uid": "n4-vocab-15-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "表",
+      "reading": "おもて",
+      "meaning": "surface; front; outside"
+    },
+    {
+      "uid": "n4-vocab-15-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "しっかり",
+      "reading": "しっかり",
+      "meaning": "firmly, steady"
+    },
+    {
+      "uid": "n4-vocab-15-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "都",
+      "reading": "と",
+      "meaning": "metropolitan"
+    },
+    {
+      "uid": "n4-vocab-15-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 15,
+      "word": "場合",
+      "reading": "ばあい",
+      "meaning": "case, situation"
     }
   ],
   "16": [
@@ -4933,6 +5374,24 @@
       "word": "止める",
       "reading": "やめる",
       "meaning": "to end, to stop"
+    },
+    {
+      "uid": "n4-vocab-16-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "スーツケース",
+      "reading": "スーツケース",
+      "meaning": "suitcase"
+    },
+    {
+      "uid": "n4-vocab-16-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 16,
+      "word": "非常に",
+      "reading": "ひじょうに",
+      "meaning": "extremely; very"
     }
   ],
   "17": [
@@ -5262,6 +5721,15 @@
       "word": "沸く",
       "reading": "わく",
       "meaning": "to boil, to grow hot"
+    },
+    {
+      "uid": "n4-vocab-17-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "済む",
+      "reading": "すむ",
+      "meaning": "to finish, to end"
     }
   ],
   "18": [
@@ -5564,6 +6032,33 @@
       "word": "迎える",
       "reading": "むかえる",
       "meaning": "to welcome; to meet; to greet"
+    },
+    {
+      "uid": "n4-vocab-18-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "計画",
+      "reading": "けいかく",
+      "meaning": "to plan"
+    },
+    {
+      "uid": "n4-vocab-18-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "進む",
+      "reading": "すすむ",
+      "meaning": "to advance, to proceed"
+    },
+    {
+      "uid": "n4-vocab-18-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 18,
+      "word": "深い",
+      "reading": "ふかい",
+      "meaning": "deep, profound"
     }
   ],
   "19": [
@@ -5875,6 +6370,24 @@
       "word": "笑う",
       "reading": "わらう",
       "meaning": "to laugh, to smile"
+    },
+    {
+      "uid": "n4-vocab-19-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "先輩",
+      "reading": "せんぱい",
+      "meaning": "senior members of a group"
+    },
+    {
+      "uid": "n4-vocab-19-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 19,
+      "word": "倍",
+      "reading": "ばい",
+      "meaning": "double"
     }
   ],
   "20": [
@@ -6195,6 +6708,24 @@
       "word": "利用",
       "reading": "りよう",
       "meaning": "use, utilization"
+    },
+    {
+      "uid": "n4-vocab-20-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "急",
+      "reading": "きゅう",
+      "meaning": "urgent, sudden; steep"
+    },
+    {
+      "uid": "n4-vocab-20-32",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "皆",
+      "reading": "みな",
+      "meaning": "everyone"
     }
   ],
   "21": [
@@ -6488,6 +7019,42 @@
       "word": "焼く",
       "reading": "やく",
       "meaning": "to bake, to grill"
+    },
+    {
+      "uid": "n4-vocab-21-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "腕",
+      "reading": "うで",
+      "meaning": "arm (in reference to body)"
+    },
+    {
+      "uid": "n4-vocab-21-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "彼ら",
+      "reading": "かれら",
+      "meaning": "they (usually male)"
+    },
+    {
+      "uid": "n4-vocab-21-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "それほど",
+      "reading": "それほど",
+      "meaning": "to that degree; extent"
+    },
+    {
+      "uid": "n4-vocab-21-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 21,
+      "word": "湖",
+      "reading": "みずうみ",
+      "meaning": "lake"
     }
   ],
   "22": [
@@ -6799,6 +7366,24 @@
       "word": "よろしい",
       "reading": "よろしい",
       "meaning": "(hon.) good, OK, all right"
+    },
+    {
+      "uid": "n4-vocab-22-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "そんなに",
+      "reading": "そんなに",
+      "meaning": "so much, like that"
+    },
+    {
+      "uid": "n4-vocab-22-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 22,
+      "word": "森",
+      "reading": "もり",
+      "meaning": "forest"
     }
   ],
   "23": [
@@ -7110,6 +7695,24 @@
       "word": "娘",
       "reading": "むすめ",
       "meaning": "daughter (humble)"
+    },
+    {
+      "uid": "n4-vocab-23-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "タイプ",
+      "reading": "タイプ",
+      "meaning": "type, style"
+    },
+    {
+      "uid": "n4-vocab-23-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 23,
+      "word": "やはり",
+      "reading": "やはり",
+      "meaning": "as I thought, absolutely"
     }
   ],
   "24": [
@@ -7385,6 +7988,60 @@
       "word": "寄る",
       "reading": "よる",
       "meaning": "to stop by"
+    },
+    {
+      "uid": "n4-vocab-24-26",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "案内",
+      "reading": "あんない",
+      "meaning": "to guide"
+    },
+    {
+      "uid": "n4-vocab-24-27",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "いじめる",
+      "reading": "いじめる",
+      "meaning": "to bully, to torment"
+    },
+    {
+      "uid": "n4-vocab-24-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "運転手",
+      "reading": "うんてんしゅ",
+      "meaning": "driver (by occupation)"
+    },
+    {
+      "uid": "n4-vocab-24-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "見物",
+      "reading": "けんぶつ",
+      "meaning": "sightseeing"
+    },
+    {
+      "uid": "n4-vocab-24-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "ご存じ",
+      "reading": "ごぞんじ",
+      "meaning": "knowing, acquaintance"
+    },
+    {
+      "uid": "n4-vocab-24-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 24,
+      "word": "やっぱり",
+      "reading": "やっぱり",
+      "meaning": "as I thought, absolutely"
     }
   ],
   "25": [
@@ -7669,6 +8326,51 @@
       "word": "両方",
       "reading": "りょうほう",
       "meaning": "both sides, both parties"
+    },
+    {
+      "uid": "n4-vocab-25-27",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "一杯",
+      "reading": "いっぱい",
+      "meaning": "full, to the utmost"
+    },
+    {
+      "uid": "n4-vocab-25-28",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "怒る",
+      "reading": "おこる",
+      "meaning": "to get angry; to scold angrily"
+    },
+    {
+      "uid": "n4-vocab-25-29",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "高校生",
+      "reading": "こうこうせい",
+      "meaning": "high school student"
+    },
+    {
+      "uid": "n4-vocab-25-30",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "畳",
+      "reading": "たたみ",
+      "meaning": "tatami mat (Japanese straw mat)"
+    },
+    {
+      "uid": "n4-vocab-25-31",
+      "level": "N4",
+      "section": "vocab",
+      "lesson": 25,
+      "word": "喜ぶ",
+      "reading": "よろこぶ",
+      "meaning": "to rejoice, to be delighted, to be glad"
     }
   ]
 }

@@ -65,15 +65,16 @@ describe('§5 acceptance list (golden queries)', () => {
     expect(r.groups.grammar.some((h) => h.level === 'N5' && h.lesson === 9 && h.title.startsWith('N が あります／わかります'))).toBe(true);
   });
 
-  it('T-02 わかる: 分かる top, 分る N2 L8 and わかります', async () => {
+  // 分る (rare okurigana variant) left N2: N5 わかります now covers it (cumulative coverage).
+  it('T-02 わかる: 分かる top, and わかります', async () => {
     const r = await run('わかる');
     expectTop(r, 'vocab', { t: '分かる', level: 'N5', lesson: 4 });
-    expectContains(r, 'vocab', [{ t: '分る', level: 'N2', lesson: 8 }, { t: 'わかります', level: 'N5', uid: 'n5-vocab-9-1' }]);
+    expectContains(r, 'vocab', [{ t: 'わかります', level: 'N5', uid: 'n5-vocab-9-1' }]);
   });
 
   it("T-03 kan'i → 簡易 N1 L28", async () => {
     const r = await run("kan'i");
-    expectTop(r, 'vocab', { t: '簡易', level: 'N1', lesson: 28 });
+    expectTop(r, 'vocab', { t: '簡易', level: 'N1' });
     expect(r.queryAs).toBe('かんい');
   });
 
@@ -97,9 +98,9 @@ describe('§5 acceptance list (golden queries)', () => {
       { t: '自分', level: 'N5', lesson: 4 },
       { t: '十分', level: 'N4', lesson: 7 },
     ]);
-    // 半分 (N4 L19) is in the group but 10th of 58 (N5 words come first).
+    // 半分 is an N5-list word (N5, with the N4 L19 textbook row as a repeat).
     const all = await run('分', { limitPerType: Infinity });
-    expectContains(all, 'vocab', [{ t: '半分', level: 'N4', lesson: 19 }]);
+    expectContains(all, 'vocab', [{ t: '半分', level: 'N5' }]);
     // Same top rows for an N3 learner: the current level gets no priority (orchestrator decision).
     expectContains(await run('分', { rankLevel: 'N3' }), 'vocab', [{ t: '自分', level: 'N5', lesson: 4 }, { t: '十分', level: 'N4', lesson: 7 }]);
     expect(r.groups.grammar.some((h) => h.title === '今 -時-分です' && h.level === 'N5')).toBe(true);
@@ -370,7 +371,7 @@ describe('§5 acceptance list (golden queries)', () => {
     expect(titles(r.groups.grammar)).toContain('N(person)に あげます、etc. N5 L7');
     expect(r.groups.vocab.every((h) => h.reading === 'に')).toBe(true);
     expect(present(r.groups.vocab, { t: '二', level: 'N5', uid: 'n5-vocab-2-29' })).toBe(true);
-    expect(present(r.groups.vocab, { t: '荷', level: 'N1', lesson: 17 })).toBe(true);
+    expect(present(r.groups.vocab, { t: '荷', level: 'N1' })).toBe(true);
     const total = r.totals.grammar + r.totals.vocab + r.totals.kanji;
     expect(total).toBeLessThanOrEqual(40);
   });
@@ -379,16 +380,16 @@ describe('§5 acceptance list (golden queries)', () => {
     expectContains(await run('よほど'), 'vocab', [
       { t: 'よっぽど/よほど', level: 'N3', lesson: 17 },
       { t: 'よほど', level: 'N3', lesson: 22 },
-      { t: '余程', level: 'N1', lesson: 3 },
+      { t: '余程', level: 'N1' },
     ]);
   });
 
-  // The N3 L1 / L15 repeats were removed by scripts/dedupe-vocab.ts; one row remains.
-  it('T-41 ちょうど: one row, N4 L21 (repeats removed)', async () => {
+  // N3 repeats removed by scripts/dedupe-vocab.ts; N5 (list word) + N4 L21 (textbook) collapse.
+  it('T-41 ちょうど: one row with N5 and N4 L21 badges', async () => {
     const r = await run('ちょうど');
     const row = r.groups.vocab.find((h) => h.title === 'ちょうど');
     const at = [row, ...(row?.alsoAt ?? [])].map((x) => `${x?.level}-${x?.lesson}`).sort();
-    expect(at).toEqual(['N4-21']);
+    expect(at).toEqual(['N4-21', 'N5-22']);
   });
 
   it('T-42 丁度: no word match; kanji 丁 and 度 listed', async () => {

@@ -33,6 +33,11 @@ describe('findRedundant', () => {
     ];
     expect(findRedundant(rows, masu)).toEqual([]);
   });
+  it('never removes a row in favour of a higher-level one', () => {
+    const rows = [row('N5', 13, '晴れる', 'はれる', 'to be sunny'), row('N4', 7, '晴れます', 'はれます', 'clear up', true)];
+    const masuHare = (w: string, r: string) => (w === '晴れます' ? { lemma: '晴れる', lemmaReading: r.replace('ます', 'る') } : null);
+    expect(findRedundant(rows, masuHare)).toEqual([]);
+  });
   it('removes an identical textbook repeat with the same meaning', () => {
     const rows = [row('N4', 15, '必要', 'ひつよう', 'necessary', true), row('N3', 2, '必要', 'ひつよう', 'necessity', true)];
     expect(findRedundant(rows, masu).map((r) => `${r.row.level}:${r.row.word}`)).toEqual(['N3:必要']);
