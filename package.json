@@ -12,7 +12,7 @@
     "test:node": "vitest run --project node",
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint grammar-app",
+    "lint": "eslint grammar-app scripts",
     "validate:data": "tsx scripts/validate-content.ts",
     "build:search-index": "tsx scripts/build-search-index.ts",
     "preview": "vite preview",

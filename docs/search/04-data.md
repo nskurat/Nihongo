@@ -287,7 +287,7 @@ sentences are never indexed, so the planned vocab-example work does not grow the
 
 ### 4.3 Build, versioning, cache-busting (answers **Q-DE6**)
 - `scripts/build-search-index.ts` reads `src/data/**` and calls the pure `buildSearchIndex(content)` from
-  `services/search/build/`, the same function the tests call. It writes
+  `services/search/indexer/`, the same function the tests call. It writes
   `grammar-app/src/generated/search/*.json` (gitignored, never committed, so it cannot drift from the data) plus
   `search-index-report.tsv` (lemma table and warnings). Wire it in as `"prebuild"` and `"predev"`, or as a one-line call in the
   `build` script. A later Vite plugin can call the same function in `buildStart`.
