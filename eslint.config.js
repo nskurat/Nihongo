@@ -23,4 +23,9 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Test helpers mix components and functions; fast refresh never loads them.
+    files: ['grammar-app/src/test/**', '**/__tests__/**', '**/*.test.{ts,tsx}'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+  },
 ]);
