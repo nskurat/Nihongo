@@ -93,13 +93,16 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   URL; per-level furigana/English toggles; library filter by in-progress. Two acceptance
   criteria (result arriving after a mid-generation level switch, errors staying on their level)
   were only code-reviewed — needs a mock at `executeAiPrompt`.
-- **Tooling** — `npm run lint` covers `grammar-app/` only, not `scripts/`;
-  `scripts/lib/searchDataFixes.ts` has no unit test; `docs/search/04-data.md` still names
-  `services/search/build/` (the code lives in `services/search/indexer/` because `build/` is
-  gitignored).
+- **Tooling** — `npm run typecheck` covers `grammar-app/src` only; `scripts/` runs through
+  `tsx`, which strips types without checking them. Adding `scripts` to `tsconfig.json`'s
+  `include` needs a pass over whatever errors it surfaces.
 
 ## Resolved
 
+- Phase 3 (2026-11-01): test harness and characterization tests landed. Folded in from the
+  tooling backlog: `npm run lint` now covers `scripts/` (rest-sibling omits allowed),
+  `scripts/lib/searchDataFixes.ts` has unit tests, `docs/search/04-data.md` names
+  `services/search/indexer/`.
 - Phase 2b (2026-11-01): lesson lists guarded against errors and stale levels
   (`features/useLessonList.ts`, `useReadingData.ts`), list errors reach the section's
   error panel, `KanjiCompound` typed nullable — which also fixed a live crash: the kanji

@@ -1,9 +1,9 @@
 # Phase 4 — UI consolidation
 
-> **Not ready to offload.** Outline only. Write the full spec after Phase 3 lands, when
+> **Not ready to offload.** Outline only. Phase 3 has landed: write the full spec now, when
 > the characterization tests define what "unchanged behaviour" means concretely.
 
-**Prereq:** Phase 3 merged — do not start this without the safety net.
+**Prereq:** Phase 3 merged (done) — the characterization tests must stay green throughout.
 
 ## Intent
 

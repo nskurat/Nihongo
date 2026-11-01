@@ -1,6 +1,6 @@
 # Phase 5 — AI layer unification
 
-> **Not ready to offload.** Outline only. Spec after Phase 3; can run in parallel with
+> **Not ready to offload.** Outline only. Phase 3 has landed (`mockAi()` in `src/test/`); spec it now. Can run in parallel with
 > Phase 4 as it touches different files.
 
 ## Intent
