@@ -1,5 +1,6 @@
 import { X, BookOpen, Sparkles, Loader2, Lightbulb, Code2 } from 'lucide-react';
 import MarkdownViewer from '../../components/common/MarkdownViewer';
+import AiErrorNote from '../../components/common/AiErrorNote';
 import Modal from '../../components/common/Modal';
 import { GrammarItem, LevelType } from '../../types/japanese';
 import { getTagMeta } from '../../utils/tags';
@@ -11,8 +12,9 @@ interface GrammarDetailModalProps {
   activeLevel?: LevelType;
   showTranslations?: boolean;
   onGenerateExplanation?: (item: GrammarItem) => void;
-  loadingExplanation?: Record<string, boolean>;
-  aiExplanation?: Record<string, string>;
+  loadingExplanation?: boolean;
+  aiExplanation?: string;
+  explanationError?: string | null;
 }
 
 export default function GrammarDetailModal({
@@ -22,8 +24,9 @@ export default function GrammarDetailModal({
   activeLevel = 'N4',
   showTranslations = true,
   onGenerateExplanation,
-  loadingExplanation = {},
-  aiExplanation = {},
+  loadingExplanation = false,
+  aiExplanation,
+  explanationError = null,
 }: GrammarDetailModalProps) {
   if (!isOpen || !item) return null;
 
@@ -127,27 +130,28 @@ export default function GrammarDetailModal({
           <div className="pt-4 border-t border-slate-200">
             <button
               onClick={() => onGenerateExplanation(item)}
-              disabled={loadingExplanation[item.uid]}
+              disabled={loadingExplanation}
               className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-xl border border-indigo-200 transition-colors disabled:opacity-50 cursor-pointer"
             >
-              {loadingExplanation[item.uid] ? (
+              {loadingExplanation ? (
                 <Loader2 className="animate-spin" size={14} />
               ) : (
                 <Sparkles size={14} className="text-indigo-600" />
               )}
-              {loadingExplanation[item.uid]
+              {loadingExplanation
                 ? 'Generating AI Nuance & Extra Sentences...'
-                : aiExplanation[item.uid]
+                : aiExplanation
                 ? 'Regenerate AI Nuance Notes'
                 : 'Ask AI: Explain Nuance & Compare'}
             </button>
 
-            {aiExplanation[item.uid] && (
+            <AiErrorNote message={explanationError} />
+            {aiExplanation && (
               <div className="mt-3 p-4 bg-indigo-50/70 rounded-xl border border-indigo-200/80 text-xs text-indigo-950 space-y-1.5 animate-fade-in leading-relaxed">
                 <div className="flex items-center gap-1.5 font-bold text-indigo-900 mb-1">
                   <Lightbulb size={14} className="text-amber-500" /> AI Linguistic Breakdown:
                 </div>
-                <MarkdownViewer content={aiExplanation[item.uid]} className="text-xs text-indigo-950 leading-relaxed" />
+                <MarkdownViewer content={aiExplanation} className="text-xs text-indigo-950 leading-relaxed" />
               </div>
             )}
           </div>

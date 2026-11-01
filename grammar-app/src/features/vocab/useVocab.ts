@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
+import { useAiArtifacts } from '../useAiArtifacts';
 import { LevelType, VocabItem } from '../../types/japanese';
 import { generateVocabHelp } from '../../services/ai/registry';
 import { useContentQuery } from '../useContentQuery';
@@ -38,24 +38,9 @@ export function useVocab(activeLevel: LevelType, activeLesson: number) {
       )
     : currentContent;
 
-  // AI State - the store is keyed by each item's own uid; see useGrammar.ts.
-  const { aiVocabNotes, setVocabNote } = useAiCacheStore();
-  const { loadingVocabAi, setLoadingVocabAi, handleApiError } = useAiUiStore();
-
-  const handleGenerateVocabHelp = async (vocab: VocabItem) => {
-    const uid = vocab.uid;
-    setLoadingVocabAi(uid, true);
-    try {
-      const text = await generateVocabHelp({ vocab, level: activeLevel });
-      if (text) {
-        setVocabNote(uid, text);
-      }
-    } catch (error) {
-      handleApiError(error);
-    } finally {
-      setLoadingVocabAi(uid, false);
-    }
-  };
+  const vocabNotes = useAiArtifacts('vocab-help');
+  const handleGenerateVocabHelp = (vocab: VocabItem) =>
+    vocabNotes.generate(vocab.uid, () => generateVocabHelp({ vocab, level: activeLevel }));
 
   return {
     searchQuery,
@@ -68,7 +53,6 @@ export function useVocab(activeLevel: LevelType, activeLesson: number) {
     error,
     retry,
     handleGenerateVocabHelp,
-    aiVocabNotes,
-    loadingVocabAi,
+    vocabNotes,
   };
 }

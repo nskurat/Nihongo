@@ -97,6 +97,10 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
 
 ## Resolved
 
+- Phase 5 (2026-11-01): AI failures other than a missing key were only logged, so a
+  grammar/vocab/kanji AI button just stopped spinning; they now show inline with what to
+  do. Unusable grammar-example replies (previously a silent no-op after a paid call) are a
+  visible error. The persisted AI cache is capped (400 entries / ~1 MB).
 - Phase 4 (2026-11-01): `Modal` on native `<dialog>` (focus trap, Escape, scroll lock,
   focus return) for all three dialogs; `SectionLayout` + `sectionTheme` for grammar, vocab
   and kanji; `ReadingSection` split (1,228 → 93 lines) with one shared `QuestionList`;

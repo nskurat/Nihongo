@@ -1,5 +1,9 @@
 import { AiProvider, AiPromptOptions } from '../../../types/ai';
+import { missingKeyError, requestJson } from '../errors';
 import { MODEL_CATALOG, getDefaultModelId, toModelOptions } from '../modelCatalog';
+
+/** The part of a messages reply this app reads. */
+type ProviderReply = { content?: { text?: string }[] };
 
 const models = toModelOptions(MODEL_CATALOG.providers.anthropic, 'claude-sonnet-5-5');
 const DEFAULT_MODEL = getDefaultModelId(models);
@@ -16,7 +20,7 @@ export const anthropicProvider: AiProvider = {
     const { apiKey, model = DEFAULT_MODEL } = options;
 
     if (!apiKey) {
-      throw new Error('MISSING_KEY');
+      throw missingKeyError();
     }
 
     const payload = {
@@ -28,7 +32,7 @@ export const anthropicProvider: AiProvider = {
       messages: [{ role: 'user', content: prompt }],
     };
 
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const data = (await requestJson('Anthropic', 'https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,14 +41,7 @@ export const anthropicProvider: AiProvider = {
         'anthropic-dangerous-direct-browser-access': 'true',
       },
       body: JSON.stringify(payload),
-    });
-
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      throw new Error(errData.error?.message || `Anthropic API returned status ${res.status}`);
-    }
-
-    const data = await res.json();
+    })) as ProviderReply;
     return data.content?.[0]?.text || '';
   },
 };
