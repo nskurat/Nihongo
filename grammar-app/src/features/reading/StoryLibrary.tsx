@@ -32,6 +32,7 @@ export default function StoryLibrary({ studio }: { studio: ReadingStudio }) {
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
+              aria-label="Search saved stories"
               placeholder="Search saved stories..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -40,7 +41,7 @@ export default function StoryLibrary({ studio }: { studio: ReadingStudio }) {
           </div>
 
           {/* Level Filter */}
-          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div role="group" aria-label="Filter by level" className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
             {(['ALL', 'N5', 'N4', 'N3', 'N2', 'N1'] as const).map((lvl) => (
               <button
                 key={lvl}
@@ -99,7 +100,7 @@ export default function StoryLibrary({ studio }: { studio: ReadingStudio }) {
             <BookMarked size={28} />
           </div>
           <div>
-            <h4 className="text-base font-bold text-slate-800">No Saved Stories Yet</h4>
+            <h3 className="text-base font-bold text-slate-800">No Saved Stories Yet</h3>
             <p className="text-xs text-slate-500 max-w-sm mx-auto mt-1">
               Passages you generate in the Practice Studio will automatically be archived here for future offline reading and reviews.
             </p>
@@ -163,6 +164,7 @@ export default function StoryLibrary({ studio }: { studio: ReadingStudio }) {
                     onClick={(e) => handleDeleteHistoryItem(item.id, e)}
                     className="text-slate-300 hover:text-rose-600 hover:bg-rose-50 p-1.5 rounded-lg transition-colors cursor-pointer"
                     title="Delete Story"
+                    aria-label={`Delete story ${cleanJpTitle}`}
                   >
                     <Trash2 size={15} />
                   </button>
@@ -170,9 +172,19 @@ export default function StoryLibrary({ studio }: { studio: ReadingStudio }) {
 
                 {/* Titles: Japanese & English */}
                 <div className="space-y-1">
-                  <h4 className="font-extrabold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors leading-snug tracking-tight">
-                    {cleanJpTitle}
-                  </h4>
+                  <h3 className="font-extrabold text-slate-900 text-lg group-hover:text-indigo-600 transition-colors leading-snug tracking-tight">
+                    {/* The keyboard / screen-reader way to open the preview the whole card opens on click. */}
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setModalStory(item);
+                      }}
+                      className="text-left rounded-sm cursor-pointer"
+                    >
+                      {cleanJpTitle}
+                    </button>
+                  </h3>
 
                   {item.data?.titleEn ? (
                     <p className="text-xs font-semibold text-indigo-700 bg-indigo-50/80 px-2.5 py-1 rounded-lg border border-indigo-100/80 inline-block">

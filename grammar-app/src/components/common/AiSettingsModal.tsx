@@ -146,6 +146,7 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
         </div>
         <button
           onClick={onClose}
+          aria-label="Close"
           className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
         >
           <X size={18} />
@@ -156,16 +157,17 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
       <div className="p-6 space-y-6 overflow-y-auto flex-1">
         {/* Provider Selection Tabs */}
         <div>
-          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2.5">
+          <h4 id="ai-provider-label" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2.5">
             Select Active AI Provider
-          </label>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+          </h4>
+          <div role="group" aria-labelledby="ai-provider-label" className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
             {providers.map((p: AiProvider) => {
               const isSelected = activeProvider === p.id;
               const hasKey = !!apiKeys[p.id] || !p.requiresKey;
               return (
                 <button
                   key={p.id}
+                  aria-pressed={isSelected}
                   onClick={() => {
                     setActiveProvider(p.id);
                     setSavedSuccess(false);
@@ -253,10 +255,11 @@ export default function AiSettingsModal({ isOpen, onClose, initialError = '' }: 
           {/* API Key Input */}
           {currentProviderConfig.requiresKey ? (
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
+              <label htmlFor="ai-api-key" className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
                 <KeyRound size={13} className="text-indigo-500" /> {currentProviderConfig.name} API Key
               </label>
               <input
+                id="ai-api-key"
                 type="password"
                 value={currentKey}
                 onChange={(e) => handleKeyChange(e.target.value)}

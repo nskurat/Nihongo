@@ -180,3 +180,16 @@
 .furigana-mode-off ruby rt {
   display: none !important;
 }
+
+/* Keyboard focus: one visible ring for every control that doesn't draw its own
+   (inputs keep their focus:ring utilities). In the base layer, so utilities win.
+   On the indigo header the ring is white, or it would vanish. */
+@layer base {
+  :where(a, button, select, summary, [role='tab'], [tabindex]:not([tabindex='-1'])):focus-visible {
+    outline: 2px solid #4f46e5; /* indigo-600 */
+    outline-offset: 2px;
+  }
+  header :where(a, button, [tabindex]:not([tabindex='-1'])):focus-visible {
+    outline-color: white;
+  }
+}

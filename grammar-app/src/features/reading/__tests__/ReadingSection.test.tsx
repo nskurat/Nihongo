@@ -87,7 +87,7 @@ describe('Reading Studio flow', () => {
     expect(option(q2, '学校')).toBeDisabled();
 
     // The passage landed in the library, with its progress
-    await user.click(screen.getByRole('button', { name: /Story Library/ }));
+    await user.click(screen.getByRole('tab', { name: /Story Library/ }));
     expect(await screen.findByRole('heading', { name: '猫の話' })).toBeInTheDocument();
     expect(screen.getByText('1 Stories Saved')).toBeInTheDocument();
     expect(screen.getByText('Current N5')).toBeInTheDocument();
