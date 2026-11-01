@@ -1,32 +1,90 @@
 # Phase 4 — UI consolidation
 
-> **Not ready to offload.** Outline only. Phase 3 has landed: write the full spec now, when
-> the characterization tests define what "unchanged behaviour" means concretely.
+Grammar, Vocab and Kanji each carry a copy of the same shell — lesson sidebar, banner,
+per-lesson filter, count badge, loading / error / empty panels — differing only in icon,
+nouns and an accent colour spelled out in literal Tailwind classes. `ReadingSection.tsx`
+is 1,227 lines with ~20 `useState` hooks and renders its question list twice (studio and
+modal) with duplicated "show English" state. Three modals each hand-roll Escape handling.
 
-**Prereq:** Phase 3 merged (done) — the characterization tests must stay green throughout.
+**Branch:** session branch · **Prereq:** Phase 3 merged (done)
 
-## Intent
+The Phase 3 characterization tests (`features/__tests__/sections.test.tsx`,
+`features/reading/__tests__/ReadingSection.test.tsx`) must stay green after every commit
+**without edits**, except where a task below changes behaviour on purpose — those edits
+are listed in the task and nowhere else.
 
-Three sections duplicate the lesson sidebar, search banner, count badge and — since
-Phase 2 — the loading skeleton and error/retry panel too, differing only by icon and an
-accent colour spelled out in literal Tailwind classes. `ReadingSection.tsx` is 1,066
-lines with ~20 `useState` hooks and renders its question list twice — inline and in the
-modal — with duplicated answer state.
+## Decisions (settled — do not revisit)
 
-## Scope sketch
+- **Theme:** `sectionTheme` is a typed record of complete Tailwind class strings per
+  section (`grammar` indigo, `vocab` emerald, `kanji` rose). Complete literals, never
+  `bg-${colour}-600`: Tailwind v4 only generates classes it finds verbatim in source.
+- **Modal:** wraps a native `<dialog>` opened with `showModal()`. The browser provides
+  focus containment, Escape (`cancel` event), an inert background and `aria-modal`
+  semantics. jsdom lacks `showModal`; `src/test/setup.dom.ts` polyfills it.
+- **Routes:** no URL changes in this phase. Studio tabs and the open story stay where they
+  are (query string / component state); promoting them to routes belongs with Phase 6.
+- **No speculative primitives.** A primitive is extracted only when it has two or more
+  callers in this phase. That rules in `Modal`, the section shell and its state panels;
+  it rules out generic `Card` / `Badge` / `Button` for now.
 
-- `components/layout/SectionLayout.tsx` owning the shared shell, parameterised by a
-  `sectionTheme` record instead of inline colour literals.
-- Primitives: `Card`, `Badge`, `Button`, `Modal` (focus trap, Escape, `aria-modal`),
-  `SearchInput`, `LoadingState`, `EmptyState`. The accessibility gap — zero `aria-*` or
-  `role` attributes repo-wide — closes here, in one place.
-- Split reading into `GeneratorPanel`, `PassageReader`, `QuestionList`, `StoryLibrary`,
-  `StoryModal` plus a `useReadingStudio` hook. `QuestionList` is shared by studio and
-  modal, which deletes the duplicated answer state.
-- Make the section list in `Header` data-driven so a new section is a registry entry.
+## Task 1 — `Modal` primitive
 
-## Open decisions for the spec author
+`components/common/Modal.tsx`: `{ open, onClose, labelledBy, className, children }`.
+Native `<dialog>`; `showModal()` / `close()` driven by `open`; `cancel` (Escape) and a
+backdrop click call `onClose`. Migrate `AiSettingsModal`, `GrammarDetailModal` and the
+Story Library reader to it and delete their hand-rolled Escape effects.
 
-- Does `sectionTheme` carry Tailwind class strings or CSS custom properties?
-- Does `Modal` wrap a native `<dialog>` or a portal? (Affects the focus-trap work.)
-- Are studio tabs and the open story promoted to routes now, or in Phase 6?
+Tests (jsdom): opens as a modal dialog with an accessible name; Escape calls `onClose`;
+a click on the backdrop closes, a click inside does not.
+
+## Task 2 — `SectionLayout` and the state panels
+
+- `components/layout/sectionTheme.ts` — the theme record.
+- `components/layout/SectionLayout.tsx` — sidebar (lesson list, counts, active lesson,
+  optional footer slot), banner (level badge, subtitle, lesson heading, optional notice
+  slot), per-lesson filter and count badge, then `LoadingState` / `ErrorState` /
+  `EmptyState`, then `children` (the cards). Props carry the section's data from its
+  `use*` hook; the layout owns no data fetching.
+- Grammar, Vocab and Kanji render through it; each keeps only its card markup.
+- **Behaviour change (from FINDINGS):** while the lesson list is loading or failed, the
+  sidebar header reads `N4 Lessons` with no range instead of the `(1–1)` fallback.
+  Add a test; no existing test changes.
+
+## Task 3 — Split `ReadingSection`
+
+Into `features/reading/`: `useReadingStudio.ts` (state + handlers), `GeneratorPanel`,
+`PassageReader`, `QuestionList`, `StoryLibrary`, `StoryModal`; `ReadingSection.tsx`
+becomes the composition. `QuestionList` is shared by studio and modal and owns its
+"show English" toggles, so the two duplicated `showExplanationEn` maps go away; a
+`resetKey` prop (bumped by Start over / a new passage) clears them as today.
+
+**Behaviour change (from FINDINGS):** `useReadingData`'s `error` is rendered in the
+generator panel (a chunk failure no longer looks like a level with no lessons). Add a test.
+
+## Task 4 — Data-driven header sections
+
+`Header`'s section tabs come from one registry (`utils/sections.ts`: id, label, icon), so
+a new section is one entry. Availability still comes from `isSectionAvailable`.
+
+## Do not touch
+
+`services/ai/**` (Phase 5) · URLs and query params · content data · copy text other than
+the two behaviour changes above.
+
+## Acceptance
+
+- [ ] typecheck, lint, `npm test`, `validate:data`, build — all clean.
+- [ ] Phase 3 characterization tests pass unedited.
+- [ ] No component file over 400 lines; `ReadingSection.tsx` under 150.
+- [ ] `grep -rn "e.key === 'Escape'" grammar-app/src/components grammar-app/src/features`
+      finds no modal Escape handler outside `Modal.tsx`.
+- [ ] Browser check (Playwright, dev server): each modal traps Tab and closes on Escape;
+      grammar/vocab/kanji/reading pages look unchanged (screenshots before/after).
+
+## Commits
+
+1. `docs: write the Phase 4 spec`
+2. `refactor: Modal primitive on native dialog`
+3. `refactor: shared SectionLayout for grammar, vocab and kanji`
+4. `refactor: split ReadingSection`
+5. `refactor: data-driven header sections`
