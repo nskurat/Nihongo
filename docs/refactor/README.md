@@ -23,7 +23,6 @@ Dependency-ordered. Do not start one before its predecessor has landed.
 | # | Phase | Spec | Effort | Ready to offload |
 |---|---|---|---|---|
 | 6 | Flashcards + quizzes | `phase-6-features.md` | 2–3 d | Design first |
-| 7 | CI + accessibility gates | `phase-7-gates.md` | ½–1 d | Spec it (4 has landed) |
 
 Phase 3's characterization tests (`features/__tests__/sections.test.tsx`,
 `features/reading/__tests__/ReadingSection.test.tsx`) are the safety net for every later
@@ -40,6 +39,7 @@ phase: a failure after a refactor means behaviour changed.
 | 3 | Test harness | [#25](https://github.com/nskurat/Nihongo/pull/25) | Vitest `node` + `jsdom` projects, fetch guard on every test, `renderWithRouter` / fixtures / `mockAi()` in `src/test/`, 19 characterization tests; `ReadingSection.tsx` 83.6% line coverage, suite ~9 s. Deviations: projects split by file type (`*.test.ts` node, `*.test.tsx` jsdom), not folder; `mockAi()` spies on each provider's `executePrompt`, one level under `executeAiPrompt`, whose in-module callers `vi.mock` can't intercept; the spec's header example (N3 24 → N4) was wrong — 24 is in range and kept, an out-of-range lesson resets to the default, now both tested |
 | 4 | UI consolidation | [#26](https://github.com/nskurat/Nihongo/pull/26) | `Modal` (native `<dialog>`), `SectionLayout` + `sectionTheme` (complete Tailwind literals), `ReadingSection` 1,228 → 93 lines over `useReadingStudio` + 5 components with one shared `QuestionList`, header tabs from `utils/sections.ts`. Phase 3 tests passed unedited after every commit; pages screenshot-identical apart from anti-aliasing. Intended changes: backdrop click closes every modal, the story reader gained Escape, sidebar heading drops the fake `(1–1)`, Reading shows a lesson-load failure, the reader's options use the studio's badge/icons. Deviations: no generic `Card`/`Badge`/`Button` (fewer than two callers each); `SearchPage.tsx` (428 lines, out of scope) left over the 400-line bar and logged |
 | 5 | AI layer | branch `claude/cool-heisenberg-l4bgrr` | Typed `AiError` (missing-key, auth, rate-limit, network, bad-response, provider) with one retry on 429/5xx/network; one persisted artifact cache (kind + uid, 400 entries / ~1 MB, LRU by generation) migrated from v7 with nothing lost; `useAiArtifacts(kind)` replaces the per-feature handlers, de-duplicates in-flight requests and shows failures inline on the card. Deviations: no abort on unmount and no age-based expiry (both would throw away paid results); one hook per list, not per item (cards render in `.map()`); no runtime zod (failures became typed instead); Tasks 2–3 in one commit; the network-guard test now expects the retry's second blocked attempt |
+| 7 | CI + a11y gates | branch `claude/eloquent-cray-n5xsc7` (spec `phase-7-gates.md` until merged) | `npm run check:bundle` in CI and deploy (initial ≤ 200 KB, each lazy chunk ≤ 200 KB gzipped; today 161 / 160); root + route `ErrorBoundary` with a recoverable fallback; axe-core over every page and dialog in the jsdom project (`src/__tests__/a11y.test.tsx`) plus a manual checklist (`docs/a11y.md`); skip link, focus ring, Reading WAI-ARIA tabs, lesson `nav`, level `aria-pressed`, keyboard-openable library stories. Deviations: built before Phase 6; one characterization test edited (button → tab); search listbox headings and colour contrast logged, not fixed |
 
 Their specs were deleted once merged. `git log --diff-filter=D -- docs/refactor/` finds
 them if the detail is ever needed; the PR descriptions carry the verified results.
@@ -70,5 +70,8 @@ These are settled. An agent must not revisit them.
 - Markdown styling uses the existing `.markdown-prose` rules in `index.css`.
   No `@tailwindcss/typography` dependency.
 - Sanitizer is `dompurify` v3.
+- Accessibility: axe-core in the jsdom project (`src/test/axe.ts`) gates every page and dialog;
+  contrast and screen readers are a manual checklist (`docs/a11y.md`). Bundle budget is
+  `scripts/lib/bundleBudget.ts`, checked against a local build — no preview deploy.
 - Vitest has two projects: `node` for `*.test.ts`, `jsdom` for `*.test.tsx`. Tests never reach
   the network (`src/test/setup.node.ts`); AI is mocked with `src/test/mockAi.ts`.
