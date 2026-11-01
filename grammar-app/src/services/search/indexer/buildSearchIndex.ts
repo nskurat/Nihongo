@@ -1,6 +1,6 @@
 import type { GrammarItem, KanjiItem, TagTaxonomy, VocabItem } from '../../../types/japanese';
 import type { Level } from '../types';
-import { OKURIGANA_PAIRS } from '../aliases';
+import { OKURIGANA_PAIRS, SAME_WORD_SPELLINGS } from '../aliases';
 import { enTokens } from '../english';
 import { grammarKeys } from '../keys/grammarKeys';
 import { isMasuExpression, masuToDict, type MasuRule } from '../keys/masuToDict';
@@ -115,7 +115,8 @@ export function buildSearchIndex(content: SearchContent, contentHash = 'dev'): S
     for (const k of rowsOf(content.kanji[level])) for (const c of k.compounds ?? []) corpus.add(key(c.word));
   }
   const okurigana = new Map<string, string[]>();
-  for (const [a, b] of OKURIGANA_PAIRS) {
+  // Reviewed kanji spellings of kana words answer for them too (余程 → よほど).
+  for (const [a, b] of [...OKURIGANA_PAIRS, ...Object.entries(SAME_WORD_SPELLINGS)]) {
     okurigana.set(a, [...(okurigana.get(a) ?? []), b]);
     okurigana.set(b, [...(okurigana.get(b) ?? []), a]);
   }
@@ -143,13 +144,19 @@ export function buildSearchIndex(content: SearchContent, contentHash = 'dev'): S
       const classes: string[] = [];
       const masuLevel = level === 'N5' || level === 'N4';
       const posParts = (v.pos ?? '').split(/\s+\/\s+/);
+      // Dictionary forms stored by scripts/migrate-vocab-pos.ts win over inference.
+      const storedLemma = v.lemma?.split('／');
+      const storedReading = v.lemmaReading?.split('／');
+      const stored = (i: number) =>
+        storedLemma && storedLemma.length === wv.parts.length ? { lemma: storedLemma[i], lemmaReading: storedReading?.[i] ?? '' } : null;
       wv.parts.forEach((part, i) => {
         const readingPart = rv.parts.length === wv.parts.length ? rv.parts[i] : rv.parts[0];
         const pos = posParts.length === wv.parts.length ? posParts[i] : v.pos;
         part.variants.forEach((w, j) => {
           const r = readingPart?.variants[j] ?? readingPart?.variants[0] ?? '';
           const masuRow = masuLevel && w.endsWith('ます');
-          const m = masuRow && !isMasuExpression(w, v.pos) ? masuToDict(w, r, pos, corpus) : null;
+          const inferred = masuRow && !isMasuExpression(w, v.pos) ? masuToDict(w, r, pos, corpus) : null;
+          const m = inferred && j === 0 && stored(i) ? { ...inferred, ...stored(i) } : inferred;
           if (!m) {
             classes.push(masuRow ? 'n' : (posClass(pos, w) ?? dictClass(w, r)));
             return;

@@ -41,6 +41,9 @@ export type PosGroup = 0 | 1 | 2 | 3;
 /** `Verb (Group II)` → 2. Bare `verb`, missing or non-verb pos → 0. */
 export function posGroup(pos: string | undefined): PosGroup {
   if (!pos) return 0;
+  if (/^verb-godan/.test(pos)) return 1;
+  if (/^verb-ichidan/.test(pos)) return 2;
+  if (/^verb-irregular/.test(pos)) return 3;
   if (/Group III/.test(pos)) return 3;
   if (/Group II/.test(pos)) return 2;
   if (/Group I/.test(pos)) return 1;

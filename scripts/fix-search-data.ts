@@ -10,7 +10,7 @@ import {
 
 /**
  * Data-quality fixes global search depends on (docs/search/04-data.md §7 #1, #3, #8):
- * 行く read as ゆく, slash pairs whose reading covers one half only, and N5 kun readings
+ * wrong readings, slash pairs whose reading covers one half only, and N5 kun readings
  * stored as bare stems, grammar titles typed with ~ instead of 〜, and JMdict part-of-speech
  * markers left in N2/N1 glosses. Tables live in
  * scripts/lib/searchDataFixes.ts.

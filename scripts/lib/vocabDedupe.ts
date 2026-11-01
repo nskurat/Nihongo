@@ -1,3 +1,4 @@
+import { SAME_WORD_SPELLINGS } from '../../grammar-app/src/services/search/aliases';
 import { glossesOverlap, stripAnnotation } from './jlptContent';
 
 /**
@@ -26,6 +27,20 @@ export const KEEP_DISTINCT = new Set<string>([
   'N3:ある', // 連体詞 "a certain…", not あります "to have"
   'N5:やる', // "to do", vs textbook やります "to give (to a junior)"
   'N3:吹く', // "to play (an instrument)", vs textbook 吹きます "(wind) blows"
+  'N3:夕べ', // "evening", vs N4 ゆうべ "last night"
+]);
+
+/**
+ * Textbook rows that repeat a lower row's word and sense although their glosses are
+ * worded differently (チャンス "chance" / "opportunity"); reviewed by hand. Keyed by
+ * `${level}:${lesson}:${word}` of the repeat, which is merged into the group's first row.
+ * しっかり N3 L17 "sensible" (しっかりした) is a different usage and stays.
+ */
+export const SAME_SENSE = new Set<string>([
+  'N3:16:チャンス',
+  'N3:3:幸せ',
+  'N3:22:めったに',
+  'N3:9:しっかり',
 ]);
 
 const LEVEL_ORDER = ['N5', 'N4', 'N3', 'N2', 'N1'];
@@ -37,7 +52,8 @@ const bare = (s: string): string => stripAnnotation(s).replace(/\s/g, '');
 export function lexemeKey(row: Pick<DedupeRow, 'word' | 'reading'>, masuLemma: MasuLemmaFn): string {
   const w = bare(row.word);
   const affix = /^[〜～]|[〜～]$/.test(w) ? '〜' : '';
-  const surface = w.replace(/[〜～]/g, '');
+  const written = w.replace(/[〜～]/g, '');
+  const surface = SAME_WORD_SPELLINGS[written] ?? written;
   const reading = bare(row.reading).replace(/[〜～]/g, '');
   const m = surface.endsWith('ます') ? masuLemma(surface, reading) : null;
   return `${m ? m.lemma : surface}|${m ? m.lemmaReading : reading}|${affix}|${notes(row.word)}`;
@@ -49,6 +65,8 @@ const order = (a: DedupeRow, b: DedupeRow): number =>
 export interface Removal {
   row: DedupeRow;
   keptBy: DedupeRow;
+  /** The kept row has no example sentence and this one does: move it over. */
+  moveExample?: boolean;
 }
 
 /**
@@ -65,9 +83,17 @@ export function findRedundant(rows: DedupeRow[], masuLemma: MasuLemmaFn): Remova
     groups.set(k, [...(groups.get(k) ?? []), r]);
   }
   const out: Removal[] = [];
-  for (const g of groups.values()) {
+  const forced = (r: DedupeRow) => SAME_SENSE.has(`${r.level}:${r.lesson}:${bare(r.word)}`);
+  for (const all of groups.values()) {
+    if (all.length < 2) continue;
+    all.sort(order);
+    // Reviewed repeats merge into the group's first other row, taking its example if it lacks one.
+    const base = all.find((r) => !forced(r));
+    const g = all.filter((r) => !forced(r));
+    for (const r of all) {
+      if (forced(r) && base) out.push({ row: r, keptBy: base, moveExample: !base.exampleJp && !!r.exampleJp });
+    }
     if (g.length < 2) continue;
-    g.sort(order);
     const keep = g.find((r) => r.exampleJp) ?? g[0];
     for (const r of g) {
       if (r === keep) continue;

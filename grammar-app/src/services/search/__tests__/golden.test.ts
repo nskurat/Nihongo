@@ -378,12 +378,17 @@ describe('§5 acceptance list (golden queries)', () => {
     expect(total).toBeLessThanOrEqual(40);
   });
 
-  it('T-40 よほど → よっぽど/よほど, よほど, 余程', async () => {
+  // Amended 2026-11: 余程 N1 was merged into よほど N3 (SAME_WORD_SPELLINGS); the kanji
+  // spelling still finds it.
+  it('T-40 よほど → よっぽど/よほど, よほど; 余程 finds よほど', async () => {
     expectContains(await run('よほど'), 'vocab', [
       { t: 'よっぽど/よほど', level: 'N3', lesson: 17 },
       { t: 'よほど', level: 'N3', lesson: 22 },
-      { t: '余程', level: 'N1' },
     ]);
+    expect((await run('よほど')).groups.vocab.some((h) => h.title === '余程')).toBe(false);
+    for (const [kanji, kana] of [['余程', 'よほど'], ['相応しい', 'ふさわしい'], ['是非', 'ぜひ']]) {
+      expect((await run(kanji)).groups.vocab[0].title).toBe(kana);
+    }
   });
 
   // N3 repeats removed by scripts/dedupe-vocab.ts; N5 (list word) + N4 L21 (textbook) collapse.

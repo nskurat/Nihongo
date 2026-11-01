@@ -135,6 +135,6 @@ describe('persisted cache', () => {
       'vocab-help:n5-vocab-1-1',
     ]);
     // Written back in the new shape
-    expect(JSON.parse(localStorage.getItem('ai-generation-cache')!).version).toBe(9);
+    expect(JSON.parse(localStorage.getItem('ai-generation-cache')!).version).toBe(10);
   });
 });

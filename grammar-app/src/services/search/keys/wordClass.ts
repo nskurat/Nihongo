@@ -39,6 +39,10 @@ export function dictClass(surface: string, reading: string): ClassSet {
 /** Class from an N5/N4 `pos` string, or null when it does not decide (bare `verb`). */
 export function posClass(pos: string | undefined, surface: string): ClassSet | null {
   if (!pos) return null;
+  if (pos === 'verb-irregular') return /(来る|くる|来ます|きます)$/.test(surface) ? 'k' : 's';
+  if (pos === 'verb-ichidan') return '1';
+  if (pos === 'verb-godan') return '5';
+  if (pos === 'i-adjective') return 'i';
   if (/Group III/.test(pos)) return /(来る|くる|来ます|きます)$/.test(surface) ? 'k' : 's';
   if (/Group II/.test(pos)) return '1';
   if (/Group I/.test(pos)) return '5';

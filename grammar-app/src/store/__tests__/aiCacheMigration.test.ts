@@ -5,6 +5,8 @@ import {
   V5_REPLACED_KANJI_UIDS,
   V9_MOVED_VOCAB_UIDS,
   V9_REMOVED_VOCAB_UIDS,
+  V10_REMOVED_VOCAB_UIDS,
+  vocabUidSuccessor,
   migrateAiCache,
   renameV9VocabArtifacts,
   v9VocabUid,
@@ -80,6 +82,32 @@ describe('v9: vocab notes follow their words', () => {
   it('migrateAiCache applies it to v8 caches and passes v9 through', () => {
     const v8 = { artifacts: { [artifactKey('vocab-help', 'n5-vocab-26-1')]: { kind: 'vocab-help' as const, uid: 'n5-vocab-26-1', data: 'x', ts: 1 } } };
     expect(Object.keys(migrateAiCache(v8, 8).artifacts)).toEqual([artifactKey('vocab-help', 'n5-vocab-3-38')]);
-    expect(migrateAiCache(v8, 9)).toEqual(v8);
+    expect(Object.keys(migrateAiCache(v8, 9).artifacts)).toEqual([artifactKey('vocab-help', 'n5-vocab-26-1')]); // v9 caches skip the v9 step
+    expect(migrateAiCache(v8, 10)).toEqual(v8);
+  });
+});
+
+describe('v10: near-repeat merges', () => {
+  const change = { moved: {}, removed: V10_REMOVED_VOCAB_UIDS };
+  const vocab = (level: string) =>
+    JSON.parse(readFileSync(resolve(__dirname, `../../data/${level}/vocab.json`), 'utf-8')) as Record<string, { uid: string; word: string }[]>;
+  const wordOf = new Map(['n5', 'n4', 'n3', 'n2'].flatMap((l) => Object.values(vocab(l)).flat().map((r) => [r.uid, r.word] as const)));
+
+  it('redirects each merged row to a current row of the same word', () => {
+    expect(wordOf.get(V10_REMOVED_VOCAB_UIDS['n1-vocab-30-81'])).toBe('よほど');
+    expect(wordOf.get(V10_REMOVED_VOCAB_UIDS['n3-vocab-1-127'])).toBe('ぜひ');
+    for (const target of Object.values(V10_REMOVED_VOCAB_UIDS)) expect(wordOf.has(target)).toBe(true);
+  });
+
+  it('shifts later rows of a lesson past every removed row before them', () => {
+    expect(vocabUidSuccessor('n3-vocab-22-129', change)).toBe('n3-vocab-22-127'); // after めったに (50) and 大した (128)
+    expect(vocabUidSuccessor('n3-vocab-22-51', change)).toBe('n3-vocab-22-50');
+    expect(vocabUidSuccessor('n3-vocab-22-49', change)).toBe('n3-vocab-22-49');
+  });
+
+  it('a v9 cache migrates through v10; a v8 cache through v9 and v10', () => {
+    const entry = (uid: string) => ({ kind: 'vocab-help' as const, uid, data: uid, ts: 1 });
+    const v9 = { artifacts: { [artifactKey('vocab-help', 'n3-vocab-22-51')]: entry('n3-vocab-22-51') } };
+    expect(Object.keys(migrateAiCache(v9, 9).artifacts)).toEqual([artifactKey('vocab-help', 'n3-vocab-22-50')]);
   });
 });

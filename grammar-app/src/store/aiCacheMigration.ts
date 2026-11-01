@@ -209,13 +209,19 @@ export const V9_REMOVED_VOCAB_UIDS: Readonly<Record<string, string>> = {
   'n2-vocab-19-23': 'n5-vocab-1-46', // こんばんは
 };
 
-/** A vocab uid's successor after v9: moved, redirected to its kept twin, or shifted down past removed rows. */
-export function v9VocabUid(uid: string): string {
-  const moved = V9_MOVED_VOCAB_UIDS[uid] ?? V9_REMOVED_VOCAB_UIDS[uid];
-  if (moved) return moved;
+/** A vocab renumbering: rows moved to a known uid, and removed rows → their kept twin. */
+export interface VocabRenumbering {
+  moved: Readonly<Record<string, string>>;
+  removed: Readonly<Record<string, string>>;
+}
+
+/** A vocab uid's successor: moved, redirected to its kept twin, or shifted down past removed rows of its lesson. */
+export function vocabUidSuccessor(uid: string, change: VocabRenumbering): string {
+  const direct = change.moved[uid] ?? change.removed[uid];
+  if (direct) return direct;
   const m = UID_RE.exec(uid);
   if (!m) return uid;
-  const removedBefore = Object.keys(V9_REMOVED_VOCAB_UIDS).filter((r) => {
+  const removedBefore = Object.keys(change.removed).filter((r) => {
     const rm = UID_RE.exec(r);
     return rm?.[1] === m[1] && Number(rm[2]) < Number(m[2]);
   }).length;
@@ -223,10 +229,10 @@ export function v9VocabUid(uid: string): string {
 }
 
 /**
- * Renames vocab artifacts to their v9 uids. A redirected duplicate only fills its kept
+ * Renames vocab artifacts to their successors. A removed row's note only fills its kept
  * twin's slot when that has no note of its own; everything else keeps its data and ts.
  */
-export function renameV9VocabArtifacts(artifacts: ArtifactCache): ArtifactCache {
+export function renumberVocabArtifacts(artifacts: ArtifactCache, change: VocabRenumbering): ArtifactCache {
   const out: ArtifactCache = {};
   const redirected: CachedArtifact[] = [];
   for (const [key, entry] of Object.entries(artifacts)) {
@@ -234,10 +240,9 @@ export function renameV9VocabArtifacts(artifacts: ArtifactCache): ArtifactCache 
       out[key] = entry;
       continue;
     }
-    const uid = v9VocabUid(entry.uid);
-    const next = { ...entry, uid };
-    if (V9_REMOVED_VOCAB_UIDS[entry.uid]) redirected.push(next);
-    else out[artifactKey('vocab-help', uid)] = next;
+    const next = { ...entry, uid: vocabUidSuccessor(entry.uid, change) };
+    if (change.removed[entry.uid]) redirected.push(next);
+    else out[artifactKey('vocab-help', next.uid)] = next;
   }
   for (const entry of redirected) {
     const key = artifactKey('vocab-help', entry.uid);
@@ -246,20 +251,57 @@ export function renameV9VocabArtifacts(artifacts: ArtifactCache): ArtifactCache 
   return out;
 }
 
+const V9: VocabRenumbering = { moved: V9_MOVED_VOCAB_UIDS, removed: V9_REMOVED_VOCAB_UIDS };
+
+/** v9 successor of a vocab uid (kept for its tests and the v9 tables' documentation). */
+export function v9VocabUid(uid: string): string {
+  return vocabUidSuccessor(uid, V9);
+}
+
+export function renameV9VocabArtifacts(artifacts: ArtifactCache): ArtifactCache {
+  return renumberVocabArtifacts(artifacts, V9);
+}
+
+// v10: the near-repeat review (scripts/lib/vocabDedupe.ts SAME_SENSE, jlptContent.ts
+// SAME_WORD_SPELLINGS) merged 21 rows into the row of the same word; later rows shifted.
+export const V10_REMOVED_VOCAB_UIDS: Readonly<Record<string, string>> = {
+  'n1-vocab-1-85': 'n3-vocab-18-72', // 相応しい → ふさわしい
+  'n1-vocab-13-24': 'n2-vocab-1-20', // ご馳走さま → ごちそうさま
+  'n1-vocab-13-72': 'n2-vocab-15-51', // 惨め → みじめ
+  'n1-vocab-13-76': 'n3-vocab-19-13', // やり遂げる → やりとげる
+  'n1-vocab-17-31': 'n4-vocab-11-12', // この頃 → このごろ
+  'n1-vocab-17-47': 'n2-vocab-12-32', // その外 → そのほか
+  'n1-vocab-17-5': 'n3-vocab-18-70', // お洒落 → おしゃれ
+  'n1-vocab-21-10': 'n3-vocab-18-9', // 恐らく → おそらく
+  'n1-vocab-25-9': 'n3-vocab-11-27', // 慌てる → あわてる
+  'n1-vocab-26-11': 'n3-vocab-2-69', // 今更 → いまさら
+  'n1-vocab-28-8': 'n2-vocab-6-3', // 当てはまる → あてはまる
+  'n1-vocab-3-28': 'n3-vocab-16-6', // 素早い → すばやい
+  'n1-vocab-3-80': 'n3-vocab-21-134', // 善し悪し → よしあし
+  'n1-vocab-30-81': 'n3-vocab-22-50', // 余程 → よほど (its uid after the shift)
+  'n1-vocab-31-4': 'n3-vocab-17-101', // 呆れる → あきれる
+  'n3-vocab-1-127': 'n5-vocab-18-11', // 是非 → ぜひ
+  'n3-vocab-16-95': 'n5-vocab-25-6', // チャンス
+  'n3-vocab-22-128': 'n3-vocab-7-13', // 大した → たいした
+  'n3-vocab-22-50': 'n3-vocab-10-11', // めったに
+  'n3-vocab-3-38': 'n4-vocab-18-9', // 幸せ
+  'n3-vocab-9-51': 'n4-vocab-15-30', // しっかり
+};
+
+const V10: VocabRenumbering = { moved: {}, removed: V10_REMOVED_VOCAB_UIDS };
+
 /**
- * Migrates any persisted AI cache to v9: one artifact map (the v8 shape) with vocab notes
+ * Migrates any persisted AI cache to v10: one artifact map (the v8 shape) with vocab notes
  * under their current uids. v4–v7 keep their entries, minus the uids later content changes
  * reassigned; anything older starts empty (its keys were the pre-uid ids, which collide
  * across levels).
  */
 export function migrateAiCache(persisted: unknown, version: number): { artifacts: ArtifactCache } {
-  if (version >= 9) {
-    const artifacts = (persisted as { artifacts?: ArtifactCache } | undefined)?.artifacts;
-    return { artifacts: artifacts ?? {} };
-  }
-  if (version === 8) {
-    const artifacts = (persisted as { artifacts?: ArtifactCache } | undefined)?.artifacts;
-    return { artifacts: renameV9VocabArtifacts(artifacts ?? {}) };
+  if (version >= 8) {
+    let artifacts = (persisted as { artifacts?: ArtifactCache } | undefined)?.artifacts ?? {};
+    if (version < 9) artifacts = renumberVocabArtifacts(artifacts, V9);
+    if (version < 10) artifacts = renumberVocabArtifacts(artifacts, V10);
+    return { artifacts };
   }
   const maps = persisted as LegacyAiMaps | undefined;
   if (!maps || version < 4) return { artifacts: {} };
@@ -270,5 +312,6 @@ export function migrateAiCache(persisted: unknown, version: number): { artifacts
   if (version < 6) notes = withoutShiftedUids(notes, V6_FIRST_SHIFTED_VOCAB_UIDS);
   if (version < 7) notes = withoutShiftedUids(notes, V7_FIRST_SHIFTED_VOCAB_UIDS);
 
-  return { artifacts: renameV9VocabArtifacts(fromLegacyMaps({ ...maps, aiKanjiMnemonics: mnemonics, aiVocabNotes: notes })) };
+  const artifacts = fromLegacyMaps({ ...maps, aiKanjiMnemonics: mnemonics, aiVocabNotes: notes });
+  return { artifacts: renumberVocabArtifacts(renumberVocabArtifacts(artifacts, V9), V10) };
 }

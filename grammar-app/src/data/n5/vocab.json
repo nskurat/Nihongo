@@ -8,7 +8,7 @@
       "word": "わたし",
       "reading": "わたし",
       "romaji": "watashi",
-      "pos": "Pronoun",
+      "pos": "pronoun",
       "meaning": "I, me",
       "exampleJp": "わたしはマイク・ミラーです。",
       "exampleEn": "I am Mike Miller."
@@ -21,7 +21,7 @@
       "word": "あなた",
       "reading": "あなた",
       "romaji": "anata",
-      "pos": "Pronoun",
+      "pos": "pronoun",
       "meaning": "you",
       "exampleJp": "あなたは学生ですか。",
       "exampleEn": "Are you a student?"
@@ -34,7 +34,7 @@
       "word": "あの人",
       "reading": "あのひと",
       "romaji": "ano hito",
-      "pos": "Pronoun",
+      "pos": "pronoun",
       "meaning": "that person, he, she (あのかた is the polite equivalent)",
       "exampleJp": "あの人はだれですか。",
       "exampleEn": "Who is that person?"
@@ -47,7 +47,7 @@
       "word": "〜さん",
       "reading": "〜さん",
       "romaji": "~san",
-      "pos": "Suffix",
+      "pos": "suffix",
       "meaning": "Mr., Ms. (title of respect added to a name — never to your own)",
       "exampleJp": "山田さんは会社員です。",
       "exampleEn": "Mr. Yamada is a company employee."
@@ -60,7 +60,7 @@
       "word": "先生",
       "reading": "せんせい",
       "romaji": "sensei",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "teacher, instructor (not used when referring to one's own job)",
       "exampleJp": "ワットさんは先生です。",
       "exampleEn": "Mr. Watt is a teacher."
@@ -73,7 +73,7 @@
       "word": "会社員",
       "reading": "かいしゃいん",
       "romaji": "kaishain",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "company employee",
       "exampleJp": "サントスさんは会社員です。",
       "exampleEn": "Mr. Santos is a company employee."
@@ -86,7 +86,7 @@
       "word": "医者",
       "reading": "いしゃ",
       "romaji": "isha",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "medical doctor",
       "exampleJp": "ワンさんは医者です。",
       "exampleEn": "Mr. Wang is a doctor."
@@ -99,7 +99,7 @@
       "word": "何歳",
       "reading": "なんさい",
       "romaji": "nansai",
-      "pos": "Noun (interrogative)",
+      "pos": "interrogative",
       "meaning": "how old (おいくつ is the polite equivalent)",
       "exampleJp": "テレサちゃんは何歳ですか。",
       "exampleEn": "How old is Teresa?"
@@ -112,7 +112,7 @@
       "word": "初めまして",
       "reading": "はじめまして",
       "romaji": "hajimemashite",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "How do you do? (used as the first phrase when introducing oneself)",
       "exampleJp": "初めまして。マイク・ミラーです。",
       "exampleEn": "How do you do? I am Mike Miller."
@@ -125,7 +125,7 @@
       "word": "どうぞよろしく[お願いします]",
       "reading": "どうぞよろしく[おねがいします]",
       "romaji": "douzo yoroshiku [onegaishimasu]",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "Pleased to meet you (used at the end of a self-introduction)",
       "exampleJp": "サントスです。どうぞよろしくお願いします。",
       "exampleEn": "I am Santos. Pleased to meet you."
@@ -515,7 +515,7 @@
       "word": "これ／それ／あれ",
       "reading": "これ／それ／あれ",
       "romaji": "kore / sore / are",
-      "pos": "Pronoun",
+      "pos": "pronoun",
       "meaning": "this / that / that over there (things)",
       "exampleJp": "それは辞書ですか。",
       "exampleEn": "Is that a dictionary?"
@@ -528,7 +528,7 @@
       "word": "この／その／あの〜",
       "reading": "この／その／あの〜",
       "romaji": "kono / sono / ano ~",
-      "pos": "Determiner",
+      "pos": "determiner",
       "meaning": "this / that / that over there ~ (modifying a noun)",
       "exampleJp": "この本はわたしのです。",
       "exampleEn": "This book is mine."
@@ -541,7 +541,7 @@
       "word": "辞書",
       "reading": "じしょ",
       "romaji": "jisho",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "dictionary",
       "exampleJp": "これはわたしの辞書です。",
       "exampleEn": "This is my dictionary."
@@ -554,7 +554,7 @@
       "word": "雑誌",
       "reading": "ざっし",
       "romaji": "zasshi",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "magazine",
       "exampleJp": "それはコンピューターの雑誌です。",
       "exampleEn": "That is a magazine on computers."
@@ -567,7 +567,7 @@
       "word": "新聞",
       "reading": "しんぶん",
       "romaji": "shinbun",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "newspaper",
       "exampleJp": "あれは日本の新聞です。",
       "exampleEn": "That over there is a Japanese newspaper."
@@ -580,7 +580,7 @@
       "word": "名刺",
       "reading": "めいし",
       "romaji": "meishi",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "business card",
       "exampleJp": "これは佐藤さんの名刺です。",
       "exampleEn": "This is Ms. Sato's business card."
@@ -593,7 +593,7 @@
       "word": "かばん",
       "reading": "かばん",
       "romaji": "kaban",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "bag, briefcase",
       "exampleJp": "そのかばんはあなたのですか。",
       "exampleEn": "Is that bag yours?"
@@ -606,10 +606,12 @@
       "word": "違います",
       "reading": "ちがいます",
       "romaji": "chigaimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "to be wrong, to differ (= そうじゃありません)",
       "exampleJp": "いいえ、違います。",
-      "exampleEn": "No, that's not right."
+      "exampleEn": "No, that's not right.",
+      "lemma": "違う",
+      "lemmaReading": "ちがう"
     },
     {
       "uid": "n5-vocab-2-9",
@@ -619,7 +621,7 @@
       "word": "そうですか",
       "reading": "そうですか",
       "romaji": "sou desu ka",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "I see, is that so? (shows the speaker registers new information)",
       "exampleJp": "これはシュミットさんのです。…そうですか。",
       "exampleEn": "This is Mr. Schmidt's. — I see."
@@ -632,7 +634,7 @@
       "word": "[どうも]ありがとう[ございます]",
       "reading": "[どうも]ありがとう[ございます]",
       "romaji": "[doumo] arigatou [gozaimasu]",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "Thank you [very much]",
       "exampleJp": "どうもありがとうございます。",
       "exampleEn": "Thank you very much."
@@ -980,7 +982,7 @@
       "word": "ここ／そこ／あそこ",
       "reading": "ここ／そこ／あそこ",
       "romaji": "koko / soko / asoko",
-      "pos": "Pronoun",
+      "pos": "pronoun",
       "meaning": "here / there / over there (places)",
       "exampleJp": "教室はここです。",
       "exampleEn": "The classroom is here."
@@ -993,7 +995,7 @@
       "word": "教室",
       "reading": "きょうしつ",
       "romaji": "kyoushitsu",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "classroom",
       "exampleJp": "学生は教室にいます。",
       "exampleEn": "The students are in the classroom."
@@ -1006,7 +1008,7 @@
       "word": "事務所",
       "reading": "じむしょ",
       "romaji": "jimusho",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "office",
       "exampleJp": "山田さんは事務所です。",
       "exampleEn": "Mr. Yamada is in the office."
@@ -1019,7 +1021,7 @@
       "word": "受付",
       "reading": "うけつけ",
       "romaji": "uketsuke",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "reception desk",
       "exampleJp": "受付はあちらです。",
       "exampleEn": "The reception desk is that way."
@@ -1032,7 +1034,7 @@
       "word": "お手洗い",
       "reading": "おてあらい",
       "romaji": "otearai",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "toilet, rest room",
       "exampleJp": "お手洗いはどこですか。",
       "exampleEn": "Where is the rest room?"
@@ -1045,7 +1047,7 @@
       "word": "会社",
       "reading": "かいしゃ",
       "romaji": "kaisha",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "company",
       "exampleJp": "会社はどちらですか。",
       "exampleEn": "What company do you work for?"
@@ -1058,7 +1060,7 @@
       "word": "いくら",
       "reading": "いくら",
       "romaji": "ikura",
-      "pos": "Pronoun (interrogative)",
+      "pos": "interrogative",
       "meaning": "how much",
       "exampleJp": "この時計はいくらですか。",
       "exampleEn": "How much is this watch?"
@@ -1071,7 +1073,7 @@
       "word": "すみません",
       "reading": "すみません",
       "romaji": "sumimasen",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "Excuse me",
       "exampleJp": "すみません。お手洗いはどこですか。",
       "exampleEn": "Excuse me. Where's the rest room?"
@@ -1084,7 +1086,7 @@
       "word": "[〜を]見せてください",
       "reading": "[〜を]みせてください",
       "romaji": "[~o] misete kudasai",
-      "pos": "Verb (Group II) (phrase)",
+      "pos": "verb-ichidan",
       "meaning": "Please show me [~]",
       "exampleJp": "その時計を見せてください。",
       "exampleEn": "Please show me that watch."
@@ -1097,7 +1099,7 @@
       "word": "[〜を]ください",
       "reading": "[〜を]ください",
       "romaji": "[~o] kudasai",
-      "pos": "Verb (Group I) (phrase)",
+      "pos": "verb-godan",
       "meaning": "Give me [~], please",
       "exampleJp": "これをください。",
       "exampleEn": "I'll take this, please."
@@ -1381,10 +1383,12 @@
       "word": "起きます",
       "reading": "おきます",
       "romaji": "okimasu",
-      "pos": "Verb (Group II)",
+      "pos": "verb-ichidan",
       "meaning": "get up, wake up",
       "exampleJp": "毎朝6時に起きます。",
-      "exampleEn": "I get up at six every morning."
+      "exampleEn": "I get up at six every morning.",
+      "lemma": "起きる",
+      "lemmaReading": "おきる"
     },
     {
       "uid": "n5-vocab-4-2",
@@ -1394,10 +1398,12 @@
       "word": "寝ます",
       "reading": "ねます",
       "romaji": "nemasu",
-      "pos": "Verb (Group II)",
+      "pos": "verb-ichidan",
       "meaning": "sleep, go to bed",
       "exampleJp": "毎晩11時に寝ます。",
-      "exampleEn": "I go to bed at eleven every night."
+      "exampleEn": "I go to bed at eleven every night.",
+      "lemma": "寝る",
+      "lemmaReading": "ねる"
     },
     {
       "uid": "n5-vocab-4-3",
@@ -1407,10 +1413,12 @@
       "word": "働きます",
       "reading": "はたらきます",
       "romaji": "hatarakimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "work",
       "exampleJp": "9時から5時まで働きます。",
-      "exampleEn": "I work from nine to five."
+      "exampleEn": "I work from nine to five.",
+      "lemma": "働く",
+      "lemmaReading": "はたらく"
     },
     {
       "uid": "n5-vocab-4-4",
@@ -1420,10 +1428,12 @@
       "word": "休みます",
       "reading": "やすみます",
       "romaji": "yasumimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "take a rest, take a holiday",
       "exampleJp": "土曜日と日曜日は休みます。",
-      "exampleEn": "I take Saturdays and Sundays off."
+      "exampleEn": "I take Saturdays and Sundays off.",
+      "lemma": "休む",
+      "lemmaReading": "やすむ"
     },
     {
       "uid": "n5-vocab-4-5",
@@ -1433,10 +1443,12 @@
       "word": "勉強します",
       "reading": "べんきょうします",
       "romaji": "benkyoushimasu",
-      "pos": "Verb (Group III)",
+      "pos": "verb-irregular",
       "meaning": "study",
       "exampleJp": "わたしは毎日日本語を勉強します。",
-      "exampleEn": "I study Japanese every day."
+      "exampleEn": "I study Japanese every day.",
+      "lemma": "勉強する",
+      "lemmaReading": "べんきょうする"
     },
     {
       "uid": "n5-vocab-4-6",
@@ -1446,10 +1458,12 @@
       "word": "終わります",
       "reading": "おわります",
       "romaji": "owarimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "finish",
       "exampleJp": "仕事は6時に終わります。",
-      "exampleEn": "Work finishes at six."
+      "exampleEn": "Work finishes at six.",
+      "lemma": "終わる",
+      "lemmaReading": "おわる"
     },
     {
       "uid": "n5-vocab-4-7",
@@ -1459,7 +1473,7 @@
       "word": "今",
       "reading": "いま",
       "romaji": "ima",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "now",
       "exampleJp": "今何時ですか。",
       "exampleEn": "What time is it now?"
@@ -1472,7 +1486,7 @@
       "word": "何時",
       "reading": "なんじ",
       "romaji": "nanji",
-      "pos": "Noun (interrogative)",
+      "pos": "interrogative",
       "meaning": "what time",
       "exampleJp": "今何時ですか。",
       "exampleEn": "What time is it now?"
@@ -1485,7 +1499,7 @@
       "word": "毎日",
       "reading": "まいにち",
       "romaji": "mainichi",
-      "pos": "Adverb",
+      "pos": "adverb",
       "meaning": "every day",
       "exampleJp": "毎日勉強します。",
       "exampleEn": "I study every day."
@@ -1498,7 +1512,7 @@
       "word": "何曜日",
       "reading": "なんようび",
       "romaji": "nan youbi",
-      "pos": "Noun (interrogative)",
+      "pos": "interrogative",
       "meaning": "what day of the week",
       "exampleJp": "きょうは何曜日ですか。",
       "exampleEn": "What day of the week is it today?"
@@ -1511,7 +1525,7 @@
       "word": "大変ですね",
       "reading": "たいへんですね",
       "romaji": "taihen desu ne",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "That's tough, isn't it? (used to express sympathy)",
       "exampleJp": "毎日10時まで働きます。…大変ですね。",
       "exampleEn": "I work until ten every day. — That's tough, isn't it?"
@@ -1787,10 +1801,12 @@
       "word": "行きます",
       "reading": "いきます",
       "romaji": "ikimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "go",
       "exampleJp": "あした京都へ行きます。",
-      "exampleEn": "I will go to Kyoto tomorrow."
+      "exampleEn": "I will go to Kyoto tomorrow.",
+      "lemma": "行く",
+      "lemmaReading": "いく"
     },
     {
       "uid": "n5-vocab-5-2",
@@ -1800,10 +1816,12 @@
       "word": "来ます",
       "reading": "きます",
       "romaji": "kimasu",
-      "pos": "Verb (Group III)",
+      "pos": "verb-irregular",
       "meaning": "come",
       "exampleJp": "日本へ来ました。",
-      "exampleEn": "I came to Japan."
+      "exampleEn": "I came to Japan.",
+      "lemma": "来る",
+      "lemmaReading": "くる"
     },
     {
       "uid": "n5-vocab-5-3",
@@ -1813,10 +1831,12 @@
       "word": "帰ります",
       "reading": "かえります",
       "romaji": "kaerimasu",
-      "pos": "Verb (Group I)",
+      "pos": "verb-godan",
       "meaning": "go home, return",
       "exampleJp": "うちへ帰ります。",
-      "exampleEn": "I will go home."
+      "exampleEn": "I will go home.",
+      "lemma": "帰る",
+      "lemmaReading": "かえる"
     },
     {
       "uid": "n5-vocab-5-4",
@@ -1826,7 +1846,7 @@
       "word": "駅",
       "reading": "えき",
       "romaji": "eki",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "station",
       "exampleJp": "駅から歩いて帰りました。",
       "exampleEn": "I walked home from the station."
@@ -1839,7 +1859,7 @@
       "word": "飛行機",
       "reading": "ひこうき",
       "romaji": "hikouki",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "airplane",
       "exampleJp": "飛行機で日本へ来ました。",
       "exampleEn": "I came to Japan by plane."
@@ -1852,7 +1872,7 @@
       "word": "電車",
       "reading": "でんしゃ",
       "romaji": "densha",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "electric train",
       "exampleJp": "電車で行きます。",
       "exampleEn": "I'll go by train."
@@ -1865,7 +1885,7 @@
       "word": "歩いて",
       "reading": "あるいて",
       "romaji": "aruite",
-      "pos": "Adverb (phrase)",
+      "pos": "adverb",
       "meaning": "on foot, by walking",
       "exampleJp": "駅まで歩いて行きます。",
       "exampleEn": "I'll walk to the station."
@@ -1878,7 +1898,7 @@
       "word": "一人で",
       "reading": "ひとりで",
       "romaji": "hitori de",
-      "pos": "Adverb (phrase)",
+      "pos": "adverb",
       "meaning": "alone, by oneself",
       "exampleJp": "一人で東京へ行きます。",
       "exampleEn": "I'll go to Tokyo alone."
@@ -1891,7 +1911,7 @@
       "word": "いつ",
       "reading": "いつ",
       "romaji": "itsu",
-      "pos": "Adverb (interrogative)",
+      "pos": "interrogative",
       "meaning": "when",
       "exampleJp": "いつ日本へ来ましたか。",
       "exampleEn": "When did you come to Japan?"
@@ -1904,7 +1924,7 @@
       "word": "誕生日",
       "reading": "たんじょうび",
       "romaji": "tanjoubi",
-      "pos": "Noun",
+      "pos": "noun",
       "meaning": "birthday",
       "exampleJp": "誕生日はいつですか。",
       "exampleEn": "When is your birthday?"
@@ -1917,7 +1937,7 @@
       "word": "どういたしまして",
       "reading": "どういたしまして",
       "romaji": "dou itashimashite",
-      "pos": "Expression",
+      "pos": "expression",
       "meaning": "You're welcome, don't mention it",
       "exampleJp": "ありがとうございます。…どういたしまして。",
       "exampleEn": "Thank you. — You're welcome."
@@ -2094,10 +2114,12 @@
       "word": "食べます",
       "reading": "たべます",
       "romaji": "tabemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "eat",
       "exampleJp": "朝ごはんを 食べます。",
-      "exampleEn": "I eat breakfast."
+      "exampleEn": "I eat breakfast.",
+      "lemma": "食べる",
+      "lemmaReading": "たべる"
     },
     {
       "uid": "n5-vocab-6-2",
@@ -2107,10 +2129,12 @@
       "word": "飲みます",
       "reading": "のみます",
       "romaji": "nomimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "drink",
       "exampleJp": "ジュースを 飲みます。",
-      "exampleEn": "I drink juice."
+      "exampleEn": "I drink juice.",
+      "lemma": "飲む",
+      "lemmaReading": "のむ"
     },
     {
       "uid": "n5-vocab-6-3",
@@ -2120,10 +2144,12 @@
       "word": "見ます",
       "reading": "みます",
       "romaji": "mimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "see, look at, watch",
       "exampleJp": "映画を 見ます。",
-      "exampleEn": "I watch a movie."
+      "exampleEn": "I watch a movie.",
+      "lemma": "見る",
+      "lemmaReading": "みる"
     },
     {
       "uid": "n5-vocab-6-4",
@@ -2133,10 +2159,12 @@
       "word": "読みます",
       "reading": "よみます",
       "romaji": "yomimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "read",
       "exampleJp": "新聞を 読みます。",
-      "exampleEn": "I read the newspaper."
+      "exampleEn": "I read the newspaper.",
+      "lemma": "読む",
+      "lemmaReading": "よむ"
     },
     {
       "uid": "n5-vocab-6-5",
@@ -2146,10 +2174,12 @@
       "word": "書きます",
       "reading": "かきます",
       "romaji": "kakimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "write, draw, paint",
       "exampleJp": "手紙を 書きます。",
-      "exampleEn": "I write a letter."
+      "exampleEn": "I write a letter.",
+      "lemma": "書く",
+      "lemmaReading": "かく"
     },
     {
       "uid": "n5-vocab-6-6",
@@ -2159,10 +2189,12 @@
       "word": "買います",
       "reading": "かいます",
       "romaji": "kaimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "buy",
       "exampleJp": "駅で 新聞を 買います。",
-      "exampleEn": "I buy the newspaper at the station."
+      "exampleEn": "I buy the newspaper at the station.",
+      "lemma": "買う",
+      "lemmaReading": "かう"
     },
     {
       "uid": "n5-vocab-6-7",
@@ -2172,10 +2204,12 @@
       "word": "撮ります",
       "reading": "とります",
       "romaji": "torimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "take [a photograph]",
       "exampleJp": "写真を 撮ります。",
-      "exampleEn": "I take a photograph."
+      "exampleEn": "I take a photograph.",
+      "lemma": "撮る",
+      "lemmaReading": "とる"
     },
     {
       "uid": "n5-vocab-6-8",
@@ -2185,10 +2219,12 @@
       "word": "会います",
       "reading": "あいます",
       "romaji": "aimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "meet [a friend]",
       "exampleJp": "友達に 会います。",
-      "exampleEn": "I meet a friend."
+      "exampleEn": "I meet a friend.",
+      "lemma": "会う",
+      "lemmaReading": "あう"
     },
     {
       "uid": "n5-vocab-6-9",
@@ -2414,10 +2450,12 @@
       "word": "送ります",
       "reading": "おくります",
       "romaji": "okurimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "send",
       "exampleJp": "手紙を 送ります。",
-      "exampleEn": "I send a letter."
+      "exampleEn": "I send a letter.",
+      "lemma": "送る",
+      "lemmaReading": "おくる"
     },
     {
       "uid": "n5-vocab-7-2",
@@ -2427,10 +2465,12 @@
       "word": "あげます",
       "reading": "あげます",
       "romaji": "agemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "give",
       "exampleJp": "木村さんに 花を あげます。",
-      "exampleEn": "I give flowers to Ms. Kimura."
+      "exampleEn": "I give flowers to Ms. Kimura.",
+      "lemma": "あげる",
+      "lemmaReading": "あげる"
     },
     {
       "uid": "n5-vocab-7-3",
@@ -2440,10 +2480,12 @@
       "word": "もらいます",
       "reading": "もらいます",
       "romaji": "moraimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "receive",
       "exampleJp": "山田さんに CDを もらいました。",
-      "exampleEn": "I received a CD from Mr. Yamada."
+      "exampleEn": "I received a CD from Mr. Yamada.",
+      "lemma": "もらう",
+      "lemmaReading": "もらう"
     },
     {
       "uid": "n5-vocab-7-4",
@@ -2453,10 +2495,12 @@
       "word": "貸します",
       "reading": "かします",
       "romaji": "kashimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "lend",
       "exampleJp": "友達に 本を 貸します。",
-      "exampleEn": "I lend a book to my friend."
+      "exampleEn": "I lend a book to my friend.",
+      "lemma": "貸す",
+      "lemmaReading": "かす"
     },
     {
       "uid": "n5-vocab-7-5",
@@ -2466,10 +2510,12 @@
       "word": "借ります",
       "reading": "かります",
       "romaji": "karimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "borrow",
       "exampleJp": "銀行から お金を 借ります。",
-      "exampleEn": "I borrow money from the bank."
+      "exampleEn": "I borrow money from the bank.",
+      "lemma": "借りる",
+      "lemmaReading": "かりる"
     },
     {
       "uid": "n5-vocab-7-6",
@@ -2479,10 +2525,12 @@
       "word": "教えます",
       "reading": "おしえます",
       "romaji": "oshiemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "teach",
       "exampleJp": "太郎君に 英語を 教えます。",
-      "exampleEn": "I teach Taro English."
+      "exampleEn": "I teach Taro English.",
+      "lemma": "教える",
+      "lemmaReading": "おしえる"
     },
     {
       "uid": "n5-vocab-7-7",
@@ -2492,10 +2540,12 @@
       "word": "習います",
       "reading": "ならいます",
       "romaji": "naraimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "learn",
       "exampleJp": "ワンさんに 中国語を 習います。",
-      "exampleEn": "I learn Chinese from Mr. Wang."
+      "exampleEn": "I learn Chinese from Mr. Wang.",
+      "lemma": "習う",
+      "lemmaReading": "ならう"
     },
     {
       "uid": "n5-vocab-7-8",
@@ -2505,10 +2555,12 @@
       "word": "かけます",
       "reading": "かけます",
       "romaji": "kakemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "make [a telephone call]",
       "exampleJp": "会社に 電話を かけます。",
-      "exampleEn": "I'll call my office."
+      "exampleEn": "I'll call my office.",
+      "lemma": "かける",
+      "lemmaReading": "かける"
     },
     {
       "uid": "n5-vocab-7-9",
@@ -2893,7 +2945,7 @@
       "word": "きれい[な]",
       "reading": "きれい[な]",
       "romaji": "kirei[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "beautiful, clean",
       "exampleJp": "琵琶湖の 水は きれいですか。",
       "exampleEn": "Is the water of Lake Biwa clean?"
@@ -2906,7 +2958,7 @@
       "word": "親切[な]",
       "reading": "しんせつ[な]",
       "romaji": "shinsetsu[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "kind",
       "exampleJp": "ワット先生は 親切です。",
       "exampleEn": "Mr. Watt is kind."
@@ -2919,7 +2971,7 @@
       "word": "有名[な]",
       "reading": "ゆうめい[な]",
       "romaji": "yuumei[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "famous",
       "exampleJp": "これは とても 有名な 映画です。",
       "exampleEn": "This is a very famous movie."
@@ -2932,7 +2984,7 @@
       "word": "便利[な]",
       "reading": "べんり[な]",
       "romaji": "benri[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "convenient",
       "exampleJp": "東京の 地下鉄は 便利です。",
       "exampleEn": "The subway in Tokyo is convenient."
@@ -2945,7 +2997,7 @@
       "word": "大きい",
       "reading": "おおきい",
       "romaji": "ookii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "big, large",
       "exampleJp": "富士山は 大きい 山です。",
       "exampleEn": "Mt. Fuji is a big mountain."
@@ -2958,7 +3010,7 @@
       "word": "新しい",
       "reading": "あたらしい",
       "romaji": "atarashii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "new",
       "exampleJp": "新しい 車を 買いました。",
       "exampleEn": "I bought a new car."
@@ -2971,7 +3023,7 @@
       "word": "高い",
       "reading": "たかい",
       "romaji": "takai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "expensive, tall, high",
       "exampleJp": "日本の 食べ物は おいしいですが、高いです。",
       "exampleEn": "Japanese food is good, but expensive."
@@ -2984,7 +3036,7 @@
       "word": "難しい",
       "reading": "むずかしい",
       "romaji": "muzukashii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "difficult",
       "exampleJp": "この 試験は 難しいです。",
       "exampleEn": "This exam is difficult."
@@ -2997,7 +3049,7 @@
       "word": "忙しい",
       "reading": "いそがしい",
       "romaji": "isogashii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "busy",
       "exampleJp": "仕事は 忙しいですが、おもしろいです。",
       "exampleEn": "Work is busy, but interesting."
@@ -3010,7 +3062,7 @@
       "word": "おいしい",
       "reading": "おいしい",
       "romaji": "oishii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "delicious, tasty",
       "exampleJp": "この 料理は おいしいです。",
       "exampleEn": "This dish is delicious."
@@ -3204,10 +3256,12 @@
       "word": "わかります",
       "reading": "わかります",
       "romaji": "wakarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "understand",
       "exampleJp": "日本語が わかります。",
-      "exampleEn": "I understand Japanese."
+      "exampleEn": "I understand Japanese.",
+      "lemma": "わかる",
+      "lemmaReading": "わかる"
     },
     {
       "uid": "n5-vocab-9-2",
@@ -3217,10 +3271,12 @@
       "word": "あります",
       "reading": "あります",
       "romaji": "arimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "have",
       "exampleJp": "車が あります。",
-      "exampleEn": "I have a car."
+      "exampleEn": "I have a car.",
+      "lemma": "ある",
+      "lemmaReading": "ある"
     },
     {
       "uid": "n5-vocab-9-3",
@@ -3230,7 +3286,7 @@
       "word": "好き[な]",
       "reading": "すき[な]",
       "romaji": "suki[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "like",
       "exampleJp": "イタリア料理が 好きです。",
       "exampleEn": "I like Italian food."
@@ -3243,7 +3299,7 @@
       "word": "嫌い[な]",
       "reading": "きらい[な]",
       "romaji": "kirai[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "dislike",
       "exampleJp": "お酒が 嫌いです。",
       "exampleEn": "I dislike alcohol."
@@ -3256,7 +3312,7 @@
       "word": "上手[な]",
       "reading": "じょうず[な]",
       "romaji": "jouzu[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "good at",
       "exampleJp": "カリナさんは 絵が 上手です。",
       "exampleEn": "Ms. Karina is good at drawing pictures."
@@ -3269,7 +3325,7 @@
       "word": "下手[な]",
       "reading": "へた[な]",
       "romaji": "heta[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "poor at",
       "exampleJp": "わたしは 料理が 下手です。",
       "exampleEn": "I'm poor at cooking."
@@ -3511,10 +3567,12 @@
       "word": "います",
       "reading": "います",
       "romaji": "imasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "exist, be (animate things)",
       "exampleJp": "事務所に ミラーさんが います。",
-      "exampleEn": "Mr. Miller is in the office."
+      "exampleEn": "Mr. Miller is in the office.",
+      "lemma": "いる",
+      "lemmaReading": "いる"
     },
     {
       "uid": "n5-vocab-10-2",
@@ -3524,7 +3582,7 @@
       "word": "いろいろ[な]",
       "reading": "いろいろ[な]",
       "romaji": "iroiro[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "various",
       "exampleJp": "箱の 中に いろいろな 物が あります。",
       "exampleEn": "There are various things in the box."
@@ -3818,10 +3876,12 @@
       "word": "かかります",
       "reading": "かかります",
       "romaji": "kakarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "take (time or money)",
       "exampleJp": "大阪から 東京まで 2時間半 かかります。",
-      "exampleEn": "It takes two and a half hours from Osaka to Tokyo."
+      "exampleEn": "It takes two and a half hours from Osaka to Tokyo.",
+      "lemma": "かかる",
+      "lemmaReading": "かかる"
     },
     {
       "uid": "n5-vocab-11-2",
@@ -4113,7 +4173,7 @@
       "word": "近い／遠い",
       "reading": "ちかい／とおい",
       "romaji": "chikai / tooi",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "near / far",
       "exampleJp": "駅は 近いですが、銀行は 遠いです。",
       "exampleEn": "The station is near, but the bank is far."
@@ -4126,7 +4186,7 @@
       "word": "多い／少ない",
       "reading": "おおい／すくない",
       "romaji": "ooi / sukunai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "many [people] / few [people]",
       "exampleJp": "東京は 人が 多いです。",
       "exampleEn": "There are many people in Tokyo."
@@ -4139,7 +4199,7 @@
       "word": "暖かい／涼しい",
       "reading": "あたたかい／すずしい",
       "romaji": "atatakai / suzushii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "warm / cool",
       "exampleJp": "北海道と 大阪と どちらが 涼しいですか。",
       "exampleEn": "Which is cooler, Hokkaido or Osaka?"
@@ -4152,7 +4212,7 @@
       "word": "重い／軽い",
       "reading": "おもい／かるい",
       "romaji": "omoi / karui",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "heavy / light",
       "exampleJp": "この 荷物は 重いです。",
       "exampleEn": "This baggage is heavy."
@@ -4416,10 +4476,12 @@
       "word": "遊びます",
       "reading": "あそびます",
       "romaji": "asobimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "enjoy oneself, play",
       "exampleJp": "公園で 遊びます。",
-      "exampleEn": "I play in the park."
+      "exampleEn": "I play in the park.",
+      "lemma": "遊ぶ",
+      "lemmaReading": "あそぶ"
     },
     {
       "uid": "n5-vocab-13-2",
@@ -4429,10 +4491,12 @@
       "word": "疲れます",
       "reading": "つかれます",
       "romaji": "tsukaremasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "get tired",
       "exampleJp": "今日は 疲れました。",
-      "exampleEn": "I got tired today."
+      "exampleEn": "I got tired today.",
+      "lemma": "疲れる",
+      "lemmaReading": "つかれる"
     },
     {
       "uid": "n5-vocab-13-3",
@@ -4442,10 +4506,12 @@
       "word": "入ります／出ます",
       "reading": "はいります／でます",
       "romaji": "hairimasu / demasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-ichidan",
       "meaning": "enter / go out [of a coffee shop]",
       "exampleJp": "あの 喫茶店に 入りましょう。",
-      "exampleEn": "Let's go in that coffee shop."
+      "exampleEn": "Let's go in that coffee shop.",
+      "lemma": "入る／出る",
+      "lemmaReading": "はいる／でる"
     },
     {
       "uid": "n5-vocab-13-4",
@@ -4455,10 +4521,12 @@
       "word": "結婚します",
       "reading": "けっこんします",
       "romaji": "kekkon shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "marry, get married",
       "exampleJp": "来年 結婚します。",
-      "exampleEn": "I'll get married next year."
+      "exampleEn": "I'll get married next year.",
+      "lemma": "結婚する",
+      "lemmaReading": "けっこんする"
     },
     {
       "uid": "n5-vocab-13-5",
@@ -4468,10 +4536,12 @@
       "word": "散歩します",
       "reading": "さんぽします",
       "romaji": "sanpo shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "take a walk [in a park]",
       "exampleJp": "公園を 散歩します。",
-      "exampleEn": "I take a walk in the park."
+      "exampleEn": "I take a walk in the park.",
+      "lemma": "散歩する",
+      "lemmaReading": "さんぽする"
     },
     {
       "uid": "n5-vocab-13-6",
@@ -4481,7 +4551,7 @@
       "word": "欲しい",
       "reading": "ほしい",
       "romaji": "hoshii",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "want (something)",
       "exampleJp": "今 何が いちばん 欲しいですか。",
       "exampleEn": "What do you want most now?"
@@ -4494,7 +4564,7 @@
       "word": "広い／狭い",
       "reading": "ひろい／せまい",
       "romaji": "hiroi / semai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "wide, spacious / narrow, small (room)",
       "exampleJp": "わたしの 部屋は 狭いです。",
       "exampleEn": "My room is small."
@@ -4719,10 +4789,12 @@
       "word": "つけます／消します",
       "reading": "つけます／けします",
       "romaji": "tsukemasu / keshimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan / verb-godan",
       "meaning": "turn on / turn off",
       "exampleJp": "エアコンを つけて ください。",
-      "exampleEn": "Please turn on the air conditioner."
+      "exampleEn": "Please turn on the air conditioner.",
+      "lemma": "つける／消す",
+      "lemmaReading": "つける／けす"
     },
     {
       "uid": "n5-vocab-14-2",
@@ -4732,10 +4804,12 @@
       "word": "開けます／閉めます",
       "reading": "あけます／しめます",
       "romaji": "akemasu / shimemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "open / close, shut",
       "exampleJp": "窓を 開けましょうか。",
-      "exampleEn": "Shall I open the window?"
+      "exampleEn": "Shall I open the window?",
+      "lemma": "開ける／閉める",
+      "lemmaReading": "あける／しめる"
     },
     {
       "uid": "n5-vocab-14-3",
@@ -4745,10 +4819,12 @@
       "word": "急ぎます",
       "reading": "いそぎます",
       "romaji": "isogimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "hurry",
       "exampleJp": "急いで ください。",
-      "exampleEn": "Please hurry."
+      "exampleEn": "Please hurry.",
+      "lemma": "急ぐ",
+      "lemmaReading": "いそぐ"
     },
     {
       "uid": "n5-vocab-14-4",
@@ -4758,10 +4834,12 @@
       "word": "待ちます",
       "reading": "まちます",
       "romaji": "machimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "wait",
       "exampleJp": "少々 お待ちください。",
-      "exampleEn": "Please wait a moment."
+      "exampleEn": "Please wait a moment.",
+      "lemma": "待つ",
+      "lemmaReading": "まつ"
     },
     {
       "uid": "n5-vocab-14-5",
@@ -4771,10 +4849,12 @@
       "word": "曲がります",
       "reading": "まがります",
       "romaji": "magarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "turn [to the right]",
       "exampleJp": "信号を 右へ 曲がって ください。",
-      "exampleEn": "Turn to the right at the signal."
+      "exampleEn": "Turn to the right at the signal.",
+      "lemma": "曲がる",
+      "lemmaReading": "まがる"
     },
     {
       "uid": "n5-vocab-14-6",
@@ -4784,10 +4864,12 @@
       "word": "手伝います",
       "reading": "てつだいます",
       "romaji": "tetsudaimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "help (with a task)",
       "exampleJp": "仕事を 手伝って ください。",
-      "exampleEn": "Please help me with my work."
+      "exampleEn": "Please help me with my work.",
+      "lemma": "手伝う",
+      "lemmaReading": "てつだう"
     },
     {
       "uid": "n5-vocab-14-7",
@@ -4797,10 +4879,12 @@
       "word": "話します",
       "reading": "はなします",
       "romaji": "hanashimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "speak, talk",
       "exampleJp": "ミラーさんは 松本さんと 話して います。",
-      "exampleEn": "Mr. Miller is talking with Mr. Matsumoto."
+      "exampleEn": "Mr. Miller is talking with Mr. Matsumoto.",
+      "lemma": "話す",
+      "lemmaReading": "はなす"
     },
     {
       "uid": "n5-vocab-14-8",
@@ -4810,10 +4894,12 @@
       "word": "見せます",
       "reading": "みせます",
       "romaji": "misemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "show",
       "exampleJp": "そのシャツを 見せて ください。",
-      "exampleEn": "Please show me that shirt."
+      "exampleEn": "Please show me that shirt.",
+      "lemma": "見せる",
+      "lemmaReading": "みせる"
     },
     {
       "uid": "n5-vocab-14-9",
@@ -5030,10 +5116,12 @@
       "word": "使います",
       "reading": "つかいます",
       "romaji": "tsukaimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "use",
       "exampleJp": "辞書を 使っても いいですか。",
-      "exampleEn": "May I use the dictionary?"
+      "exampleEn": "May I use the dictionary?",
+      "lemma": "使う",
+      "lemmaReading": "つかう"
     },
     {
       "uid": "n5-vocab-15-2",
@@ -5043,10 +5131,12 @@
       "word": "作ります",
       "reading": "つくります",
       "romaji": "tsukurimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "make, produce",
       "exampleJp": "IMCは コンピューターソフトを 作って います。",
-      "exampleEn": "IMC makes computer software."
+      "exampleEn": "IMC makes computer software.",
+      "lemma": "作る",
+      "lemmaReading": "つくる"
     },
     {
       "uid": "n5-vocab-15-3",
@@ -5056,10 +5146,12 @@
       "word": "売ります",
       "reading": "うります",
       "romaji": "urimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "sell",
       "exampleJp": "スーパーで フィルムを 売って います。",
-      "exampleEn": "Supermarkets sell films."
+      "exampleEn": "Supermarkets sell films.",
+      "lemma": "売る",
+      "lemmaReading": "うる"
     },
     {
       "uid": "n5-vocab-15-4",
@@ -5069,10 +5161,12 @@
       "word": "知ります／知っています",
       "reading": "しります／しって います",
       "romaji": "shirimasu / shitte imasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-ichidan",
       "meaning": "get to know / know",
       "exampleJp": "田中さんを 知って いますか。…いいえ、知りません。",
-      "exampleEn": "Do you know Mr. Tanaka? …No, I don't."
+      "exampleEn": "Do you know Mr. Tanaka? …No, I don't.",
+      "lemma": "知る／知っている",
+      "lemmaReading": "しる／しっている"
     },
     {
       "uid": "n5-vocab-15-5",
@@ -5082,10 +5176,12 @@
       "word": "住んでいます",
       "reading": "すんで います",
       "romaji": "sunde imasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "live [in Osaka]",
       "exampleJp": "大阪に 住んで います。",
-      "exampleEn": "I live in Osaka."
+      "exampleEn": "I live in Osaka.",
+      "lemma": "住んでいる",
+      "lemmaReading": "すんでいる"
     },
     {
       "uid": "n5-vocab-15-6",
@@ -5095,10 +5191,12 @@
       "word": "研究します",
       "reading": "けんきゅうします",
       "romaji": "kenkyuu shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "do research",
       "exampleJp": "大学で 経済を 研究して います。",
-      "exampleEn": "I do research on economics at university."
+      "exampleEn": "I do research on economics at university.",
+      "lemma": "研究する",
+      "lemmaReading": "けんきゅうする"
     },
     {
       "uid": "n5-vocab-15-7",
@@ -5338,10 +5436,12 @@
       "word": "乗ります／降ります",
       "reading": "のります／おります",
       "romaji": "norimasu / orimasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-ichidan",
       "meaning": "ride, get on [a train] / get off [a train]",
       "exampleJp": "京都駅から バスに 乗って、大学前で 降ります。",
-      "exampleEn": "I take a bus from Kyoto Station and get off at Daigaku-mae."
+      "exampleEn": "I take a bus from Kyoto Station and get off at Daigaku-mae.",
+      "lemma": "乗る／降りる",
+      "lemmaReading": "のる／おりる"
     },
     {
       "uid": "n5-vocab-16-2",
@@ -5351,10 +5451,12 @@
       "word": "乗り換えます",
       "reading": "のりかえます",
       "romaji": "norikaemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "change (trains, etc.)",
       "exampleJp": "京都駅で 乗り換えます。",
-      "exampleEn": "I change trains at Kyoto Station."
+      "exampleEn": "I change trains at Kyoto Station.",
+      "lemma": "乗り換える",
+      "lemmaReading": "のりかえる"
     },
     {
       "uid": "n5-vocab-16-3",
@@ -5364,10 +5466,12 @@
       "word": "入れます／出します",
       "reading": "いれます／だします",
       "romaji": "iremasu / dashimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan / verb-godan",
       "meaning": "put in, insert / take out, withdraw",
       "exampleJp": "カードを 入れて、暗証番号を 入れます。",
-      "exampleEn": "Insert the card and enter the code number."
+      "exampleEn": "Insert the card and enter the code number.",
+      "lemma": "入れる／出す",
+      "lemmaReading": "いれる／だす"
     },
     {
       "uid": "n5-vocab-16-4",
@@ -5377,7 +5481,7 @@
       "word": "若い",
       "reading": "わかい",
       "romaji": "wakai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "young",
       "exampleJp": "ミラーさんは 若くて、元気です。",
       "exampleEn": "Mr. Miller is young and lively."
@@ -5637,10 +5741,12 @@
       "word": "忘れます",
       "reading": "わすれます",
       "romaji": "wasuremasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "forget",
       "exampleJp": "約束を 忘れました。",
-      "exampleEn": "I forgot the appointment."
+      "exampleEn": "I forgot the appointment.",
+      "lemma": "忘れる",
+      "lemmaReading": "わすれる"
     },
     {
       "uid": "n5-vocab-17-2",
@@ -5650,10 +5756,12 @@
       "word": "払います",
       "reading": "はらいます",
       "romaji": "haraimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "pay",
       "exampleJp": "カードで 払っても いいですか。",
-      "exampleEn": "Can I pay by credit card?"
+      "exampleEn": "Can I pay by credit card?",
+      "lemma": "払う",
+      "lemmaReading": "はらう"
     },
     {
       "uid": "n5-vocab-17-3",
@@ -5663,10 +5771,12 @@
       "word": "返します",
       "reading": "かえします",
       "romaji": "kaeshimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "give back, return",
       "exampleJp": "土曜日までに 本を 返さなければ なりません。",
-      "exampleEn": "I must return the book by Saturday."
+      "exampleEn": "I must return the book by Saturday.",
+      "lemma": "返す",
+      "lemmaReading": "かえす"
     },
     {
       "uid": "n5-vocab-17-4",
@@ -5676,10 +5786,12 @@
       "word": "心配します",
       "reading": "しんぱいします",
       "romaji": "shinpai shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "worry",
       "exampleJp": "心配しないで ください。",
-      "exampleEn": "Please don't worry."
+      "exampleEn": "Please don't worry.",
+      "lemma": "心配する",
+      "lemmaReading": "しんぱいする"
     },
     {
       "uid": "n5-vocab-17-5",
@@ -5689,7 +5801,7 @@
       "word": "危ない",
       "reading": "あぶない",
       "romaji": "abunai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "dangerous",
       "exampleJp": "ここで 遊ぶのは 危ないです。",
       "exampleEn": "It's dangerous to play here."
@@ -5702,7 +5814,7 @@
       "word": "大丈夫[な]",
       "reading": "だいじょうぶ[な]",
       "romaji": "daijoubu[na]",
-      "pos": "な-adjective",
+      "pos": "na-adjective",
       "meaning": "all right",
       "exampleJp": "心配しないで ください。大丈夫です。",
       "exampleEn": "Please don't worry. It's all right."
@@ -5756,8 +5868,8 @@
       "romaji": "odaijini",
       "pos": "expression",
       "meaning": "Take care of yourself.",
-      "exampleJp": "お大事に。",
-      "exampleEn": "Take care of yourself."
+      "exampleJp": "かぜですか。どうぞ お大事に。",
+      "exampleEn": "A cold? Please take care of yourself."
     },
     {
       "uid": "n5-vocab-17-11",
@@ -5949,10 +6061,12 @@
       "word": "できます",
       "reading": "できます",
       "romaji": "dekimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "be able to, can",
       "exampleJp": "ミラーさんは 日本語が できます。",
-      "exampleEn": "Mr. Miller can speak Japanese."
+      "exampleEn": "Mr. Miller can speak Japanese.",
+      "lemma": "できる",
+      "lemmaReading": "できる"
     },
     {
       "uid": "n5-vocab-18-2",
@@ -5962,10 +6076,12 @@
       "word": "弾きます",
       "reading": "ひきます",
       "romaji": "hikimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "play (a stringed instrument or piano)",
       "exampleJp": "ピアノを 弾く ことが できます。",
-      "exampleEn": "I can play the piano."
+      "exampleEn": "I can play the piano.",
+      "lemma": "弾く",
+      "lemmaReading": "ひく"
     },
     {
       "uid": "n5-vocab-18-3",
@@ -5975,10 +6091,12 @@
       "word": "歌います",
       "reading": "うたいます",
       "romaji": "utaimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "sing",
       "exampleJp": "カラオケで 歌を 歌います。",
-      "exampleEn": "I sing songs at karaoke."
+      "exampleEn": "I sing songs at karaoke.",
+      "lemma": "歌う",
+      "lemmaReading": "うたう"
     },
     {
       "uid": "n5-vocab-18-4",
@@ -5988,10 +6106,12 @@
       "word": "集めます／捨てます",
       "reading": "あつめます／すてます",
       "romaji": "atsumemasu / sutemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "collect, gather / throw away",
       "exampleJp": "趣味は 古い 時計を 集める ことです。",
-      "exampleEn": "My hobby is collecting old clocks."
+      "exampleEn": "My hobby is collecting old clocks.",
+      "lemma": "集める／捨てる",
+      "lemmaReading": "あつめる／すてる"
     },
     {
       "uid": "n5-vocab-18-5",
@@ -6001,10 +6121,12 @@
       "word": "運転します",
       "reading": "うんてんします",
       "romaji": "unten shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "drive",
       "exampleJp": "車を 運転する ことが できますか。",
-      "exampleEn": "Can you drive a car?"
+      "exampleEn": "Can you drive a car?",
+      "lemma": "運転する",
+      "lemmaReading": "うんてんする"
     },
     {
       "uid": "n5-vocab-18-6",
@@ -6014,10 +6136,12 @@
       "word": "予約します",
       "reading": "よやくします",
       "romaji": "yoyaku shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "reserve, book",
       "exampleJp": "レストランを 予約します。",
-      "exampleEn": "I'll reserve a restaurant."
+      "exampleEn": "I'll reserve a restaurant.",
+      "lemma": "予約する",
+      "lemmaReading": "よやくする"
     },
     {
       "uid": "n5-vocab-18-7",
@@ -6256,10 +6380,12 @@
       "word": "登ります",
       "reading": "のぼります",
       "romaji": "noborimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "climb [a mountain]",
       "exampleJp": "富士山に 登った ことが あります。",
-      "exampleEn": "I have climbed Mt. Fuji."
+      "exampleEn": "I have climbed Mt. Fuji.",
+      "lemma": "登る",
+      "lemmaReading": "のぼる"
     },
     {
       "uid": "n5-vocab-19-2",
@@ -6269,10 +6395,12 @@
       "word": "泊まります",
       "reading": "とまります",
       "romaji": "tomarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "stay [at a hotel]",
       "exampleJp": "ホテルに 泊まります。",
-      "exampleEn": "I'll stay at a hotel."
+      "exampleEn": "I'll stay at a hotel.",
+      "lemma": "泊まる",
+      "lemmaReading": "とまる"
     },
     {
       "uid": "n5-vocab-19-3",
@@ -6282,10 +6410,12 @@
       "word": "掃除します／洗濯します",
       "reading": "そうじします／せんたくします",
       "romaji": "souji shimasu / sentaku shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "clean (a room) / wash (clothes)",
       "exampleJp": "休みの日は 掃除したり、洗濯したり します。",
-      "exampleEn": "On my days off I clean, do the laundry, and so on."
+      "exampleEn": "On my days off I clean, do the laundry, and so on.",
+      "lemma": "掃除する／洗濯する",
+      "lemmaReading": "そうじする／せんたくする"
     },
     {
       "uid": "n5-vocab-19-4",
@@ -6295,10 +6425,12 @@
       "word": "練習します",
       "reading": "れんしゅうします",
       "romaji": "renshuu shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "practice",
       "exampleJp": "毎日 日本語を 練習します。",
-      "exampleEn": "I practice Japanese every day."
+      "exampleEn": "I practice Japanese every day.",
+      "lemma": "練習する",
+      "lemmaReading": "れんしゅうする"
     },
     {
       "uid": "n5-vocab-19-5",
@@ -6308,10 +6440,12 @@
       "word": "なります",
       "reading": "なります",
       "romaji": "narimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "become",
       "exampleJp": "寒く なりましたね。",
-      "exampleEn": "It's got cold, hasn't it?"
+      "exampleEn": "It's got cold, hasn't it?",
+      "lemma": "なる",
+      "lemmaReading": "なる"
     },
     {
       "uid": "n5-vocab-19-6",
@@ -6321,7 +6455,7 @@
       "word": "眠い",
       "reading": "ねむい",
       "romaji": "nemui",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "sleepy",
       "exampleJp": "眠いですから、コーヒーを 飲みます。",
       "exampleEn": "I'm sleepy, so I'll drink coffee."
@@ -6334,7 +6468,7 @@
       "word": "強い／弱い",
       "reading": "つよい／よわい",
       "romaji": "tsuyoi / yowai",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "strong / weak",
       "exampleJp": "調子が いいですか、悪いですか。",
       "exampleEn": "Are you in good condition or bad condition?"
@@ -6559,10 +6693,12 @@
       "word": "要ります",
       "reading": "いります",
       "romaji": "irimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "need, require [a visa]",
       "exampleJp": "ビザが 要りますか。",
-      "exampleEn": "Do I need a visa?"
+      "exampleEn": "Do I need a visa?",
+      "lemma": "要る",
+      "lemmaReading": "いる"
     },
     {
       "uid": "n5-vocab-20-2",
@@ -6572,10 +6708,12 @@
       "word": "調べます",
       "reading": "しらべます",
       "romaji": "shirabemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "check, investigate",
       "exampleJp": "いろいろ 調べて、電話します。",
-      "exampleEn": "I will check up on various things and call you."
+      "exampleEn": "I will check up on various things and call you.",
+      "lemma": "調べる",
+      "lemmaReading": "しらべる"
     },
     {
       "uid": "n5-vocab-20-3",
@@ -6585,10 +6723,12 @@
       "word": "直します／修理します",
       "reading": "なおします／しゅうりします",
       "romaji": "naoshimasu / shuuri shimasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-irregular",
       "meaning": "repair, correct / repair",
       "exampleJp": "時計を 修理します。",
-      "exampleEn": "I'll repair the watch."
+      "exampleEn": "I'll repair the watch.",
+      "lemma": "直す／修理する",
+      "lemmaReading": "なおす／しゅうりする"
     },
     {
       "uid": "n5-vocab-20-4",
@@ -6871,10 +7011,12 @@
       "word": "勝ちます／負けます",
       "reading": "かちます／まけます",
       "romaji": "kachimasu / makemasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-ichidan",
       "meaning": "win / lose, be beaten",
       "exampleJp": "日本が 勝つと 思いますか。",
-      "exampleEn": "Do you think Japan will win?"
+      "exampleEn": "Do you think Japan will win?",
+      "lemma": "勝つ／負ける",
+      "lemmaReading": "かつ／まける"
     },
     {
       "uid": "n5-vocab-21-2",
@@ -6884,10 +7026,12 @@
       "word": "役に立ちます",
       "reading": "やくにたちます",
       "romaji": "yaku ni tachimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "be useful",
       "exampleJp": "この 辞書は 役に 立ちます。",
-      "exampleEn": "This dictionary is useful."
+      "exampleEn": "This dictionary is useful.",
+      "lemma": "役に立つ",
+      "lemmaReading": "やくにたつ"
     },
     {
       "uid": "n5-vocab-21-3",
@@ -6897,7 +7041,7 @@
       "word": "同じ",
       "reading": "おなじ",
       "romaji": "onaji",
-      "pos": "noun/adjective",
+      "pos": "na-adjective",
       "meaning": "the same",
       "exampleJp": "わたしも 同じ 意見です。",
       "exampleEn": "I have the same opinion."
@@ -6910,7 +7054,7 @@
       "word": "すごい",
       "reading": "すごい",
       "romaji": "sugoi",
-      "pos": "い-adjective",
+      "pos": "i-adjective",
       "meaning": "awful, great",
       "exampleJp": "すごいですね。",
       "exampleEn": "That's amazing, isn't it."
@@ -7165,10 +7309,12 @@
       "word": "着ます",
       "reading": "きます",
       "romaji": "kimasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "put on [a shirt, etc.]",
       "exampleJp": "コートを 着ます。",
-      "exampleEn": "I put on a coat."
+      "exampleEn": "I put on a coat.",
+      "lemma": "着る",
+      "lemmaReading": "きる"
     },
     {
       "uid": "n5-vocab-22-2",
@@ -7178,10 +7324,12 @@
       "word": "はきます",
       "reading": "はきます",
       "romaji": "hakimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "put on [shoes, trousers, etc.]",
       "exampleJp": "靴を はきます。",
-      "exampleEn": "I put on shoes."
+      "exampleEn": "I put on shoes.",
+      "lemma": "はく",
+      "lemmaReading": "はく"
     },
     {
       "uid": "n5-vocab-22-3",
@@ -7191,10 +7339,12 @@
       "word": "かぶります",
       "reading": "かぶります",
       "romaji": "kaburimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "put on [a hat, etc.]",
       "exampleJp": "帽子を かぶります。",
-      "exampleEn": "I put on a hat."
+      "exampleEn": "I put on a hat.",
+      "lemma": "かぶる",
+      "lemmaReading": "かぶる"
     },
     {
       "uid": "n5-vocab-22-4",
@@ -7204,10 +7354,12 @@
       "word": "かけます",
       "reading": "かけます",
       "romaji": "kakemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "put on [glasses]",
       "exampleJp": "眼鏡を かけます。",
-      "exampleEn": "I put on glasses."
+      "exampleEn": "I put on glasses.",
+      "lemma": "かける",
+      "lemmaReading": "かける"
     },
     {
       "uid": "n5-vocab-22-5",
@@ -7217,10 +7369,12 @@
       "word": "生まれます",
       "reading": "うまれます",
       "romaji": "umaremasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "be born",
       "exampleJp": "彼が 生まれた 所を 知って いますか。",
-      "exampleEn": "Do you know the place where he was born?"
+      "exampleEn": "Do you know the place where he was born?",
+      "lemma": "生まれる",
+      "lemmaReading": "うまれる"
     },
     {
       "uid": "n5-vocab-22-6",
@@ -7468,10 +7622,12 @@
       "word": "回します",
       "reading": "まわします",
       "romaji": "mawashimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "turn",
       "exampleJp": "これを 回すと、音が 大きく なります。",
-      "exampleEn": "Turn this, and the volume will go up."
+      "exampleEn": "Turn this, and the volume will go up.",
+      "lemma": "回す",
+      "lemmaReading": "まわす"
     },
     {
       "uid": "n5-vocab-23-2",
@@ -7481,10 +7637,12 @@
       "word": "引きます",
       "reading": "ひきます",
       "romaji": "hikimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "pull",
       "exampleJp": "このドアを 引いて ください。",
-      "exampleEn": "Please pull this door."
+      "exampleEn": "Please pull this door.",
+      "lemma": "引く",
+      "lemmaReading": "ひく"
     },
     {
       "uid": "n5-vocab-23-3",
@@ -7494,10 +7652,12 @@
       "word": "変えます",
       "reading": "かえます",
       "romaji": "kaemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "change",
       "exampleJp": "お金を 円に 変えます。",
-      "exampleEn": "I change money into yen."
+      "exampleEn": "I change money into yen.",
+      "lemma": "変える",
+      "lemmaReading": "かえる"
     },
     {
       "uid": "n5-vocab-23-4",
@@ -7507,10 +7667,12 @@
       "word": "動きます",
       "reading": "うごきます",
       "romaji": "ugokimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "[a watch] move, work",
       "exampleJp": "時計が 動きません。",
-      "exampleEn": "The watch doesn't work."
+      "exampleEn": "The watch doesn't work.",
+      "lemma": "動く",
+      "lemmaReading": "うごく"
     },
     {
       "uid": "n5-vocab-23-5",
@@ -7520,10 +7682,12 @@
       "word": "渡ります",
       "reading": "わたります",
       "romaji": "watarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "cross [a bridge]",
       "exampleJp": "道を 渡ります。",
-      "exampleEn": "I cross the road."
+      "exampleEn": "I cross the road.",
+      "lemma": "渡る",
+      "lemmaReading": "わたる"
     },
     {
       "uid": "n5-vocab-23-6",
@@ -7533,10 +7697,12 @@
       "word": "気を つけます",
       "reading": "きを つけます",
       "romaji": "ki wo tsukemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "pay attention [to cars], take care",
       "exampleJp": "車に 気を つけて ください。",
-      "exampleEn": "Please watch out for cars."
+      "exampleEn": "Please watch out for cars.",
+      "lemma": "気をつける",
+      "lemmaReading": "きをつける"
     },
     {
       "uid": "n5-vocab-23-7",
@@ -7762,10 +7928,12 @@
       "word": "くれます",
       "reading": "くれます",
       "romaji": "kuremasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "give (me)",
       "exampleJp": "佐藤さんは わたしに 花を くれました。",
-      "exampleEn": "Ms. Sato gave me flowers."
+      "exampleEn": "Ms. Sato gave me flowers.",
+      "lemma": "くれる",
+      "lemmaReading": "くれる"
     },
     {
       "uid": "n5-vocab-24-2",
@@ -7775,10 +7943,12 @@
       "word": "連れて 行きます／連れて 来ます",
       "reading": "つれて いきます／つれて きます",
       "romaji": "tsurete ikimasu / tsurete kimasu",
-      "pos": "verb",
+      "pos": "verb-godan / verb-irregular",
       "meaning": "take (someone) / bring (someone)",
       "exampleJp": "子どもを 動物園へ 連れて 行きます。",
-      "exampleEn": "I'll take my child to the zoo."
+      "exampleEn": "I'll take my child to the zoo.",
+      "lemma": "連れて行く／連れて来る",
+      "lemmaReading": "つれていく／つれてくる"
     },
     {
       "uid": "n5-vocab-24-3",
@@ -7788,10 +7958,12 @@
       "word": "紹介します",
       "reading": "しょうかいします",
       "romaji": "shoukai shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "introduce",
       "exampleJp": "友達を 紹介します。",
-      "exampleEn": "I'll introduce my friend."
+      "exampleEn": "I'll introduce my friend.",
+      "lemma": "紹介する",
+      "lemmaReading": "しょうかいする"
     },
     {
       "uid": "n5-vocab-24-4",
@@ -7801,10 +7973,12 @@
       "word": "案内します／説明します",
       "reading": "あんないします／せつめいします",
       "romaji": "annai shimasu / setsumei shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "show around / explain",
       "exampleJp": "京都を 案内します。",
-      "exampleEn": "I'll show you around Kyoto."
+      "exampleEn": "I'll show you around Kyoto.",
+      "lemma": "案内する／説明する",
+      "lemmaReading": "あんないする／せつめいする"
     },
     {
       "uid": "n5-vocab-24-5",
@@ -8052,10 +8226,12 @@
       "word": "考えます",
       "reading": "かんがえます",
       "romaji": "kangaemasu",
-      "pos": "verb",
+      "pos": "verb-ichidan",
       "meaning": "think, consider",
       "exampleJp": "いくら 考えても、わかりません。",
-      "exampleEn": "No matter how much I think, I can't understand this."
+      "exampleEn": "No matter how much I think, I can't understand this.",
+      "lemma": "考える",
+      "lemmaReading": "かんがえる"
     },
     {
       "uid": "n5-vocab-25-2",
@@ -8065,10 +8241,12 @@
       "word": "着きます",
       "reading": "つきます",
       "romaji": "tsukimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "arrive [at the station]",
       "exampleJp": "駅に 着いたら、電話します。",
-      "exampleEn": "I'll call you when I arrive at the station."
+      "exampleEn": "I'll call you when I arrive at the station.",
+      "lemma": "着く",
+      "lemmaReading": "つく"
     },
     {
       "uid": "n5-vocab-25-3",
@@ -8078,10 +8256,12 @@
       "word": "留学します",
       "reading": "りゅうがくします",
       "romaji": "ryuugaku shimasu",
-      "pos": "verb",
+      "pos": "verb-irregular",
       "meaning": "study abroad",
       "exampleJp": "アメリカへ 留学したいです。",
-      "exampleEn": "I want to study abroad in America."
+      "exampleEn": "I want to study abroad in America.",
+      "lemma": "留学する",
+      "lemmaReading": "りゅうがくする"
     },
     {
       "uid": "n5-vocab-25-4",
@@ -8156,10 +8336,12 @@
       "word": "頑張ります",
       "reading": "がんばります",
       "romaji": "ganbarimasu",
-      "pos": "verb",
+      "pos": "verb-godan",
       "meaning": "do one's best",
       "exampleJp": "頑張ります。",
-      "exampleEn": "I'll do my best."
+      "exampleEn": "I'll do my best.",
+      "lemma": "頑張る",
+      "lemmaReading": "がんばる"
     },
     {
       "uid": "n5-vocab-25-10",
