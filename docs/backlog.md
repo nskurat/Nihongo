@@ -1,164 +1,168 @@
-# Findings
+# Backlog
 
-Out-of-scope observations noticed while running a phase. One line each: what, where,
-why it matters. Do not fix these in-phase — that is what this file is for.
+The one tracker for open work: what is left to build, known issues, deferred ideas. When
+something is done, delete it here; the PR carries the record. Finished refactor phases
+(0–5, 7) and their specs live in git history (`git log -- docs/refactor/`).
 
-Content warnings emitted by `npm run validate:data` are appended here automatically.
+Anything out of scope that you notice while working goes here as a short entry: what, where,
+why it matters.
 
-## Open
+## 1. Flashcards and quizzes (next feature, formerly Phase 6)
 
-### Content (need real data, not code changes)
+**Design first, not an execution spec.** Write the spec (tasks, acceptance, deviations)
+before building. Every earlier phase exists to make this cheap: `uid` gives review state
+something to hang on, the content repository gives decks a query surface, the test harness
+makes a scheduler safe to change, `Modal`/`SectionLayout` give a quiz somewhere to render.
 
-- `src/data/n4/kanji.json`, `src/data/n5/kanji.json` — levels don't match Waller's lists
-  (the N5 file holds 122 N4-list kanji, the N4 file 169 N3-list and 85 N2/N1-list kanji).
-  Kept as-is on purpose: moving items would renumber lessons people have studied.
-- `src/data/n3/kanji.json` — 77 kanji kept from the textbook lessons are N2/N1 on
-  Waller's lists (printed by `scripts/review-n3-kanji-vocab.ts`); kept for lesson context.
-- `src/data/n4/kanji.json` — 150 `compounds[]` entries have a literal `null` for
-  `reading` and/or `meaning` instead of a string (found by Phase 1's content
-  validator). Code is safe since Phase 2b (`KanjiCompound` fields typed nullable, card
-  shows `—`, mnemonic prompt skips them) but the rows need real content. Full list in
-  the auto-generated section below.
+Shape being aimed at:
 
-### Search (found building the global search index, `docs/search/04-data.md` §7)
+- `services/progress/` — same adapter shape as `readingStorage`: `recordReview(uid, grade)`,
+  `getDue(scope)`, `getStats()`. localStorage now, database later, no caller changes.
+- `srs.ts` — scheduling as a pure, unit-tested module with no React and no storage.
+- A deck is a *query* over `ContentSource` (one lesson, a level, a tag facet, everything
+  due), so flashcards need no new content. (`StaticContentSource.search` is kept for this.)
+- One `Question` type with several producers — vocab meaning, kanji reading, grammar
+  cloze, and the existing AI reading comprehension as one producer among them. A shared
+  `QuizRunner` renders all of them.
+- Routes `/:level/flashcards/:deck` and `/:level/quiz/:mode`, so sessions are linkable
+  and resumable, with `React.lazy` per section route.
+- New pages and dialogs get cases in `src/__tests__/a11y.test.tsx`; the bundle budget
+  (`scripts/lib/bundleBudget.ts`) still has to pass.
 
-- `src/data/{n5,n3}/vocab.json` — 206 rows carry brackets inside `reading` (`[お]はなみ`,
-  `きれい[な]`, `かける [迷惑を〜]`) while others store a clean reading (`迷う [道に〜]` →
-  `まよう`). The index builder strips both, so search is unaffected; a later script could
-  make `reading` mirror the word's annotations consistently.
-- `src/data/{n5,n4}/vocab.json` — `pos` exists only on N5/N4 (559 rows) in 30+ spellings
-  (`verb` ×83 with no group). ます → dictionary-form lemmas are inferred at build time
-  instead; the derived table (240 rows) is written to
-  `src/generated/search/search-index-report.tsv` for teacher review before a v2 migration
-  adds a closed `pos` enum + `lemma`.
-- `src/data/n5/kanji.json` — some N5 kun readings are still bare prefix/counter forms
-  (日 か, 一 ひと, 小 お, 真 ま, 千 ち). Real readings, kept on purpose by
-  `scripts/fix-search-data.ts`; a fuller KANJIDIC refresh could add `ひと・つ` etc.
-- Kana-only queries for verbs reach every homophone in the data (かえって → 帰る, 変える,
-  替える, 換える, 代える, 反る, 返る), so a literal prefix hit such as かえって来ます can
-  sit behind "Show all". Without reliable `pos` the godan/ichidan te-form difference
-  cannot be used to prune; the v2 `pos` migration would allow it.
+Decisions to make before writing the spec:
 
-- Search fix round 2, deferred (P1-only ship):
-  - First search unthrottled desktop is ~0.94 s p75 (budget 0.5 s); Fast 4G + CPU×4 is 1.20 s (ものの) / 1.67 s (食べる) p75. Remaining cost is cold worker indexing; a precomputed key format or lazy per-level indexing would cut it.
-  - Teacher review F13 (radical filter), F16 content gaps (日本語, N5 greetings), F12 respelling 斯う/然る — not started.
-  - QA BUG-13 "Did you mean kan'i?" (`didYouMean`) and `CategoryChip.description` — not added.
-  - QA BUG-12 JMdict POS markers `(n) (a)` inside N1/N2 vocab meanings — content cleanup.
-  - `が`/`けど` in the "although" chip list are ranked by curated core keys in `aliases.ts`; the core table needs teacher sign-off.
-- Search UI, deferred (P1-only ship):
-  - QA BUG-10: warm keystroke → results p95 ~160–200 ms at CPU×4 (target 100 ms); remaining cost is layout/paint of the result list and the page re-render per URL change.
-  - QA BUG-17: lemma hits read "わかります → わかる · polite" rather than "→ 分かる (dictionary form)" — depends on the engine's `deinflection`/`via` payload.
-  - Mobile: the filter chip row is visually first but later in tab order.
-  - Teacher F14: duplicate rows such as 行く/ゆく are not collapsed into one result.
-  - Category view shows no description (needs `CategoryChip.description` in the contract).
-  - `sannen` (and similar n+vowel romaji) returns nothing when the word isn't in the data; no "did you mean" fallback.
-- Not yet re-run after the fix round: QA's full browser regression (T-01…T-47, a11y, perf at Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden queries were re-checked (2026-10-31).
+- Scheduling algorithm: SM-2 or FSRS-lite. Affects the progress record shape, so decide
+  before `services/progress/` is written.
+- Does a quiz session persist mid-run, or is it lost on refresh?
+- Do flashcards and quizzes share one progress record per uid, or separate streams?
+- Is any of this AI-generated on the fly, or all derived from existing content? (Cost and
+  offline behaviour both hinge on this.)
 
-### Code (found running Phase 2b, 2026-11-01)
-
-- `scripts/lib/searchDataFixes.ts` — the `n3-vocab-23-124` 言う reading fix is obsolete:
-  the 2026-11-01 cumulative-coverage run removed that 言う row, so the uid now names 行き and
-  `fix-search-data.ts` prints a harmless "skipped" line each run. Drop the entry (and its
-  test fixture) next time the table is touched.
-
-### Accessibility (found running Phase 7, 2026-11-01)
+## 2. Accessibility
 
 - **Search results listbox** — `features/search/ResultGroup.tsx` puts each group's `<h2>`
   inside `#search-results` (`role="listbox"`); ARIA allows only `group`/`option` there, so axe
   reports `aria-required-children` (critical). The layout is the one `docs/search/03-ux.md`
-  §3.2 specifies, so the fix is a search-UX decision (e.g. heading out of the listbox, or
+  §3.2 specifies, so the fix is a search-UX decision (heading out of the listbox, or
   `role="presentation"` on it and the group named by `aria-label`). `src/__tests__/a11y.test.tsx`
-  exempts that one rule on the search page until then; remove the exemption with the fix.
-- **Colour contrast is unchecked by the gate** — jsdom can't compute it. Measured from the
-  Tailwind palette: `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in
-  `GeneratorPanel.tsx` and the `SectionLayout.tsx` banner subtitle, and `text-indigo-200`
-  header copy and idle section tabs on `bg-indigo-600` (≈4.2:1). Not fixed: a palette change
-  across sections is a design decision, not a gate.
+  exempts that one rule on the search page; remove the exemption with the fix.
+- **Colour contrast** (the axe gate can't measure it in jsdom). From the Tailwind palette:
+  `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in `GeneratorPanel.tsx` and
+  the `SectionLayout.tsx` banner subtitle; `text-indigo-200` header copy and idle section tabs
+  on `bg-indigo-600` (≈4.2:1). A palette change across sections — a design decision.
+- **Manual pass not yet run** — the checklist in `docs/a11y.md` (screen reader, 200% zoom,
+  320 px, reduced motion) has not been walked end to end.
 
-### Backlog (deferred during the 2026-10-31/11-01 sessions)
+## 3. Search
 
-- **Vocab examples** — list-derived vocab rows (~5,000 across N5–N1, no `exampleJp`) have
-  word/reading/meaning only; the owner chose to fill example sentences later.
-- **Vocab near-repeats left in** — textbook pairs with differently worded glosses: チャンス
-  (N5/N3), 幸せ (N4/N3), めったに ×2 and しっかり ×2 (N3); ~25 N1 kanji spellings of lower
-  kana words whose glosses don't overlap (ふさわしい, よほど, みじめ…); 是非, 大した, 夕べ,
-  無くす appended in kanji beside a kana textbook row. Need a hand list (JMdict "usually kana"
-  data is not reachable from the sandbox).
-- **AI models** — live "Refresh models" in AI settings (PM P2 in `docs/ai-model-listing.md`;
-  the catalog only changes via `npm run update:models`); optionally a weekly GitHub Action that
-  runs it and opens a PR. OpenAI reasoning models still get a `system` message and
+- **Not re-run after the fix round**: QA's full browser regression (T-01…T-47, a11y, perf at
+  Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden
+  queries were re-checked (2026-10-31).
+- **Performance** — first search unthrottled desktop ~0.94 s p75 (budget 0.5 s); Fast 4G +
+  CPU×4 1.20 s (ものの) / 1.67 s (食べる) p75. The cost is cold worker indexing; a precomputed
+  key format or lazy per-level indexing would cut it. Warm keystroke → results p95
+  ~160–200 ms at CPU×4 (target 100 ms; QA BUG-10): layout/paint of the list and the page
+  re-render per URL change.
+- **Ranking** — kana-only verb queries reach every homophone (かえって → 帰る, 変える, 替える,
+  換える, 代える, 反る, 返る), so a literal prefix hit such as かえって来ます can sit behind
+  "Show all"; needs the `pos` migration (section 4) to prune by godan/ichidan te-form.
+  `が`/`けど` in the "although" chip are ranked by curated core keys in `aliases.ts`; the core
+  table needs teacher sign-off. Duplicate rows such as 行く/ゆく are not collapsed (teacher F14).
+- **Missing features** — "Did you mean kan'i?" (`didYouMean`, QA BUG-13; also `sannen`-style
+  n+vowel romaji returning nothing); `CategoryChip.description` so the category view can
+  show one; radical filter (teacher F13).
+- **Display** — lemma hits read "わかります → わかる · polite" rather than "→ 分かる (dictionary
+  form)" (QA BUG-17; depends on the engine's `deinflection`/`via` payload). Mobile: the
+  filter chip row is visually first but later in tab order.
+- **Content gaps found by the teacher** — F16 (日本語, N5 greetings), F12 respelling 斯う/然る.
+
+## 4. Content data
+
+Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
+
+- **N4 kanji compounds** — `n4/kanji.json` has `compounds[]` entries with a literal `null`
+  `reading` and/or `meaning` (full list in the last section). Code is safe (typed nullable, card
+  shows `—`, mnemonic prompt skips them) but the rows need real content.
+- **Vocab examples** — list-derived vocab rows (~5,000 across N5–N1) have no `exampleJp`;
+  the owner chose to fill example sentences later.
+- **Vocab `pos` + lemma (v2 migration)** — `pos` exists only on N5/N4 (559 rows) in 30+
+  spellings (`verb` ×83 with no group). ます → dictionary-form lemmas are inferred at build
+  time; the derived table (240 rows) is in `src/generated/search/search-index-report.tsv`
+  for teacher review before a migration adds a closed `pos` enum + `lemma`.
+- **Readings with brackets** — 206 rows in `{n5,n3}/vocab.json` carry brackets inside
+  `reading` (`[お]はなみ`, `きれい[な]`, `かける [迷惑を〜]`) while others store a clean reading.
+  Search strips both; a script could make `reading` mirror the word's annotations.
+- **JMdict POS markers** — `(n) (a)` left inside some N1/N2 vocab meanings (QA BUG-12).
+- **Vocab near-repeats** — textbook pairs with differently worded glosses: チャンス (N5/N3),
+  幸せ (N4/N3), めったに ×2 and しっかり ×2 (N3); ~25 N1 kanji spellings of lower kana words
+  whose glosses don't overlap (ふさわしい, よほど, みじめ…); 是非, 大した, 夕べ, 無くす appended in
+  kanji beside a kana textbook row. Needs a hand list (JMdict "usually kana" data is not
+  reachable from the sandbox).
+- **Bare N5 kun readings** — 日 か, 一 ひと, 小 お, 真 ま, 千 ち are real but bare prefix/counter
+  forms, kept on purpose by `scripts/fix-search-data.ts`; a fuller KANJIDIC refresh could
+  add `ひと・つ` etc.
+- **Kept on purpose (no action unless the policy changes)** — `n5/kanji.json` holds 122
+  N4-list kanji and `n4/kanji.json` 169 N3-list and 85 N2/N1-list kanji vs Waller's lists;
+  `n3/kanji.json` keeps 77 N2/N1 kanji from the textbook lessons
+  (`scripts/review-n3-kanji-vocab.ts` prints them). Moving them would renumber lessons people
+  have studied.
+
+## 5. AI
+
+- **Models** — live "Refresh models" in AI settings (PM P2 in `docs/ai-model-listing.md`;
+  the catalog only changes via `npm run update:models`); optionally a weekly GitHub Action
+  that runs it and opens a PR. OpenAI reasoning models still get a `system` message and
   `response_format: json_object` (believed fine, unverified).
-- **AI prompts** (`docs/ai-prompts-review.md`, `docs/reading-prompt-review.md`) — level ceilings
+- **Prompts** (`docs/ai-prompts-review.md`, `docs/reading-prompt-review.md`) — level ceilings
   are instructions only; checking generated kanji against the N5/N4 lists in code would catch
   slips. Kanji mnemonics would improve with component data for rarer N2/N1 kanji. AI example
-  sentences show no furigana (would need `FuriganaText` + bracket notation).
-- **Reading Practice** (`docs/reading-library-nav-ux.md`) — "your N3 passage is ready" notice
-  when a generation finishes on another level; per-level history switcher; story id in the
-  URL; per-level furigana/English toggles; library filter by in-progress.
+  sentences show no furigana (needs `FuriganaText` + bracket notation).
 
-## Resolved
+## 6. Reading Practice
 
-- Quick wins (2026-11-01):
-  - Google Fonts link removed from `index.html`. Inter was downloaded but never applied
-    (35 faces registered, none loaded; text renders in the system stack), so nothing
-    changes on screen and the app makes no external request. Adopting Inter would be a
-    design change, not a fix.
-  - Retry after a failed lesson chunk reloads the page: browsers keep a failed `import()`
-    in the module map, so re-importing never worked. Verified in Playwright (blocked
-    `n3/kanji.json`, unblocked, Retry → same lesson loads).
-  - `scripts/` is typechecked (`tsconfig.json` include); it was already clean.
-  - `~さん` → `〜さん` via a general title rule in `fix-search-data.ts` (one row changed).
-  - Reading's two code-reviewed criteria (result after a mid-generation level switch,
-    errors staying on their level) now have tests.
-  - `SearchPage.tsx` split (428 → 287 lines, panels in `SearchPanels.tsx`); no component
-    is over 400 lines.
-- Phase 5 (2026-11-01): AI failures other than a missing key were only logged, so a
-  grammar/vocab/kanji AI button just stopped spinning; they now show inline with what to
-  do. Unusable grammar-example replies (previously a silent no-op after a paid call) are a
-  visible error. The persisted AI cache is capped (400 entries / ~1 MB).
-- Phase 4 (2026-11-01): `Modal` on native `<dialog>` (focus trap, Escape, scroll lock,
-  focus return) for all three dialogs; `SectionLayout` + `sectionTheme` for grammar, vocab
-  and kanji; `ReadingSection` split (1,228 → 93 lines) with one shared `QuestionList`;
-  header tabs from `utils/sections.ts`. Two items from the Phase 2b findings closed with it:
-  the sidebar heading no longer shows a fake `(1–1)` while loading or failed, and Reading
-  shows an alert when its lessons fail to load.
-- Phase 3 (2026-11-01): test harness and characterization tests landed. Folded in from the
-  tooling backlog: `npm run lint` now covers `scripts/` (rest-sibling omits allowed),
-  `scripts/lib/searchDataFixes.ts` has unit tests, `docs/search/04-data.md` names
-  `services/search/indexer/`.
-- Phase 2b (2026-11-01): lesson lists guarded against errors and stale levels
-  (`features/useLessonList.ts`, `useReadingData.ts`), list errors reach the section's
-  error panel, `KanjiCompound` typed nullable — which also fixed a live crash: the kanji
-  mnemonic prompt called `.replace` on a `null` compound reading for 150 N4 kanji —
-  `getContentSource()` removed, `ContentSource` doc comment and `AGENTS.md` corrected.
-- CI now runs typecheck, lint, tests, `validate:data` and build on every pull request
-  (`.github/workflows/ci.yml`); previously only on push to `main`.
+From `docs/reading-library-nav-ux.md`: a "your N3 passage is ready" notice when a
+generation finishes on another level; per-level history switcher; story id in the URL;
+per-level furigana/English toggles; library filter by in-progress.
 
-- `scripts/fill-n5-n4-gaps.ts` coverage is now cumulative (level and below); N5 +72, N4 +78
-  words, incl. the 8 N5 words the 2026-10-31 dedupe had left only in N4.
+## 7. Code housekeeping
 
-- Search data quality (`docs/search/04-data.md` §7 #1, #3, #8) — fixed by
-  `scripts/fix-search-data.ts` (tables in `scripts/lib/searchDataFixes.ts`; idempotent,
-  uids unchanged): 言う `n3-vocab-23-124` reading ゆう → いう; slash pairs
-  `本社（ほんしゃ）／支店`【してん】 and `細い（ほそい）／太い`【ふとい】 → `本社／支店`
-  【ほんしゃ／してん】, `細い／太い`【ほそい／ふとい】; 13 N5 kanji with bare kun stems get
-  their okurigana back (分 わ → わ・かる, わ・ける; 行 い/おこな → い・く, おこな・う;
-  来 く/きた → く・る, きた・る; 学, 会, 休, 去, 自, 転, 動, 後, 生, 半).
+- `scripts/lib/searchDataFixes.ts` — the `n3-vocab-23-124` 言う reading fix is obsolete (the
+  row now names 行き), so `fix-search-data.ts` prints a harmless "skipped" line each run. Drop
+  the entry and its test fixture next time the table is touched.
 
-- N5/N4 gaps vs Waller's lists — 21 missing N4 kanji and 494 N5 / 461 N4 words
-  appended by `scripts/fill-n5-n4-gaps.ts`.
+## Settled decisions
 
-- `src/data/n3/kanji.json` strokes 0 / empty radical / example sentence in `meaning` —
-  fixed from KANJIDIC by `scripts/review-n3-kanji-vocab.ts`.
+These hold for all remaining work. Do not revisit them without the owner.
 
-- `grammar-app/src/utils/levels.ts` — N5's LESSON_RANGES capped at lesson 15 while the
-  data ran through lesson 25 (confirmed consistent across grammar/vocab/kanji). Fixed in
-  Phase 1 rather than deferred further: Task 3's validator checks every item's lesson
-  against these ranges as a hard error, so the mismatch would have failed validation on
-  25 lessons' worth of legitimate N5 content. `LESSON_RANGES` is now also exported as
-  the validator's single source of truth instead of a second hardcoded copy.
+- Base path comes from `VITE_BASE_PATH`, defaulting to `/Nihongo/`. Router basename is
+  `import.meta.env.BASE_URL`. Never a literal. (Phase 2 removed the
+  `vite-plugin-singlefile` workaround that once made this necessary.)
+- Item key is `uid`, formatted `{level}-{section}-{lesson}-{n}`, lowercase — e.g.
+  `n5-grammar-1-1`. Globally unique, usable as a database primary key. The legacy `id`
+  field is gone.
+- Content is reached **only** through `contentRepository`. No component or hook imports
+  `src/data/**` directly. The one exception is `utils/tags.ts` → `tag-taxonomy.json`: a
+  facet taxonomy, not per-lesson `StudyItem` content, deliberately outside the abstraction.
+- Content stays in per-level, per-section JSON files. No merge into one file.
+- Storage abstractions follow `services/ai/readingStorage.ts` and
+  `services/content/ContentSource.ts`: an abstract base class, an async facade, and a
+  swap function. Same shape for progress (section 1).
+- AI results live in one artifact cache (`services/ai/artifactCache.ts`, store
+  `useAiArtifactStore`); a feature adds an `ArtifactKind` and uses `useAiArtifacts(kind)`.
+  AI failures are `AiError`s; show them with `aiErrorMessage`.
+- Dialogs use `components/common/Modal.tsx` (native `<dialog>`); study sections render
+  through `components/layout/SectionLayout.tsx`, coloured by `sectionTheme` (complete
+  Tailwind class literals, never interpolated).
+- Markdown styling uses the existing `.markdown-prose` rules in `index.css`.
+  No `@tailwindcss/typography` dependency.
+- Sanitizer is `dompurify` v3.
+- Accessibility: axe-core in the jsdom project (`src/test/axe.ts`) gates every page and dialog;
+  contrast and screen readers are a manual checklist (`docs/a11y.md`). Bundle budget is
+  `scripts/lib/bundleBudget.ts`, checked against a local build — no preview deploy.
+- Vitest has two projects: `node` for `*.test.ts`, `jsdom` for `*.test.tsx`. Tests never reach
+  the network (`src/test/setup.node.ts`); AI is mocked with `src/test/mockAi.ts`.
 
-## Content Validation Warnings
+## Content validation warnings
 
 _Auto-generated by `npm run validate:data` — do not edit this section by hand._
 

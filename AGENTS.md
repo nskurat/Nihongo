@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Operational context for coding agents working in this repo. Keep this file lean —
-it is loaded into every session. Details belong in `docs/refactor/`, not here.
+it is loaded into every session. Details belong in `docs/`, not here.
 
 ## What this is
 
@@ -22,7 +22,7 @@ Run from the repo root (`Nihongo/`). There is no nested `package.json`.
 | `npm run test:node` / `test:coverage` | Fast logic tests only / coverage report |
 | `npm run typecheck` | `tsc --noEmit` — must stay clean |
 | `npm run lint` | ESLint — must stay clean |
-| `npm run validate:data` | Zod-validates every content JSON file; warnings auto-log to `docs/refactor/FINDINGS.md` |
+| `npm run validate:data` | Zod-validates every content JSON file; warnings auto-log to `docs/backlog.md` |
 | `npm run check:bundle` | After `build`: fails if the initial load or any lazy chunk is over its gzipped budget |
 
 ## Layout
@@ -81,12 +81,11 @@ grammar-app/
 
 ## Where things are recorded
 
-- Open issues and the deferred backlog: `docs/refactor/FINDINGS.md`.
+- Open work, known issues, deferred ideas and settled decisions: `docs/backlog.md` (the only tracker).
 - Content pipeline, sources and decisions: `docs/content-data.md`.
 - Role skills for reviews: `.claude/skills/{japanese-teacher,product-manager,ux-designer}`.
 
-## Refactor in progress
+## Next up
 
-Phased plan and per-phase execution specs: `docs/refactor/README.md`.
-Read the index plus **only your own phase spec** — the others are deliberately
-out of scope and reading them wastes context.
+Flashcards and quizzes — design first; the shape and open decisions are section 1 of
+`docs/backlog.md`. Out-of-scope things you notice go in the backlog, not fixed in passing.

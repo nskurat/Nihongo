@@ -41,8 +41,7 @@ typecheck, lint and test run first, then `npm run build` produces `dist/`, which
 GitHub Actions publishes to GitHub Pages at the URL above. `dist/` is git-ignored
 and only ever produced by the build.
 
-## Refactor in progress
+## What's next
 
-This app is mid-refactor toward a content-repository architecture that can support
-flashcards, quizzes and a real backend. See [docs/refactor/README.md](docs/refactor/README.md)
-for the phased plan.
+Open work, known issues and settled architecture decisions are in
+[docs/backlog.md](docs/backlog.md). Next up: flashcards and quizzes.
