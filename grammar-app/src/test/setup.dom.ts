@@ -17,6 +17,15 @@ beforeEach(() => {
     dispatchEvent: () => false,
   })) as typeof window.matchMedia;
   window.scrollTo = vi.fn() as typeof window.scrollTo;
+  // jsdom has <dialog> but not its modal API. Enough of it for Modal.tsx; Escape is
+  // simulated in tests by dispatching the 'cancel' event the browser would fire.
+  HTMLDialogElement.prototype.showModal ??= function (this: HTMLDialogElement) {
+    this.setAttribute('open', '');
+  };
+  HTMLDialogElement.prototype.close ??= function (this: HTMLDialogElement) {
+    this.removeAttribute('open');
+    this.dispatchEvent(new Event('close'));
+  };
   Element.prototype.scrollIntoView = vi.fn();
 });
 

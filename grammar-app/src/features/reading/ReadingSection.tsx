@@ -28,6 +28,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import FuriganaText from '../../components/common/FuriganaText';
+import Modal from '../../components/common/Modal';
 import { generateReadingPractice, getActiveProviderId, getProvider } from '../../services/ai/registry';
 import { createStoryId, readingRepository } from '../../services/ai/readingStorage';
 import { stripFurigana } from '../../services/ai/readingParser';
@@ -1058,11 +1059,12 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
       {/* QUICK READ FOCUS MODAL */}
       {/* ========================================================================= */}
       {modalStory && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in overflow-y-auto">
-          <div
-            className="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-scale-up my-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <Modal
+          open
+          onClose={() => setModalStory(null)}
+          labelledBy="story-modal-title"
+          className="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden"
+        >
             {/* Modal Header */}
             <div className="p-6 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white flex justify-between items-start">
               <div>
@@ -1076,7 +1078,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                     </span>
                   )}
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                <h3 id="story-modal-title" className="text-xl md:text-2xl font-bold text-white tracking-tight">
                   <FuriganaText text={modalStory.data?.title} mode="always" />
                 </h3>
                 {modalStory.data?.titleEn && (
@@ -1219,8 +1221,7 @@ export default function ReadingSection({ activeLevel = 'N4' }: ReadingSectionPro
                 Close Reader
               </button>
             </div>
-          </div>
-        </div>
+        </Modal>
       )}
     </main>
   );
