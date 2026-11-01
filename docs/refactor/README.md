@@ -22,8 +22,7 @@ Dependency-ordered. Do not start one before its predecessor has landed.
 
 | # | Phase | Spec | Effort | Ready to offload |
 |---|---|---|---|---|
-| 2b | Content-layer defect fixes | `phase-2b-content-fixes.md` | ½ d | Yes |
-| 3 | Test harness + characterization tests | `phase-3-test-harness.md` | ½ d | Yes |
+| 3 | Test harness + characterization tests | `phase-3-test-harness.md` | ½ d | Yes — next |
 | 4 | UI consolidation | `phase-4-ui.md` | 1–2 d | Spec after 3 |
 | 5 | AI layer unification | `phase-5-ai-layer.md` | ½–1 d | Spec after 3 |
 | 6 | Flashcards + quizzes | `phase-6-features.md` | 2–3 d | Design first |
@@ -39,6 +38,7 @@ there is currently no way to prove behaviour survived it.
 | 0 | Triage | [#1](https://github.com/nskurat/Nihongo/pull/1) | Base path + router basename, legacy-URL redirect, Reading Studio data, AI cache namespacing, markdown styling + sanitization, working lint, CI gates |
 | 1 | Item identity | [#2](https://github.com/nskurat/Nihongo/pull/2) | `uid` on all 3,403 items, `StudyItem` base type, `validate:data` zod gate in CI, N5 lesson range fixed (1–25) |
 | 2 | Content layer | [#3](https://github.com/nskurat/Nihongo/pull/3) | `ContentSource` repository + lazy per-level chunks, single-file bundle dropped, legacy `id` removed, ~133 KB initial transfer |
+| 2b | Content-layer fixes | branch `claude/cool-heisenberg-l4bgrr` | `useLessonList` (no stale level, errors reach the panel), nullable `KanjiCompound`, dead API trimmed, CI on PRs. Deviations: built on the session branch, not `refactor/phase-2b-…`; one-line `services/ai/studyItems.ts` fix (the nullable type exposed a live crash); acceptance tests run as pure-logic node tests (no jsdom before Phase 3); browser retry limit logged in FINDINGS |
 
 Their specs were deleted once merged. `git log --diff-filter=D -- docs/refactor/` finds
 them if the detail is ever needed; the PR descriptions carry the verified results.

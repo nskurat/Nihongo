@@ -112,10 +112,6 @@ export class StaticContentSource extends BaseContentSource {
 
 let currentSource: BaseContentSource = new StaticContentSource();
 
-export function getContentSource(): BaseContentSource {
-  return currentSource;
-}
-
 /**
  * Swap the content backend (e.g. to a future FirebaseContentSource). See
  * services/ai/readingStorage.ts for the pattern this copies.
@@ -132,6 +128,10 @@ export const contentRepository = {
   getItems: <T extends StudyItem>(level: Level, section: ContentSection, lesson: number) =>
     currentSource.getItems<T>(level, section, lesson),
   getItem: <T extends StudyItem>(uid: Uid) => currentSource.getItem<T>(uid),
+  // No app caller yet - kept on purpose: Phase 6 defines a deck as a query over
+  // ContentSource, and cross-lesson search is its likeliest first caller. The
+  // section search boxes deliberately stay client-side over the loaded lesson
+  // (pre-refactor behaviour, no repository round-trip), so they don't use it.
   search: <T extends StudyItem>(query: string, scope: { level: Level; section: ContentSection }) =>
     currentSource.search<T>(query, scope),
 };

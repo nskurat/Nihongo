@@ -8,12 +8,13 @@ export interface LessonSummary {
 export type ContentErrorKind = 'not-found' | 'load-failed';
 
 /**
- * Rejection type for listLessons/getItems/search when a level+section chunk
- * can't be loaded. `getItem` never rejects (it resolves `null` for a uid that
- * parses but has no match) - `ContentError` here covers only real fetch/parse
- * failures ('load-failed') and a level+section pairing with no chunk at all
- * ('not-found', defensive - unreachable via the closed Level/ContentSection
- * types today, but meaningful once a source's catalog can vary at runtime).
+ * Rejection type for every ContentSource method when a level+section chunk
+ * can't be loaded. `getItem` resolves `null` for an unmatched or malformed uid,
+ * and rejects with `ContentError` if the chunk itself cannot be loaded. The
+ * error covers only real fetch/parse failures ('load-failed') and a
+ * level+section pairing with no chunk at all ('not-found', defensive -
+ * unreachable via the closed Level/ContentSection types today, but meaningful
+ * once a source's catalog can vary at runtime).
  * Callers branch on `kind`; they never parse `message`.
  */
 export class ContentError extends Error {

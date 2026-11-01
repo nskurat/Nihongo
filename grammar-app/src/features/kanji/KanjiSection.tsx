@@ -216,7 +216,7 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                             <li key={idx} className="flex justify-between items-center text-sm border-b border-slate-200/50 last:border-0 pb-1.5 last:pb-0">
                               <span className="font-bold text-slate-700">{ex.word}</span>
                               <span className="text-slate-500 text-xs">
-                                {showTranslations ? ex.meaning : '••••'}
+                                {showTranslations ? (ex.meaning ?? '—') : '••••'}
                               </span>
                             </li>
                           ))}

@@ -18,9 +18,9 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   offline-capable premise of the app. Consider self-hosting Inter.
 - `src/data/n4/kanji.json` — 150 `compounds[]` entries have a literal `null` for
   `reading` and/or `meaning` instead of a string (found by Phase 1's content
-  validator). No runtime risk today — `KanjiSection.tsx` never renders
-  `compound.reading`, and `compound.meaning` renders as nothing when `null` — but
-  needs real content to fill in. Full list in the auto-generated section below.
+  validator). Code is safe since Phase 2b (`KanjiCompound` fields typed nullable, card
+  shows `—`, mnemonic prompt skips them) but the rows need real content. Full list in
+  the auto-generated section below.
 
 ### Search (found building the global search index, `docs/search/04-data.md` §7)
 
@@ -58,6 +58,19 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   - `sannen` (and similar n+vowel romaji) returns nothing when the word isn't in the data; no "did you mean" fallback.
 - Not yet re-run after the fix round: QA's full browser regression (T-01…T-47, a11y, perf at Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden queries were re-checked (2026-10-31).
 
+### Code (found running Phase 2b, 2026-11-01)
+
+- `services/content/StaticContentSource.ts` — Retry can't recover from a real network
+  failure in the browser: Chromium caches a failed dynamic `import()` per module URL, so
+  re-calling the importer rejects again without a request (seen in Playwright on
+  `n3/kanji.json`). The source's evict-and-retry is correct and unit-tested; the fix is a
+  cache-busted re-import or a page reload on the second failure.
+- `features/{grammar,vocab,kanji}/*Section.tsx` — the sidebar header reads e.g.
+  `N4 Lessons (1–1)` while its list is loading or failed (`|| 1` fallback). It never
+  shows another level's range any more; a skeleton belongs to Phase 4's shared sidebar.
+- `features/reading/useReadingData.ts` returns `error` now, but `ReadingSection.tsx`
+  doesn't render it — a failed chunk shows an empty lesson picker. Wire it in Phase 4.
+
 ### Backlog (deferred during the 2026-10-31/11-01 sessions)
 
 - **Vocab examples** — list-derived vocab rows (~5,000 across N5–N1, no `exampleJp`) have
@@ -85,32 +98,15 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   `services/search/build/` (the code lives in `services/search/indexer/` because `build/` is
   gitignored).
 
-### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
-
-Found reviewing the merged Phase 0–2 work, 2026-08-25.
-
-- `features/{grammar,vocab,kanji}/use*.ts` + `features/reading/useReadingData.ts` — the
-  `listLessons` / `Promise.all` calls have no `.catch`. A failed chunk leaves the sidebar
-  permanently empty and logs an unhandled rejection, while the main area *does* show an
-  error via `useContentQuery`. Half-visible failure.
-- Same four files — `lessons` / `data` state is not reset when `activeLevel` changes, so
-  a first (uncached) level switch briefly renders the previous level's lesson list and a
-  wrong range in the header, e.g. `N4 Lessons (1–25)`. `useContentQuery` already solves
-  this with key-comparison; the pattern was not applied to the sibling effects.
-- `types/japanese.ts` — `KanjiCompound.reading` / `.meaning` are typed `string`, but 150
-  entries are `null` at runtime and the zod schema in `validate-content.ts` already models
-  them as nullable. No crash today (React renders `null` as nothing) but it is one
-  `.toLowerCase()` away from one — and `StaticContentSource.search()` already lowercases
-  string values.
-- `services/content/StaticContentSource.ts` — `getContentSource()` is exported and never
-  called. `contentRepository.search()` is called only from its own test; it should be kept
-  for Phase 6 (decks are queries over `ContentSource`) but needs a comment saying so.
-- `services/content/ContentSource.ts` — doc comment claims `getItem` never rejects; it
-  awaits `loadChunk`, which rejects on a missing or failed chunk.
-- `AGENTS.md` — layout map has no `services/content/` entry, and the adapter convention
-  still points only at `services/ai/readingStorage.ts`.
-
 ## Resolved
+
+- Phase 2b (2026-11-01): lesson lists guarded against errors and stale levels
+  (`features/useLessonList.ts`, `useReadingData.ts`), list errors reach the section's
+  error panel, `KanjiCompound` typed nullable — which also fixed a live crash: the kanji
+  mnemonic prompt called `.replace` on a `null` compound reading for 150 N4 kanji —
+  `getContentSource()` removed, `ContentSource` doc comment and `AGENTS.md` corrected.
+- CI now runs typecheck, lint, tests, `validate:data` and build on every pull request
+  (`.github/workflows/ci.yml`); previously only on push to `main`.
 
 - `scripts/fill-n5-n4-gaps.ts` coverage is now cumulative (level and below); N5 +72, N4 +78
   words, incl. the 8 N5 words the 2026-10-31 dedupe had left only in N4.

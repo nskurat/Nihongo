@@ -1,39 +1,35 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useAiCacheStore, useAiUiStore } from '../../store/useAiStore';
 import { LevelType, GrammarItem } from '../../types/japanese';
 import { generateGrammarExamples, generateGrammarNuance } from '../../services/ai/registry';
 import { getTagMeta } from '../../utils/tags';
 import { useContentQuery } from '../useContentQuery';
-import { contentRepository } from '../../services/content/StaticContentSource';
-import { LessonSummary } from '../../services/content/ContentSource';
+import { useLessonList } from '../useLessonList';
 
 export function useGrammar(activeLevel: LevelType, activeLesson: number) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDetailItem, setSelectedDetailItem] = useState<GrammarItem | null>(null);
-  const [lessons, setLessons] = useState<LessonSummary[]>([]);
 
-  useEffect(() => {
-    let cancelled = false;
-    contentRepository.listLessons(activeLevel, 'grammar').then((summaries) => {
-      if (!cancelled) setLessons(summaries);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [activeLevel]);
-
-  const totalLessons = useMemo(() => lessons.map((l) => l.lesson), [lessons]);
-  const lessonCounts = useMemo(
-    () => Object.fromEntries(lessons.map((l) => [l.lesson, l.count])),
-    [lessons]
-  );
+  const {
+    totalLessons,
+    lessonCounts,
+    error: lessonsError,
+    retry: retryLessons,
+  } = useLessonList(activeLevel, 'grammar');
 
   const {
     items: currentContent,
     loading,
-    error,
-    retry,
+    error: contentError,
+    retry: retryContent,
   } = useContentQuery<GrammarItem>(activeLevel, 'grammar', activeLesson);
+
+  // Either failure drives the section's error panel; its retry re-runs both.
+  const error = contentError ?? lessonsError;
+  const retry = useCallback(() => {
+    retryContent();
+    retryLessons();
+  }, [retryContent, retryLessons]);
 
   // Filter grammar points if search is active
   const filteredContent = searchQuery.trim()

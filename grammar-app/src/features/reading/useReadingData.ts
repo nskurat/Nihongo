@@ -2,15 +2,24 @@ import { useEffect, useState } from 'react';
 import { LevelType, GrammarItem, VocabItem, KanjiItem } from '../../types/japanese';
 import { StudyItem } from '../../types/content';
 import { contentRepository } from '../../services/content/StaticContentSource';
+import { ContentError } from '../../services/content/ContentSource';
+import { toContentError } from '../useLessonList';
 
 interface ReadingContentData {
   grammarData: Record<number, GrammarItem[]>;
   vocabData: Record<number, VocabItem[]>;
   /** Kanji ceiling for the reading prompt; empty when the level has none. */
   allowedKanji: string;
+  /** Set when a chunk failed to load; the data fields are then empty. */
+  error: ContentError | null;
 }
 
-const EMPTY: ReadingContentData = { grammarData: {}, vocabData: {}, allowedKanji: '' };
+const EMPTY: ReadingContentData = { grammarData: {}, vocabData: {}, allowedKanji: '', error: null };
+
+interface ReadingDataState {
+  level: LevelType | null;
+  data: ReadingContentData;
+}
 
 /**
  * Levels whose reading prompt carries an explicit kanji list: the level's own
@@ -51,25 +60,42 @@ async function loadLevelData<T extends StudyItem>(
  * (one lazy chunk per level+section, shared with useGrammar/useVocab's cache)
  * rather than a static per-level import, and only while Reading Studio is
  * actually mounted.
+ *
+ * Loads everything Reading Studio needs for `level`. Never rejects: a failed
+ * chunk resolves to empty data carrying `error`, so nothing leaks as an
+ * unhandled rejection.
  */
+export function loadReadingData(level: LevelType): Promise<ReadingContentData> {
+  return Promise.all([
+    loadLevelData<GrammarItem>(level, 'grammar'),
+    loadLevelData<VocabItem>(level, 'vocab'),
+    loadKanjiCeiling(level),
+  ]).then(
+    ([grammarData, vocabData, allowedKanji]) => ({ grammarData, vocabData, allowedKanji, error: null }),
+    (err: unknown) => ({ ...EMPTY, error: toContentError(err) })
+  );
+}
+
+/**
+ * Reads `state` for `level`. Data written for another level is treated as
+ * not loaded yet, so a level switch never shows the previous level's lessons.
+ */
+export function resolveReadingData(state: ReadingDataState, level: LevelType): ReadingContentData {
+  return state.level === level ? state.data : EMPTY;
+}
+
 export function useReadingData(level: LevelType): ReadingContentData {
-  const [data, setData] = useState<ReadingContentData>(EMPTY);
+  const [state, setState] = useState<ReadingDataState>({ level: null, data: EMPTY });
 
   useEffect(() => {
     let cancelled = false;
-
-    Promise.all([
-      loadLevelData<GrammarItem>(level, 'grammar'),
-      loadLevelData<VocabItem>(level, 'vocab'),
-      loadKanjiCeiling(level),
-    ]).then(([grammarData, vocabData, allowedKanji]) => {
-      if (!cancelled) setData({ grammarData, vocabData, allowedKanji });
+    loadReadingData(level).then((data) => {
+      if (!cancelled) setState({ level, data });
     });
-
     return () => {
       cancelled = true;
     };
   }, [level]);
 
-  return data;
+  return resolveReadingData(state, level);
 }
