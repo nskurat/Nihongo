@@ -58,6 +58,33 @@ Content warnings emitted by `npm run validate:data` are appended here automatica
   - `sannen` (and similar n+vowel romaji) returns nothing when the word isn't in the data; no "did you mean" fallback.
 - Not yet re-run after the fix round: QA's full browser regression (T-01…T-47, a11y, perf at Fast 4G/Slow 4G) and the teacher's full battery — only the P1 cases and the 65 golden queries were re-checked (2026-10-31).
 
+### Backlog (deferred during the 2026-10-31/11-01 sessions)
+
+- **Vocab examples** — list-derived vocab rows (~5,000 across N5–N1, no `exampleJp`) have
+  word/reading/meaning only; the owner chose to fill example sentences later.
+- **Vocab near-repeats left in** — textbook pairs with differently worded glosses: チャンス
+  (N5/N3), 幸せ (N4/N3), めったに ×2 and しっかり ×2 (N3); ~25 N1 kanji spellings of lower
+  kana words whose glosses don't overlap (ふさわしい, よほど, みじめ…); 是非, 大した, 夕べ,
+  無くす appended in kanji beside a kana textbook row. Need a hand list (JMdict "usually kana"
+  data is not reachable from the sandbox).
+- **AI models** — live "Refresh models" in AI settings (PM P2 in `docs/ai-model-listing.md`;
+  the catalog only changes via `npm run update:models`); optionally a weekly GitHub Action that
+  runs it and opens a PR. OpenAI reasoning models still get a `system` message and
+  `response_format: json_object` (believed fine, unverified).
+- **AI prompts** (`docs/ai-prompts-review.md`, `docs/reading-prompt-review.md`) — level ceilings
+  are instructions only; checking generated kanji against the N5/N4 lists in code would catch
+  slips. Kanji mnemonics would improve with component data for rarer N2/N1 kanji. AI example
+  sentences show no furigana (would need `FuriganaText` + bracket notation).
+- **Reading Practice** (`docs/reading-library-nav-ux.md`) — "your N3 passage is ready" notice
+  when a generation finishes on another level; per-level history switcher; story id in the
+  URL; per-level furigana/English toggles; library filter by in-progress. Two acceptance
+  criteria (result arriving after a mid-generation level switch, errors staying on their level)
+  were only code-reviewed — needs a mock at `executeAiPrompt`.
+- **Tooling** — `npm run lint` covers `grammar-app/` only, not `scripts/`;
+  `scripts/lib/searchDataFixes.ts` has no unit test; `docs/search/04-data.md` still names
+  `services/search/build/` (the code lives in `services/search/indexer/` because `build/` is
+  gitignored).
+
 ### Code (assigned to Phase 2b — see `phase-2b-content-fixes.md`)
 
 Found reviewing the merged Phase 0–2 work, 2026-08-25.
