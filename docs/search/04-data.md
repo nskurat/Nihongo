@@ -414,7 +414,7 @@ Status re-checked at merge `36e400b`. **Open** = still in the data. **Fixed** = 
 | 10 | **Cross-level duplicates**: 19 groups / 39 rows with identical word and reading (ちょうど ×3, いつも N5+N3, ある N5+N3, 必要 N4+N3…), plus same-level repeats (`休みます` N5 L4 and L11) | Open (fewer than the teacher's ~86, counted by word) | Clutter | Collapsed at query time by `dupKey` (§3.5) |
 | 11 | **147 N4 kanji compounds with null reading/meaning** (phrases like `絵をかきます`) | Open | Only the compound word is indexed. A null reading is skipped | None for search |
 
-#1, #3 and #8 should be logged in `docs/refactor/FINDINGS.md`. `validate:data` auto-logs warnings there, and the builder's
+#1, #3 and #8 should be logged in `docs/backlog.md`. `validate:data` auto-logs warnings there, and the builder's
 report should use the same format.
 
 ---

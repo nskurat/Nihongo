@@ -46,7 +46,7 @@ export interface VocabItem extends StudyItem {
 
 export interface KanjiCompound {
   word: string;
-  /** null where the source data has no reading yet (150 N4 rows, see FINDINGS.md). */
+  /** null where the source data has no reading yet (N4 rows, see docs/backlog.md). */
   reading: string | null;
   /** null where the source data has no meaning yet. */
   meaning: string | null;
