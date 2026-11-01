@@ -3,7 +3,7 @@
 There is currently no way to render a component in a test. Phase 4 splits a 1,066-line
 component into five; without this phase, nothing proves behaviour survived.
 
-**Branch:** `refactor/phase-3-test-harness` · **Prereq:** Phase 2b merged
+**Branch:** `refactor/phase-3-test-harness` · **Prereq:** Phase 2b merged (done)
 
 ## Task 1 — Two test projects
 
