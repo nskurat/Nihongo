@@ -35,6 +35,8 @@ grammar-app/
     features/           grammar | vocab | kanji | reading | search — Section.tsx + use*.ts each
     components/common/  Header, modals, MarkdownViewer, FuriganaText, TagBadge
     services/ai/        Provider registry, prompts, parsers, model catalog, storage adapters
+    services/content/   ContentSource + StaticContentSource, lazy per-level chunks; the only
+                        way components reach src/data (via contentRepository)
     services/search/    Global search: normalise/romaji/deinflect, index builder, ranking, worker
                         (design + QA: docs/search/; index built by scripts/build-search-index.ts)
     store/              zustand: useAppStore (UI prefs), useAiStore (cache + loading)
@@ -54,7 +56,7 @@ grammar-app/
 - State that belongs in the URL stays in the URL (level, section, lesson). zustand is
   for genuine cross-cutting UI state only.
 - New external data or storage goes behind an adapter interface — see
-  `services/ai/readingStorage.ts` for the pattern to copy.
+  `services/ai/readingStorage.ts` and `services/content/ContentSource.ts` for the pattern.
 
 ## Constraints
 
