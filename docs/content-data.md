@@ -47,7 +47,7 @@ text is never a source: explanations and example sentences are original, and gra
 points follow the standard JLPT syllabus, not any one book's lessons. A spot check against
 *Minna no Nihongo* Book II found copied examples and closely reworded explanations in N4, so
 N4 and N3 are being rewritten the same way (backlog §4). N2/N1 were built from online
-sources. `textbookGuard.test.ts` keeps rewritten levels clean.
+sources.
 
 ## Rules and decisions
 
