@@ -17806,9 +17806,9 @@
       "lesson": 14,
       "word": "マッカーサー",
       "reading": "マッカーサー",
-      "meaning": "Stuart McArthur",
-      "exampleJp": "歴史の授業でマッカーサーについて学ぶ。",
-      "exampleEn": "Learn about McArthur in history class."
+      "meaning": "Stuart McArthur (maker of the 'upside-down' world map)",
+      "exampleJp": "マッカーサーの世界地図は、南が上になっている。",
+      "exampleEn": "McArthur's world map has south at the top."
     },
     {
       "uid": "n3-vocab-14-19",
@@ -25206,7 +25206,7 @@
       "lesson": 18,
       "word": "屯",
       "reading": "トン",
-      "meaning": "1000 ton",
+      "meaning": "ton (unit of weight; usually written トン)",
       "pos": "noun"
     },
     {
@@ -28480,7 +28480,7 @@
       "lesson": 20,
       "word": "仕舞った",
       "reading": "しまった",
-      "meaning": "Damn it!",
+      "meaning": "Oh no!, Damn it! (on noticing a mistake)",
       "pos": "interjection"
     },
     {
@@ -34541,7 +34541,7 @@
       "lesson": 24,
       "word": "仕舞い",
       "reading": "しまい",
-      "meaning": "sisters",
+      "meaning": "end, close",
       "pos": "noun"
     },
     {
@@ -34741,7 +34741,7 @@
       "lesson": 24,
       "word": "然う",
       "reading": "そう",
-      "meaning": "so",
+      "meaning": "so, like that (old kanji spelling of そう)",
       "pos": "interjection"
     },
     {

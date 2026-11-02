@@ -13,7 +13,7 @@ import type { ReadingPracticeData } from '../types/ai';
 /**
  * The accessibility gate (Phase 7): axe-core over every page and dialog, plus the
  * keyboard behaviour axe can't see. Colour contrast needs real rendering, so it is on
- * the manual checklist in docs/a11y.md, not here.
+ * a manual check (docs/backlog.md, Accessibility), not here.
  */
 
 const STORY: ReadingPracticeData = {

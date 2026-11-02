@@ -1,5 +1,5 @@
 {
-  "_comment": "N4 restructure (2026-11): old vocab uid suffix (lesson-n) -> new lesson. Themes per new lesson are in docs/content/n4-restructure.md. Applied once by scripts/restructure-n4.ts.",
+  "_comment": "N4 restructure (2026-11): old vocab uid suffix (lesson-n) -> new lesson. Applied once by scripts/restructure-n4.ts.",
   "themes": {
     "1": "Appointments, meetings and keeping in touch",
     "2": "Senses, skills and sports",

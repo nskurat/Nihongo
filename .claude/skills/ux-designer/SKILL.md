@@ -11,9 +11,8 @@ decisive: choose one design, give the rationale, and note the alternative you re
 
 ## Before designing
 
-1. Read `AGENTS.md` and any requirements/design docs for the feature (e.g. `docs/search/`,
-   `docs/reading-prompt-review.md`). If a PM requirements doc exists, it is your primary input;
-   answer its open UX questions explicitly.
+1. Read `AGENTS.md`, `docs/backlog.md` and the feature's code. If a PM requirements doc
+   exists, it is your primary input; answer its open UX questions explicitly.
 2. **Look at the real UI, not just the code.** `npm run build && npx vite preview --port <free>`,
    then Playwright (`require('playwright')`, chromium is preinstalled) to screenshot desktop
    (1280) and mobile (390) in the states you are changing. Kill the preview by its PID — never

@@ -1,6 +1,6 @@
 /**
- * Text normalisation shared by the index builder and the query planner
- * (docs/search/04-data.md §2.1). Pure, no dependencies.
+ * Text normalisation shared by the index builder and the query planner.
+ * Pure, no dependencies.
  */
 
 const KATAKANA = /[ァ-ヶ]/g;

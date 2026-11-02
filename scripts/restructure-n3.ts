@@ -12,7 +12,7 @@ import {
 } from './lib/n5Restructure';
 
 /**
- * One-time N3 restructure (2026-11, docs/content/n3-restructure.md): N3 grammar and vocab
+ * One-time N3 restructure (2026-11): N3 grammar and vocab
  * leave their old lessons (vocab followed Minna no Nihongo Chūkyū I–II) for this app's own 24-lesson sequence.
  *
  *  - grammar: replaced by the authored batches in scripts/batches/n3-grammar/*.json

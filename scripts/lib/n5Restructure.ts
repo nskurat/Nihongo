@@ -1,10 +1,9 @@
 import { stripAnnotation } from './jlptContent';
 
 /**
- * The N5 and N4 restructures (2026-11): grammar and vocab leave the Minna no Nihongo lesson
- * order for this app's own 25-lesson sequence (docs/content/n5-restructure.md,
- * docs/content/n4-restructure.md). Pure helpers used by scripts/restructure-n5.ts and
- * scripts/restructure-n4.ts; tested in grammar-app/src/__tests__/scripts/n5Restructure.test.ts.
+ * The N5, N4 and N3 restructures (2026-11): grammar and vocab leave the Minna no Nihongo
+ * lesson order for this app's own sequence. Pure helpers used by scripts/restructure-n{5,4,3}.ts; tested in
+ * grammar-app/src/__tests__/scripts/n5Restructure.test.ts.
  * N5 and N4 have 25 lessons, N3 has 24: functions that walk lessons take the count.
  */
 

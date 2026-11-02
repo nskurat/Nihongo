@@ -1,5 +1,5 @@
 /**
- * Golden queries: docs/search/02-requirements.md §5 acceptance list (T-01…T-42, as amended:
+ * Golden queries: the PM's search acceptance list (T-01…T-42, as amended:
  * T-33 deinflected above prefix, T-42 "no word match", T-24 per current data) run against
  * MemorySearchSource built in memory from the real src/data. N2/N1 rows are matched by
  * word + level (their uids are positional and regenerated), N5–N3 by uid where the PM
@@ -29,9 +29,8 @@ async function run(q: string, opts: Partial<SearchOptions> = {}): Promise<Search
   return source.search(q, { ...N5, ...opts });
 }
 
-// The PM list predates the 2026-11 N5 and N3 restructures (docs/content/n5-restructure.md,
-// docs/content/n3-restructure.md): their uids are translated to the current ones, and N5/N3
-// rows match by title + level (their lessons moved).
+// The PM list predates the 2026-11 N5 and N3 restructures: their uids are translated to
+// the current ones, and N5/N3 rows match by title + level (their lessons moved).
 const MOVED: Record<string, string> = {
   ...unpackUidMap(N5_GRAMMAR_UIDS, 'n5-grammar-'),
   ...unpackUidMap(N5_VOCAB_UIDS, 'n5-vocab-'),
@@ -134,7 +133,7 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 
   it('T-08 mei = めい = メイ: kanji with on メイ in level, lesson order (any rank level)', async () => {
-    // N3 lessons follow the 2026-11 N3 restructure (docs/content/n3-restructure.md).
+    // N3 lessons follow the 2026-11 N3 restructure.
     const expected = ['明 N5 L10', '名 N5 L18', '命 N3 L7', '迷 N3 L11', '鳴 N3 L21', '謎 N3 L24', '盟 N1 L2', '銘 N1 L12'];
     for (const q of ['mei', 'めい', 'メイ']) {
       const r = await run(q, { limitPerType: Infinity, rankLevel: 'N3' });
@@ -257,7 +256,7 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(await run('わけにはいかない'), 'grammar', { t: '〜わけにはいかない', level: 'N3', lesson: 18 });
   });
 
-  // N4 lessons follow the 2026-11 N4 restructure (docs/content/n4-restructure.md):
+  // N4 lessons follow the 2026-11 N4 restructure:
   // と伝えていただけませんか moved from L8 to L12.
   it('T-20 いただけませんか: N4 L1 top, contains N4 L12 and N4 L23', async () => {
     const r = await run('いただけませんか');
@@ -290,7 +289,7 @@ describe('§5 acceptance list (golden queries)', () => {
     }
   });
 
-  // Amended (owner decision D3, docs/search/07-regression.md): exact and lemma hits rank
+  // Amended (owner decision D3): exact and lemma hits rank
   // by level, so the N5 word お酒 leads and 酒 N3 follows.
   it('T-25 さけ: お酒 N5 above 酒 N3', async () => {
     const r = await run('さけ');
@@ -383,7 +382,7 @@ describe('§5 acceptance list (golden queries)', () => {
       { t: '迷子', level: 'N3', lesson: 8 },
       { t: '迷う [道に〜]', level: 'N3', lesson: 1 },
     ]);
-    // D1 (docs/search/07-regression.md): core N5/N4 words make the visible top 8.
+    // D1: core N5/N4 words make the visible top 8.
     expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [{ t: '無くなる', level: 'N4', lesson: 5 }]);
     expectContains(await run('lost'), 'kanji', [{ t: '迷', level: 'N3', lesson: 1 }]);
   });
@@ -450,7 +449,7 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 });
 
-/** docs/search/07-regression.md: the browser regression's open items and owner decisions. */
+/** The 2026-11 browser regression's open items and owner decisions. */
 describe('regression 2026-11 (R1–R14, D1–D3)', () => {
   const top = (list: SearchHit[], n: number) => list.slice(0, n).map((h) => h.title);
 

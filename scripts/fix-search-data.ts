@@ -9,7 +9,7 @@ import {
 } from './lib/searchDataFixes';
 
 /**
- * Data-quality fixes global search depends on (docs/search/04-data.md §7 #1, #3, #8):
+ * Data-quality fixes global search depends on:
  * wrong readings, slash pairs whose reading covers one half only, and N5 kun readings
  * stored as bare stems, grammar titles typed with ~ instead of 〜, and JMdict part-of-speech
  * markers left in N2/N1 glosses. Tables live in
@@ -18,7 +18,7 @@ import {
  *   npx tsx scripts/fix-search-data.ts [--dry-run]
  *
  * Uids never change. Deterministic and idempotent: a second run changes nothing. Safe to
- * run after any step of the content pipeline (docs/content-data.md); none of those steps
+ * run after any step of the content pipeline; none of those steps
  * rewrites the fields touched here.
  */
 

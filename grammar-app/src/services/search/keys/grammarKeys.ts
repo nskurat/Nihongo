@@ -3,7 +3,7 @@ import { masuToDict } from './masuToDict';
 import { kanaVariants } from './grammarReadings';
 
 /**
- * Search keys of a grammar title or structure (docs/search/04-data.md §2.5).
+ * Search keys of a grammar title or structure.
  * Placeholders (V, N, A, B, S1, -form, (place)) are Latin, so extracting Japanese runs
  * drops them: `Vて-form + いただけませんか` → ていただけませんか, て, いただけませんか.
  */

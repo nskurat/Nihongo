@@ -1,5 +1,5 @@
 /**
- * English meaning search (docs/search/04-data.md §2.6). The index folds plurals only;
+ * English meaning search. The index folds plurals only;
  * the query side expands -ing/-ed and a small irregular table. Doing it this way round
  * keeps `even` away from `evening`/`event` while `lost` still reaches `lose`. Pure.
  */

@@ -1,5 +1,5 @@
 /**
- * Deinflection rule table (docs/search/04-data.md §3.3, teacher §2). Data, not code.
+ * Deinflection rule table (teacher §2). Data, not code.
  *
  * Yomichan-style type chaining: a rule applies to the raw query, or to a candidate whose
  * type (the previous rule's `out`) is in the rule's `in`. A rule with an empty `in` only

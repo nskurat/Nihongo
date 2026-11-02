@@ -1,5 +1,5 @@
 /**
- * Romaji → hiragana for search queries (docs/search/04-data.md §3.2). Accepts Hepburn,
+ * Romaji → hiragana for search queries. Accepts Hepburn,
  * kunrei and IME spellings. Long vowels are not guessed: `kyoshitsu` stays きょしつ and
  * reaches 教室 through the long-vowel-folded tier. Pure.
  */

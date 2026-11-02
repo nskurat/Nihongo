@@ -1,7 +1,7 @@
 import type { DocType, Level, Script } from './types';
 
 /**
- * Ranking and grouping rules (docs/search/04-data.md §3.5), shared by every backend.
+ * Ranking and grouping rules, shared by every backend.
  */
 
 export const TIER = {
@@ -45,8 +45,8 @@ export interface Rankable {
 }
 
 /**
- * Exact and lemma hits form one band in which level decides first (owner decisions D1/D3,
- * docs/search/07-regression.md): a core N5 word reached through its ます-row or dictionary
+ * Exact and lemma hits form one band in which level decides first (owner decisions D1/D3):
+ * a core N5 word reached through its ます-row or dictionary
  * form (います, お酒) ranks above a rarer word whose reading is the query (炒る N2, 酒 N3).
  * Below that band, tier and sub-order come before level as before.
  */

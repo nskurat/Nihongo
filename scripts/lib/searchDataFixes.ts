@@ -1,5 +1,5 @@
 /**
- * Data-quality fixes that global search depends on (docs/search/04-data.md §7 #1, #3, #8).
+ * Data-quality fixes that global search depends on.
  * Pure tables + an idempotent `apply` used by scripts/fix-search-data.ts. Uids never change.
  */
 

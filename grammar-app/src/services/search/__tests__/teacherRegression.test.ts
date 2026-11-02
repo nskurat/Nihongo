@@ -1,5 +1,5 @@
 /**
- * The teacher's 65 regression queries (docs/search/06-teacher-review.md §3), against the
+ * The teacher's 65 regression queries, against the
  * real data with rankLevel N5. Each row names the finding it locks in.
  */
 import { describe, expect, it } from 'vitest';
@@ -129,7 +129,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect((await run('いいです')).groups.vocab[0].title).toBe('いい');
   });
   // ---- F6 plain-form grammar keys
-  // N4 titles and lessons follow the 2026-11 N4 restructure (docs/content/n4-restructure.md).
+  // N4 titles and lessons follow the 2026-11 N4 restructure.
   it('#25 てしまう → Vて しまいます top', async () => {
     expect((await run('てしまう')).groups.grammar[0]).toMatchObject({ title: 'Vて しまいます', level: 'N4', lesson: 6 });
   });

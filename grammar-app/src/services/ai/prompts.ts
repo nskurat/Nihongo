@@ -6,7 +6,7 @@ import { LevelType } from '../../types/japanese';
  * The instructions are written in English (the language all three providers follow
  * most reliably, and the cheapest to tokenise), with Japanese only where it is a term
  * of art or a model of the expected output: JLPT question types, question stems and
- * furigana examples. See docs/reading-prompt-review.md for the reasoning.
+ * furigana examples.
  *
  * The JSON keys in READING_PRACTICE_SCHEMA_TEMPLATE are a contract with
  * readingParser.ts and ReadingSection.tsx — do not rename them.
@@ -211,15 +211,14 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
 
 // -------------------------------------------------------------
 // Study-item prompts: the AI buttons on grammar, vocab and kanji cards.
-// Same conventions as the reading prompt (docs/ai-prompts-review.md):
+// Same conventions as the reading prompt:
 // English instructions with Japanese exemplars, an explicit output contract,
 // a level ceiling taken from the item's own level, and short outputs.
 // -------------------------------------------------------------
 
 /**
- * N5 and N4 lessons 1–25 follow this app's own sequences (docs/content/n5-restructure.md,
- * docs/content/n4-restructure.md). Early lessons have not met the verb forms a model
- * reaches for by default, so lesson-scoped prompts name them.
+ * N5 and N4 lessons 1–25 follow this app's own sequences. Early lessons have not met the
+ * verb forms a model reaches for by default, so lesson-scoped prompts name them.
  */
 export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
   { lesson: 11, form: 'reason clauses with から' },

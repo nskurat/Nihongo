@@ -1,7 +1,7 @@
 import type { CategoryChip, IndexStatus, Level, SearchHit, SearchOptions, SearchResponse } from './types';
 
 /**
- * Global search backend (docs/search/04-data.md §5). Same swap pattern as
+ * Global search backend. Same swap pattern as
  * services/content/ContentSource.ts: an abstract base, an async facade, a swap function.
  * The static implementation (Web Worker over prebuilt index shards) is the default; a
  * database-backed implementation can replace it later without touching the UI.

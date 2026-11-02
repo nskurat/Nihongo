@@ -1,8 +1,8 @@
 import { key } from '../normalize';
 
 /**
- * Cleaned search keys of a vocab `word` or `reading` (docs/search/04-data.md §2.2,
- * teacher §3). The display string is never changed; these keys are what gets matched.
+ * Cleaned search keys of a vocab `word` or `reading` (teacher §3). The display string
+ * is never changed; these keys are what gets matched.
  */
 export interface VariantPart {
   /** Keys of this `／` part: with and without optional text (`[お]花見` → 花見, お花見). */

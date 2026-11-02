@@ -2,7 +2,7 @@ import type { DocType, Level } from '../../services/search/types';
 import { getTagMeta } from '../../utils/tags';
 
 /**
- * URL state for /search (docs/search/03-ux.md §3.4). Pure: parse, canonicalise, serialise.
+ * URL state for /search. Pure: parse, canonicalise, serialise.
  * Paths returned here are router paths (no BASE_URL); react-router's basename adds the
  * sub-path, and `toAbsoluteHref` adds it for window.open.
  */

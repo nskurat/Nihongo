@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Operational context for coding agents working in this repo. Keep this file lean —
-it is loaded into every session. Details belong in `docs/`, not here.
+it is loaded into every session. Open work and settled decisions live in `docs/backlog.md`.
 
 ## What this is
 
@@ -41,10 +41,10 @@ grammar-app/
     services/content/   ContentSource + StaticContentSource, lazy per-level chunks; the only
                         way components reach src/data (via contentRepository)
     services/search/    Global search: normalise/romaji/deinflect, index builder, ranking, worker
-                        (design + QA: docs/search/; index built by scripts/build-search-index.ts)
+                        (index built by scripts/build-search-index.ts)
     store/              zustand: useAppStore (UI prefs), useAiStore (AI artifacts + request status)
     data/{n5..n1}/      grammar|vocab|kanji.json, keyed by lesson number. A section shows wherever
-                        its data file exists (utils/levels.ts). Kanji/vocab provenance: docs/content-data.md
+                        its data file exists (utils/levels.ts)
     types/              japanese.ts (domain), ai.ts (AI + reading)
     utils/              levels.ts (lesson ranges), sections.ts (section registry), tags.ts (taxonomy)
     test/               Test setup (fetch blocked), renderWithRouter, fixtures, mockAi(), axeViolations()
@@ -60,7 +60,7 @@ grammar-app/
 - State that belongs in the URL stays in the URL (level, section, lesson). zustand is
   for genuine cross-cutting UI state only.
 - Accessibility is gated: a new page or dialog gets an `axeViolations()` case in
-  `src/__tests__/a11y.test.tsx`; contrast and screen-reader checks are manual (`docs/a11y.md`).
+  `src/__tests__/a11y.test.tsx`; contrast and screen-reader checks are manual.
 - New external data or storage goes behind an adapter interface — see
   `services/ai/readingStorage.ts` and `services/content/ContentSource.ts` for the pattern.
 
@@ -82,7 +82,7 @@ grammar-app/
 ## Where things are recorded
 
 - Open work, known issues, deferred ideas and settled decisions: `docs/backlog.md` (the only tracker).
-- Content pipeline, sources and decisions: `docs/content-data.md`.
+- Content scripts document themselves in their headers; vendored sources: `scripts/sources/README.md`.
 - Role skills for reviews: `.claude/skills/{japanese-teacher,product-manager,ux-designer}`.
 
 ## Next up

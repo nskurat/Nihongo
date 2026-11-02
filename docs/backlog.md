@@ -1,169 +1,87 @@
 # Backlog
 
-The one tracker for open work: what is left to build, known issues, deferred ideas. When
-something is done, delete it here; the PR carries the record. Finished refactor phases
-(0–5, 7) and their specs live in git history (`git log -- docs/refactor/`).
+The one tracker. Delete an item when it is done; git history is the record. Add anything
+out of scope you notice as a short entry: what, where, why.
 
-Anything out of scope that you notice while working goes here as a short entry: what, where,
-why it matters. Items parked for the far future are in `docs/backlog-later.md`, which regular
-work doesn't need to read.
+## Next: flashcards and quizzes
 
-## 1. Flashcards and quizzes (next feature, formerly Phase 6)
+Design the spec first (tasks, acceptance), then build.
+- `services/progress/` behind an adapter like `readingStorage`: `recordReview(uid, grade)`,
+  `getDue(scope)`, `getStats()`; localStorage now.
+- `srs.ts`: pure, unit-tested scheduling.
+- A deck is a query over `ContentSource` (lesson, level, tag, due). One `Question` type with
+  producers (vocab meaning, kanji reading, grammar cloze, AI reading); one `QuizRunner`.
+  `pos` lets producers pick question types by word class.
+- Routes `/:level/flashcards/:deck`, `/:level/quiz/:mode`; lazy-loaded; axe cases; bundle budget.
+- To decide: SM-2 or FSRS-lite; does a session survive refresh; one progress record per uid
+  or separate; AI-generated or content-only.
 
-**Design first, not an execution spec.** Write the spec (tasks, acceptance, deviations)
-before building. Every earlier phase exists to make this cheap: `uid` gives review state
-something to hang on, the content repository gives decks a query surface, the test harness
-makes a scheduler safe to change, `Modal`/`SectionLayout` give a quiz somewhere to render.
+## Accessibility
 
-Shape being aimed at:
+- Contrast: `text-slate-400` helper text on white (≈2.6:1) in `GeneratorPanel.tsx` and the
+  `SectionLayout.tsx` subtitle; `text-indigo-200` on `bg-indigo-600` (4.32:1). A palette call.
+- Manual pass never run: keyboard-only walk, screen-reader spot check (landmarks, dialog
+  titles, tab announcements), 200% zoom and 320 px, reduced motion.
 
-- `services/progress/` — same adapter shape as `readingStorage`: `recordReview(uid, grade)`,
-  `getDue(scope)`, `getStats()`. localStorage now, database later, no caller changes.
-- `srs.ts` — scheduling as a pure, unit-tested module with no React and no storage.
-- A deck is a *query* over `ContentSource` (one lesson, a level, a tag facet, everything
-  due), so flashcards need no new content. (`StaticContentSource.search` is kept for this.)
-  Every vocab level now carries `pos` (127 rows blank), so producers can pick question types
-  by word class: for example, a prefix (再, 超) gets "再 + 開発 → ?" rather than a standalone
-  meaning card.
-- One `Question` type with several producers — vocab meaning, kanji reading, grammar
-  cloze, and the existing AI reading comprehension as one producer among them. A shared
-  `QuizRunner` renders all of them.
-- Routes `/:level/flashcards/:deck` and `/:level/quiz/:mode`, so sessions are linkable
-  and resumable, with `React.lazy` per section route.
-- New pages and dialogs get cases in `src/__tests__/a11y.test.tsx`; the bundle budget
-  (`scripts/lib/bundleBudget.ts`) still has to pass.
+## Search
 
-Decisions to make before writing the spec:
+- Radical filter for kanji.
+- Respellings 斯う/然る (old kanji for こう/しかる) as search aliases.
 
-- Scheduling algorithm: SM-2 or FSRS-lite. Affects the progress record shape, so decide
-  before `services/progress/` is written.
-- Does a quiz session persist mid-run, or is it lost on refresh?
-- Do flashcards and quizzes share one progress record per uid, or separate streams?
-- Is any of this AI-generated on the fly, or all derived from existing content? (Cost and
-  offline behaviour both hinge on this.)
+## Content
 
-## 2. Accessibility
+Data in `src/data/*.json` is generated: fix through `scripts/`, never by hand.
+- **Gloss style**: about 270 core N5 rows and 19 N4 rows use word-list glosses ("climb [a
+  mountain]", "[exports] increase"; N4 core rows capitalised). Rephrase by script, no uid changes.
+- **`pos` gaps**: 127 rows blank on purpose (`scripts/fill-vocab-pos.ts` lists them); 無事 is
+  `noun` (な-adjective would teach 無事に better).
+- **Owner's local runs** (downloads the sandbox can't reach; run all checks before and after):
+  - JMdict refresh: add `--simplified` to `fetch-jmdict-pos.ts` (jmdict-simplified release),
+    then `fill-vocab-pos.ts --relabel`, which must never touch the 571 hand-labelled N5/N4 rows
+    (their uids as of commit `57bcfd6`).
+  - Vocab examples from Tatoeba (CC BY 2.0 FR), N5–N3 only (2,329 rows empty): one sentence per
+    row, indexed to the row's JMdict sense, length cap 25/30/35, kanji within level, else leave
+    blank. A teacher checks 60 picks before writing. Ships only with a per-sentence "Tatoeba"
+    link and the sources dialog below.
 
-- **Colour contrast** (the axe gate can't measure it in jsdom). From the Tailwind palette:
-  `text-slate-400` helper text on white (≈2.6:1; AA needs 4.5:1) in `GeneratorPanel.tsx` and
-  the `SectionLayout.tsx` banner subtitle; `text-indigo-200` header copy and idle section tabs
-  on `bg-indigo-600` (4.32:1 measured in Chromium, 2026-11-01). A palette change across sections — a design decision.
-- **Manual pass not yet run** — the checklist in `docs/a11y.md` (screen reader, 200% zoom,
-  320 px, reduced motion) has not been walked end to end.
+## AI
 
-## 3. Search
+- Live "Refresh models" in AI settings (the catalog changes only via `npm run update:models`);
+  maybe a weekly Action that opens a PR.
+- Check generated kanji against the level lists in code; component data for rare N2/N1
+  mnemonics; furigana on AI example sentences.
 
-The 2026-11-01 browser regression (`docs/search/07-regression.md`) is implemented, leftovers
-included. Nice to have:
+## Reading Practice
 
-- **Radical filter** for kanji search (teacher F13).
-- **Respellings** 斯う/然る (teacher F12): old kanji spellings of こう/そう that a learner may
-  paste from older texts.
+"Your passage is ready" notice across levels; per-level history; story id in the URL;
+per-level furigana/English toggles; filter the library by in-progress.
 
-## 4. Content data
+## UI
 
-Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
+- Sources & licences: a footer link opening a `Modal` that lists Waller's JLPT lists (CC BY),
+  EDRDG KANJIDIC/KRADFILE/JMdict (CC BY-SA 4.0), kanjium (CC BY-SA 4.0), Tatoeba (CC BY 2.0 FR)
+  and jamdict (MIT), with an axe case. Can ship now.
+- Show part of speech on vocab rows (`utils/pos.ts` `posLabel`); needs a UX call.
 
-- **N3 vocab glosses from the list import**: a few rows carry wrong or odd glosses, seen
-  while regrouping N3 (2026-11): 仕舞い "sisters", 仕舞った "Damn it!", 然う "so", 屯 "1000
-  ton", マッカーサー "Stuart McArthur", 渡辺 昇 and 『鉄腕アトム』 as vocab rows. Fix through a
-  script after a teacher pass; no uid changes.
-- **N4 grammar words filed in N5 vocab**: もし〜たら and いくら〜ても (N5 lesson 25) are N4
-  conditionals that no N5 grammar point teaches; N4 now teaches them in Lesson 9. Moving the
-  two rows would renumber N5 vocab, so for now they stay; mark them as a preview or move them
-  in a pass of their own. (Japanese-teacher review, 2026-11-02.)
-- **Wrong gloss: そっち** (N5 lesson 20) reads "over there"; it means "there (near you)". The
-  gloss comes from the list data, so fix it through a script.
-- **N5 vocab glosses in the book's word-list style**: about 270 core N5 rows keep glosses like
-  "climb [a mountain]" and "live [in Osaka]". Single glosses are low risk, but rephrase them
-  in a pass of their own (a script over `n5/vocab.json`, no uid changes).
-- **N4 vocab glosses in the book's word-list style**: 19 N4 rows keep bracketed glosses like
-  "[a building] fall down" and "[exports] increase", and the core rows are capitalised
-  ("Look for, search"). Same fix as N5: a script over `n4/vocab.json`, no uid changes.
+## Parked
 
-- **Owner's local runs** (`docs/local-data-refresh.md`; need downloads the sandbox can't reach):
-  - **§A JMdict refresh**: `pos` comes from the April 2021 JMdict. The plan is to refresh from
-    a current jmdict-simplified release and re-label the rows that came from JMdict
-    (`--relabel`), never the 571 hand-labelled N5/N4 rows.
-  - **§B Vocab examples, N5–N3 only** (the owner decided N2/N1 get none): 2,329 rows have no
-    `exampleJp` (N5 528, N4 492, N3 1,309). Tatoeba (CC BY 2.0 FR), no paid AI, and a
-    teacher's spot-check before writing. The data must ship together with the per-sentence
-    "Tatoeba" link (§7).
-- **`pos` gaps**: 127 rows are blank on purpose. They are auxiliaries (はず), ～ずる verbs, names,
-  textbook phrases JMdict doesn't list, and 5 homographs (ああ, あの, かく/かける/きく with a [〜]
-  note). `scripts/fill-vocab-pos.ts` lists them. Debatable label: 無事 "safely" is `noun`
-  (な-adjective would teach 無事に better).
-- **Kept on purpose (no action unless the policy changes)** — `n5/kanji.json` holds 122
-  N4-list kanji and `n4/kanji.json` 169 N3-list and 85 N2/N1-list kanji vs Waller's lists;
-  `n3/kanji.json` keeps 77 N2/N1 kanji from the textbook lessons
-  (`scripts/review-n3-kanji-vocab.ts` prints them). Moving them would renumber lessons people
-  have studied. Bare prefix kun readings (一 ひと, 小 お) stay: no level uses KANJIDIC's
-  hyphen markers.
-
-## 5. AI
-
-- **Models** — live "Refresh models" in AI settings (PM P2 in `docs/ai-model-listing.md`;
-  the catalog only changes via `npm run update:models`); optionally a weekly GitHub Action
-  that runs it and opens a PR. OpenAI reasoning models still get a `system` message and
-  `response_format: json_object` (believed fine, unverified).
-- **Prompts** (`docs/ai-prompts-review.md`, `docs/reading-prompt-review.md`) — level ceilings
-  are instructions only; checking generated kanji against the N5/N4 lists in code would catch
-  slips. Kanji mnemonics would improve with component data for rarer N2/N1 kanji. AI example
-  sentences show no furigana (needs `FuriganaText` + bracket notation).
-
-## 6. Reading Practice
-
-From `docs/reading-library-nav-ux.md`: a "your N3 passage is ready" notice when a
-generation finishes on another level; per-level history switcher; story id in the URL;
-per-level furigana/English toggles; library filter by in-progress.
-
-## 7. UI
-
-- **Sources & licences dialog**: the app credits none of its CC BY / CC BY-SA sources
-  (Waller's lists, EDRDG KANJIDIC/JMdict, kanjium). The PM decision is a footer link that opens
-  a `Modal` listing each source, licence and link, with an axe case. It can ship now; spec in
-  `docs/local-data-refresh.md` §B "Attribution". The per-sentence "Tatoeba" link on vocab rows
-  ships with the example data.
-- **Part of speech is never shown**: every vocab row has `pos` now, but the app only uses it
-  for search word classes and the AI usage-note prompt. A small label on vocab rows
-  (`utils/pos.ts` `posLabel`: "Verb (Group I, godan)", "な-adjective", "Prefix") would help
-  learners with conjugation. This needs a UX call on where it goes and whether it follows the
-  translation toggle.
+- Search performance: first search ~0.9 s p75 on desktop (cold worker indexing); keystroke to
+  results ~160–200 ms p95 at CPU×4.
+- "Did you mean…?" for queries with no or weak matches (needs `didYouMean` in the response).
 
 ## Settled decisions
 
-These hold for all remaining work. Do not revisit them without the owner.
-
-- Base path comes from `VITE_BASE_PATH`, defaulting to `/Nihongo/`. Router basename is
-  `import.meta.env.BASE_URL`. Never a literal. (Phase 2 removed the
-  `vite-plugin-singlefile` workaround that once made this necessary.)
-- Item key is `uid`, formatted `{level}-{section}-{lesson}-{n}`, lowercase — e.g.
-  `n5-grammar-1-1`. Globally unique, usable as a database primary key. The legacy `id`
-  field is gone.
-- Content is reached **only** through `contentRepository`. No component or hook imports
-  `src/data/**` directly. The one exception is `utils/tags.ts` → `tag-taxonomy.json`: a
-  facet taxonomy, not per-lesson `StudyItem` content, deliberately outside the abstraction.
-- Content stays in per-level, per-section JSON files. No merge into one file.
-- Storage abstractions follow `services/ai/readingStorage.ts` and
-  `services/content/ContentSource.ts`: an abstract base class, an async facade, and a
-  swap function. Same shape for progress (section 1).
-- AI results live in one artifact cache (`services/ai/artifactCache.ts`, store
-  `useAiArtifactStore`); a feature adds an `ArtifactKind` and uses `useAiArtifacts(kind)`.
-  AI failures are `AiError`s; show them with `aiErrorMessage`.
-- Dialogs use `components/common/Modal.tsx` (native `<dialog>`); study sections render
-  through `components/layout/SectionLayout.tsx`, coloured by `sectionTheme` (complete
-  Tailwind class literals, never interpolated).
-- Markdown styling uses the existing `.markdown-prose` rules in `index.css`.
-  No `@tailwindcss/typography` dependency.
-- Sanitizer is `dompurify` v3.
-- Accessibility: axe-core in the jsdom project (`src/test/axe.ts`) gates every page and dialog;
-  contrast and screen readers are a manual checklist (`docs/a11y.md`). Bundle budget is
-  `scripts/lib/bundleBudget.ts`, checked against a local build — no preview deploy.
-- A content change that shifts positional uids (dedupe, moves) ships an AI-cache renumbering
-  in `store/aiCacheMigration.ts` (`renumberVocabArtifacts`, bump the store version): paid
-  results follow their word; a removed row's note goes to its kept twin. Never drop them silently.
-- Vitest has two projects: `node` for `*.test.ts`, `jsdom` for `*.test.tsx`. Tests never reach
-  the network (`src/test/setup.node.ts`); AI is mocked with `src/test/mockAi.ts`.
+- N5–N3 follow this app's own lesson order; grammar and examples are written in our own words.
+  Textbook text is never a source. N2/N1 come from online sources.
+- Lesson ranges live in `utils/levels.ts`. Uids are `{level}-{section}-{lesson}-{n}`.
+- Any change that moves uids ships an AI-cache migration in `store/aiCacheMigration.ts` (bump
+  the store version) so paid results follow their item.
+- Kanji files keep some higher-list kanji where the lesson vocab uses them; moving them would
+  renumber studied lessons. A list word taught at a lower level is not repeated higher up.
+- Content is reached only through `contentRepository` (except `utils/tags.ts`). Dialogs use
+  `Modal`; sections render through `SectionLayout`. Base path from `import.meta.env.BASE_URL`.
+- Tests never reach the network; AI is mocked at `executeAiPrompt`. axe gates every page and
+  dialog; bundle budget in `scripts/lib/bundleBudget.ts`.
 
 ## Content validation warnings
 

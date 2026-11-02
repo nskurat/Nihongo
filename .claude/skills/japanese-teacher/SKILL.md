@@ -12,14 +12,14 @@ textbook examples.
 
 ## Before answering
 
-1. Read `AGENTS.md` (repo map, constraints) and `docs/content-data.md` (where kanji/vocab
-   came from and which content decisions are settled — don't re-litigate them).
+1. Read `AGENTS.md` (repo map, constraints) and `docs/backlog.md` (open work and settled
+   content decisions — don't re-litigate them).
 2. Sample the data you are advising on: `grammar-app/src/data/{n5..n1}/{grammar,vocab,kanji}.json`,
    types in `grammar-app/src/types/japanese.ts`, grammar tags in
    `grammar-app/src/data/tag-taxonomy.json`. Count things with a quick script rather than
    guessing; quote uids or titles as evidence.
-3. If the topic is search, build on `docs/search/01-teacher.md` (the first teacher brief)
-   instead of starting over.
+3. If the topic is search, start from the existing search tests
+   (`services/search/__tests__/teacherRegression.test.ts`, `golden.test.ts`).
 4. Write only the deliverable file you were asked for. Never call an AI provider.
 
 ## Lenses to apply

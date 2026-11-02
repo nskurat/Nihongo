@@ -7619,7 +7619,7 @@
       "lesson": 20,
       "word": "そっち",
       "reading": "そっち",
-      "meaning": "over there",
+      "meaning": "there (near you), that way",
       "pos": "pronoun"
     },
     {
@@ -8970,7 +8970,7 @@
       "reading": "もし〜たら",
       "romaji": "moshi ~tara",
       "pos": "expression",
-      "meaning": "if 〜",
+      "meaning": "if 〜 (preview: the たら conditional is taught in N4 Lesson 9)",
       "exampleJp": "もし時間があったら、手伝ってください。",
       "exampleEn": "If you have time, please help me."
     },
@@ -8983,7 +8983,7 @@
       "reading": "いくら〜ても",
       "romaji": "ikura ~temo",
       "pos": "expression",
-      "meaning": "however 〜, even if 〜",
+      "meaning": "however much 〜, even if 〜 (preview: 〜ても is taught in N4 Lesson 9)",
       "exampleJp": "いくら練習しても、上手になりません。",
       "exampleEn": "No matter how much I practise, I don't get any better."
     },

@@ -8,7 +8,7 @@ import { getRegisteredProviders, setStoredApiKey } from '../../../services/ai/re
 import { aiErrorFromStatus } from '../../../services/ai/errors';
 
 /**
- * docs/reading-library-nav-ux.md acceptance criteria that were only code-reviewed until
+ * Reading-library acceptance criteria that were only code-reviewed until
  * Phase 3's harness existed: a generation started on one level and finished after the
  * learner switched level lands on (and only on) the level it was made for.
  */

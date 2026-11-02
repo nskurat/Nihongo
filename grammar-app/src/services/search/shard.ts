@@ -1,7 +1,7 @@
 import type { Level } from './types';
 
 /**
- * Wire format of the prebuilt index shards (docs/search/04-data.md §4.2). Documents are
+ * Wire format of the prebuilt index shards. Documents are
  * positional arrays and leave out every key the loader can derive cheaply (normalised
  * surface/reading, long-vowel folds, English tokens, kanji reading keys).
  */

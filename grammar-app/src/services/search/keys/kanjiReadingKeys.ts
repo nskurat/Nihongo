@@ -8,7 +8,7 @@ export interface KanjiReadingKeys {
 }
 
 /**
- * Keys of one kanji reading (docs/search/04-data.md §2.4). Accepts all three separator
+ * Keys of one kanji reading. Accepts all three separator
  * styles (`・`, `.`, affix `-`) so a future source refresh cannot break matching.
  */
 export function kanjiReadingKeys(reading: string): KanjiReadingKeys | null {
