@@ -2292,7 +2292,7 @@
         }
       ],
       "summary": "N と言えば = speaking of N / N makes you think of…",
-      "details": "- 夏**と言えば**、花火だ。 Summer means fireworks.\n- 田中さん**と言えば**、最近見ないね。 Speaking of Tanaka, we haven't seen him lately.\n- 来月**というと**、もうすぐですね。",
+      "details": "- 夏**と言えば**、花火だ。 Summer means fireworks.\n- 森さん**と言えば**、最近見ないね。 Speaking of Mr. Mori, we haven't seen him lately.\n- 来月**というと**、もうすぐですね。",
       "tags": [
         "connective",
         "viewpoint-standpoint"
@@ -2471,11 +2471,11 @@
         },
         {
           "jp": "風邪か何かで、今日は休むそうです。",
-          "en": "Apparently she's off today with a cold or something."
+          "en": "Apparently they're off today with a cold or something."
         }
       ],
       "summary": "N か何か = N or something (like that).",
-      "details": "- 喉がかわいたね。ジュース**か何か**飲もう。 I'm thirsty. Let's have juice or something.\n- 田中さん**かだれか**に聞いてみて。 Ask Tanaka or someone.\n- 公園**かどこか**で会おう。",
+      "details": "- 喉がかわいたね。ジュース**か何か**飲もう。 I'm thirsty. Let's have juice or something.\n- 森さん**かだれか**に聞いてみて。 Ask Mr. Mori or someone.\n- 公園**かどこか**で会おう。",
       "tags": [
         "listing-examples",
         "colloquial"
@@ -2860,7 +2860,7 @@
       "examples": [
         {
           "jp": "あんなにうれしそうな顔をしている。何かいいことがあったに違いない。",
-          "en": "Look how happy she looks. Something good must have happened."
+          "en": "They look so happy. Something good must have happened."
         },
         {
           "jp": "この字はケンの字に違いない。",
@@ -3673,8 +3673,8 @@
           "en": "I'd dialled the wrong number, so I called again."
         },
         {
-          "jp": "この映画は、二回目に見直したら、もっとおもしろかった。",
-          "en": "When I watched this film a second time, it was even better."
+          "jp": "間違いが見つかったので、書類を書き直して、もう一度出した。",
+          "en": "I found a mistake, so I rewrote the form and handed it in again."
         }
       ],
       "summary": "Stem + 直す = do again (to correct).",

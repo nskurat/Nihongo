@@ -305,7 +305,7 @@
       "meaning": "\"Speaking of…\", \"when you think of…\".",
       "explanation": "と言えば picks up a topic just mentioned and moves to something related: 京都と言えば、お寺だね. It also states the first thing that comes to mind for a word. というと can also check what the listener means: 来週というと、何日ですか.",
       "summary": "N と言えば = speaking of N / N makes you think of…",
-      "details": "- 夏**と言えば**、花火だ。 Summer means fireworks.\n- 田中さん**と言えば**、最近見ないね。 Speaking of Tanaka, we haven't seen him lately.\n- 来月**というと**、もうすぐですね。",
+      "details": "- 夏**と言えば**、花火だ。 Summer means fireworks.\n- 森さん**と言えば**、最近見ないね。 Speaking of Mr. Mori, we haven't seen him lately.\n- 来月**というと**、もうすぐですね。",
       "tags": ["connective", "viewpoint-standpoint"],
       "examples": [
         { "jp": "北海道と言えば、やっぱりおいしい魚ですね。", "en": "When you think of Hokkaido, it's the delicious fish." },
@@ -405,11 +405,11 @@
       "meaning": "\"…or something\", \"…or someone\": a vague example.",
       "explanation": "か何か keeps a suggestion or guess loose: N or something similar. Use かだれか for people and かどこか for places.",
       "summary": "N か何か = N or something (like that).",
-      "details": "- 喉がかわいたね。ジュース**か何か**飲もう。 I'm thirsty. Let's have juice or something.\n- 田中さん**かだれか**に聞いてみて。 Ask Tanaka or someone.\n- 公園**かどこか**で会おう。",
+      "details": "- 喉がかわいたね。ジュース**か何か**飲もう。 I'm thirsty. Let's have juice or something.\n- 森さん**かだれか**に聞いてみて。 Ask Mr. Mori or someone.\n- 公園**かどこか**で会おう。",
       "tags": ["listing-examples", "colloquial"],
       "examples": [
         { "jp": "道に迷ったら、駅員かだれかに聞いてください。", "en": "If you get lost, ask a station attendant or someone." },
-        { "jp": "風邪か何かで、今日は休むそうです。", "en": "Apparently she's off today with a cold or something." }
+        { "jp": "風邪か何かで、今日は休むそうです。", "en": "Apparently they're off today with a cold or something." }
       ]
     }
   ],

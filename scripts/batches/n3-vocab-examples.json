@@ -1,5 +1,5 @@
 {
-  "_comment": "N3 restructure (2026-11): the only N3 vocab examples that used named characters, rewritten with this app's own cast. The other 1,864 examples were not textbook sentences and are kept. uid -> [expected word, exampleJp, exampleEn]. Applied by scripts/rewrite-n3-vocab-examples.ts.",
+  "_comment": "N3 restructure (2026-11): the N3 vocab examples that used named characters, rewritten with this app's own cast, plus one the teacher review found unnatural (言い訳する). The other 1,864 examples were not textbook sentences and are kept. uid -> [expected word, exampleJp, exampleEn]. Applied by scripts/rewrite-n3-vocab-examples.ts.",
   "examples": {
     "n3-vocab-4-13": [
       "〜宅",
@@ -15,6 +15,11 @@
       "いつもお世話になっております。",
       "さくら商事の小林です。いつもお世話になっております。",
       "This is Kobayashi from Sakura Trading. Thank you for your continued support."
+    ],
+    "n3-vocab-10-54": [
+      "言い訳する",
+      "遅刻した理由を聞かれて、電車のせいにして言い訳した。",
+      "Asked why I was late, I made the excuse that the train was to blame."
     ]
   }
 }

@@ -69,13 +69,22 @@ of the same lesson the way N5/N4 are.
 - によって／による and "A は B によって V passive" became one point (L24); the creator use is
   also taught in N4 L22.
 
+## Japanese-teacher review
+
+The SME review (2026-11-02) approved with changes. A sample of 60 kept vocab examples found
+generic study sentences, not textbook text, so keeping them stands; one (言い訳する) was
+unnatural and was rewritten. In the grammar, 田中 was left in two details sections (now 森),
+an example misused 見直す ("re-watch"; it means re-check or re-evaluate) under 〜直す, and two
+English translations assumed a gender the Japanese doesn't give. The sequence and the vocab
+themes were kept.
+
 ## How it was applied
 
 `npx tsx scripts/restructure-n3.ts` is a one-time migration with the same helpers as N5/N4
 (`scripts/lib/n5Restructure.ts`, which now takes the lesson count). It reads the authored
 grammar (`scripts/batches/n3-grammar/*.json`) and the vocab assignment, writes the three N3
 data files and `grammar-app/src/store/n3RestructureUids.ts`, and refuses to run again.
-`npx tsx scripts/rewrite-n3-vocab-examples.ts` then writes the three rewritten examples.
+`npx tsx scripts/rewrite-n3-vocab-examples.ts` then writes the four rewritten examples.
 The AI cache (store v13) moves every cached N3 note, example set and mnemonic to its item's
 new uid.
 
