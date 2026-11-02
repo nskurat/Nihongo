@@ -82,7 +82,7 @@
       "tags": ["spontaneous-perception", "change-of-state"],
       "examples": [
         { "jp": "家に帰ってから、かばんを忘れたことに気がつきました。", "en": "I only realised I'd forgotten my bag after I got home." },
-        { "jp": "エマさんが髪を切ったのに、だれも気がつきませんでした。", "en": "Emma had cut her hair, but nobody noticed." }
+        { "jp": "エマさんが髪を切りましたが、だれも気がつきませんでした。", "en": "Emma had cut her hair, but nobody noticed." }
       ]
     },
     {
@@ -264,7 +264,7 @@
       "meaning": "\"Should be\", \"is supposed to\": a confident conclusion based on facts you know.",
       "explanation": "はず is reasoning, not a wish: you know something that makes the conclusion very likely (a timetable, what someone said, how things work). It is not used for your own decisions. With the past, 〜はずでした means it should have been so but was not.",
       "summary": "はずです = it should be so, by my reasoning.",
-      "details": "- 荷物は今日届く**はずです**。 (I was told it ships yesterday.) The parcel should arrive today.\n- 森さんは今日休み**のはずです**。 Mr. Mori is supposed to be off today.\n- ✗ わたしは明日行くはずです (your own plan) → ✓ 行くつもりです。",
+      "details": "- 荷物は今日届く**はずです**。 (I was told it ships yesterday.) The parcel should arrive today.\n- 森さんは今日休み**のはずです**。 Mr. Mori is supposed to be off today.\n- For a plan you made yourself, say つもりです: 明日行く**つもりです**。 (わたしは明日行くはずです means someone else arranged it.)",
       "tags": ["certainty-expectation"],
       "examples": [
         { "jp": "九時に出発したから、もう着いているはずです。", "en": "He left at nine, so he should be there by now." },

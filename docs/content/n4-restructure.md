@@ -74,6 +74,21 @@ purpose-and-amounts lesson, school words with the causative).
 
 あとで (N5 L25) is now taught in N4 as a contrast with てから (L21).
 
+## Japanese-teacher review
+
+The SME review (2026-11-02) approved with changes:
+- **Wrong or misleading**: the そ-in-writing details used それで (a conjunction) as its
+  example; "only に works with 入る" was overstated (部屋へ入る is fine); the はず note
+  ruled out わたしは行くはずです, which is right when someone else made the plan.
+- **Taught too early**: と, ば, ても, のに, ないで and ので appeared in examples before their
+  lessons (L1, L2, L5, L6, L7, L8). All were rewritten with earlier grammar.
+- **Unnatural**: 新しい魚 → 新鮮な魚; たった今〜たばかり → たった今〜たところ;
+  ご覧になってください → a plain question with ご覧になる; お先にどうぞ used as the set phrase.
+- About ten smaller fixes to translations and examples (a gendered "sir", doll vs stuffed
+  toy, floor numbering, 酔う, 落ちている).
+
+The lesson sequence was kept as it is.
+
 ## How it was applied
 
 `npx tsx scripts/restructure-n4.ts` is a one-time migration with the same helpers as N5

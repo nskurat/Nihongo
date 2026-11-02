@@ -65,7 +65,7 @@
       "meaning": "に marks where you arrive; へ marks the direction you head in.",
       "explanation": "With verbs of movement, へ and に are often interchangeable. に puts the weight on the place you end up at, so it is the natural choice when the place is the point of the sentence, for example asking whether someone comes here often. へ stresses the direction and appears more in writing.",
       "summary": "に (arrival point) and へ (direction) both work with movement verbs; に is the everyday choice when the place itself matters.",
-      "details": "- よくこの店**に**来るんですか。 Do you come to this shop often?\n- 来年、国**へ**帰ります。 I'm going back to my country next year.\n\nOnly に works for getting into or onto something: 電車**に**乗ります, 部屋**に**入ります.",
+      "details": "- よくこの店**に**来るんですか。 Do you come to this shop often?\n- 来年、国**へ**帰ります。 I'm going back to my country next year.\n\nFor getting into or onto something, に is the usual choice: 電車**に**乗ります, 部屋**に**入ります.",
       "tags": ["particle-usage"],
       "examples": [
         { "jp": "よくこの公園に来るんですか。", "en": "Do you come to this park often?" },
@@ -86,7 +86,7 @@
       "tags": ["potential", "meta-conjugation"],
       "examples": [
         { "jp": "アンナさんは漢字が三百ぐらい読めます。", "en": "Anna can read about three hundred kanji." },
-        { "jp": "朝が早いので、六時に起きられません。", "en": "I can't get up at six; it's too early for me." },
+        { "jp": "六時には起きられません。いつも七時に起きます。", "en": "I can't get up at six. I always get up at seven." },
         { "jp": "この店ではカードが使えますか。", "en": "Can I use a card in this shop?" }
       ]
     },
@@ -114,7 +114,7 @@
       "details": "| Natural perception | Chance or ability |\n| :--- | :--- |\n| 窓から海が**見えます**。 | この映画はネットで**見られます**。 |\n| 鳥の声が**聞こえます**。 | このサイトで音楽が**聞けます**。 |",
       "tags": ["spontaneous-perception"],
       "examples": [
-        { "jp": "後ろの席だと、黒板の字がよく見えません。", "en": "From the back seats I can't see the writing on the board well." },
+        { "jp": "後ろの席からは、黒板の字がよく見えません。", "en": "From the back seats I can't see the writing on the board well." },
         { "jp": "隣の部屋からピアノの音が聞こえます。", "en": "I can hear a piano from the next room." }
       ]
     },
@@ -433,7 +433,7 @@
       "tags": ["state-continuation"],
       "examples": [
         { "jp": "窓を開けたまま、出かけてしまいました。", "en": "I went out and left the window open." },
-        { "jp": "野菜は切らないで、そのまま入れてください。", "en": "Don't cut the vegetables; put them in as they are." }
+        { "jp": "野菜は切らなくてもいいです。そのまま入れてください。", "en": "You don't need to cut the vegetables; put them in as they are." }
       ]
     },
     {

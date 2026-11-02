@@ -328,7 +328,7 @@
       "tags": ["keigo-respectful"],
       "examples": [
         { "jp": "先生は今、研究室にいらっしゃいます。", "en": "The professor is in the office at the moment." },
-        { "jp": "部長、昼ご飯はもう召し上がりましたか。", "en": "Have you had lunch yet, sir?" },
+        { "jp": "部長、昼ご飯はもう召し上がりましたか。", "en": "Have you had lunch yet?" },
         { "jp": "この方をご存じですか。", "en": "Do you know this person?" }
       ]
     },

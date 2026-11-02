@@ -127,7 +127,7 @@
         }
       ],
       "summary": "に (arrival point) and へ (direction) both work with movement verbs; に is the everyday choice when the place itself matters.",
-      "details": "- よくこの店**に**来るんですか。 Do you come to this shop often?\n- 来年、国**へ**帰ります。 I'm going back to my country next year.\n\nOnly に works for getting into or onto something: 電車**に**乗ります, 部屋**に**入ります.",
+      "details": "- よくこの店**に**来るんですか。 Do you come to this shop often?\n- 来年、国**へ**帰ります。 I'm going back to my country next year.\n\nFor getting into or onto something, に is the usual choice: 電車**に**乗ります, 部屋**に**入ります.",
       "tags": [
         "particle-usage"
       ]
@@ -149,8 +149,8 @@
           "en": "Anna can read about three hundred kanji."
         },
         {
-          "jp": "朝が早いので、六時に起きられません。",
-          "en": "I can't get up at six; it's too early for me."
+          "jp": "六時には起きられません。いつも七時に起きます。",
+          "en": "I can't get up at six. I always get up at seven."
         },
         {
           "jp": "この店ではカードが使えますか。",
@@ -202,7 +202,7 @@
       "explanation": "見えます and 聞こえます describe what your eyes and ears pick up without effort. The potential forms 見られます and 聞けます describe what you are able to see or hear because the chance exists, such as a film showing or a website with music.",
       "examples": [
         {
-          "jp": "後ろの席だと、黒板の字がよく見えません。",
+          "jp": "後ろの席からは、黒板の字がよく見えません。",
           "en": "From the back seats I can't see the writing on the board well."
         },
         {
@@ -788,8 +788,8 @@
           "en": "I went out and left the window open."
         },
         {
-          "jp": "野菜は切らないで、そのまま入れてください。",
-          "en": "Don't cut the vegetables; put them in as they are."
+          "jp": "野菜は切らなくてもいいです。そのまま入れてください。",
+          "en": "You don't need to cut the vegetables; put them in as they are."
         }
       ],
       "summary": "〜まま = in an unchanged state, left as it is.",
@@ -1022,7 +1022,7 @@
           "en": "I only realised I'd forgotten my bag after I got home."
         },
         {
-          "jp": "エマさんが髪を切ったのに、だれも気がつきませんでした。",
+          "jp": "エマさんが髪を切りましたが、だれも気がつきませんでした。",
           "en": "Emma had cut her hair, but nobody noticed."
         }
       ],
@@ -1362,7 +1362,7 @@
         }
       ],
       "summary": "はずです = it should be so, by my reasoning.",
-      "details": "- 荷物は今日届く**はずです**。 (I was told it ships yesterday.) The parcel should arrive today.\n- 森さんは今日休み**のはずです**。 Mr. Mori is supposed to be off today.\n- ✗ わたしは明日行くはずです (your own plan) → ✓ 行くつもりです。",
+      "details": "- 荷物は今日届く**はずです**。 (I was told it ships yesterday.) The parcel should arrive today.\n- 森さんは今日休み**のはずです**。 Mr. Mori is supposed to be off today.\n- For a plan you made yourself, say つもりです: 明日行く**つもりです**。 (わたしは明日行くはずです means someone else arranged it.)",
       "tags": [
         "certainty-expectation"
       ]
@@ -2152,7 +2152,7 @@
         }
       ],
       "summary": "In writing, その／それ points back to something the text just mentioned.",
-      "details": "- 駅の前に小さい店があります。**その**店のパンはとてもおいしいです。 There's a small shop by the station. The bread at that shop is delicious.\n- 「明日は雪」**という**ニュースを見た。**それ**で、早く家を出た。",
+      "details": "- 駅の前に小さい店があります。**その**店のパンはとてもおいしいです。 There's a small shop by the station. The bread at that shop is delicious.\n- 「明日は雪」というニュースを見た。**それ**を聞いて、早く家を出た。 (それ = the news)",
       "tags": [
         "demonstrative"
       ]
@@ -4043,7 +4043,7 @@
         },
         {
           "jp": "部長、昼ご飯はもう召し上がりましたか。",
-          "en": "Have you had lunch yet, sir?"
+          "en": "Have you had lunch yet?"
         },
         {
           "jp": "この方をご存じですか。",

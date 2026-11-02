@@ -8,8 +8,8 @@
     ],
     "n4-vocab-1-2": [
       "間に合います",
-      "急げば間に合いますか。…はい、まだ大丈夫ですよ。",
-      "Will I make it if I hurry? — Yes, you're still fine."
+      "走って、電車に間に合いました。",
+      "I ran and made the train."
     ],
     "n4-vocab-1-3": [
       "参加します",
@@ -53,7 +53,7 @@
     ],
     "n4-vocab-1-11": [
       "遅刻します",
-      "寝坊して、アルバイトに遅刻してしまったんです。",
+      "寝坊して、アルバイトに遅刻したんです。",
       "I overslept and was late for my part-time job."
     ],
     "n4-vocab-1-12": [
@@ -93,7 +93,7 @@
     ],
     "n4-vocab-2-5": [
       "はっきり",
-      "後ろの席だと、先生の声がはっきり聞こえません。",
+      "後ろの席からは、先生の声がはっきり聞こえません。",
       "From the back seats you can't hear the teacher clearly."
     ],
     "n4-vocab-2-6": [
@@ -268,8 +268,8 @@
     ],
     "n4-vocab-5-10": [
       "まだ",
-      "もう十二時なのに、子どもたちはまだ起きています。",
-      "It's already midnight, and the kids are still up."
+      "もう十二時ですが、子どもたちはまだ起きています。",
+      "It's already midnight, but the kids are still up."
     ],
     "n4-vocab-5-11": [
       "もう〜ません",
@@ -293,8 +293,8 @@
     ],
     "n4-vocab-5-15": [
       "おちます",
-      "棚から本が落ちていますよ。",
-      "A book has fallen off the shelf."
+      "棚の本が床に落ちていますよ。",
+      "A book from the shelf is lying on the floor."
     ],
     "n4-vocab-5-16": [
       "なくなります",
@@ -428,8 +428,8 @@
     ],
     "n4-vocab-7-11": [
       "あきらめます",
-      "難しくても、あきらめないで続けようと思います。",
-      "Even if it's hard, I'm going to keep going and not give up."
+      "難しいですが、まだあきらめません。",
+      "It's hard, but I'm not giving up yet."
     ],
     "n4-vocab-7-12": [
       "機会",
@@ -483,7 +483,7 @@
     ],
     "n4-vocab-8-5": [
       "咲きます",
-      "来週になれば、桜が咲くはずです。",
+      "来週には桜が咲くはずです。",
       "The cherry blossoms should be out by next week."
     ],
     "n4-vocab-8-6": [
@@ -588,8 +588,8 @@
     ],
     "n4-vocab-10-4": [
       "港",
-      "港に行けば、新しい魚が買えますよ。",
-      "If you go to the harbour, you can buy fresh fish."
+      "港の近くの店では、新鮮な魚が買えます。",
+      "You can buy fresh fish at the shops near the harbour."
     ],
     "n4-vocab-10-5": [
       "それなら",
@@ -683,8 +683,8 @@
     ],
     "n4-vocab-11-13": [
       "酔います",
-      "お酒に酔ったら、運転してはいけません。",
-      "If you've been drinking, you mustn't drive."
+      "お酒に酔って、駅のベンチで寝てしまいました。",
+      "I got drunk and fell asleep on a bench at the station."
     ],
     "n4-vocab-11-14": [
       "危険／危ない",
@@ -1044,7 +1044,7 @@
     "n4-vocab-18-8": [
       "かわいい",
       "あの犬、かわいいですね。人形みたいです。",
-      "That dog's so cute. It's like a stuffed toy."
+      "That dog's so cute. It looks like a doll."
     ],
     "n4-vocab-18-9": [
       "厚い",
@@ -1093,8 +1093,8 @@
     ],
     "n4-vocab-19-6": [
       "しんじます",
-      "友だちに聞いたけど、まだ信じられません。",
-      "A friend told me, but I still can't believe it."
+      "その話は友だちから聞きましたが、まだ信じられません。",
+      "A friend told me about it, but I still can't believe it."
     ],
     "n4-vocab-19-7": [
       "人口",
@@ -1238,8 +1238,8 @@
     ],
     "n4-vocab-21-13": [
       "たった今",
-      "たった今、メールを送ったばかりです。",
-      "I've only just sent the email this second."
+      "たった今、メールを送ったところです。",
+      "I've just this second sent the email."
     ],
     "n4-vocab-21-14": [
       "わかれます",
@@ -1363,8 +1363,8 @@
     ],
     "n4-vocab-24-2": [
       "お先にどうぞ。",
-      "どうぞ、お先にお入りください。",
-      "Please, go in ahead of me."
+      "お先にどうぞ。…すみません、ありがとうございます。",
+      "After you. — Oh, thank you."
     ],
     "n4-vocab-24-3": [
       "本社／支店",
@@ -1418,8 +1418,8 @@
     ],
     "n4-vocab-24-13": [
       "ご覧になります",
-      "お客様、こちらのパンフレットをご覧になってください。",
-      "Please take a look at this brochure."
+      "このパンフレットは、もうご覧になりましたか。",
+      "Have you already looked at this brochure?"
     ],
     "n4-vocab-24-14": [
       "ご存じです",
@@ -1489,7 +1489,7 @@
     "n4-vocab-25-11": [
       "ございます",
       "お手洗いは二階にございます。",
-      "The restrooms are on the first floor."
+      "The restrooms are on the second floor."
     ],
     "n4-vocab-25-12": [
       "私",

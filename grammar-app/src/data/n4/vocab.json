@@ -25,8 +25,8 @@
       "romaji": "maniaimasu",
       "pos": "verb-godan",
       "meaning": "Be in time for",
-      "exampleJp": "急げば間に合いますか。…はい、まだ大丈夫ですよ。",
-      "exampleEn": "Will I make it if I hurry? — Yes, you're still fine.",
+      "exampleJp": "走って、電車に間に合いました。",
+      "exampleEn": "I ran and made the train.",
       "lemma": "間に合う",
       "lemmaReading": "まにあう"
     },
@@ -154,7 +154,7 @@
       "romaji": "chikokushimasu",
       "pos": "verb-irregular",
       "meaning": "Be late, come late",
-      "exampleJp": "寝坊して、アルバイトに遅刻してしまったんです。",
+      "exampleJp": "寝坊して、アルバイトに遅刻したんです。",
       "exampleEn": "I overslept and was late for my part-time job.",
       "lemma": "遅刻する",
       "lemmaReading": "ちこくする"
@@ -388,7 +388,7 @@
       "romaji": "hakkiri",
       "pos": "adverb",
       "meaning": "Clearly",
-      "exampleJp": "後ろの席だと、先生の声がはっきり聞こえません。",
+      "exampleJp": "後ろの席からは、先生の声がはっきり聞こえません。",
       "exampleEn": "From the back seats you can't hear the teacher clearly."
     },
     {
@@ -1391,8 +1391,8 @@
       "romaji": "mada",
       "pos": "adverb",
       "meaning": "Still",
-      "exampleJp": "もう十二時なのに、子どもたちはまだ起きています。",
-      "exampleEn": "It's already midnight, and the kids are still up."
+      "exampleJp": "もう十二時ですが、子どもたちはまだ起きています。",
+      "exampleEn": "It's already midnight, but the kids are still up."
     },
     {
       "uid": "n4-vocab-5-11",
@@ -1462,8 +1462,8 @@
       "romaji": "ochimasu",
       "pos": "verb-ichidan",
       "meaning": "[baggage] fall down",
-      "exampleJp": "棚から本が落ちていますよ。",
-      "exampleEn": "A book has fallen off the shelf.",
+      "exampleJp": "棚の本が床に落ちていますよ。",
+      "exampleEn": "A book from the shelf is lying on the floor.",
       "lemma": "おちる",
       "lemmaReading": "おちる"
     },
@@ -2259,8 +2259,8 @@
       "romaji": "akiramemasu",
       "pos": "verb-ichidan",
       "meaning": "Give up",
-      "exampleJp": "難しくても、あきらめないで続けようと思います。",
-      "exampleEn": "Even if it's hard, I'm going to keep going and not give up.",
+      "exampleJp": "難しいですが、まだあきらめません。",
+      "exampleEn": "It's hard, but I'm not giving up yet.",
       "lemma": "あきらめる",
       "lemmaReading": "あきらめる"
     },
@@ -2546,7 +2546,7 @@
       "romaji": "sakimasu",
       "pos": "verb-godan",
       "meaning": "[flowers] bloom",
-      "exampleJp": "来週になれば、桜が咲くはずです。",
+      "exampleJp": "来週には桜が咲くはずです。",
       "exampleEn": "The cherry blossoms should be out by next week.",
       "lemma": "咲く",
       "lemmaReading": "さく"
@@ -3380,8 +3380,8 @@
       "romaji": "minato",
       "pos": "noun",
       "meaning": "Port, harbor",
-      "exampleJp": "港に行けば、新しい魚が買えますよ。",
-      "exampleEn": "If you go to the harbour, you can buy fresh fish."
+      "exampleJp": "港の近くの店では、新鮮な魚が買えます。",
+      "exampleEn": "You can buy fresh fish at the shops near the harbour."
     },
     {
       "uid": "n4-vocab-10-5",
@@ -3965,8 +3965,8 @@
       "romaji": "yoimasu",
       "pos": "verb-godan",
       "meaning": "Get drunk",
-      "exampleJp": "お酒に酔ったら、運転してはいけません。",
-      "exampleEn": "If you've been drinking, you mustn't drive.",
+      "exampleJp": "お酒に酔って、駅のベンチで寝てしまいました。",
+      "exampleEn": "I got drunk and fell asleep on a bench at the station.",
       "lemma": "酔う",
       "lemmaReading": "よう"
     },
@@ -6375,7 +6375,7 @@
       "pos": "i-adjective",
       "meaning": "Lovely, cute",
       "exampleJp": "あの犬、かわいいですね。人形みたいです。",
-      "exampleEn": "That dog's so cute. It's like a stuffed toy."
+      "exampleEn": "That dog's so cute. It looks like a doll."
     },
     {
       "uid": "n4-vocab-18-9",
@@ -6771,8 +6771,8 @@
       "romaji": "shinjimasu",
       "pos": "verb-ichidan",
       "meaning": "Believe, trust",
-      "exampleJp": "友だちに聞いたけど、まだ信じられません。",
-      "exampleEn": "A friend told me, but I still can't believe it.",
+      "exampleJp": "その話は友だちから聞きましたが、まだ信じられません。",
+      "exampleEn": "A friend told me about it, but I still can't believe it.",
       "lemma": "しんじる",
       "lemmaReading": "しんじる"
     },
@@ -7624,8 +7624,8 @@
       "romaji": "tattaima",
       "pos": "adverb",
       "meaning": "Just now (with past tense)",
-      "exampleJp": "たった今、メールを送ったばかりです。",
-      "exampleEn": "I've only just sent the email this second."
+      "exampleJp": "たった今、メールを送ったところです。",
+      "exampleEn": "I've just this second sent the email."
     },
     {
       "uid": "n4-vocab-21-14",
@@ -8487,8 +8487,8 @@
       "romaji": "osaki ni douzo.",
       "pos": "expression",
       "meaning": "After you / go ahead.",
-      "exampleJp": "どうぞ、お先にお入りください。",
-      "exampleEn": "Please, go in ahead of me."
+      "exampleJp": "お先にどうぞ。…すみません、ありがとうございます。",
+      "exampleEn": "After you. — Oh, thank you."
     },
     {
       "uid": "n4-vocab-24-3",
@@ -8640,8 +8640,8 @@
       "romaji": "goran'ninarimasu",
       "pos": "verb-godan",
       "meaning": "See, look at (respectful)",
-      "exampleJp": "お客様、こちらのパンフレットをご覧になってください。",
-      "exampleEn": "Please take a look at this brochure.",
+      "exampleJp": "このパンフレットは、もうご覧になりましたか。",
+      "exampleEn": "Have you already looked at this brochure?",
       "lemma": "ご覧になる",
       "lemmaReading": "ごらんになる"
     },
@@ -8961,7 +8961,7 @@
       "pos": "verb-godan",
       "meaning": "Be (polite)",
       "exampleJp": "お手洗いは二階にございます。",
-      "exampleEn": "The restrooms are on the first floor."
+      "exampleEn": "The restrooms are on the second floor."
     },
     {
       "uid": "n4-vocab-25-12",
