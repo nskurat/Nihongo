@@ -22,6 +22,7 @@ import {
 import { FROM_SEARCH, useSearchUiStore, type NavItem } from './searchUiStore';
 import { liveCountMessage, S } from './strings';
 import { useSearch } from './useSearch';
+import { LG_QUERY, useMediaQuery } from './useMediaQuery';
 import { ErrorCard, FunctionEmpty, FunctionHeader, FunctionRows, NoResults, Skeleton } from './SearchPanels';
 
 const CATEGORY_IDS: ReadonlySet<string> = new Set(ALIAS_CATEGORIES.map((c) => c.id));
@@ -63,6 +64,7 @@ export default function SearchPage() {
   const { state } = parsed;
   const rankLevel = useAppStore((s) => s.lastLesson.level);
   const showTranslations = useAppStore((s) => s.showTranslations);
+  const isWide = useMediaQuery(LG_QUERY);
   const search = useSearch(state, rankLevel);
   const activeId = useSearchUiStore((s) => s.activeId);
   const setItems = useSearchUiStore((s) => s.setItems);
@@ -187,12 +189,21 @@ export default function SearchPage() {
   const showScope = search.mode === 'search' && !functionMode;
   const kanjiOnlyNote = res && !res.wordMatch && res.queryHasKanji && res.groups.kanji.length > 0;
 
+  const filters = (
+    <aside className="lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-2" aria-label={S.filters}>
+      <SearchFilters state={state} facetCounts={res?.facetCounts} functionLabel={functionLabel} rankLevel={rankLevel} onChange={update} />
+    </aside>
+  );
+
   return (
     <main className="max-w-6xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-[auto_1fr] gap-4 lg:gap-x-6 lg:gap-y-4 lg:items-start animate-fade-in">
       <h1 className="sr-only">{S.searchTitle}</h1>
 
-      {/* Status, scope and category chips come first in the DOM so Tab reaches them before the
-          filters (03-ux §4.3); on wide screens they sit in the right column. */}
+      {/* Focus order follows the screen (WCAG 2.4.3). On wide screens the filters are a left rail,
+          so status, scope and category chips come first in the DOM and Tab reaches them before the
+          filters (03-ux §4.3). Below lg the filters are strips above everything, so they come first. */}
+      {!isWide && filters}
+
       <div className="lg:col-start-2 lg:col-span-3 lg:row-start-1 space-y-4 min-w-0 empty:hidden">
         <SearchStatus announce={announce}>
           {(res || showScope) && !functionMode && (
@@ -230,9 +241,8 @@ export default function SearchPage() {
         )}
       </div>
 
-      <aside className="lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-2 max-lg:order-first" aria-label={S.filters}>
-        <SearchFilters state={state} facetCounts={res?.facetCounts} functionLabel={functionLabel} rankLevel={rankLevel} onChange={update} />
-      </aside>
+
+      {isWide && filters}
 
       <div className="lg:col-start-2 lg:col-span-3 lg:row-start-2 space-y-4 min-w-0">
         {search.mode === 'empty' && (

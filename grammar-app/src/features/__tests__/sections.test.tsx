@@ -84,8 +84,27 @@ describe('Vocab and Kanji sections (smoke)', () => {
     expect(await screen.findByText('日')).toBeInTheDocument();
     expect(screen.getByText('日本')).toBeInTheDocument();
     expect(screen.getByText('Japan')).toBeInTheDocument();
+    expect(screen.getByText('にほん')).toBeInTheDocument();
     const missing = screen.getByText('本気').closest('li') as HTMLElement;
     expect(within(missing).getByText('—')).toBeInTheDocument();
+  });
+});
+
+describe('Out-of-range lesson URLs', () => {
+  it.each([
+    ['/n9/grammar/1', '/n3/grammar/1'],
+    ['/n3/grammar/99', '/n3/grammar/1'],
+    ['/n5/vocab/26', '/n5/vocab/1'],
+    ['/N4/grammar/30', '/n4/grammar/5'],
+    ['/n5/nonsense/2', '/n5/grammar/2'],
+  ])('replaces %s with %s', async (route, expected) => {
+    const { currentPath } = renderWithRouter(<App />, { route });
+    expect(currentPath()).toBe(expected);
+  });
+
+  it('keeps the query string when it redirects', async () => {
+    const { currentPath } = renderWithRouter(<App />, { route: '/n5/reading/99?view=library' });
+    expect(currentPath()).toBe('/n5/reading/1?view=library');
   });
 });
 

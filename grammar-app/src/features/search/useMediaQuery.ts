@@ -2,6 +2,8 @@ import { useSyncExternalStore } from 'react';
 
 /** Tailwind `md` breakpoint. */
 export const MD_QUERY = '(min-width: 768px)';
+/** Tailwind `lg` breakpoint. */
+export const LG_QUERY = '(min-width: 1024px)';
 
 export function useMediaQuery(query: string): boolean {
   return useSyncExternalStore(

@@ -70,3 +70,24 @@ export function clampLessonForLevel(level: LevelType, lesson: number): number {
   if (isNaN(lesson) || lesson < min || lesson > max) return def;
   return lesson;
 }
+
+/**
+ * The canonical path for a `/:level/:section/:lesson?` URL: lowercase level and
+ * section, an unknown level read as N3, a section the level lacks read as its
+ * grammar, and the lesson clamped into range (legacy N4 numbers mapped first).
+ * A URL without a lesson segment keeps having none. The router redirects any
+ * other spelling here with `replace`, so bookmarks and shared links show the
+ * lesson that is actually on screen.
+ */
+export function canonicalLessonPath(
+  rawLevel: string | undefined,
+  rawSection: string | undefined,
+  rawLesson: string | undefined
+): string {
+  const level = parseLevel(rawLevel);
+  const requested = (rawSection?.toLowerCase() || 'grammar') as SectionType;
+  const section = isSectionAvailable(level, requested) ? requested : 'grammar';
+  const base = `/${level.toLowerCase()}/${section}`;
+  if (rawLesson === undefined) return base;
+  return `${base}/${clampLessonForLevel(level, fromLegacyLesson(level, parseInt(rawLesson, 10)))}`;
+}
