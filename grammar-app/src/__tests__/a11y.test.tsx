@@ -109,6 +109,28 @@ describe('axe: dialogs', () => {
 });
 
 describe('keyboard and screen-reader semantics', () => {
+  // Tab order must follow the screen: filters are strips above the results below lg,
+  // and a left rail beside them from lg up, where status and chips come first (03-ux §4.3).
+  it.each([
+    [false, 'filters before the category chips on narrow screens'],
+    [true, 'category chips before the filters on wide screens'],
+  ])('search tab order (wide=%s): %s', async (wide) => {
+    const original = window.matchMedia;
+    window.matchMedia = ((query: string) => ({
+      ...original(query),
+      matches: wide && query.includes('1024px'),
+    })) as typeof window.matchMedia;
+    try {
+      renderWithRouter(<App />, { route: '/search?q=although' });
+      const chips = await screen.findByRole('list', { name: 'Grammar categories' });
+      const filters = screen.getByRole('complementary', { name: /filters/i });
+      const chipsFirst = Boolean(chips.compareDocumentPosition(filters) & Node.DOCUMENT_POSITION_FOLLOWING);
+      expect(chipsFirst).toBe(wide);
+    } finally {
+      window.matchMedia = original;
+    }
+  });
+
   it('starts with a skip link to the main content', async () => {
     const user = userEvent.setup();
     renderWithRouter(<App />, { route: '/n5/grammar/1' });

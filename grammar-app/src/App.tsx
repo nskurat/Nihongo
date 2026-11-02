@@ -10,7 +10,7 @@ import AiSettingsModal from './components/common/AiSettingsModal';
 
 import { useAiUiStore } from './store/useAiStore';
 import { SectionType } from './types/japanese';
-import { parseLevel, clampLessonForLevel, fromLegacyLesson, isSectionAvailable } from './utils/levels';
+import { parseLevel, clampLessonForLevel, canonicalLessonPath } from './utils/levels';
 import { parseLegacyUrl } from './utils/legacyUrl';
 
 const DEFAULT_ROUTE = '/n3/grammar/1';
@@ -22,19 +22,20 @@ const SearchPage = lazy(() => import('./features/search/SearchPage'));
 function ContentWrapper() {
   const { level, section, lesson } = useParams<{ level: string; section: string; lesson?: string }>();
 
+  const location = useLocation();
+
+  // Bad or legacy spellings (/n9/..., /n3/grammar/99, /N4/kanji/30, /n2/foo/1) are
+  // replaced with the URL of what is actually rendered, keeping query, hash and state.
+  const canonical = canonicalLessonPath(level, section, lesson);
+  if (location.pathname.replace(/\/+$/, '') !== canonical) {
+    return (
+      <Navigate to={{ pathname: canonical, search: location.search, hash: location.hash }} state={location.state} replace />
+    );
+  }
+
   const parsedLevel = parseLevel(level);
   const parsedSection = (section?.toLowerCase() || 'grammar') as SectionType;
-
-  // Default to each level's starting lesson if unspecified, and guard against out-of-range lessons
-  const parsedLesson = clampLessonForLevel(
-    parsedLevel,
-    fromLegacyLesson(parsedLevel, parseInt(lesson || '', 10))
-  );
-
-  // Sections a level has no content for (e.g. N2 vocab) fall back to its grammar
-  if (!isSectionAvailable(parsedLevel, parsedSection)) {
-    return <Navigate to={`/${parsedLevel.toLowerCase()}/grammar/${parsedLesson}`} replace />;
-  }
+  const parsedLesson = clampLessonForLevel(parsedLevel, parseInt(lesson || '', 10));
 
   // We use this component to render the appropriate section based on the URL
   return (

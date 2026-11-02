@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { LESSON_RANGES, clampLessonForLevel, fromLegacyLesson, parseLevel, isSectionAvailable } from '../levels';
+import { LESSON_RANGES, clampLessonForLevel, fromLegacyLesson, parseLevel, isSectionAvailable, canonicalLessonPath } from '../levels';
 
 describe('lesson numbering', () => {
   it('starts every level at lesson 1', () => {
@@ -44,5 +44,23 @@ describe('N2 and N1', () => {
     expect(isSectionAvailable('N2', 'reading')).toBe(true);
     expect(isSectionAvailable('N3', 'reading')).toBe(true);
     expect(isSectionAvailable('N1', 'reading')).toBe(true);
+  });
+});
+
+describe('canonicalLessonPath', () => {
+  it('leaves a canonical path alone', () => {
+    expect(canonicalLessonPath('n2', 'kanji', '26')).toBe('/n2/kanji/26');
+    expect(canonicalLessonPath('n5', 'reading', undefined)).toBe('/n5/reading');
+  });
+
+  it('lowercases, clamps and maps legacy lessons', () => {
+    expect(canonicalLessonPath('N1', 'Vocab', '33')).toBe('/n1/vocab/1');
+    expect(canonicalLessonPath('n4', 'grammar', '50')).toBe('/n4/grammar/25');
+    expect(canonicalLessonPath('n3', 'grammar', 'abc')).toBe('/n3/grammar/1');
+  });
+
+  it('reads an unknown level as N3 and an unknown section as grammar', () => {
+    expect(canonicalLessonPath('n9', 'kanji', '2')).toBe('/n3/kanji/2');
+    expect(canonicalLessonPath('n5', 'flashcards', '2')).toBe('/n5/grammar/2');
   });
 });

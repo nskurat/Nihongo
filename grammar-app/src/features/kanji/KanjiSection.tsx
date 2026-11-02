@@ -101,7 +101,10 @@ export default function KanjiSection({ activeLevel, activeLesson }: KanjiSection
                       <ul className="space-y-1.5">
                         {item.compounds.slice(0, 3).map((ex: KanjiCompound, idx: number) => (
                           <li key={idx} className="flex justify-between items-center text-sm border-b border-slate-200/50 last:border-0 pb-1.5 last:pb-0">
-                            <span className="font-bold text-slate-700">{ex.word}</span>
+                            <span className="flex flex-col" lang="ja">
+                              <span className="font-bold text-slate-700">{ex.word}</span>
+                              {ex.reading && <span className="text-xs text-slate-500">{ex.reading}</span>}
+                            </span>
                             <span className="text-slate-500 text-xs">
                               {showTranslations ? (ex.meaning ?? '—') : '••••'}
                             </span>

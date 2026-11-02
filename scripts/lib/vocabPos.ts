@@ -20,6 +20,7 @@ export const POS_VALUES = [
   'particle',
   'conjunction',
   'interjection',
+  'prefix',
   'suffix',
   'expression',
   'pattern',
