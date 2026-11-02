@@ -1,66 +1,159 @@
 {
   "21": [
     {
-      "replaces": ["n5-grammar-21-1"],
-      "title": "〜でしょう？（checking with the listener）",
-      "structure": "V／い-adj plain form, な-adj／N + でしょう？",
-      "meaning": "\"..., right?\": expecting the listener to agree.",
-      "explanation": "With a rising tone, でしょう asks the listener to confirm something you think they know. It comes after plain forms; after nouns and な-adjectives, だ drops.",
-      "summary": "明日パーティーに行くでしょう？ — You're going tomorrow, right?",
-      "note": "With a falling tone, でしょう means \"probably\" (the polite だろう).",
-      "details": "| Tone | Meaning |\n| :--- | :--- |\n| rising: 行くでしょう？ | You're going, right? |\n| falling: 雨でしょう。 | It'll probably rain. |",
-      "tags": ["confirmation-seeking", "conjecture-inference"],
+      "replaces": [],
+      "title": "〜でしょう（probably）",
+      "structure": "V／い-adj plain form, な-adj／N + でしょう",
+      "meaning": "\"Probably ...\": a polite guess.",
+      "explanation": "With a falling tone, でしょう says something is likely. It follows plain forms; after nouns and な-adjectives, だ drops. Weather forecasts use it all the time, often with たぶん (probably).",
+      "summary": "明日は雨でしょう = it will probably rain tomorrow.",
+      "details": "| Before でしょう | Example |\n| :--- | :--- |\n| verb | 降る**でしょう** |\n| い-adj | 寒い**でしょう** |\n| な-adj／noun | 静か**でしょう**, 雨**でしょう** |",
+      "tags": [
+        "conjecture-inference"
+      ],
       "examples": [
-        { "jp": "明日のパーティーに行くでしょう？", "en": "You're going to tomorrow's party, aren't you?" },
-        { "jp": "北海道の冬は寒いでしょう？", "en": "Winter in Hokkaido is cold, isn't it?" }
+        {
+          "jp": "明日はたぶん雨でしょう。",
+          "en": "It will probably rain tomorrow."
+        },
+        {
+          "jp": "ケンさんはもううちへ帰ったでしょう。",
+          "en": "Ken has probably gone home already."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-21-2"],
+      "replaces": [
+        "n5-grammar-20-4"
+      ],
+      "title": "〜だろう",
+      "structure": "V／い-adj plain form, な-adj／N + だろう",
+      "meaning": "\"Probably ...\": the plain form of でしょう.",
+      "explanation": "だろう guesses that something is likely. It is the plain counterpart of でしょう and is used in casual speech (men use it more) and in writing.",
+      "summary": "明日は雨だろう = it'll probably rain tomorrow.",
+      "details": "- 明日は晴れる**だろう**。 It will probably be sunny tomorrow.\n- 森さんはもう帰った**だろう**。 Mr. Mori has probably gone home.\n- Polite version: 〜でしょう (previous point).",
+      "tags": [
+        "conjecture-inference",
+        "colloquial"
+      ],
+      "examples": [
+        {
+          "jp": "明日はたぶん雨だろう。",
+          "en": "It'll probably rain tomorrow."
+        },
+        {
+          "jp": "あのレストランはたぶん高いだろう。",
+          "en": "That restaurant is probably expensive."
+        }
+      ],
+      "note": "JLPT lists usually put だろう at N4; it is here beside でしょう so the pair is learnt together."
+    },
+    {
+      "replaces": [
+        "n5-grammar-21-1"
+      ],
+      "title": "〜でしょう？（checking with the listener）",
+      "structure": "V／い-adj plain form, な-adj／N + でしょう？",
+      "meaning": "\"..., right?\": expecting the listener to agree.",
+      "explanation": "With a rising tone, the same でしょう asks the listener to confirm something you think they know. It comes after plain forms; after nouns and な-adjectives, だ drops.",
+      "summary": "明日パーティーに行くでしょう？ — You're going tomorrow, right?",
+      "note": "With a falling tone, でしょう means \"probably\" (the polite だろう).",
+      "details": "| Tone | Meaning |\n| :--- | :--- |\n| rising: 行くでしょう？ | You're going, right? |\n| falling: 雨でしょう。 | It'll probably rain. |",
+      "tags": [
+        "confirmation-seeking",
+        "conjecture-inference"
+      ],
+      "examples": [
+        {
+          "jp": "明日のパーティーに行くでしょう？",
+          "en": "You're going to tomorrow's party, aren't you?"
+        },
+        {
+          "jp": "北海道の冬は寒いでしょう？",
+          "en": "Winter in Hokkaido is cold, isn't it?"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n5-grammar-21-2"
+      ],
       "title": "N(place)で N(event)が あります",
       "structure": "N(place)で N(event)が あります",
       "meaning": "\"There is (an event) at (a place)\": events take で.",
       "explanation": "When あります means an event takes place (a party, a match, a festival), the place takes で, not に.",
       "summary": "Things exist にあります; events happen であります.",
       "details": "- 公園**に**池があります。 There's a pond in the park. (a thing)\n- 公園**で**お祭り**が**あります。 There's a festival in the park. (an event)",
-      "tags": ["existence-location", "particle-usage"],
+      "tags": [
+        "existence-location",
+        "particle-usage"
+      ],
       "examples": [
-        { "jp": "土曜日に体育館で試合があります。", "en": "There's a match at the gym on Saturday." },
-        { "jp": "どこでパーティーがありますか。", "en": "Where is the party?" }
+        {
+          "jp": "土曜日に体育館で試合があります。",
+          "en": "There's a match at the gym on Saturday."
+        },
+        {
+          "jp": "どこでパーティーがありますか。",
+          "en": "Where is the party?"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-21-3"],
+      "replaces": [
+        "n5-grammar-21-3"
+      ],
       "title": "N(occasion)で",
       "structure": "N(occasion)で、〜",
       "meaning": "で for the occasion or situation in which something happens.",
       "explanation": "で after an event or situation means \"at\" or \"in\" that occasion: 会議で, パーティーで, 旅行で.",
       "summary": "会議で話しました = I spoke at the meeting.",
       "details": "- 会議**で**何か意見を言いましたか。 Did you give any opinion at the meeting?\n- 旅行**で**いろいろな人に会いました。 I met all sorts of people on the trip.",
-      "tags": ["particle-usage"],
+      "tags": [
+        "particle-usage"
+      ],
       "examples": [
-        { "jp": "パーティーで新しい友達ができました。", "en": "I made a new friend at the party." },
-        { "jp": "授業で日本の歌を歌いました。", "en": "We sang a Japanese song in class." }
+        {
+          "jp": "パーティーで新しい友達ができました。",
+          "en": "I made a new friend at the party."
+        },
+        {
+          "jp": "授業で日本の歌を歌いました。",
+          "en": "We sang a Japanese song in class."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-21-4"],
+      "replaces": [
+        "n5-grammar-21-4"
+      ],
       "title": "N でも V",
       "structure": "N でも V",
       "meaning": "\"... or something\": a light, open suggestion.",
       "explanation": "でも after a noun offers it as one example among other possibilities, so the suggestion does not sound pushy.",
       "summary": "お茶でも飲みませんか = how about some tea or something?",
       "details": "- ちょっとお茶**でも**飲みませんか。 Shall we have some tea or something?\n- 週末、映画**でも**見ましょう。 Let's see a film or something at the weekend.",
-      "tags": ["listing-examples", "advice-suggestion"],
+      "tags": [
+        "listing-examples",
+        "advice-suggestion"
+      ],
       "examples": [
-        { "jp": "疲れましたね。コーヒーでも飲みませんか。", "en": "We're tired, aren't we? How about a coffee?" },
-        { "jp": "雨ですから、うちでDVDでも見ましょう。", "en": "It's raining, so let's watch a DVD or something at home." }
+        {
+          "jp": "疲れましたね。コーヒーでも飲みませんか。",
+          "en": "That was tiring, wasn't it? How about a coffee?"
+        },
+        {
+          "jp": "雨ですから、うちでDVDでも見ましょう。",
+          "en": "It's raining, so let's watch a DVD or something at home."
+        }
       ]
     }
   ],
   "22": [
     {
-      "replaces": ["n5-grammar-22-1"],
+      "replaces": [
+        "n5-grammar-22-1"
+      ],
       "title": "Noun modification",
       "structure": "Modifier + N",
       "meaning": "In Japanese every modifier comes before the noun.",
@@ -68,104 +161,233 @@
       "summary": "Everything that describes a noun goes before it.",
       "note": "Read long noun phrases from the end: the last noun is the main one.",
       "details": "| Modifier | Example |\n| :--- | :--- |\n| noun + の | 日本**の**車 |\n| い-adj | **新しい**車 |\n| な-adj + な | **きれいな**車 |\n| clause | **父が買った**車 (next point) |",
-      "tags": ["particle-usage"],
+      "tags": [
+        "particle-usage"
+      ],
       "examples": [
-        { "jp": "あの白い車は兄の車です。", "en": "That white car is my brother's." },
-        { "jp": "駅の前の本屋はとても大きいです。", "en": "The bookshop in front of the station is very big." }
+        {
+          "jp": "あの白い車は兄の車です。",
+          "en": "That white car is my brother's."
+        },
+        {
+          "jp": "駅の前の本屋はとても大きいです。",
+          "en": "The bookshop in front of the station is very big."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-22-2"],
+      "replaces": [
+        "n5-grammar-22-2"
+      ],
       "title": "Clause + N（relative clauses）",
       "structure": "［clause in plain form］+ N",
       "meaning": "Describing a noun with a whole clause: \"the book I bought\".",
       "explanation": "Put a clause in plain form directly before the noun. There is no word like \"who\" or \"that\"; tense and negation stay inside the clause.",
       "summary": "昨日買った本 = the book (I) bought yesterday.",
       "details": "| Clause + noun | Meaning |\n| :--- | :--- |\n| 毎日**読む**新聞 | the paper I read every day |\n| 昨日**買った**本 | the book I bought yesterday |\n| 肉を**食べない**人 | people who don't eat meat |\n| めがねを**かけている**人 | the person wearing glasses |",
-      "tags": ["particle-usage"],
+      "tags": [
+        "particle-usage"
+      ],
       "examples": [
-        { "jp": "これは京都で撮った写真です。", "en": "This is a photo I took in Kyoto." },
-        { "jp": "あそこで本を読んでいる人はだれですか。", "en": "Who is the person reading a book over there?" },
-        { "jp": "ケンさんは肉を食べない人です。", "en": "Ken doesn't eat meat." }
+        {
+          "jp": "これは京都で撮った写真です。",
+          "en": "This is a photo I took in Kyoto."
+        },
+        {
+          "jp": "あそこで本を読んでいる人はだれですか。",
+          "en": "Who is the person reading a book over there?"
+        },
+        {
+          "jp": "ケンさんは肉を食べない人です。",
+          "en": "Ken is someone who doesn't eat meat."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-22-4"],
+      "replaces": [
+        "n5-grammar-22-3"
+      ],
+      "title": "Nが inside a noun-modifying clause",
+      "structure": "［N が V／adj］+ N",
+      "meaning": "Inside a clause that describes a noun, the subject takes が, not は.",
+      "explanation": "は belongs to the whole sentence. Inside a clause that describes a noun, the subject switches to が (often の in writing).",
+      "summary": "父が撮った写真, not 父は撮った写真.",
+      "details": "- 父**は**写真を撮りました。 My father took a photo. (sentence)\n- 父**が**撮った写真 the photo my father took (clause)\n- これは母**が**作ったケーキです。",
+      "tags": [
+        "particle-usage",
+        "topic-focus-particle"
+      ],
+      "examples": [
+        {
+          "jp": "これは姉が住んでいるアパートです。",
+          "en": "This is the apartment my sister lives in."
+        },
+        {
+          "jp": "リーさんが作った料理はとてもおいしかったです。",
+          "en": "The food Ms. Lee made was delicious."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n5-grammar-22-4"
+      ],
       "title": "V dictionary form 時間／約束／用事",
       "structure": "V dictionary form + 時間／約束／用事",
       "meaning": "\"Time to do\", \"an appointment to do\", \"something to do\".",
       "explanation": "A verb in dictionary form before 時間, 約束 or 用事 says what the time, plan or errand is for.",
       "summary": "朝ご飯を食べる時間がありません = I have no time to eat breakfast.",
       "details": "- 本を読む**時間**がありません。 I have no time to read.\n- 友達と映画を見る**約束**があります。 I've arranged to see a film with a friend.\n- 銀行へ行く**用事**があります。 I have to go to the bank (an errand).",
-      "tags": ["particle-usage", "nominalizer"],
+      "tags": [
+        "particle-usage",
+        "nominalizer"
+      ],
       "examples": [
-        { "jp": "忙しいですから、運動する時間がありません。", "en": "I'm busy, so I have no time to exercise." },
-        { "jp": "今晩、友達と会う約束があります。", "en": "I'm meeting a friend tonight (we've arranged it)." }
+        {
+          "jp": "忙しいですから、運動する時間がありません。",
+          "en": "I'm busy, so I have no time to exercise."
+        },
+        {
+          "jp": "今晩、友達と会う約束があります。",
+          "en": "I'm meeting a friend tonight (we've arranged it)."
+        }
       ]
     }
   ],
   "23": [
     {
-      "replaces": ["n5-grammar-23-1"],
+      "replaces": [
+        "n5-grammar-23-1"
+      ],
       "title": "〜 とき、〜（when）",
       "structure": "｛V dictionary／ない／た-form, い-adj (〜い), な-adj な, N の｝ とき、〜",
       "meaning": "\"When ...\": the time of something.",
       "explanation": "とき is a noun, so it attaches like one: after plain verb and adjective forms, な-adjectives with な, and nouns with の.",
       "summary": "暇なとき, 子どものとき, 寒いとき, 行くとき.",
       "details": "| Before とき | Example |\n| :--- | :--- |\n| verb | 道が**わからない**とき |\n| い-adj | **寒い**とき |\n| な-adj | **暇な**とき |\n| noun | **子どもの**とき |",
-      "tags": ["time-relative"],
+      "tags": [
+        "time-relative"
+      ],
       "examples": [
-        { "jp": "暇なとき、よく本を読みます。", "en": "When I'm free, I often read." },
-        { "jp": "子どものとき、この公園でよく遊びました。", "en": "When I was a child, I often played in this park." },
-        { "jp": "道がわからないとき、交番で聞きます。", "en": "When I don't know the way, I ask at the police box." }
+        {
+          "jp": "暇なとき、よく本を読みます。",
+          "en": "When I'm free, I often read."
+        },
+        {
+          "jp": "子どものとき、この公園でよく遊びました。",
+          "en": "When I was a child, I often played in this park."
+        },
+        {
+          "jp": "道がわからないとき、交番で聞きます。",
+          "en": "When I don't know the way, I ask at the police box."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-23-2"],
+      "replaces": [
+        "n5-grammar-23-2"
+      ],
       "title": "V dictionary form とき／V た とき",
       "structure": "V dictionary form とき、〜／V た-form とき、〜",
       "meaning": "Before or after: the verb form before とき shows the order.",
       "explanation": "Dictionary form + とき: the main action happens before the とき action is completed (on the way). た-form + とき: it happens after the とき action is completed (on arrival).",
       "summary": "行くとき = on the way there; 行ったとき = once there.",
       "details": "- 日本へ**来る**とき、空港でかばんを買いました。 I bought a bag at the airport on my way to Japan (before arriving).\n- 日本へ**来た**とき、空港で友達に会いました。 I met a friend at the airport when I arrived in Japan.",
-      "tags": ["time-relative"],
+      "tags": [
+        "time-relative"
+      ],
       "examples": [
-        { "jp": "寝るとき、電気を消します。", "en": "I turn off the light when I go to bed." },
-        { "jp": "うちへ帰ったとき、「ただいま」と言います。", "en": "When you get home, you say \"tadaima\"." }
+        {
+          "jp": "寝るとき、電気を消します。",
+          "en": "I turn off the light when I go to bed."
+        },
+        {
+          "jp": "うちへ帰ったとき、手を洗います。",
+          "en": "When I get home, I wash my hands."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-23-4"],
+      "replaces": [
+        "n5-grammar-25-1"
+      ],
+      "title": "Nが inside とき／から clauses",
+      "structure": "［N が V／adj］+ とき／から、〜",
+      "meaning": "The subject of a dependent clause also takes が.",
+      "explanation": "A とき clause is part of a larger sentence, so its subject takes が; the topic of the whole sentence keeps は. The same holds for まえに and あとで (Lesson 25). In から clauses が is usual, but は can also appear.",
+      "summary": "友達が来たとき、わたしは寝ていました.",
+      "details": "- 友達**が**来たとき、わたしはうちにいませんでした。 When my friend came, I wasn't home.\n- 父**が**帰ったとき、みんなで晩ご飯を食べました。",
+      "tags": [
+        "particle-usage",
+        "topic-focus-particle"
+      ],
+      "examples": [
+        {
+          "jp": "雨が降っているから、出かけません。",
+          "en": "It's raining, so I'm not going out."
+        },
+        {
+          "jp": "友達が来たとき、わたしは寝ていました。",
+          "en": "I was asleep when my friend came."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n5-grammar-23-4"
+      ],
       "title": "N(place)を V（moving through a place）",
       "structure": "N(place)を 渡ります／歩きます／曲がります／通ります",
       "meaning": "を for the place you move along or through.",
-      "explanation": "With verbs of movement, を marks the route: the street you walk along, the bridge you cross, the corner you turn. It is the same を as in 部屋を出ます (Lesson 13).",
+      "explanation": "With verbs of movement, を marks the route: the street you walk along, the bridge you cross, the corner you turn. Compare 部屋を出ます (Lesson 13), where を marks the place you leave; here it marks the route.",
       "summary": "橋を渡ります, 公園を散歩します, 角を曲がります.",
       "details": "- この道**を**まっすぐ行ってください。 Go straight along this road.\n- 次の角**を**右へ曲がってください。 Turn right at the next corner.\n- 公園**を**散歩します。 I walk through the park.",
-      "tags": ["particle-usage", "direction-movement"],
+      "tags": [
+        "particle-usage",
+        "direction-movement"
+      ],
       "examples": [
-        { "jp": "この橋を渡って、二つ目の角を左へ曲がってください。", "en": "Cross this bridge and turn left at the second corner." },
-        { "jp": "毎朝、川の近くを走っています。", "en": "Every morning I run along the river." }
+        {
+          "jp": "この橋を渡って、二つ目の角を左へ曲がってください。",
+          "en": "Cross this bridge and turn left at the second corner."
+        },
+        {
+          "jp": "毎朝、公園を走っています。",
+          "en": "I run through the park every morning."
+        }
       ]
     }
   ],
   "24": [
     {
-      "replaces": ["n5-grammar-24-2"],
+      "replaces": [
+        "n5-grammar-24-2"
+      ],
       "title": "N(person)が V（who did it）",
       "structure": "N(person)が V",
       "meaning": "が when the person who does something is the new information.",
       "explanation": "When the point of the sentence is *who* did it, that person takes が: 母が作りました (it was my mother who made it).",
       "summary": "このケーキは姉が作りました = my sister made this cake.",
       "details": "- このケーキはおいしいですね。…姉**が**作りました。 This cake is good. — My sister made it.\n- 父**が**この写真を撮りました。",
-      "tags": ["topic-focus-particle", "particle-usage"],
+      "tags": [
+        "topic-focus-particle",
+        "particle-usage"
+      ],
       "examples": [
-        { "jp": "このお弁当は母が作りました。", "en": "My mother made this lunch box." },
-        { "jp": "この絵は弟がかきました。", "en": "My younger brother drew this picture." }
+        {
+          "jp": "このお弁当は母が作りました。",
+          "en": "My mother made this lunch box."
+        },
+        {
+          "jp": "この絵は弟がかきました。",
+          "en": "My younger brother drew this picture."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-24-3"],
+      "replaces": [
+        "n5-grammar-24-3"
+      ],
       "title": "Question word が V",
       "structure": "だれ／何／どこ が V か",
       "meaning": "A question word as subject takes が, and so does the answer.",
@@ -173,40 +395,67 @@
       "summary": "だれが来ましたか → リーさんが来ました.",
       "note": "× だれは来ましたか.",
       "details": "- **だれが**来ましたか。…リーさん**が**来ました。 Who came? — Ms. Lee did.\n- **何が**いちばんおいしかったですか。",
-      "tags": ["question-embedding", "topic-focus-particle"],
+      "tags": [
+        "question-embedding",
+        "topic-focus-particle"
+      ],
       "examples": [
-        { "jp": "だれが窓を開けましたか。…わたしが開けました。", "en": "Who opened the window? — I did." },
-        { "jp": "どこが痛いですか。", "en": "Where does it hurt?" }
+        {
+          "jp": "だれが窓を開けましたか。…わたしが開けました。",
+          "en": "Who opened the window? — I did."
+        },
+        {
+          "jp": "どこが痛いですか。",
+          "en": "Where does it hurt?"
+        }
       ]
     }
   ],
   "25": [
     {
-      "replaces": ["n5-grammar-22-3"],
-      "title": "Nが inside a noun-modifying clause",
-      "structure": "［N が V／adj］+ N",
-      "meaning": "Inside a clause that describes a noun, the subject takes が, not は.",
-      "explanation": "は belongs to the whole sentence. Inside a clause that describes a noun, the subject switches to が (often の in writing).",
-      "summary": "父が撮った写真, not 父は撮った写真.",
-      "details": "- 父**は**写真を撮りました。 My father took a photo. (sentence)\n- 父**が**撮った写真 the photo my father took (clause)\n- これは母**が**作ったケーキです。",
-      "tags": ["particle-usage", "topic-focus-particle"],
+      "replaces": [
+        "n5-grammar-18-4"
+      ],
+      "title": "V1 dictionary form／Nの／Period まえに、V2",
+      "structure": "｛V1 dictionary form／Nの／Period｝ まえに、V2",
+      "meaning": "\"Before ...\" / \"... ago\".",
+      "explanation": "Before an action, use the dictionary form + まえに, even if the sentence is in the past. Before an event, use the noun + の + まえに. After a length of time, まえに means \"ago\".",
+      "summary": "寝るまえに, 食事のまえに, 3年まえに.",
+      "details": "- 寝る**まえに**、歯を磨きます。 I brush my teeth before bed.\n- 食事**のまえに**、手を洗います。\n- 3年**まえに**日本へ来ました。 I came to Japan three years ago.",
+      "tags": [
+        "time-relative"
+      ],
       "examples": [
-        { "jp": "これは姉が住んでいるアパートです。", "en": "This is the apartment my sister lives in." },
-        { "jp": "リーさんが作った料理はとてもおいしかったです。", "en": "The food Ms. Lee made was delicious." }
+        {
+          "jp": "日本へ来るまえに、日本語を勉強しました。",
+          "en": "I studied Japanese before coming to Japan."
+        },
+        {
+          "jp": "2年まえに結婚しました。",
+          "en": "I got married two years ago."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-25-1"],
-      "title": "Nが inside とき／まえに／から clauses",
-      "structure": "［N が V／adj］+ とき／まえに／から、〜",
-      "meaning": "The subject of a dependent clause also takes が.",
-      "explanation": "Clauses ending in とき, まえに or から are part of a larger sentence, so their subject takes が. The topic of the whole sentence keeps は.",
-      "summary": "わたしは、友達が来たとき、出かけていました.",
-      "details": "- 友達**が**来たとき、わたしはうちにいませんでした。 When my friend came, I wasn't home.\n- 雨**が**降っているから、出かけません。 It's raining, so I won't go out.",
-      "tags": ["particle-usage", "topic-focus-particle"],
+      "replaces": [],
+      "title": "V たあとで／N のあとで",
+      "structure": "｛V た-form／N の｝ あとで、〜",
+      "meaning": "\"After ...\": what happens once something else is done.",
+      "explanation": "Put the た-form (or a noun + の) before あとで to say what happens after something else. It pairs with まえに: the verb before まえに is always in dictionary form, the verb before あとで always in た-form. 〜てから (Lesson 16) is similar but stresses the order of two steps.",
+      "summary": "食べたあとで、薬を飲みます = I take medicine after eating.",
+      "details": "| Before | After |\n| :--- | :--- |\n| 寝る**まえに** | 寝た**あとで** |\n| 食事**のまえに** | 食事**のあとで** |\n\n- 仕事が終わった**あとで**、友達に会いました。 I met a friend after work.",
+      "tags": [
+        "time-relative"
+      ],
       "examples": [
-        { "jp": "母が帰るまえに、部屋を掃除します。", "en": "I'll clean the room before my mother comes home." },
-        { "jp": "友達が来たとき、わたしは寝ていました。", "en": "I was asleep when my friend came." }
+        {
+          "jp": "晩ご飯を食べたあとで、散歩します。",
+          "en": "I take a walk after dinner."
+        },
+        {
+          "jp": "試合のあとで、みんなで食事をしました。",
+          "en": "After the match we all had a meal together."
+        }
       ]
     }
   ]

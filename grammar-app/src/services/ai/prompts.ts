@@ -223,9 +223,9 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
  */
 export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
   { lesson: 11, form: 'reason clauses with から' },
+  { lesson: 14, form: 'dictionary form' },
   { lesson: 14, form: 'て-form' },
   { lesson: 17, form: 'ない-form' },
-  { lesson: 18, form: 'dictionary form' },
   { lesson: 19, form: 'た-form' },
   { lesson: 20, form: 'plain style (だ / plain verb endings outside quotes)' },
   { lesson: 22, form: 'noun-modifying clauses (きのう買った本)' },

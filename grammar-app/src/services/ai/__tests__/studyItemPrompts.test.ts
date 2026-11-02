@@ -58,7 +58,7 @@ describe('grammar examples prompt', () => {
     const { prompt, known } = grammarExamplesPromptFor(n5Vehicle, 'N5');
     expect(prompt).toContain('Pattern: N(vehicle)で 行きます');
     expect(prompt).toContain('studied N5 Lessons 1–7 only');
-    expect(prompt).toMatch(/never use them in Japanese sentences: .*て-form \(Lesson 14\).*dictionary form \(Lesson 18\)/);
+    expect(prompt).toMatch(/never use them in Japanese sentences: .*dictionary form \(Lesson 14\).*て-form \(Lesson 14\)/);
     expect(prompt).toContain('at most 25 Japanese characters');
     expect(prompt).toContain('Polite です/ます style');
     expect(prompt).toContain('no furigana or readings in [] or （）');

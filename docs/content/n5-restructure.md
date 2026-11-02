@@ -31,43 +31,55 @@ N5 was rebuilt first; N4 and N3 follow the same way (backlog §4).
 | 1 | Meeting people | AはBです, じゃありません, か, はい／いいえ, も, の (group), さん |
 | 2 | Things around you | これ／それ／あれ, この／その／あの, 何 (なに／なん), の (owner), S1かS2か, そうですか |
 | 3 | Places | ここ／こちら, place です, どこ／どちら, こ・そ・あ・ど, の (made in), お〜／ご〜 |
-| 4 | There is / there are | あります／います, place に…が, …は place に, position words, や, N ですか, ありませんか |
+| 4 | There is / there are | あります／います (question word が), place に…が, …は place に, position words, や, N ですか, ありませんか |
 | 5 | Numbers and shopping | numbers and counters, いくら／〜をください, と, だけ |
 | 6 | Time and daily routine | 〜時〜分, Vます and its four forms, time に, から〜まで, いつも／時々, ね |
 | 7 | Calendar and getting around | へ行きます, で (vehicle), と［一緒に］／一人で, いつ and dates, どこへも／何も, よ |
 | 8 | Doing things | を, をします, 何をしますか, で (place), ませんか, ましょう |
 | 9 | Tools and giving | で (means), 〜語で何ですか, あげます, もらいます, くれます, もう／まだ |
-| 10 | Describing things | い／な-adjectives, predicate and modifier forms, とても／あまり, どう／いかが, どんな, どれ, が／しかし／けど |
+| 10 | Describing things | い／な-adjectives, predicate and modifier forms, とても／あまり, どう／いかが, どんな, どれ, どの, が／しかし／けど |
 | 11 | Likes, skills and reasons | が好き／上手／わかる／ある, degree adverbs, に〜回, から, どうして |
 | 12 | Weather and comparisons | past of nouns and adjectives, より, どちら, いちばん |
 | 13 | Wants and outings | 欲しい, たい, purpose に, に入る／を出る, どこか／何か |
-| 14 | て-form and requests | verb groups, て-form, てください, ましょうか (offer), introductory が, 方 |
+| 14 | Verb forms and requests | verb groups, dictionary form, て-form, てください, ましょうか (offer), introductory が, 方 |
 | 15 | Ongoing actions and states | ている (progressive, state, habit), 知っています／知りません, が for what happens |
-| 16 | Linking | て、て, くて, で, てから, AはBが adj, どうやって, どの, そして／それから |
+| 16 | Linking | て、て, くて, で, てから, AはBが adj, どうやって, そして／それから |
 | 17 | Permission and rules | てもいい, てはいけません, ない-form, ないでください, なくてもいい, なければならない, ちゃいけない／なくちゃ, object は |
-| 18 | Dictionary form | dictionary form, ことができます, 趣味は〜ことです, まえに |
+| 18 | Abilities and hobbies | ことができます, 趣味は〜ことです |
 | 19 | Experiences and change | た-form, たことがあります, たり〜たり, なります, そうですね |
-| 20 | Casual talk | polite and plain style, when to use which, plain conversation, だろう |
-| 21 | Opinions and events | でしょう？, place で event があります, occasion で, Nでも |
-| 22 | Describing with clauses | noun modification, clause + noun, dictionary form + 時間／約束／用事 |
-| 23 | When and where | とき, dictionary form vs た-form とき, を with movement |
+| 20 | Casual talk | polite and plain style, when to use which, plain conversation |
+| 21 | Guesses, opinions and events | でしょう (probably), だろう, でしょう？, place で event があります, occasion で, Nでも |
+| 22 | Describing with clauses | noun modification, clause + noun, が inside a modifying clause, dictionary form + 時間／約束／用事 |
+| 23 | When and where | とき, dictionary form vs た-form とき, が inside とき／から clauses, を with movement |
 | 24 | が for new information | person が V, question word が |
-| 25 | が inside clauses | が in modifying clauses, が in とき／まえに／から clauses |
+| 25 | Before and after | まえに, たあとで／のあとで |
 
 The milestones the AI prompts rely on (`N5_FORM_MILESTONES` in `services/ai/prompts.ts`) are
-unchanged except reason clauses with から, now lesson 11: て-form 14, ない-form 17,
-dictionary form 18, た-form 19, plain style 20, noun-modifying clauses 22.
+reason clauses with から 11, dictionary form and て-form 14, ない-form 17, た-form 19, plain
+style 20, noun-modifying clauses 22.
 
 ## Merged and new points
 
-139 old rows became 134:
+139 old rows became 136:
 
 - お国, お〜 and ご注文 merged into one **お〜／ご〜** point (lesson 3).
 - The two verb-group rows merged (lesson 14).
 - どんな N and Aはどんな Bですか merged (lesson 10).
 - N(person)と V and 一緒に merged (lesson 7).
 - The two "が for a scene" rows merged (lesson 15).
-- New: **いくらですか／N を ください** (lesson 5).
+- New: **いくらですか／N を ください** (lesson 5), **〜でしょう (probably)** (lesson 21) and
+  **V たあとで／N のあとで** (lesson 25, paired with まえに).
+
+## Japanese-teacher review
+
+The SME review (2026-11-02) approved with changes. It fixed four wrong explanations, one
+wrong translation and an ungrammatical vocab example, plus about 20 smaller slips. The lesson
+order changed as a result:
+- The dictionary form moved next to the て-form (L14), so the て-form rule has its basis.
+- どの joined どれ (L10).
+- が inside clauses moved to where clauses are first used (L22, L23).
+- でしょう got its own point before だろう (L21).
+- まえに and the new あとで became L25.
 
 ## How it was applied
 

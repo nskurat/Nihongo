@@ -192,8 +192,8 @@
       "romaji": "sayounara",
       "pos": "expression",
       "meaning": "Goodbye",
-      "exampleJp": "先生、さようなら。",
-      "exampleEn": "Goodbye, sir."
+      "exampleJp": "森先生、さようなら。",
+      "exampleEn": "Goodbye, Mr. Mori."
     },
     {
       "uid": "n5-vocab-1-16",
@@ -1181,33 +1181,13 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
-      "word": "あっち",
-      "reading": "あっち",
-      "meaning": "over there",
-      "pos": "pronoun"
-    },
-    {
-      "uid": "n5-vocab-3-25",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 3,
-      "word": "そっち",
-      "reading": "そっち",
-      "meaning": "over there",
-      "pos": "pronoun"
-    },
-    {
-      "uid": "n5-vocab-3-26",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 3,
       "word": "トイレ",
       "reading": "トイレ",
       "meaning": "bathroom; toilet",
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-27",
+      "uid": "n5-vocab-3-25",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1217,7 +1197,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-28",
+      "uid": "n5-vocab-3-26",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1227,7 +1207,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-29",
+      "uid": "n5-vocab-3-27",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1237,7 +1217,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-30",
+      "uid": "n5-vocab-3-28",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1247,7 +1227,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-31",
+      "uid": "n5-vocab-3-29",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1257,17 +1237,7 @@
       "pos": "interrogative"
     },
     {
-      "uid": "n5-vocab-3-32",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 3,
-      "word": "こんな",
-      "reading": "こんな",
-      "meaning": "such, like this",
-      "pos": "determiner"
-    },
-    {
-      "uid": "n5-vocab-3-33",
+      "uid": "n5-vocab-3-30",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1277,7 +1247,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-34",
+      "uid": "n5-vocab-3-31",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1287,7 +1257,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-35",
+      "uid": "n5-vocab-3-32",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1297,7 +1267,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-36",
+      "uid": "n5-vocab-3-33",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1307,7 +1277,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-37",
+      "uid": "n5-vocab-3-34",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1317,7 +1287,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-38",
+      "uid": "n5-vocab-3-35",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1327,7 +1297,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-39",
+      "uid": "n5-vocab-3-36",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -1337,7 +1307,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-3-40",
+      "uid": "n5-vocab-3-37",
       "level": "N5",
       "section": "vocab",
       "lesson": 3,
@@ -3708,8 +3678,8 @@
       "romaji": "gochisousama deshita",
       "pos": "expression",
       "meaning": "(said after eating) Thank you for the meal",
-      "exampleJp": "ごちそうさまでした。おいしかったです。",
-      "exampleEn": "Thank you for the meal. It was delicious."
+      "exampleJp": "ごちそうさまでした。",
+      "exampleEn": "Thank you for the meal."
     },
     {
       "uid": "n5-vocab-8-15",
@@ -4904,13 +4874,23 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
+      "word": "こんな",
+      "reading": "こんな",
+      "meaning": "such, like this",
+      "pos": "determiner"
+    },
+    {
+      "uid": "n5-vocab-10-43",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 10,
       "word": "あまり",
       "reading": "あまり",
       "meaning": "not very",
       "pos": "adverb"
     },
     {
-      "uid": "n5-vocab-10-43",
+      "uid": "n5-vocab-10-44",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4920,7 +4900,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-44",
+      "uid": "n5-vocab-10-45",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4930,7 +4910,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-45",
+      "uid": "n5-vocab-10-46",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4940,7 +4920,7 @@
       "pos": "adverb"
     },
     {
-      "uid": "n5-vocab-10-46",
+      "uid": "n5-vocab-10-47",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4950,7 +4930,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-47",
+      "uid": "n5-vocab-10-48",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4960,7 +4940,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-48",
+      "uid": "n5-vocab-10-49",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4970,7 +4950,7 @@
       "pos": "na-adjective"
     },
     {
-      "uid": "n5-vocab-10-49",
+      "uid": "n5-vocab-10-50",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4980,7 +4960,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-50",
+      "uid": "n5-vocab-10-51",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -4990,7 +4970,7 @@
       "pos": "i-adjective"
     },
     {
-      "uid": "n5-vocab-10-51",
+      "uid": "n5-vocab-10-52",
       "level": "N5",
       "section": "vocab",
       "lesson": 10,
@@ -5055,7 +5035,7 @@
       "pos": "na-adjective",
       "meaning": "dislike",
       "exampleJp": "わたしは虫が嫌いです。",
-      "exampleEn": "I hate bugs."
+      "exampleEn": "I don't like bugs."
     },
     {
       "uid": "n5-vocab-11-5",
@@ -5325,7 +5305,7 @@
       "romaji": "kisetsu",
       "pos": "noun",
       "meaning": "season",
-      "exampleJp": "どの季節がいちばん好きですか。…秋です。",
+      "exampleJp": "季節でいつがいちばん好きですか。…秋です。",
       "exampleEn": "Which season do you like best? — Autumn."
     },
     {
@@ -5351,7 +5331,7 @@
       "romaji": "sekai",
       "pos": "noun",
       "meaning": "world",
-      "exampleJp": "世界でどの国がいちばん大きいですか。",
+      "exampleJp": "世界でどこがいちばん大きいですか。",
       "exampleEn": "Which country is the biggest in the world?"
     },
     {
@@ -5806,7 +5786,7 @@
       "pos": "expression",
       "meaning": "(I'm) hungry",
       "exampleJp": "おなかがすきましたね。何か食べましょう。",
-      "exampleEn": "I'm hungry. Let's eat something."
+      "exampleEn": "I'm hungry, aren't you? Let's eat something."
     },
     {
       "uid": "n5-vocab-13-8",
@@ -6845,8 +6825,8 @@
       "romaji": "kaeshimasu",
       "pos": "verb-godan",
       "meaning": "give back, return",
-      "exampleJp": "その本は来週返さなくてもいいですよ。",
-      "exampleEn": "You don't have to return that book until after next week.",
+      "exampleJp": "その本はまだ返さなくてもいいですよ。",
+      "exampleEn": "You don't have to give that book back yet.",
       "lemma": "返す",
       "lemmaReading": "かえす"
     },
@@ -6860,7 +6840,7 @@
       "romaji": "shinpai shimasu",
       "pos": "verb-irregular",
       "meaning": "worry",
-      "exampleJp": "子どもがまだ帰りませんから、心配しています。",
+      "exampleJp": "子どもがまだ帰っていませんから、心配しています。",
       "exampleEn": "My child isn't home yet, so I'm worried.",
       "lemma": "心配する",
       "lemmaReading": "しんぱいする"
@@ -6988,23 +6968,13 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 17,
-      "word": "覚える",
-      "reading": "おぼえる",
-      "meaning": "to learn, to commit to memory, to remember, to memorize",
-      "pos": "verb-ichidan"
-    },
-    {
-      "uid": "n5-vocab-17-16",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 17,
       "word": "無くす",
       "reading": "なくす",
       "meaning": "to lose something",
       "pos": "verb-godan"
     },
     {
-      "uid": "n5-vocab-17-17",
+      "uid": "n5-vocab-17-16",
       "level": "N5",
       "section": "vocab",
       "lesson": 17,
@@ -7014,7 +6984,7 @@
       "pos": "na-adjective"
     },
     {
-      "uid": "n5-vocab-17-18",
+      "uid": "n5-vocab-17-17",
       "level": "N5",
       "section": "vocab",
       "lesson": 17,
@@ -7024,7 +6994,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-17-19",
+      "uid": "n5-vocab-17-18",
       "level": "N5",
       "section": "vocab",
       "lesson": 17,
@@ -7032,6 +7002,16 @@
       "reading": "びょういん",
       "meaning": "hospital",
       "pos": "noun"
+    },
+    {
+      "uid": "n5-vocab-17-19",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 17,
+      "word": "死ぬ",
+      "reading": "しぬ",
+      "meaning": "to die",
+      "pos": "verb-godan"
     },
     {
       "uid": "n5-vocab-17-20",
@@ -7171,8 +7151,8 @@
       "romaji": "nakanaka",
       "pos": "adverb",
       "meaning": "not easily (used with negatives)",
-      "exampleJp": "漢字はなかなか覚えることができません。",
-      "exampleEn": "Kanji are hard to memorise."
+      "exampleJp": "バスがなかなか来ませんね。",
+      "exampleEn": "The bus just isn't coming, is it?"
     },
     {
       "uid": "n5-vocab-18-10",
@@ -7227,13 +7207,23 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 18,
+      "word": "覚える",
+      "reading": "おぼえる",
+      "meaning": "to learn, to commit to memory, to remember, to memorize",
+      "pos": "verb-ichidan"
+    },
+    {
+      "uid": "n5-vocab-18-15",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 18,
       "word": "走る",
       "reading": "はしる",
       "meaning": "to run",
       "pos": "verb-godan"
     },
     {
-      "uid": "n5-vocab-18-15",
+      "uid": "n5-vocab-18-16",
       "level": "N5",
       "section": "vocab",
       "lesson": 18,
@@ -7243,7 +7233,7 @@
       "pos": "verb-godan"
     },
     {
-      "uid": "n5-vocab-18-16",
+      "uid": "n5-vocab-18-17",
       "level": "N5",
       "section": "vocab",
       "lesson": 18,
@@ -7253,7 +7243,7 @@
       "pos": "noun"
     },
     {
-      "uid": "n5-vocab-18-17",
+      "uid": "n5-vocab-18-18",
       "level": "N5",
       "section": "vocab",
       "lesson": 18,
@@ -7617,12 +7607,32 @@
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
+      "word": "あっち",
+      "reading": "あっち",
+      "meaning": "over there",
+      "pos": "pronoun"
+    },
+    {
+      "uid": "n5-vocab-20-12",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
+      "word": "そっち",
+      "reading": "そっち",
+      "meaning": "over there",
+      "pos": "pronoun"
+    },
+    {
+      "uid": "n5-vocab-20-13",
+      "level": "N5",
+      "section": "vocab",
+      "lesson": 20,
       "word": "あの",
       "reading": "あの",
       "meaning": "that over there; like that, that way; um..."
     },
     {
-      "uid": "n5-vocab-20-12",
+      "uid": "n5-vocab-20-14",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7632,7 +7642,7 @@
       "pos": "adverb"
     },
     {
-      "uid": "n5-vocab-20-13",
+      "uid": "n5-vocab-20-15",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7642,7 +7652,7 @@
       "pos": "expression"
     },
     {
-      "uid": "n5-vocab-20-14",
+      "uid": "n5-vocab-20-16",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7652,7 +7662,7 @@
       "pos": "conjunction"
     },
     {
-      "uid": "n5-vocab-20-15",
+      "uid": "n5-vocab-20-17",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7662,7 +7672,7 @@
       "pos": "conjunction"
     },
     {
-      "uid": "n5-vocab-20-16",
+      "uid": "n5-vocab-20-18",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7672,7 +7682,7 @@
       "pos": "interrogative"
     },
     {
-      "uid": "n5-vocab-20-17",
+      "uid": "n5-vocab-20-19",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7682,7 +7692,7 @@
       "pos": "conjunction"
     },
     {
-      "uid": "n5-vocab-20-18",
+      "uid": "n5-vocab-20-20",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7692,7 +7702,7 @@
       "pos": "interjection"
     },
     {
-      "uid": "n5-vocab-20-19",
+      "uid": "n5-vocab-20-21",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7702,7 +7712,7 @@
       "pos": "pronoun"
     },
     {
-      "uid": "n5-vocab-20-20",
+      "uid": "n5-vocab-20-22",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7712,7 +7722,7 @@
       "pos": "verb-godan"
     },
     {
-      "uid": "n5-vocab-20-21",
+      "uid": "n5-vocab-20-23",
       "level": "N5",
       "section": "vocab",
       "lesson": 20,
@@ -7828,8 +7838,8 @@
       "romaji": "iken",
       "pos": "noun",
       "meaning": "opinion",
-      "exampleJp": "あなたの意見はどうですか。",
-      "exampleEn": "What's your opinion?"
+      "exampleJp": "森さんの意見はどうですか。",
+      "exampleEn": "What's your opinion, Mr. Mori?"
     },
     {
       "uid": "n5-vocab-21-9",
@@ -7880,7 +7890,7 @@
       "romaji": "omedetou gozaimasu",
       "pos": "expression",
       "meaning": "Congratulations.",
-      "exampleJp": "結婚、おめでとうございます。",
+      "exampleJp": "ご結婚、おめでとうございます。",
       "exampleEn": "Congratulations on your wedding."
     },
     {
@@ -8656,8 +8666,8 @@
       "romaji": "ojiisan / obaasan",
       "pos": "noun",
       "meaning": "grandfather / grandmother",
-      "exampleJp": "おばあさんがこのセーターを作りました。",
-      "exampleEn": "My grandmother made this sweater."
+      "exampleJp": "ケンさんのおばあさんがこのセーターを作りました。",
+      "exampleEn": "Ken's grandmother made this sweater."
     },
     {
       "uid": "n5-vocab-24-6",
@@ -9034,16 +9044,6 @@
       "reading": "はじめ",
       "meaning": "beginning",
       "pos": "noun"
-    },
-    {
-      "uid": "n5-vocab-25-14",
-      "level": "N5",
-      "section": "vocab",
-      "lesson": 25,
-      "word": "死ぬ",
-      "reading": "しぬ",
-      "meaning": "to die",
-      "pos": "verb-godan"
     }
   ]
 }

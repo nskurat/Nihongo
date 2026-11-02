@@ -1,150 +1,234 @@
 {
   "16": [
     {
-      "replaces": ["n5-grammar-16-1"],
+      "replaces": [
+        "n5-grammar-16-1"
+      ],
       "title": "V て、［V て、］〜（and then）",
       "structure": "V1 て-form、V2 て-form、V3",
       "meaning": "Listing actions in the order they happen.",
       "explanation": "Join actions with the て-form; only the last verb shows the tense and politeness. The actions happen in that order.",
       "summary": "起きて、顔を洗って、朝ご飯を食べます.",
       "details": "- 朝起き**て**、シャワーを浴び**て**、会社へ行きます。 In the morning I get up, shower and go to work.\n- 昨日は友達に会っ**て**、映画を見**ました**。 (past only at the end)",
-      "tags": ["simultaneous-action", "connective"],
+      "tags": [
+        "simultaneous-action",
+        "connective"
+      ],
       "examples": [
-        { "jp": "うちへ帰って、晩ご飯を作ります。", "en": "I go home and make dinner." },
-        { "jp": "昨日は図書館へ行って、本を借りて、カフェで読みました。", "en": "Yesterday I went to the library, borrowed a book and read it in a café." }
+        {
+          "jp": "うちへ帰って、晩ご飯を作ります。",
+          "en": "I go home and make dinner."
+        },
+        {
+          "jp": "昨日は図書館へ行って、本を借りて、カフェで読みました。",
+          "en": "Yesterday I went to the library, borrowed a book and read it in a café."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-2"],
+      "replaces": [
+        "n5-grammar-16-2"
+      ],
       "title": "い-adj 〜くて、〜",
       "structure": "い-adj (〜い) → 〜くて、〜",
       "meaning": "Joining an い-adjective to what follows: \"... and ...\".",
       "explanation": "Drop い and add くて to link two descriptions. いい becomes よくて.",
       "summary": "安い → 安くて; いい → よくて.",
       "details": "- この部屋は広**くて**、明るいです。 This room is spacious and bright.\n- このかばんは軽**くて**、便利です。\n- いい → **よくて**",
-      "tags": ["meta-conjugation", "connective"],
+      "tags": [
+        "meta-conjugation",
+        "connective"
+      ],
       "examples": [
-        { "jp": "このレストランは安くて、おいしいです。", "en": "This restaurant is cheap and good." },
-        { "jp": "今日は天気がよくて、暖かいです。", "en": "The weather is nice and warm today." }
+        {
+          "jp": "このレストランは安くて、おいしいです。",
+          "en": "This restaurant is cheap and good."
+        },
+        {
+          "jp": "今日は天気がよくて、暖かいです。",
+          "en": "The weather is nice and warm today."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-3"],
+      "replaces": [
+        "n5-grammar-16-3"
+      ],
       "title": "N／な-adj で、〜",
       "structure": "N／な-adj + で、〜",
       "meaning": "Joining a noun or な-adjective to what follows.",
       "explanation": "Nouns and な-adjectives link with で: 静かで, 学生で.",
       "summary": "静か → 静かで; 学生 → 学生で.",
       "details": "- 京都は静か**で**、きれいな町です。 Kyoto is a quiet, beautiful city.\n- リーさんは学生**で**、二十歳です。 Ms. Lee is a student and is twenty.",
-      "tags": ["meta-conjugation", "connective"],
+      "tags": [
+        "meta-conjugation",
+        "connective"
+      ],
       "examples": [
-        { "jp": "この町は静かで、緑が多いです。", "en": "This town is quiet and green." },
-        { "jp": "ケンさんはアメリカ人で、大学の学生です。", "en": "Ken is American and a university student." }
+        {
+          "jp": "この町は静かで、緑が多いです。",
+          "en": "This town is quiet and green."
+        },
+        {
+          "jp": "ケンさんはアメリカ人で、大学生です。",
+          "en": "Ken is American and a university student."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-4"],
+      "replaces": [
+        "n5-grammar-16-4"
+      ],
       "title": "V1 てから、V2",
       "structure": "V1 て-form + から、V2",
       "meaning": "\"After doing V1, V2\": V1 first, then V2.",
       "explanation": "てから stresses that the first action is finished before the second begins. It is often used for advice and plans.",
       "summary": "食べてから、行きます = I'll go after eating.",
       "details": "- 宿題をし**てから**、テレビを見ます。 I watch TV after doing my homework.\n- 手を洗っ**てから**、食べてください。 Wash your hands before you eat.",
-      "tags": ["time-relative"],
+      "tags": [
+        "time-relative"
+      ],
       "examples": [
-        { "jp": "お金を払ってから、中に入ってください。", "en": "Please pay before going in." },
-        { "jp": "仕事が終わってから、ジムへ行きます。", "en": "I go to the gym after work." }
+        {
+          "jp": "お金を払ってから、中に入ってください。",
+          "en": "Please pay before going in."
+        },
+        {
+          "jp": "仕事が終わってから、ジムへ行きます。",
+          "en": "I go to the gym after work."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-5"],
+      "replaces": [
+        "n5-grammar-16-5"
+      ],
       "title": "Aは Bが adj",
       "structure": "N1は N2が adj",
       "meaning": "Describing a feature of something: \"A has a ... B\".",
       "explanation": "The whole thing is the topic with は, and the part you describe takes が: 森さんは背が高いです (Mr. Mori is tall, lit. as for Mr. Mori, height is high).",
       "summary": "Topic は, part が, adjective.",
       "details": "- エマさんは髪**が**長いです。 Emma has long hair.\n- 東京は人**が**多いです。 Tokyo has a lot of people.\n- この町は交通**が**便利です。",
-      "tags": ["topic-focus-particle"],
+      "tags": [
+        "topic-focus-particle"
+      ],
       "examples": [
-        { "jp": "ケンさんは背が高いです。", "en": "Ken is tall." },
-        { "jp": "この店はパンがおいしいです。", "en": "The bread at this shop is good." }
+        {
+          "jp": "ケンさんは背が高いです。",
+          "en": "Ken is tall."
+        },
+        {
+          "jp": "この店はパンがおいしいです。",
+          "en": "The bread at this shop is good."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-6"],
+      "replaces": [
+        "n5-grammar-16-6"
+      ],
       "title": "どうやって",
       "structure": "どうやって V か",
       "meaning": "\"How (by what method)?\"",
       "explanation": "どうやって asks how to do something or how to get somewhere. The answer usually lists steps with the て-form.",
       "summary": "どうやって行きますか → 〜て、〜て、行きます.",
       "details": "- 大学まで**どうやって**行きますか。…駅から**バスに乗って**行きます。 How do you get to the university? — I take a bus from the station.",
-      "tags": ["question-embedding", "manner-accordance"],
+      "tags": [
+        "question-embedding",
+        "manner-accordance"
+      ],
       "examples": [
-        { "jp": "空港までどうやって行きますか。…電車に乗って、駅で乗り換えます。", "en": "How do I get to the airport? — Take the train and change at the station." },
-        { "jp": "この漢字はどうやって読みますか。", "en": "How do you read this kanji?" }
+        {
+          "jp": "空港までどうやって行きますか。…電車に乗って、新宿でバスに乗り換えます。",
+          "en": "How do I get to the airport? — Take the train, then change to a bus at Shinjuku."
+        },
+        {
+          "jp": "この漢字はどうやって読みますか。",
+          "en": "How do you read this kanji?"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-16-7"],
-      "title": "どの N",
-      "structure": "どの + N",
-      "meaning": "\"Which N?\" before a noun.",
-      "explanation": "どの is the question word of the この／その／あの set, so a noun always follows it. Like どれ, it takes が, not は.",
-      "summary": "どの人, どのバス, どの店.",
-      "details": "- **どの**人がアンナさんですか。…あの髪が長い人です。 Which person is Anna? — The one with long hair.\n- **どの**バスに乗りますか。",
-      "tags": ["demonstrative", "question-embedding"],
-      "examples": [
-        { "jp": "どの人が森先生ですか。…あの背が高い人です。", "en": "Which one is Mr. Mori? — The tall man over there." },
-        { "jp": "どのバスが駅へ行きますか。", "en": "Which bus goes to the station?" }
-      ]
-    },
-    {
-      "replaces": ["n5-grammar-16-8"],
+      "replaces": [
+        "n5-grammar-16-8"
+      ],
       "title": "そして／それから",
       "structure": "S1。そして、S2。／S1。それから、S2。",
       "meaning": "Starting a new sentence with \"and\" or \"and then\".",
       "explanation": "そして adds a related fact; それから adds the next thing in time (\"after that\"). Both start a new sentence.",
       "summary": "そして = and; それから = and then / after that.",
       "details": "- この部屋は広いです。**そして**、明るいです。\n- 映画を見ました。**それから**、食事をしました。",
-      "tags": ["listing-examples", "time-relative", "connective"],
+      "tags": [
+        "listing-examples",
+        "time-relative",
+        "connective"
+      ],
       "examples": [
-        { "jp": "スーパーで野菜を買いました。それから、うちへ帰りました。", "en": "I bought vegetables at the supermarket. Then I went home." },
-        { "jp": "このホテルはきれいです。そして、駅から近いです。", "en": "This hotel is clean. And it's close to the station." }
+        {
+          "jp": "スーパーで野菜を買いました。それから、うちへ帰りました。",
+          "en": "I bought vegetables at the supermarket. Then I went home."
+        },
+        {
+          "jp": "このホテルはきれいです。そして、駅から近いです。",
+          "en": "This hotel is clean. And it's close to the station."
+        }
       ]
     }
   ],
   "17": [
     {
-      "replaces": ["n5-grammar-15-1"],
+      "replaces": [
+        "n5-grammar-15-1"
+      ],
       "title": "V て も いいです（permission）",
       "structure": "V て-form + も いいです／いいですか",
       "meaning": "\"You may ...\" and \"May I ...?\"",
       "explanation": "て-form + もいいです gives permission; with か it asks for it. Answer ええ、どうぞ to allow, or すみません、ちょっと… to refuse politely.",
       "summary": "写真を撮ってもいいですか。…ええ、どうぞ.",
       "details": "- ここで写真を撮っ**てもいいですか**。 May I take photos here?\n- …ええ、**どうぞ**。 Yes, go ahead.\n- …すみません、ちょっと…。 Sorry, I'd rather you didn't.",
-      "tags": ["permission"],
+      "tags": [
+        "permission"
+      ],
       "examples": [
-        { "jp": "窓を開けてもいいですか。…ええ、どうぞ。", "en": "May I open the window? — Yes, go ahead." },
-        { "jp": "この辞書を使ってもいいですよ。", "en": "You can use this dictionary." }
+        {
+          "jp": "窓を開けてもいいですか。…ええ、どうぞ。",
+          "en": "May I open the window? — Yes, go ahead."
+        },
+        {
+          "jp": "この辞書を使ってもいいですよ。",
+          "en": "You can use this dictionary."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-15-2"],
+      "replaces": [
+        "n5-grammar-15-2"
+      ],
       "title": "V て は いけません（prohibition）",
       "structure": "V て-form + は いけません",
       "meaning": "\"You must not ...\": rules and strong prohibition.",
-      "explanation": "て-form + はいけません states that something is not allowed, like a rule. It sounds strong, so between equals it often answers a request: 〜てもいいですか…いいえ、いけません.",
+      "explanation": "て-form + はいけません states that something is not allowed, like a rule. It sounds strong: it is used for rules, on signs and by people in charge (a teacher, staff). As a reply, いいえ、いけません sounds firm; to refuse politely, say すみません、ちょっと….",
       "summary": "ここで吸ってはいけません = no smoking here.",
       "note": "For a softer request not to do something, use 〜ないでください.",
       "details": "- ここでたばこを吸っ**てはいけません**。 You must not smoke here.\n- 美術館で写真を撮っ**てはいけません**。",
-      "tags": ["prohibition"],
+      "tags": [
+        "prohibition"
+      ],
       "examples": [
-        { "jp": "教室で食べてはいけません。", "en": "You must not eat in the classroom." },
-        { "jp": "この川で泳いではいけません。", "en": "Swimming in this river is not allowed." }
+        {
+          "jp": "教室で食べてはいけません。",
+          "en": "You must not eat in the classroom."
+        },
+        {
+          "jp": "この川で泳いではいけません。",
+          "en": "Swimming in this river is not allowed."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-1"],
+      "replaces": [
+        "n5-grammar-17-1"
+      ],
       "title": "Verb ない-form",
       "structure": "V ない-form",
       "meaning": "The plain negative of verbs.",
@@ -152,232 +236,355 @@
       "summary": "書かない, 買わない, 食べない, しない, こない.",
       "note": "あります → ない (not あらない).",
       "details": "| Group | ます-form | ない-form |\n| :--- | :--- | :--- |\n| I | 書き**ます** | 書**か**ない |\n| I | 買い**ます** | 買**わ**ない |\n| II | 食べます | 食べない |\n| III | します／来ます | しない／こない |",
-      "tags": ["meta-conjugation"],
+      "tags": [
+        "meta-conjugation"
+      ],
       "examples": [
-        { "jp": "行きます → 行かない、待ちます → 待たない、飲みます → 飲まない", "en": "go, wait, drink → their ない-forms" },
-        { "jp": "見ます → 見ない、します → しない、来ます → 来ない", "en": "see, do, come → their ない-forms" }
+        {
+          "jp": "行きます → 行かない、待ちます → 待たない、飲みます → 飲まない",
+          "en": "go, wait, drink → their ない-forms"
+        },
+        {
+          "jp": "見ます → 見ない、します → しない、来ます → 来ない",
+          "en": "see, do, come → their ない-forms"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-2"],
+      "replaces": [
+        "n5-grammar-17-2"
+      ],
       "title": "V ない で ください",
       "structure": "V ない-form + で ください",
       "meaning": "\"Please don't ...\"",
       "explanation": "Add でください to the ない-form to ask someone not to do something. It is softer than 〜てはいけません and can also express care: 心配しないでください.",
       "summary": "忘れないでください = please don't forget.",
       "details": "- ここに荷物を置か**ないでください**。 Please don't leave luggage here.\n- 心配し**ないでください**。 Don't worry.",
-      "tags": ["prohibition", "request"],
+      "tags": [
+        "prohibition",
+        "request"
+      ],
       "examples": [
-        { "jp": "明日の約束を忘れないでください。", "en": "Please don't forget tomorrow's appointment." },
-        { "jp": "大丈夫ですから、心配しないでください。", "en": "I'm fine, so please don't worry." }
+        {
+          "jp": "明日の約束を忘れないでください。",
+          "en": "Please don't forget tomorrow's appointment."
+        },
+        {
+          "jp": "大丈夫ですから、心配しないでください。",
+          "en": "I'm fine, so please don't worry."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-3"],
+      "replaces": [
+        "n5-grammar-17-3"
+      ],
       "title": "V なくても いいです",
       "structure": "V ない-form (〜ない → 〜なくても) + いいです",
       "meaning": "\"You don't have to ...\"",
       "explanation": "Change ない to なくても and add いいです: the action is not necessary. It often answers a question about obligation.",
       "summary": "来なくてもいいです = you don't need to come.",
       "details": "- 明日は来**なくてもいいです**。 You don't have to come tomorrow.\n- 靴を脱がなければなりませんか。…いいえ、脱が**なくてもいいです**。",
-      "tags": ["obligation-necessity", "permission"],
+      "tags": [
+        "obligation-necessity",
+        "permission"
+      ],
       "examples": [
-        { "jp": "名前を書かなくてもいいです。", "en": "You don't have to write your name." },
-        { "jp": "今日は急がなくてもいいですよ。", "en": "There's no need to hurry today." }
+        {
+          "jp": "名前を書かなくてもいいです。",
+          "en": "You don't have to write your name."
+        },
+        {
+          "jp": "今日は急がなくてもいいですよ。",
+          "en": "There's no need to hurry today."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-6"],
+      "replaces": [
+        "n5-grammar-17-6"
+      ],
       "title": "V なければ なりません／なくては いけません",
       "structure": "V ない-form (〜ない → 〜なければ／〜なくては) + なりません／いけません",
       "meaning": "\"Must\" / \"have to\".",
       "explanation": "Both forms say something is necessary. なければなりません is a little more formal and often about rules or duties; なくてはいけません is common in speech.",
       "summary": "行かなければなりません／行かなくてはいけません = I have to go.",
       "details": "| Form | Feel |\n| :--- | :--- |\n| 〜なければなりません | rules, duty, a little formal |\n| 〜なくてはいけません | everyday speech |\n\nBoth are negative + negative = positive necessity.",
-      "tags": ["obligation-necessity"],
+      "tags": [
+        "obligation-necessity"
+      ],
       "examples": [
-        { "jp": "明日までにレポートを書かなければなりません。", "en": "I have to write a report by tomorrow." },
-        { "jp": "毎日薬を飲まなくてはいけません。", "en": "I have to take medicine every day." }
+        {
+          "jp": "明日までにレポートを書かなければなりません。",
+          "en": "I have to write a report by tomorrow."
+        },
+        {
+          "jp": "毎日薬を飲まなくてはいけません。",
+          "en": "I have to take medicine every day."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-5"],
+      "replaces": [
+        "n5-grammar-17-5"
+      ],
       "title": "〜ちゃ いけない／〜なくちゃ（casual）",
       "structure": "V て-form → 〜ちゃ／〜じゃ いけない；V ない-form → 〜なくちゃ",
       "meaning": "Casual spoken forms of \"must not\" and \"must\".",
-      "explanation": "In casual speech, 〜てはいけない shrinks to 〜ちゃいけない (〜じゃいけない after んで-verbs) and 〜なくてはいけない to 〜なくちゃ. You will hear them among friends and in dramas.",
+      "explanation": "In casual speech, 〜てはいけない shrinks to 〜ちゃいけない (〜じゃいけない when the て-form ends in で: 飲んで → 飲んじゃ, 泳いで → 泳いじゃ) and 〜なくてはいけない to 〜なくちゃ. You will hear them among friends and in dramas.",
       "summary": "食べちゃいけない (mustn't eat); 行かなくちゃ (I have to go).",
       "details": "| Full form | Casual |\n| :--- | :--- |\n| 食べてはいけない | 食べ**ちゃ**いけない |\n| 飲んではいけない | 飲ん**じゃ**いけない |\n| 行かなくてはいけない | 行か**なくちゃ** |",
-      "tags": ["prohibition", "obligation-necessity", "colloquial"],
+      "tags": [
+        "prohibition",
+        "obligation-necessity",
+        "colloquial"
+      ],
       "examples": [
-        { "jp": "あ、もう9時だ。行かなくちゃ。", "en": "Oh, it's nine already. I have to go." },
-        { "jp": "ここで泳いじゃいけないよ。", "en": "You can't swim here." }
+        {
+          "jp": "あ、もう9時だ。行かなくちゃ。",
+          "en": "Oh, it's nine already. I have to go."
+        },
+        {
+          "jp": "ここで泳いじゃいけないよ。",
+          "en": "You can't swim here."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-17-4"],
+      "replaces": [
+        "n5-grammar-17-4"
+      ],
       "title": "N(object)は",
       "structure": "N(object)は V",
       "meaning": "Making the object the topic with は instead of を.",
       "explanation": "When the object is the subject of conversation, or when you contrast it with something else, は replaces を and the object can move to the front.",
       "summary": "荷物はここに置かないでください.",
       "details": "- ここに荷物**を**置かないでください。 (neutral)\n- 荷物**は**ここに置かないでください。 (talking about the luggage)\n- お酒**は**飲みませんが、ジュース**は**飲みます。 (contrast)",
-      "tags": ["topic-focus-particle"],
+      "tags": [
+        "topic-focus-particle"
+      ],
       "examples": [
-        { "jp": "レポートは金曜日までに出してください。", "en": "Please hand in the report by Friday." },
-        { "jp": "肉は食べますが、魚は食べません。", "en": "I eat meat, but not fish." }
+        {
+          "jp": "レポートは金曜日までに出してください。",
+          "en": "Please hand in the report by Friday."
+        },
+        {
+          "jp": "肉は食べますが、魚は食べません。",
+          "en": "I eat meat, but not fish."
+        }
       ]
     }
   ],
   "18": [
     {
-      "replaces": ["n5-grammar-18-1"],
-      "title": "Verb dictionary form",
-      "structure": "V dictionary form",
-      "meaning": "The plain non-past form, as listed in dictionaries.",
-      "explanation": "Group I: change the い-row sound before ます to the う-row (書きます → 書く). Group II: drop ます, add る (食べる). Group III: する, くる.",
-      "summary": "書く, 飲む, 食べる, する, くる.",
-      "details": "| Group | ます-form | Dictionary form |\n| :--- | :--- | :--- |\n| I | 書**き**ます | 書**く** |\n| I | 待**ち**ます | 待**つ** |\n| II | 食べます | 食べ**る** |\n| III | します／来ます | する／くる |",
-      "tags": ["meta-conjugation"],
-      "examples": [
-        { "jp": "泳ぎます → 泳ぐ、話します → 話す、帰ります → 帰る", "en": "swim, speak, go home → their dictionary forms" },
-        { "jp": "起きます → 起きる、します → する、来ます → くる", "en": "get up, do, come → their dictionary forms" }
-      ]
-    },
-    {
-      "replaces": ["n5-grammar-18-2"],
+      "replaces": [
+        "n5-grammar-18-2"
+      ],
       "title": "N／V ことが できます",
       "structure": "N／V dictionary form こと が できます",
       "meaning": "\"Can (do)\": ability or possibility.",
       "explanation": "できます means \"can\". With a verb, turn it into a noun with dictionary form + こと. A skill noun can take できます directly: 日本語ができます.",
       "summary": "泳ぐことができます; 日本語ができます.",
       "details": "- ピアノを弾く**ことができます**。 I can play the piano.\n- 日本語**ができます**。 I can speak Japanese.\n- このカードで買い物する**ことができます**。 (possibility)",
-      "tags": ["potential", "nominalizer"],
+      "tags": [
+        "potential",
+        "nominalizer"
+      ],
       "examples": [
-        { "jp": "リーさんは漢字を読むことができます。", "en": "Ms. Lee can read kanji." },
-        { "jp": "この店では現金で払うことができません。", "en": "You can't pay in cash at this shop." }
+        {
+          "jp": "リーさんは漢字を読むことができます。",
+          "en": "Ms. Lee can read kanji."
+        },
+        {
+          "jp": "この店では現金で払うことができません。",
+          "en": "You can't pay in cash at this shop."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-18-3"],
+      "replaces": [
+        "n5-grammar-18-3"
+      ],
       "title": "趣味は N／V こと です",
       "structure": "わたしの 趣味は ｛N／V dictionary form こと｝ です",
       "meaning": "Saying what your hobby is.",
       "explanation": "A hobby can be a noun (音楽) or an activity made into a noun with こと (写真を撮ること).",
       "summary": "趣味は写真を撮ることです.",
       "details": "- わたしの**趣味は**料理**です**。\n- **趣味は**映画を見る**こと**です。",
-      "tags": ["nominalizer"],
+      "tags": [
+        "nominalizer"
+      ],
       "examples": [
-        { "jp": "わたしの趣味は山に登ることです。", "en": "My hobby is mountain climbing." },
-        { "jp": "趣味は何ですか。…古い切手を集めることです。", "en": "What's your hobby? — Collecting old stamps." }
-      ]
-    },
-    {
-      "replaces": ["n5-grammar-18-4"],
-      "title": "V1 dictionary form／Nの／Period まえに、V2",
-      "structure": "｛V1 dictionary form／Nの／Period｝ まえに、V2",
-      "meaning": "\"Before ...\" / \"... ago\".",
-      "explanation": "Before an action, use the dictionary form + まえに, even if the sentence is in the past. Before an event, use the noun + の + まえに. After a length of time, まえに means \"ago\".",
-      "summary": "寝るまえに, 食事のまえに, 3年まえに.",
-      "details": "- 寝る**まえに**、歯を磨きます。 I brush my teeth before bed.\n- 食事**のまえに**、手を洗います。\n- 3年**まえに**日本へ来ました。 I came to Japan three years ago.",
-      "tags": ["time-relative"],
-      "examples": [
-        { "jp": "日本へ来るまえに、日本語を勉強しました。", "en": "I studied Japanese before coming to Japan." },
-        { "jp": "2年まえに結婚しました。", "en": "I got married two years ago." }
+        {
+          "jp": "わたしの趣味は山に登ることです。",
+          "en": "My hobby is mountain climbing."
+        },
+        {
+          "jp": "趣味は何ですか。…古い切手を集めることです。",
+          "en": "What's your hobby? — Collecting old stamps."
+        }
       ]
     }
   ],
   "19": [
     {
-      "replaces": ["n5-grammar-19-1"],
+      "replaces": [
+        "n5-grammar-19-1"
+      ],
       "title": "Verb た-form",
       "structure": "V た-form",
       "meaning": "The plain past form of verbs.",
       "explanation": "Take the て-form and change て to た, で to だ. Every rule and exception of the て-form carries over: 行って → 行った.",
       "summary": "書いて → 書いた; 読んで → 読んだ.",
       "details": "| て-form | た-form |\n| :--- | :--- |\n| 書いて | 書い**た** |\n| 読んで | 読ん**だ** |\n| 食べて | 食べ**た** |\n| して／来て | し**た**／来**た** |",
-      "tags": ["meta-conjugation"],
+      "tags": [
+        "meta-conjugation"
+      ],
       "examples": [
-        { "jp": "書いて → 書いた、泳いで → 泳いだ、行って → 行った", "en": "write, swim, go → て-form to た-form" },
-        { "jp": "見て → 見た、して → した、来て → 来た", "en": "see, do, come → て-form to た-form" }
+        {
+          "jp": "書いて → 書いた、泳いで → 泳いだ、行って → 行った",
+          "en": "write, swim, go → て-form to た-form"
+        },
+        {
+          "jp": "見て → 見た、して → した、来て → 来た",
+          "en": "see, do, come → て-form to た-form"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-19-2"],
+      "replaces": [
+        "n5-grammar-19-2"
+      ],
       "title": "V た ことが あります",
       "structure": "V た-form + ことが あります",
       "meaning": "\"I have (ever) done ...\": past experience.",
-      "explanation": "た-form + ことがあります talks about having had an experience at some time, not about a specific recent event. A plain past (行きました) is used for a particular time.",
+      "explanation": "た-form + ことがあります talks about having had an experience at some time, not about a specific recent event. The ordinary past (行きました) is used for a particular time.",
       "summary": "富士山に登ったことがあります = I've climbed Mt. Fuji (before).",
       "note": "Don't use it with a specific time: × 昨日すしを食べたことがあります.",
       "details": "- 北海道へ行っ**たことがあります**。 I have been to Hokkaido.\n- すしを食べ**たことがありますか**。…いいえ、一度も**ありません**。 Have you ever eaten sushi? — No, never.",
-      "tags": ["experience", "nominalizer"],
+      "tags": [
+        "experience",
+        "nominalizer"
+      ],
       "examples": [
-        { "jp": "馬に乗ったことがありますか。…いいえ、一度もありません。", "en": "Have you ever ridden a horse? — No, never." },
-        { "jp": "日本の旅館に泊まったことがあります。", "en": "I've stayed at a Japanese inn." }
+        {
+          "jp": "馬に乗ったことがありますか。…いいえ、一度もありません。",
+          "en": "Have you ever ridden a horse? — No, never."
+        },
+        {
+          "jp": "日本の旅館に泊まったことがあります。",
+          "en": "I've stayed at a Japanese inn."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-19-3"],
+      "replaces": [
+        "n5-grammar-19-3"
+      ],
       "title": "V たり、V たり します",
       "structure": "V1 た-form り、V2 た-form り します",
       "meaning": "\"Things like A and B\": giving examples of actions.",
       "explanation": "Add り to two (or more) た-forms and finish with します (in any tense). It picks out a couple of activities from many, in no particular order.",
       "summary": "週末は掃除したり、買い物したりします.",
       "details": "Compare:\n- 掃除して、洗濯しました。 I cleaned and then did the laundry. (all, in order)\n- 掃除し**たり**、洗濯し**たり**しました。 I did things like cleaning and laundry. (examples)",
-      "tags": ["listing-examples"],
+      "tags": [
+        "listing-examples"
+      ],
       "examples": [
-        { "jp": "日曜日は本を読んだり、音楽を聞いたりします。", "en": "On Sundays I read, listen to music and so on." },
-        { "jp": "夏休みは泳いだり、山に登ったりしました。", "en": "In the summer holidays I went swimming, climbed mountains and so on." }
+        {
+          "jp": "日曜日は本を読んだり、音楽を聞いたりします。",
+          "en": "On Sundays I read, listen to music and so on."
+        },
+        {
+          "jp": "夏休みは泳いだり、山に登ったりしました。",
+          "en": "In the summer holidays I went swimming, climbed mountains and so on."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-19-4"],
+      "replaces": [
+        "n5-grammar-19-4"
+      ],
       "title": "〜く／〜に なります（become）",
       "structure": "い-adj (〜い → 〜く)／な-adj＋に／N＋に + なります",
       "meaning": "\"To become\": describing a change.",
       "explanation": "なります shows change. い-adjectives change い to く; な-adjectives and nouns add に.",
       "summary": "寒くなります, 元気になります, 先生になります.",
       "details": "| Before | Form | Example |\n| :--- | :--- | :--- |\n| い-adj | 〜く | 寒**く**なりました |\n| な-adj | 〜に | 上手**に**なりました |\n| noun | 〜に | 医者**に**なりたいです |",
-      "tags": ["change-of-state"],
+      "tags": [
+        "change-of-state"
+      ],
       "examples": [
-        { "jp": "だんだん暖かくなりました。", "en": "It has gradually got warmer." },
-        { "jp": "日本語が上手になりたいです。", "en": "I want to get good at Japanese." },
-        { "jp": "弟は今年二十歳になります。", "en": "My younger brother turns twenty this year." }
+        {
+          "jp": "だんだん暖かくなりました。",
+          "en": "It has gradually got warmer."
+        },
+        {
+          "jp": "日本語が上手になりたいです。",
+          "en": "I want to get good at Japanese."
+        },
+        {
+          "jp": "弟は今年二十歳になります。",
+          "en": "My younger brother turns twenty this year."
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-19-5"],
+      "replaces": [
+        "n5-grammar-19-5"
+      ],
       "title": "そうですね（agreeing / thinking）",
       "structure": "そうですね",
       "meaning": "\"That's right\" / \"Let me see...\"",
       "explanation": "そうですね agrees with something the listener said. Said slowly, it also buys time while you think about an answer.",
       "summary": "Agreement, or a thinking pause.",
       "details": "- 今日は寒いですね。…**そうですね**。 It's cold today. — It is.\n- 週末何をしますか。…**そうですね**…、たぶん買い物をします。 What will you do this weekend? — Let me see… shopping, probably.",
-      "tags": ["acknowledgment", "confirmation-seeking"],
+      "tags": [
+        "acknowledgment",
+        "confirmation-seeking"
+      ],
       "examples": [
-        { "jp": "この公園はきれいですね。…そうですね。", "en": "This park is lovely, isn't it? — It is." },
-        { "jp": "どこへ行きたいですか。…そうですね…、京都へ行きたいです。", "en": "Where do you want to go? — Hmm… Kyoto." }
+        {
+          "jp": "この公園はきれいですね。…そうですね。",
+          "en": "This park is lovely, isn't it? — It is."
+        },
+        {
+          "jp": "どこへ行きたいですか。…そうですね…、京都へ行きたいです。",
+          "en": "Where do you want to go? — Hmm… Kyoto."
+        }
       ]
     }
   ],
   "20": [
     {
-      "replaces": ["n5-grammar-20-1"],
+      "replaces": [
+        "n5-grammar-20-1"
+      ],
       "title": "Polite style and plain style",
       "structure": "polite (です／ます) vs plain (だ, dictionary, ない, た forms)",
       "meaning": "Every sentence has a polite and a plain version.",
       "explanation": "Plain style uses the dictionary, ない and た forms of verbs, plain adjectives, and だ instead of です after nouns and な-adjectives. The meaning is the same; only the relationship to the listener changes.",
       "summary": "行きます → 行く; 学生です → 学生だ; 高いです → 高い.",
       "details": "| | Polite | Plain |\n| :--- | :--- | :--- |\n| verb | 行きます／行きません | 行く／行かない |\n| verb past | 行きました／行きませんでした | 行った／行かなかった |\n| い-adj | 高いです／高くないです | 高い／高くない |\n| な-adj | 静かです／静かじゃありません | 静かだ／静かじゃない |\n| noun | 雨です／雨でした | 雨だ／雨だった |",
-      "tags": ["meta-conjugation", "colloquial"],
+      "tags": [
+        "meta-conjugation",
+        "colloquial"
+      ],
       "examples": [
-        { "jp": "明日、京都へ行きます。→ 明日、京都へ行く。", "en": "I'm going to Kyoto tomorrow. (polite → plain)" },
-        { "jp": "昨日は雨でした。→ 昨日は雨だった。", "en": "It rained yesterday. (polite → plain)" }
+        {
+          "jp": "明日、京都へ行きます。→ 明日、京都へ行く。",
+          "en": "I'm going to Kyoto tomorrow. (polite → plain)"
+        },
+        {
+          "jp": "昨日は雨でした。→ 昨日は雨だった。",
+          "en": "It rained yesterday. (polite → plain)"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-20-2"],
+      "replaces": [
+        "n5-grammar-20-2"
+      ],
       "title": "When to use polite or plain style",
       "structure": "(register choice)",
       "meaning": "Choosing the style for the listener and the situation.",
@@ -385,38 +592,42 @@
       "summary": "Polite for strangers and seniors; plain for close friends, family and writing.",
       "note": "When in doubt, stay polite; switching to plain too early can sound rude.",
       "details": "| Polite | Plain |\n| :--- | :--- |\n| a new colleague, a shop assistant | a close friend, your sister |\n| your teacher, your boss | your child |\n| a speech, a business email | a diary, a newspaper article |",
-      "tags": ["colloquial"],
+      "tags": [
+        "colloquial"
+      ],
       "examples": [
-        { "jp": "先生、明日のテストは何時からですか。", "en": "Professor, what time does tomorrow's test start? (polite)" },
-        { "jp": "ねえ、明日のテスト、何時から？", "en": "Hey, what time's tomorrow's test? (plain, to a friend)" }
+        {
+          "jp": "先生、明日のテストは何時からですか。",
+          "en": "Teacher, what time does tomorrow's test start? (polite)"
+        },
+        {
+          "jp": "ねえ、明日のテスト、何時から？",
+          "en": "Hey, what time's tomorrow's test? (plain, to a friend)"
+        }
       ]
     },
     {
-      "replaces": ["n5-grammar-20-3"],
+      "replaces": [
+        "n5-grammar-20-3"
+      ],
       "title": "Conversation in plain style",
       "structure": "plain style questions and answers",
       "meaning": "How casual conversation sounds.",
       "explanation": "In plain speech, questions usually drop か and rise in tone; だ is often dropped after nouns and な-adjectives in questions; particles such as を, へ and が are often left out; うん and ううん replace はい and いいえ.",
       "summary": "コーヒー飲む？…うん、飲む。",
       "details": "| Polite | Plain |\n| :--- | :--- |\n| コーヒーを飲みますか。 | コーヒー飲む？ (rising) |\n| はい、飲みます。 | うん、飲む。 |\n| いいえ、飲みません。 | ううん、飲まない。 |\n| 元気ですか。 | 元気？ |",
-      "tags": ["colloquial"],
+      "tags": [
+        "colloquial"
+      ],
       "examples": [
-        { "jp": "明日ひま？…うん、ひまだよ。", "en": "Are you free tomorrow? — Yeah, I am." },
-        { "jp": "昼ご飯、もう食べた？…ううん、まだ。", "en": "Have you had lunch yet? — No, not yet." }
-      ]
-    },
-    {
-      "replaces": ["n5-grammar-20-4"],
-      "title": "〜だろう",
-      "structure": "V／い-adj plain form, な-adj／N + だろう",
-      "meaning": "\"Probably ...\": the plain form of でしょう.",
-      "explanation": "だろう guesses that something is likely. It is the plain counterpart of でしょう and is used in casual speech (men use it more) and in writing.",
-      "summary": "明日は雨だろう = it'll probably rain tomorrow.",
-      "details": "- 明日は晴れる**だろう**。 It will probably be sunny tomorrow.\n- 森さんはもう帰った**だろう**。 Mr. Mori has probably gone home.\n- Polite version: 〜でしょう (Lesson 21).",
-      "tags": ["conjecture-inference", "colloquial"],
-      "examples": [
-        { "jp": "明日はたぶん雨だろう。", "en": "It'll probably rain tomorrow." },
-        { "jp": "あのレストランはたぶん高いだろう。", "en": "That restaurant is probably expensive." }
+        {
+          "jp": "明日ひま？…うん、ひまだよ。",
+          "en": "Are you free tomorrow? — Yeah, I am."
+        },
+        {
+          "jp": "昼ご飯、もう食べた？…ううん、まだ。",
+          "en": "Have you had lunch yet? — No, not yet."
+        }
       ]
     }
   ]
