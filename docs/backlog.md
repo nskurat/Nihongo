@@ -22,6 +22,9 @@ Shape being aimed at:
 - `srs.ts` — scheduling as a pure, unit-tested module with no React and no storage.
 - A deck is a *query* over `ContentSource` (one lesson, a level, a tag facet, everything
   due), so flashcards need no new content. (`StaticContentSource.search` is kept for this.)
+  Every vocab level now carries `pos` (127 rows blank), so producers can pick question types
+  by word class: for example, a prefix (再, 超) gets "再 + 開発 → ?" rather than a standalone
+  meaning card.
 - One `Question` type with several producers — vocab meaning, kanji reading, grammar
   cloze, and the existing AI reading comprehension as one producer among them. A shared
   `QuizRunner` renders all of them.
@@ -61,21 +64,17 @@ included. Nice to have:
 
 Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
 
-- **Vocab examples (N5–N3 only)**: the owner decided N2/N1 get none. 2,329 N5–N3 rows have
-  no `exampleJp` (N5 528, N4 492, N3 1,309). The plan is approved: take sentences from Tatoeba
-  (CC BY 2.0 FR), not paid AI, and have a teacher spot-check them before anything is written.
-  It needs downloads the sandbox can't reach, so the owner runs it locally. The runbook and the
-  attribution decision (a per-sentence "Tatoeba" link plus a "Sources & licences" footer dialog)
-  are in `docs/local-data-refresh.md` §B.
-- **Sources & licences dialog**: the app credits none of its CC BY / CC BY-SA sources (Waller,
-  EDRDG, kanjium). The footer dialog in `docs/local-data-refresh.md` §B fixes that, and it can
-  ship before the examples.
-- **`pos` gaps**: every level is filled from JMdict (`scripts/fill-vocab-pos.ts`; N5/N4
-  hand labels kept). 127 rows are left blank on purpose: auxiliaries, ～ずる verbs, names, and
-  textbook phrases JMdict doesn't list, which the script lists, plus 5 homographs (ああ, あの,
-  かく/かける/きく with a [〜] note). The source is the April 2021 JMdict. Refreshing it from a
-  current JMdict, and re-labelling the rows that came from JMdict, is planned for the owner's
-  laptop in `docs/local-data-refresh.md` §A. Known debatable label: 無事 "safely" is `noun`
+- **Owner's local runs** (`docs/local-data-refresh.md`; need downloads the sandbox can't reach):
+  - **§A JMdict refresh**: `pos` comes from the April 2021 JMdict. The plan is to refresh from
+    a current jmdict-simplified release and re-label the rows that came from JMdict
+    (`--relabel`), never the 571 hand-labelled N5/N4 rows.
+  - **§B Vocab examples, N5–N3 only** (the owner decided N2/N1 get none): 2,329 rows have no
+    `exampleJp` (N5 528, N4 492, N3 1,309). Tatoeba (CC BY 2.0 FR), no paid AI, and a
+    teacher's spot-check before writing. The data must ship together with the per-sentence
+    "Tatoeba" link (§7).
+- **`pos` gaps**: 127 rows are blank on purpose. They are auxiliaries (はず), ～ずる verbs, names,
+  textbook phrases JMdict doesn't list, and 5 homographs (ああ, あの, かく/かける/きく with a [〜]
+  note). `scripts/fill-vocab-pos.ts` lists them. Debatable label: 無事 "safely" is `noun`
   (な-adjective would teach 無事に better).
 - **Kept on purpose (no action unless the policy changes)** — `n5/kanji.json` holds 122
   N4-list kanji and `n4/kanji.json` 169 N3-list and 85 N2/N1-list kanji vs Waller's lists;
@@ -100,6 +99,19 @@ Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by h
 From `docs/reading-library-nav-ux.md`: a "your N3 passage is ready" notice when a
 generation finishes on another level; per-level history switcher; story id in the URL;
 per-level furigana/English toggles; library filter by in-progress.
+
+## 7. UI
+
+- **Sources & licences dialog**: the app credits none of its CC BY / CC BY-SA sources
+  (Waller's lists, EDRDG KANJIDIC/JMdict, kanjium). The PM decision is a footer link that opens
+  a `Modal` listing each source, licence and link, with an axe case. It can ship now; spec in
+  `docs/local-data-refresh.md` §B "Attribution". The per-sentence "Tatoeba" link on vocab rows
+  ships with the example data.
+- **Part of speech is never shown**: every vocab row has `pos` now, but the app only uses it
+  for search word classes and the AI usage-note prompt. A small label on vocab rows
+  (`utils/pos.ts` `posLabel`: "Verb (Group I, godan)", "な-adjective", "Prefix") would help
+  learners with conjugation. This needs a UX call on where it goes and whether it follows the
+  translation toggle.
 
 ## Settled decisions
 
