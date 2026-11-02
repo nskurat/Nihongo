@@ -1,0 +1,488 @@
+{
+  "11": [
+    {
+      "replaces": ["n4-grammar-7-1"],
+      "title": "〜ほうが いいです",
+      "structure": "Vた-form／Vない-form ない + ほうが いいです",
+      "meaning": "Advice: \"you'd better…\", \"you shouldn't…\".",
+      "explanation": "Positive advice uses the た-form even though it is about the future: 休んだほうがいい. Negative advice uses the ない-form: 行かないほうがいい. It is direct, so to superiors soften it with 〜と思います, or avoid giving advice altogether.",
+      "summary": "Vた ほうが いい = you'd better; Vない ほうが いい = you'd better not.",
+      "details": "- 熱があるなら、早く寝**たほうがいい**ですよ。 If you have a fever, you'd better go to bed early.\n- 夜一人で歩か**ないほうがいい**です。 You'd better not walk alone at night.\n- Compare: 〜たら どう？ (next point) is a lighter suggestion.",
+      "tags": ["advice-suggestion"],
+      "examples": [
+        { "jp": "顔色が悪いですね。病院へ行ったほうがいいですよ。", "en": "You look pale. You'd better see a doctor." },
+        { "jp": "あの店は高いから、行かないほうがいいと思います。", "en": "That place is expensive, so I don't think you should go." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-6"],
+      "title": "〜たら どう？／〜たら どうですか",
+      "structure": "Vた-form + ら どう（ですか）？",
+      "meaning": "A friendly suggestion: \"Why don't you…?\", \"How about…?\".",
+      "explanation": "Lighter than ほうが いい: you are offering an idea, not warning. Polite versions are 〜たら どうですか and 〜たら いかがですか. Like most advice, it is better avoided with superiors.",
+      "summary": "〜たら どう？ = why don't you…?",
+      "details": "- 疲れているなら、少し休ん**だらどう**？ If you're tired, why not rest a bit?\n- 先生に聞い**てみたらどうですか**。 Why don't you try asking the teacher?",
+      "tags": ["advice-suggestion"],
+      "examples": [
+        { "jp": "そんなに好きなら、自分で作ってみたらどう？", "en": "If you like it that much, why not try making it yourself?" },
+        { "jp": "分からなかったら、辞書で調べたらどうですか。", "en": "If you don't know, why don't you look it up in a dictionary?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-1"],
+      "title": "Imperative and prohibitive forms",
+      "structure": "Imperative: 〜う → 〜え／〜る → 〜ろ／しろ／来い ・ Prohibitive: V dictionary form + な",
+      "meaning": "The blunt command \"Do it!\" and prohibition \"Don't!\".",
+      "explanation": "Group I verbs change -u to -e: 行く → 行け, 待つ → 待て. Group II replace る with ろ: 食べる → 食べろ. する → しろ, 来る → 来い. The prohibitive is simply the dictionary form + な: 行くな, 触るな. Both sound rough and are used by men among close friends, in emergencies, on signs and in sports.",
+      "summary": "行け, 食べろ, しろ, 来い = do it!; 行くな = don't!",
+      "details": "| Group | Dictionary | Imperative | Prohibitive |\n| :--- | :--- | :--- | :--- |\n| I | 急ぐ／止まる | 急げ／止まれ | 急ぐな／止まるな |\n| II | 逃げる | 逃げろ | 逃げるな |\n| III | する／来る | しろ／来い | するな／来るな |",
+      "tags": ["command", "prohibition", "meta-conjugation"],
+      "examples": [
+        { "jp": "危ない！逃げろ！", "en": "Look out! Run!" },
+        { "jp": "この線から中に入るな。", "en": "Do not go past this line." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-2"],
+      "title": "Where you see and hear imperatives",
+      "structure": "signs, cheering, emergencies, quoted orders",
+      "meaning": "The situations in which the imperative is normal.",
+      "explanation": "Learners rarely say the imperative themselves, but meet it often: road signs (止まれ), cheering at sports (がんばれ!), emergencies (逃げろ!), and when reporting an order: 父が「早く寝ろ」と言った. In polite speech, use 〜て ください or 〜なさい instead.",
+      "summary": "Imperatives appear on signs, in cheering, in emergencies and in reported orders.",
+      "details": "| Situation | Example |\n| :--- | :--- |\n| road sign | **止まれ** |\n| sports | がんばれ！ 走れ！ |\n| emergency | 伏せろ！ |\n| sign | 危険・入るな |\n| reported order | 父が「早く寝ろ」と言った。 |",
+      "tags": ["command", "prohibition"],
+      "examples": [
+        { "jp": "道に「止まれ」と書いてあります。", "en": "It says \"STOP\" on the road." },
+        { "jp": "マラソンを見ている人たちが「がんばれ！」と叫んでいます。", "en": "The people watching the marathon are shouting \"Go for it!\"" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-9"],
+      "title": "Vます-stem なさい",
+      "structure": "Vます-stem + なさい",
+      "meaning": "A firm but not rough command, mainly from parents and teachers.",
+      "explanation": "なさい is what parents say to children and teachers to pupils: 早く寝なさい. It is also used in exam instructions: 正しいものを選びなさい. Between adults it sounds like talking down.",
+      "summary": "Stem + なさい = do it (parent to child, teacher to pupil, exam instructions).",
+      "details": "- 早く起き**なさい**。 Get up!\n- 宿題をし**なさい**。 Do your homework.\n- 次の文を読んで、答えを書き**なさい**。 Read the passage and write your answer.",
+      "tags": ["command", "advice-suggestion"],
+      "examples": [
+        { "jp": "ご飯の前に、手を洗いなさい。", "en": "Wash your hands before dinner." },
+        { "jp": "１から４の中から、正しい答えを一つ選びなさい。", "en": "Choose the one correct answer from 1 to 4." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-20-4", "n4-grammar-20-5"],
+      "title": "〜なければ なりません／〜ないと",
+      "structure": "Vない-form なければ なりません ／ casual: Vない-form ないと（いけない）",
+      "meaning": "\"Must\", \"have to\"; and the everyday short form 〜ないと.",
+      "explanation": "N5 taught 〜なければ なりません. Now that you know the ば-form you can see how it works: \"if (I) don't…, it won't do\". なりません suits rules and obligations that do not depend on your wishes. In conversation the second half is often dropped: 行かなきゃ, 行かないと. Both mean \"I've got to go\".",
+      "summary": "なければ なりません = must (rules); 〜ないと／〜なきゃ = gotta (casual).",
+      "details": "| Register | Form |\n| :--- | :--- |\n| formal | 出さ**なければなりません** |\n| neutral | 出さ**なければいけません** |\n| casual | 出さ**ないと**／出さ**なきゃ** |\n\nThe opposite, \"don't have to\", is 〜なくても いい (N5).",
+      "tags": ["obligation-necessity", "colloquial"],
+      "examples": [
+        { "jp": "外国人は、このカードをいつも持っていなければなりません。", "en": "Foreign residents must carry this card at all times." },
+        { "jp": "あ、もう八時だ。早く行かないと。", "en": "Oh, it's eight already. I've got to get going." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-20-3"],
+      "title": "〜が 必要です／〜必要が あります",
+      "structure": "N が 必要です ／ V dictionary form + 必要が あります（ありません）",
+      "meaning": "\"N is needed\"; \"it is necessary to…\".",
+      "explanation": "必要 is a な-adjective and a noun. With a noun, say N が 必要です. With a verb, use V dictionary form + 必要が あります; its negative 〜必要は ありません means \"there's no need to\". It sounds more objective and formal than なければ なりません.",
+      "summary": "N が 必要 = N is needed; V 必要が ある／ない = need to / no need to.",
+      "details": "- 入るには、パスポート**が必要です**。 You need a passport to get in.\n- 予約する**必要があります**。 You need to book.\n- 今日は来る**必要はありません**。 There's no need to come today.",
+      "tags": ["obligation-necessity", "formal-written"],
+      "examples": [
+        { "jp": "この仕事には、運転免許が必要です。", "en": "This job requires a driving licence." },
+        { "jp": "このイベントは無料なので、予約する必要はありません。", "en": "This event is free, so there's no need to book." }
+      ]
+    }
+  ],
+  "12": [
+    {
+      "replaces": ["n4-grammar-8-11"],
+      "title": "「〜」と 言います／plain form + と 言います",
+      "structure": "「direct quote」と 言います ／ plain form + と 言います",
+      "meaning": "Reports what someone says: direct quotes or indirect speech.",
+      "explanation": "と marks the content of what is said. With 「」 you quote the exact words. Without them, put the content in the plain form (indirect speech). To say who you said it to, use に: 先生に〜と言いました.",
+      "summary": "と marks what is said: 「…」と言う (direct), plain form + と言う (indirect).",
+      "details": "- 森さんは「すぐ行きます」**と言いました**。 Mr. Mori said, \"I'll come right away.\"\n- 森さんはすぐ行く**と言いました**。 Mr. Mori said he'd come right away.\n- 日本では、食べる前に「いただきます」**と言います**。 In Japan you say \"itadakimasu\" before eating.",
+      "tags": ["quotation"],
+      "examples": [
+        { "jp": "寝る前に、家族に「おやすみなさい」と言います。", "en": "Before bed I say \"good night\" to my family." },
+        { "jp": "アンナさんは来週国へ帰ると言いました。", "en": "Anna said she's going back to her country next week." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-5"],
+      "title": "〜と 言って いました",
+      "structure": "Person は + plain form + と 言って いました",
+      "meaning": "Passes on what a third person said: \"X said that…\".",
+      "explanation": "Use 言っていました when you are relaying a message or information from someone who is not present. 言いました simply reports the act of saying. If you pass on a message, the listener knows it came from that person.",
+      "summary": "〜と 言って いました = (X) said that…, passing on information.",
+      "details": "- 青木さんは少し遅れる**と言っていました**。 Ms. Aoki said she'd be a little late.\n- 先生が明日はテストがある**と言っていました**よ。 The teacher said there's a test tomorrow.",
+      "tags": ["quotation", "hearsay"],
+      "examples": [
+        { "jp": "ケンさんは今日は都合が悪いと言っていました。", "en": "Ken said today's not good for him." },
+        { "jp": "リーさんが、この店のケーキはおいしいと言っていましたよ。", "en": "Lee said the cakes at this shop are good." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-6"],
+      "title": "〜と 伝えて いただけませんか",
+      "structure": "Person に + plain form + と 伝えて いただけませんか",
+      "meaning": "Politely asks someone to pass on a message.",
+      "explanation": "伝える means \"pass on, tell\". This is a standard phone and office phrase: you ask the listener to tell a third person something. To friends, 伝えて くれない？ or 伝えて おいて is enough.",
+      "summary": "〜と 伝えて いただけませんか = could you tell (them) that…?",
+      "details": "- 部長に、会議に遅れる**と伝えていただけませんか**。 Could you tell the manager I'll be late for the meeting?\n- 森さんに、電話をください**と伝えてください**。 Please tell Mr. Mori to call me.",
+      "tags": ["request", "quotation"],
+      "examples": [
+        { "jp": "小林さんに、明日の約束は三時になったと伝えていただけませんか。", "en": "Could you tell Mr. Kobayashi that tomorrow's appointment is now at three?" },
+        { "jp": "エマさんに、また後で電話すると伝えてください。", "en": "Please tell Emma I'll call again later." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-3"],
+      "title": "〜と 読みます／〜と 書いて あります",
+      "structure": "N は「〜」と 読みます ／ N に「〜」と 書いて あります",
+      "meaning": "How a word is read; what is written somewhere.",
+      "explanation": "と again marks content: the reading of a word or the words on a sign. 書いて あります (Lesson 5) describes writing that is there now: someone wrote it, and it remains.",
+      "summary": "と marks a reading (と読みます) or written words (と書いてあります).",
+      "details": "- この漢字は何**と読みます**か。…「みなみ」**と読みます**。\n- あの紙に何**と書いてあります**か。…「禁煙」**と書いてあります**。",
+      "tags": ["quotation"],
+      "examples": [
+        { "jp": "すみません、この漢字は何と読みますか。", "en": "Excuse me, how do you read this kanji?" },
+        { "jp": "ドアに「押してください」と書いてあります。", "en": "It says \"Please push\" on the door." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-4"],
+      "title": "X は Y という 意味です",
+      "structure": "X は Y という 意味です ／ X は どういう 意味ですか",
+      "meaning": "Says or asks what a word or sign means.",
+      "explanation": "という links the content (Y) to 意味 (meaning). To ask, use どういう 意味ですか (\"what does … mean?\"). This is a key phrase for asking about anything you do not understand.",
+      "summary": "X は Y という 意味です = X means Y; ask with どういう 意味ですか.",
+      "details": "- 「禁煙」は、たばこを吸ってはいけない**という意味です**。 \"禁煙\" means you mustn't smoke.\n- この言葉は**どういう意味ですか**。 What does this word mean?",
+      "tags": ["definition-meaning", "quotation"],
+      "examples": [
+        { "jp": "「立入禁止」はどういう意味ですか。…入ってはいけないという意味です。", "en": "What does 立入禁止 mean? — It means you mustn't go in." },
+        { "jp": "このマークは、ここで写真を撮ってはいけないという意味です。", "en": "This sign means you can't take photos here." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-7"],
+      "title": "〜という N",
+      "structure": "N1 という N2 ／ plain form + という N",
+      "meaning": "\"An N called…\", \"the N that…\": names something the listener may not know, or gives the content of a noun.",
+      "explanation": "Use 〜という N when introducing a name the listener might not know: 森という人 (a person called Mori), 「さくら」という店. With a clause, という links content to nouns like 話, ニュース, 意見: 雪が降るという話.",
+      "summary": "〜という N = an N called… / the N that says…",
+      "details": "- 青木**という人**から電話がありました。 Someone called Aoki phoned.\n- 「ひまわり」**という店**を知っていますか。\n- 来年、駅ができる**という話**を聞きました。 I heard (a story) that a station is being built next year.",
+      "tags": ["quotation", "definition-meaning"],
+      "examples": [
+        { "jp": "昨日、「春の海」という曲を聞きました。", "en": "Yesterday I listened to a piece called \"Spring Sea\"." },
+        { "jp": "電車が止まっているというニュースを見ました。", "en": "I saw the news that the trains have stopped." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-6"],
+      "title": "そ〜 and こ〜 in writing（referring back）",
+      "structure": "その／それ／そこ… ・ この／これ…",
+      "meaning": "In a text, そ- words usually point back to something already mentioned.",
+      "explanation": "In conversation, こ／そ／あ point to things by distance. In writing, そ- words (その, それ, そこ) normally refer back to something just mentioned. こ- words (この, これ) are used when the writer feels close to it or is about to introduce it. あ- words are rare in writing because the reader cannot see what you mean.",
+      "summary": "In writing, その／それ points back to something the text just mentioned.",
+      "details": "- 駅の前に小さい店があります。**その**店のパンはとてもおいしいです。 There's a small shop by the station. The bread at that shop is delicious.\n- 「明日は雪」**という**ニュースを見た。**それ**で、早く家を出た。",
+      "tags": ["demonstrative"],
+      "examples": [
+        { "jp": "先月、京都で古いお寺を見ました。そのお寺は千年前からあります。", "en": "Last month I saw an old temple in Kyoto. That temple has stood there for a thousand years." },
+        { "jp": "わたしは毎朝公園を走っています。そこで、よく犬と散歩する人に会います。", "en": "I run in the park every morning. There I often meet people walking their dogs." }
+      ]
+    }
+  ],
+  "13": [
+    {
+      "replaces": ["n4-grammar-11-1"],
+      "title": "〜ように（so that）",
+      "structure": "V dictionary form（often potential）／Vない + ように、〜",
+      "meaning": "\"So that…\", \"in order not to…\": the goal behind an action.",
+      "explanation": "ように states a target state you hope to reach, usually with verbs you cannot fully control: potential forms (できる, 見える), なる, or negatives (忘れない). For a direct purpose with an action verb, use ために (Lesson 17).",
+      "summary": "V(potential／ない) ように = so that (I can / won't)…",
+      "details": "- よく見える**ように**、前に座ります。 I'll sit at the front so I can see well.\n- 忘れない**ように**、メモします。 I'll make a note so I don't forget.\n- 風邪をひかない**ように**、暖かくしてください。 Keep warm so you don't catch a cold.",
+      "tags": ["purpose"],
+      "examples": [
+        { "jp": "日本語のニュースが分かるように、毎日聞いています。", "en": "I listen to the news in Japanese every day so that I'll understand it." },
+        { "jp": "遅れないように、早く家を出ました。", "en": "I left home early so I wouldn't be late." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-2"],
+      "title": "〜ように なります／〜なく なります",
+      "structure": "V dictionary form（often potential）+ ように なります ／ Vない-form なく なります",
+      "meaning": "A gradual change: \"come to (be able to)…\", \"no longer…\".",
+      "explanation": "ように なる describes a change in ability or habit that has happened over time: 泳げるように なりました (I can swim now). The opposite change, stopping or losing an ability, is 〜なく なる: 食べなく なった (I stopped eating it).",
+      "summary": "〜ように なる = come to (do / be able to); 〜なく なる = no longer.",
+      "details": "- 日本語が話せる**ようになりました**。 I can speak Japanese now.\n- 子どもが野菜を食べる**ようになりました**。 My child has started eating vegetables.\n- 最近、本を読ま**なくなりました**。 I don't read books any more.",
+      "tags": ["change-of-state"],
+      "examples": [
+        { "jp": "毎日練習して、やっと自転車に乗れるようになりました。", "en": "After practising every day, I can finally ride a bike." },
+        { "jp": "スマホを買ってから、時計をしなくなりました。", "en": "Since I got a smartphone, I've stopped wearing a watch." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-3"],
+      "title": "〜ように します",
+      "structure": "V dictionary form／Vない + ように します（して います）",
+      "meaning": "\"Make a point of…\", \"try to…\": a continued effort.",
+      "explanation": "ように する is about effort and care, not a single attempt. ように して いる describes an effort you keep up every day. As a request, 〜ように して ください asks someone to take care to do something.",
+      "summary": "〜ように する = make an effort to; 〜ように して いる = I make a habit of it.",
+      "details": "- 毎日野菜を食べる**ようにしています**。 I try to eat vegetables every day.\n- 夜遅く食べない**ようにします**。 I'll try not to eat late at night.\n- 時間に遅れない**ようにしてください**。 Please make sure you're not late.",
+      "tags": ["habit-effort"],
+      "examples": [
+        { "jp": "体にいいので、エレベーターを使わないようにしています。", "en": "It's good for me, so I make a point of not using lifts." },
+        { "jp": "これからは、毎日日本語で日記を書くようにします。", "en": "From now on I'll make an effort to keep a diary in Japanese every day." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-3"],
+      "title": "〜く／〜に します（make it…）",
+      "structure": "い-adj 〜く します ／ な-adj・N に します",
+      "meaning": "Someone changes something on purpose: \"make it bigger / quieter / shorter\".",
+      "explanation": "〜く なる／〜に なる (N5) means something becomes so by itself. 〜く する／〜に する means someone makes it so. You will hear it in shops and at the hairdresser's: 短くして ください.",
+      "summary": "〜く／〜に なる = becomes; 〜く／〜に する = makes it (on purpose).",
+      "details": "| なる (by itself) | する (on purpose) |\n| :--- | :--- |\n| 部屋が暖かく**なりました**。 | 部屋を暖かく**しました**。 |\n| 静かに**なりました**。 | 静かに**してください**。 |\n\n- 髪を短く**してください**。 Please cut my hair short.",
+      "tags": ["decision-outcome", "change-of-state"],
+      "examples": [
+        { "jp": "テレビの音をもう少し小さくしてくれませんか。", "en": "Could you turn the TV down a bit?" },
+        { "jp": "赤ちゃんが寝ていますから、静かにしてください。", "en": "The baby's asleep, so please be quiet." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-4"],
+      "title": "N に します（choose, decide on）",
+      "structure": "N に します",
+      "meaning": "\"I'll have / take N\": choosing from options.",
+      "explanation": "When ordering or choosing, N に します states your choice. It is the natural thing to say in a restaurant or shop. Asking: 何に しますか.",
+      "summary": "N に します = I'll go for N.",
+      "details": "- 何に**します**か。…わたしはコーヒー**にします**。 What will you have? — I'll have a coffee.\n- 会議は木曜日**にしましょう**。 Let's make the meeting Thursday.",
+      "tags": ["decision-outcome"],
+      "examples": [
+        { "jp": "飲み物は何にしますか。…じゃ、紅茶にします。", "en": "What would you like to drink? — I'll have tea, then." },
+        { "jp": "旅行は京都と大阪、どちらにしましょうか。", "en": "Kyoto or Osaka: which shall we go for on our trip?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-5"],
+      "title": "〜く／〜に + V（adverbs from adjectives）",
+      "structure": "い-adj 〜く + V ／ な-adj 〜に + V",
+      "meaning": "Adjectives turned into adverbs describe how an action is done.",
+      "explanation": "Change い to く (早い → 早く) and な to に (静か → 静かに) to describe the manner of an action: 早く起きる, きれいに書く. It is the same form used before なる and する.",
+      "summary": "〜く／〜に + verb = do it (quickly, neatly, quietly…).",
+      "details": "- 毎朝**早く**起きます。 I get up early every morning.\n- 字を**きれいに**書いてください。 Please write neatly.\n- **よく**分かりました。 I understood well.",
+      "tags": ["change-of-state"],
+      "examples": [
+        { "jp": "図書館では静かに話してください。", "en": "Please speak quietly in the library." },
+        { "jp": "もう少しゆっくり、大きく言ってくれませんか。", "en": "Could you say it a little more slowly and loudly?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-18-5"],
+      "title": "Vて きます／Vて いきます（change over time）",
+      "structure": "Vて-form + きます（up to now）／いきます（from now on）",
+      "meaning": "くる: a change that has been coming up to now; いく: a change continuing into the future.",
+      "explanation": "With verbs of change (なる, 増える, 変わる), Vて くる shows a change that has developed up to the present, and Vて いく shows it continuing from now on. くる is also used when something starts to be noticed: 雨が降ってきた.",
+      "summary": "〜て くる = has been changing up to now; 〜て いく = will go on changing.",
+      "details": "- だんだん暖かくなっ**てきました**。 It's been getting warmer.\n- これから人口は減っ**ていく**でしょう。 The population will probably keep falling.\n- あ、雨が降っ**てきた**。 Oh, it's started to rain.",
+      "tags": ["change-of-state", "direction-movement"],
+      "examples": [
+        { "jp": "日本に住む外国人が増えてきました。", "en": "The number of foreigners living in Japan has been growing." },
+        { "jp": "これからも日本語の勉強を続けていきたいです。", "en": "I want to keep on studying Japanese from now on." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-7"],
+      "title": "急に",
+      "structure": "急に + V",
+      "meaning": "\"Suddenly\", \"all of a sudden\".",
+      "explanation": "急に describes a change that happens without warning: weather, plans, feelings, illness. It is the everyday word; 突然 means the same and sounds a little more formal.",
+      "summary": "急に = suddenly, without warning.",
+      "details": "- **急に**雨が降り出しました。 It suddenly started raining.\n- **急に**用事ができて、行けなくなりました。 Something came up suddenly and I can't go now.",
+      "tags": ["change-of-state", "time-relative"],
+      "examples": [
+        { "jp": "急に寒くなったので、風邪をひいてしまいました。", "en": "It turned cold so suddenly that I caught a cold." },
+        { "jp": "会議が急に中止になりました。", "en": "The meeting was suddenly cancelled." }
+      ]
+    }
+  ],
+  "14": [
+    {
+      "replaces": ["n4-grammar-13-1"],
+      "title": "V plain form + の（nominalising）",
+      "structure": "V plain form + の + particle",
+      "meaning": "Turns an action into a noun phrase: \"(the act of) doing…\".",
+      "explanation": "Putting の after a verb in the plain form lets you use the action like a noun, followed by は, が or を. N5's こと does a similar job; の is more common in conversation and is the only choice with verbs of perception (見る, 聞こえる).",
+      "summary": "Verb + の turns an action into something you can talk about.",
+      "details": "- 本を読む**の**が好きです。 I like reading.\n- 子どもが遊んでいる**の**が見えます。 I can see the children playing.\n- 早く寝る**の**は体にいいです。 Going to bed early is good for you.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "毎朝ジョギングするのは気持ちがいいです。", "en": "Jogging every morning feels good." },
+        { "jp": "隣の人がピアノを弾いているのが聞こえます。", "en": "I can hear the neighbour playing the piano." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-2"],
+      "title": "〜のは + adjective です",
+      "structure": "V dictionary form + のは + adjective です",
+      "meaning": "Comments on an activity in general: \"doing… is fun / hard / dangerous\".",
+      "explanation": "The の phrase becomes the topic, and the adjective gives your opinion of it. Typical adjectives are 楽しい, 難しい, 大変, 危ない, 体にいい.",
+      "summary": "〜のは + adjective = doing… is (adjective).",
+      "details": "- 外国語を勉強する**のは**楽しいです。 Learning a foreign language is fun.\n- 夜、一人で歩く**のは**危ないです。 Walking alone at night is dangerous.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "漢字を覚えるのは大変ですが、おもしろいです。", "en": "Learning kanji is hard work, but it's interesting." },
+        { "jp": "毎日料理を作るのは時間がかかります。", "en": "Cooking every day takes time." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-3"],
+      "title": "〜のが + 好き／上手／速い…",
+      "structure": "V dictionary form + のが + 好き・嫌い・上手・下手・速い・遅い です",
+      "meaning": "Likes, dislikes and skills about an activity.",
+      "explanation": "Adjectives that take が (好き, 上手, 速い) also take a の phrase with が: 歌うのが好き, 走るのが速い. Use this instead of trying to put the verb straight before 好き.",
+      "summary": "〜のが 好き／上手／速い = like / be good at / be fast at doing.",
+      "details": "- 写真を撮る**のが**好きです。 I like taking photos.\n- 兄は料理を作る**のが**上手です。 My brother is good at cooking.\n- わたしは食べる**のが**遅いです。 I'm a slow eater.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "わたしは人の前で話すのが苦手です。", "en": "I'm not good at speaking in front of people." },
+        { "jp": "ケンさんは泳ぐのがとても速いです。", "en": "Ken is a very fast swimmer." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-4"],
+      "title": "〜のを 忘れました",
+      "structure": "V dictionary form + のを 忘れました",
+      "meaning": "\"Forgot to…\".",
+      "explanation": "The の phrase is the object of 忘れる: what you forgot to do. Compare N を 忘れました, which is forgetting or leaving behind a thing.",
+      "summary": "V + のを 忘れる = forget to do.",
+      "details": "- 電気を消す**のを忘れました**。 I forgot to turn the light off.\n- 傘**を忘れました**。 I left my umbrella behind.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "あ、牛乳を買うのを忘れました。", "en": "Oh, I forgot to buy milk." },
+        { "jp": "出かける前に、窓を閉めるのを忘れないでください。", "en": "Don't forget to shut the windows before you go out." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-5"],
+      "title": "〜のを 知って いますか",
+      "structure": "Plain form + のを 知って いますか",
+      "meaning": "\"Did you know that…?\": asks whether someone knows a piece of news.",
+      "explanation": "The の phrase holds the news, and 知って いますか asks if the listener is aware of it. If they did not know, the answer is いいえ、知りませんでした (not 知っていませんでした).",
+      "summary": "〜のを 知って いますか = did you know that…? Answer: 知りませんでした.",
+      "details": "- 青木さんが結婚する**のを知っていますか**。 Did you know Ms. Aoki is getting married?\n- いいえ、**知りませんでした**。 No, I didn't know.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "駅の前に新しい店ができたのを知っていますか。", "en": "Did you know a new shop has opened in front of the station?" },
+        { "jp": "明日、授業が休みなのを知っていましたか。…いいえ、知りませんでした。", "en": "Did you know there's no class tomorrow? — No, I didn't." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-6"],
+      "title": "〜のは N です（the one who / where / when…is N）",
+      "structure": "Plain form（な-adj な）+ のは + N です",
+      "meaning": "Puts the important part at the end: \"It's N that…\".",
+      "explanation": "Here の stands for a person, thing, place or time, and N です at the end is the new, important information. It is how you answer \"which / who / where?\" with emphasis.",
+      "summary": "〜のは N です = it's N that…; the new information comes last.",
+      "details": "- わたしが生まれた**のは**大阪**です**。 It was Osaka where I was born.\n- いちばん好きな**のは**夏**です**。 The one I like best is summer.\n- 窓を割った**のは**だれですか。 Who was it that broke the window?",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "このケーキを作ったのは父です。", "en": "It was my father who made this cake." },
+        { "jp": "日本で初めて行ったのは京都でした。", "en": "The first place I went to in Japan was Kyoto." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-15-4"],
+      "title": "い-adj 〜さ（nouns from adjectives）",
+      "structure": "い-adj 〜い → 〜さ ／ な-adj → 〜さ",
+      "meaning": "Turns an adjective into a noun for size, amount, degree: 高さ (height), 大切さ (importance).",
+      "explanation": "Drop い and add さ: 長い → 長さ, 重い → 重さ. Some な-adjectives work too: 大切 → 大切さ. These nouns are common when asking about measurements: 高さは何メートルですか.",
+      "summary": "〜さ makes a noun of degree: 長さ, 重さ, 高さ, 大切さ.",
+      "details": "| Adjective | Noun |\n| :--- | :--- |\n| 高い | 高**さ** height |\n| 重い | 重**さ** weight |\n| 広い | 広**さ** size (area) |\n| 便利 | 便利**さ** convenience |\n\nいい → よさ.",
+      "tags": ["nominalizer"],
+      "examples": [
+        { "jp": "この山の高さは三千メートルぐらいです。", "en": "This mountain is about 3,000 metres high." },
+        { "jp": "病気になって、健康の大切さが分かりました。", "en": "Getting ill showed me how important health is." }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "replaces": ["n4-grammar-15-1"],
+      "title": "Question word … か、〜（embedded questions）",
+      "structure": "Question word + plain form（N／な-adj: だ drops）+ か、〜",
+      "meaning": "Puts a question with 何, いつ, どこ… inside a larger sentence: \"I don't know where…\".",
+      "explanation": "The embedded question is in the plain form and ends in か, followed by a verb like 分かりません, 知って いますか, 教えて ください, 覚えて いません. だ drops after nouns: 何時か.",
+      "summary": "Question word + plain form + か = (I don't know) what/where/when…",
+      "details": "- 会議は何時に始まる**か**、知っていますか。 Do you know what time the meeting starts?\n- どこに財布を置いた**か**、覚えていません。 I can't remember where I put my wallet.\n- 誕生日はいつ**か**、教えてください。 Tell me when your birthday is.",
+      "tags": ["question-embedding", "nominalizer"],
+      "examples": [
+        { "jp": "パーティーに何人来るか、まだ分かりません。", "en": "I don't know yet how many people are coming to the party." },
+        { "jp": "この荷物がいつ届くか、調べていただけませんか。", "en": "Could you check when this parcel will arrive?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-15-2"],
+      "title": "〜かどうか、〜",
+      "structure": "Plain form（N／な-adj: だ drops）+ かどうか、〜",
+      "meaning": "\"Whether or not…\": a yes/no question inside a sentence.",
+      "explanation": "For questions without a question word, add かどうか. The rest of the sentence works as with question-word embeds: 分かりません, 確かめて ください, 聞いて みます.",
+      "summary": "〜かどうか = whether (or not).",
+      "details": "- 明日晴れる**かどうか**、分かりません。 I don't know whether it'll be fine tomorrow.\n- この答えが正しい**かどうか**、確かめてください。 Please check whether this answer is right.",
+      "tags": ["question-embedding"],
+      "examples": [
+        { "jp": "その日、行けるかどうか、あとで連絡します。", "en": "I'll let you know later whether I can go that day." },
+        { "jp": "サイズが合うかどうか、着てみてもいいですか。", "en": "May I try it on to see whether it fits?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-15-5"],
+      "title": "〜でしょうか（polite questions）",
+      "structure": "Plain form（N／な-adj: だ drops）+ でしょうか",
+      "meaning": "A softer, politer question than 〜ですか.",
+      "explanation": "でしょうか avoids pressing the listener for a definite answer, so it is polite for questions to staff, superiors and strangers: トイレはどこでしょうか. It also works for a careful request for permission: 入っても よろしいでしょうか.",
+      "summary": "〜でしょうか = a gentle, polite question.",
+      "details": "- すみません、駅はどちら**でしょうか**。 Excuse me, which way is the station?\n- このバスは空港へ行く**でしょうか**。\n- ここに座ってもよろしい**でしょうか**。 May I sit here?",
+      "tags": ["conjecture-inference", "request"],
+      "examples": [
+        { "jp": "すみません、次の電車は何時でしょうか。", "en": "Excuse me, what time is the next train?" },
+        { "jp": "明日、少し早く帰ってもよろしいでしょうか。", "en": "Would it be all right if I left a little early tomorrow?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-15-6"],
+      "title": "〜かな／〜かしら",
+      "structure": "Plain form（N／な-adj: だ drops）+ かな／かしら",
+      "meaning": "\"I wonder…\": a question to yourself, said aloud.",
+      "explanation": "かな is used by everyone in casual speech; かしら is softer and mostly used by women, especially older speakers. Both invite, but do not demand, an answer. 〜ないかな expresses a hope: 早く来ないかな (I wish they'd hurry up).",
+      "summary": "〜かな／かしら = I wonder…",
+      "details": "- 明日は晴れる**かな**。 I wonder if it'll be fine tomorrow.\n- これ、だれの傘**かな**。 Whose umbrella is this, I wonder.\n- バス、早く来ない**かな**。 I wish the bus would come.",
+      "tags": ["question-embedding", "colloquial"],
+      "examples": [
+        { "jp": "この服、わたしに似合うかな。", "en": "I wonder if this outfit suits me." },
+        { "jp": "ケンさん、もう家に着いたかしら。", "en": "I wonder if Ken's home yet." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-4-4"],
+      "title": "どこかで／どこかに・何かを",
+      "structure": "どこか／何か／だれか + particle",
+      "meaning": "\"Somewhere\", \"something\", \"someone\" with particles: which ones you can drop.",
+      "explanation": "With どこか, 何か and だれか, the particles へ, を and が are often dropped: どこか行きたい, 何か飲みたい. で and に must stay, because they carry meaning: どこかで会いましたか (have we met somewhere?), どこかに置いた (I put it somewhere).",
+      "summary": "どこか［へ］, 何か［を］ can drop the particle; どこかで, どこかに cannot.",
+      "details": "| Can drop | Must keep |\n| :--- | :--- |\n| どこか（へ）行きたい | どこか**で**見ました |\n| 何か（を）食べたい | どこか**に**置きました |\n| だれか（が）来た | だれか**に**聞いてください |",
+      "tags": ["particle-usage"],
+      "examples": [
+        { "jp": "この人、どこかで会ったことがありますか。", "en": "Have you met this person somewhere before?" },
+        { "jp": "鍵をどこかに置いたんですが、思い出せません。", "en": "I put my keys somewhere, but I can't remember where." }
+      ]
+    }
+  ]
+}

@@ -81,9 +81,14 @@ describe('grammar examples prompt', () => {
     expect(prompt).toContain('register the pattern really lives in');
   });
 
-  it('N4 lessons map onto Minna 26–50; N5 late lessons have nothing left to forbid', () => {
-    const n4 = getGrammarExamplesPrompt({ title: '〜たら', meaning: 'if', structure: 'V-たら', level: 'N4', lesson: 10 });
-    expect(n4).toContain('Minna no Nihongo Lessons 26–35');
+  it('N4 lessons name the forms not taught yet; N5 late lessons have nothing left to forbid', () => {
+    const n4 = getGrammarExamplesPrompt({ title: '〜ば', meaning: 'if', structure: 'V-ば', level: 'N4', lesson: 10 });
+    expect(n4).toContain('N4 Lessons 1–10');
+    expect(n4).not.toContain('Minna');
+    expect(n4).toContain('passive (〜れる／〜られる) (Lesson 22)');
+    expect(n4).not.toContain('(Lesson 9)');
+    const n4late = getGrammarExamplesPrompt({ title: 'x', meaning: 'y', structure: 'x', level: 'N4', lesson: 25 });
+    expect(n4late).not.toContain('Not taught yet');
     const n5late = getGrammarExamplesPrompt({ title: 'x', meaning: 'y', structure: 'x', level: 'N5', lesson: 25 });
     expect(n5late).toContain('Lessons 1–25');
     expect(n5late).not.toContain('Not taught yet');

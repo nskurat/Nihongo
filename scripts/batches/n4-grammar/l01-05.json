@@ -1,0 +1,482 @@
+{
+  "1": [
+    {
+      "replaces": ["n4-grammar-1-1"],
+      "title": "〜んです",
+      "structure": "Plain form + んです（N／な-adj: 〜なんです）",
+      "meaning": "Explains or asks about the background to something: \"it's that…\", \"is it that…?\"",
+      "explanation": "んです (written の です) ties a sentence to a situation both speakers can see or already know. Asking with んですか shows you noticed something and want the story behind it; answering with んです gives that story, usually a reason. Before a request, 〜んですが sets the scene so the request does not come out of nowhere. Nouns and な-adjectives take な: 雨なんです, 好きなんです.",
+      "summary": "んです links what you say to the situation: ask for the background (んですか), give it (んです), or set up a request (んですが).",
+      "note": "Use it when there is something to explain. A bare fact with no background (わたしはケンです) does not need it, and asking んですか too often can sound nosy.",
+      "details": "| Form | Job | Example |\n| :--- | :--- | :--- |\n| **〜んですか** | asking about something you noticed | 髪を切った**んですか**。 |\n| **〜んです** | giving the reason or background | 頭が痛い**んです**。 |\n| **〜んですが、…** | setting up a request or question | 道が分からない**んですが**、… |\n\nIn casual speech it becomes 〜んだ／〜の: どうしたの？ — 財布をなくしたんだ。",
+      "tags": ["explanation", "cause-reason"],
+      "examples": [
+        { "jp": "ケンさん、元気がないですね。どうしたんですか。", "en": "Ken, you look down. What's wrong?" },
+        { "jp": "昨日、財布をなくしたんです。", "en": "It's that I lost my wallet yesterday." },
+        { "jp": "この漢字の読み方が分からないんですが…。", "en": "I don't know how to read this kanji, so…" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-1-2"],
+      "title": "Vて いただけませんか",
+      "structure": "Vて-form + いただけませんか",
+      "meaning": "A polite request: \"Could you please…?\"",
+      "explanation": "Literally \"Can't I receive the favour of your doing…?\" It is more polite than てください and softer than くださいませんか, so it suits teachers, staff in a shop, or anyone you do not know well. It often follows 〜んですが, which explains why you are asking.",
+      "summary": "Vて いただけませんか is the safe, polite way to ask a favour.",
+      "details": "Politeness, lowest to highest:\n\n1. 書いて**ください**。\n2. 書いて**くださいませんか**。\n3. 書いて**いただけませんか**。\n\nTo friends, 書いて**くれない？** is enough.",
+      "tags": ["request"],
+      "examples": [
+        { "jp": "すみません、もう一度言っていただけませんか。", "en": "Excuse me, could you say that once more?" },
+        { "jp": "日本語で手紙を書いたんですが、ちょっと見ていただけませんか。", "en": "I wrote a letter in Japanese. Could you have a look at it?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-1-3"],
+      "title": "Question word + Vたら いいですか",
+      "structure": "何／どこ／いつ／どう… + Vた-form + ら いいですか",
+      "meaning": "Asks for advice: \"What / where / how should I…?\"",
+      "explanation": "Use this when you do not know what to do and want the listener to tell you. Learn it as a set phrase for now; the たら conditional itself is taught in Lesson 9. The answer often uses 〜たら いいですよ or 〜て ください.",
+      "summary": "Question word + Vたら いいですか asks someone what you should do.",
+      "details": "- どこで 降り**たら いいですか**。 Where should I get off?\n- だれに 聞い**たら いいですか**。 Who should I ask?\n- どう し**たら いいですか**。 What should I do?\n\nAnswering: 次の駅で降りたらいいですよ。",
+      "tags": ["advice-suggestion", "question-embedding"],
+      "examples": [
+        { "jp": "このごみは何曜日に出したらいいですか。", "en": "Which day should I put this rubbish out?" },
+        { "jp": "パスポートをなくしたんです。どうしたらいいですか。", "en": "I lost my passport. What should I do?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-5-4"],
+      "title": "それは 〜ですね（reacting to news）",
+      "structure": "それは + いいですね／おめでとうございます／大変ですね／いけませんね",
+      "meaning": "\"That's great / congratulations / that's too bad\": reacting to what someone just told you.",
+      "explanation": "それ points back to what the other person has just said. Choosing the right follow-up shows you listened: good news gets いいですね or おめでとうございます, trouble gets 大変ですね, and illness gets いけませんね (\"that's no good\").",
+      "summary": "それは + a set reply is how you respond to someone's news.",
+      "details": "| They say… | You answer |\n| :--- | :--- |\n| 来月、結婚します。 | **それは**おめでとうございます。 |\n| 犬を飼い始めました。 | **それは**いいですね。 |\n| 引っ越しで忙しいんです。 | **それは**大変ですね。 |\n| 熱があるんです。 | **それは**いけませんね。 |",
+      "tags": ["connective"],
+      "examples": [
+        { "jp": "試験に合格しました。…それはよかったですね。", "en": "I passed the exam. — That's great!" },
+        { "jp": "朝から頭が痛いんです。…それはいけませんね。", "en": "I've had a headache since this morning. — Oh, that's no good." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-6"],
+      "title": "N(place)に 来ます／行きます（に for the destination）",
+      "structure": "N(place) に + 来ます／行きます／帰ります",
+      "meaning": "に marks where you arrive; へ marks the direction you head in.",
+      "explanation": "With verbs of movement, へ and に are often interchangeable. に puts the weight on the place you end up at, so it is the natural choice when the place is the point of the sentence, for example asking whether someone comes here often. へ stresses the direction and appears more in writing.",
+      "summary": "に (arrival point) and へ (direction) both work with movement verbs; に is the everyday choice when the place itself matters.",
+      "details": "- よくこの店**に**来るんですか。 Do you come to this shop often?\n- 来年、国**へ**帰ります。 I'm going back to my country next year.\n\nOnly に works for getting into or onto something: 電車**に**乗ります, 部屋**に**入ります.",
+      "tags": ["particle-usage"],
+      "examples": [
+        { "jp": "よくこの公園に来るんですか。", "en": "Do you come to this park often?" },
+        { "jp": "毎朝八時に会社に着きます。", "en": "I get to the office at eight every morning." }
+      ]
+    }
+  ],
+  "2": [
+    {
+      "replaces": ["n4-grammar-2-1"],
+      "title": "Potential verbs（can do）",
+      "structure": "Group I: 〜う → 〜える ／ Group II: 〜る → 〜られる ／ する → できる, 来る → 来られる",
+      "meaning": "Says what someone is able to do, or what is possible in a situation.",
+      "explanation": "Group I verbs change the final -u sound to -e and add る: 書く → 書ける, 話す → 話せる. Group II verbs replace る with られる: 食べる → 食べられる. する becomes できる and 来る becomes 来られる. Every potential verb then conjugates as a Group II verb: 書けます, 書けない, 書けた.",
+      "summary": "The potential form (書ける, 食べられる, できる) means \"can\".",
+      "note": "In speech many people drop ら from Group II and 来る (見れる, 来れる). Learn the full form first; it is the one used in writing.",
+      "details": "| Group | Dictionary | Potential |\n| :--- | :--- | :--- |\n| I | 書く／泳ぐ／待つ | 書ける／泳げる／待てる |\n| II | 食べる／起きる | 食べられる／起きられる |\n| III | する／来る | できる／来られる |\n\nN5's 〜ことが できます means the same; the potential form is shorter and more common in conversation.",
+      "tags": ["potential", "meta-conjugation"],
+      "examples": [
+        { "jp": "アンナさんは漢字が三百ぐらい読めます。", "en": "Anna can read about three hundred kanji." },
+        { "jp": "朝が早いので、六時に起きられません。", "en": "I can't get up at six; it's too early for me." },
+        { "jp": "この店ではカードが使えますか。", "en": "Can I use a card in this shop?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-2-2"],
+      "title": "N が + potential verb",
+      "structure": "N が + potential verb（を also possible）",
+      "meaning": "The thing you can do is usually marked with が, not を.",
+      "explanation": "A potential verb describes an ability, a state rather than an action, so the object is normally marked with が, as with 好きです or 分かります. を is also heard, especially when the object is long. Other particles (に, で, へ) stay as they are.",
+      "summary": "With potential verbs, the object usually takes が: 日本語が話せます.",
+      "details": "- 日本語**を**話します。 → 日本語**が**話せます。\n- ピアノ**を**弾きます。 → ピアノ**が**弾けます。\n- 駅**まで**歩けます。 (まで stays)",
+      "tags": ["potential", "particle-usage"],
+      "examples": [
+        { "jp": "リーさんは中国語と英語が話せます。", "en": "Lee can speak Chinese and English." },
+        { "jp": "ケンさんはギターが弾けますか。", "en": "Can you play the guitar, Ken?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-2-3"],
+      "title": "見えます／聞こえます",
+      "structure": "N が 見えます／聞こえます",
+      "meaning": "Something comes into view or reaches your ears by itself: \"can be seen / can be heard\".",
+      "explanation": "見えます and 聞こえます describe what your eyes and ears pick up without effort. The potential forms 見られます and 聞けます describe what you are able to see or hear because the chance exists, such as a film showing or a website with music.",
+      "summary": "見えます／聞こえます: it reaches your senses naturally. 見られます／聞けます: you have the chance to see or hear it.",
+      "details": "| Natural perception | Chance or ability |\n| :--- | :--- |\n| 窓から海が**見えます**。 | この映画はネットで**見られます**。 |\n| 鳥の声が**聞こえます**。 | このサイトで音楽が**聞けます**。 |",
+      "tags": ["spontaneous-perception"],
+      "examples": [
+        { "jp": "後ろの席だと、黒板の字がよく見えません。", "en": "From the back seats I can't see the writing on the board well." },
+        { "jp": "隣の部屋からピアノの音が聞こえます。", "en": "I can hear a piano from the next room." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-2-4"],
+      "title": "できます（be ready, be built, appear）",
+      "structure": "N が できます",
+      "meaning": "Something comes into existence: is finished, is built, opens, forms.",
+      "explanation": "Besides \"can\", できます means that something comes into being. A meal is ready, a new shop opens, a friend is made, a building goes up. Read the subject to tell which meaning is meant.",
+      "summary": "N が できます can mean that N is made, finished or newly there.",
+      "details": "- 晩ご飯が**できました**よ。 Dinner's ready.\n- 駅の前に新しいビルが**できました**。 A new building went up in front of the station.\n- 日本で友だちが**できました**。 I made friends in Japan.",
+      "tags": ["creation-completion"],
+      "examples": [
+        { "jp": "家の近くに大きいスーパーができました。", "en": "A big supermarket has opened near my house." },
+        { "jp": "写真は明日の午後できます。", "en": "The photos will be ready tomorrow afternoon." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-2-5", "n4-grammar-1-4"],
+      "title": "は／も／しか with other particles",
+      "structure": "N(が／を) → Nは／Nも ／ Nに・で・から… + は／も ／ N しか + negative",
+      "meaning": "は picks something out as a topic or a contrast, も adds it, しか〜ない limits it to \"only\".",
+      "explanation": "は and も replace が and を, but are added after other particles: 東京では, 友だちにも. Picking out the object with は often contrasts it with something else: 肉は食べますが、魚は食べません. しか always takes a negative verb and stresses that the amount is small: 千円しかありません.",
+      "summary": "は and も replace が／を and follow other particles; しか + negative means \"only\" with a sense of not enough.",
+      "note": "だけ is neutral \"only\"; しか〜ない adds \"no more than that\": 一人だけ来ました vs 一人しか来ませんでした.",
+      "details": "| Plain | With は | With も |\n| :--- | :--- | :--- |\n| ビール**を**飲みます | ビール**は**飲みます | ビール**も**飲みます |\n| 京都**に**行きました | 京都**には**行きました | 京都**にも**行きました |\n| 駅**で**買えます | 駅**では**買えません | 駅**でも**買えます |\n\nしか: 漢字**しか**書けません (only kanji…), 三十分**しか**寝ませんでした.",
+      "tags": ["particle-usage", "emphasis-limitation", "topic-focus-particle"],
+      "examples": [
+        { "jp": "ひらがなは読めますが、漢字はまだ読めません。", "en": "I can read hiragana, but not kanji yet." },
+        { "jp": "このパンはコンビニでも買えます。", "en": "You can buy this bread at convenience stores too." },
+        { "jp": "財布に五百円しかありません。", "en": "I've only got 500 yen in my wallet." }
+      ]
+    }
+  ],
+  "3": [
+    {
+      "replaces": ["n4-grammar-3-2"],
+      "title": "Vて います（habits and regular activities）",
+      "structure": "Vて-form + います（毎朝／毎週／いつも…）",
+      "meaning": "Describes something done regularly over a period: \"I (usually) do…\".",
+      "explanation": "Besides an action in progress, Vて います describes a repeated activity that is part of someone's life: a hobby, a job, a weekly class. Words like 毎朝, 毎週 or 今 often appear with it. Past habits use Vて いました.",
+      "summary": "Vて います can mean a regular, ongoing activity, not just \"right now\".",
+      "details": "- 毎朝、駅まで歩い**ています**。 I walk to the station every morning.\n- 週に二回、ジムに通っ**ています**。 I go to the gym twice a week.\n- 子どものとき、ピアノを習っ**ていました**。 I took piano lessons as a child.",
+      "tags": ["habit-effort", "state-continuation"],
+      "examples": [
+        { "jp": "エマさんは毎晩寝る前に日記を書いています。", "en": "Emma writes in her diary every night before bed." },
+        { "jp": "大学のとき、レストランでアルバイトをしていました。", "en": "When I was at university, I worked part-time in a restaurant." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-1"],
+      "title": "Vます-stem ながら V2",
+      "structure": "V1ます-stem + ながら + V2",
+      "meaning": "One person does two things at once: \"while doing V1, (does) V2\".",
+      "explanation": "The main action is V2, at the end; V1 is the background activity. Both actions belong to the same person. It also describes doing two things over a longer period, such as working while studying.",
+      "summary": "V1ながら V2: the same person does V1 and V2 at the same time; V2 is the main one.",
+      "details": "- 音楽を聞き**ながら**勉強します。 I study while listening to music.\n- 働き**ながら**大学に通っています。 I'm at university while working.\n\nFor two different people, use 〜間 (Lesson 3) or とき instead.",
+      "tags": ["simultaneous-action"],
+      "examples": [
+        { "jp": "コーヒーを飲みながら新聞を読みます。", "en": "I read the paper while drinking coffee." },
+        { "jp": "歩きながら電話をするのは危ないですよ。", "en": "It's dangerous to talk on the phone while walking." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-8"],
+      "title": "V dictionary form／Vない ことが あります",
+      "structure": "V dictionary form／Vない-form ない + ことが あります",
+      "meaning": "\"Sometimes…\", \"there are times when…\".",
+      "explanation": "Use it for something that happens now and then, not usually. Compare N5's Vた ことが あります, which is about experience (have done before). Here the verb is in the dictionary or ない form.",
+      "summary": "V(dict／ない) ことが あります = it sometimes happens; Vた ことが あります = I have done it before.",
+      "details": "| Pattern | Meaning |\n| :--- | :--- |\n| 朝ご飯を食べない**ことが あります**。 | Sometimes I skip breakfast. |\n| 京都に行った**ことが あります**。 | I have been to Kyoto. |",
+      "tags": ["frequency", "experience"],
+      "examples": [
+        { "jp": "仕事が忙しくて、夜十時まで会社にいることがあります。", "en": "Work is busy, so sometimes I'm at the office until ten at night." },
+        { "jp": "この電車は朝、遅れることがあります。", "en": "This train is sometimes late in the mornings." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-9"],
+      "title": "〜間／〜間に",
+      "structure": "V dictionary form／Vて いる／Nの + 間（に）",
+      "meaning": "間 \"the whole time…\"; 間に \"at some point during…\".",
+      "explanation": "〜間 covers the whole period: something goes on from start to finish. 〜間に marks a point inside the period: something happens once within it. The two clauses can have different subjects.",
+      "summary": "間 = throughout the period; 間に = at some point within it.",
+      "details": "- 夏休みの**間**、ずっと国にいました。 I was back home the whole summer holiday.\n- 夏休みの**間に**、運転を習いたいです。 I want to learn to drive during the summer holiday.\n- 子どもが寝ている**間に**、掃除をします。 I clean while the kids are asleep.",
+      "tags": ["time-relative", "simultaneous-action"],
+      "examples": [
+        { "jp": "電車に乗っている間、ずっと本を読んでいました。", "en": "I read a book the whole time I was on the train." },
+        { "jp": "母が買い物に行っている間に、部屋を片づけました。", "en": "I tidied my room while my mother was out shopping." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-17-4"],
+      "title": "〜おきに",
+      "structure": "Number + counter + おきに",
+      "meaning": "\"Every other…\", \"at intervals of…\".",
+      "explanation": "おきに counts the gap between events. With days, 一日おきに means every other day (one day skipped). With minutes or metres, it usually just means \"every\": 十分おきに = every ten minutes.",
+      "summary": "〜おきに gives the interval: 一日おきに = every other day, 五分おきに = every five minutes.",
+      "details": "- 一日**おきに**ジョギングをします。 I jog every other day (Mon, Wed, Fri…).\n- バスは十五分**おきに**来ます。 Buses come every fifteen minutes.\n\nCompare 〜ごとに: 一日ごとに = every single day.",
+      "tags": ["frequency", "time-relative"],
+      "examples": [
+        { "jp": "この薬は六時間おきに飲んでください。", "en": "Take this medicine every six hours." },
+        { "jp": "わたしは一日おきにプールで泳いでいます。", "en": "I swim at the pool every other day." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-5"],
+      "title": "〜ごろ（about, around a time）",
+      "structure": "Time + ごろ（に）",
+      "meaning": "Gives an approximate point in time: \"around…\".",
+      "explanation": "ごろ follows a point in time (a clock time, a day, a month). に after ごろ is optional. For amounts and lengths of time use ぐらい instead: 三時間ぐらい, not 三時間ごろ.",
+      "summary": "ごろ = around a point in time; ぐらい = about an amount.",
+      "details": "- 七時**ごろ**起きます。 I get up around seven.\n- 三月の終わり**ごろ**、桜が咲きます。 The cherry trees bloom around the end of March.\n- 一時間**ぐらい**待ちました。 I waited about an hour.",
+      "tags": ["time-relative", "degree-extent"],
+      "examples": [
+        { "jp": "毎晩十一時ごろ寝ます。", "en": "I go to bed around eleven every night." },
+        { "jp": "荷物は明日の三時ごろに届きます。", "en": "The parcel will arrive around three tomorrow." }
+      ]
+    }
+  ],
+  "4": [
+    {
+      "replaces": ["n4-grammar-14-3"],
+      "title": "〜ので（because, so）",
+      "structure": "Plain form（N／な-adj: 〜なので）+ ので、〜",
+      "meaning": "Gives a reason in a softer, more objective way than から.",
+      "explanation": "ので presents cause and effect as a natural fact rather than the speaker's own argument, so it sounds politer and is the usual choice for excuses, apologies and requests. Nouns and な-adjectives take な: 休みなので. Before ので, polite forms (〜ますので) are also used in very polite speech.",
+      "summary": "〜ので gives a reason gently; it suits requests and explanations to people you need to be polite to.",
+      "note": "から is fine with friends and for strong opinions; ので is safer when asking for something.",
+      "details": "| から | ので |\n| :--- | :--- |\n| speaker's own reason, can sound insistent | presents the reason as a fact |\n| 寒いから、窓を閉めて。 | 寒いので、窓を閉めていただけませんか。 |\n\nN／な-adj: 雨**なので**, 静か**なので**.",
+      "tags": ["cause-reason"],
+      "examples": [
+        { "jp": "熱があるので、今日は早く帰ってもいいですか。", "en": "I have a fever, so may I go home early today?" },
+        { "jp": "明日は日曜日なので、銀行は休みです。", "en": "Tomorrow is Sunday, so the banks are closed." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-14-1"],
+      "title": "〜て／〜くて／〜で（reason）",
+      "structure": "Vて／Vなくて ／ い-adj くて ／ な-adj・N で + feeling or state",
+      "meaning": "The て-form gives a cause, and the second part is how someone feels or what state results.",
+      "explanation": "The second clause is usually a feeling (安心しました, 困りました, うれしい) or something beyond control (できない, 眠れない). It cannot be a request, an invitation or a decision. For those, use から or ので.",
+      "summary": "て／くて／で gives a reason when the result is a feeling or an uncontrollable state.",
+      "details": "- ニュースを聞い**て**、びっくりしました。 I was surprised to hear the news.\n- 宿題が多**くて**、遊べません。 I've got so much homework I can't go out.\n- 道が複雑**で**、分かりませんでした。 The streets were complicated and I got lost.\n\n✗ 暑くて、窓を開けてください → ✓ 暑いので、窓を開けてください。",
+      "tags": ["cause-reason"],
+      "examples": [
+        { "jp": "家族から手紙が来て、うれしかったです。", "en": "I was happy to get a letter from my family." },
+        { "jp": "この問題は難しくて、分かりません。", "en": "This question is too hard; I can't work it out." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-14-2"],
+      "title": "N で（cause）",
+      "structure": "N（event, weather, illness…）で + result",
+      "meaning": "で after an event noun gives its cause: \"because of the typhoon / the accident\".",
+      "explanation": "Use it with nouns for events that cause things: 地震, 台風, 事故, 病気, 風邪. The result is usually something that happened, not a decision.",
+      "summary": "Event noun + で = because of that event.",
+      "details": "- 台風**で**電車が止まりました。 The trains stopped because of the typhoon.\n- 風邪**で**学校を休みました。 I stayed off school with a cold.\n- 事故**で**道が込んでいます。 The road is jammed because of an accident.",
+      "tags": ["cause-reason", "particle-usage"],
+      "examples": [
+        { "jp": "地震でビルが倒れました。", "en": "The building fell down in the earthquake." },
+        { "jp": "大雪で飛行機が飛びませんでした。", "en": "The plane didn't fly because of heavy snow." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-14-4"],
+      "title": "〜て よかったです",
+      "structure": "Vて／Vなくて／い-adj くて／な-adj で + よかったです",
+      "meaning": "\"I'm glad that…\", relief or happiness about how something turned out.",
+      "explanation": "The て-form gives the reason for the good feeling. With a negative (Vなくて) you are glad something did not happen. Adding ほんとうに or 〜て、よかった (casual) shows stronger relief.",
+      "summary": "〜て よかった: I'm glad that it turned out this way.",
+      "details": "- 間に合っ**て よかった**。 I'm glad I made it in time.\n- けがをし**なくて よかった**です。 I'm glad nobody got hurt.\n- 天気がよく**て よかった**ですね。 Good thing the weather was nice.",
+      "tags": ["emotion-expression", "cause-reason"],
+      "examples": [
+        { "jp": "財布が見つかってよかったですね。", "en": "I'm glad your wallet turned up." },
+        { "jp": "雨が降らなくて、よかったです。", "en": "I'm glad it didn't rain." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-14-5"],
+      "title": "〜て すみません",
+      "structure": "Vて／Vなくて + すみません",
+      "meaning": "Apologises for something specific: \"sorry for…\".",
+      "explanation": "The て-form says what you are sorry about. Vなくて apologises for not doing something. In formal situations 申し訳ありません replaces すみません, and in thanks 〜て くれて ありがとう uses the same pattern.",
+      "summary": "〜て すみません names what you are apologising for.",
+      "details": "- 遅れ**て すみません**。 Sorry I'm late.\n- 返事をし**なくて すみません**でした。 Sorry I didn't reply.\n- 手伝っ**て くれて ありがとう**。 Thanks for helping.",
+      "tags": ["emotion-expression", "cause-reason"],
+      "examples": [
+        { "jp": "夜遅く電話して、すみません。", "en": "Sorry for calling so late at night." },
+        { "jp": "メールの返事が遅くなって、すみません。", "en": "Sorry for my slow reply to your email." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-3"],
+      "title": "〜し、〜し",
+      "structure": "Plain form + し、plain form + し、〜",
+      "meaning": "Lists reasons or points one after another: \"(what's more)…, and…, so…\".",
+      "explanation": "し piles up reasons that point the same way, usually toward a conclusion stated or implied at the end. You can give one reason with し to hint that there are others. Polite forms before し (〜ですし) are fine in polite speech.",
+      "summary": "〜し、〜し lists several reasons in favour of one conclusion.",
+      "details": "- この店は安い**し**、おいしい**し**、よく来ます。 This place is cheap and tasty, so I come often.\n- 雨も降っている**し**、今日は出かけません。 It's raining too, so I'm not going out today.\n\nOften with も: 駅も近いし、家賃も安いし…",
+      "tags": ["listing-examples", "cause-reason"],
+      "examples": [
+        { "jp": "この部屋は広いし、明るいし、駅にも近いです。", "en": "This flat is spacious, bright, and close to the station too." },
+        { "jp": "もう遅いし、疲れたし、帰りましょう。", "en": "It's late and I'm tired, so let's go home." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-4"],
+      "title": "それに",
+      "structure": "S1。それに、S2。",
+      "meaning": "\"Besides\", \"what's more\": adds a further point of the same kind.",
+      "explanation": "それに starts a sentence that adds another reason or fact pointing the same way as the one before. It is common in conversation; in writing さらに or また are more usual.",
+      "summary": "それに adds one more point in the same direction.",
+      "details": "- この靴は軽いです。**それに**、安いです。 These shoes are light. What's more, they're cheap.\n- 今日は寒いし、**それに**雨も降っています。",
+      "tags": ["listing-examples", "connective"],
+      "examples": [
+        { "jp": "あのレストランは高いです。それに、あまりおいしくないです。", "en": "That restaurant is expensive. And besides, it's not very good." },
+        { "jp": "今日は忙しいし、それに頭も痛いんです。", "en": "I'm busy today, and on top of that I have a headache." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-5"],
+      "title": "それで",
+      "structure": "S1。それで、S2。",
+      "meaning": "\"So\", \"that's why\": what comes before is the reason for what follows.",
+      "explanation": "それで links a cause to its result. It reports what happened; it is not used for your own requests or orders (use だから there). In conversation, a rising それで？ asks the speaker to go on: \"And then?\"",
+      "summary": "それで = so, as a result; それで？ = and then?",
+      "details": "- 昨日は熱がありました。**それで**、学校を休みました。 I had a fever yesterday, so I stayed home from school.\n- ✗ 雨です。それで、傘を持って行ってください。 → ✓ だから、傘を持って行ってください。",
+      "tags": ["cause-reason", "connective"],
+      "examples": [
+        { "jp": "電車が止まりました。それで、会議に遅れました。", "en": "The trains stopped. That's why I was late for the meeting." },
+        { "jp": "日本のアニメが好きです。それで、日本語を勉強し始めました。", "en": "I love Japanese anime. That's why I started learning Japanese." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-4"],
+      "title": "〜とか、〜とか",
+      "structure": "N／plain form + とか、N／plain form + とか",
+      "meaning": "Gives a couple of examples from a longer list: \"things like…\".",
+      "explanation": "とか works like や but sounds more casual and can follow verbs and whole sentences, not only nouns. The last とか is often dropped. It also softens a suggestion by making it one example among many.",
+      "summary": "〜とか〜とか gives examples (nouns or actions) in casual speech.",
+      "details": "- 休みの日は掃除**とか**洗濯**とか**をします。 On days off I do things like cleaning and laundry.\n- 疲れたときは、音楽を聞く**とか**、散歩する**とか**…。 When I'm tired I listen to music, take a walk, that sort of thing.\n- 映画**とか**、どう？ How about a film or something?",
+      "tags": ["listing-examples"],
+      "examples": [
+        { "jp": "スーパーで野菜とか果物とかを買いました。", "en": "I bought things like vegetables and fruit at the supermarket." },
+        { "jp": "眠れないときは、本を読むとか、お風呂に入るとかします。", "en": "When I can't sleep, I read a book or have a bath, that kind of thing." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-11"],
+      "title": "または",
+      "structure": "N1 または N2 ／ S1。または、S2。",
+      "meaning": "\"Or\": offers a choice between alternatives.",
+      "explanation": "または is the formal \"or\" found in instructions, forms and announcements. In everyday speech か or それか is more common: 電話かメール.",
+      "summary": "または = \"or\", mainly in writing and formal notices.",
+      "details": "- 黒**または**青のペンで書いてください。 Write in black or blue pen.\n- 電話、**または**メールでご連絡ください。 Please contact us by phone or email.\n- Speech: 電話**か**メールで連絡して。",
+      "tags": ["alternative-choice", "formal-written"],
+      "examples": [
+        { "jp": "申し込みは、インターネットまたは電話でお願いします。", "en": "Please apply online or by phone." },
+        { "jp": "名前はひらがな、またはカタカナで書いてください。", "en": "Write your name in hiragana or katakana." }
+      ]
+    }
+  ],
+  "5": [
+    {
+      "replaces": ["n4-grammar-5-5"],
+      "title": "Transitive and intransitive verb pairs",
+      "structure": "N を Vt（someone does it） ／ N が Vi（it happens）",
+      "meaning": "Many verbs come in pairs: one for doing something to a thing, one for the thing changing by itself.",
+      "explanation": "A transitive verb takes an object with を: ドアを開ける (open the door). Its intransitive partner has the thing as the subject with が: ドアが開く (the door opens). Learn them as pairs; the endings follow loose patterns, but not fixed rules.",
+      "summary": "を + transitive (I open it) vs が + intransitive (it opens).",
+      "details": "| Transitive（を） | Intransitive（が） |\n| :--- | :--- |\n| 開ける open | 開く open |\n| 閉める close | 閉まる close |\n| つける turn on | つく come on |\n| 消す turn off | 消える go off |\n| 壊す break | 壊れる break |\n| 落とす drop | 落ちる fall |\n| 始める begin | 始まる begin |",
+      "tags": ["state-continuation", "particle-usage"],
+      "examples": [
+        { "jp": "風でドアが開きました。", "en": "The door opened in the wind." },
+        { "jp": "暑いので、窓を開けましょうか。", "en": "It's hot. Shall I open the window?" },
+        { "jp": "子どもがおもちゃを壊しました。", "en": "The child broke the toy." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-4-1"],
+      "title": "N が Vて います（resulting state）",
+      "structure": "N が + intransitive Vて-form + います",
+      "meaning": "Describes the state something is in after a change: \"is open / is broken / has fallen\".",
+      "explanation": "With intransitive verbs of instant change (開く, 壊れる, 落ちる, つく), Vて います does not mean \"is doing\" but \"is in that state now\". You are describing what you see, not who caused it.",
+      "summary": "Intransitive Vて います describes a state you can see now: 窓が開いています.",
+      "details": "- 窓が開い**ています**。 The window is open.\n- 電気がつい**ています**。 The light is on.\n- このコップは割れ**ています**。 This glass is cracked.\n- 道に財布が落ち**ています**。 There's a wallet lying in the road.",
+      "tags": ["state-continuation"],
+      "examples": [
+        { "jp": "このいすは壊れていますから、座らないでください。", "en": "This chair is broken, so please don't sit on it." },
+        { "jp": "あれ？エアコンがついていますよ。", "en": "Hey, the air conditioner is on." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-5-1"],
+      "title": "N が Vて あります（left that way on purpose）",
+      "structure": "(place に) N が + transitive Vて-form + あります",
+      "meaning": "Something has been done by someone, on purpose, and is still that way.",
+      "explanation": "With a transitive verb, Vて あります describes a state that someone deliberately created, often in preparation. Compare 窓が開いています (the window is open, cause unknown) and 窓が開けてあります (someone opened it, for a reason).",
+      "summary": "Transitive Vて あります: someone did it on purpose and it is still like that.",
+      "details": "| Vi て います | Vt て あります |\n| :--- | :--- |\n| 電気がついています。 The light is on. | 電気がつけてあります。 The light has been left on (on purpose). |\n| ドアが閉まっています。 | ドアが閉めてあります。 |\n\nWhere something is: 壁にカレンダーが掛け**てあります**。",
+      "tags": ["state-continuation", "preparation"],
+      "examples": [
+        { "jp": "冷蔵庫に晩ご飯が作ってあります。", "en": "Dinner has been made and is in the fridge." },
+        { "jp": "会議室のテーブルに資料が並べてあります。", "en": "The handouts have been set out on the meeting-room table." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-4"],
+      "title": "〜まま",
+      "structure": "Vた-form／Vない-form ない／Nの／い-adj／な-adj な + まま",
+      "meaning": "Something stays as it is: \"with… still…\", \"leaving it…\".",
+      "explanation": "まま says that a state continues while something else happens, often where you would expect it to change. It often points out something odd or careless: wearing shoes indoors, leaving the TV on.",
+      "summary": "〜まま = in an unchanged state, left as it is.",
+      "details": "- 靴を履いた**まま**、部屋に入らないでください。 Don't come in with your shoes on.\n- テレビをつけた**まま**、寝てしまいました。 I fell asleep with the TV on.\n- このままでいいです。 It's fine as it is.",
+      "tags": ["state-continuation"],
+      "examples": [
+        { "jp": "窓を開けたまま、出かけてしまいました。", "en": "I went out and left the window open." },
+        { "jp": "野菜は切らないで、そのまま入れてください。", "en": "Don't cut the vegetables; put them in as they are." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-5-3"],
+      "title": "まだ + affirmative（still）",
+      "structure": "まだ + V affirmative／い-adj／な-adj／N です",
+      "meaning": "\"Still\": a state or action continues.",
+      "explanation": "With an affirmative predicate, まだ means the situation has not changed yet. With a negative it means \"not yet\" (next point). Compare もう \"already\": もう寝ています vs まだ起きています.",
+      "summary": "まだ + affirmative = still.",
+      "details": "- **まだ**雨が降っています。 It's still raining.\n- 十二時ですが、**まだ**眠くないです。 It's midnight but I'm still not sleepy.\n- コーヒーは**まだ**熱いですよ。 The coffee is still hot.",
+      "tags": ["state-continuation", "time-relative"],
+      "examples": [
+        { "jp": "もう夜の十時ですが、父はまだ会社にいます。", "en": "It's already ten at night, but my father is still at work." },
+        { "jp": "時間はまだありますから、ゆっくり食べてください。", "en": "There's still time, so take your time eating." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-5"],
+      "title": "まだ Vて いません（not yet）",
+      "structure": "まだ + Vて-form + いません",
+      "meaning": "\"Hasn't… yet\": something expected has not happened so far.",
+      "explanation": "The ている form is used because you are describing the current state (not done). Saying まだ Vませんでした would sound like you are talking about a finished past period. The short answer is いいえ、まだです.",
+      "summary": "まだ Vて いません = not yet (and it may still happen).",
+      "details": "- 宿題はもうしましたか。 — いいえ、**まだ**し**ていません**。\n- 荷物は**まだ**届い**ていません**。 The parcel hasn't arrived yet.\n- Casual: まだ食べてない。",
+      "tags": ["state-continuation", "time-relative"],
+      "examples": [
+        { "jp": "レポートはもう出しましたか。…いいえ、まだ書いていません。", "en": "Have you handed in the report? — No, I haven't written it yet." },
+        { "jp": "旅行の予定はまだ決めていません。", "en": "We haven't decided on our travel plans yet." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-4-3"],
+      "title": "ありました（found it!）",
+      "structure": "N が ありました／いました",
+      "meaning": "Said when you find something you were looking for: \"Here it is!\"",
+      "explanation": "The past tense here is about the moment of discovery, not about the past. The same goes for animate things: あ、いた！ when you spot a person or pet you were looking for.",
+      "summary": "あった！／ありました: the moment you find something.",
+      "details": "- 鍵はどこ？…あ、**ありました**。 Where are the keys? Oh, here they are.\n- 猫がいない…あ、**いた**！ The cat's gone… oh, there it is!",
+      "tags": ["existence-location"],
+      "examples": [
+        { "jp": "わたしの傘、知りませんか。…あ、ありました。ドアの後ろに。", "en": "Have you seen my umbrella? Oh, here it is, behind the door." },
+        { "jp": "ずっと探していた本が、古本屋にありました。", "en": "I found the book I'd been looking for in a second-hand bookshop." }
+      ]
+    }
+  ]
+}

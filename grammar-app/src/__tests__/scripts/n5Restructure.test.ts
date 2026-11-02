@@ -94,6 +94,14 @@ describe('buildGrammar', () => {
   });
 });
 
+describe('buildGrammar for N4', () => {
+  it('writes N4 uids and level', () => {
+    const { file, map } = buildGrammar({ 2: [spec(['n4-grammar-7-2', 'n4-grammar-7-4'])] }, ['n4-grammar-7-2', 'n4-grammar-7-4'], 'n4');
+    expect(file[2][0]).toMatchObject({ uid: 'n4-grammar-2-1', level: 'N4', lesson: 2 });
+    expect(map).toEqual({ 'n4-grammar-7-2': 'n4-grammar-2-1', 'n4-grammar-7-4': 'n4-grammar-2-1' });
+  });
+});
+
 describe('packUidMap', () => {
   it('drops the prefix and unchanged uids', () => {
     expect(packUidMap({ 'n5-vocab-1-1': 'n5-vocab-2-1', 'n5-vocab-1-2': 'n5-vocab-1-2' }, 'n5-vocab-')).toBe('1-1>2-1');
