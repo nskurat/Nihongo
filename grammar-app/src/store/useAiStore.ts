@@ -26,8 +26,9 @@ export const useAiArtifactStore = create<AiArtifactState>()(
       // v1–v3 keyed by ids that collided across levels or were renumbered (start empty);
       // v4–v7 survive minus uids later content changes reassigned (aiCacheMigration.ts);
       // v8 replaces the four per-feature maps with one artifact map; v9 and v10 rename
-      // vocab notes whose uids moved (core expressions; near-repeat merges).
-      version: 10,
+      // vocab notes whose uids moved (core expressions; near-repeat merges); v11 moves every
+      // N5 artifact to its uid in the restructured N5 lessons.
+      version: 11,
       partialize: (state) => ({ artifacts: state.artifacts }),
       migrate: (persisted, version) => migrateAiCache(persisted, version) as unknown as AiArtifactState,
     }

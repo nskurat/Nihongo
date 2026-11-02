@@ -122,7 +122,7 @@ describe('persisted cache', () => {
           generatedExamples: { 'n5-grammar-1-1': [{ jp: '学生です。', en: 'I am a student.' }] },
           aiExplanations: { 'n5-grammar-1-1': 'nuance' },
           aiVocabNotes: { 'n5-vocab-1-1': 'usage' },
-          aiKanjiMnemonics: { 'n5-kanji-1-1': 'sun story' },
+          aiKanjiMnemonics: { 'n4-kanji-1-1': 'sun story' },
         },
       })
     );
@@ -131,10 +131,10 @@ describe('persisted cache', () => {
     expect(Object.keys(artifacts).sort()).toEqual([
       'grammar-examples:n5-grammar-1-1',
       'grammar-nuance:n5-grammar-1-1',
-      'kanji-mnemonic:n5-kanji-1-1',
+      'kanji-mnemonic:n4-kanji-1-1',
       'vocab-help:n5-vocab-1-1',
     ]);
     // Written back in the new shape
-    expect(JSON.parse(localStorage.getItem('ai-generation-cache')!).version).toBe(10);
+    expect(JSON.parse(localStorage.getItem('ai-generation-cache')!).version).toBe(11);
   });
 });

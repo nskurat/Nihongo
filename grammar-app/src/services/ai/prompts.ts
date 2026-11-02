@@ -217,15 +217,15 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
 // -------------------------------------------------------------
 
 /**
- * N5 (lessons 1–25) and N4 (lessons 1–25) follow the Minna no Nihongo sequence
- * (N4 Lesson n = Minna Lesson 25 + n). Early N5 lessons have not met the verb
+ * N5 lessons 1–25 follow this app's own sequence (docs/content/n5-restructure.md); N4
+ * (lessons 1–25) still follows Minna no Nihongo order (N4 Lesson n = Minna Lesson 25 + n). Early N5 lessons have not met the verb
  * forms a model reaches for by default, so lesson-scoped prompts name them.
  */
 export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
-  { lesson: 9, form: 'reason clauses with から' },
+  { lesson: 11, form: 'reason clauses with から' },
+  { lesson: 14, form: 'dictionary form' },
   { lesson: 14, form: 'て-form' },
   { lesson: 17, form: 'ない-form' },
-  { lesson: 18, form: 'dictionary form' },
   { lesson: 19, form: 'た-form' },
   { lesson: 20, form: 'plain style (だ / plain verb endings outside quotes)' },
   { lesson: 22, form: 'noun-modifying clauses (きのう買った本)' },
@@ -285,13 +285,13 @@ export const STUDY_LEVEL_RULES: Record<LevelType, StudyLevelRule> = {
 };
 
 /**
- * What the learner already knows. N5/N4 lessons follow Minna no Nihongo, so a
+ * What the learner already knows. N5 and N4 lessons are cumulative, so a
  * lesson number narrows the grammar; above N4 the level is the ceiling.
  */
 export function learnerScope(level: LevelType, lesson?: number | null): string[] {
   const lines = [`- Level ceiling (JLPT ${level}): ${STUDY_LEVEL_RULES[level].ceiling}`];
   if (lesson && level === 'N5') {
-    lines.push(`- The learner has studied N5 Lessons 1–${lesson} only (Minna no Nihongo order).`);
+    lines.push(`- The learner has studied N5 Lessons 1–${lesson} only.`);
     const notYet = N5_FORM_MILESTONES.filter((m) => m.lesson > lesson);
     if (notYet.length) {
       lines.push(

@@ -1,7 +1,8 @@
 /**
  * Pure migration helpers for the persisted AI cache (useAiArtifactStore).
  */
-import { ArtifactCache, CachedArtifact, LegacyAiMaps, artifactKey, fromLegacyMaps } from '../services/ai/artifactCache';
+import { ArtifactCache, ArtifactKind, CachedArtifact, LegacyAiMaps, artifactKey, fromLegacyMaps } from '../services/ai/artifactCache';
+import { N5_GRAMMAR_UIDS, N5_KANJI_UIDS, N5_VOCAB_UIDS } from './n5RestructureUids';
 
 // v5: the N3 kanji review (scripts/review-n3-kanji-vocab.ts) reused these slots, which
 // held kanji already taught in N4/N5 or repeated within N3, for missing N3-list kanji.
@@ -290,9 +291,57 @@ export const V10_REMOVED_VOCAB_UIDS: Readonly<Record<string, string>> = {
 
 const V10: VocabRenumbering = { moved: {}, removed: V10_REMOVED_VOCAB_UIDS };
 
+// v11: N5 left the Minna no Nihongo lesson order (scripts/restructure-n5.ts). Every N5
+// grammar point, word and kanji has a known new uid; merged grammar points share one.
+
+/** "old>new,…" suffix pairs (store/n5RestructureUids.ts) → full uid map. */
+export function unpackUidMap(packed: string, prefix: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const pair of packed.split(',')) {
+    const [from, to] = pair.split('>');
+    if (from && to) out[prefix + from] = prefix + to;
+  }
+  return out;
+}
+
 /**
- * Migrates any persisted AI cache to v10: one artifact map (the v8 shape) with vocab notes
- * under their current uids. v4–v7 keep their entries, minus the uids later content changes
+ * Renames artifacts of each kind through its uid map, all at once (a uid freed by one
+ * item may be taken by another). When several old uids land on one new uid, the most
+ * recently generated artifact wins.
+ */
+export function renameArtifacts(
+  artifacts: ArtifactCache,
+  maps: Partial<Record<ArtifactKind, Readonly<Record<string, string>>>>
+): ArtifactCache {
+  const out: ArtifactCache = {};
+  for (const entry of Object.values(artifacts)) {
+    const uid = maps[entry.kind]?.[entry.uid] ?? entry.uid;
+    const key = artifactKey(entry.kind, uid);
+    const kept = out[key];
+    if (!kept || entry.ts > kept.ts) out[key] = { ...entry, uid } as CachedArtifact;
+  }
+  return out;
+}
+
+let v11Maps: Partial<Record<ArtifactKind, Record<string, string>>> | null = null;
+
+/** v11 uid maps per artifact kind, unpacked on first use. */
+export function v11N5Maps(): Partial<Record<ArtifactKind, Record<string, string>>> {
+  if (!v11Maps) {
+    const grammar = unpackUidMap(N5_GRAMMAR_UIDS, 'n5-grammar-');
+    v11Maps = {
+      'grammar-examples': grammar,
+      'grammar-nuance': grammar,
+      'vocab-help': unpackUidMap(N5_VOCAB_UIDS, 'n5-vocab-'),
+      'kanji-mnemonic': unpackUidMap(N5_KANJI_UIDS, 'n5-kanji-'),
+    };
+  }
+  return v11Maps;
+}
+
+/**
+ * Migrates any persisted AI cache to v11: one artifact map (the v8 shape) with every
+ * artifact under its item's current uid. v4–v7 keep their entries, minus the uids later content changes
  * reassigned; anything older starts empty (its keys were the pre-uid ids, which collide
  * across levels).
  */
@@ -301,6 +350,7 @@ export function migrateAiCache(persisted: unknown, version: number): { artifacts
     let artifacts = (persisted as { artifacts?: ArtifactCache } | undefined)?.artifacts ?? {};
     if (version < 9) artifacts = renumberVocabArtifacts(artifacts, V9);
     if (version < 10) artifacts = renumberVocabArtifacts(artifacts, V10);
+    if (version < 11) artifacts = renameArtifacts(artifacts, v11N5Maps());
     return { artifacts };
   }
   const maps = persisted as LegacyAiMaps | undefined;
@@ -313,5 +363,5 @@ export function migrateAiCache(persisted: unknown, version: number): { artifacts
   if (version < 7) notes = withoutShiftedUids(notes, V7_FIRST_SHIFTED_VOCAB_UIDS);
 
   const artifacts = fromLegacyMaps({ ...maps, aiKanjiMnemonics: mnemonics, aiVocabNotes: notes });
-  return { artifacts: renumberVocabArtifacts(renumberVocabArtifacts(artifacts, V9), V10) };
+  return { artifacts: renameArtifacts(renumberVocabArtifacts(renumberVocabArtifacts(artifacts, V9), V10), v11N5Maps()) };
 }

@@ -1,0 +1,1365 @@
+{
+  "_comment": "N5 restructure (2026-11): new example sentences for the N5 core vocab rows, written in our own words for each word's new lesson (no grammar beyond that lesson where possible). uid -> [expected word, exampleJp, exampleEn]. Applied by scripts/rewrite-n5-vocab-examples.ts.",
+  "examples": {
+    "n5-vocab-1-1": [
+      "わたし",
+      "わたしはアンナです。",
+      "I'm Anna."
+    ],
+    "n5-vocab-1-2": [
+      "あなた",
+      "あなたもアメリカ人ですか。",
+      "Are you American too?"
+    ],
+    "n5-vocab-1-3": [
+      "あの人",
+      "あの人は森さんです。",
+      "That's Mr. Mori."
+    ],
+    "n5-vocab-1-4": [
+      "〜さん",
+      "小林さんは会社員です。",
+      "Mr. Kobayashi is an office worker."
+    ],
+    "n5-vocab-1-5": [
+      "先生",
+      "森さんは日本語の先生です。",
+      "Mr. Mori is a Japanese teacher."
+    ],
+    "n5-vocab-1-6": [
+      "会社員",
+      "青木さんは会社員です。",
+      "Mr. Aoki is an office worker."
+    ],
+    "n5-vocab-1-7": [
+      "医者",
+      "姉は医者です。",
+      "My older sister is a doctor."
+    ],
+    "n5-vocab-1-8": [
+      "何歳",
+      "お子さんは何歳ですか。…五歳です。",
+      "How old is your child? — Five."
+    ],
+    "n5-vocab-1-9": [
+      "初めまして",
+      "初めまして。リーです。",
+      "How do you do? I'm Lee."
+    ],
+    "n5-vocab-1-10": [
+      "どうぞよろしく[お願いします]",
+      "エマです。どうぞよろしくお願いします。",
+      "I'm Emma. Pleased to meet you."
+    ],
+    "n5-vocab-1-11": [
+      "おはようございます",
+      "森先生、おはようございます。",
+      "Good morning, Mr. Mori."
+    ],
+    "n5-vocab-1-12": [
+      "こんにちは",
+      "こんにちは。お元気ですか。",
+      "Hello. How are you?"
+    ],
+    "n5-vocab-1-13": [
+      "こんばんは",
+      "こんばんは。寒いですね。",
+      "Good evening. It's cold, isn't it?"
+    ],
+    "n5-vocab-1-14": [
+      "おやすみなさい",
+      "じゃ、おやすみなさい。",
+      "Well, good night."
+    ],
+    "n5-vocab-1-15": [
+      "さようなら",
+      "森先生、さようなら。",
+      "Goodbye, Mr. Mori."
+    ],
+    "n5-vocab-1-16": [
+      "ごめんなさい",
+      "あ、ごめんなさい。",
+      "Oh, I'm sorry."
+    ],
+    "n5-vocab-1-17": [
+      "男の人／女の人",
+      "あの女の人はだれですか。",
+      "Who is that woman?"
+    ],
+    "n5-vocab-1-18": [
+      "留学生",
+      "ケンさんは東京大学の留学生です。",
+      "Ken is an international student at Tokyo University."
+    ],
+    "n5-vocab-1-19": [
+      "サラリーマン",
+      "父はサラリーマンです。",
+      "My father is an office worker."
+    ],
+    "n5-vocab-2-1": [
+      "これ／それ／あれ",
+      "それは何ですか。…これは名刺です。",
+      "What's that? — This is a business card."
+    ],
+    "n5-vocab-2-2": [
+      "この／その／あの〜",
+      "この傘はだれのですか。",
+      "Whose umbrella is this?"
+    ],
+    "n5-vocab-2-3": [
+      "辞書",
+      "これは英語の辞書です。",
+      "This is an English dictionary."
+    ],
+    "n5-vocab-2-4": [
+      "雑誌",
+      "それは車の雑誌です。",
+      "That's a car magazine."
+    ],
+    "n5-vocab-2-5": [
+      "新聞",
+      "あれは今日の新聞ですか。",
+      "Is that today's paper?"
+    ],
+    "n5-vocab-2-6": [
+      "名刺",
+      "これは青木さんの名刺です。",
+      "This is Mr. Aoki's business card."
+    ],
+    "n5-vocab-2-7": [
+      "かばん",
+      "このかばんはリーさんのです。",
+      "This bag is Ms. Lee's."
+    ],
+    "n5-vocab-2-8": [
+      "違います",
+      "それはケンさんのペンですか。…いいえ、違います。",
+      "Is that Ken's pen? — No, it isn't."
+    ],
+    "n5-vocab-2-9": [
+      "そうですか",
+      "これは日本のカメラです。…そうですか。",
+      "This is a Japanese camera. — I see."
+    ],
+    "n5-vocab-2-10": [
+      "[どうも]ありがとう[ございます]",
+      "これ、どうぞ。…どうもありがとうございます。",
+      "Here, this is for you. — Thank you very much."
+    ],
+    "n5-vocab-2-11": [
+      "どういたしまして",
+      "ありがとうございました。…どういたしまして。",
+      "Thank you. — You're welcome."
+    ],
+    "n5-vocab-3-1": [
+      "ここ／そこ／あそこ",
+      "ここは図書館です。",
+      "This is the library."
+    ],
+    "n5-vocab-3-2": [
+      "教室",
+      "教室はあそこです。",
+      "The classroom is over there."
+    ],
+    "n5-vocab-3-3": [
+      "事務所",
+      "事務所はどこですか。",
+      "Where is the office?"
+    ],
+    "n5-vocab-3-4": [
+      "受付",
+      "すみません、受付はどこですか。",
+      "Excuse me, where is reception?"
+    ],
+    "n5-vocab-3-5": [
+      "お手洗い",
+      "お手洗いはあちらです。",
+      "The restroom is over there."
+    ],
+    "n5-vocab-3-6": [
+      "会社",
+      "青木さんの会社はどこですか。",
+      "Where is Mr. Aoki's company?"
+    ],
+    "n5-vocab-3-7": [
+      "すみません",
+      "すみません、駅はどこですか。",
+      "Excuse me, where is the station?"
+    ],
+    "n5-vocab-3-8": [
+      "駅",
+      "駅はあそこです。",
+      "The station is over there."
+    ],
+    "n5-vocab-3-9": [
+      "失礼します",
+      "失礼します。…はい、どうぞ。",
+      "Excuse me (may I come in)? — Yes, come in."
+    ],
+    "n5-vocab-3-10": [
+      "本屋",
+      "本屋はこちらです。",
+      "The bookshop is this way."
+    ],
+    "n5-vocab-4-1": [
+      "います",
+      "教室に学生がいます。",
+      "There are students in the classroom."
+    ],
+    "n5-vocab-4-2": [
+      "いろいろ[な]",
+      "冷蔵庫にいろいろな物があります。",
+      "There are all sorts of things in the fridge."
+    ],
+    "n5-vocab-4-3": [
+      "犬／猫",
+      "いすの下に猫がいます。",
+      "There's a cat under the chair."
+    ],
+    "n5-vocab-4-4": [
+      "木",
+      "庭に木があります。",
+      "There's a tree in the garden."
+    ],
+    "n5-vocab-4-5": [
+      "上／下",
+      "机の上に本があります。",
+      "There's a book on the desk."
+    ],
+    "n5-vocab-4-6": [
+      "前／うしろ",
+      "駅の前に銀行があります。",
+      "There's a bank in front of the station."
+    ],
+    "n5-vocab-4-7": [
+      "隣",
+      "本屋は銀行の隣です。",
+      "The bookshop is next to the bank."
+    ],
+    "n5-vocab-4-8": [
+      "近く",
+      "学校の近くに公園があります。",
+      "There's a park near the school."
+    ],
+    "n5-vocab-5-1": [
+      "お願いします",
+      "コーヒーを二つお願いします。",
+      "Two coffees, please."
+    ],
+    "n5-vocab-5-2": [
+      "いくら",
+      "このかばんはいくらですか。",
+      "How much is this bag?"
+    ],
+    "n5-vocab-5-3": [
+      "[〜を]見せてください",
+      "すみません、その時計を見せてください。",
+      "Excuse me, could I see that watch?"
+    ],
+    "n5-vocab-5-4": [
+      "[〜を]ください",
+      "このりんごを三つください。",
+      "Three of these apples, please."
+    ],
+    "n5-vocab-5-5": [
+      "お金",
+      "財布にお金がありません。",
+      "There's no money in my wallet."
+    ],
+    "n5-vocab-5-6": [
+      "かかります",
+      "駅まで10分かかります。",
+      "It takes ten minutes to the station."
+    ],
+    "n5-vocab-5-7": [
+      "いくつ",
+      "みかんはいくつありますか。",
+      "How many mandarins are there?"
+    ],
+    "n5-vocab-5-8": [
+      "どのくらい",
+      "東京から大阪までどのくらいかかりますか。",
+      "How long does it take from Tokyo to Osaka?"
+    ],
+    "n5-vocab-5-9": [
+      "〜ぐらい",
+      "教室に学生が20人ぐらいいます。",
+      "There are about twenty students in the classroom."
+    ],
+    "n5-vocab-5-10": [
+      "〜だけ",
+      "千円だけあります。",
+      "I only have 1,000 yen."
+    ],
+    "n5-vocab-5-11": [
+      "全部で",
+      "全部でいくらですか。",
+      "How much is it altogether?"
+    ],
+    "n5-vocab-5-12": [
+      "現金",
+      "現金だけですか。",
+      "Is it cash only?"
+    ],
+    "n5-vocab-5-13": [
+      "全部",
+      "これを全部ください。",
+      "I'll take all of these."
+    ],
+    "n5-vocab-6-1": [
+      "起きます",
+      "毎朝7時に起きます。",
+      "I get up at seven every morning."
+    ],
+    "n5-vocab-6-2": [
+      "寝ます",
+      "昨日は12時に寝ました。",
+      "I went to bed at twelve last night."
+    ],
+    "n5-vocab-6-3": [
+      "働きます",
+      "月曜日から金曜日まで働きます。",
+      "I work Monday to Friday."
+    ],
+    "n5-vocab-6-4": [
+      "休みます",
+      "日曜日は休みます。",
+      "I rest on Sundays."
+    ],
+    "n5-vocab-6-5": [
+      "勉強します",
+      "毎晩一時間勉強します。",
+      "I study for an hour every evening."
+    ],
+    "n5-vocab-6-6": [
+      "終わります",
+      "授業は3時に終わります。",
+      "Class ends at three."
+    ],
+    "n5-vocab-6-7": [
+      "今",
+      "今、9時です。",
+      "It's nine o'clock now."
+    ],
+    "n5-vocab-6-8": [
+      "何時",
+      "何時に起きますか。",
+      "What time do you get up?"
+    ],
+    "n5-vocab-6-9": [
+      "毎日",
+      "毎日勉強しますか。…はい、毎日します。",
+      "Do you study every day? — Yes, every day."
+    ],
+    "n5-vocab-6-10": [
+      "何曜日",
+      "今日は何曜日ですか。…水曜日です。",
+      "What day is it today? — Wednesday."
+    ],
+    "n5-vocab-6-11": [
+      "大変ですね",
+      "毎晩12時まで働きます。…大変ですね。",
+      "I work until midnight every night. — That's tough."
+    ],
+    "n5-vocab-6-12": [
+      "いってきます",
+      "じゃ、いってきます。",
+      "Well, I'm off."
+    ],
+    "n5-vocab-6-13": [
+      "いってらっしゃい",
+      "いってきます。…いってらっしゃい。",
+      "I'm off. — See you later."
+    ],
+    "n5-vocab-6-14": [
+      "ただいま",
+      "ただいま。…おかえりなさい。",
+      "I'm home. — Welcome back."
+    ],
+    "n5-vocab-6-15": [
+      "おかえりなさい",
+      "おかえりなさい。今日は早いですね。",
+      "Welcome back. You're early today."
+    ],
+    "n5-vocab-7-1": [
+      "行きます",
+      "来週、大阪へ行きます。",
+      "I'm going to Osaka next week."
+    ],
+    "n5-vocab-7-2": [
+      "来ます",
+      "母が来週日本へ来ます。",
+      "My mother is coming to Japan next week."
+    ],
+    "n5-vocab-7-3": [
+      "帰ります",
+      "何時にうちへ帰りますか。",
+      "What time are you going home?"
+    ],
+    "n5-vocab-7-4": [
+      "飛行機",
+      "飛行機で北海道へ行きます。",
+      "I'm flying to Hokkaido."
+    ],
+    "n5-vocab-7-5": [
+      "電車",
+      "毎朝電車で会社へ行きます。",
+      "I go to work by train every morning."
+    ],
+    "n5-vocab-7-6": [
+      "歩いて",
+      "学校まで歩いて行きます。",
+      "I walk to school."
+    ],
+    "n5-vocab-7-7": [
+      "一人で",
+      "昨日は一人で帰りました。",
+      "I went home alone yesterday."
+    ],
+    "n5-vocab-7-8": [
+      "いつ",
+      "いつ国へ帰りますか。",
+      "When are you going back to your country?"
+    ],
+    "n5-vocab-7-9": [
+      "誕生日",
+      "誕生日は3月3日です。",
+      "My birthday is March 3."
+    ],
+    "n5-vocab-8-1": [
+      "食べます",
+      "毎朝パンを食べます。",
+      "I eat bread every morning."
+    ],
+    "n5-vocab-8-2": [
+      "飲みます",
+      "何を飲みますか。…お茶を飲みます。",
+      "What will you drink? — Tea."
+    ],
+    "n5-vocab-8-3": [
+      "見ます",
+      "夜、テレビを見ます。",
+      "I watch TV in the evening."
+    ],
+    "n5-vocab-8-4": [
+      "読みます",
+      "電車で本を読みます。",
+      "I read on the train."
+    ],
+    "n5-vocab-8-5": [
+      "書きます",
+      "ノートに漢字を書きます。",
+      "I write kanji in my notebook."
+    ],
+    "n5-vocab-8-6": [
+      "買います",
+      "スーパーで牛乳を買いました。",
+      "I bought milk at the supermarket."
+    ],
+    "n5-vocab-8-7": [
+      "撮ります",
+      "公園で写真を撮りました。",
+      "I took photos in the park."
+    ],
+    "n5-vocab-8-8": [
+      "会います",
+      "駅で友達に会います。",
+      "I'm meeting a friend at the station."
+    ],
+    "n5-vocab-8-9": [
+      "ごはん",
+      "一緒に昼ごはんを食べませんか。",
+      "Would you like to have lunch together?"
+    ],
+    "n5-vocab-8-10": [
+      "お酒",
+      "お酒を飲みますか。…いいえ、飲みません。",
+      "Do you drink alcohol? — No, I don't."
+    ],
+    "n5-vocab-8-11": [
+      "宿題",
+      "夜、宿題をします。",
+      "I do my homework in the evening."
+    ],
+    "n5-vocab-8-12": [
+      "[お]花見",
+      "週末、公園で花見をしましょう。",
+      "Let's go cherry-blossom viewing in the park this weekend."
+    ],
+    "n5-vocab-8-13": [
+      "いただきます",
+      "じゃ、いただきます。",
+      "Well then, let's eat."
+    ],
+    "n5-vocab-8-14": [
+      "ごちそうさまでした",
+      "ごちそうさまでした。",
+      "Thank you for the meal."
+    ],
+    "n5-vocab-9-1": [
+      "日本語",
+      "日本語で名前を書きます。",
+      "I write my name in Japanese."
+    ],
+    "n5-vocab-9-2": [
+      "送ります",
+      "友達にメールを送ります。",
+      "I'm sending a friend an email."
+    ],
+    "n5-vocab-9-3": [
+      "あげます",
+      "妹に本をあげました。",
+      "I gave my younger sister a book."
+    ],
+    "n5-vocab-9-4": [
+      "もらいます",
+      "父に時計をもらいました。",
+      "I got a watch from my father."
+    ],
+    "n5-vocab-9-5": [
+      "貸します",
+      "ケンさんにペンを貸しました。",
+      "I lent Ken a pen."
+    ],
+    "n5-vocab-9-6": [
+      "借ります",
+      "図書館で本を借ります。",
+      "I borrow books from the library."
+    ],
+    "n5-vocab-9-7": [
+      "教えます",
+      "友達に日本語を教えます。",
+      "I teach a friend Japanese."
+    ],
+    "n5-vocab-9-8": [
+      "習います",
+      "リーさんに中国語を習います。",
+      "I'm learning Chinese from Ms. Lee."
+    ],
+    "n5-vocab-9-9": [
+      "かけます",
+      "毎晩母に電話をかけます。",
+      "I phone my mother every evening."
+    ],
+    "n5-vocab-9-10": [
+      "荷物",
+      "国へ荷物を送ります。",
+      "I'm sending a parcel home."
+    ],
+    "n5-vocab-9-11": [
+      "もう／まだ",
+      "もう宿題をしましたか。…いいえ、まだです。",
+      "Have you done your homework yet? — No, not yet."
+    ],
+    "n5-vocab-9-12": [
+      "切手",
+      "郵便局で切手を買います。",
+      "I buy stamps at the post office."
+    ],
+    "n5-vocab-9-13": [
+      "使います",
+      "はしを使いますか。",
+      "Do you use chopsticks?"
+    ],
+    "n5-vocab-9-14": [
+      "くれます",
+      "友達がわたしにケーキをくれました。",
+      "A friend gave me a cake."
+    ],
+    "n5-vocab-9-15": [
+      "意味",
+      "この言葉の意味は何ですか。",
+      "What does this word mean?"
+    ],
+    "n5-vocab-10-1": [
+      "きれい[な]",
+      "この公園はきれいですね。",
+      "This park is lovely, isn't it?"
+    ],
+    "n5-vocab-10-2": [
+      "親切[な]",
+      "森先生はとても親切です。",
+      "Mr. Mori is very kind."
+    ],
+    "n5-vocab-10-3": [
+      "有名[な]",
+      "京都は有名な町です。",
+      "Kyoto is a famous city."
+    ],
+    "n5-vocab-10-4": [
+      "便利[な]",
+      "駅の近くは便利です。",
+      "It's convenient near the station."
+    ],
+    "n5-vocab-10-5": [
+      "大きい",
+      "大きいかばんですね。",
+      "That's a big bag."
+    ],
+    "n5-vocab-10-6": [
+      "新しい",
+      "新しい靴を買いました。",
+      "I bought new shoes."
+    ],
+    "n5-vocab-10-7": [
+      "高い",
+      "この時計は高いです。",
+      "This watch is expensive."
+    ],
+    "n5-vocab-10-8": [
+      "難しい",
+      "漢字は難しいですが、おもしろいです。",
+      "Kanji are difficult but interesting."
+    ],
+    "n5-vocab-10-9": [
+      "忙しい",
+      "今週はとても忙しいです。",
+      "I'm very busy this week."
+    ],
+    "n5-vocab-10-10": [
+      "おいしい",
+      "このケーキはおいしいですね。",
+      "This cake is good, isn't it?"
+    ],
+    "n5-vocab-10-11": [
+      "どんな〜",
+      "大阪はどんな町ですか。",
+      "What kind of city is Osaka?"
+    ],
+    "n5-vocab-10-12": [
+      "どれ",
+      "アンナさんの傘はどれですか。",
+      "Which umbrella is yours, Anna?"
+    ],
+    "n5-vocab-10-13": [
+      "広い／狭い",
+      "わたしの部屋は狭いですが、明るいです。",
+      "My room is small but bright."
+    ],
+    "n5-vocab-11-1": [
+      "わかります",
+      "英語がわかりますか。…はい、少しわかります。",
+      "Do you understand English? — Yes, a little."
+    ],
+    "n5-vocab-11-2": [
+      "あります",
+      "車がありますか。…いいえ、ありません。",
+      "Do you have a car? — No, I don't."
+    ],
+    "n5-vocab-11-3": [
+      "好き[な]",
+      "日本の音楽が好きです。",
+      "I like Japanese music."
+    ],
+    "n5-vocab-11-4": [
+      "嫌い[な]",
+      "わたしは虫が嫌いです。",
+      "I don't like bugs."
+    ],
+    "n5-vocab-11-5": [
+      "上手[な]",
+      "エマさんは歌が上手です。",
+      "Emma is a good singer."
+    ],
+    "n5-vocab-11-6": [
+      "下手[な]",
+      "わたしは絵が下手です。",
+      "I'm bad at drawing."
+    ],
+    "n5-vocab-11-7": [
+      "料理",
+      "母は料理が上手です。",
+      "My mother is a good cook."
+    ],
+    "n5-vocab-11-8": [
+      "音楽",
+      "音楽が好きですから、よくコンサートへ行きます。",
+      "I like music, so I often go to concerts."
+    ],
+    "n5-vocab-11-9": [
+      "時間",
+      "今日は時間がありません。",
+      "I don't have time today."
+    ],
+    "n5-vocab-11-10": [
+      "約束",
+      "今晩、友達と約束があります。",
+      "I'm meeting a friend tonight (we've made plans)."
+    ],
+    "n5-vocab-11-11": [
+      "どうして",
+      "どうして日本へ来ましたか。",
+      "Why did you come to Japan?"
+    ],
+    "n5-vocab-11-12": [
+      "特に",
+      "果物が好きです。特にいちごが好きです。",
+      "I like fruit, especially strawberries."
+    ],
+    "n5-vocab-12-1": [
+      "いちばん〜",
+      "日本料理で何がいちばんおいしいですか。",
+      "What's the best Japanese dish?"
+    ],
+    "n5-vocab-12-2": [
+      "多い／少ない",
+      "学生は多いですか。…いいえ、少ないです。",
+      "Are there many students? — No, only a few."
+    ],
+    "n5-vocab-12-3": [
+      "暖かい／涼しい",
+      "今日は昨日より暖かいです。",
+      "Today is warmer than yesterday."
+    ],
+    "n5-vocab-12-4": [
+      "重い／軽い",
+      "このかばんはあのかばんより軽いです。",
+      "This bag is lighter than that one."
+    ],
+    "n5-vocab-12-5": [
+      "季節",
+      "季節でいつがいちばん好きですか。…秋です。",
+      "Which season do you like best? — Autumn."
+    ],
+    "n5-vocab-12-6": [
+      "天気",
+      "昨日はいい天気でした。",
+      "The weather was nice yesterday."
+    ],
+    "n5-vocab-12-7": [
+      "世界",
+      "世界でどこがいちばん大きいですか。",
+      "Which country is the biggest in the world?"
+    ],
+    "n5-vocab-12-8": [
+      "どちら",
+      "コーヒーと紅茶とどちらが好きですか。",
+      "Which do you prefer, coffee or tea?"
+    ],
+    "n5-vocab-13-1": [
+      "遊びます",
+      "日曜日、友達と遊びました。",
+      "I hung out with friends on Sunday."
+    ],
+    "n5-vocab-13-2": [
+      "疲れます",
+      "今日はとても疲れました。",
+      "I'm really tired today."
+    ],
+    "n5-vocab-13-3": [
+      "入ります／出ます",
+      "9時に会社を出ます。",
+      "I leave the office at nine."
+    ],
+    "n5-vocab-13-4": [
+      "散歩します",
+      "毎朝犬と散歩します。",
+      "I walk the dog every morning."
+    ],
+    "n5-vocab-13-5": [
+      "欲しい",
+      "新しい自転車が欲しいです。",
+      "I want a new bicycle."
+    ],
+    "n5-vocab-13-6": [
+      "週末",
+      "週末は何をしたいですか。",
+      "What do you want to do this weekend?"
+    ],
+    "n5-vocab-13-7": [
+      "おなかが すきました",
+      "おなかがすきましたね。何か食べましょう。",
+      "I'm hungry, aren't you? Let's eat something."
+    ],
+    "n5-vocab-13-8": [
+      "のどが かわきました",
+      "のどがかわきました。水が飲みたいです。",
+      "I'm thirsty. I want some water."
+    ],
+    "n5-vocab-14-1": [
+      "つけます／消します",
+      "暗いですから、電気をつけてください。",
+      "It's dark, so please turn on the light."
+    ],
+    "n5-vocab-14-2": [
+      "開けます／閉めます",
+      "寒いですから、窓を閉めましょうか。",
+      "It's cold. Shall I close the window?"
+    ],
+    "n5-vocab-14-3": [
+      "急ぎます",
+      "時間がありませんから、急いでください。",
+      "There's no time, so please hurry."
+    ],
+    "n5-vocab-14-4": [
+      "待ちます",
+      "ここで少し待ってください。",
+      "Please wait here a moment."
+    ],
+    "n5-vocab-14-5": [
+      "手伝います",
+      "荷物が多いですね。手伝いましょうか。",
+      "That's a lot of luggage. Shall I help?"
+    ],
+    "n5-vocab-14-6": [
+      "話します",
+      "日本語で話してください。",
+      "Please speak in Japanese."
+    ],
+    "n5-vocab-14-7": [
+      "見せます",
+      "パスポートを見せてください。",
+      "Please show me your passport."
+    ],
+    "n5-vocab-14-8": [
+      "読み方",
+      "この漢字の読み方がわかりません。",
+      "I don't know how to read this kanji."
+    ],
+    "n5-vocab-14-9": [
+      "ゆっくり",
+      "もう少しゆっくり話してください。",
+      "Please speak a little more slowly."
+    ],
+    "n5-vocab-14-10": [
+      "入れます／出します",
+      "ここにカードを入れてください。",
+      "Please insert your card here."
+    ],
+    "n5-vocab-14-11": [
+      "回します",
+      "これを右へ回してください。",
+      "Please turn this to the right."
+    ],
+    "n5-vocab-14-12": [
+      "引きます",
+      "このドアは引いてください。",
+      "Please pull this door."
+    ],
+    "n5-vocab-14-13": [
+      "動きます",
+      "この時計は動きません。",
+      "This clock doesn't work."
+    ],
+    "n5-vocab-15-1": [
+      "結婚します",
+      "姉は去年結婚しました。",
+      "My older sister got married last year."
+    ],
+    "n5-vocab-15-2": [
+      "住所",
+      "ここに住所を書いてください。",
+      "Please write your address here."
+    ],
+    "n5-vocab-15-3": [
+      "作ります",
+      "母は今、晩ごはんを作っています。",
+      "My mother is making dinner now."
+    ],
+    "n5-vocab-15-4": [
+      "売ります",
+      "あの店で切手を売っています。",
+      "That shop sells stamps."
+    ],
+    "n5-vocab-15-5": [
+      "知ります／知っています",
+      "この歌を知っていますか。…はい、知っています。",
+      "Do you know this song? — Yes, I do."
+    ],
+    "n5-vocab-15-6": [
+      "住んでいます",
+      "家族は大阪に住んでいます。",
+      "My family lives in Osaka."
+    ],
+    "n5-vocab-15-7": [
+      "研究します",
+      "兄は大学で日本の歴史を研究しています。",
+      "My older brother researches Japanese history at university."
+    ],
+    "n5-vocab-15-8": [
+      "専門",
+      "専門は何ですか。…経済です。",
+      "What's your field? — Economics."
+    ],
+    "n5-vocab-15-9": [
+      "独身",
+      "ケンさんは独身ですか。…いいえ、結婚しています。",
+      "Is Ken single? — No, he's married."
+    ],
+    "n5-vocab-15-10": [
+      "生まれます",
+      "わたしは1999年に生まれました。",
+      "I was born in 1999."
+    ],
+    "n5-vocab-15-11": [
+      "家賃",
+      "このアパートの家賃はいくらですか。",
+      "How much is the rent for this flat?"
+    ],
+    "n5-vocab-15-12": [
+      "アパート",
+      "駅の近くのアパートに住んでいます。",
+      "I live in a flat near the station."
+    ],
+    "n5-vocab-16-1": [
+      "乗ります／降ります",
+      "駅でバスに乗って、病院の前で降ります。",
+      "I get on the bus at the station and get off in front of the hospital."
+    ],
+    "n5-vocab-16-2": [
+      "乗り換えます",
+      "新宿で電車を乗り換えます。",
+      "I change trains at Shinjuku."
+    ],
+    "n5-vocab-16-3": [
+      "若い",
+      "あの先生は若くて、親切です。",
+      "That teacher is young and kind."
+    ],
+    "n5-vocab-16-4": [
+      "背が高い",
+      "弟は背が高いです。",
+      "My younger brother is tall."
+    ],
+    "n5-vocab-16-5": [
+      "体",
+      "スポーツは体にいいです。",
+      "Sport is good for your body."
+    ],
+    "n5-vocab-16-6": [
+      "頭",
+      "頭が痛くて、今日は休みました。",
+      "I had a headache, so I took today off."
+    ],
+    "n5-vocab-16-7": [
+      "どうやって",
+      "駅までどうやって行きますか。…バスに乗って行きます。",
+      "How do you get to the station? — By bus."
+    ],
+    "n5-vocab-17-1": [
+      "忘れます",
+      "宿題を忘れないでください。",
+      "Don't forget your homework."
+    ],
+    "n5-vocab-17-2": [
+      "払います",
+      "カードで払ってもいいですか。",
+      "May I pay by card?"
+    ],
+    "n5-vocab-17-3": [
+      "返します",
+      "その本はまだ返さなくてもいいですよ。",
+      "You don't have to give that book back yet."
+    ],
+    "n5-vocab-17-4": [
+      "心配します",
+      "子どもがまだ帰っていませんから、心配しています。",
+      "My child isn't home yet, so I'm worried."
+    ],
+    "n5-vocab-17-5": [
+      "危ない",
+      "危ないですから、ここで遊ばないでください。",
+      "It's dangerous, so please don't play here."
+    ],
+    "n5-vocab-17-6": [
+      "大丈夫[な]",
+      "大丈夫ですか。…はい、大丈夫です。",
+      "Are you all right? — Yes, I'm fine."
+    ],
+    "n5-vocab-17-7": [
+      "問題",
+      "この問題は難しいですね。",
+      "This question is difficult, isn't it?"
+    ],
+    "n5-vocab-17-8": [
+      "病気",
+      "病気ですから、今日は休まなければなりません。",
+      "I'm ill, so I have to stay home today."
+    ],
+    "n5-vocab-17-9": [
+      "薬",
+      "一日に三回薬を飲まなければなりません。",
+      "I have to take medicine three times a day."
+    ],
+    "n5-vocab-17-10": [
+      "お大事に",
+      "風邪ですか。お大事に。",
+      "A cold? Take care of yourself."
+    ],
+    "n5-vocab-18-1": [
+      "できます",
+      "エマさんは日本語ができます。",
+      "Emma can speak Japanese."
+    ],
+    "n5-vocab-18-2": [
+      "弾きます",
+      "ギターを弾くことができます。",
+      "I can play the guitar."
+    ],
+    "n5-vocab-18-3": [
+      "歌います",
+      "日本の歌を歌うことができます。",
+      "I can sing Japanese songs."
+    ],
+    "n5-vocab-18-4": [
+      "集めます／捨てます",
+      "ここにごみを捨てないでください。",
+      "Please don't throw rubbish here."
+    ],
+    "n5-vocab-18-5": [
+      "運転します",
+      "車を運転することができますか。",
+      "Can you drive a car?"
+    ],
+    "n5-vocab-18-6": [
+      "予約します",
+      "旅行のまえに、ホテルを予約します。",
+      "I book a hotel before the trip."
+    ],
+    "n5-vocab-18-7": [
+      "趣味",
+      "趣味は何ですか。…本を読むことです。",
+      "What are your hobbies? — Reading."
+    ],
+    "n5-vocab-18-8": [
+      "日記",
+      "毎晩日本語で日記を書きます。",
+      "I write a diary in Japanese every night."
+    ],
+    "n5-vocab-18-9": [
+      "なかなか",
+      "バスがなかなか来ませんね。",
+      "The bus just isn't coming, is it?"
+    ],
+    "n5-vocab-18-10": [
+      "ぜひ",
+      "ぜひ日本へ来てください。",
+      "Please do come to Japan."
+    ],
+    "n5-vocab-18-11": [
+      "練習します",
+      "毎日ピアノを練習します。",
+      "I practise the piano every day."
+    ],
+    "n5-vocab-19-1": [
+      "初めて",
+      "初めて富士山を見ました。",
+      "I saw Mt. Fuji for the first time."
+    ],
+    "n5-vocab-19-2": [
+      "登ります",
+      "富士山に登ったことがありますか。",
+      "Have you ever climbed Mt. Fuji?"
+    ],
+    "n5-vocab-19-3": [
+      "泊まります",
+      "京都で旅館に泊まりました。",
+      "I stayed at a Japanese inn in Kyoto."
+    ],
+    "n5-vocab-19-4": [
+      "掃除します／洗濯します",
+      "日曜日は掃除したり、洗濯したりします。",
+      "On Sundays I clean, do the laundry and so on."
+    ],
+    "n5-vocab-19-5": [
+      "なります",
+      "春になりました。",
+      "Spring has come."
+    ],
+    "n5-vocab-19-6": [
+      "眠い",
+      "眠いですから、もう寝ます。",
+      "I'm sleepy, so I'm going to bed."
+    ],
+    "n5-vocab-19-7": [
+      "強い／弱い",
+      "今日は風が強いですね。",
+      "The wind is strong today."
+    ],
+    "n5-vocab-19-8": [
+      "調子",
+      "体の調子はどうですか。",
+      "How are you feeling?"
+    ],
+    "n5-vocab-19-9": [
+      "一度／一度も",
+      "すしを一度も食べたことがありません。",
+      "I've never eaten sushi."
+    ],
+    "n5-vocab-19-10": [
+      "だんだん",
+      "だんだん寒くなりました。",
+      "It has gradually got colder."
+    ],
+    "n5-vocab-19-11": [
+      "変えます",
+      "髪の色を変えました。",
+      "I changed my hair colour."
+    ],
+    "n5-vocab-20-1": [
+      "要ります",
+      "傘、要る？…ううん、要らない。",
+      "Do you need an umbrella? — No, I don't."
+    ],
+    "n5-vocab-20-2": [
+      "調べます",
+      "言葉の意味を辞書で調べた。",
+      "I looked the word up in a dictionary."
+    ],
+    "n5-vocab-20-3": [
+      "直します／修理します",
+      "この作文を直してください。",
+      "Please correct this composition."
+    ],
+    "n5-vocab-20-4": [
+      "ぼく／きみ",
+      "ぼくは学生だけど、きみは？",
+      "I'm a student. What about you?"
+    ],
+    "n5-vocab-20-5": [
+      "物価",
+      "東京は物価が高い。",
+      "Prices are high in Tokyo."
+    ],
+    "n5-vocab-20-6": [
+      "ビザ",
+      "ビザはもうもらった？",
+      "Have you got your visa yet?"
+    ],
+    "n5-vocab-20-7": [
+      "この間",
+      "この間、駅でリーさんに会ったよ。",
+      "I ran into Ms. Lee at the station the other day."
+    ],
+    "n5-vocab-20-8": [
+      "みんなで",
+      "明日、みんなで海へ行かない？",
+      "Shall we all go to the beach tomorrow?"
+    ],
+    "n5-vocab-20-9": [
+      "〜けど",
+      "この料理、辛いけど、おいしいね。",
+      "This food is spicy, but it's good."
+    ],
+    "n5-vocab-21-1": [
+      "[お]祭り",
+      "夏に町でお祭りがあります。",
+      "There's a festival in town in summer."
+    ],
+    "n5-vocab-21-2": [
+      "勝ちます／負けます",
+      "明日の試合、勝つでしょう？",
+      "You'll win tomorrow's match, won't you?"
+    ],
+    "n5-vocab-21-3": [
+      "役に立ちます",
+      "この本は勉強の役に立ちます。",
+      "This book is useful for studying."
+    ],
+    "n5-vocab-21-4": [
+      "同じ",
+      "リーさんとわたしは同じクラスです。",
+      "Ms. Lee and I are in the same class."
+    ],
+    "n5-vocab-21-5": [
+      "すごい",
+      "100点ですか。すごいですね。",
+      "You got 100? That's amazing."
+    ],
+    "n5-vocab-21-6": [
+      "政治",
+      "政治の話はあまりしません。",
+      "I don't talk about politics much."
+    ],
+    "n5-vocab-21-7": [
+      "試合",
+      "日曜日に公園で野球の試合があります。",
+      "There's a baseball game in the park on Sunday."
+    ],
+    "n5-vocab-21-8": [
+      "意見",
+      "森さんの意見はどうですか。",
+      "What's your opinion, Mr. Mori?"
+    ],
+    "n5-vocab-21-9": [
+      "交通",
+      "この町は交通が便利です。",
+      "This town has good transport links."
+    ],
+    "n5-vocab-21-10": [
+      "〜について",
+      "日本の文化について話しました。",
+      "We talked about Japanese culture."
+    ],
+    "n5-vocab-21-11": [
+      "しかたが ありません",
+      "雨ですから、しかたがありませんね。",
+      "It's raining, so there's nothing we can do."
+    ],
+    "n5-vocab-21-12": [
+      "おめでとう ございます",
+      "ご結婚、おめでとうございます。",
+      "Congratulations on your wedding."
+    ],
+    "n5-vocab-22-1": [
+      "着ます",
+      "赤いシャツを着ている人が兄です。",
+      "The man in the red shirt is my older brother."
+    ],
+    "n5-vocab-22-2": [
+      "はきます",
+      "黒い靴をはいている人はだれですか。",
+      "Who is the person in black shoes?"
+    ],
+    "n5-vocab-22-3": [
+      "かぶります",
+      "帽子をかぶっている子どもがいます。",
+      "There's a child wearing a hat."
+    ],
+    "n5-vocab-22-4": [
+      "かけます",
+      "眼鏡をかけている人が森先生です。",
+      "The man wearing glasses is Mr. Mori."
+    ],
+    "n5-vocab-22-5": [
+      "コート／セーター",
+      "母が作ったセーターは暖かいです。",
+      "The sweater my mother made is warm."
+    ],
+    "n5-vocab-22-6": [
+      "帽子／眼鏡",
+      "これは父がくれた帽子です。",
+      "This is the hat my father gave me."
+    ],
+    "n5-vocab-23-1": [
+      "近い／遠い",
+      "駅は遠いですから、バスで行きます。",
+      "The station is far, so I'll take the bus."
+    ],
+    "n5-vocab-23-2": [
+      "曲がります",
+      "次の角を左へ曲がってください。",
+      "Turn left at the next corner."
+    ],
+    "n5-vocab-23-3": [
+      "まっすぐ",
+      "この道をまっすぐ行ってください。",
+      "Go straight along this road."
+    ],
+    "n5-vocab-23-4": [
+      "渡ります",
+      "道を渡るとき、車に気をつけてください。",
+      "Watch out for cars when you cross the road."
+    ],
+    "n5-vocab-23-5": [
+      "気を つけます",
+      "寒いですから、風邪に気をつけてください。",
+      "It's cold, so be careful not to catch a cold."
+    ],
+    "n5-vocab-23-6": [
+      "道",
+      "この道は車が多いです。",
+      "This road has a lot of traffic."
+    ],
+    "n5-vocab-23-7": [
+      "信号",
+      "信号が赤のとき、渡ってはいけません。",
+      "You mustn't cross when the light is red."
+    ],
+    "n5-vocab-23-8": [
+      "角",
+      "あの角に本屋があります。",
+      "There's a bookshop on that corner."
+    ],
+    "n5-vocab-23-9": [
+      "橋",
+      "橋の向こうに公園があります。",
+      "There's a park on the other side of the bridge."
+    ],
+    "n5-vocab-24-1": [
+      "兄弟",
+      "兄弟は何人いますか。…三人です。",
+      "How many brothers and sisters do you have? — Three."
+    ],
+    "n5-vocab-24-2": [
+      "連れて 行きます／連れて 来ます",
+      "週末、子どもを公園へ連れて行きます。",
+      "I'm taking the children to the park at the weekend."
+    ],
+    "n5-vocab-24-3": [
+      "紹介します",
+      "友達に家族を紹介しました。",
+      "I introduced my family to a friend."
+    ],
+    "n5-vocab-24-4": [
+      "案内します／説明します",
+      "先生が漢字の意味を説明しました。",
+      "The teacher explained what the kanji means."
+    ],
+    "n5-vocab-24-5": [
+      "おじいさん／おばあさん",
+      "ケンさんのおばあさんがこのセーターを作りました。",
+      "Ken's grandmother made this sweater."
+    ],
+    "n5-vocab-24-6": [
+      "準備",
+      "だれがパーティーの準備をしますか。",
+      "Who's getting the party ready?"
+    ],
+    "n5-vocab-24-7": [
+      "自分で",
+      "このケーキは自分で作りました。",
+      "I made this cake myself."
+    ],
+    "n5-vocab-25-1": [
+      "考えます",
+      "夏休みの旅行について考えています。",
+      "I'm thinking about a trip for the summer holidays."
+    ],
+    "n5-vocab-25-2": [
+      "着きます",
+      "駅に着いたとき、雨が降っていました。",
+      "When I got to the station, it was raining."
+    ],
+    "n5-vocab-25-3": [
+      "留学します",
+      "来年、日本へ留学したいです。",
+      "I want to study in Japan next year."
+    ],
+    "n5-vocab-25-4": [
+      "田舎",
+      "田舎には山や川があります。",
+      "There are mountains and rivers in the countryside."
+    ],
+    "n5-vocab-25-5": [
+      "大使館",
+      "大使館でビザをもらいました。",
+      "I got my visa at the embassy."
+    ],
+    "n5-vocab-25-6": [
+      "チャンス",
+      "これはいいチャンスです。",
+      "This is a good opportunity."
+    ],
+    "n5-vocab-25-7": [
+      "もし〜たら",
+      "もし時間があったら、手伝ってください。",
+      "If you have time, please help me."
+    ],
+    "n5-vocab-25-8": [
+      "いくら〜ても",
+      "いくら練習しても、上手になりません。",
+      "No matter how much I practise, I don't get any better."
+    ],
+    "n5-vocab-25-9": [
+      "頑張ります",
+      "試験、頑張ってください。",
+      "Good luck in your exam."
+    ],
+    "n5-vocab-25-10": [
+      "どうぞ お元気で。",
+      "来週国へ帰ります。…そうですか。どうぞお元気で。",
+      "I'm going home next week. — I see. Take care of yourself."
+    ]
+  }
+}

@@ -64,6 +64,24 @@ included. Nice to have:
 
 Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
 
+- **Rewrite N4 and N3 grammar in our own words (top content item)**: a spot check of
+  *Minna no Nihongo* Book II's grammar notes (Lessons 27 and 35) found 11 example sentences
+  copied word for word into N4 grammar (lessons 2 and 10), explanations closely reworded
+  from the book's English, and the book's さくら大学 (`n4-grammar-3-4`). 104 of the 166 N4
+  rows share that shape, across all 25 lessons. N3 hasn't been checked yet. Do each level like
+  N5 (`docs/content/n5-restructure.md`): our own lesson order, regrouped vocab, every point
+  rewritten, a Japanese-teacher review before merge, then add the level to
+  `textbookGuard.test.ts`. The N4 AI prompts still say "Minna no Nihongo Lessons 26–50"
+  (`prompts.ts`, `promptBuilder.ts`); that goes with the N4 rewrite.
+- **N4 grammar words filed in N5 vocab**: もし〜たら and いくら〜ても (N5 lesson 25) are N4
+  conditionals that no N5 grammar point teaches. Move them to N4 with the N4 rewrite, or mark
+  them as a preview. (Japanese-teacher review, 2026-11-02.)
+- **Wrong gloss: そっち** (N5 lesson 20) reads "over there"; it means "there (near you)". The
+  gloss comes from the list data, so fix it through a script.
+- **N5 vocab glosses in the book's word-list style**: about 270 core N5 rows keep glosses like
+  "climb [a mountain]" and "live [in Osaka]". Single glosses are low risk, but rephrase them
+  in a pass of their own (a script over `n5/vocab.json`, no uid changes).
+
 - **Owner's local runs** (`docs/local-data-refresh.md`; need downloads the sandbox can't reach):
   - **§A JMdict refresh**: `pos` comes from the April 2021 JMdict. The plan is to refresh from
     a current jmdict-simplified release and re-label the rows that came from JMdict

@@ -50,15 +50,15 @@ function row<T extends { uid: string }>(data: unknown, uid: string): T {
   return found;
 }
 
-const n5Vehicle = row<GrammarItem>(n5Grammar, 'n5-grammar-5-3'); // N(vehicle)で 行きます
+const n5Vehicle = row<GrammarItem>(n5Grammar, 'n5-grammar-7-2'); // N(vehicle)で 行きます
 const n1NaiMademo = row<GrammarItem>(n1Grammar, 'n1-grammar-3-2'); // 〜ないまでも
 
 describe('grammar examples prompt', () => {
-  it('N5 lesson 5: lesson ceiling, short sentences, plain Japanese, JSON object contract', () => {
+  it('N5 lesson 7: lesson ceiling, short sentences, plain Japanese, JSON object contract', () => {
     const { prompt, known } = grammarExamplesPromptFor(n5Vehicle, 'N5');
-    expect(prompt).toContain('Pattern: N(vehicle)で 行きます／来ます／帰ります');
-    expect(prompt).toContain('studied N5 Lessons 1–5 only');
-    expect(prompt).toMatch(/never use them in Japanese sentences: .*て-form \(Lesson 14\).*dictionary form \(Lesson 18\)/);
+    expect(prompt).toContain('Pattern: N(vehicle)で 行きます');
+    expect(prompt).toContain('studied N5 Lessons 1–7 only');
+    expect(prompt).toMatch(/never use them in Japanese sentences: .*dictionary form \(Lesson 14\).*て-form \(Lesson 14\)/);
     expect(prompt).toContain('at most 25 Japanese characters');
     expect(prompt).toContain('Polite です/ます style');
     expect(prompt).toContain('no furigana or readings in [] or （）');
@@ -116,16 +116,16 @@ describe('grammar examples prompt', () => {
 
 describe('grammar nuance prompt', () => {
   it('N5: offers same-lesson, same-function patterns and asks for contrast, minimal pairs and a mistake', () => {
-    const prompt = grammarNuancePromptFor(n5Vehicle, 'N5', GRAMMAR.N5['5']);
-    expect(prompt).toContain('similar function: N(place)へ 行きます／来ます／帰ります, N(person/animal)と V');
+    const prompt = grammarNuancePromptFor(n5Vehicle, 'N5', GRAMMAR.N5['7']);
+    expect(prompt).toContain('similar function: N(place)へ 行きます／来ます／帰ります, N(person)と［一緒に］V・一人で');
     expect(prompt).not.toContain('いつ,'); // different tags
     expect(prompt).toContain('**Nuance:**');
     expect(prompt).toContain('**Compared with:**');
     expect(prompt).toContain('taken from N5 or lower levels');
     expect(prompt).toContain('minimal pair');
     expect(prompt).toContain('**Common mistake:**');
-    expect(prompt).toContain('Example from the lesson: 電車で行きます。');
-    expect(prompt).toContain('studied N5 Lessons 1–5 only');
+    expect(prompt).toContain('Example from the lesson: 毎朝バスで学校へ行きます。');
+    expect(prompt).toContain('studied N5 Lessons 1–7 only');
     expect(prompt).toContain('Never use square brackets');
     expect(prompt).toContain('every Japanese word or phrase with kanji');
   });
@@ -141,20 +141,20 @@ describe('grammar nuance prompt', () => {
   it('related patterns ignore other lessons/levels and untagged items', () => {
     const other = { ...GRAMMAR.N5['5'][0], uid: 'n5-grammar-6-9', lesson: 6 };
     expect(relatedGrammarTitles(n5Vehicle, [other])).toEqual([]);
-    expect(relatedGrammarTitles({ ...n5Vehicle, tags: [] }, GRAMMAR.N5['5'])).toEqual([]);
+    expect(relatedGrammarTitles({ ...n5Vehicle, tags: [] }, GRAMMAR.N5['7'])).toEqual([]);
     expect(relatedGrammarTitles(n5Vehicle)).toEqual([]);
   });
 });
 
 describe('vocab usage prompt', () => {
   it('N5 ます-form headword: lesson ceiling, card example not reused', () => {
-    const v = row<VocabItem>(n5Vocab, 'n5-vocab-5-3'); // 帰ります
+    const v = row<VocabItem>(n5Vocab, 'n5-vocab-7-3'); // 帰ります
     const prompt = vocabHelpPromptFor(v, 'N5');
     expect(prompt).toContain('Word: 帰ります（かえります）');
     expect(prompt).toContain('listed in ます-form');
-    expect(prompt).toContain('do not reuse it): うちへ帰ります。');
+    expect(prompt).toContain('do not reuse it): 何時にうちへ帰りますか。');
     expect(prompt).toContain('Part of speech: Verb (Group I, godan)');
-    expect(prompt).toContain('studied N5 Lessons 1–5 only');
+    expect(prompt).toContain('studied N5 Lessons 1–7 only');
     for (const label of ['**Usage:**', '**Collocations:**', '**Watch out:**', '**Example:**']) {
       expect(prompt).toContain(label);
     }
@@ -183,7 +183,7 @@ describe('vocab usage prompt', () => {
 
 describe('kanji mnemonic prompt', () => {
   it('N5 休: radical, readings and compounds from the data; memory aid, not etymology', () => {
-    const prompt = kanjiMnemonicPromptFor(row<KanjiItem>(n5Kanji, 'n5-kanji-4-7'), 'N5');
+    const prompt = kanjiMnemonicPromptFor(row<KanjiItem>(n5Kanji, 'n5-kanji-6-12'), 'N5');
     expect(prompt).toContain('KANJI (JLPT N5): 休');
     expect(prompt).toContain('Radical: 人 (person)');
     expect(prompt).toContain('Readings: On: キュウ | Kun: やす.む');
@@ -352,7 +352,7 @@ describe('registry wiring (fetch stubbed, no provider reached)', () => {
   it('generateKanjiMnemonic cleans the note it returns', async () => {
     const { generateKanjiMnemonic } = await import('../registry');
     const fetchMock = stub('**Reading hook:** 休[やす]み');
-    const out = await generateKanjiMnemonic({ kanji: row<KanjiItem>(n5Kanji, 'n5-kanji-4-7'), level: 'N5' });
+    const out = await generateKanjiMnemonic({ kanji: row<KanjiItem>(n5Kanji, 'n5-kanji-6-12'), level: 'N5' });
     expect(out).toBe('**Reading hook:** 休（やす）み');
     expect(sentPrompt(fetchMock)).toContain('KANJI (JLPT N5): 休');
   });

@@ -41,7 +41,7 @@ describe('migrating the persisted cache', () => {
     generatedExamples: { 'n5-grammar-1-1': [{ jp: '学生です。', en: 'I am a student.' }], 'n5-grammar-1-2': [] },
     aiExplanations: { 'n5-grammar-1-1': 'nuance' },
     aiVocabNotes: { 'n5-vocab-1-1': 'usage' },
-    aiKanjiMnemonics: { 'n3-kanji-2-5': 'story', 'n5-kanji-1-1': 'sun story' },
+    aiKanjiMnemonics: { 'n3-kanji-2-5': 'story', 'n4-kanji-1-1': 'sun story' },
   };
 
   it('v7: every non-empty note and example survives as an artifact', () => {
@@ -51,7 +51,7 @@ describe('migrating the persisted cache', () => {
         'grammar-examples:n5-grammar-1-1',
         'grammar-nuance:n5-grammar-1-1',
         'kanji-mnemonic:n3-kanji-2-5',
-        'kanji-mnemonic:n5-kanji-1-1',
+        'kanji-mnemonic:n4-kanji-1-1',
         'vocab-help:n5-vocab-1-1',
       ].sort()
     );
@@ -62,7 +62,7 @@ describe('migrating the persisted cache', () => {
   it('v4 still drops mnemonics of the reused N3 kanji slots', () => {
     const { artifacts } = migrateAiCache(v7, 4);
     expect(getArtifact(artifacts, 'kanji-mnemonic', 'n3-kanji-2-5')).toBeUndefined();
-    expect(getArtifact(artifacts, 'kanji-mnemonic', 'n5-kanji-1-1')).toBe('sun story');
+    expect(getArtifact(artifacts, 'kanji-mnemonic', 'n4-kanji-1-1')).toBe('sun story');
   });
 
   it('pre-v4 caches start empty; v8 passes through', () => {
