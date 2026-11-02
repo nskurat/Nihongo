@@ -4277,7 +4277,8 @@
       "lesson": 7,
       "word": "ミリ",
       "reading": "ミリ",
-      "meaning": "milli-, 10^-3"
+      "meaning": "milli-, 10^-3",
+      "pos": "prefix"
     }
   ],
   "8": [
@@ -4809,7 +4810,7 @@
       "word": "無限",
       "reading": "むげん",
       "meaning": "infinite",
-      "pos": "noun"
+      "pos": "na-adjective"
     },
     {
       "uid": "n2-vocab-8-54",
@@ -5351,7 +5352,7 @@
       "word": "ふわふわ",
       "reading": "ふわふわ",
       "meaning": "light, soft",
-      "pos": "adverb"
+      "pos": "na-adjective"
     },
     {
       "uid": "n2-vocab-9-47",
@@ -5451,7 +5452,7 @@
       "word": "乱暴",
       "reading": "らんぼう",
       "meaning": "rude, violent, rough",
-      "pos": "noun"
+      "pos": "na-adjective"
     },
     {
       "uid": "n2-vocab-9-57",

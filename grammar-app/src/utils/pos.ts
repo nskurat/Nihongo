@@ -16,6 +16,7 @@ const LABELS: Record<string, string> = {
   particle: 'Particle',
   conjunction: 'Conjunction',
   interjection: 'Interjection',
+  prefix: 'Prefix',
   suffix: 'Suffix',
   expression: 'Expression',
   pattern: 'Grammar pattern',

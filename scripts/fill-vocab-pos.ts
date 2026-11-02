@@ -12,15 +12,15 @@ import type { SourceWord } from './lib/jlptContent';
  *   npx tsx scripts/fill-vocab-pos.ts [--level N3 --level N2 …] [--dry-run] [--quiet]
  *   npx tsx scripts/fill-vocab-pos.ts --compare    # mapping vs the hand-labelled N5/N4 rows, writes nothing
  *
- * Default levels: N3, N2, N1 (N5/N4 rows with `pos` were labelled by hand; their list-derived
- * rows are a separate decision, see docs/backlog.md §4).
+ * Default levels: all five. The hand-labelled N5/N4 rows already have `pos`, so they are never
+ * touched; the N5/N4 list-derived rows are filled (owner, 2026-11-02).
  */
 
 const DATA = 'grammar-app/src/data';
 const DRY = process.argv.includes('--dry-run');
 const QUIET = process.argv.includes('--quiet');
 const levelArgs = process.argv.flatMap((a, i, all) => (a === '--level' ? [all[i + 1].toUpperCase()] : []));
-const LEVELS = levelArgs.length ? levelArgs : ['N3', 'N2', 'N1'];
+const LEVELS = levelArgs.length ? levelArgs : ['N5', 'N4', 'N3', 'N2', 'N1'];
 
 type Row = Record<string, unknown> & { uid: string; word: string; reading: string; meaning: string; pos?: string };
 const readJson = <T>(p: string): T => JSON.parse(readFileSync(p, 'utf-8')) as T;

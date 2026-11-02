@@ -26,7 +26,7 @@ npx tsx scripts/fix-n4-compounds.ts                 # N4 kanji compounds: clean 
 npx tsx scripts/normalise-vocab-readings.ts         # readings mirror the word's [notes] in kana
 npx tsx scripts/migrate-vocab-pos.ts                # closed pos set + stored ます lemmas (N5/N4)
 npx tsx scripts/dedupe-vocab.ts                     # drop the same word taught twice (食べる beside 食べます)
-npx tsx scripts/fill-vocab-pos.ts                   # N3–N1 pos from JMdict (re-run after N2/N1 regenerate)
+npx tsx scripts/fill-vocab-pos.ts                   # pos from JMdict on rows without one, N5–N1 (re-run after N2/N1 regenerate)
 npm run validate:data
 ```
 
@@ -147,7 +147,7 @@ Residual known issues (judgment calls, left as is):
   on purpose: 夕べ "evening" vs ゆうべ "last night", 無くす vs なくす [戦争を〜], しっかり "sensible",
   and homophones (肺 / はい, 設ける / もうける). AI cache v10 renames notes to the new uids.
 
-## Part of speech for N3–N1 (2026-11-02)
+## Part of speech from JMdict (2026-11-02)
 
 `scripts/fill-vocab-pos.ts` fills `pos` on rows that have none from JMdict's part-of-speech
 tags (source: `scripts/sources/README.md`), mapped onto the closed set by
@@ -158,13 +158,14 @@ migration.
   its own) is matched to JMdict entries by spelling *and* reading. A JLPT-list row uses the
   JMdict id the list carries. Homographs (かける "hang" / "bet") are narrowed to entries whose
   glosses share a content word with the row's meaning, and the sense used is the first whose
-  glosses fit (吹く "to play" is sense 3), else sense 1. X-する and X-な rows that JMdict
+  glosses fit (吹く "to play" is sense 3), else sense 1. A shared whole word beats a shared
+  stem (キロ "Kilogram" is the noun sense, not "kilo-"). X-する and X-な rows that JMdict
   lists under X take `verb-irregular` when X is tagged `vs`, `na-adjective` when `adj-na`.
 - **Mapping.** A conjugation class wins (v5* godan, v1 ichidan, vs-i/vs-s/vk irregular,
   adj-i); then adj-pn determiner, pronoun, particle, conjunction, expression, interjection;
   then na-adjective > noun > adverb (`adv` + `vs`, like ゆっくり, is an adverb); then
-  suffix/counter. Question words with a question gloss (どうして "why") are `interrogative`,
-  as at N5/N4. No closed-set value, so left blank: prefixes (再, 超, 不), `adj-f` (共和, ニュー),
+  suffix/counter, then prefix (`pref`, `n-pref`: 再, 超, 非). Question words with a question gloss (どうして "why") are `interrogative`,
+  as at N5/N4. No closed-set value, so left blank: `adj-f` (共和, ニュー),
   auxiliaries and the ～ずる verbs (信ずる, 論ずる: JMdict `vz`, conjugation mixed).
 - **Check against the hand labels.** `--compare` runs the mapping over the 571 hand-labelled
   N5/N4 rows: 488 agree (92% of the 530 it labels). The rest are labelling conventions
@@ -173,15 +174,20 @@ migration.
 
 | Level | Rows | Labelled | Ambiguous | No match |
 |---|---|---|---|---|
-| N3 | 3,176 | 3,066 | 3 | 107 |
-| N2 | 1,581 | 1,572 | 0 | 9 |
-| N1 | 2,840 | 2,813 | 0 | 27 |
+| N5 (list rows; 272 hand-labelled kept) | 528 | 527 | 1 | 0 |
+| N4 (list rows; 299 hand-labelled kept) | 493 | 491 | 1 | 1 |
+| N3 | 3,176 | 3,079 | 3 | 94 |
+| N2 | 1,581 | 1,573 | 0 | 8 |
+| N1 | 2,840 | 2,821 | 0 | 19 |
 
-The script prints the 146 rows it leaves blank. Ambiguous: かく [汗を〜], かける[声を〜],
+The owner approved the N5/N4 fill and the `prefix` value (2026-11-02). A current-JMdict
+refresh is planned for a local run: `docs/local-data-refresh.md` §A.
+
+The script prints the 127 rows it leaves blank. Ambiguous: かく [汗を〜], かける[声を〜],
 きく[口を〜] (homographs whose gloss "speak to" fits none). No match: textbook compounds and
 phrases JMdict doesn't list (宇宙列車, 介護ロボット, 留守番をする, 確か、〜たと思います。), proper
 names (首里城, ノーベル), adverbial forms (自然に, 最高に), single-kanji N1 list rows (巨, 佐, 伐),
-prefixes and ～ずる verbs. **Lemma:** N3–N1 rows are already dictionary forms (no ます rows), so no
+auxiliaries (はず) and ～ずる verbs; ambiguous at N5/N4: ああ, あの. **Lemma:** N3–N1 rows are already dictionary forms (no ます rows), so no
 `lemma` / `lemmaReading` was added.
 
 ## Core expressions and the second dedupe (2026-11-01)

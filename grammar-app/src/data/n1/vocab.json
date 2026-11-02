@@ -5072,7 +5072,8 @@
       "lesson": 6,
       "word": "同",
       "reading": "どう",
-      "meaning": "the same, the said, ibid."
+      "meaning": "the same, the said, ibid.",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-6-52",
@@ -5773,7 +5774,8 @@
       "lesson": 7,
       "word": "助",
       "reading": "じょ",
-      "meaning": "help, rescue, assistant"
+      "meaning": "help, rescue, assistant",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-7-33",
@@ -8928,7 +8930,8 @@
       "lesson": 10,
       "word": "優",
       "reading": "やさ",
-      "meaning": "gentle, affectionate"
+      "meaning": "gentle, affectionate",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-10-81",
@@ -12815,7 +12818,8 @@
       "lesson": 15,
       "word": "再",
       "reading": "さい",
-      "meaning": "re-, again, repeated"
+      "meaning": "re-, again, repeated",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-15-27",
@@ -15891,7 +15895,7 @@
       "word": "非",
       "reading": "ひ",
       "meaning": "faulty-, non-",
-      "pos": "noun"
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-18-70",
@@ -16041,7 +16045,7 @@
       "word": "オープン",
       "reading": "オープン",
       "meaning": "open",
-      "pos": "noun"
+      "pos": "na-adjective"
     },
     {
       "uid": "n1-vocab-18-85",
@@ -16612,7 +16616,8 @@
       "lesson": 19,
       "word": "超",
       "reading": "ちょう",
-      "meaning": "super-, ultra-, hyper-"
+      "meaning": "super-, ultra-, hyper-",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-19-53",
@@ -24070,7 +24075,8 @@
       "lesson": 28,
       "word": "相",
       "reading": "あい",
-      "meaning": "together, mutually, fellow"
+      "meaning": "together, mutually, fellow",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-28-2",
@@ -26201,7 +26207,8 @@
       "lesson": 30,
       "word": "ご",
       "reading": "ご",
-      "meaning": "go-, honourable"
+      "meaning": "go-, honourable",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-30-40",
@@ -26291,7 +26298,7 @@
       "word": "重宝",
       "reading": "じゅうほう",
       "meaning": "priceless treasure, convenience, usefulness",
-      "pos": "na-adjective"
+      "pos": "noun"
     },
     {
       "uid": "n1-vocab-30-49",
@@ -27131,7 +27138,8 @@
       "lesson": 31,
       "word": "諸",
       "reading": "しょ",
-      "meaning": "various, many, several"
+      "meaning": "various, many, several",
+      "pos": "prefix"
     },
     {
       "uid": "n1-vocab-31-46",

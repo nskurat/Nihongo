@@ -110,7 +110,7 @@ const GLOSS_STOPWORDS = new Set(
     'polite humble honorific expression form word fam col vulg same equivalent').split(' ')
 );
 
-function glossTokens(gloss: string): string[] {
+export function glossTokens(gloss: string): string[] {
   const text = gloss.toLowerCase().replace(/\[[^\]]*\]/g, ' ');
   return (text.match(/[a-z]+/g) ?? []).filter((t) => t.length > 1 && !GLOSS_STOPWORDS.has(t));
 }

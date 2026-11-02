@@ -61,27 +61,22 @@ included. Nice to have:
 
 Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
 
-- **Vocab examples (N5–N3 only)** — the owner decided N2/N1 get no example sentences.
-  2,329 N5–N3 rows have no `exampleJp` (N5 528, N4 492, N3 1,309). No paid AI. Candidate free
-  source: Tatoeba (CC BY 2.0 FR) through its JMdict links (Tatoeba's `jpn_indices` export, or
-  the sentences EDRDG vets in `JMdict_e_examp` / jmdict-simplified's `jmdict-examples-eng`).
-  Not built yet: tatoeba.org, edrdg.org and GitHub release downloads were all unreachable from
-  the agent sandbox (2026-11-02), so coverage and quality could not be measured. Next step, on
-  a machine with network: a `fetch-` script that vendors the linked sentences for our JMdict
-  ids (`scripts/sources/jmdict-pos.json` already maps rows to ids), then a pure selector with
-  tests — the sentence's sense matches the row, ≤ ~25 characters, every kanji on the row's
-  level or below (`jlpt-kanji.json`), EDRDG-checked sentences first — and a teacher's spot-check
-  before writing. Licence needs a per-row source (Tatoeba sentence id) and a credit line in the
-  app; decide where it shows.
-- **`pos` gaps** — N3–N1 `pos` is filled from JMdict (`scripts/fill-vocab-pos.ts`,
-  `docs/content-data.md`); 146 rows are left blank on purpose (prefixes, ～ずる verbs, names,
-  textbook phrases JMdict doesn't list, 3 homographs) and the script lists them. Open:
-  (a) the 1,020 list-derived N5/N4 rows still have no `pos` — the same script fills 1,017 of
-  them with `--level N5 --level N4` (owner's call: they would be JMdict labels beside the
-  hand-labelled rows, which agree 92%); (b) whether the closed set should gain `prefix`
-  (再, 超, 不 …, 22 rows) so those stop being blank; (c) the source is the April 2021 JMdict
-  build (jamdict-data on PyPI) because EDRDG and GitHub releases were blocked — refresh from a
-  current JMdict when reachable.
+- **Vocab examples (N5–N3 only)**: the owner decided N2/N1 get none. 2,329 N5–N3 rows have
+  no `exampleJp` (N5 528, N4 492, N3 1,309). The plan is approved: take sentences from Tatoeba
+  (CC BY 2.0 FR), not paid AI, and have a teacher spot-check them before anything is written.
+  It needs downloads the sandbox can't reach, so the owner runs it locally. The runbook and the
+  attribution decision (a per-sentence "Tatoeba" link plus a "Sources & licences" footer dialog)
+  are in `docs/local-data-refresh.md` §B.
+- **Sources & licences dialog**: the app credits none of its CC BY / CC BY-SA sources (Waller,
+  EDRDG, kanjium). The footer dialog in `docs/local-data-refresh.md` §B fixes that, and it can
+  ship before the examples.
+- **`pos` gaps**: every level is filled from JMdict (`scripts/fill-vocab-pos.ts`; N5/N4
+  hand labels kept). 127 rows are left blank on purpose: auxiliaries, ～ずる verbs, names, and
+  textbook phrases JMdict doesn't list, which the script lists, plus 5 homographs (ああ, あの,
+  かく/かける/きく with a [〜] note). The source is the April 2021 JMdict. Refreshing it from a
+  current JMdict, and re-labelling the rows that came from JMdict, is planned for the owner's
+  laptop in `docs/local-data-refresh.md` §A. Known debatable label: 無事 "safely" is `noun`
+  (な-adjective would teach 無事に better).
 - **Kept on purpose (no action unless the policy changes)** — `n5/kanji.json` holds 122
   N4-list kanji and `n4/kanji.json` 169 N3-list and 85 N2/N1-list kanji vs Waller's lists;
   `n3/kanji.json` keeps 77 N2/N1 kanji from the textbook lessons

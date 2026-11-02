@@ -77,8 +77,13 @@ describe('JMdict tags → closed pos set', () => {
     expect(mapSenseTags(['ctr'])).toBe('suffix');
   });
 
-  it('has no value for prefixes, auxiliaries or archaic verb classes', () => {
-    expect(mapSenseTags(['pref'])).toBeNull();
+  it('labels prefixes, and a noun that is also a prefix as a noun', () => {
+    expect(mapSenseTags(['pref'])).toBe('prefix');
+    expect(mapSenseTags(['n-pref'])).toBe('prefix');
+    expect(mapSenseTags(['n', 'pref'])).toBe('noun');
+  });
+
+  it('has no value for auxiliaries or archaic verb classes', () => {
     expect(mapSenseTags(['aux-v'])).toBeNull();
     expect(mapSenseTags(['vz', 'vt'])).toBeNull();
     expect(mapSenseTags(['v4'])).toBeNull();
@@ -88,6 +93,16 @@ describe('JMdict tags → closed pos set', () => {
 });
 
 describe('row lookup', () => {
+  it('labels a prefix row', () => {
+    expect(matchRow(row('再', 'さい', 're-'), INDEX)).toMatchObject({ status: 'matched', pos: 'prefix' });
+  });
+
+  it('prefers the sense sharing a whole word over a shared stem (キロ "Kilogram" is a noun)', () => {
+    const kilo = entry(20, [], ['キロ'], [['pref'], 'kilo-; 1000'], [['n'], 'kilogram; kilogramme']);
+    expect(chooseSense(kilo, 'Kilogram')?.p).toEqual(['n']);
+    expect(chooseSense(kilo, 'kilo-')?.p).toEqual(['pref']);
+  });
+
   it('strips usage notes, 〜 and trailing punctuation', () => {
     expect(lookupForm('迷う [道に〜]')).toBe('迷う');
     expect(lookupForm('〜先')).toBe('先');
@@ -146,7 +161,6 @@ describe('matchRow', () => {
   });
 
   it('never guesses', () => {
-    expect(matchRow(row('再', 'さい', 're-'), INDEX)).toMatchObject({ status: 'unmatched', reason: 'tags pref' });
     expect(matchRow(row('信ずる', 'しんずる', 'to believe'), INDEX)).toMatchObject({ status: 'unmatched' });
     expect(matchRow(row('宇宙列車', 'うちゅうれっしゃ', 'space train'), INDEX)).toMatchObject({
       status: 'unmatched',

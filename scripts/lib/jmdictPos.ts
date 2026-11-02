@@ -1,11 +1,11 @@
 import type { Pos } from './vocabPos';
-import { glossesOverlap, stripAnnotation } from './jlptContent';
+import { glossesOverlap, glossTokens, stripAnnotation } from './jlptContent';
 
 /**
  * JMdict part-of-speech tags → the closed vocab `pos` set (scripts/lib/vocabPos.ts).
  * Pure; used by scripts/fetch-jmdict-pos.ts (description → code) and
  * scripts/fill-vocab-pos.ts (code → Pos, row → JMdict entries). Never guesses: a tag it
- * has no closed-set value for (prefix, auxiliary, archaic verb classes …) yields null and
+ * has no closed-set value for (auxiliary, archaic verb classes …) yields null and
  * the row is reported instead of labelled.
  */
 
@@ -126,6 +126,8 @@ export function mapSenseTags(tags: readonly string[]): Pos | null {
   // ゆっくり adv+vs is an adverb; a bare `vs` (rare) is the noun of a する verb.
   if (has('vs')) return 'noun';
   if (has('suf') || has('n-suf') || has('ctr')) return 'suffix';
+  // 再, 超, 不: bound forms that attach to a following word (再開発, 超特急, 不便).
+  if (has('pref') || has('n-pref')) return 'prefix';
   return null;
 }
 
@@ -194,10 +196,17 @@ export function candidateEntries(word: string, reading: string, index: EntryInde
 
 /**
  * The sense a row teaches: the first whose glosses share a content word with the row's
- * meaning (吹く "to play (a wind instrument)" is sense 3), else the first sense.
+ * meaning (吹く "to play (a wind instrument)" is sense 3), else the first sense. A shared
+ * whole word beats a shared stem, so キロ "Kilogram" is the noun sense "kilogram", not the
+ * prefix sense "kilo-".
  */
 export function chooseSense(entry: JmdictEntry, meaning: string): JmdictEntry['s'][number] | undefined {
-  return entry.s.find((s) => glossesOverlap(s.g, meaning)) ?? entry.s[0];
+  const words = new Set(glossTokens(meaning));
+  return (
+    entry.s.find((s) => glossTokens(s.g).some((t) => words.has(t))) ??
+    entry.s.find((s) => glossesOverlap(s.g, meaning)) ??
+    entry.s[0]
+  );
 }
 
 export type PosMatch =

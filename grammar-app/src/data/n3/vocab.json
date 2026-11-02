@@ -820,7 +820,8 @@
       "lesson": 1,
       "word": "旧",
       "reading": "きゅう",
-      "meaning": "ex-"
+      "meaning": "ex-",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-1-73",
@@ -2043,7 +2044,7 @@
       "meaning": "moreover",
       "exampleJp": "彼は優しく、また頭もいい。",
       "exampleEn": "He is kind, and moreover, smart.",
-      "pos": "adverb"
+      "pos": "conjunction"
     },
     {
       "uid": "n3-vocab-2-58",
@@ -3513,7 +3514,8 @@
       "reading": "しん〜",
       "meaning": "new, novel",
       "exampleJp": "新学期が始まりました。",
-      "exampleEn": "The new school term has begun."
+      "exampleEn": "The new school term has begun.",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-3-62",
@@ -5620,7 +5622,8 @@
       "lesson": 4,
       "word": "来",
       "reading": "らい",
-      "meaning": "for (10 days), next (year)"
+      "meaning": "for (10 days), next (year)",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-4-128",
@@ -6264,7 +6267,7 @@
       "meaning": "usually",
       "exampleJp": "週末は普通、家でゆっくり休みます。",
       "exampleEn": "I usually rest relaxing at home on weekends.",
-      "pos": "na-adjective"
+      "pos": "adverb"
     },
     {
       "uid": "n3-vocab-5-53",
@@ -10737,7 +10740,7 @@
       "word": "クラシック",
       "reading": "クラシック",
       "meaning": "classic(s)",
-      "pos": "noun"
+      "pos": "na-adjective"
     },
     {
       "uid": "n3-vocab-8-78",
@@ -12450,7 +12453,8 @@
       "lesson": 9,
       "word": "ド",
       "reading": "ド",
-      "meaning": "child, servant, foolishness"
+      "meaning": "child, servant, foolishness",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-9-108",
@@ -16512,7 +16516,8 @@
       "lesson": 12,
       "word": "全",
       "reading": "ぜん",
-      "meaning": "all, whole, entire"
+      "meaning": "all, whole, entire",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-12-98",
@@ -17592,7 +17597,7 @@
       "meaning": "[music] related",
       "exampleJp": "将来は音楽関係の仕事に就きたい。",
       "exampleEn": "I want to get a music-related job in the future.",
-      "pos": "noun"
+      "pos": "suffix"
     },
     {
       "uid": "n3-vocab-13-65",
@@ -17853,7 +17858,8 @@
       "reading": "ふ〜 [〜ゆかい]",
       "meaning": "un- [uncomfortable, unpleasant]",
       "exampleJp": "相手を不愉快にさせる発言は避ける。",
-      "exampleEn": "Avoid remarks that make the other person uncomfortable."
+      "exampleEn": "Avoid remarks that make the other person uncomfortable.",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-13-87",
@@ -19659,7 +19665,8 @@
       "lesson": 14,
       "word": "不",
       "reading": "ふ",
-      "meaning": "un(~), non(~), negative prefix"
+      "meaning": "un(~), non(~), negative prefix",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-14-119",
@@ -22390,7 +22397,7 @@
       "meaning": "naturally",
       "exampleJp": "約束を破れば、彼が怒るのも当然だ。",
       "exampleEn": "If you break a promise, naturally he will get angry.",
-      "pos": "na-adjective"
+      "pos": "adverb"
     },
     {
       "uid": "n3-vocab-16-56",
@@ -22749,7 +22756,7 @@
       "meaning": "safely",
       "exampleJp": "長い旅行が終わって無事に家に着いた。",
       "exampleEn": "The long trip ended, and I arrived safely at home.",
-      "pos": "na-adjective"
+      "pos": "noun"
     },
     {
       "uid": "n3-vocab-16-86",
@@ -23664,7 +23671,8 @@
       "reading": "けい〜",
       "meaning": "total",
       "exampleJp": "イベントの参加者は計100人です。",
-      "exampleEn": "The total number of participants in the event is 100."
+      "exampleEn": "The total number of participants in the event is 100.",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-17-35",
@@ -24886,7 +24894,7 @@
       "word": "陽気",
       "reading": "ようき",
       "meaning": "season, weather, cheerfulness",
-      "pos": "na-adjective"
+      "pos": "noun"
     }
   ],
   "18": [
@@ -26006,7 +26014,8 @@
       "lesson": 18,
       "word": "昨",
       "reading": "さく",
-      "meaning": "last (year), yesterday"
+      "meaning": "last (year), yesterday",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-18-96",
@@ -26235,7 +26244,8 @@
       "lesson": 18,
       "word": "不",
       "reading": "ぶ",
-      "meaning": "un(~), non(~), negative prefix"
+      "meaning": "un(~), non(~), negative prefix",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-18-119",
@@ -26606,7 +26616,8 @@
       "reading": "だい〜[〜いち]",
       "meaning": "-ly [firstly]",
       "exampleJp": "第一に、健康な体が大切だ。",
-      "exampleEn": "Firstly, a healthy body is important."
+      "exampleEn": "Firstly, a healthy body is important.",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-19-23",
@@ -32148,7 +32159,8 @@
       "lesson": 22,
       "word": "お",
       "reading": "お",
-      "meaning": "honourable"
+      "meaning": "honourable",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-22-67",
@@ -32647,7 +32659,8 @@
       "lesson": 22,
       "word": "無",
       "reading": "ぶ",
-      "meaning": "nothing, naught, nil, zero"
+      "meaning": "nothing, naught, nil, zero",
+      "pos": "prefix"
     },
     {
       "uid": "n3-vocab-22-117",
