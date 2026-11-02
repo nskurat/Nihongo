@@ -217,9 +217,9 @@ export const READING_PRACTICE_SCHEMA_TEMPLATE = `{
 // -------------------------------------------------------------
 
 /**
- * N5 lessons 1–25 follow this app's own sequence (docs/content/n5-restructure.md); N4
- * (lessons 1–25) still follows Minna no Nihongo order (N4 Lesson n = Minna Lesson 25 + n). Early N5 lessons have not met the verb
- * forms a model reaches for by default, so lesson-scoped prompts name them.
+ * N5 and N4 lessons 1–25 follow this app's own sequences (docs/content/n5-restructure.md,
+ * docs/content/n4-restructure.md). Early lessons have not met the verb forms a model
+ * reaches for by default, so lesson-scoped prompts name them.
  */
 export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
   { lesson: 11, form: 'reason clauses with から' },
@@ -229,6 +229,21 @@ export const N5_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
   { lesson: 19, form: 'た-form' },
   { lesson: 20, form: 'plain style (だ / plain verb endings outside quotes)' },
   { lesson: 22, form: 'noun-modifying clauses (きのう買った本)' },
+];
+
+/** N4 forms a model uses freely; N4 learners meet them at these lessons. */
+export const N4_FORM_MILESTONES: Array<{ lesson: number; form: string }> = [
+  { lesson: 2, form: 'potential verbs (書ける, 食べられる)' },
+  { lesson: 7, form: 'volitional form (行こう, 食べよう)' },
+  { lesson: 9, form: 'conditional たら / と / ても' },
+  { lesson: 10, form: 'ば-form conditional and なら' },
+  { lesson: 11, form: 'imperative (行け) and prohibitive (行くな)' },
+  { lesson: 18, form: 'そう / よう / みたい (appearance)' },
+  { lesson: 19, form: 'hearsay そうです / らしい' },
+  { lesson: 22, form: 'passive (〜れる／〜られる)' },
+  { lesson: 23, form: 'causative (〜せる／〜させる)' },
+  { lesson: 24, form: 'respectful keigo (いらっしゃる, お〜になる)' },
+  { lesson: 25, form: 'humble keigo (参る, お〜する)' },
 ];
 
 /** First sentence of an English gloss, capped at `max` characters. */
@@ -301,9 +316,15 @@ export function learnerScope(level: LevelType, lesson?: number | null): string[]
       );
     }
   } else if (lesson && level === 'N4') {
-    lines.push(
-      `- The learner knows all of N5 and N4 Lessons 1–${lesson} (Minna no Nihongo Lessons 26–${25 + lesson}); avoid N4 grammar from later lessons.`
-    );
+    lines.push(`- The learner knows all of N5 and N4 Lessons 1–${lesson}; avoid N4 grammar from later lessons.`);
+    const notYet = N4_FORM_MILESTONES.filter((m) => m.lesson > lesson);
+    if (notYet.length) {
+      lines.push(
+        `- Not taught yet, so never use them in Japanese sentences: ${notYet
+          .map((m) => `${m.form} (Lesson ${m.lesson})`)
+          .join('; ')}.`
+      );
+    }
   }
   return lines;
 }

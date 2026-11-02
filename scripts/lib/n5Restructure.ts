@@ -1,17 +1,18 @@
 import { stripAnnotation } from './jlptContent';
 
 /**
- * The N5 restructure (2026-11): N5 grammar and vocab leave the Minna no Nihongo lesson
- * order for this app's own 25-lesson sequence (docs/content/n5-restructure.md). Pure
- * helpers used by scripts/restructure-n5.ts; tested in
- * grammar-app/src/__tests__/scripts/n5Restructure.test.ts.
+ * The N5 and N4 restructures (2026-11): grammar and vocab leave the Minna no Nihongo lesson
+ * order for this app's own 25-lesson sequence (docs/content/n5-restructure.md,
+ * docs/content/n4-restructure.md). Pure helpers used by scripts/restructure-n5.ts and
+ * scripts/restructure-n4.ts; tested in grammar-app/src/__tests__/scripts/n5Restructure.test.ts.
+ * Both levels have 25 lessons.
  */
 
 export type Row = Record<string, unknown> & { uid: string; lesson: number };
 export type LessonFile = Record<string, Row[]>;
 export type UidMap = Record<string, string>;
 
-/** One authored grammar point from scripts/batches/n5-grammar/*.json. */
+/** One authored grammar point from scripts/batches/n{5,4}-grammar/*.json. */
 export interface GrammarSpec {
   replaces: string[];
   title: string;
@@ -107,11 +108,11 @@ export function placeKanji(kanji: Row[], vocab: LessonFile, cap: number): Map<st
   return out;
 }
 
-/** Field order of an N5 grammar row, matching the other levels' files. */
-export function grammarRow(spec: GrammarSpec, lesson: number, n: number): Row {
+/** Field order of a grammar row, matching the other levels' files. */
+export function grammarRow(spec: GrammarSpec, lesson: number, n: number, level: 'n5' | 'n4' = 'n5'): Row {
   return {
-    uid: `n5-grammar-${lesson}-${n}`,
-    level: 'N5',
+    uid: `${level}-grammar-${lesson}-${n}`,
+    level: level.toUpperCase(),
     section: 'grammar',
     lesson,
     title: spec.title,
@@ -127,12 +128,16 @@ export function grammarRow(spec: GrammarSpec, lesson: number, n: number): Row {
 }
 
 /** Builds the new grammar file; every old uid must be replaced exactly once. */
-export function buildGrammar(lessons: Record<string, GrammarSpec[]>, oldUids: readonly string[]): { file: LessonFile; map: UidMap } {
+export function buildGrammar(
+  lessons: Record<string, GrammarSpec[]>,
+  oldUids: readonly string[],
+  level: 'n5' | 'n4' = 'n5'
+): { file: LessonFile; map: UidMap } {
   const file: LessonFile = {};
   const map: UidMap = {};
   for (let l = 1; l <= LESSONS; l++) {
     file[l] = (lessons[l] ?? []).map((spec, i) => {
-      const row = grammarRow(spec, l, i + 1);
+      const row = grammarRow(spec, l, i + 1, level);
       for (const old of spec.replaces) {
         if (map[old]) throw new Error(`${old} is replaced twice`);
         map[old] = row.uid;
@@ -148,7 +153,7 @@ export function buildGrammar(lessons: Record<string, GrammarSpec[]>, oldUids: re
 
 /**
  * Compact text form of a uid map for the app bundle: "old>new" suffix pairs joined by
- * commas, with the shared "n5-<section>-" prefix dropped.
+ * commas, with the shared "<level>-<section>-" prefix dropped.
  */
 export function packUidMap(map: UidMap, prefix: string): string {
   const strip = (u: string) => {
@@ -161,7 +166,7 @@ export function packUidMap(map: UidMap, prefix: string): string {
     .join(',');
 }
 
-/** uid → [expected word, exampleJp, exampleEn] (scripts/batches/n5-vocab-examples.json). */
+/** uid → [expected word, exampleJp, exampleEn] (scripts/batches/n{5,4}-vocab-examples.json). */
 export type ExampleBatch = Record<string, [string, string, string]>;
 
 /**

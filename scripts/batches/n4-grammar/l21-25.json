@@ -1,0 +1,437 @@
+{
+  "21": [
+    {
+      "replaces": ["n4-grammar-21-1"],
+      "title": "〜ところです",
+      "structure": "V dictionary form／Vて いる／Vた + ところです",
+      "meaning": "Where you are in an action: about to start, in the middle, or just finished.",
+      "explanation": "ところ (\"place\") marks a point in time. Dictionary form + ところ: just about to. Vて いる + ところ: right in the middle. Vた + ところ: just this moment finished. It answers questions like \"Have you eaten?\" precisely.",
+      "summary": "V(dict) ところ = about to; Vて いる ところ = in the middle of; Vた ところ = just did.",
+      "details": "| Form | Meaning |\n| :--- | :--- |\n| 今から出かける**ところです**。 | I'm just about to go out. |\n| 今、晩ご飯を作っている**ところです**。 | I'm in the middle of making dinner. |\n| 今、駅に着いた**ところです**。 | I've just arrived at the station. |",
+      "tags": ["time-relative"],
+      "examples": [
+        { "jp": "もしもし、今どこ？…今、家を出るところ。", "en": "Hello, where are you? — Just leaving the house." },
+        { "jp": "すみません、今、会議の資料を作っているところなんです。", "en": "Sorry, I'm right in the middle of preparing the meeting papers." },
+        { "jp": "ちょうど今、仕事が終わったところです。", "en": "I've just this moment finished work." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-21-2"],
+      "title": "Vた ばかりです",
+      "structure": "Vた-form + ばかりです",
+      "meaning": "\"Only just…\": not much time has passed since something happened, in the speaker's view.",
+      "explanation": "Vた ところ is the exact moment after. Vた ばかり is subjective: it can be days or months, as long as it feels recent. It often explains a situation: 来たばかりなので、まだ分かりません.",
+      "summary": "Vた ばかり = only just (it feels recent).",
+      "details": "| Vた ところ | Vた ばかり |\n| :--- | :--- |\n| just this moment | recently, in my view |\n| 今起きた**ところ**です。 | 先月日本に来た**ばかり**です。 |",
+      "tags": ["time-relative"],
+      "examples": [
+        { "jp": "このパソコンは先週買ったばかりなのに、もう壊れてしまいました。", "en": "I only bought this computer last week, and it's already broken." },
+        { "jp": "日本に来たばかりなので、まだ電車の乗り方がよく分かりません。", "en": "I've only just come to Japan, so I don't really know how to use the trains yet." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-21-5"],
+      "title": "さっき／たった今",
+      "structure": "さっき + past ／ たった今 + past",
+      "meaning": "\"A little while ago\" / \"just this moment\".",
+      "explanation": "さっき is a casual word for a short while ago, minutes or a few hours. たった今 is even closer: a moment ago. Both go with the past tense. In polite or written Japanese, さきほど replaces さっき.",
+      "summary": "さっき = a little while ago; たった今 = just now; polite: さきほど.",
+      "details": "- **さっき**森さんから電話がありましたよ。 Mr. Mori called a little while ago.\n- **たった今**、バスが出ました。 The bus has just left.\n- **さきほど**お電話しました青木です。 This is Aoki, who called you earlier.",
+      "tags": ["time-relative", "colloquial"],
+      "examples": [
+        { "jp": "さっき食べたばかりなのに、もうおなかがすきました。", "en": "I only ate a little while ago, but I'm already hungry." },
+        { "jp": "部長はたった今、出かけました。", "en": "The manager has just this moment gone out." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-1"],
+      "title": "〜あとで and 〜てから",
+      "structure": "Vた／Nの + あとで、〜 ／ Vて-form + から、〜",
+      "meaning": "Both mean \"after\"; てから stresses the order, あとで the time afterwards.",
+      "explanation": "You met both in N5. Vて から puts the weight on sequence (first this, then that) and also works for \"since\": 日本に来てから三年です. Vた あとで simply says the second thing happens at some point after the first, and is the natural choice with nouns: 授業のあとで.",
+      "summary": "てから = first X, then Y (and \"since\"); あとで = sometime after X.",
+      "details": "| てから | あとで |\n| :--- | :--- |\n| order matters: 手を洗っ**てから**、食べてください。 | some time after: 仕事が終わった**あとで**、飲みに行きました。 |\n| since: 日本に来**てから**、二年になります。 | with nouns: 会議の**あとで**、電話します。 |",
+      "tags": ["time-relative"],
+      "examples": [
+        { "jp": "宿題をしてから、テレビを見なさい。", "en": "Do your homework first, then watch TV." },
+        { "jp": "食事のあとで、少し散歩しませんか。", "en": "Shall we go for a little walk after the meal?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-2"],
+      "title": "Vて／Vないで + V2（how it is done）",
+      "structure": "V1て-form／V1ない-form ないで + V2",
+      "meaning": "V1 describes the way V2 is done: \"with / without doing…\".",
+      "explanation": "The first verb gives the manner or condition of the main action: 傘を持って出かける (go out with an umbrella), 砂糖を入れないで飲む (drink it without sugar). Both actions belong to the same person.",
+      "summary": "V1て V2 = do V2 doing V1; V1ないで V2 = do V2 without doing V1.",
+      "details": "- 地図を見**て**行きました。 I went using a map.\n- 地図を見**ないで**行きました。 I went without a map.\n- 朝ご飯を食べ**ないで**、学校へ行きました。 I went to school without having breakfast.",
+      "tags": ["simultaneous-action"],
+      "examples": [
+        { "jp": "わたしはいつもコーヒーに何も入れないで飲みます。", "en": "I always drink my coffee without putting anything in it." },
+        { "jp": "辞書を使わないで、この本が読めるようになりました。", "en": "I can now read this book without a dictionary." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-3"],
+      "title": "Vないで、V2（instead of）",
+      "structure": "V1ない-form ないで、V2",
+      "meaning": "\"Instead of V1, (do) V2\": choosing one action over another.",
+      "explanation": "When two actions are alternatives, 〜ないで says you did not do the first and did the second instead. This is different from the previous point, where V1 describes how V2 is done.",
+      "summary": "V1ないで、V2 = instead of V1, V2.",
+      "details": "- 日曜日はどこへも行か**ないで**、家で寝ていました。 On Sunday I stayed home and slept instead of going anywhere.\n- バスに乗ら**ないで**、歩いて帰りました。 I walked home instead of taking the bus.",
+      "tags": ["alternative-choice"],
+      "examples": [
+        { "jp": "今日はエレベーターを使わないで、階段で上がりました。", "en": "Today I took the stairs instead of the lift." },
+        { "jp": "昨日の夜は勉強しないで、ずっとゲームをしていました。", "en": "Last night I played games all evening instead of studying." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-9-6"],
+      "title": "N(time)までに V",
+      "structure": "N(time)／V dictionary form + までに + V",
+      "meaning": "\"By…\": the deadline for finishing something.",
+      "explanation": "まで (N5) marks how long an action continues: until. までに marks a deadline: the action happens once, at some point before that time. The verb after までに is usually a one-off action.",
+      "summary": "まで = until (continuing); までに = by (deadline).",
+      "details": "| まで | までに |\n| :--- | :--- |\n| 五時**まで**働きます。 I work until five. | 五時**までに**帰ります。 I'll be back by five. |\n| 金曜日**まで**休みです。 | 金曜日**までに**出してください。 |\n\nWith a verb: 母が帰る**までに**、掃除をしておきます。",
+      "tags": ["time-relative"],
+      "examples": [
+        { "jp": "このレポートは来週の月曜日までに出してください。", "en": "Please hand in this report by next Monday." },
+        { "jp": "暗くなるまでに、家に帰りましょう。", "en": "Let's get home before it gets dark." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-13-7"],
+      "title": "〜ときも／〜ときは／〜ときの N",
+      "structure": "〜とき + は／も／に／の／まで…",
+      "meaning": "とき is a noun, so it takes particles like any other noun.",
+      "explanation": "Adding particles to とき (N5) changes its role in the sentence. ときは picks out a situation as the topic, ときも means \"also when\", ときに marks a specific moment, and ときの links to another noun.",
+      "summary": "とき + は／も／に／の works like any noun.",
+      "details": "- 困った**ときは**、いつでも電話してください。 Call me any time you're in trouble.\n- 雨の**ときも**、歩いて行きます。 I walk there even when it rains.\n- 子どもの**ときの**写真を見ました。 I looked at photos from when I was a child.\n- 出かける**ときに**、鍵をかけてください。",
+      "tags": ["time-relative", "particle-usage"],
+      "examples": [
+        { "jp": "分からないときは、遠慮しないで聞いてください。", "en": "When you don't understand, don't hesitate to ask." },
+        { "jp": "これは大学に入ったときの写真です。", "en": "This is a photo from when I started university." }
+      ]
+    }
+  ],
+  "22": [
+    {
+      "replaces": ["n4-grammar-12-1"],
+      "title": "The passive form（〜れる／〜られる）",
+      "structure": "Group I: 〜う → 〜われる etc. ／ Group II: 〜る → 〜られる ／ する → される, 来る → 来られる",
+      "meaning": "\"Be (done)\": the subject receives the action.",
+      "explanation": "Group I verbs change the final -u to -a and add れる: 書く → 書かれる, 呼ぶ → 呼ばれる (う → わ: 言う → 言われる). Group II verbs replace る with られる: 見る → 見られる. する → される, 来る → 来られる. All passives conjugate as Group II verbs.",
+      "summary": "Passive: 書かれる, 呼ばれる, 言われる, 食べられる, される, 来られる.",
+      "note": "For Group II verbs the passive looks the same as the potential (食べられる). Context tells you which.",
+      "details": "| Group | Dictionary | Passive |\n| :--- | :--- | :--- |\n| I | 書く／呼ぶ／言う | 書かれる／呼ばれる／言われる |\n| II | 見る／ほめる | 見られる／ほめられる |\n| III | する／来る | される／来られる |",
+      "tags": ["passive", "meta-conjugation"],
+      "examples": [
+        { "jp": "子どものころ、よく母にしかられました。", "en": "I often got scolded by my mother as a child." },
+        { "jp": "名前を呼ばれたら、中に入ってください。", "en": "Please go in when your name is called." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-12-2"],
+      "title": "A は B に + passive（direct passive）",
+      "structure": "A（person）は B（person）に + passive verb",
+      "meaning": "\"A was (praised / invited / asked) by B\": seeing an action from the receiver's side.",
+      "explanation": "The person who receives the action becomes the subject, and the doer takes に. Japanese prefers to keep the speaker's point of view, so わたしは先生にほめられました is more natural than 先生がわたしをほめました when the story is about you.",
+      "summary": "A は B に passive = A had B do it to them (praise, invite, scold…).",
+      "details": "- 先生がわたしをほめました。 → わたし**は**先生**に**ほめ**られました**。 I was praised by the teacher.\n- 友だちがわたしをパーティーに招待しました。 → わたしは友だちにパーティーに招待**されました**。",
+      "tags": ["passive"],
+      "examples": [
+        { "jp": "わたしは部長に仕事を頼まれました。", "en": "I was asked by the manager to do a job." },
+        { "jp": "弟は知らない人に道を聞かれて、困っていました。", "en": "My brother was asked for directions by a stranger and didn't know what to do." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-12-3"],
+      "title": "A は B に（A の）N を + passive（something of mine）",
+      "structure": "A（person）は B に + N を + passive verb",
+      "meaning": "\"A had (their) N (stolen / stepped on / read) by B\": usually something unpleasant.",
+      "explanation": "When the action is done to something that belongs to A (their foot, their wallet, their diary), A is still the subject and the thing keeps を. The pattern usually expresses that A was bothered by it. Do not say わたしの足は踏まれました; say わたしは足を踏まれました.",
+      "summary": "わたしは B に N を passive = B did something to my N (and I was bothered).",
+      "details": "- 電車で、わたし**は**隣の人に足**を**踏ま**れました**。 Someone next to me on the train stepped on my foot.\n- 弟に日記**を**読ま**れました**。 My brother read my diary.\n- ✗ わたしの財布は盗まれました → ✓ わたしは財布を盗まれました。",
+      "tags": ["passive"],
+      "examples": [
+        { "jp": "駅で財布を盗まれてしまいました。", "en": "I had my wallet stolen at the station." },
+        { "jp": "公園で犬に手をかまれました。", "en": "I got bitten on the hand by a dog in the park." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-12-4"],
+      "title": "N が／は + passive（no doer mentioned）",
+      "structure": "N（thing, event）が／は + passive verb（によって for creators）",
+      "meaning": "\"N is held / built / used…\": facts about things, with no need to say who.",
+      "explanation": "When the doer is unknown or unimportant, things become the subject of a passive: 会議が開かれる, 日本語が使われている. This is common in news, guides and descriptions. For creators, discoverers and inventors, the doer takes によって: この寺は〜によって建てられました.",
+      "summary": "Thing + passive states a fact without the doer; creators take によって.",
+      "details": "- 来月、東京で国際会議が開か**れます**。 An international conference will be held in Tokyo next month.\n- この車は世界中で使わ**れています**。 This car is used all over the world.\n- この絵はピカソ**によって**描か**れました**。 This picture was painted by Picasso.",
+      "tags": ["passive"],
+      "examples": [
+        { "jp": "このお寺は八百年前に建てられました。", "en": "This temple was built eight hundred years ago." },
+        { "jp": "ワインはぶどうから作られます。", "en": "Wine is made from grapes." },
+        { "jp": "電話はベルによって発明されました。", "en": "The telephone was invented by Bell." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-12-6"],
+      "title": "〜と 言われて います",
+      "structure": "Plain form + と 言われて います",
+      "meaning": "\"It is said that…\", \"is believed to…\": a widely held view.",
+      "explanation": "The passive of 言う with ている describes what people in general say or believe, without naming anyone. It is common in explanations and writing about culture, health and history.",
+      "summary": "〜と 言われて いる = it's generally said that…",
+      "details": "- 日本人は長生きだ**と言われています**。 Japanese people are said to live long.\n- 朝ご飯を食べるのは体にいい**と言われています**。 Eating breakfast is said to be good for you.",
+      "tags": ["hearsay", "passive"],
+      "examples": [
+        { "jp": "この町の水はとてもおいしいと言われています。", "en": "The water in this town is said to be very good." },
+        { "jp": "笑うことは健康にいいと言われています。", "en": "Laughing is said to be good for your health." }
+      ]
+    }
+  ],
+  "23": [
+    {
+      "replaces": ["n4-grammar-23-1"],
+      "title": "The causative form（〜せる／〜させる）",
+      "structure": "Group I: 〜う → 〜わせる etc. ／ Group II: 〜る → 〜させる ／ する → させる, 来る → 来させる",
+      "meaning": "\"Make (someone) do\" or \"let (someone) do\".",
+      "explanation": "Group I verbs change the final -u to -a and add せる: 書く → 書かせる, 行く → 行かせる, 言う → 言わせる. Group II verbs replace る with させる: 食べる → 食べさせる. する → させる, 来る → 来させる. The result conjugates as a Group II verb.",
+      "summary": "Causative: 行かせる, 書かせる, 食べさせる, させる, 来させる.",
+      "details": "| Group | Dictionary | Causative |\n| :--- | :--- | :--- |\n| I | 行く／待つ／読む | 行かせる／待たせる／読ませる |\n| II | 食べる／見る | 食べさせる／見させる |\n| III | する／来る | させる／来させる |\n\nCompare the passive: 書か**れる** vs 書か**せる**.",
+      "tags": ["causative", "meta-conjugation"],
+      "examples": [
+        { "jp": "母は毎日弟に野菜を食べさせます。", "en": "My mother makes my brother eat vegetables every day." },
+        { "jp": "お待たせしました。", "en": "Sorry to have kept you waiting." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-23-2"],
+      "title": "Person を + causative（intransitive verbs）",
+      "structure": "A は B（person）を + intransitive causative",
+      "meaning": "\"A makes / lets B (go, come, stand…)\".",
+      "explanation": "When the original verb has no object (行く, 帰る, 立つ, 泣く), the person made to act takes を. With feelings, the causative describes causing an emotion: 心配させる (make someone worry), 喜ばせる (make someone happy).",
+      "summary": "Intransitive verb → the person made to act takes を.",
+      "details": "- 父は弟**を**買い物に行か**せました**。 Dad sent my brother to the shops.\n- 先生は遅れた学生**を**立た**せました**。 The teacher made the late student stand.\n- 母**を**心配さ**せて**しまいました。 I made my mother worry.",
+      "tags": ["causative"],
+      "examples": [
+        { "jp": "部長は小林さんを大阪へ出張させました。", "en": "The manager sent Mr. Kobayashi on a business trip to Osaka." },
+        { "jp": "夜遅く帰って、両親を心配させてしまいました。", "en": "I came home late and made my parents worry." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-23-3"],
+      "title": "Person に N を + causative（transitive verbs）",
+      "structure": "A は B（person）に + N を + transitive causative",
+      "meaning": "\"A makes / lets B (read, write, clean…) N\".",
+      "explanation": "When the original verb already has a を object, the person made to act takes に, so that a sentence never has two を. 先生は学生に作文を書かせました.",
+      "summary": "Transitive verb → the person takes に, the object keeps を.",
+      "details": "- 先生は学生**に**作文**を**書か**せました**。 The teacher had the students write an essay.\n- 母は子ども**に**部屋**を**掃除さ**せました**。 The mother made her child clean the room.\n- ✗ 学生を作文を書かせました.",
+      "tags": ["causative"],
+      "examples": [
+        { "jp": "先生は学生に毎日日記を書かせています。", "en": "The teacher has the students write a diary every day." },
+        { "jp": "父はわたしに車を洗わせました。", "en": "My father made me wash the car." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-23-4"],
+      "title": "Making and letting",
+      "structure": "causative（force or permission）／ causative + て あげる・て くれる",
+      "meaning": "The causative can mean forcing someone or allowing them.",
+      "explanation": "Context decides. With a parent ordering a child, it is forcing. When the person wanted to do it, it is permission: 子どもに好きな物を食べさせる (let the child eat what they like). Adding 〜て あげる or 〜て くれる makes \"let\" clear and shows it was a kindness. It is used by people with authority over others, not by juniors about seniors.",
+      "summary": "Causative = make or let; 〜させて あげる／くれる makes it clearly \"let\".",
+      "details": "| Forcing | Letting |\n| :--- | :--- |\n| 母は弟に薬を飲ませた。 | 母は弟に好きなだけゲームをさせた。 |\n| | 父はわたしを留学させてくれました。 My father let me study abroad. |",
+      "tags": ["causative"],
+      "examples": [
+        { "jp": "子どもが遊びたがっていたので、公園で遊ばせました。", "en": "The kids wanted to play, so I let them play in the park." },
+        { "jp": "両親はわたしを一人で旅行に行かせてくれました。", "en": "My parents let me go travelling on my own." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-23-5"],
+      "title": "Causative + て いただけませんか／て ください",
+      "structure": "Causative て-form + いただけませんか／ください",
+      "meaning": "\"Please let me…\": a polite request for permission.",
+      "explanation": "〜させて いただけませんか asks for permission to do something yourself. This is different from 〜て いただけませんか, which asks the other person to do it. 〜させて ください is a little more direct, and 〜させて いただきます announces what you are going to do politely.",
+      "summary": "〜させて いただけませんか = could you let me…?",
+      "details": "| Request someone to act | Ask permission to act yourself |\n| :--- | :--- |\n| 説明し**ていただけませんか**。 Could you explain? | 説明さ**せていただけませんか**。 Could I explain? |\n\n- 早退さ**せてください**。 Please let me leave early.",
+      "tags": ["causative", "request", "keigo-humble"],
+      "examples": [
+        { "jp": "熱があるので、今日は早く帰らせていただけませんか。", "en": "I have a fever. Could you let me go home early today?" },
+        { "jp": "その仕事、ぜひわたしにやらせてください。", "en": "Please let me do that job." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-23-6"],
+      "title": "Causative-passive（〜させられる）",
+      "structure": "Group I: 〜わせられる（〜わされる）／ Group II: 〜させられる ／ する → させられる, 来る → 来させられる",
+      "meaning": "\"Be made to…\": you were forced to do something you did not want to.",
+      "explanation": "Combine the causative and the passive: 飲む → 飲ませる → 飲ませられる. The person who did the forcing takes に. Group I verbs often shorten せられ to され: 飲まされる, 待たされる (not for verbs ending in す: 話させられる).",
+      "summary": "〜させられる = be made to (against my wishes).",
+      "details": "| Dictionary | Causative-passive |\n| :--- | :--- |\n| 飲む | 飲ま**せられる**／飲ま**される** |\n| 待つ | 待た**せられる**／待た**される** |\n| 食べる | 食べ**させられる** |\n| する | **させられる** |\n\n- 子どものとき、母に野菜を食べ**させられました**。 As a child I was made to eat vegetables by my mother.",
+      "tags": ["causative-passive"],
+      "examples": [
+        { "jp": "病院で一時間も待たされました。", "en": "I was kept waiting a whole hour at the hospital." },
+        { "jp": "飲み会で、先輩にお酒を飲まされました。", "en": "At the party my seniors made me drink." }
+      ]
+    }
+  ],
+  "24": [
+    {
+      "replaces": ["n4-grammar-24-1"],
+      "title": "敬語（polite language）: the big picture",
+      "structure": "尊敬語（respectful）・謙譲語（humble）・丁寧語（polite）",
+      "meaning": "The three kinds of polite language and when to use them.",
+      "explanation": "敬語 shows respect according to your relationship with the listener and the person you are talking about. 尊敬語 raises the other person by describing their actions respectfully. 謙譲語 lowers your own actions, and your side's, toward the other person. 丁寧語 (です／ます, ございます) is polite to the listener in general. In business, with customers and toward older people, all three are used.",
+      "summary": "Raise them (尊敬語), lower yourself (謙譲語), be polite to the listener (丁寧語).",
+      "details": "| Type | Whose action | Example (言う) |\n| :--- | :--- | :--- |\n| 尊敬語 | theirs | 先生が**おっしゃいました** |\n| 謙譲語 | mine／my side's | わたしが**申しました** |\n| 丁寧語 | — (to the listener) | 言い**ます** |\n\nWhen talking to outsiders, your own boss counts as \"your side\": 部長はただ今おりません.",
+      "tags": ["keigo-respectful"],
+      "examples": [
+        { "jp": "社長は何時にいらっしゃいますか。", "en": "What time will the company president arrive?" },
+        { "jp": "明日、わたしがお客様を駅までご案内します。", "en": "I'll show the client to the station tomorrow." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-2"],
+      "title": "Respectful 〜れる／〜られる",
+      "structure": "Passive form used as respect: 書かれる, 来られる, される",
+      "meaning": "The passive form can also show respect for someone's actions.",
+      "explanation": "The same form as the passive (Lesson 22), used with the respected person as the subject, is a mild respectful form: 部長は何時に来られますか. It is easy to make, and is common in offices and news. It is lighter than お〜に なります.",
+      "summary": "Passive form = light respect: 先生が書かれた本.",
+      "details": "- 部長はもう帰**られました**。 The manager has already gone home.\n- 森先生が書か**れた**本を読みました。 I read the book Professor Mori wrote.\n- 社長は毎朝新聞を読ま**れます**。",
+      "tags": ["keigo-respectful"],
+      "examples": [
+        { "jp": "部長はいつ大阪から戻られますか。", "en": "When will the manager be back from Osaka?" },
+        { "jp": "先生は来年、新しい本を出されるそうです。", "en": "I hear the professor is bringing out a new book next year." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-3"],
+      "title": "お Vます-stem に なります",
+      "structure": "お + Vます-stem + に なります",
+      "meaning": "A more polite respectful form for someone else's action.",
+      "explanation": "Put お before the ます-stem and add に なります: 待つ → お待ちに なる, 帰る → お帰りに なる. It does not work with one-syllable stems (見る, 寝る) or with する verbs; those use special verbs (next point) or ご〜に なる for some する words (ご利用に なる).",
+      "summary": "お + stem + に なります = respectful (more polite than 〜れる).",
+      "details": "- 先生はもうお帰り**になりました**。 The teacher has already gone home.\n- この本をお読み**になりましたか**。 Have you read this book?\n- ✗ お見になる → ✓ ご覧になる",
+      "tags": ["keigo-respectful"],
+      "examples": [
+        { "jp": "社長はもうお帰りになりました。", "en": "The president has already left." },
+        { "jp": "このパソコンをお使いになりますか。", "en": "Will you be using this computer?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-4"],
+      "title": "Special respectful verbs",
+      "structure": "いらっしゃる・召し上がる・おっしゃる・なさる・ご覧に なる・ご存じだ・くださる",
+      "meaning": "Common verbs have their own respectful words.",
+      "explanation": "The most frequent verbs replace the regular respectful patterns with separate words. いらっしゃる (be, go, come), なさる and おっしゃる are Group I verbs with irregular ます-forms: いらっしゃいます, なさいます, おっしゃいます, くださいます.",
+      "summary": "Learn the special respectful verbs: いらっしゃる, 召し上がる, おっしゃる, なさる, ご覧になる, ご存じ.",
+      "details": "| Plain | Respectful |\n| :--- | :--- |\n| いる／行く／来る | いらっしゃる |\n| 食べる／飲む | 召し上がる |\n| 言う | おっしゃる |\n| する | なさる |\n| 見る | ご覧に なる |\n| 知っている | ご存じだ |\n| くれる | くださる |",
+      "tags": ["keigo-respectful"],
+      "examples": [
+        { "jp": "先生は今、研究室にいらっしゃいます。", "en": "The professor is in the office at the moment." },
+        { "jp": "部長、昼ご飯はもう召し上がりましたか。", "en": "Have you had lunch yet?" },
+        { "jp": "この方をご存じですか。", "en": "Do you know this person?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-5"],
+      "title": "お Vます-stem ください／ご N ください",
+      "structure": "お + Vます-stem + ください ／ ご + N(する verb) + ください",
+      "meaning": "A respectful instruction or invitation: \"please (do)…\".",
+      "explanation": "This is the polite version of 〜て ください, heard from staff to customers and in announcements: お待ちください, お入りください, ご利用ください. With special respectful verbs, use their て-form: いらっしゃって ください, 召し上がって ください.",
+      "summary": "お + stem + ください = please (do), respectfully.",
+      "details": "- 少々お待ち**ください**。 Please wait a moment.\n- どうぞお入り**ください**。 Please come in.\n- 黄色い線の内側でお待ち**ください**。 Please wait behind the yellow line.\n- ご注意**ください**。 Please be careful.",
+      "tags": ["keigo-respectful", "request"],
+      "examples": [
+        { "jp": "こちらに名前をお書きください。", "en": "Please write your name here." },
+        { "jp": "電車とホームの間が広く空いていますので、ご注意ください。", "en": "Please mind the gap between the train and the platform." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-6"],
+      "title": "お〜／ご〜 on nouns and adjectives",
+      "structure": "お + native word ／ ご + Sino-Japanese word",
+      "meaning": "Polite prefixes on the other person's things, and on everyday words.",
+      "explanation": "お and ご (N5) also show respect when attached to someone else's things, family or qualities: お名前, ご家族, お忙しい. Generally お goes with native Japanese words and ご with Chinese-origin words, but there are exceptions: お電話, お元気. Some words almost always carry お for politeness: お茶, お金.",
+      "summary": "お／ご on their things and qualities = respect; お for native words, ご for Sino-Japanese.",
+      "details": "| お | ご |\n| :--- | :--- |\n| お名前, お国, お仕事 | ご家族, ご住所, ご意見 |\n| お忙しい, お元気 | ご親切, ご自由に |\n| exceptions: お電話, お食事 | |\n\n- ご自由にお使いください。 Please feel free to use it.",
+      "tags": ["keigo-respectful", "keigo-polite"],
+      "examples": [
+        { "jp": "お忙しいところ、ありがとうございます。", "en": "Thank you for your time when you're so busy." },
+        { "jp": "ご家族はお元気ですか。", "en": "Is your family well?" }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "replaces": ["n4-grammar-25-1"],
+      "title": "謙譲語（humble language）: lowering your side",
+      "structure": "Your own（or your side's）action, described humbly",
+      "meaning": "Showing respect by describing your own actions modestly.",
+      "explanation": "謙譲語 makes your own actions, and those of your family or company when speaking to outsiders, sound modest. It is used when your action is directed at, or affects, the person you respect. Respectful verbs (Lesson 24) are never used for yourself, and humble verbs are never used for the other person.",
+      "summary": "Humble language is for your own actions toward someone you respect.",
+      "details": "| About them | About me |\n| :--- | :--- |\n| 先生が**いらっしゃいます**。 | わたしが**参ります**。 |\n| 先生が**おっしゃいました**。 | わたしが**申しました**。 |\n\n- ✗ わたしがいらっしゃいます ✗ 先生が参ります",
+      "tags": ["keigo-humble"],
+      "examples": [
+        { "jp": "明日、わたしがお宅に伺います。", "en": "I will call at your home tomorrow." },
+        { "jp": "母が先生によろしくと申しておりました。", "en": "My mother asked me to give you her regards." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-25-2"],
+      "title": "お Vます-stem します／ご N します",
+      "structure": "お + Vます-stem + します ／ ご + N(する verb) + します",
+      "meaning": "\"Let me… (for you)\": a humble form for an action you do for someone.",
+      "explanation": "Put お before the stem (or ご before a Sino-Japanese する noun) and add します: 持つ → お持ちします, 案内する → ご案内します. It is only for actions that involve the other person, so ✗ お寝します. For extra politeness, いたします replaces します.",
+      "summary": "お + stem + します = I'll do it for you (humbly).",
+      "details": "- 荷物をお持ち**します**。 Let me carry your bag.\n- 駅までご案内**します**。 I'll show you the way to the station.\n- 後でお電話**いたします**。 I'll call you later.\n- ✗ お帰りします (no one is affected).",
+      "tags": ["keigo-humble"],
+      "examples": [
+        { "jp": "重そうですね。お持ちしましょうか。", "en": "That looks heavy. May I carry it for you?" },
+        { "jp": "結果は来週、メールでご連絡します。", "en": "We will inform you of the results by email next week." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-25-3"],
+      "title": "Special humble verbs",
+      "structure": "参る・おる・申す・いたす・いただく・伺う・拝見する・存じる",
+      "meaning": "Common verbs have their own humble words.",
+      "explanation": "Like the respectful verbs, the most frequent verbs have separate humble forms. Some (参る, おる, 申す, いたす) mainly make your speech formal toward the listener; others (伺う, 拝見する, いただく) lower an action that is directed at the respected person.",
+      "summary": "Learn the special humble verbs: 参る, おる, 申す, いたす, いただく, 伺う, 拝見する, 存じる.",
+      "details": "| Plain | Humble |\n| :--- | :--- |\n| 行く／来る | 参る, 伺う (visit) |\n| いる | おる |\n| 言う | 申す・申し上げる |\n| する | いたす |\n| 食べる／もらう | いただく |\n| 見る | 拝見する |\n| 知っている | 存じて おる |\n| 聞く | 伺う |",
+      "tags": ["keigo-humble"],
+      "examples": [
+        { "jp": "はじめまして。リーと申します。", "en": "How do you do. My name is Lee." },
+        { "jp": "明日の三時に、そちらへ参ります。", "en": "I will come to your office at three tomorrow." },
+        { "jp": "お写真を拝見しました。", "en": "I had a look at your photos." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-25-4"],
+      "title": "丁寧語: ございます・〜で ございます",
+      "structure": "あります → ございます ／ です → で ございます",
+      "meaning": "Extra-polite equivalents of あります and です.",
+      "explanation": "丁寧語 makes your speech polite toward the listener regardless of whose action it is. ございます (for あります) and で ございます (for です) are typical of shops, hotels and phone calls. よろしいですか is the polite form of いいですか.",
+      "summary": "ございます = あります, で ございます = です, よろしい = いい (all extra polite).",
+      "details": "| Plain polite | Extra polite |\n| :--- | :--- |\n| トイレは二階に**あります**。 | 二階に**ございます**。 |\n| こちらは出口**です**。 | 出口**でございます**。 |\n| これで**いい**ですか。 | これで**よろしい**ですか。 |",
+      "tags": ["keigo-polite"],
+      "examples": [
+        { "jp": "お手洗いはこちらの奥にございます。", "en": "The restrooms are at the back, this way." },
+        { "jp": "はい、こちらは青木でございます。", "en": "Yes, this is Aoki speaking." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-24-7"],
+      "title": "Choosing the level: keigo in plain speech",
+      "structure": "Respectful word + plain ending（to friends）／ consistent keigo（to the person）",
+      "meaning": "How respect for a third person and politeness to the listener combine.",
+      "explanation": "Respect for the person you talk about and politeness to the listener are separate. Talking to a friend about your teacher, you can use a respectful verb with a plain ending: 先生がいらっしゃった. Talking to the teacher, keep both: いらっしゃいました. Within one conversation, stay at one level rather than mixing.",
+      "summary": "Respect for the subject + politeness to the listener: choose each separately, then stay consistent.",
+      "details": "| Listener | About the teacher |\n| :--- | :--- |\n| friend | 森先生、もう帰**られた**よ。 |\n| teacher | 先生、もうお帰りになり**ますか**。 |\n| outsider, about your boss | 部長はただ今出かけて**おります**。 |",
+      "tags": ["keigo-respectful"],
+      "examples": [
+        { "jp": "ねえ、森先生が来週の授業は休みだっておっしゃってたよ。", "en": "Hey, Professor Mori said there's no class next week." },
+        { "jp": "部長の小林はただ今会議中でございます。", "en": "Kobayashi, our manager, is in a meeting at the moment." }
+      ]
+    }
+  ]
+}

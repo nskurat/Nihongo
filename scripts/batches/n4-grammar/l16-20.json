@@ -1,0 +1,435 @@
+{
+  "16": [
+    {
+      "replaces": ["n4-grammar-16-8"],
+      "title": "Vて あげます／もらいます／くれます",
+      "structure": "Vて-form + あげます／もらいます／くれます",
+      "meaning": "Doing things for people: \"do for (someone)\", \"have (someone) do\", \"(someone) does for me\".",
+      "explanation": "The giving verbs from N5 attach to the て-form to show who benefits from an action. Vて あげる: I (or my side) do it for someone. Vて もらう: I get someone to do it, and the doer takes に. Vて くれる: someone does it for me or my side. Leaving them out can sound cold, because Japanese marks favours.",
+      "summary": "て あげる (I do for you), て もらう (I get you to do), て くれる (you do for me).",
+      "note": "To superiors, 〜て あげます can sound condescending. Offer with 〜ましょうか instead: 持ちましょうか.",
+      "details": "| Pattern | Who does it | Who benefits |\n| :--- | :--- | :--- |\n| わたしは妹に本を読ん**であげました**。 | I | my sister |\n| わたしは友だちに写真を撮っ**てもらいました**。 | my friend | me |\n| 友だちが駅まで送っ**てくれました**。 | my friend | me |",
+      "tags": ["giving-receiving"],
+      "examples": [
+        { "jp": "わたしは弟に宿題を教えてあげました。", "en": "I helped my little brother with his homework." },
+        { "jp": "アンナさんに日本の料理を作ってもらいました。", "en": "Anna made me some Japanese food." },
+        { "jp": "道が分からなかったとき、知らない人が駅まで連れて行ってくれました。", "en": "When I was lost, a stranger took me to the station." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-1"],
+      "title": "N に N を やります",
+      "structure": "Receiver（younger family, animals, plants）に + N を やります",
+      "meaning": "\"Give\" to someone below you, an animal or a plant.",
+      "explanation": "やる replaces あげる when giving to a pet, a plant, or, in plain speech, a younger family member. Today many people use あげる even for pets, but 水をやる (water plants) and えさをやる (feed animals) remain very common.",
+      "summary": "やる = give to animals, plants, younger family.",
+      "details": "- 毎朝、花に水を**やります**。 I water the flowers every morning.\n- 犬にえさを**やりました**。 I fed the dog.\n- 弟にお菓子を**やった**。 I gave my little brother some sweets.",
+      "tags": ["giving-receiving"],
+      "examples": [
+        { "jp": "旅行の間、隣の人が猫にえさをやってくれました。", "en": "While I was away, my neighbour fed the cat for me." },
+        { "jp": "毎晩、庭の木に水をやっています。", "en": "I water the trees in the garden every evening." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-2"],
+      "title": "N に N を いただきます",
+      "structure": "Giver（higher status）に／から + N を いただきます",
+      "meaning": "The humble version of もらう: \"receive\" from someone you respect.",
+      "explanation": "When you receive something from a teacher, a boss or a client, いただく shows respect by lowering yourself. It works exactly like もらう: the giver takes に or から.",
+      "summary": "いただく = もらう, from someone you respect.",
+      "details": "- 先生に辞書を**いただきました**。 My teacher gave me a dictionary.\n- 部長からお土産を**いただきました**。 I received a souvenir from the manager.",
+      "tags": ["giving-receiving", "keigo-humble"],
+      "examples": [
+        { "jp": "卒業のとき、先生にお祝いの手紙をいただきました。", "en": "When I graduated, my teacher gave me a letter of congratulations." },
+        { "jp": "お客様からきれいな花をいただきました。", "en": "We received some beautiful flowers from a client." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-3"],
+      "title": "（わたしに）N を くださいます",
+      "structure": "Giver（higher status）が（わたしに）N を くださいます",
+      "meaning": "The respectful version of くれる: someone you respect gives to you.",
+      "explanation": "くださる raises the giver, the way くれる does but with respect. The receiver is you or your side, so わたしに is usually left out. Its ます-form is くださいます (not くださります).",
+      "summary": "くださる = くれる, when the giver is someone you respect.",
+      "details": "- 先生がわたしに本を**くださいました**。 My teacher gave me a book.\n- 社長が家族にお菓子を**くださいました**。 The company president gave my family some sweets.",
+      "tags": ["giving-receiving", "keigo-respectful"],
+      "examples": [
+        { "jp": "森先生がわたしに日本の地図をくださいました。", "en": "Professor Mori gave me a map of Japan." },
+        { "jp": "大家さんが果物をくださいました。", "en": "My landlord gave me some fruit." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-4"],
+      "title": "Vて やります／いただきます／くださいます",
+      "structure": "Vて-form + やります／いただきます／くださいます",
+      "meaning": "The same status rules applied to favours done as actions.",
+      "explanation": "Just as with things, favours done by people above you use いただく and くださる: 先生に教えて いただきました, 先生が教えて くださいました. Favours you do for pets or younger family can use Vて やる.",
+      "summary": "て いただく／て くださる for favours from superiors; て やる for pets and younger family.",
+      "details": "| Plain | Respectful／humble |\n| :--- | :--- |\n| 友だちに教え**てもらった** | 先生に教え**ていただいた** |\n| 友だちが教え**てくれた** | 先生が教え**てくださった** |\n| 妹に読ん**であげた** | 犬と遊ん**でやった** |",
+      "tags": ["giving-receiving"],
+      "examples": [
+        { "jp": "部長に駅まで車で送っていただきました。", "en": "The manager kindly drove me to the station." },
+        { "jp": "先生がわたしの作文を直してくださいました。", "en": "My teacher kindly corrected my essay." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-5"],
+      "title": "Vて くださいませんか",
+      "structure": "Vて-form + くださいませんか",
+      "meaning": "A polite request: \"Would you kindly…?\".",
+      "explanation": "Asking in the negative (won't you…?) is softer than てください. 〜て くださいませんか is polite enough for most situations; 〜て いただけませんか (Lesson 1) is a step politer.",
+      "summary": "て くださいませんか = would you kindly…?",
+      "details": "1. 待っ**てください**。\n2. 待っ**てくださいませんか**。\n3. 待っ**ていただけませんか**。\n\nCasual: 待っ**てくれない？**",
+      "tags": ["request", "keigo-respectful"],
+      "examples": [
+        { "jp": "すみません、この荷物を少し見ていてくださいませんか。", "en": "Excuse me, would you mind keeping an eye on this bag for a moment?" },
+        { "jp": "もう少しゆっくり話してくださいませんか。", "en": "Would you speak a little more slowly, please?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-7"],
+      "title": "Vて ほしい／Vないで ほしい",
+      "structure": "Person に + Vて-form／Vない-form ないで + ほしいです",
+      "meaning": "\"I want (someone) to…\", \"I don't want (someone) to…\".",
+      "explanation": "たい is for your own actions; Vて ほしい is for actions you want others to do. The person takes に. Said directly to someone, it can sound demanding; with superiors, use a request form instead.",
+      "summary": "N に Vて ほしい = I want N to do…",
+      "details": "- 母にもっと長生きし**てほしい**です。 I want my mother to live a long time.\n- 夜は電話し**ないでほしい**です。 I'd rather you didn't phone at night.\n- ✗ 先生に教えてほしいです → ✓ 教えていただけませんか。",
+      "tags": ["request"],
+      "examples": [
+        { "jp": "この本、おもしろいから、ケンさんにも読んでほしいです。", "en": "This book is great; I want you to read it too, Ken." },
+        { "jp": "大事な話なので、だれにも言わないでほしいんです。", "en": "It's important, so I'd rather you didn't tell anyone." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-16-6"],
+      "title": "N に V（as a gift, as a souvenir）",
+      "structure": "お祝い／お土産／お礼／記念 に + V",
+      "meaning": "\"As a…\": what something is given or done as.",
+      "explanation": "With nouns like お祝い, お土産, お礼, 記念 and 誕生日のプレゼント, に shows the role the item plays. It answers \"as what?\".",
+      "summary": "お祝いに／お土産に… = as a celebration gift, as a souvenir…",
+      "details": "- 結婚のお祝い**に**時計をあげました。 I gave a clock as a wedding present.\n- 京都のお土産**に**お菓子を買いました。 I bought sweets as a souvenir from Kyoto.\n- 記念**に**写真を撮りましょう。 Let's take a photo to remember it.",
+      "tags": ["particle-usage"],
+      "examples": [
+        { "jp": "手伝ってくれたお礼に、友だちに晩ご飯をごちそうしました。", "en": "I treated my friend to dinner as thanks for helping me." },
+        { "jp": "誕生日のプレゼントに、母に花をあげました。", "en": "I gave my mother flowers for her birthday." }
+      ]
+    }
+  ],
+  "17": [
+    {
+      "replaces": ["n4-grammar-17-1"],
+      "title": "〜ために（in order to, for）",
+      "structure": "V dictionary form／Nの + ために、〜",
+      "meaning": "\"In order to…\", \"for the sake of…\": a deliberate purpose.",
+      "explanation": "ために is used with actions you can decide to do (buy, save, study). Both clauses should have the same subject. With potential verbs, なる, or negatives, use ように instead (Lesson 13). With nouns it means \"for\": 家族のために.",
+      "summary": "V／Nの ために = in order to / for (a purpose you control).",
+      "details": "| ために (control) | ように (no direct control) |\n| :--- | :--- |\n| 家を買う**ために**、貯金しています。 | 家が買える**ように**、貯金しています。 |\n| 健康の**ために**、走ります。 | 病気にならない**ように**、気をつけます。 |",
+      "tags": ["purpose"],
+      "examples": [
+        { "jp": "日本の大学に入るために、毎日日本語を勉強しています。", "en": "I study Japanese every day in order to get into a Japanese university." },
+        { "jp": "健康のために、毎朝野菜ジュースを飲んでいます。", "en": "I drink vegetable juice every morning for my health." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-17-2"],
+      "title": "〜のに（for, in doing）",
+      "structure": "V dictionary form + のに ／ N + に + 使う・便利・必要・いい・かかる",
+      "meaning": "\"For (doing)…\": what something is used for, or what it takes.",
+      "explanation": "This のに (の + に) states a use or a purpose, and goes with a short list of words: 使います, 便利です, 必要です, いいです, かかります. Do not confuse it with のに \"although\" (Lesson 9): here it follows a dictionary-form verb and links to these words.",
+      "summary": "V のに 便利／必要／使う／かかる = handy / needed / used / takes for doing…",
+      "details": "- このはさみは紙を切る**のに**使います。 These scissors are for cutting paper.\n- 駅まで行く**のに**三十分かかります。 It takes thirty minutes to get to the station.\n- この辞書は旅行**に**便利です。 This dictionary is handy for travelling.",
+      "tags": ["purpose"],
+      "examples": [
+        { "jp": "このかばんは軽いので、旅行するのに便利です。", "en": "This bag is light, so it's handy for travelling." },
+        { "jp": "この料理を作るのに、二時間かかりました。", "en": "It took two hours to make this dish." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-17-3"],
+      "title": "Quantity + も（as many as）",
+      "structure": "Number + counter + も",
+      "meaning": "\"As many as…\", \"a whole…\": the speaker feels the amount is large.",
+      "explanation": "Placed after a number, も expresses surprise at how much it is. With a negative and 一 (一度も, 一人も), it means \"not even one\".",
+      "summary": "Number + も = as many as (that's a lot!); 一〜も + negative = not a single…",
+      "details": "- 駅で一時間**も**待ちました。 I waited at the station for a whole hour.\n- ケーキを五つ**も**食べたんですか。 You ate as many as five cakes?\n- 一度**も**行ったことがありません。 I've never been, not even once.",
+      "tags": ["particle-usage", "emphasis-limitation"],
+      "examples": [
+        { "jp": "人気のラーメン屋の前に、五十人も並んでいました。", "en": "There were as many as fifty people queuing outside the popular ramen shop." },
+        { "jp": "今日は一回も電話が鳴りませんでした。", "en": "The phone didn't ring once today." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-5"],
+      "title": "Quantity + で（for, within）",
+      "structure": "Number + counter + で",
+      "meaning": "The amount of money, time or people needed or used: \"for…\", \"in…\".",
+      "explanation": "で after a quantity sets the limit or total: 三つで五百円 (three for 500 yen), 一時間で行けます (you can get there in an hour), 二人で住んでいます (two of us live together).",
+      "summary": "Quantity + で = for that total, within that limit.",
+      "details": "- このりんごは三つ**で**四百円です。 These apples are three for 400 yen.\n- 東京から大阪まで、新幹線で二時間半**で**行けます。 You can get from Tokyo to Osaka in two and a half hours by bullet train.\n- 千円**で**何が買えますか。 What can you buy for 1,000 yen?",
+      "tags": ["particle-usage", "degree-extent"],
+      "examples": [
+        { "jp": "この仕事は一日でできますか。", "en": "Can this job be done in a day?" },
+        { "jp": "この店では、二つで千円になります。", "en": "At this shop, it's two for 1,000 yen." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-17-5"],
+      "title": "〜だけで",
+      "structure": "V dictionary form／N + だけで、〜",
+      "meaning": "\"Just by…\", \"only… and already…\".",
+      "explanation": "だけで says that a small action or amount is enough for the result. It often expresses how easy or how strong something is: 聞くだけで (just hearing it).",
+      "summary": "〜だけで = just by…, with only…",
+      "details": "- このボタンを押す**だけで**、お湯が出ます。 Just press this button and hot water comes out.\n- 写真を見る**だけで**、行きたくなります。 Just looking at the photos makes me want to go.\n- 一人**だけで**は無理です。 It's impossible for one person alone.",
+      "tags": ["emphasis-limitation", "result-consequence"],
+      "examples": [
+        { "jp": "この料理は、材料を混ぜて焼くだけで簡単に作れます。", "en": "You can make this dish easily: just mix the ingredients and bake." },
+        { "jp": "その話は聞くだけで怖いです。", "en": "Just hearing that story is scary." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-12-5"],
+      "title": "N から／N で 作ります",
+      "structure": "Product は + N(material) から／で + 作ります",
+      "meaning": "で for a material you can still see, から for a raw material that has changed.",
+      "explanation": "If the material is still visible in the product (wood in a desk), use で. If it has been transformed beyond recognition (rice into sake), use から. Both appear with 作る and its passive form, which you will meet in Lesson 22.",
+      "summary": "N で 作る = made of (visible); N から 作る = made from (transformed).",
+      "details": "- この机は木**で**作りました。 I made this desk out of wood.\n- 日本酒は米**から**作ります。 Sake is made from rice.\n- バターは牛乳**から**作ります。 Butter is made from milk.",
+      "tags": ["particle-usage"],
+      "examples": [
+        { "jp": "このかばんは古いシャツで作りました。", "en": "I made this bag out of an old shirt." },
+        { "jp": "みそは大豆から作ります。", "en": "Miso is made from soybeans." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-6"],
+      "title": "そんなに（so much, not that much）",
+      "structure": "そんなに + adj／V ／ そんなに + negative",
+      "meaning": "\"So (much)\", \"that much\"; with a negative, \"not that…\".",
+      "explanation": "そんなに refers to a degree the listener has mentioned or shown. With a negative it plays something down: そんなに高くない (not that expensive). こんなに (this much) and あんなに (that much, over there or in memory) follow the こ・そ・あ pattern.",
+      "summary": "そんなに = that much; そんなに〜ない = not that…",
+      "details": "- **そんなに**急がなくてもいいですよ。 You don't need to rush that much.\n- この店は**そんなに**高くないです。 This shop isn't that expensive.\n- **こんなに**たくさん食べられません。 I can't eat this much.",
+      "tags": ["degree-extent", "partial-negation"],
+      "examples": [
+        { "jp": "試験はそんなに難しくなかったです。", "en": "The exam wasn't that hard." },
+        { "jp": "どうしてそんなに怒っているんですか。", "en": "Why are you so angry?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-10"],
+      "title": "なかなか + negative／なかなか + adj",
+      "structure": "なかなか + V negative ／ なかなか + positive adj",
+      "meaning": "With a negative: \"not easily, just won't\"; with a positive adjective: \"quite, pretty\".",
+      "explanation": "With a negative verb, なかなか means something does not happen however long you wait or try: バスがなかなか来ない. With a positive adjective it is mild praise, \"rather good\": なかなかおいしい. It is not used to praise superiors directly, since it can sound like you expected less.",
+      "summary": "なかなか〜ない = just won't; なかなか + adj = quite (good).",
+      "details": "- バスが**なかなか**来ません。 The bus just isn't coming.\n- 漢字が**なかなか**覚えられません。 I just can't get the kanji to stick.\n- この映画は**なかなか**おもしろいです。 This film is pretty good.",
+      "tags": ["degree-extent"],
+      "examples": [
+        { "jp": "子どもがなかなか寝てくれません。", "en": "The kids just won't go to sleep." },
+        { "jp": "初めて作ったケーキですが、なかなかおいしいですね。", "en": "It's the first cake I've made, but it's not bad at all." }
+      ]
+    }
+  ],
+  "18": [
+    {
+      "replaces": ["n4-grammar-18-1", "n4-grammar-18-3"],
+      "title": "Adjective そうです（looks…）",
+      "structure": "い-adj 〜い → 〜そう ／ な-adj + そう ／ いい → よさそう, ない → なさそう",
+      "meaning": "\"Looks…\", \"seems…\": a judgement from appearance.",
+      "explanation": "Drop い or な and add そう to say how something looks before you have checked: おいしそう, 便利そう. It works as a な-adjective: おいしそうな ケーキ, 楽しそうに 話す. Two forms are irregular: いい → よさそう, ない → なさそう. It is not used for things obvious at a glance, such as きれい or 赤い.",
+      "summary": "Adjective stem + そう = looks (tasty, easy…), judged from appearance.",
+      "details": "| Adjective | そう form |\n| :--- | :--- |\n| おいしい | おいし**そう** |\n| 元気 | 元気**そう** |\n| いい | **よさそう** |\n| 高くない | 高くな**さそう** |\n\n- おいし**そうな**パン, 楽し**そうに**笑う",
+      "tags": ["conjecture-inference", "similarity-appearance"],
+      "examples": [
+        { "jp": "わあ、このケーキ、おいしそうですね。", "en": "Wow, this cake looks delicious." },
+        { "jp": "子どもたちが楽しそうに遊んでいます。", "en": "The children are playing happily." },
+        { "jp": "このかばんは丈夫そうですね。", "en": "This bag looks sturdy." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-18-2"],
+      "title": "Vます-stem そうです（about to, looks like it will）",
+      "structure": "Vます-stem + そうです（今にも／もうすぐ…）",
+      "meaning": "\"Looks like it's going to…\": something is about to happen, judging by what you see.",
+      "explanation": "With a verb, そう predicts what will happen soon from present signs: dark clouds mean rain. 今にも (any moment now) often goes with it. The negative is 〜そうに ありません or 〜そうも ない: 終わりそうにありません (doesn't look like it'll finish).",
+      "summary": "Stem + そう = looks like it's about to…",
+      "details": "- 今にも雨が降り**そうです**。 It looks like it's going to rain any minute.\n- 棚から本が落ち**そうですよ**。 That book is about to fall off the shelf.\n- 仕事は今日中に終わり**そうにありません**。 The work doesn't look like it'll be done today.",
+      "tags": ["conjecture-inference"],
+      "examples": [
+        { "jp": "空が暗くなりました。雨が降りそうですね。", "en": "The sky has gone dark. Looks like rain." },
+        { "jp": "危ない！その荷物、落ちそうですよ。", "en": "Look out! That bag is about to fall." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-22-2"],
+      "title": "〜ようです（it seems）",
+      "structure": "Plain form（な-adj な／Nの）+ ようです",
+      "meaning": "\"It seems that…\": a conclusion from what you have seen, heard or felt.",
+      "explanation": "ようです draws a conclusion from evidence you sensed yourself: noises, signs, someone's behaviour. Compare adjective そう (just how it looks) and でしょう (a guess). It often goes with どうも, which signals that you are not completely sure.",
+      "summary": "〜ようです = it seems (from evidence I noticed).",
+      "details": "- 隣の部屋にだれかいる**ようです**。 There seems to be somebody in the next room.\n- 外は寒い**ようです**ね。 It seems cold outside. (people are in coats)\n- どうも風邪をひいた**ようです**。 I seem to have caught a cold.",
+      "tags": ["conjecture-inference", "similarity-appearance"],
+      "examples": [
+        { "jp": "道がぬれていますね。夜の間に雨が降ったようです。", "en": "The road is wet. It seems it rained during the night." },
+        { "jp": "ケンさんは最近忙しいようで、あまり会いません。", "en": "Ken seems to be busy lately; I don't see him much." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-22-4"],
+      "title": "〜みたいです／みたいな N／みたいに V",
+      "structure": "Plain form（N／な-adj: だ drops）+ みたいです",
+      "meaning": "The casual version of ようです: \"seems\", \"looks like\", \"like…\".",
+      "explanation": "みたい means \"it seems\" (like ようです) and \"like, as if\" (comparing). It attaches directly to nouns and な-adjectives without の or な: 雨みたい, 静かみたい. It conjugates as a な-adjective: 夢みたいな話, 子どもみたいに笑う.",
+      "summary": "みたい = seems / like…, casual and attached straight to nouns.",
+      "details": "| Use | Example |\n| :--- | :--- |\n| it seems | 森さん、今日は休み**みたいです**。 |\n| like (comparison) | 夢**みたいな**話ですね。 |\n| as if | 子ども**みたいに**喜んでいます。 |\n\nPolite and written: 〜のようです／〜のような.",
+      "tags": ["similarity-appearance", "conjecture-inference"],
+      "examples": [
+        { "jp": "あの店、今日は閉まっているみたいですね。", "en": "That shop seems to be closed today." },
+        { "jp": "このパン、まるで雲みたいに柔らかいです。", "en": "This bread is as soft as a cloud." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-22-3"],
+      "title": "声／音／におい／味が します",
+      "structure": "N（voice, sound, smell, taste）が します",
+      "meaning": "\"I can hear a voice / smell something / taste…\": a sensation you notice.",
+      "explanation": "With nouns of sensation, する means that the sensation is there. It describes what you notice, not what you do. Use ような／みたいな before the noun to say what it is like: ガスのようなにおいがします.",
+      "summary": "声／音／におい／味が する = there's a voice / sound / smell / taste.",
+      "details": "- 外で変な**音がします**。 There's a strange noise outside.\n- カレーのいい**においがします**ね。 There's a lovely smell of curry.\n- このスープはしょうゆの**味がします**。 This soup tastes of soy sauce.\n- 寒気が**します**。 I feel a chill.",
+      "tags": ["spontaneous-perception"],
+      "examples": [
+        { "jp": "台所から甘いにおいがします。ケーキを焼いているんですか。", "en": "There's a sweet smell from the kitchen. Are you baking a cake?" },
+        { "jp": "どこかで子どもが泣いている声がします。", "en": "I can hear a child crying somewhere." }
+      ]
+    }
+  ],
+  "19": [
+    {
+      "replaces": ["n4-grammar-22-1"],
+      "title": "Plain form + そうです（I hear that）",
+      "structure": "Plain form（N／な-adj: 〜だ）+ そうです ／ source: 〜に よると",
+      "meaning": "\"I hear that…\", \"apparently…\": passing on information from another source.",
+      "explanation": "This そうです follows a full plain form, including だ: 雨だそうです, 静かだそうです. That is how it differs from \"looks like\" そう (Lesson 18), which attaches to stems. Name the source with 〜に よると (according to…).",
+      "summary": "Plain form + そうです = I hear that…; name the source with によると.",
+      "details": "| Hearsay | Appearance |\n| :--- | :--- |\n| 雨が降る**そうです** (I hear it'll rain) | 雨が降り**そうです** (looks like rain) |\n| おいしい**そうです** (I hear it's good) | おいし**そうです** (looks good) |\n| 元気**だそうです** | 元気**そうです** |\n\n- 天気予報**によると**、明日は雪**だそうです**。",
+      "tags": ["hearsay"],
+      "examples": [
+        { "jp": "ニュースによると、来週から電車の料金が上がるそうです。", "en": "According to the news, train fares are going up from next week." },
+        { "jp": "リーさんは来月結婚するそうです。", "en": "I hear Lee is getting married next month." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-22-5"],
+      "title": "〜らしいです",
+      "structure": "Plain form（N／な-adj: だ drops）+ らしいです ／ N + らしい N",
+      "meaning": "\"Apparently\", \"it seems\" (from what I've heard); and N らしい: \"typical of N\".",
+      "explanation": "As an ending, らしい reports something heard or inferred, with the speaker keeping some distance from it. After a noun it can also mean \"befitting, true to type\": 男らしい, 子どもらしい, 春らしい天気 (real spring weather).",
+      "summary": "〜らしい = apparently; N らしい = typical of N.",
+      "details": "- あの店は来月閉まる**らしい**ですよ。 Apparently that shop is closing next month.\n- 今日は**春らしい**天気ですね。 Proper spring weather today.\n- 文句を言わないのは森さん**らしい**ね。 Not complaining: that's so like Mr. Mori.",
+      "tags": ["hearsay", "conjecture-inference"],
+      "examples": [
+        { "jp": "駅の近くに新しい図書館ができるらしいです。", "en": "Apparently a new library is being built near the station." },
+        { "jp": "今日は暖かくて、春らしい一日でした。", "en": "It was warm today, a real spring day." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-22-6"],
+      "title": "〜と 聞きました",
+      "structure": "Person から／に + plain form + と 聞きました",
+      "meaning": "\"I heard (from someone) that…\".",
+      "explanation": "This names the act of hearing, so it is natural when you want to say who told you. The person takes から or に. It is a little more direct than そうです.",
+      "summary": "〜と 聞きました = I heard (from X) that…",
+      "details": "- 先輩から、この授業は難しい**と聞きました**。 I heard from an older student that this class is hard.\n- エマさんが入院した**と聞いて**、びっくりしました。 I was shocked to hear Emma was in hospital.",
+      "tags": ["hearsay", "quotation"],
+      "examples": [
+        { "jp": "友だちから、この映画はとてもいいと聞きました。", "en": "A friend told me this film is really good." },
+        { "jp": "森さんが会社を辞めると聞いて、驚きました。", "en": "I was surprised to hear Mr. Mori is leaving the company." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-8-8"],
+      "title": "〜と いう ことです／〜って",
+      "structure": "Plain form + と いう ことです ／ casual: 〜って",
+      "meaning": "\"They say…\", \"it's said that…\": formal hearsay, and its casual short form.",
+      "explanation": "〜と いう ことです reports information in a neutral, slightly formal way, as in news or notices. In conversation, って replaces という and と言っていた: 明日休みだって (they say there's no class tomorrow).",
+      "summary": "〜と いう ことです = it's reported that…; casual: 〜って.",
+      "details": "- 今年の夏は暑くなる**ということです**。 This summer is expected to be hot.\n- ケンさん、明日来られない**って**。 Ken says he can't come tomorrow.\n- 「さくら」**って**店、知ってる？ Do you know a shop called Sakura?",
+      "tags": ["quotation", "hearsay"],
+      "examples": [
+        { "jp": "台風で、明日の授業は休みだということです。", "en": "We're told tomorrow's classes are cancelled because of the typhoon." },
+        { "jp": "アンナさん、少し遅れるって。", "en": "Anna says she'll be a bit late." }
+      ]
+    }
+  ],
+  "20": [
+    {
+      "replaces": ["n4-grammar-19-1"],
+      "title": "〜すぎます（too much）",
+      "structure": "Vます-stem／い-adj（〜い）／な-adj + すぎます",
+      "meaning": "\"Too…\", \"too much\": the degree is more than is good.",
+      "explanation": "Attach すぎる to the verb stem or adjective stem. It conjugates as a Group II verb: 食べすぎた, 高すぎて. It can also be a noun: 飲みすぎ (drinking too much). いい → よすぎる, ない → なさすぎる.",
+      "summary": "Stem + すぎる = too (much).",
+      "details": "- 昨日、飲み**すぎました**。 I drank too much yesterday.\n- この靴は大き**すぎます**。 These shoes are too big.\n- この問題は簡単**すぎます**。 This question is too easy.\n- 食べ**すぎ**に気をつけてください。 Be careful not to overeat.",
+      "tags": ["excessive-degree"],
+      "examples": [
+        { "jp": "このかばんは重すぎて、一人で持てません。", "en": "This bag is too heavy for me to carry on my own." },
+        { "jp": "夜遅くまでゲームをしすぎて、朝起きられませんでした。", "en": "I played games too late and couldn't get up in the morning." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-2"],
+      "title": "Vます-stem やすいです／にくいです",
+      "structure": "Vます-stem + やすいです（easy to）／にくいです（hard to）",
+      "meaning": "\"Easy to…\" / \"hard to…\".",
+      "explanation": "These describe how easy or hard something is to do, or how likely it is to happen. They conjugate as い-adjectives: 使いやすい カメラ, 分かりにくくて. They describe a thing's quality (this pen writes easily), not a person's ability.",
+      "summary": "Stem + やすい = easy to; stem + にくい = hard to.",
+      "details": "- このペンは書き**やすい**です。 This pen is easy to write with.\n- 先生の説明は分かり**やすい**です。 The teacher's explanations are easy to follow.\n- この薬は苦くて、飲み**にくい**です。 This medicine is bitter and hard to swallow.\n- 白い服は汚れ**やすい**です。 White clothes get dirty easily.",
+      "tags": ["ease-difficulty"],
+      "examples": [
+        { "jp": "この町は静かで、住みやすいです。", "en": "This town is quiet and easy to live in." },
+        { "jp": "この地図は字が小さくて、見にくいです。", "en": "The writing on this map is small and hard to read." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-8"],
+      "title": "Vます-stem づらいです",
+      "structure": "Vます-stem + づらいです",
+      "meaning": "\"Hard to…\" because of the speaker's own discomfort, physical or emotional.",
+      "explanation": "にくい describes something that is objectively hard. づらい describes something you find hard because of how you feel or a physical pain: it is awkward to say, it hurts to walk. It is common in conversation.",
+      "summary": "Stem + づらい = hard to do (for me, because it's awkward or painful).",
+      "details": "| にくい (objective) | づらい (personal discomfort) |\n| :--- | :--- |\n| この道は歩き**にくい**。 (rough road) | 足が痛くて、歩き**づらい**。 |\n| 字が小さくて読み**にくい**。 | 友だちに「お金を返して」とは言い**づらい**。 |",
+      "tags": ["ease-difficulty", "emotion-expression"],
+      "examples": [
+        { "jp": "先輩の誘いなので、断りづらいです。", "en": "It's an invitation from a senior, so it's hard to say no." },
+        { "jp": "歯が痛くて、ご飯が食べづらいです。", "en": "My tooth hurts, so it's hard to eat." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-6"],
+      "title": "〜がります／〜がって います",
+      "structure": "い-adj 〜い／な-adj + がります（がって います）",
+      "meaning": "Describes another person's feelings from how they act: \"seems scared / is showing they want…\".",
+      "explanation": "Words for feelings (怖い, 寂しい, 痛い, ほしい) describe your own feelings directly. For someone else's, Japanese adds がる, because you can only see the signs: 弟は暗い所を怖がります. The current state is がって います. がる verbs take を.",
+      "summary": "Feeling adjective + がる = (someone else) shows signs of feeling that.",
+      "details": "- わたしは犬が**怖い**です。 I'm scared of dogs.\n- 妹は犬を**怖がります**。 My little sister is scared of dogs.\n- 子どもが寂し**がっています**。 The child is feeling lonely.\n- ほしい → ほし**がる**: 弟は新しいゲームをほしがっています。",
+      "tags": ["emotion-expression"],
+      "examples": [
+        { "jp": "娘は注射を怖がって、泣いてしまいました。", "en": "My daughter was scared of the injection and burst into tears." },
+        { "jp": "友だちが遠くへ引っ越して、子どもが寂しがっています。", "en": "Their friend moved far away, and my child is feeling lonely." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-19-7"],
+      "title": "Vます-stem たがります",
+      "structure": "Vます-stem + たがります（たがって います）",
+      "meaning": "\"(Someone else) wants to…\".",
+      "explanation": "たい is only for yourself or for asking the listener. For a third person, use たがる (たい + がる): the stem + たがる, and the object usually takes を. The current state is たがって います.",
+      "summary": "Stem + たがる = someone else wants to…",
+      "details": "- わたしは日本へ行き**たい**です。 I want to go to Japan.\n- 弟は日本へ行き**たがっています**。 My brother wants to go to Japan.\n- 子どもはいつもお菓子を食べ**たがります**。 Kids always want to eat sweets.",
+      "tags": ["volitional-intention", "viewpoint-standpoint"],
+      "examples": [
+        { "jp": "息子は犬を飼いたがっていますが、うちのマンションでは無理なんです。", "en": "My son wants to get a dog, but it's not allowed in our flat." },
+        { "jp": "ケンさんはアンナさんの写真を見たがっていました。", "en": "Ken wanted to see Anna's photos." }
+      ]
+    }
+  ]
+}

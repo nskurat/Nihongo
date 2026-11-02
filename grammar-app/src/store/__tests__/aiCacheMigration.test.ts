@@ -13,6 +13,7 @@ import {
   unpackUidMap,
   v9VocabUid,
   v11N5Maps,
+  v12N4Maps,
   withoutKeys,
 } from '../aiCacheMigration';
 import { artifactKey, type ArtifactCache } from '../../services/ai/artifactCache';
@@ -42,8 +43,8 @@ describe('withoutShiftedUids', () => {
   });
 });
 
-/** A pre-v11 N5 vocab uid → its uid in the restructured N5 lessons (others unchanged). */
-const now = (uid: string) => v11N5Maps()['vocab-help']?.[uid] ?? uid;
+/** A pre-v11 N5 or pre-v12 N4 vocab uid → its uid in the restructured lessons (others unchanged). */
+const now = (uid: string) => v11N5Maps()['vocab-help']?.[uid] ?? v12N4Maps()['vocab-help']?.[uid] ?? uid;
 
 describe('v9: vocab notes follow their words', () => {
   const vocab = (level: string) =>
@@ -168,5 +169,39 @@ describe('v11: the N5 restructure', () => {
     const v10 = { artifacts: { [artifactKey('vocab-help', 'n5-vocab-9-1')]: { kind: 'vocab-help' as const, uid: 'n5-vocab-9-1', data: 'わかります note', ts: 1 } } };
     expect(Object.keys(migrateAiCache(v10, 10).artifacts)).toEqual([artifactKey('vocab-help', now('n5-vocab-9-1'))]);
     expect(migrateAiCache(v10, 11)).toEqual(v10);
+  });
+});
+
+describe('v12: the N4 restructure', () => {
+  const data = (section: string) =>
+    JSON.parse(readFileSync(resolve(__dirname, `../../data/n4/${section}.json`), 'utf-8')) as Record<string, { uid: string; word?: string; kanji?: string; title?: string }[]>;
+  const uids = (section: string) => new Set(Object.values(data(section)).flat().map((r) => r.uid));
+  const maps = v12N4Maps();
+
+  it('maps every pre-restructure N4 row to a current row', () => {
+    const grammar = maps['grammar-examples']!;
+    expect(Object.keys(grammar).length).toBeGreaterThan(100);
+    for (const [section, map] of [['grammar', grammar], ['vocab', maps['vocab-help']!], ['kanji', maps['kanji-mnemonic']!]] as const) {
+      const current = uids(section);
+      for (const target of Object.values(map)) expect(current.has(target), `${section} ${target}`).toBe(true);
+    }
+    expect(maps['grammar-nuance']).toBe(grammar);
+  });
+
+  it('follows known items to their new lessons', () => {
+    const row = (section: string, uid: string) => Object.values(data(section)).flat().find((r) => r.uid === uid);
+    expect(row('vocab', now('n4-vocab-1-1'))?.word).toBe('探します');
+    expect(row('vocab', now('n4-vocab-25-6'))?.word).toBe('存じます');
+    const grammar = (uid: string) => maps['grammar-examples']![uid] ?? uid; // unchanged uids are omitted
+    expect(row('grammar', grammar('n4-grammar-23-6'))?.title).toMatch(/させられる/);
+    expect(row('grammar', grammar('n4-grammar-21-3'))?.title).toBe('〜はずです');
+    // the two certainty points (でしょう, きっと／たぶん) became one
+    expect(grammar('n4-grammar-7-2')).toBe(grammar('n4-grammar-7-4'));
+  });
+
+  it('migrateAiCache applies it to v11 caches and passes v12 through', () => {
+    const v11 = { artifacts: { [artifactKey('vocab-help', 'n4-vocab-1-1')]: { kind: 'vocab-help' as const, uid: 'n4-vocab-1-1', data: '探します note', ts: 1 } } };
+    expect(Object.keys(migrateAiCache(v11, 11).artifacts)).toEqual([artifactKey('vocab-help', now('n4-vocab-1-1'))]);
+    expect(migrateAiCache(v11, 12)).toEqual(v11);
   });
 });

@@ -1,0 +1,1505 @@
+{
+  "_comment": "N4 restructure (2026-11): new example sentences for the N4 core vocab rows, written in our own words for each word's new lesson (no grammar beyond that lesson where possible). uid -> [expected word, exampleJp, exampleEn]. Applied by scripts/rewrite-n4-vocab-examples.ts.",
+  "examples": {
+    "n4-vocab-1-1": [
+      "遅れます",
+      "電車が止まって、授業に遅れたんです。",
+      "The train stopped, so I was late for class."
+    ],
+    "n4-vocab-1-2": [
+      "間に合います",
+      "走って、電車に間に合いました。",
+      "I ran and made the train."
+    ],
+    "n4-vocab-1-3": [
+      "参加します",
+      "来週のボランティアに参加しませんか。",
+      "Would you like to take part in next week's volunteering?"
+    ],
+    "n4-vocab-1-4": [
+      "申し込みます",
+      "夏のスピーチ大会に申し込んだんです。",
+      "I've entered the summer speech contest."
+    ],
+    "n4-vocab-1-5": [
+      "都合がいい／わるい",
+      "土曜日は都合が悪いんですが、日曜日はどうですか。",
+      "Saturday doesn't suit me, but how about Sunday?"
+    ],
+    "n4-vocab-1-6": [
+      "連絡します",
+      "時間が変わったので、メールで連絡しました。",
+      "The time changed, so I let everyone know by email."
+    ],
+    "n4-vocab-1-7": [
+      "困ったなあ。",
+      "あれ、鍵がない。困ったなあ。",
+      "Huh, my key's gone. What do I do now?"
+    ],
+    "n4-vocab-1-8": [
+      "相談します",
+      "進学のことで、先生に相談したいんですが。",
+      "I'd like to talk to my teacher about going on to further study."
+    ],
+    "n4-vocab-1-9": [
+      "出席します",
+      "明日の会議には、わたしも出席します。",
+      "I'll be attending tomorrow's meeting too."
+    ],
+    "n4-vocab-1-10": [
+      "それはいけませんね。",
+      "昨日から歯が痛いんです。…それはいけませんね。",
+      "My tooth has hurt since yesterday. — Oh, that's no good."
+    ],
+    "n4-vocab-1-11": [
+      "遅刻します",
+      "寝坊して、アルバイトに遅刻したんです。",
+      "I overslept and was late for my part-time job."
+    ],
+    "n4-vocab-1-12": [
+      "都合",
+      "都合のいい時間を教えていただけませんか。",
+      "Could you tell me a time that suits you?"
+    ],
+    "n4-vocab-1-13": [
+      "返事",
+      "メールの返事が来ないんです。",
+      "I haven't had a reply to my email."
+    ],
+    "n4-vocab-1-14": [
+      "かまいません",
+      "窓を開けてもいいですか。…ええ、かまいませんよ。",
+      "May I open the window? — Sure, go ahead."
+    ],
+    "n4-vocab-2-1": [
+      "見えます",
+      "晴れた日は、ここから富士山が見えます。",
+      "On clear days you can see Mt. Fuji from here."
+    ],
+    "n4-vocab-2-2": [
+      "聞こえます",
+      "もう少し大きい声で話していただけませんか。よく聞こえないんです。",
+      "Could you speak a bit louder? I can't hear you very well."
+    ],
+    "n4-vocab-2-3": [
+      "開きます",
+      "青木さんは週末に、家で英語の教室を開いています。",
+      "Ms. Aoki runs an English class at home at weekends."
+    ],
+    "n4-vocab-2-4": [
+      "〜しか 〜ません",
+      "忙しくて、昨日は四時間しか寝られませんでした。",
+      "I was so busy I only got four hours' sleep last night."
+    ],
+    "n4-vocab-2-5": [
+      "はっきり",
+      "後ろの席からは、先生の声がはっきり聞こえません。",
+      "From the back seats you can't hear the teacher clearly."
+    ],
+    "n4-vocab-2-6": [
+      "向こう",
+      "川の向こうに大きいビルが見えます。",
+      "You can see a big building on the other side of the river."
+    ],
+    "n4-vocab-3-1": [
+      "いつでも／どこでも／だれでも／なんでも",
+      "分からないことは、いつでも聞いてください。",
+      "Ask me any time about anything you don't understand."
+    ],
+    "n4-vocab-3-2": [
+      "昼間",
+      "昼間は働いて、夜は日本語学校に通っています。",
+      "I work during the day and go to Japanese school in the evening."
+    ],
+    "n4-vocab-3-3": [
+      "ほとんど",
+      "最初はほとんど話せませんでしたが、今は少し話せます。",
+      "At first I could hardly speak at all, but now I can a little."
+    ],
+    "n4-vocab-3-4": [
+      "たいてい",
+      "週末はたいてい友だちとテニスをしています。",
+      "At weekends I usually play tennis with friends."
+    ],
+    "n4-vocab-3-5": [
+      "予習します",
+      "授業の前に、いつも新しい言葉を予習しています。",
+      "I always prepare the new words before class."
+    ],
+    "n4-vocab-3-6": [
+      "復習します",
+      "電車に乗っている間に、習った漢字を復習します。",
+      "I review the kanji I've learned while I'm on the train."
+    ],
+    "n4-vocab-3-7": [
+      "このごろ",
+      "このごろ、夜遅くまで仕事をすることがあります。",
+      "These days I sometimes work late into the night."
+    ],
+    "n4-vocab-3-8": [
+      "ちゃんと",
+      "毎日ちゃんと朝ご飯を食べていますか。",
+      "Are you eating breakfast properly every day?"
+    ],
+    "n4-vocab-3-9": [
+      "〜かん",
+      "夏休みに一週間、北海道を旅行しました。",
+      "I travelled around Hokkaido for a week in the summer holiday."
+    ],
+    "n4-vocab-3-10": [
+      "たまに",
+      "たまに、仕事のあとで同僚と飲みに行きます。",
+      "Once in a while I go for a drink with colleagues after work."
+    ],
+    "n4-vocab-4-1": [
+      "よかった。",
+      "財布、交番に届いていたんですか。よかった。",
+      "Your wallet was handed in at the police box? Thank goodness."
+    ],
+    "n4-vocab-4-2": [
+      "逃げます",
+      "うちの犬が逃げたので、困っているんです。",
+      "Our dog has run off, and we don't know what to do."
+    ],
+    "n4-vocab-4-3": [
+      "困ります",
+      "電車が止まって、みんな困っていました。",
+      "The trains had stopped and everyone was stuck."
+    ],
+    "n4-vocab-4-4": [
+      "亡くなります",
+      "祖母が先月亡くなったので、国へ帰りました。",
+      "My grandmother passed away last month, so I went back home."
+    ],
+    "n4-vocab-4-5": [
+      "倒れます",
+      "強い風で、公園の木が倒れました。",
+      "A tree in the park blew down in the strong wind."
+    ],
+    "n4-vocab-4-6": [
+      "焼けます",
+      "火事で隣の家が焼けてしまいました。",
+      "The house next door burned down in a fire."
+    ],
+    "n4-vocab-4-7": [
+      "死にます",
+      "事故で三人が死んだので、みんな驚いています。",
+      "Three people died in the accident, and everyone is shocked."
+    ],
+    "n4-vocab-4-8": [
+      "地震",
+      "昨日の夜、大きい地震があって、怖かったです。",
+      "There was a big earthquake last night, and it was frightening."
+    ],
+    "n4-vocab-4-9": [
+      "台風",
+      "台風で飛行機が飛ばないので、困っています。",
+      "The plane isn't flying because of the typhoon, and I'm stuck."
+    ],
+    "n4-vocab-4-10": [
+      "すべります",
+      "雪の日は道がすべるので、ゆっくり歩きます。",
+      "Roads are slippery on snowy days, so I walk slowly."
+    ],
+    "n4-vocab-4-11": [
+      "おきます",
+      "駅の近くで事故が起きて、道が込んでいます。",
+      "There's been an accident near the station, and the road is jammed."
+    ],
+    "n4-vocab-4-12": [
+      "理由",
+      "会社を休んだ理由を部長に話しました。",
+      "I told the manager why I'd taken the day off."
+    ],
+    "n4-vocab-4-13": [
+      "あいます",
+      "帰る途中で事故にあって、遅くなりました。",
+      "I got caught in an accident on the way home, so I was late."
+    ],
+    "n4-vocab-4-14": [
+      "原因",
+      "火事の原因はたばこでした。",
+      "The fire was caused by a cigarette."
+    ],
+    "n4-vocab-5-1": [
+      "壊れます／壊します",
+      "この時計、止まっていますね。壊れているんですか。",
+      "This clock has stopped. Is it broken?"
+    ],
+    "n4-vocab-5-2": [
+      "付きます",
+      "このかばんには大きいポケットが付いています。",
+      "This bag has a big pocket on it."
+    ],
+    "n4-vocab-5-3": [
+      "外れます",
+      "シャツのボタンが一つ外れていますよ。",
+      "One of your shirt buttons is undone."
+    ],
+    "n4-vocab-5-4": [
+      "間違えます",
+      "急いでいて、乗る電車を間違えてしまいました。",
+      "I was in a rush and got on the wrong train."
+    ],
+    "n4-vocab-5-5": [
+      "掛かります",
+      "あれ、ドアに鍵が掛かっています。だれもいないんですね。",
+      "Hm, the door's locked. There's nobody in, then."
+    ],
+    "n4-vocab-5-6": [
+      "財布",
+      "財布はテーブルの上に置いてありますよ。",
+      "Your wallet is on the table where you left it."
+    ],
+    "n4-vocab-5-7": [
+      "忘れ物",
+      "電車に忘れ物をしたので、駅に連絡しました。",
+      "I left something on the train, so I contacted the station."
+    ],
+    "n4-vocab-5-8": [
+      "駅員",
+      "道が分からなかったので、駅員に聞きました。",
+      "I didn't know the way, so I asked a member of station staff."
+    ],
+    "n4-vocab-5-9": [
+      "覚えていません",
+      "昨日の夜のことは、あまり覚えていません。",
+      "I don't remember much about last night."
+    ],
+    "n4-vocab-5-10": [
+      "まだ",
+      "もう十二時ですが、子どもたちはまだ起きています。",
+      "It's already midnight, but the kids are still up."
+    ],
+    "n4-vocab-5-11": [
+      "もう〜ません",
+      "この靴は古くなったから、もう履きません。",
+      "These shoes have got old, so I don't wear them any more."
+    ],
+    "n4-vocab-5-12": [
+      "拾います",
+      "道で財布を拾ったので、交番に届けました。",
+      "I found a wallet in the street, so I took it to the police box."
+    ],
+    "n4-vocab-5-13": [
+      "掛けます",
+      "窓に鍵を掛けてから、出かけました。",
+      "I locked the windows and then went out."
+    ],
+    "n4-vocab-5-14": [
+      "きれます",
+      "ギターの弦が切れています。",
+      "A string on the guitar has snapped."
+    ],
+    "n4-vocab-5-15": [
+      "おちます",
+      "棚の本が床に落ちていますよ。",
+      "A book from the shelf is lying on the floor."
+    ],
+    "n4-vocab-5-16": [
+      "なくなります",
+      "冷蔵庫の牛乳がなくなっています。あとで買いに行きます。",
+      "We've run out of milk. I'll go and buy some later."
+    ],
+    "n4-vocab-6-1": [
+      "探します",
+      "眼鏡を探しているんですが、見ませんでしたか。",
+      "I'm looking for my glasses. Have you seen them?"
+    ],
+    "n4-vocab-6-2": [
+      "出します",
+      "燃えるごみは、朝八時までに出しておいてください。",
+      "Please put the burnable rubbish out by eight in the morning."
+    ],
+    "n4-vocab-6-3": [
+      "片づけます",
+      "お客さんが来る前に、部屋を片づけておきます。",
+      "I'll tidy the room before the guests arrive."
+    ],
+    "n4-vocab-6-4": [
+      "引き出し",
+      "大事な書類は、机の引き出しに入れておきました。",
+      "I've put the important papers in the desk drawer."
+    ],
+    "n4-vocab-6-5": [
+      "壁",
+      "壁に家族の写真を掛けてみました。",
+      "I tried hanging a family photo on the wall."
+    ],
+    "n4-vocab-6-6": [
+      "続けます",
+      "大変ですが、日本語の勉強は続けたいです。",
+      "It's hard work, but I want to keep studying Japanese."
+    ],
+    "n4-vocab-6-7": [
+      "見つけます",
+      "駅の近くに安いアパートを見つけました。",
+      "I found a cheap flat near the station."
+    ],
+    "n4-vocab-6-8": [
+      "組み立てます",
+      "新しい本棚を自分で組み立ててみました。",
+      "I tried putting the new bookshelf together myself."
+    ],
+    "n4-vocab-6-9": [
+      "気が付きます",
+      "家を出てから、傘を忘れたことに気が付きました。",
+      "I realised I'd forgotten my umbrella after I left home."
+    ],
+    "n4-vocab-6-10": [
+      "見つかります",
+      "なくした鍵が、やっと見つかりました。",
+      "The key I lost has finally turned up."
+    ],
+    "n4-vocab-6-11": [
+      "家具",
+      "引っ越しの前に、古い家具を全部売ってしまいました。",
+      "I sold all my old furniture before moving."
+    ],
+    "n4-vocab-6-12": [
+      "これでいいですか。",
+      "テーブルの上、片づけておきました。これでいいですか。",
+      "I've cleared the table. Is this all right?"
+    ],
+    "n4-vocab-6-13": [
+      "洗濯物",
+      "雨が降り出したので、洗濯物を中に入れました。",
+      "It started raining, so I brought the washing in."
+    ],
+    "n4-vocab-6-14": [
+      "よういします",
+      "パーティーの料理は、もう用意してあります。",
+      "The food for the party is already prepared."
+    ],
+    "n4-vocab-6-15": [
+      "最初に／最後に",
+      "最初に名前を書いて、最後に日付を書いてください。",
+      "First write your name, and lastly write the date."
+    ],
+    "n4-vocab-7-1": [
+      "経験",
+      "外国で働いた経験がありますか。",
+      "Do you have any experience of working abroad?"
+    ],
+    "n4-vocab-7-2": [
+      "将来",
+      "将来は通訳になるつもりです。",
+      "I intend to become an interpreter in the future."
+    ],
+    "n4-vocab-7-3": [
+      "決めます",
+      "誕生日のプレゼントは、もう決めましたか。",
+      "Have you decided on the birthday present yet?"
+    ],
+    "n4-vocab-7-4": [
+      "予定",
+      "今度の日曜日は、友だちと山に登る予定です。",
+      "I'm due to climb a mountain with friends this Sunday."
+    ],
+    "n4-vocab-7-5": [
+      "受けます",
+      "十二月に日本語の試験を受けようと思っています。",
+      "I'm thinking of taking the Japanese exam in December."
+    ],
+    "n4-vocab-7-6": [
+      "卒業します",
+      "来年の三月に大学を卒業する予定です。",
+      "I'm due to graduate from university next March."
+    ],
+    "n4-vocab-7-7": [
+      "連休",
+      "五月の連休は、家族と温泉に行くことにしました。",
+      "We've decided to go to a hot spring with the family over the May holidays."
+    ],
+    "n4-vocab-7-8": [
+      "結婚式",
+      "来月、大学の友だちの結婚式に出る予定です。",
+      "I'm due to go to a university friend's wedding next month."
+    ],
+    "n4-vocab-7-9": [
+      "失敗します",
+      "前の試験は失敗しましたが、またがんばろうと思います。",
+      "I failed the last exam, but I'm going to try again."
+    ],
+    "n4-vocab-7-10": [
+      "合格します",
+      "今年こそ試験に合格しようと思っています。",
+      "I'm determined to pass the exam this year."
+    ],
+    "n4-vocab-7-11": [
+      "あきらめます",
+      "難しいですが、まだあきらめません。",
+      "It's hard, but I'm not giving up yet."
+    ],
+    "n4-vocab-7-12": [
+      "機会",
+      "日本の会社で働く機会がほしいです。",
+      "I want the chance to work at a Japanese company."
+    ],
+    "n4-vocab-7-13": [
+      "楽しみ",
+      "来週の旅行が楽しみです。",
+      "I'm looking forward to next week's trip."
+    ],
+    "n4-vocab-7-14": [
+      "うまくいきます",
+      "準備をしっかりしたので、発表はうまくいくと思います。",
+      "I prepared thoroughly, so I think the presentation will go well."
+    ],
+    "n4-vocab-7-15": [
+      "楽しみにしています",
+      "またお会いできるのを楽しみにしています。",
+      "I'm looking forward to seeing you again."
+    ],
+    "n4-vocab-7-16": [
+      "久しぶり",
+      "ケンさん、久しぶりですね。元気でしたか。",
+      "Ken, it's been ages! How have you been?"
+    ],
+    "n4-vocab-7-17": [
+      "さ来週／さ来月／さ来年",
+      "さ来年、日本の大学院に入るつもりです。",
+      "I intend to go to graduate school in Japan the year after next."
+    ],
+    "n4-vocab-8-1": [
+      "晴れます",
+      "雲がなくなったから、明日はきっと晴れるでしょう。",
+      "The clouds have gone, so it's sure to be sunny tomorrow."
+    ],
+    "n4-vocab-8-2": [
+      "曇ります",
+      "午後から曇るかもしれないので、洗濯は朝のうちにします。",
+      "It may cloud over in the afternoon, so I'll do the washing this morning."
+    ],
+    "n4-vocab-8-3": [
+      "吹きます",
+      "今日は風が強く吹いていますね。",
+      "The wind is really blowing today."
+    ],
+    "n4-vocab-8-4": [
+      "もしかしたら",
+      "もしかしたら、夜から雪になるかもしれません。",
+      "It might turn to snow tonight."
+    ],
+    "n4-vocab-8-5": [
+      "咲きます",
+      "来週には桜が咲くはずです。",
+      "The cherry blossoms should be out by next week."
+    ],
+    "n4-vocab-8-6": [
+      "だんぼう／れいぼう",
+      "寒いので、だんぼうをつけてもいいですか。",
+      "It's cold. May I turn the heating on?"
+    ],
+    "n4-vocab-8-7": [
+      "空気",
+      "山の上は空気がきれいで、気持ちがいいでしょう。",
+      "The air must be clean and pleasant up in the mountains."
+    ],
+    "n4-vocab-8-8": [
+      "天気予報",
+      "出かける前に、天気予報で週末の天気を調べておきます。",
+      "Before I go out, I'll check the weekend weather in the forecast."
+    ],
+    "n4-vocab-9-1": [
+      "自動販売機",
+      "夜遅くても、自動販売機で飲み物が買えます。",
+      "Even late at night, you can buy drinks from a vending machine."
+    ],
+    "n4-vocab-9-2": [
+      "ちょうどいい",
+      "このくつ、大きさがちょうどいいです。",
+      "These shoes are just the right size."
+    ],
+    "n4-vocab-9-3": [
+      "値段",
+      "値段が高くても、いい物を買いたいです。",
+      "Even if the price is high, I want to buy something good."
+    ],
+    "n4-vocab-9-4": [
+      "給料",
+      "給料が上がったら、新しいパソコンを買うつもりです。",
+      "When my pay goes up, I'm going to buy a new computer."
+    ],
+    "n4-vocab-9-5": [
+      "無料",
+      "この博物館は、子どもは無料です。",
+      "This museum is free for children."
+    ],
+    "n4-vocab-9-6": [
+      "営業中",
+      "ドアに「営業中」と書いてあるのに、だれもいません。",
+      "The sign on the door says \"open\", and yet there's nobody here."
+    ],
+    "n4-vocab-9-7": [
+      "あと〜",
+      "セールはあと三日で終わります。",
+      "The sale ends in three more days."
+    ],
+    "n4-vocab-9-8": [
+      "合います",
+      "このズボンは、長さが合わないので、取り替えたいんですが。",
+      "These trousers aren't the right length, so I'd like to exchange them."
+    ],
+    "n4-vocab-9-9": [
+      "とりかえます",
+      "サイズが合わなかったら、取り替えてもらえますか。",
+      "If the size doesn't fit, can I get them exchanged?"
+    ],
+    "n4-vocab-9-10": [
+      "細かい",
+      "すみません、細かいお金がないんですが、一万円でもいいですか。",
+      "Sorry, I don't have any change. Is a ten-thousand-yen note OK?"
+    ],
+    "n4-vocab-9-11": [
+      "半分",
+      "ケーキを半分ずつ食べましょう。",
+      "Let's have half the cake each."
+    ],
+    "n4-vocab-9-12": [
+      "保証書",
+      "壊れたら、保証書を持って来てください。",
+      "If it breaks, bring the guarantee with you."
+    ],
+    "n4-vocab-9-13": [
+      "領収書",
+      "すみません、領収書をいただけませんか。",
+      "Excuse me, could I have a receipt?"
+    ],
+    "n4-vocab-9-14": [
+      "おろします",
+      "重い荷物は、ここにおろしてください。",
+      "Please put the heavy bags down here."
+    ],
+    "n4-vocab-10-1": [
+      "この辺",
+      "この辺においしいラーメン屋はありませんか。",
+      "Is there a good ramen place around here?"
+    ],
+    "n4-vocab-10-2": [
+      "〜のほう",
+      "もう少し窓のほうに寄っていただけませんか。",
+      "Could you move a little toward the window?"
+    ],
+    "n4-vocab-10-3": [
+      "島",
+      "この島へは、船で行けば一時間です。",
+      "It's an hour to this island if you go by boat."
+    ],
+    "n4-vocab-10-4": [
+      "港",
+      "港の近くの店では、新鮮な魚が買えます。",
+      "You can buy fresh fish at the shops near the harbour."
+    ],
+    "n4-vocab-10-5": [
+      "それなら",
+      "明日は雨ですか。それなら、映画を見に行きましょう。",
+      "It's going to rain tomorrow? In that case, let's go to a film."
+    ],
+    "n4-vocab-10-6": [
+      "駅前",
+      "駅前の本屋なら、遅くまで開いていますよ。",
+      "If it's the bookshop in front of the station, it's open late."
+    ],
+    "n4-vocab-10-7": [
+      "出発します",
+      "朝早く出発すれば、昼前に着きます。",
+      "If we set off early in the morning, we'll get there before noon."
+    ],
+    "n4-vocab-10-8": [
+      "到着します",
+      "飛行機が遅れた場合は、ホテルに連絡してください。",
+      "If the plane is delayed, please contact the hotel."
+    ],
+    "n4-vocab-10-9": [
+      "でます",
+      "次のバスは何時に出ますか。",
+      "What time does the next bus leave?"
+    ],
+    "n4-vocab-10-10": [
+      "旅館",
+      "京都に行くなら、一度旅館に泊まってみてください。",
+      "If you're going to Kyoto, try staying at a ryokan once."
+    ],
+    "n4-vocab-11-1": [
+      "治ります",
+      "薬を飲んだのに、風邪がなかなか治りません。",
+      "I've taken medicine, but my cold just won't get better."
+    ],
+    "n4-vocab-11-2": [
+      "けが",
+      "けがをしないように、気をつけてください。",
+      "Be careful you don't get hurt."
+    ],
+    "n4-vocab-11-3": [
+      "せき",
+      "せきが出るなら、マスクをしたほうがいいですよ。",
+      "If you've got a cough, you'd better wear a mask."
+    ],
+    "n4-vocab-11-4": [
+      "守ります",
+      "寮の規則は守らなければなりません。",
+      "You must follow the dormitory rules."
+    ],
+    "n4-vocab-11-5": [
+      "注意します",
+      "夜、自転車に乗るときは、車に注意してください。",
+      "Watch out for cars when you cycle at night."
+    ],
+    "n4-vocab-11-6": [
+      "だめ",
+      "ここでたばこを吸ってはだめですよ。",
+      "You can't smoke here."
+    ],
+    "n4-vocab-11-7": [
+      "規則",
+      "プールに入る前に、規則を読まなければなりません。",
+      "You have to read the rules before going into the pool."
+    ],
+    "n4-vocab-11-8": [
+      "健康",
+      "健康にいいので、毎日歩いたほうがいいですよ。",
+      "Walking every day is good for your health, so you should do it."
+    ],
+    "n4-vocab-11-9": [
+      "必ず",
+      "明日の朝は必ず八時までに来てください。",
+      "Be sure to come by eight tomorrow morning."
+    ],
+    "n4-vocab-11-10": [
+      "絶対に",
+      "このことは、絶対にだれにも言わないでください。",
+      "Never tell anyone about this."
+    ],
+    "n4-vocab-11-11": [
+      "入院します",
+      "父が入院したので、病院へお見舞いに行かなければなりません。",
+      "My father's in hospital, so I have to go and visit him."
+    ],
+    "n4-vocab-11-12": [
+      "退院します",
+      "退院しても、しばらく無理をしないほうがいいです。",
+      "Even after you leave hospital, you shouldn't overdo things for a while."
+    ],
+    "n4-vocab-11-13": [
+      "酔います",
+      "お酒に酔って、駅のベンチで寝てしまいました。",
+      "I got drunk and fell asleep on a bench at the station."
+    ],
+    "n4-vocab-11-14": [
+      "危険／危ない",
+      "この川で泳ぐのは危ないですから、やめなさい。",
+      "It's dangerous to swim in this river, so stop it."
+    ],
+    "n4-vocab-11-15": [
+      "必要",
+      "この仕事には、日本語の力が必要です。",
+      "This job needs good Japanese."
+    ],
+    "n4-vocab-11-16": [
+      "注射",
+      "注射は痛いから、嫌いです。",
+      "I hate injections because they hurt."
+    ],
+    "n4-vocab-11-17": [
+      "食欲",
+      "熱があって、食欲がないんです。",
+      "I've got a fever and no appetite."
+    ],
+    "n4-vocab-12-1": [
+      "伝えます",
+      "電話があったと、森さんに伝えていただけませんか。",
+      "Could you tell Mr. Mori that there was a call for him?"
+    ],
+    "n4-vocab-12-2": [
+      "どういう〜",
+      "「立入禁止」というのは、どういう意味ですか。",
+      "What does 立入禁止 mean?"
+    ],
+    "n4-vocab-12-3": [
+      "質問します",
+      "分からないことがあったら、遠慮しないで質問してください。",
+      "If there's anything you don't understand, feel free to ask."
+    ],
+    "n4-vocab-12-4": [
+      "説明書",
+      "説明書には、まず電源を入れると書いてあります。",
+      "The manual says to switch the power on first."
+    ],
+    "n4-vocab-12-5": [
+      "矢印",
+      "矢印の方へ行くと、出口があります。",
+      "Go the way the arrow points and you'll find the exit."
+    ],
+    "n4-vocab-12-6": [
+      "答えます",
+      "先生は「よくできました」と答えました。",
+      "The teacher answered, \"Well done.\""
+    ],
+    "n4-vocab-12-7": [
+      "複雑",
+      "このゲームのルールは複雑で、説明書を読んでも分かりません。",
+      "The rules of this game are complicated; I can't follow them even with the manual."
+    ],
+    "n4-vocab-13-1": [
+      "飼います",
+      "アパートでは犬が飼えないので、猫を飼うことにしました。",
+      "We can't keep a dog in the flat, so we decided to get a cat."
+    ],
+    "n4-vocab-13-2": [
+      "熱心",
+      "リーさんは熱心に練習して、ギターが上手になりました。",
+      "Lee practised hard and got good at the guitar."
+    ],
+    "n4-vocab-13-3": [
+      "変わります",
+      "この町は十年で、ずいぶん変わってきました。",
+      "This town has changed a lot in ten years."
+    ],
+    "n4-vocab-13-4": [
+      "慣れます",
+      "日本の生活にもだいぶ慣れてきました。",
+      "I've got quite used to life in Japan."
+    ],
+    "n4-vocab-13-5": [
+      "太ります",
+      "冬は運動しないので、少し太ってしまいます。",
+      "I don't exercise in winter, so I put on a bit of weight."
+    ],
+    "n4-vocab-13-6": [
+      "痩せます",
+      "やせるように、毎晩走っています。",
+      "I run every night so that I'll lose weight."
+    ],
+    "n4-vocab-13-7": [
+      "できるだけ",
+      "できるだけ毎日日本語で話すようにしています。",
+      "I try to speak Japanese every day as much as I can."
+    ],
+    "n4-vocab-13-8": [
+      "育てます",
+      "祖母はトマトを庭で育てています。",
+      "My grandmother grows tomatoes in her garden."
+    ],
+    "n4-vocab-13-9": [
+      "しっかり",
+      "試験の前に、しっかり復習するようにしてください。",
+      "Make sure you review thoroughly before the exam."
+    ],
+    "n4-vocab-13-10": [
+      "一生懸命",
+      "一生懸命練習したので、泳げるようになりました。",
+      "I practised really hard, so now I can swim."
+    ],
+    "n4-vocab-13-11": [
+      "ふえます",
+      "この町に住む外国人が増えてきました。",
+      "The number of foreigners living in this town has been rising."
+    ],
+    "n4-vocab-13-12": [
+      "へります",
+      "最近、テレビを見る時間が減ってきました。",
+      "Lately I've been spending less time watching TV."
+    ],
+    "n4-vocab-13-13": [
+      "あがります",
+      "来月から電車の料金が上がるので、自転車にしようと思います。",
+      "Train fares go up next month, so I'm thinking of switching to cycling."
+    ],
+    "n4-vocab-13-14": [
+      "さがります",
+      "薬を飲んだら、熱が下がってきました。",
+      "After I took the medicine, my fever started to come down."
+    ],
+    "n4-vocab-13-15": [
+      "急に",
+      "急に寒くなったので、コートを出しました。",
+      "It suddenly turned cold, so I got my coat out."
+    ],
+    "n4-vocab-13-16": [
+      "ながいきします",
+      "祖父は毎日よく歩いて、九十五歳まで長生きしました。",
+      "My grandfather walked a lot every day and lived to ninety-five."
+    ],
+    "n4-vocab-14-1": [
+      "花火",
+      "川の近くで花火を見るのが毎年の楽しみです。",
+      "Watching fireworks by the river is something I look forward to every year."
+    ],
+    "n4-vocab-14-2": [
+      "人気",
+      "この町でいちばん人気があるのは、駅前のパン屋です。",
+      "The most popular place in this town is the bakery by the station."
+    ],
+    "n4-vocab-14-3": [
+      "展覧会",
+      "美術館で写真の展覧会を見るのが好きです。",
+      "I like going to photography exhibitions at the gallery."
+    ],
+    "n4-vocab-14-4": [
+      "興味",
+      "日本の古い映画に興味があります。見るのが大好きです。",
+      "I'm interested in old Japanese films. I love watching them."
+    ],
+    "n4-vocab-14-5": [
+      "わあ",
+      "わあ、こんなにきれいな着物を見たのは初めてです。",
+      "Wow, this is the first time I've seen such a beautiful kimono."
+    ],
+    "n4-vocab-14-6": [
+      "あつまります",
+      "お祭りの日は、町の広場に大勢の人が集まります。",
+      "On festival day, crowds gather in the town square."
+    ],
+    "n4-vocab-15-1": [
+      "だれか",
+      "だれかこの傘を忘れた人を知りませんか。",
+      "Does anyone know who left this umbrella?"
+    ],
+    "n4-vocab-15-2": [
+      "かかります",
+      "何度かけても、電話がかかりません。",
+      "However many times I try, the call won't go through."
+    ],
+    "n4-vocab-15-3": [
+      "書類",
+      "この書類をいつまでに出せばいいか、教えていただけませんか。",
+      "Could you tell me when I need to hand in this form?"
+    ],
+    "n4-vocab-15-4": [
+      "数えます",
+      "参加する人が何人いるか、数えてください。",
+      "Please count how many people are taking part."
+    ],
+    "n4-vocab-15-5": [
+      "確かめます",
+      "会議室が空いているかどうか、確かめておきます。",
+      "I'll check whether the meeting room is free."
+    ],
+    "n4-vocab-15-6": [
+      "さあ",
+      "明日、晴れるでしょうか。…さあ、どうでしょうね。",
+      "Will it be sunny tomorrow? — Hmm, who knows."
+    ],
+    "n4-vocab-15-7": [
+      "計算します",
+      "旅行にいくらかかったか、計算してみました。",
+      "I tried working out how much the trip cost."
+    ],
+    "n4-vocab-15-8": [
+      "ちょうせつします",
+      "暑いかどうか聞いてから、エアコンの温度を調節します。",
+      "I'll ask whether it's too hot, then adjust the air conditioning."
+    ],
+    "n4-vocab-15-9": [
+      "まちがい電話",
+      "夜中にまちがい電話がかかってきて、起きてしまいました。",
+      "A wrong number woke me up in the middle of the night."
+    ],
+    "n4-vocab-16-1": [
+      "赤ちゃん",
+      "青木さんのところに、赤ちゃんが生まれました。",
+      "The Aokis have had a baby."
+    ],
+    "n4-vocab-16-2": [
+      "いただきます",
+      "先生に旅行のお土産をいただきました。",
+      "My teacher gave me a souvenir from a trip."
+    ],
+    "n4-vocab-16-3": [
+      "くださいます",
+      "小林さんのお母さんが、手作りのお菓子をくださいました。",
+      "Mr. Kobayashi's mother gave me some homemade sweets."
+    ],
+    "n4-vocab-16-4": [
+      "やります",
+      "毎朝、子どもが金魚にえさをやります。",
+      "Every morning my child feeds the goldfish."
+    ],
+    "n4-vocab-16-5": [
+      "親切にします",
+      "留学したとき、ホームステイの家族がとても親切にしてくれました。",
+      "When I studied abroad, my host family was very kind to me."
+    ],
+    "n4-vocab-16-6": [
+      "お祝い",
+      "友だちの誕生日のお祝いに、花を買いました。",
+      "I bought flowers to celebrate my friend's birthday."
+    ],
+    "n4-vocab-16-7": [
+      "お見舞い",
+      "入院している友だちのお見舞いに、果物を持って行きました。",
+      "I took some fruit when I visited my friend in hospital."
+    ],
+    "n4-vocab-16-8": [
+      "孫",
+      "祖父は孫に会うのをいつも楽しみにしています。",
+      "My grandfather always looks forward to seeing his grandchildren."
+    ],
+    "n4-vocab-16-9": [
+      "助かります",
+      "引っ越しを手伝ってもらって、本当に助かりました。",
+      "Thanks so much for helping me move; it was a real help."
+    ],
+    "n4-vocab-16-10": [
+      "贈り物",
+      "お世話になった先生に贈り物をしたいと思っています。",
+      "I'd like to give a present to the teacher who helped me so much."
+    ],
+    "n4-vocab-17-1": [
+      "〜ほど",
+      "駅まで歩いて十分ほどかかります。",
+      "It takes about ten minutes to walk to the station."
+    ],
+    "n4-vocab-17-2": [
+      "十分",
+      "四人なら、このお米で十分です。",
+      "For four people, this much rice is enough."
+    ],
+    "n4-vocab-17-3": [
+      "しょうゆ",
+      "焼いた魚に、しょうゆを少しかけて食べます。",
+      "I eat grilled fish with a little soy sauce on it."
+    ],
+    "n4-vocab-17-4": [
+      "米",
+      "米から作るお酒を日本酒と言います。",
+      "Alcohol made from rice is called nihonshu."
+    ],
+    "n4-vocab-17-5": [
+      "つつみます",
+      "プレゼント用に包んでいただけませんか。",
+      "Could you wrap it as a present, please?"
+    ],
+    "n4-vocab-17-6": [
+      "わかします",
+      "お茶を入れるのに、お湯を沸かしています。",
+      "I'm boiling water to make tea."
+    ],
+    "n4-vocab-17-7": [
+      "まぜます",
+      "小麦粉と卵と牛乳を混ぜるだけで、簡単に作れます。",
+      "You can make it easily: just mix flour, eggs and milk."
+    ],
+    "n4-vocab-17-8": [
+      "目的",
+      "今回の旅行の目的は、温泉に入ることです。",
+      "The purpose of this trip is to go to hot springs."
+    ],
+    "n4-vocab-17-9": [
+      "材料",
+      "カレーの材料は、スーパーで千円で買えました。",
+      "I got the ingredients for the curry for 1,000 yen at the supermarket."
+    ],
+    "n4-vocab-17-10": [
+      "うまい",
+      "この店のラーメンは、なかなかうまいですよ。",
+      "The ramen at this place is pretty good."
+    ],
+    "n4-vocab-17-11": [
+      "和食／洋食",
+      "体のために、和食を食べるようにしています。",
+      "I try to eat Japanese food for my health."
+    ],
+    "n4-vocab-17-12": [
+      "やきます",
+      "パンを焼くのに、三時間もかかりました。",
+      "Baking the bread took a whole three hours."
+    ],
+    "n4-vocab-18-1": [
+      "こんな／そんな／あんな〜",
+      "こんなにおいしそうなケーキは初めて見ました。",
+      "I've never seen such a delicious-looking cake."
+    ],
+    "n4-vocab-18-2": [
+      "細い／太い",
+      "この道は細くて、車が通れそうにありません。",
+      "This road is so narrow that a car doesn't look like it could get through."
+    ],
+    "n4-vocab-18-3": [
+      "珍しい",
+      "珍しい鳥がいるようですね。みんな写真を撮っています。",
+      "There seems to be a rare bird; everyone's taking photos."
+    ],
+    "n4-vocab-18-4": [
+      "硬い",
+      "このパンは硬そうですね。",
+      "This bread looks hard."
+    ],
+    "n4-vocab-18-5": [
+      "柔らかい",
+      "このタオルは柔らかくて、気持ちがいいです。",
+      "This towel is soft and feels nice."
+    ],
+    "n4-vocab-18-6": [
+      "大きな／小さな",
+      "隣の部屋から大きな音がしました。",
+      "There was a loud noise from the next room."
+    ],
+    "n4-vocab-18-7": [
+      "汚い",
+      "この靴、汚いですね。洗ったほうがいいですよ。",
+      "These shoes are dirty. You'd better wash them."
+    ],
+    "n4-vocab-18-8": [
+      "かわいい",
+      "あの犬、かわいいですね。人形みたいです。",
+      "That dog's so cute. It looks like a doll."
+    ],
+    "n4-vocab-18-9": [
+      "厚い",
+      "この辞書は厚くて重そうですね。",
+      "This dictionary looks thick and heavy."
+    ],
+    "n4-vocab-18-10": [
+      "薄い",
+      "今日は暖かいから、薄いシャツで十分そうです。",
+      "It's warm today, so a thin shirt looks like enough."
+    ],
+    "n4-vocab-18-11": [
+      "丈夫",
+      "このかばんは丈夫そうだから、長く使えるでしょう。",
+      "This bag looks sturdy, so it'll probably last a long time."
+    ],
+    "n4-vocab-18-12": [
+      "します",
+      "台所から、カレーのいいにおいがします。",
+      "There's a lovely smell of curry coming from the kitchen."
+    ],
+    "n4-vocab-19-1": [
+      "輸出します",
+      "この会社は、果物を外国へ輸出しているそうです。",
+      "I hear this company exports fruit abroad."
+    ],
+    "n4-vocab-19-2": [
+      "輸入します",
+      "日本は食べ物の多くを輸入しているらしいです。",
+      "Apparently Japan imports a lot of its food."
+    ],
+    "n4-vocab-19-3": [
+      "世界中",
+      "このアニメは世界中で人気があるそうです。",
+      "I hear this anime is popular all over the world."
+    ],
+    "n4-vocab-19-4": [
+      "平和",
+      "ニュースによると、二つの国の間で平和の話し合いが始まったそうです。",
+      "According to the news, peace talks have begun between the two countries."
+    ],
+    "n4-vocab-19-5": [
+      "関係",
+      "この事故と天気は関係があるらしいです。",
+      "Apparently the weather had something to do with this accident."
+    ],
+    "n4-vocab-19-6": [
+      "しんじます",
+      "その話は友だちから聞きましたが、まだ信じられません。",
+      "A friend told me about it, but I still can't believe it."
+    ],
+    "n4-vocab-19-7": [
+      "人口",
+      "この町の人口は、二十年で半分になったそうです。",
+      "I hear this town's population has halved in twenty years."
+    ],
+    "n4-vocab-19-8": [
+      "賛成／反対",
+      "新しい駅を作ることに、町の人の半分ぐらいが反対しているそうです。",
+      "Apparently about half the townspeople are against building a new station."
+    ],
+    "n4-vocab-19-9": [
+      "〜によると",
+      "新聞によると、来年から消費税が上がるということです。",
+      "According to the paper, consumption tax is going up next year."
+    ],
+    "n4-vocab-19-10": [
+      "どうも",
+      "どうも、あの店は先月閉まったらしいです。",
+      "It seems that shop closed last month."
+    ],
+    "n4-vocab-19-11": [
+      "貿易",
+      "リーさんのお兄さんは貿易の会社で働いていると聞きました。",
+      "I heard Lee's older brother works at a trading company."
+    ],
+    "n4-vocab-20-1": [
+      "気分がいい／わるい",
+      "気分が悪かったら、無理しすぎないで休んでください。",
+      "If you feel ill, don't push yourself; have a rest."
+    ],
+    "n4-vocab-20-2": [
+      "心配",
+      "子どもが一人で旅行に行きたがっているので、心配です。",
+      "My child wants to travel alone, and I'm worried."
+    ],
+    "n4-vocab-20-3": [
+      "気持ちがいい／悪い",
+      "このシャツは柔らかくて着やすく、気持ちがいいです。",
+      "This shirt is soft and easy to wear, and it feels nice."
+    ],
+    "n4-vocab-20-4": [
+      "びっくりします",
+      "値段が高すぎて、びっくりしました。",
+      "I was shocked at how expensive it was."
+    ],
+    "n4-vocab-20-5": [
+      "がっかりします",
+      "楽しみにしていたコンサートが中止になって、がっかりしました。",
+      "I was disappointed that the concert I'd been looking forward to was cancelled."
+    ],
+    "n4-vocab-20-6": [
+      "安心します",
+      "無事に着いたと聞いて、安心しました。",
+      "I was relieved to hear you'd arrived safely."
+    ],
+    "n4-vocab-20-7": [
+      "幸せ",
+      "毎日家族と一緒にご飯が食べられて、幸せです。",
+      "I'm happy that I can eat with my family every day."
+    ],
+    "n4-vocab-20-8": [
+      "なきます",
+      "妹は注射を怖がって、泣いてしまいました。",
+      "My little sister was scared of the injection and burst into tears."
+    ],
+    "n4-vocab-20-9": [
+      "わらいます",
+      "ケンさんの話がおもしろすぎて、みんな笑いました。",
+      "Ken's story was so funny that everyone laughed."
+    ],
+    "n4-vocab-20-10": [
+      "怖い",
+      "弟は暗い所を怖がります。",
+      "My little brother is scared of the dark."
+    ],
+    "n4-vocab-20-11": [
+      "嫌",
+      "朝早く起きるのが嫌で、なかなかベッドから出られません。",
+      "I hate getting up early, so I just can't get out of bed."
+    ],
+    "n4-vocab-21-1": [
+      "しばらく",
+      "すみません、しばらく待っていただけませんか。",
+      "Sorry, could you wait a little while?"
+    ],
+    "n4-vocab-21-2": [
+      "知らせます",
+      "日にちが決まったら、すぐに知らせます。",
+      "As soon as the date's fixed, I'll let you know."
+    ],
+    "n4-vocab-21-3": [
+      "お知らせ",
+      "掲示板のお知らせを、出かける前に読んでおいてください。",
+      "Please read the notice on the board before you go out."
+    ],
+    "n4-vocab-21-4": [
+      "先に",
+      "先に食べていてください。すぐ行きます。",
+      "Go ahead and start eating. I'll be there soon."
+    ],
+    "n4-vocab-21-5": [
+      "ゆうべ",
+      "ゆうべは遅くまで起きていたので、眠いです。",
+      "I was up late last night, so I'm sleepy."
+    ],
+    "n4-vocab-21-6": [
+      "届きます",
+      "昨日注文した本が、もう届いたところです。",
+      "The book I ordered yesterday has just arrived."
+    ],
+    "n4-vocab-21-7": [
+      "過ぎます",
+      "約束の時間を三十分過ぎたのに、だれも来ません。",
+      "It's half an hour past the agreed time, and nobody has come."
+    ],
+    "n4-vocab-21-8": [
+      "わたします",
+      "このメモを、エマさんに渡していただけませんか。",
+      "Could you hand this note to Emma?"
+    ],
+    "n4-vocab-21-9": [
+      "かえって来ます",
+      "父はもうすぐ会社から帰って来るはずです。",
+      "My father should be home from work soon."
+    ],
+    "n4-vocab-21-10": [
+      "留守",
+      "留守の間に、荷物が届いていました。",
+      "A parcel was delivered while I was out."
+    ],
+    "n4-vocab-21-11": [
+      "宅配便",
+      "宅配便を受け取るまでに、部屋を片づけておきます。",
+      "I'll tidy my room before the delivery comes."
+    ],
+    "n4-vocab-21-12": [
+      "ちょうど",
+      "駅に着いたら、ちょうど電車が来たところでした。",
+      "When I got to the station, the train had just pulled in."
+    ],
+    "n4-vocab-21-13": [
+      "たった今",
+      "たった今、メールを送ったところです。",
+      "I've just this second sent the email."
+    ],
+    "n4-vocab-21-14": [
+      "わかれます",
+      "駅の前でアンナさんと別れてから、一人で帰りました。",
+      "After I said goodbye to Anna outside the station, I went home alone."
+    ],
+    "n4-vocab-21-15": [
+      "とどけます",
+      "落とし物を交番に届けておきました。",
+      "I took the lost item to the police box."
+    ],
+    "n4-vocab-22-1": [
+      "建てます",
+      "この橋は百年前に建てられました。",
+      "This bridge was built a hundred years ago."
+    ],
+    "n4-vocab-22-2": [
+      "褒めます",
+      "作文が上手だと、先生に褒められました。",
+      "My teacher praised me for writing a good essay."
+    ],
+    "n4-vocab-22-3": [
+      "叱ります",
+      "夜遅く帰って、父に叱られました。",
+      "I came home late and got told off by my father."
+    ],
+    "n4-vocab-22-4": [
+      "頼みます",
+      "部長に資料のコピーを頼まれました。",
+      "The manager asked me to copy the handouts."
+    ],
+    "n4-vocab-22-5": [
+      "招待します",
+      "青木さんの結婚式に招待されました。",
+      "I've been invited to Ms. Aoki's wedding."
+    ],
+    "n4-vocab-22-6": [
+      "発明します",
+      "この機械は、日本の小さい会社で発明されたそうです。",
+      "Apparently this machine was invented at a small Japanese company."
+    ],
+    "n4-vocab-22-7": [
+      "発見します",
+      "この島で、新しい種類の花が発見されました。",
+      "A new kind of flower has been discovered on this island."
+    ],
+    "n4-vocab-22-8": [
+      "泥棒",
+      "旅行中に、ホテルの部屋に泥棒に入られました。",
+      "A thief broke into my hotel room while I was travelling."
+    ],
+    "n4-vocab-22-9": [
+      "〜によって",
+      "この寺は、千年前に有名なお坊さんによって建てられました。",
+      "This temple was built a thousand years ago by a famous monk."
+    ],
+    "n4-vocab-22-10": [
+      "うそ",
+      "弟にうそをつかれて、ちょっと怒っています。",
+      "My little brother lied to me, and I'm a bit cross."
+    ],
+    "n4-vocab-22-11": [
+      "〜製",
+      "このカメラはドイツ製ですが、日本で作られた部品も使われています。",
+      "This camera is German-made, but it uses parts made in Japan too."
+    ],
+    "n4-vocab-22-12": [
+      "あやまります",
+      "間違えて友だちの傘を持って帰ったので、謝りました。",
+      "I took my friend's umbrella home by mistake, so I apologised."
+    ],
+    "n4-vocab-23-1": [
+      "まじめ",
+      "小林さんはまじめな学生なので、先生にいつも褒められています。",
+      "Kobayashi is such a conscientious student that the teacher is always praising him."
+    ],
+    "n4-vocab-23-2": [
+      "教育",
+      "子どもにいい教育を受けさせたいと思っています。",
+      "I want to give my children a good education."
+    ],
+    "n4-vocab-23-3": [
+      "実験",
+      "先生は学生に実験の結果を発表させました。",
+      "The teacher had the students present the results of the experiment."
+    ],
+    "n4-vocab-23-4": [
+      "科学",
+      "子どもに科学の本を読ませるのは、いいことだと思います。",
+      "I think it's good to get children reading science books."
+    ],
+    "n4-vocab-23-5": [
+      "せわをします",
+      "留守の間、隣の人に猫の世話をしてもらいました。",
+      "My neighbour looked after the cat while I was away."
+    ],
+    "n4-vocab-23-6": [
+      "厳しい",
+      "父は厳しくて、子どものころ毎朝六時に起きさせられました。",
+      "My father was strict; as a child I was made to get up at six every morning."
+    ],
+    "n4-vocab-23-7": [
+      "塾",
+      "母はわたしを塾に行かせたがっていました。",
+      "My mother wanted to send me to cram school."
+    ],
+    "n4-vocab-23-8": [
+      "生徒",
+      "先生は生徒に教室の掃除をさせます。",
+      "The teacher has the pupils clean the classroom."
+    ],
+    "n4-vocab-23-9": [
+      "自由に",
+      "この部屋のパソコンは、自由に使ってもいいですよ。",
+      "You're free to use the computers in this room."
+    ],
+    "n4-vocab-24-1": [
+      "えらい",
+      "仕事をしながら勉強しているんですか。えらいですね。",
+      "You're studying while working? That's impressive."
+    ],
+    "n4-vocab-24-2": [
+      "お先にどうぞ。",
+      "お先にどうぞ。…すみません、ありがとうございます。",
+      "After you. — Oh, thank you."
+    ],
+    "n4-vocab-24-3": [
+      "本社／支店",
+      "部長は来月から大阪の支店にいらっしゃるそうです。",
+      "I hear the manager is moving to the Osaka branch next month."
+    ],
+    "n4-vocab-24-4": [
+      "お客",
+      "お客さんがいらっしゃったら、会議室にご案内してください。",
+      "When the guests arrive, please show them to the meeting room."
+    ],
+    "n4-vocab-24-5": [
+      "忘年会",
+      "忘年会には、社長もいらっしゃいます。",
+      "The company president will also come to the year-end party."
+    ],
+    "n4-vocab-24-6": [
+      "呼びます",
+      "誕生日のパーティーに、友だちを十人呼びました。",
+      "I invited ten friends to my birthday party."
+    ],
+    "n4-vocab-24-7": [
+      "丁寧",
+      "森先生は、いつも丁寧に説明してくださいます。",
+      "Professor Mori always explains things carefully for us."
+    ],
+    "n4-vocab-24-8": [
+      "こちら",
+      "はい、こちらは「さくら旅行」でございます。",
+      "Hello, this is Sakura Travel."
+    ],
+    "n4-vocab-24-9": [
+      "いらっしゃいます",
+      "すみません、青木部長はいらっしゃいますか。",
+      "Excuse me, is Ms. Aoki, the manager, in?"
+    ],
+    "n4-vocab-24-10": [
+      "召し上がります",
+      "冷めないうちに、どうぞ召し上がってください。",
+      "Please eat it before it gets cold."
+    ],
+    "n4-vocab-24-11": [
+      "おっしゃいます",
+      "社長がおっしゃったことを、皆さんに伝えます。",
+      "I'll pass on to everyone what the president said."
+    ],
+    "n4-vocab-24-12": [
+      "なさいます",
+      "週末は何をなさいますか。",
+      "What do you do at weekends?"
+    ],
+    "n4-vocab-24-13": [
+      "ご覧になります",
+      "このパンフレットは、もうご覧になりましたか。",
+      "Have you already looked at this brochure?"
+    ],
+    "n4-vocab-24-14": [
+      "ご存じです",
+      "森先生のメールアドレスをご存じですか。",
+      "Do you know Professor Mori's email address?"
+    ],
+    "n4-vocab-24-15": [
+      "挨拶",
+      "新しいクラスで、最初に一人ずつ挨拶をしました。",
+      "In the new class, we each said a few words of greeting first."
+    ],
+    "n4-vocab-24-16": [
+      "遠慮なく",
+      "何か分からないことがあったら、遠慮なくおっしゃってください。",
+      "If there's anything you're unsure about, please don't hesitate to say."
+    ],
+    "n4-vocab-25-1": [
+      "マンション",
+      "わたしは駅の近くのマンションに住んでおります。",
+      "I live in a block of flats near the station."
+    ],
+    "n4-vocab-25-2": [
+      "者",
+      "ただ今、係の者がまいりますので、少々お待ちください。",
+      "A member of staff will be with you shortly; please wait a moment."
+    ],
+    "n4-vocab-25-3": [
+      "灰皿",
+      "すみません、こちらには灰皿がございません。",
+      "I'm sorry, we don't have ashtrays here."
+    ],
+    "n4-vocab-25-4": [
+      "参ります",
+      "明日の朝十時に、そちらへ参ります。",
+      "I'll come to your office at ten tomorrow morning."
+    ],
+    "n4-vocab-25-5": [
+      "おります",
+      "父は今、出かけておりますが。",
+      "My father is out at the moment."
+    ],
+    "n4-vocab-25-6": [
+      "申します",
+      "はじめまして。アンナ・ブラウンと申します。",
+      "How do you do. My name is Anna Brown."
+    ],
+    "n4-vocab-25-7": [
+      "いたします",
+      "お荷物はわたしがお持ちいたします。",
+      "Let me carry your bags."
+    ],
+    "n4-vocab-25-8": [
+      "拝見します",
+      "先生のお写真を拝見しました。すてきですね。",
+      "I saw your photos, Professor. They're lovely."
+    ],
+    "n4-vocab-25-9": [
+      "存じます",
+      "そのお店なら、よく存じております。",
+      "Yes, I know that restaurant well."
+    ],
+    "n4-vocab-25-10": [
+      "伺います",
+      "来週、先生の研究室に伺ってもよろしいでしょうか。",
+      "Would it be all right if I came to your office next week, Professor?"
+    ],
+    "n4-vocab-25-11": [
+      "ございます",
+      "お手洗いは二階にございます。",
+      "The restrooms are on the second floor."
+    ],
+    "n4-vocab-25-12": [
+      "私",
+      "私、山口商事の小林と申します。",
+      "My name is Kobayashi, from Yamaguchi Trading."
+    ],
+    "n4-vocab-25-13": [
+      "ただ今",
+      "ただ今、部長は席を外しております。",
+      "The manager is away from the desk at the moment."
+    ]
+  }
+}

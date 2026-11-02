@@ -101,9 +101,9 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(r.groups.grammar[0].title.startsWith('〜として（は）')).toBe(true);
     expect(has(r, 'vocab', 'と')).toBe(false);
   });
-  it('#16 ことにする → grammar 〜ことに する top; 殊に absent', async () => {
+  it('#16 ことにする → grammar 〜ことに します top; 殊に absent', async () => {
     const r = await run('ことにする');
-    expect(r.groups.grammar[0].title.startsWith('〜ことに する')).toBe(true);
+    expect(r.groups.grammar[0].title.startsWith('〜ことに します')).toBe(true);
     expect(has(r, 'vocab', '殊に')).toBe(false);
   });
   it('#17 見れる → 見る with a ら抜き step', async () => {
@@ -129,16 +129,17 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect((await run('いいです')).groups.vocab[0].title).toBe('いい');
   });
   // ---- F6 plain-form grammar keys
-  it('#25 てしまう → Vて-form + しまいました／しまいます top', async () => {
-    expect((await run('てしまう')).groups.grammar[0]).toMatchObject({ title: 'Vて-form + しまいました／しまいます', level: 'N4', lesson: 4 });
+  // N4 titles and lessons follow the 2026-11 N4 restructure (docs/content/n4-restructure.md).
+  it('#25 てしまう → Vて しまいます top', async () => {
+    expect((await run('てしまう')).groups.grammar[0]).toMatchObject({ title: 'Vて しまいます', level: 'N4', lesson: 6 });
   });
-  it('#26 はずだ → …はずです (N4 L21) top', async () => {
+  it('#26 はずだ → …はずです (N4 L8) top', async () => {
     const top = (await run('はずだ')).groups.grammar[0];
     expect(top.title.endsWith('はずです')).toBe(true);
-    expect([top.level, top.lesson]).toEqual(['N4', 21]);
+    expect([top.level, top.lesson]).toEqual(['N4', 8]);
   });
-  it('#27 ようになる → Vようになります／Vなくなります top', async () => {
-    expect((await run('ようになる')).groups.grammar[0].title).toBe('Vようになります／Vなくなります');
+  it('#27 ようになる → 〜ように なります／〜なく なります top', async () => {
+    expect((await run('ようになる')).groups.grammar[0].title).toBe('〜ように なります／〜なく なります');
   });
   // ---- F2 romaji
   it('#28 konnichiwa → こんにちは', async () => {

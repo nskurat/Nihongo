@@ -1,0 +1,507 @@
+{
+  "6": [
+    {
+      "replaces": ["n4-grammar-5-2"],
+      "title": "Vて おきます",
+      "structure": "Vて-form + おきます（casual: 〜ておく → 〜とく）",
+      "meaning": "Do something in advance, do it so it is out of the way, or leave things as they are.",
+      "explanation": "Vて おきます has three uses. (1) Preparation: doing something now for a later purpose, such as booking a table before a party. (2) Getting a task done so it is finished: 洗っておきます. (3) Leaving something in its current state: そのままにしておいてください. In speech 〜ておく often shortens to 〜とく (買っとく).",
+      "summary": "Vて おく = do it ahead of time, get it done, or leave it as it is.",
+      "details": "| Use | Example |\n| :--- | :--- |\n| preparation | 旅行の前に、ホテルを予約し**ておきます**。 |\n| getting it done | 使ったコップは洗っ**ておきます**。 |\n| leaving as is | 窓は開け**ておいて**ください。 |",
+      "tags": ["preparation"],
+      "examples": [
+        { "jp": "パーティーの前に、飲み物を買っておきます。", "en": "I'll buy the drinks before the party." },
+        { "jp": "会議の資料は、もうコピーしておきました。", "en": "I've already copied the meeting handouts." },
+        { "jp": "あとで使いますから、そのままにしておいてください。", "en": "I'll use it later, so please leave it as it is." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-4-2"],
+      "title": "Vて しまいます",
+      "structure": "Vて-form + しまいます（casual: 〜てしまう → 〜ちゃう／〜じゃう）",
+      "meaning": "Finish something completely, or do something you regret.",
+      "explanation": "Vて しまいます stresses that an action is completely over. With もう or 全部 it means finishing the whole thing. With mistakes and accidents it adds regret: \"I went and…\". Casual speech shortens it to 〜ちゃう (〜でしまう → 〜じゃう): 忘れちゃった, 飲んじゃった.",
+      "summary": "Vて しまう = do it completely, or do it (unfortunately).",
+      "details": "- 本を全部読ん**でしまいました**。 I've read the whole book.\n- 電車に傘を忘れ**てしまいました**。 I left my umbrella on the train (oops).\n- Casual: 寝坊し**ちゃった**。 I overslept.",
+      "tags": ["completion"],
+      "examples": [
+        { "jp": "宿題は昨日の夜、全部やってしまいました。", "en": "I finished all my homework last night." },
+        { "jp": "友だちに借りたカメラを壊してしまいました。", "en": "I've gone and broken the camera I borrowed from my friend." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-15-3"],
+      "title": "Vて みます",
+      "structure": "Vて-form + みます",
+      "meaning": "Try doing something to see what it is like.",
+      "explanation": "Vて みる is about trying something out to find out how it goes, such as tasting, wearing, or asking. It is not \"try hard to\"; for effort, use ように します (Lesson 13). Vて みて ください invites someone to give it a go.",
+      "summary": "Vて みる = do it and see.",
+      "details": "- この服、着**てみても**いいですか。 May I try this on?\n- 一度、日本の温泉に行っ**てみたい**です。 I'd like to try going to a hot spring in Japan.\n- おいしいですよ。食べ**てみて**ください。 It's good. Give it a try.",
+      "tags": ["attempt"],
+      "examples": [
+        { "jp": "分からなかったので、先生に聞いてみました。", "en": "I didn't understand, so I tried asking the teacher." },
+        { "jp": "この靴、ちょっと履いてみてもいいですか。", "en": "May I try these shoes on?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-7"],
+      "title": "Vます-stem 始めます／終わります／続けます",
+      "structure": "Vます-stem + 始めます／終わります／続けます",
+      "meaning": "Start / finish / keep on doing something.",
+      "explanation": "Attach 始める, 終わる or 続ける to the ます-stem to mark the beginning, end or continuation of an action. The compound behaves like a single verb: 読み始めました, 書き終わったら.",
+      "summary": "Stem + 始める／終わる／続ける = start, finish, continue doing.",
+      "details": "- 去年から日本語を習い**始めました**。 I started learning Japanese last year.\n- レポートを書き**終わってから**、帰ります。 I'll go home after I finish writing the report.\n- 三時間歩き**続けました**。 I kept walking for three hours.",
+      "tags": ["change-of-state"],
+      "examples": [
+        { "jp": "この本は先週読み始めましたが、まだ読み終わっていません。", "en": "I started this book last week, but I haven't finished it yet." },
+        { "jp": "雨の中を一時間走り続けました。", "en": "I kept running in the rain for an hour." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-10"],
+      "title": "Vます-stem 出します（suddenly start）",
+      "structure": "Vます-stem + 出します",
+      "meaning": "Something starts suddenly, often unexpectedly.",
+      "explanation": "Compared with 始める, 出す adds suddenness. It is common with weather and with emotions: 降り出す, 泣き出す, 笑い出す, 走り出す. It describes what happens, so it is not used for your own planned actions.",
+      "summary": "Stem + 出す = burst into, suddenly start.",
+      "details": "- 急に雨が降り**出しました**。 It suddenly started to rain.\n- 赤ちゃんが泣き**出しました**。 The baby burst into tears.\n- ✗ 来週から日本語を勉強し出します → ✓ 勉強し始めます。",
+      "tags": ["time-relative", "change-of-state"],
+      "examples": [
+        { "jp": "話を聞いて、みんな笑い出しました。", "en": "Everyone burst out laughing when they heard the story." },
+        { "jp": "駅に着いたとき、雨が降り出しました。", "en": "It started raining just as I got to the station." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-4-5"],
+      "title": "〜に 気が つきます",
+      "structure": "N に 気が つきます ／ plain form + ことに 気が つきます",
+      "meaning": "\"Notice\", \"realise\": something comes to your attention.",
+      "explanation": "The thing noticed takes に. For a whole fact, use a clause + ことに or のに. Written as a single word it is 気付く／気づく.",
+      "summary": "〜に 気が つく = notice, realise.",
+      "details": "- 間違い**に 気が つきました**。 I noticed a mistake.\n- 財布を落とした**ことに** 気が つきませんでした。 I didn't realise I'd dropped my wallet.\n- 気づいたら、もう朝だった。 Before I knew it, it was morning.",
+      "tags": ["spontaneous-perception", "change-of-state"],
+      "examples": [
+        { "jp": "家に帰ってから、かばんを忘れたことに気がつきました。", "en": "I only realised I'd forgotten my bag after I got home." },
+        { "jp": "エマさんが髪を切りましたが、だれも気がつきませんでした。", "en": "Emma had cut her hair, but nobody noticed." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-18-4"],
+      "title": "Vて 来ます（go and do, then come back）",
+      "structure": "Vて-form + 来ます／N(place)へ 行って 来ます",
+      "meaning": "Go somewhere, do something, and return.",
+      "explanation": "Vて 来ます means you will do something and come back afterwards. 行ってきます, said when leaving home, is the same pattern. It also works for fetching: 取ってきます (go and get).",
+      "summary": "Vて くる = go and do it, then come back.",
+      "details": "- ちょっとコンビニで飲み物を買っ**てきます**。 I'll just pop to the convenience store for a drink.\n- 部屋から辞書を取っ**てきます**。 I'll go and get my dictionary from my room.\n- 行っ**てきます**。 I'm off (and I'll be back).",
+      "tags": ["direction-movement"],
+      "examples": [
+        { "jp": "ちょっと郵便局へ行って来ます。すぐ戻ります。", "en": "I'm just going to the post office. I'll be right back." },
+        { "jp": "寒いですね。上着を取ってきます。", "en": "It's cold, isn't it. I'll go and get my jacket." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-8"],
+      "title": "やっと",
+      "structure": "やっと + V（past, or ている／た-form)",
+      "meaning": "\"At last\", \"finally\": something you waited for or worked for happens.",
+      "explanation": "やっと carries relief after waiting or effort. It goes with things you wanted. For a bad result after a long time, とうとう is more natural.",
+      "summary": "やっと = finally (and I'm relieved).",
+      "details": "- 一時間待って、**やっと**バスが来ました。 After an hour's wait the bus finally came.\n- **やっと**レポートが書き終わった。 I've finally finished the report.\n- Compare: **とうとう**壊れてしまった。 It finally broke.",
+      "tags": ["completion", "time-relative"],
+      "examples": [
+        { "jp": "三回目の試験で、やっと合格しました。", "en": "On my third attempt I finally passed the exam." },
+        { "jp": "長い冬が終わって、やっと暖かくなりました。", "en": "The long winter is over and it's finally warm." }
+      ]
+    }
+  ],
+  "7": [
+    {
+      "replaces": ["n4-grammar-8-10"],
+      "title": "〜と 思います",
+      "structure": "Plain form + と 思います（N／な-adj: 〜だと 思います）",
+      "meaning": "States your opinion or guess: \"I think (that)…\".",
+      "explanation": "The quoted thought is in the plain form; nouns and な-adjectives keep だ. A negative opinion is usually 〜ないと思います (I don't think it will), not 〜と思いません. To ask someone's opinion: 〜について どう思いますか.",
+      "summary": "Plain form + と思います = I think…; ask with どう思いますか.",
+      "details": "- 明日は雨が降る**と思います**。 I think it will rain tomorrow.\n- この映画はおもしろい**と思います**。\n- あの人は先生**だと思います**。\n- ケンさんは来**ないと思います**。 I don't think Ken will come.",
+      "tags": ["conjecture-inference"],
+      "examples": [
+        { "jp": "この問題はちょっと難しいと思います。", "en": "I think this question is a bit hard." },
+        { "jp": "日本の電車についてどう思いますか。…とても便利だと思います。", "en": "What do you think of Japanese trains? — I think they're very convenient." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-1"],
+      "title": "Volitional form（〜よう／〜おう）",
+      "structure": "Group I: 〜う → 〜おう ／ Group II: 〜る → 〜よう ／ する → しよう, 来る → 来よう",
+      "meaning": "The plain form of 〜ましょう: \"let's…\", \"I'll…\".",
+      "explanation": "Group I verbs change the final -u to -ō: 行く → 行こう, 飲む → 飲もう. Group II verbs replace る with よう: 食べる → 食べよう. する → しよう, 来る → 来よう. Between friends it invites (\"let's go\"); said to yourself it is a decision (\"right, I'll do it\").",
+      "summary": "The volitional (行こう, 食べよう, しよう) is casual \"let's\" or \"I'll\".",
+      "details": "| Group | Dictionary | Volitional |\n| :--- | :--- | :--- |\n| I | 行く／待つ／帰る | 行こう／待とう／帰ろう |\n| II | 見る／寝る | 見よう／寝よう |\n| III | する／来る | しよう／来よう |\n\nPlain-style invitations: 一緒に帰**ろう**。／ちょっと休**もうか**。",
+      "tags": ["volitional-intention", "meta-conjugation"],
+      "examples": [
+        { "jp": "疲れたね。ちょっと休もう。", "en": "I'm tired. Let's take a break." },
+        { "jp": "明日、映画を見に行こうか。", "en": "Shall we go and see a film tomorrow?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-2"],
+      "title": "Volitional + と 思っています",
+      "structure": "Volitional form + と 思って います／と 思います",
+      "meaning": "Talks about what you intend to do: \"I'm thinking of…\".",
+      "explanation": "〜(よ)うと 思います states a plan you are making now. 〜(よ)うと 思って います says you have been thinking about it for a while, and it can describe someone else's plan too. It sounds less fixed than つもりです.",
+      "summary": "〜(よ)うと 思って います = I'm thinking of doing…",
+      "details": "- 夏休みに北海道へ行**こうと思っています**。 I'm thinking of going to Hokkaido in the summer holiday.\n- 今日は早く寝**ようと思います**。 I think I'll go to bed early tonight.\n- 兄は車を買**おうと思っています**。 My brother is thinking of buying a car.",
+      "tags": ["volitional-intention"],
+      "examples": [
+        { "jp": "来年、日本の大学で勉強しようと思っています。", "en": "I'm thinking of studying at a Japanese university next year." },
+        { "jp": "週末は家でゆっくり休もうと思います。", "en": "I think I'll take it easy at home this weekend." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-3"],
+      "title": "〜つもりです",
+      "structure": "V dictionary form／Vない-form ない + つもりです",
+      "meaning": "States a firm intention: \"I intend to…\", \"I plan not to…\".",
+      "explanation": "つもり is a noun meaning \"intention\", so it sounds more decided than 〜(よ)うと 思っています. For a negative, 〜ないつもりです (I don't intend to) is the usual form. Asking a superior 〜つもりですか can sound blunt; use 〜予定ですか instead.",
+      "summary": "V(dict／ない) + つもりです = I intend to (not) do.",
+      "details": "- 来年、結婚する**つもりです**。 I intend to get married next year.\n- もうたばこは吸わ**ないつもりです**。 I don't intend to smoke any more.\n- 卒業してから、どうする**つもりですか**。 What do you plan to do after graduating?",
+      "tags": ["volitional-intention"],
+      "examples": [
+        { "jp": "大学を卒業してから、国へ帰るつもりです。", "en": "I intend to go back to my country after graduating." },
+        { "jp": "今年の冬休みは、どこへも行かないつもりです。", "en": "I'm not planning to go anywhere this winter holiday." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-6-4"],
+      "title": "〜予定です",
+      "structure": "V dictionary form／Nの + 予定です",
+      "meaning": "States a schedule or arrangement: \"is scheduled to…\".",
+      "explanation": "予定 is a plan already arranged, often with other people involved: trips, meetings, flights. It sounds more official than つもり, and asking 〜予定ですか is polite.",
+      "summary": "V(dict)／Nの + 予定です = it is scheduled.",
+      "details": "- 会議は三時に終わる**予定です**。 The meeting is due to end at three.\n- 来週は出張の**予定です**。 I'm due to go on a business trip next week.\n- 何時に着く**予定ですか**。 What time are you due to arrive?",
+      "tags": ["volitional-intention"],
+      "examples": [
+        { "jp": "飛行機は午後五時に空港に着く予定です。", "en": "The plane is scheduled to land at five p.m." },
+        { "jp": "七月に引っ越しの予定です。", "en": "I'm due to move in July." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-5"],
+      "title": "〜ことに します／ことに して います",
+      "structure": "V dictionary form／Vない-form ない + ことに します／ことに して います",
+      "meaning": "\"Decide to…\"; with して います, \"make it a rule to…\".",
+      "explanation": "〜ことに する reports your own decision. In the past, 〜ことに しました, it is a choice already made. 〜ことに して いる is a personal rule you keep: something you decided once and still do.",
+      "summary": "ことに する = I decide to; ことに して いる = I make a point of.",
+      "details": "- 来月から一人で住む**ことにしました**。 I've decided to live on my own from next month.\n- 夜はコーヒーを飲まない**ことにしています**。 I make a point of not drinking coffee at night.",
+      "tags": ["decision-outcome", "habit-effort"],
+      "examples": [
+        { "jp": "来週から、毎朝歩くことにしました。", "en": "I've decided to walk every morning from next week." },
+        { "jp": "寝る前にはスマホを見ないことにしています。", "en": "I make it a rule not to look at my phone before bed." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-11-6"],
+      "title": "〜ことに なります／ことに なって います",
+      "structure": "V dictionary form／Vない-form ない + ことに なります／ことに なって います",
+      "meaning": "\"It has been decided that…\"; with なって います, \"the rule is that…\".",
+      "explanation": "〜ことに なる reports a decision made by someone else or by circumstances. It is common for transfers and schedules, and sounds modest even about your own plans. 〜ことに なって いる states an existing rule or custom.",
+      "summary": "ことに なる = it's been decided (not by me alone); ことに なって いる = that's the rule.",
+      "details": "- 来月、大阪の支店で働く**ことになりました**。 It's been decided that I'll work at the Osaka branch from next month.\n- この部屋では、食べ物を食べない**ことになっています**。 Eating isn't allowed in this room.",
+      "tags": ["decision-outcome"],
+      "examples": [
+        { "jp": "四月から東京の会社で働くことになりました。", "en": "I'm going to be working for a company in Tokyo from April." },
+        { "jp": "この寮では、夜十一時までに帰ることになっています。", "en": "In this dormitory you're supposed to be back by eleven p.m." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-11"],
+      "title": "ぜひ",
+      "structure": "ぜひ + Vたいです／Vて ください／Vて ほしいです",
+      "meaning": "\"By all means\", \"definitely\": strengthens a wish or invitation.",
+      "explanation": "ぜひ goes only with wishes, requests and invitations. It is not used for guesses or facts; for \"surely\" use きっと (Lesson 8).",
+      "summary": "ぜひ strengthens wishes and invitations.",
+      "details": "- **ぜひ**一度、京都に行ってみたいです。 I'd really love to visit Kyoto some time.\n- 近くに来たら、**ぜひ**寄ってください。 Do drop by if you're nearby.\n- ✗ 明日はぜひ雨です → ✓ 明日はきっと雨でしょう。",
+      "tags": ["emphasis-limitation"],
+      "examples": [
+        { "jp": "日本に来たら、ぜひうちに遊びに来てください。", "en": "When you come to Japan, you must come and visit us." },
+        { "jp": "そのお店、ぜひ行ってみたいです。", "en": "I'd love to try that restaurant." }
+      ]
+    }
+  ],
+  "8": [
+    {
+      "replaces": ["n4-grammar-7-2", "n4-grammar-7-4"],
+      "title": "きっと／たぶん + 〜でしょう",
+      "structure": "きっと／たぶん + plain form（N／な-adj: だ drops）+ でしょう",
+      "meaning": "Guesses with different degrees of confidence: \"surely\", \"probably\".",
+      "explanation": "でしょう (N5) marks a guess. Adverbs before it show how sure you are: きっと is very sure, たぶん is fairly sure, もしかしたら is unsure and pairs with かもしれません (next point). Note that だ drops before でしょう: 雨でしょう, 静かでしょう.",
+      "summary": "きっと〜でしょう (surely), たぶん〜でしょう (probably), もしかしたら〜かもしれません (maybe).",
+      "details": "| Sure | Pattern |\n| :--- | :--- |\n| about 90% | **きっと** 晴れる**でしょう**。 |\n| about 70% | **たぶん** 晴れる**でしょう**。 |\n| about 30% | **もしかしたら** 晴れる**かもしれません**。 |\n\nきっと also goes with wishes and promises: きっと来てくださいね。",
+      "tags": ["conjecture-inference", "certainty-expectation"],
+      "examples": [
+        { "jp": "あんなに練習したから、きっと勝てるでしょう。", "en": "After practising that hard, they're sure to win." },
+        { "jp": "リーさんはたぶん今日は来ないでしょう。", "en": "Lee probably won't come today." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-3"],
+      "title": "〜かもしれません",
+      "structure": "Plain form（N／な-adj: だ drops）+ かもしれません",
+      "meaning": "\"Might\", \"may\": something is possible.",
+      "explanation": "かもしれません says there is a chance, with no strong confidence. It often comes with もしかしたら. Casual speech shortens it to かもしれない or かも.",
+      "summary": "〜かもしれません = maybe, it's possible.",
+      "details": "- 午後から雨が降る**かもしれません**。 It might rain this afternoon.\n- あの人は先生**かもしれません**。 That person may be a teacher.\n- Casual: 間に合わない**かも**。 We might not make it.",
+      "tags": ["possibility", "conjecture-inference"],
+      "examples": [
+        { "jp": "道が込んでいるので、少し遅れるかもしれません。", "en": "The roads are busy, so I might be a little late." },
+        { "jp": "もしかしたら、かばんを電車に忘れたかもしれません。", "en": "I may have left my bag on the train." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-21-3"],
+      "title": "〜はずです",
+      "structure": "Plain form（な-adj な／Nの）+ はずです",
+      "meaning": "\"Should be\", \"is supposed to\": a confident conclusion based on facts you know.",
+      "explanation": "はず is reasoning, not a wish: you know something that makes the conclusion very likely (a timetable, what someone said, how things work). It is not used for your own decisions. With the past, 〜はずでした means it should have been so but was not.",
+      "summary": "はずです = it should be so, by my reasoning.",
+      "details": "- 荷物は今日届く**はずです**。 (I was told it ships yesterday.) The parcel should arrive today.\n- 森さんは今日休み**のはずです**。 Mr. Mori is supposed to be off today.\n- For a plan you made yourself, say つもりです: 明日行く**つもりです**。 (わたしは明日行くはずです means someone else arranged it.)",
+      "tags": ["certainty-expectation"],
+      "examples": [
+        { "jp": "九時に出発したから、もう着いているはずです。", "en": "He left at nine, so he should be there by now." },
+        { "jp": "この店は日曜日も開いているはずですよ。", "en": "This shop should be open on Sundays too." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-21-4"],
+      "title": "〜はずが ありません",
+      "structure": "Plain form（な-adj な／Nの）+ はずが ありません（casual: はずが ない）",
+      "meaning": "\"There's no way…\", \"can't possibly…\".",
+      "explanation": "The negative of はず rules something out completely, based on what you know. Compare 〜ないはずです (it should not be so), which is softer.",
+      "summary": "〜はずが ない = it can't possibly be so.",
+      "details": "- あの真面目な人がうそをつく**はずがありません**。 That honest person couldn't possibly lie.\n- 〜ない**はずです**: 来ないはずです (he shouldn't be coming), weaker.",
+      "tags": ["certainty-expectation", "emphasis-assertion"],
+      "examples": [
+        { "jp": "鍵はかばんに入れたから、なくなるはずがありません。", "en": "I put the key in my bag, so there's no way it's gone." },
+        { "jp": "毎日練習しているケンさんが、そんなに下手なはずがないよ。", "en": "Ken practises every day; there's no way he's that bad." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-9"],
+      "title": "〜じゃ ないですか／〜じゃ ない？",
+      "structure": "Plain form（N／な-adj: だ drops）+ じゃ ないですか／じゃ ない？",
+      "meaning": "Checks or points out something: \"isn't it…?\", \"you know…\", \"hey, it's…!\".",
+      "explanation": "Despite the negative, this is not a negative statement. With rising intonation it is a guess you want confirmed (風邪じゃない？ \"Haven't you got a cold?\"). Said flatly it reminds the listener of something they should know, or expresses surprise at what you see.",
+      "summary": "〜じゃ ないですか = isn't it? / you know / oh, it's…!",
+      "note": "Reminding someone with じゃないですか can sound pushy to superiors; use it carefully.",
+      "details": "| Use | Example |\n| :--- | :--- |\n| guess | ちょっと熱がある**んじゃない**？ |\n| reminder | 明日は休み**じゃないですか**。 |\n| surprise | あれ、アンナさん**じゃないですか**。 |",
+      "tags": ["confirmation-seeking", "emotion-expression"],
+      "examples": [
+        { "jp": "あれ？青木さんじゃないですか。久しぶりですね。", "en": "Oh, isn't it Ms. Aoki? Long time no see." },
+        { "jp": "顔が赤いですよ。熱があるんじゃないですか。", "en": "Your face is red. Haven't you got a fever?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-7-7"],
+      "title": "さすが",
+      "structure": "さすが（に）+ S ／ さすが + N（だ／ですね）",
+      "meaning": "\"Just as you'd expect (of…)\": admiration that matches someone's reputation.",
+      "explanation": "Use さすが when someone lives up to what you expected of them, almost always as praise. さすがですね on its own is a common compliment.",
+      "summary": "さすが = as expected of (you), and I'm impressed.",
+      "details": "- **さすが**プロですね。上手です。 That's a professional for you.\n- **さすが**森先生、何でも知っていますね。\n- さすがに疲れた。 (After all that,) I really am tired.",
+      "tags": ["emotion-expression", "certainty-expectation"],
+      "examples": [
+        { "jp": "一回で分かったんですか。さすがですね。", "en": "You got it in one go? I'm impressed." },
+        { "jp": "さすが日本の電車、時間どおりに来ました。", "en": "Japanese trains for you: it came right on time." }
+      ]
+    }
+  ],
+  "9": [
+    {
+      "replaces": ["n4-grammar-10-8"],
+      "title": "〜たら（if）",
+      "structure": "Vた／い-adj かった／な-adj・N だった + ら、〜",
+      "meaning": "\"If…\": a condition, followed by what will or would happen.",
+      "explanation": "Add ら to any plain past form: 行ったら, 安かったら, 暇だったら, 雨だったら. The negative is 〜なかったら. たら is the most flexible conditional: the second clause can be a wish, a request, an invitation or advice, which is not true of と or ば.",
+      "summary": "Plain past + ら = if; the most widely usable conditional.",
+      "details": "| Type | 〜たら | 〜なかったら |\n| :--- | :--- | :--- |\n| V | 行っ**たら** | 行か**なかったら** |\n| い-adj | 安**かったら** | 安く**なかったら** |\n| な-adj | 暇**だったら** | 暇じゃ**なかったら** |\n| N | 雨**だったら** | 雨じゃ**なかったら** |",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "雨が降ったら、試合は中止です。", "en": "If it rains, the match is off." },
+        { "jp": "時間があったら、手伝ってくれませんか。", "en": "If you have time, could you help me?" },
+        { "jp": "安かったら、買いたいです。", "en": "If it's cheap, I'd like to buy it." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-9"],
+      "title": "Vたら（when, once）",
+      "structure": "Vた-form + ら、〜",
+      "meaning": "\"When…\", \"as soon as…\": once something that will certainly happen has happened.",
+      "explanation": "When the first event is sure to happen (getting home, arriving, finishing), たら is not \"if\" but \"once\". The second action follows it. In the past tense, 〜たら、〜た describes a discovery: \"when I…, I found…\".",
+      "summary": "Vたら + sure event = when/once; 〜たら〜た = when I did…, I found…",
+      "details": "- 駅に着い**たら**、電話してください。 Call me when you get to the station.\n- 仕事が終わっ**たら**、飲みに行きませんか。 Shall we go for a drink once work's over?\n- 窓を開け**たら**、雪が降っていた。 When I opened the window, it was snowing.",
+      "tags": ["conditional", "time-relative"],
+      "examples": [
+        { "jp": "家に帰ったら、すぐお風呂に入ります。", "en": "When I get home, I'll have a bath straight away." },
+        { "jp": "箱を開けたら、中は空でした。", "en": "When I opened the box, it was empty." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-11"],
+      "title": "もし〜たら／いくら〜ても",
+      "structure": "もし + 〜たら／〜ば ／ いくら（どんなに）+ 〜ても",
+      "meaning": "もし: \"if, by any chance\"; いくら〜ても: \"no matter how much…\".",
+      "explanation": "もし comes at the start of a sentence to signal that a supposition is coming, often an unlikely one. いくら (or どんなに) followed by 〜ても stresses that the result stays the same however far the first part goes.",
+      "summary": "もし warns that an \"if\" is coming; いくら〜ても = however much…",
+      "details": "- **もし**宝くじが当たっ**たら**、世界旅行をしたいです。 If I won the lottery, I'd travel the world.\n- **いくら**考え**ても**、分かりません。 However much I think about it, I can't work it out.\n- **どんなに**忙しく**ても**、毎日運動します。 However busy I am, I exercise every day.",
+      "tags": ["conditional", "degree-extent"],
+      "examples": [
+        { "jp": "もし道が分からなかったら、電話してください。", "en": "If you can't find the way, give me a call." },
+        { "jp": "いくら呼んでも、だれも出てきませんでした。", "en": "No matter how many times I called, nobody came out." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-7"],
+      "title": "V dictionary form と、〜（whenever, if… then always）",
+      "structure": "V dictionary form／Vない + と、〜",
+      "meaning": "When the first thing happens, the second follows automatically.",
+      "explanation": "と describes results that always follow: machines, directions, nature, habits. Because the result is automatic, the second clause cannot be a wish, request, invitation or intention. For those, use たら.",
+      "summary": "〜と = whenever / if, then automatically. No requests or wishes after it.",
+      "details": "- このボタンを押す**と**、お釣りが出ます。 Press this button and your change comes out.\n- まっすぐ行く**と**、右に駅があります。 Go straight and you'll see the station on the right.\n- 春になる**と**、桜が咲きます。\n- ✗ 駅に着くと、電話してください → ✓ 着いたら、電話してください。",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "この道をまっすぐ行くと、左に郵便局があります。", "en": "Go straight down this road and the post office is on the left." },
+        { "jp": "わたしはお酒を飲むと、すぐ顔が赤くなります。", "en": "Whenever I drink alcohol, my face goes red straight away." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-10"],
+      "title": "〜ても（even if）",
+      "structure": "Vて／い-adj くて／な-adj・N で + も、〜",
+      "meaning": "\"Even if…\", \"even though…\": the result is not what you would expect.",
+      "explanation": "Add も to the て-form. The second clause is what happens, or is true, regardless. The negative is 〜なくても: 行かなくても (even if I don't go). You met 〜ても いい (permission) in N5; this is the same ても.",
+      "summary": "て-form + も = even if.",
+      "details": "| Type | 〜ても |\n| :--- | :--- |\n| V | 雨が降っ**ても** |\n| い-adj | 高**くても** |\n| な-adj | 不便**でも** |\n| N | 日曜日**でも** |",
+      "tags": ["concession-contrast"],
+      "examples": [
+        { "jp": "雨が降っても、試合はあります。", "en": "The match goes ahead even if it rains." },
+        { "jp": "この料理は冷たくても、おいしいです。", "en": "This dish is good even cold." },
+        { "jp": "日曜日でも、父は会社へ行きます。", "en": "My father goes to work even on Sundays." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-3-12"],
+      "title": "それでも",
+      "structure": "S1。それでも、S2。",
+      "meaning": "\"Even so\", \"still\": the second fact holds in spite of the first.",
+      "explanation": "それでも is the sentence-starting version of 〜ても. Use it when the first sentence gives a good reason against the second, but the second is true anyway.",
+      "summary": "それでも = even so, nevertheless.",
+      "details": "- 何度も失敗しました。**それでも**、あきらめませんでした。 I failed many times. Even so, I didn't give up.\n- 高いです。**それでも**買いたいんです。",
+      "tags": ["concession-contrast", "result-consequence"],
+      "examples": [
+        { "jp": "たばこは体に悪いです。それでも、父はやめません。", "en": "Smoking is bad for you. Even so, my father won't quit." },
+        { "jp": "その店はいつも込んでいます。それでも、毎週行きます。", "en": "That place is always packed. Still, I go every week." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-20-2"],
+      "title": "〜のに（although, and yet）",
+      "structure": "Plain form（な-adj な／N な）+ のに、〜",
+      "meaning": "\"Although…\": the result is the opposite of what you expected, often with disappointment.",
+      "explanation": "のに sounds stronger than が or けど: it carries surprise, frustration or regret. Because of this, the second clause is a fact, not a request or intention. At the end of a sentence, 〜のに expresses regret: 来ればよかったのに (you should have come).",
+      "summary": "〜のに = even though (and that's frustrating or surprising).",
+      "details": "- 約束した**のに**、ケンさんは来ませんでした。 He promised, and yet Ken didn't come.\n- 日曜日**なのに**、仕事です。 It's Sunday, but I have to work.\n- ✗ 雨なのに、出かけましょう → ✓ 雨だけど、出かけましょう。",
+      "tags": ["concession-contrast"],
+      "examples": [
+        { "jp": "たくさん勉強したのに、試験に落ちてしまいました。", "en": "Even though I studied a lot, I failed the exam." },
+        { "jp": "この店は安いのに、とてもおいしいです。", "en": "This place is cheap, and yet it's really good." }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "replaces": ["n4-grammar-10-1"],
+      "title": "The ば-form（conditional）",
+      "structure": "V: 〜う → 〜えば ／ い-adj: 〜い → 〜ければ ／ な-adj・N: 〜なら（〜であれば）",
+      "meaning": "The conditional form: \"if…\".",
+      "explanation": "For all verbs, change the final -u sound to -e and add ば: 行く → 行けば, 食べる → 食べれば, する → すれば, 来る → 来れば. い-adjectives replace い with ければ: 安い → 安ければ (いい → よければ). Negatives work the same way: 行かない → 行かなければ. Nouns and な-adjectives use なら.",
+      "summary": "ば-form: 行けば, 食べれば, すれば, 安ければ, 行かなければ.",
+      "details": "| Type | Dictionary | ば-form |\n| :--- | :--- | :--- |\n| I | 書く／待つ | 書けば／待てば |\n| II | 見る | 見れば |\n| III | する／来る | すれば／来れば |\n| い-adj | 安い／いい | 安ければ／よければ |\n| negative | 行かない | 行かなければ |\n| N／な-adj | 雨／暇 | 雨なら／暇なら |",
+      "tags": ["conditional", "meta-conjugation"],
+      "examples": [
+        { "jp": "急げば、間に合いますよ。", "en": "If you hurry, you'll make it." },
+        { "jp": "天気がよければ、山が見えます。", "en": "If the weather's good, you can see the mountains." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-2"],
+      "title": "Using 〜ば",
+      "structure": "〜ば、〜",
+      "meaning": "States what is needed for a result: \"if (only)…, then…\".",
+      "explanation": "ば focuses on the condition: what must be true for the result. It is common in advice and general truths. When the first clause is about an action, the second usually cannot be a request or wish (✗ 着けば、電話してください); with states (ある, いい, adjectives) it can be: 時間があれば、来てください.",
+      "summary": "ば highlights the condition needed for a result.",
+      "details": "- 説明書を読め**ば**、分かります。 Read the manual and you'll understand.\n- 安けれ**ば**、買います。 If it's cheap, I'll buy it.\n- 時間があれ**ば**、手伝ってください。 If you have time, please help.\n- 〜なければ: 練習しなければ、上手になりません。",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "毎日練習すれば、上手になりますよ。", "en": "If you practise every day, you'll get good at it." },
+        { "jp": "よければ、このかさを使ってください。", "en": "If you like, please use this umbrella." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-5"],
+      "title": "Question word + 〜ば いいですか",
+      "structure": "何／どこ／どう… + Vば-form + いいですか",
+      "meaning": "\"What / where / how should I…?\": asking for advice.",
+      "explanation": "This means the same as 〜たら いいですか (Lesson 1). The answer often uses 〜ば いい or 〜たら いい: \"You just need to…\".",
+      "summary": "Question word + 〜ば いいですか = what should I do? Answer with 〜ば いいです.",
+      "details": "- どうすれ**ば いいですか**。 What should I do?\n- 何時に来れ**ば いいですか**。 What time should I come?\n- ここを押せ**ば いいです**よ。 You just press here.",
+      "tags": ["advice-suggestion", "conditional"],
+      "examples": [
+        { "jp": "この書類はだれに出せばいいですか。", "en": "Who should I hand this form to?" },
+        { "jp": "漢字が上手になりたいんですが、どうすればいいですか。", "en": "I want to get better at kanji. What should I do?" }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-4"],
+      "title": "N なら、〜",
+      "structure": "N／plain form + なら、〜",
+      "meaning": "\"If it's… (that you're talking about), then…\": takes up what the other person said and gives advice or information about it.",
+      "explanation": "なら picks up a topic the listener has just raised and responds to it. It is the natural way to recommend something: \"If it's ramen you want, try that shop.\" With verbs, the なら clause can come after the main event: 行くなら、切符を先に買って (if you're going, buy a ticket first).",
+      "summary": "N なら = if it's N (you mean), then…; perfect for recommendations.",
+      "details": "- 温泉に行きたいんですが。…温泉**なら**、箱根がいいですよ。 I want to go to a hot spring. — For hot springs, Hakone is good.\n- 京都へ行く**なら**、秋がいいですよ。 If you're going to Kyoto, autumn is best.",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "おいしいラーメンが食べたいです。…ラーメンなら、駅の前の店がいいですよ。", "en": "I want some good ramen. — For ramen, the place in front of the station is great." },
+        { "jp": "パソコンを買うなら、秋葉原が安いですよ。", "en": "If you're buying a computer, Akihabara is cheap." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-10-3"],
+      "title": "〜と, 〜ば, 〜たら or 〜なら?",
+      "structure": "comparison",
+      "meaning": "How the four ways of saying \"if\" differ.",
+      "explanation": "と is for automatic results (machines, directions, nature). ば focuses on the condition needed. たら is the all-rounder and allows requests, wishes and invitations afterwards; it also means \"when, once\". なら responds to a topic someone has raised, often with advice. When unsure, たら is usually safe.",
+      "summary": "と automatic, ば condition, たら general (and \"when\"), なら \"if that's the case\".",
+      "details": "| | Typical use | Request after it? |\n| :--- | :--- | :--- |\n| **と** | ボタンを押す**と**、水が出ます。 | ✗ |\n| **ば** | 急げ**ば**、間に合います。 | only after states |\n| **たら** | 着い**たら**、電話して。 | ✓ |\n| **なら** | 京都**なら**、秋がいいよ。 | ✓ |",
+      "tags": ["conditional", "comparison"],
+      "examples": [
+        { "jp": "右に曲がると、駅が見えます。", "en": "Turn right and you'll see the station." },
+        { "jp": "駅に着いたら、メールしてください。", "en": "Please text me when you get to the station." },
+        { "jp": "駅へ行くなら、バスが便利ですよ。", "en": "If you're going to the station, the bus is handy." }
+      ]
+    },
+    {
+      "replaces": ["n4-grammar-20-1"],
+      "title": "〜場合は",
+      "structure": "V dictionary form／Vた／Vない／い-adj／な-adj な／Nの + 場合は、〜",
+      "meaning": "\"In the event of…\", \"in case…\": a situation that may arise, and what to do then.",
+      "explanation": "場合 (\"case\") is used for hypothetical situations, usually unwelcome ones, in instructions, rules and announcements. It is more formal than たら. It is not used for a single event that will certainly happen.",
+      "summary": "〜場合は = in the event that; typical of instructions and notices.",
+      "details": "- 地震の**場合は**、エレベーターを使わないでください。 In the event of an earthquake, do not use the lifts.\n- 遅れる**場合は**、連絡してください。 If you are going to be late, please let us know.\n- 気分が悪い**場合は**、すぐ言ってください。",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "火事の場合は、このボタンを押してください。", "en": "In case of fire, press this button." },
+        { "jp": "雨の場合は、運動会は来週になります。", "en": "If it rains, the sports day will be moved to next week." }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import {
   READING_PRACTICE_SYSTEM_PROMPT,
   READING_PRACTICE_SCHEMA_TEMPLATE,
   getReadingPracticeRules,
+  N4_FORM_MILESTONES,
   N5_FORM_MILESTONES,
   firstClause,
 } from './prompts';
@@ -79,9 +80,16 @@ function lessonCeiling(level: LevelType, lesson: number): string[] {
     return lines;
   }
   if (level === 'N4') {
-    return [
-      `- The learner knows all of N5 and N4 Lessons 1–${lesson} (Minna no Nihongo Lessons 26–${25 + lesson}). Do not use N4 grammar from later lessons.`,
-    ];
+    const lines = [`- The learner knows all of N5 and N4 Lessons 1–${lesson}. Do not use N4 grammar from later lessons.`];
+    const notYet = N4_FORM_MILESTONES.filter((m) => m.lesson > lesson);
+    if (notYet.length) {
+      lines.push(
+        `- Not taught yet, so do not use them in the passage or the options: ${notYet
+          .map((m) => `${m.form} (Lesson ${m.lesson})`)
+          .join('; ')}.`
+      );
+    }
+    return lines;
   }
   if (level === 'N1') return [];
   return [`- Grammar outside the targets must come from ${level} or lower levels.`];

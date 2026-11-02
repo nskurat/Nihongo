@@ -254,11 +254,12 @@ describe('Lesson targets', () => {
     expect(prompt).toContain('plain style');
   });
 
-  it('late N5 lessons have no not-yet-taught list; N4 maps to Minna 26–50', () => {
+  it('late N5 lessons have no not-yet-taught list; N4 names its later forms', () => {
     expect(buildReadingPracticePrompt({ level: 'N5', lesson: 25, rng: seeded() })).not.toContain('Not taught yet');
-    expect(buildReadingPracticePrompt({ level: 'N4', lesson: 10, rng: seeded() })).toContain(
-      'Minna no Nihongo Lessons 26–35'
-    );
+    const n4 = buildReadingPracticePrompt({ level: 'N4', lesson: 10, rng: seeded() });
+    expect(n4).toContain('N4 Lessons 1–10');
+    expect(n4).toContain('causative (〜せる／〜させる) (Lesson 23)');
+    expect(n4).not.toContain('Minna');
   });
 
   it('adds a de-duplicated kanji ceiling only when one is given', () => {

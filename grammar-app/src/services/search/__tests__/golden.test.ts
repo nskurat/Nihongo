@@ -114,13 +114,13 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(r, 'kanji', { t: '分', level: 'N5', lesson: 4 });
     expectContains(r, 'vocab', [
       { t: '自分', level: 'N5', lesson: 4 },
-      { t: '十分', level: 'N4', lesson: 7 },
+      { t: '十分', level: 'N4', lesson: 17 },
     ]);
     // 半分 is an N5-list word (N5, with the N4 L19 textbook row as a repeat).
     const all = await run('分', { limitPerType: Infinity });
     expectContains(all, 'vocab', [{ t: '半分', level: 'N5' }]);
     // Same top rows for an N3 learner: the current level gets no priority (orchestrator decision).
-    expectContains(await run('分', { rankLevel: 'N3' }), 'vocab', [{ t: '自分', level: 'N5', lesson: 4 }, { t: '十分', level: 'N4', lesson: 7 }]);
+    expectContains(await run('分', { rankLevel: 'N3' }), 'vocab', [{ t: '自分', level: 'N5', lesson: 4 }, { t: '十分', level: 'N4', lesson: 17 }]);
     expect(r.groups.grammar.some((h) => h.title === '今 〜時〜分です' && h.level === 'N5')).toBe(true);
   });
 
@@ -137,20 +137,21 @@ describe('§5 acceptance list (golden queries)', () => {
     }
   });
 
-  it('T-09 although (amended): the 8 meaning hits, plus the Concession / Contrast chip members after them', async () => {
+  it('T-09 although (amended): the 9 meaning hits, plus the Concession / Contrast chip members after them', async () => {
     // Fix round 2: a chip match also lists that chip's grammar, so the group is no longer
-    // exactly 8. The 8 points whose meaning says "although" are all there, as english hits.
+    // exactly 8. The points whose meaning says "although" are all there, as english hits;
+    // the N4 rewrite (2026-11) made のに the ninth.
     const r = await run('although', { limitPerType: Infinity });
     const meaningHits = r.groups.grammar.filter((h) => h.matchKind === 'english');
     expect(titles(meaningHits).sort()).toEqual(
       [
-        'けど／けれども N5 L10', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
+        'けど／けれども N5 L10', '〜のに（although, and yet） N4 L9', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
         '〜とはいえ N1 L1', '〜ものを N1 L1', '〜ところを N1 L32',
       ].sort()
     );
     expect(r.groupOrder[0]).toBe('grammar');
     // けど and のに are the teacher's core answers for "although".
-    expect(r.groups.grammar.slice(0, 2).map((h) => h.title)).toEqual(['けど／けれども', 'V／い-adj／な-adj plain form／N（だ→な）＋ のに、〜']);
+    expect(r.groups.grammar.slice(0, 2).map((h) => h.title)).toEqual(['けど／けれども', '〜のに（although, and yet）']);
   });
 
   // 17 → 18: 〜わりに（は） N3 L8 added for the 2026-11 regression (R15).
@@ -193,7 +194,7 @@ describe('§5 acceptance list (golden queries)', () => {
     const b = await run('not only', { limitPerType: Infinity });
     const both: SearchResponse = { ...a, groups: { ...a.groups, grammar: [...a.groups.grammar, ...b.groups.grammar] } };
     expectContains(both, 'grammar', [
-      { t: 'それに', level: 'N4', lesson: 3 },
+      { t: 'それに', level: 'N4', lesson: 4 },
       { t: 'さらに', level: 'N3', lesson: 3 },
       { t: '〜上に', level: 'N3', lesson: 13 },
       { t: '〜ばかりでなく／〜だけでなく', level: 'N3', lesson: 5 },
@@ -248,11 +249,13 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(await run('わけにはいかない'), 'grammar', { t: '〜わけにはいかない', level: 'N3', lesson: 18 });
   });
 
-  it('T-20 いただけませんか: N4 L1 top, contains N4 L8 and N4 L23', async () => {
+  // N4 lessons follow the 2026-11 N4 restructure (docs/content/n4-restructure.md):
+  // と伝えていただけませんか moved from L8 to L12.
+  it('T-20 いただけませんか: N4 L1 top, contains N4 L12 and N4 L23', async () => {
     const r = await run('いただけませんか');
-    expectTop(r, 'grammar', { t: 'Vて-form + いただけませんか', level: 'N4', lesson: 1 });
+    expectTop(r, 'grammar', { t: 'Vて いただけませんか', level: 'N4', lesson: 1 });
     const at = r.groups.grammar.map((h) => `${h.level}-${h.lesson}`);
-    expect(at).toContain('N4-8');
+    expect(at).toContain('N4-12');
     expect(at).toContain('N4-23');
   });
 
@@ -373,7 +376,7 @@ describe('§5 acceptance list (golden queries)', () => {
       { t: '迷う [道に〜]', level: 'N3', lesson: 1 },
     ]);
     // D1 (docs/search/07-regression.md): core N5/N4 words make the visible top 8.
-    expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [{ t: '無くなる', level: 'N4', lesson: 13 }]);
+    expectContains(await run('lost', { rankLevel: 'N3' }), 'vocab', [{ t: '無くなる', level: 'N4', lesson: 5 }]);
     expectContains(await run('lost'), 'kanji', [{ t: '迷', level: 'N3', lesson: 1 }]);
   });
 
@@ -471,8 +474,8 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
   });
 
   it('R4 plain-form look-ups find grammar titled in ます/です', async () => {
-    expectContains(await run('たほうがいい'), 'grammar', [{ t: 'Vた-form／Vない-form ない + ほうがいいです', level: 'N4' }]);
-    expectContains(await run('かもしれない'), 'grammar', [{ t: 'plain form + かもしれません', level: 'N4' }]);
+    expectContains(await run('たほうがいい'), 'grammar', [{ t: '〜ほうが いいです', level: 'N4' }]);
+    expectContains(await run('かもしれない'), 'grammar', [{ t: '〜かもしれません', level: 'N4' }]);
   });
 
   it('R5 いく is not いい; ii is romaji for いい', async () => {
@@ -504,7 +507,7 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
     expect((await run('こんにちは')).groups.vocab.filter((h) => h.title === 'こんにちは')).toHaveLength(1);
     expectTop(await run('わりに'), 'grammar', { t: '〜わりに（は）', level: 'N3' });
     expectTop(await run('なんて'), 'grammar', { t: '〜なんて', level: 'N3' });
-    expectContains(await run('なきゃ'), 'grammar', [{ t: 'Vない-formなければ なりません', level: 'N4' }]);
+    expectContains(await run('なきゃ'), 'grammar', [{ t: '〜なければ なりません／〜ないと', level: 'N4' }]);
   });
 
   it('R14 want → the たい point first; a gloss match before an explanation-sentence match', async () => {
@@ -512,7 +515,7 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
     expect(g[0]).toBe('V ます-stem たいです');
     // The old explanation-sentence hit (N5 "Word(s) ですか") no longer mentions "want" since
     // the N5 rewrite; if it ever matches again, it must still rank below the gloss match.
-    const hoshii = g.indexOf('V-て ほしい / V-ないで ほしい');
+    const hoshii = g.indexOf('Vて ほしい／Vないで ほしい');
     const echo = g.indexOf('N ですか（checking what you heard）');
     expect(hoshii).toBeGreaterThan(0);
     if (echo >= 0) expect(hoshii).toBeLessThan(echo);
