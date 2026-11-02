@@ -5,7 +5,7 @@ import { stripAnnotation } from './jlptContent';
  * order for this app's own 25-lesson sequence (docs/content/n5-restructure.md,
  * docs/content/n4-restructure.md). Pure helpers used by scripts/restructure-n5.ts and
  * scripts/restructure-n4.ts; tested in grammar-app/src/__tests__/scripts/n5Restructure.test.ts.
- * Both levels have 25 lessons.
+ * N5 and N4 have 25 lessons, N3 has 24: functions that walk lessons take the count.
  */
 
 export type Row = Record<string, unknown> & { uid: string; lesson: number };
@@ -28,13 +28,20 @@ export interface GrammarSpec {
 
 export const LESSONS = 25;
 
+export type RestructureLevel = 'n5' | 'n4' | 'n3';
+
 /** "1:6 2:1 …" (old position → new lesson), one string per old lesson → old uid → new lesson. */
-export function parseAssignments(level: string, section: string, assign: Record<string, string>): Map<string, number> {
+export function parseAssignments(
+  level: string,
+  section: string,
+  assign: Record<string, string>,
+  lessons: number = LESSONS
+): Map<string, number> {
   const out = new Map<string, number>();
   for (const [oldLesson, pairs] of Object.entries(assign)) {
     for (const pair of pairs.trim().split(/\s+/)) {
       const [pos, lesson] = pair.split(':').map(Number);
-      if (!Number.isInteger(pos) || !Number.isInteger(lesson) || lesson < 1 || lesson > LESSONS)
+      if (!Number.isInteger(pos) || !Number.isInteger(lesson) || lesson < 1 || lesson > lessons)
         throw new Error(`bad assignment "${pair}" in old lesson ${oldLesson}`);
       const uid = `${level}-${section}-${oldLesson}-${pos}`;
       if (out.has(uid)) throw new Error(`${uid} assigned twice`);
@@ -66,11 +73,12 @@ export function regroup(
   rows: Row[],
   lessonOf: (row: Row) => number,
   prefix: string,
-  first: (row: Row) => boolean = () => false
+  first: (row: Row) => boolean = () => false,
+  lessons: number = LESSONS
 ): { file: LessonFile; map: UidMap } {
   const file: LessonFile = {};
   const map: UidMap = {};
-  for (let l = 1; l <= LESSONS; l++) file[l] = [];
+  for (let l = 1; l <= lessons; l++) file[l] = [];
   const sorted = [...rows].sort((a, b) => Number(first(b)) - Number(first(a)) || byOldPosition(a, b));
   for (const row of sorted) {
     const lesson = lessonOf(row);
@@ -86,13 +94,13 @@ export function regroup(
  * scripts/fill-n5-n4-gaps.ts), or, when none do or that lesson is full, to the emptiest
  * lesson at or after it. `cap` keeps lessons balanced.
  */
-export function placeKanji(kanji: Row[], vocab: LessonFile, cap: number): Map<string, number> {
-  const counts = Array.from({ length: LESSONS + 1 }, () => 0);
+export function placeKanji(kanji: Row[], vocab: LessonFile, cap: number, lessons: number = LESSONS): Map<string, number> {
+  const counts = Array.from({ length: lessons + 1 }, () => 0);
   const out = new Map<string, number>();
   for (const row of [...kanji].sort(byOldPosition)) {
     const k = String(row.kanji);
     const uses: number[] = [];
-    for (let l = 1; l <= LESSONS; l++) {
+    for (let l = 1; l <= lessons; l++) {
       if ((vocab[l] ?? []).some((v) => stripAnnotation(String(v.word)).includes(k))) uses.push(l);
     }
     const open = uses.find((l) => counts[l] < cap);
@@ -100,7 +108,7 @@ export function placeKanji(kanji: Row[], vocab: LessonFile, cap: number): Map<st
     if (lesson === undefined) {
       const from = uses[0] ?? 1;
       lesson = from;
-      for (let l = from; l <= LESSONS; l++) if (counts[l] < counts[lesson]) lesson = l;
+      for (let l = from; l <= lessons; l++) if (counts[l] < counts[lesson]) lesson = l;
     }
     counts[lesson] += 1;
     out.set(row.uid, lesson);
@@ -109,7 +117,7 @@ export function placeKanji(kanji: Row[], vocab: LessonFile, cap: number): Map<st
 }
 
 /** Field order of a grammar row, matching the other levels' files. */
-export function grammarRow(spec: GrammarSpec, lesson: number, n: number, level: 'n5' | 'n4' = 'n5'): Row {
+export function grammarRow(spec: GrammarSpec, lesson: number, n: number, level: RestructureLevel = 'n5'): Row {
   return {
     uid: `${level}-grammar-${lesson}-${n}`,
     level: level.toUpperCase(),
@@ -131,11 +139,12 @@ export function grammarRow(spec: GrammarSpec, lesson: number, n: number, level: 
 export function buildGrammar(
   lessons: Record<string, GrammarSpec[]>,
   oldUids: readonly string[],
-  level: 'n5' | 'n4' = 'n5'
+  level: RestructureLevel = 'n5',
+  count: number = LESSONS
 ): { file: LessonFile; map: UidMap } {
   const file: LessonFile = {};
   const map: UidMap = {};
-  for (let l = 1; l <= LESSONS; l++) {
+  for (let l = 1; l <= count; l++) {
     file[l] = (lessons[l] ?? []).map((spec, i) => {
       const row = grammarRow(spec, l, i + 1, level);
       for (const old of spec.replaces) {

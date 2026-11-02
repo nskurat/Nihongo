@@ -31,6 +31,8 @@ npx tsx scripts/restructure-n5.ts                   # one-time (2026-11): N5 int
 npx tsx scripts/rewrite-n5-vocab-examples.ts        # N5 core vocab examples in our own words (idempotent)
 npx tsx scripts/restructure-n4.ts                   # one-time (2026-11): N4 into this app's own lessons; refuses to re-run
 npx tsx scripts/rewrite-n4-vocab-examples.ts        # N4 core vocab examples in our own words (idempotent)
+npx tsx scripts/restructure-n3.ts                   # one-time (2026-11): N3 into this app's own lessons; refuses to re-run
+npx tsx scripts/rewrite-n3-vocab-examples.ts        # the three N3 examples that named people (idempotent)
 npm run validate:data
 ```
 
@@ -39,18 +41,18 @@ level change can move items out of N2/N1 (whose uids are positional and regenera
 All take `--dry-run`. `build-upper-kanji-vocab.ts` rewrites N2/N1 rows without `pos`, so
 `fill-vocab-pos.ts` has to run after it; if that run adds words, refresh `jmdict-pos.json` first.
 
-Since the N5 and N4 restructures, steps above that place rows into N5 or N4 lessons
-(`fill-n5-n4-gaps.ts`, `add-core-expressions.ts`, `fix-n4-compounds.ts`, `renumber-n4.ts`)
-describe the old lesson numbers; don't re-run them for N5 or N4.
+Since the N5, N4 and N3 restructures, steps above that place rows into N5–N3 lessons
+(`fill-n5-n4-gaps.ts`, `add-core-expressions.ts`, `fix-n4-compounds.ts`, `renumber-n4.ts`,
+`review-n3-kanji-vocab.ts`) describe the old lesson numbers; don't re-run them for N5–N3.
 
 ## Grammar provenance
 
-N5 and N4 grammar are written in our own words (2026-11, `docs/content/n5-restructure.md`,
-`docs/content/n4-restructure.md`). Textbook text is never a source: explanations and example
-sentences are original, and grammar points follow the standard JLPT syllabus, not any one
-book's lessons. A spot check against *Minna no Nihongo* Book II had found copied examples and
-closely reworded explanations in N4; N3 is next (backlog §4). N2/N1 were built from online
-sources.
+N5, N4 and N3 grammar are written in our own words, in this app's own lesson order (2026-11,
+`docs/content/n5-restructure.md`, `n4-restructure.md`, `n3-restructure.md`). Textbook text
+is never a source: explanations and example sentences are original, and grammar points
+follow the standard JLPT syllabus, not any one book's lessons. A spot check against *Minna no
+Nihongo* had found copied examples in N4; the N5–N3 lessons had followed its books. N2/N1
+were built from online sources.
 
 ## Rules and decisions
 

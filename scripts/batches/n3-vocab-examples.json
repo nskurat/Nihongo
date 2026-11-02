@@ -1,0 +1,20 @@
+{
+  "_comment": "N3 restructure (2026-11): the only N3 vocab examples that used named characters, rewritten with this app's own cast. The other 1,864 examples were not textbook sentences and are kept. uid -> [expected word, exampleJp, exampleEn]. Applied by scripts/rewrite-n3-vocab-examples.ts.",
+  "examples": {
+    "n3-vocab-4-13": [
+      "〜宅",
+      "森さん宅に、お祝いの花を届けてもらった。",
+      "I had celebratory flowers delivered to the Mori residence."
+    ],
+    "n3-vocab-10-14": [
+      "伝言",
+      "青木さんに伝言をお願いできますか。",
+      "Could I leave a message for Ms. Aoki?"
+    ],
+    "n3-vocab-7-18": [
+      "いつもお世話になっております。",
+      "さくら商事の小林です。いつもお世話になっております。",
+      "This is Kobayashi from Sakura Trading. Thank you for your continued support."
+    ]
+  }
+}

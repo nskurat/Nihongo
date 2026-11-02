@@ -64,11 +64,10 @@ included. Nice to have:
 
 Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by hand.
 
-- **Rewrite N3 grammar in our own words (top content item)**: N5 and N4 are done
-  (`docs/content/n5-restructure.md`, `docs/content/n4-restructure.md`). A spot check of
-  *Minna no Nihongo* Book II had found copied examples in N4; N3 hasn't been checked yet. Do it
-  the same way: our own lesson order, regrouped vocab, every point rewritten, and a
-  Japanese-teacher review before merge.
+- **N3 vocab glosses from the list import**: a few rows carry wrong or odd glosses, seen
+  while regrouping N3 (2026-11): 仕舞い "sisters", 仕舞った "Damn it!", 然う "so", 屯 "1000
+  ton", マッカーサー "Stuart McArthur", 渡辺 昇 and 『鉄腕アトム』 as vocab rows. Fix through a
+  script after a teacher pass; no uid changes.
 - **N4 grammar words filed in N5 vocab**: もし〜たら and いくら〜ても (N5 lesson 25) are N4
   conditionals that no N5 grammar point teaches; N4 now teaches them in Lesson 9. Moving the
   two rows would renumber N5 vocab, so for now they stay; mark them as a preview or move them

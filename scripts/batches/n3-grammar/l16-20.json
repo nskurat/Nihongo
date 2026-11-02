@@ -1,0 +1,882 @@
+{
+  "16": [
+    {
+      "replaces": [
+        "n3-grammar-16-2"
+      ],
+      "title": "〜にしたがって",
+      "structure": "V dictionary form／N + にしたがって（従って）",
+      "meaning": "\"As… (so…)\": one change follows another; also \"in accordance with\".",
+      "explanation": "With verbs of change, にしたがって says that as one thing changes, another changes with it: 年を取るにしたがって. With nouns like 指示, 規則, it means \"following, in line with\": 先生の指示にしたがって.",
+      "summary": "〜にしたがって = as (one thing changes) / in accordance with.",
+      "details": "- 山を登る**にしたがって**、気温が下がる。 The higher you climb, the colder it gets.\n- 係員の指示**にしたがって**、避難してください。 Please evacuate following the staff's instructions.",
+      "tags": [
+        "change-of-state",
+        "simultaneous-action"
+      ],
+      "examples": [
+        {
+          "jp": "町が大きくなるにしたがって、交通の問題も増えた。",
+          "en": "As the town grew, traffic problems increased too."
+        },
+        {
+          "jp": "地図にしたがって歩いたら、すぐに着いた。",
+          "en": "I followed the map and got there in no time."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-16-3"
+      ],
+      "title": "〜につれて",
+      "structure": "V dictionary form／N + につれて",
+      "meaning": "\"As…\": a gradual change brings another gradual change.",
+      "explanation": "につれて is close to にしたがって, but describes natural, gradual change on both sides, often in time: 時間がたつにつれて. It does not have the \"following instructions\" meaning.",
+      "summary": "〜につれて = as (gradually)…",
+      "details": "- 時間がたつ**につれて**、悲しみは小さくなる。 As time passes, sadness fades.\n- 試験が近づく**につれて**、緊張してきた。 As the exam drew near, I got nervous.",
+      "tags": [
+        "change-of-state",
+        "simultaneous-action"
+      ],
+      "examples": [
+        {
+          "jp": "日本の生活に慣れるにつれて、友だちも増えてきた。",
+          "en": "As I got used to life in Japan, I made more friends."
+        },
+        {
+          "jp": "夜が更けるにつれて、雨が強くなった。",
+          "en": "As the night went on, the rain got heavier."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-20-2"
+      ],
+      "title": "〜とともに",
+      "structure": "N／V dictionary form + とともに",
+      "meaning": "\"Together with\"; \"as… (so…)\"; \"at the same time as\".",
+      "explanation": "とともに is a formal と一緒に (together with a person or thing). It also links two changes (時代とともに, \"with the times\") or two simultaneous events. It is common in writing and speeches.",
+      "summary": "〜とともに = together with / along with (change) / at the same time as.",
+      "details": "- 家族**とともに**新年を迎えた。 I saw in the New Year with my family.\n- 時代**とともに**、言葉も変わる。 Language changes with the times.\n- 試合終了**とともに**、雨が降り出した。",
+      "tags": [
+        "simultaneous-action",
+        "formal-written"
+      ],
+      "examples": [
+        {
+          "jp": "技術の進歩とともに、生活はますます便利になった。",
+          "en": "With advances in technology, life has become ever more convenient."
+        },
+        {
+          "jp": "仲間とともに、この店を作ってきた。",
+          "en": "I built this shop up together with my friends."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-16-4"
+      ],
+      "title": "〜に反して",
+      "structure": "N（予想・期待・意志…）に反して",
+      "meaning": "\"Contrary to…\", \"against…\".",
+      "explanation": "に反して says that the result goes against an expectation, a wish or a rule. It goes with a small set of nouns: 予想, 期待, 意志, 規則, 親の希望.",
+      "summary": "N に反して = contrary to (expectation / wishes / rules).",
+      "details": "- 予想**に反して**、試験は簡単だった。 Contrary to my expectations, the exam was easy.\n- 親の希望**に反して**、彼は画家になった。 Against his parents' wishes, he became a painter.",
+      "tags": [
+        "concession-contrast",
+        "formal-written"
+      ],
+      "examples": [
+        {
+          "jp": "みんなの期待に反して、チームは一回戦で負けた。",
+          "en": "Contrary to everyone's expectations, the team lost in the first round."
+        },
+        {
+          "jp": "天気予報に反して、一日中いい天気だった。",
+          "en": "Contrary to the forecast, it was fine all day."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-20-1"
+      ],
+      "title": "〜を通して／〜を通じて",
+      "structure": "N + を通して／を通じて",
+      "meaning": "\"Through (a means or person)\"; \"throughout (a period)\".",
+      "explanation": "を通して gives the means or channel by which something is done or learned: 友だちを通して知り合った (we met through a friend). With a period it means \"all through\": 一年を通して. を通じて is slightly more formal.",
+      "summary": "N を通して = through (means) / throughout (period).",
+      "details": "- インターネット**を通して**、世界中の人と話せる。 Through the internet, you can talk to people all over the world.\n- この島は一年**を通して**暖かい。 This island is warm all year round.",
+      "tags": [
+        "viewpoint-standpoint",
+        "time-relative"
+      ],
+      "examples": [
+        {
+          "jp": "アルバイトを通して、いろいろな人と知り合った。",
+          "en": "I got to know all sorts of people through my part-time job."
+        },
+        {
+          "jp": "留学を通じて、自分の国について考えるようになった。",
+          "en": "Studying abroad made me think about my own country."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-17-7"
+      ],
+      "title": "〜とおりに／〜どおりに",
+      "structure": "V dictionary form／Vた／Nの + とおりに ／ N + どおりに",
+      "meaning": "\"Just as…\", \"exactly as…\".",
+      "explanation": "とおり means \"the way\": 言われたとおりにする (do as you were told). Directly after a noun it becomes どおり: 予定どおり (as planned), 説明書どおり.",
+      "summary": "〜とおりに = exactly as…; N どおり = according to N.",
+      "details": "- わたしが言う**とおりに**、書いてください。 Write it exactly as I say.\n- 地図の**とおりに**行けば、着きます。 Follow the map and you'll get there.\n- 予定**どおり**に終わった。 It finished as planned.",
+      "tags": [
+        "similarity-appearance"
+      ],
+      "examples": [
+        {
+          "jp": "説明書に書いてあるとおりに組み立てたのに、動かない。",
+          "en": "I put it together exactly as the instructions said, but it won't work."
+        },
+        {
+          "jp": "飛行機は時間どおりに到着した。",
+          "en": "The plane arrived on time."
+        }
+      ]
+    }
+  ],
+  "17": [
+    {
+      "replaces": [
+        "n3-grammar-18-1"
+      ],
+      "title": "〜に違いない",
+      "structure": "Plain form（な-adj／N: だ drops）+ に違いない",
+      "meaning": "\"Must be…\", \"there's no doubt that…\": a strong conviction.",
+      "explanation": "に違いない expresses near-certainty based on the speaker's own reasoning or intuition. It is more subjective than はずだ, which rests on known facts, and is common in writing and inner thoughts.",
+      "summary": "〜に違いない = it must be (I'm convinced).",
+      "details": "- 電気がついている。だれかいる**に違いない**。 The light's on. Someone must be in.\n- あの人は先生**に違いない**。 That person must be a teacher.\n- Compare: 予定では着いている**はずだ** (going by the schedule).",
+      "tags": [
+        "certainty-expectation",
+        "conjecture-inference"
+      ],
+      "examples": [
+        {
+          "jp": "あんなにうれしそうな顔をしている。何かいいことがあったに違いない。",
+          "en": "Look how happy she looks. Something good must have happened."
+        },
+        {
+          "jp": "この字はケンの字に違いない。",
+          "en": "This handwriting has to be Ken's."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-18-4"
+      ],
+      "title": "〜わけがない",
+      "structure": "Plain form（な-adj な／Nの）+ わけがない",
+      "meaning": "\"There's no way…\", \"it's impossible that…\".",
+      "explanation": "わけがない rules something out completely, based on the speaker's view of the situation. It is close to はずがない, and in conversation it often becomes わけない.",
+      "summary": "〜わけがない = no way, impossible.",
+      "details": "- 一週間で日本語がペラペラになる**わけがない**。 There's no way you'll be fluent in Japanese in a week.\n- あの人が犯人な**わけがない**。 He can't possibly be the culprit.",
+      "tags": [
+        "certainty-expectation",
+        "emphasis-assertion"
+      ],
+      "examples": [
+        {
+          "jp": "あんなに練習していたんだから、負けるわけがない。",
+          "en": "After all that practice, there's no way they'll lose."
+        },
+        {
+          "jp": "こんな簡単な問題、間違えるわけがないよ。",
+          "en": "There's no way I'd get such an easy question wrong."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-18-5"
+      ],
+      "title": "〜わけにはいかない",
+      "structure": "V dictionary form + わけにはいかない ／ Vない + わけにはいかない",
+      "meaning": "\"Can't (very well)…\", \"must…\": prevented by duty, manners or circumstances.",
+      "explanation": "わけにはいかない is not about ability but about what is acceptable: you cannot do it because of your position, a promise or common sense. The negative version, 〜ないわけにはいかない, means \"I can't not do it\", that is, \"I have to\".",
+      "summary": "V わけにはいかない = can't (morally / socially); Vない わけにはいかない = have to.",
+      "details": "- 明日は試験だから、遊ぶ**わけにはいかない**。 I've got an exam tomorrow, so I can't go out.\n- 先輩に頼まれたら、断る**わけにはいかない**。 If a senior asks, I can't refuse.\n- 招待されたから、行か**ないわけにはいかない**。 I've been invited, so I have to go.",
+      "tags": [
+        "obligation-necessity",
+        "prohibition"
+      ],
+      "examples": [
+        {
+          "jp": "車で来たので、お酒を飲むわけにはいかない。",
+          "en": "I came by car, so I can't drink."
+        },
+        {
+          "jp": "大事な会議なので、休むわけにはいかない。",
+          "en": "It's an important meeting, so I can't take the day off."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-18-6"
+      ],
+      "title": "〜ようがない",
+      "structure": "Vます-stem + ようがない",
+      "meaning": "\"There's no way to…\": no method exists.",
+      "explanation": "よう here means \"way, method\". Vます-stem + ようがない says that it is impossible to do something because there is no means: 連絡しようがない (no way to contact). 〜ようもない is a stronger version.",
+      "summary": "Stem + ようがない = there's no way (method) to…",
+      "details": "- 住所が分からないから、手紙の送り**ようがない**。 I don't know the address, so there's no way to send a letter.\n- こんなに壊れていたら、直し**ようがない**。 If it's this broken, there's no fixing it.",
+      "tags": [
+        "possibility",
+        "partial-negation"
+      ],
+      "examples": [
+        {
+          "jp": "電話番号を知らないので、連絡のしようがない。",
+          "en": "I don't know the number, so I have no way to get in touch."
+        },
+        {
+          "jp": "そんなに急に言われても、答えようがありません。",
+          "en": "You've asked so suddenly that I really can't answer."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-22-4"
+      ],
+      "title": "〜とは限らない",
+      "structure": "Plain form + とは限らない（必ずしも／いつも…）",
+      "meaning": "\"Not necessarily\", \"not always\".",
+      "explanation": "とは限らない denies that something is always true. It often goes with 必ずしも, いつも, だれでも: 高いものが必ずしもいいとは限らない (expensive things aren't necessarily good).",
+      "summary": "〜とは限らない = it's not always the case that…",
+      "details": "- 天気予報が当たる**とは限らない**。 The weather forecast isn't always right.\n- 日本人だから敬語が上手だ**とは限らない**。 Being Japanese doesn't necessarily mean you're good at keigo.",
+      "tags": [
+        "partial-negation",
+        "possibility"
+      ],
+      "examples": [
+        {
+          "jp": "値段が高いからといって、おいしいとは限らない。",
+          "en": "Just because it's expensive doesn't mean it tastes good."
+        },
+        {
+          "jp": "毎日練習しても、すぐに上手になるとは限らない。",
+          "en": "Even if you practise every day, you won't necessarily improve quickly."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-23-1"
+      ],
+      "title": "〜可能性がある",
+      "structure": "Plain form（な-adj な／Nの）+ 可能性がある／高い／低い",
+      "meaning": "\"There's a chance that…\", \"it's possible that…\".",
+      "explanation": "可能性がある states a possibility in an objective, slightly formal way, common in news and reports. Its strength can be adjusted: 可能性が高い (likely), 可能性が低い (unlikely). It is more formal than かもしれない.",
+      "summary": "〜可能性がある = there's a possibility that…",
+      "details": "- 台風で電車が止まる**可能性がある**。 The trains may stop because of the typhoon.\n- 今日中に終わる**可能性は低い**。 It's unlikely to be finished today.",
+      "tags": [
+        "possibility",
+        "conjecture-inference"
+      ],
+      "examples": [
+        {
+          "jp": "明日は大雪になる可能性があるので、早めに帰ってください。",
+          "en": "There's a chance of heavy snow tomorrow, so please go home early."
+        },
+        {
+          "jp": "この計画が成功する可能性は高いと思います。",
+          "en": "I think this plan is likely to succeed."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-21-6"
+      ],
+      "title": "〜そうもない／〜そうにない",
+      "structure": "Vます-stem + そうもない／そうにない",
+      "meaning": "\"Doesn't look like it will…\", \"is unlikely to…\".",
+      "explanation": "The negative of Vます-stem そうだ (looks like it will). It says that, judging from the situation, something is not likely to happen: 雨はやみそうにない (the rain doesn't look like stopping).",
+      "summary": "Stem + そうにない = doesn't look as if it will…",
+      "details": "- 今日中に終わり**そうにない**。 It doesn't look like it'll be done today.\n- この雨はやみ**そうもない**。 This rain shows no sign of stopping.",
+      "tags": [
+        "conjecture-inference",
+        "partial-negation"
+      ],
+      "examples": [
+        {
+          "jp": "仕事が多すぎて、今夜は早く帰れそうにない。",
+          "en": "There's so much work that I don't think I'll get home early tonight."
+        },
+        {
+          "jp": "道がひどく込んでいて、約束の時間に間に合いそうもない。",
+          "en": "The roads are so jammed that I don't think I'll make the appointment."
+        }
+      ]
+    }
+  ],
+  "18": [
+    {
+      "replaces": [
+        "n3-grammar-14-3"
+      ],
+      "title": "〜てしょうがない／〜てしかたがない",
+      "structure": "Vて／い-adj くて／な-adj で + しょうがない・しかたがない",
+      "meaning": "\"Unbearably…\", \"can't help feeling…\": a strong feeling or state you cannot control.",
+      "explanation": "The pattern describes feelings and bodily sensations that are so strong the speaker cannot stand them: 眠くてしょうがない, 心配でしかたがない. しょうがない is more casual than しかたがない. It is used about the speaker's own feelings.",
+      "summary": "〜てしょうがない = unbearably, extremely (a feeling I can't control).",
+      "details": "- 昨日寝なかったので、眠く**てしょうがない**。 I didn't sleep last night, so I'm dying of sleepiness.\n- 子どもの帰りが遅くて、心配**でしかたがない**。 My child is late home and I'm worried sick.",
+      "tags": [
+        "emotion-expression",
+        "degree-extent"
+      ],
+      "examples": [
+        {
+          "jp": "来週の旅行が楽しみでしょうがない。",
+          "en": "I'm so excited about next week's trip I can hardly wait."
+        },
+        {
+          "jp": "歯が痛くてしかたがないので、歯医者に行った。",
+          "en": "My tooth was killing me, so I went to the dentist."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-19-3"
+      ],
+      "title": "〜ずにはいられない",
+      "structure": "Vない-form（ない → ず）+ にはいられない（する → せずには）",
+      "meaning": "\"Can't help (doing)…\", \"can't stop oneself from…\".",
+      "explanation": "The speaker feels compelled to do something even if they try not to: 笑わずにはいられない (I can't help laughing). する becomes せずには. 〜ないではいられない means the same and is a little less formal.",
+      "summary": "〜ずにはいられない = can't help doing…",
+      "details": "- あの映画を見たら、泣か**ずにはいられない**。 You can't watch that film without crying.\n- 困っている人を見ると、手伝わ**ずにはいられない**。 When I see someone in trouble, I can't help lending a hand.",
+      "tags": [
+        "emotion-expression",
+        "spontaneous-perception"
+      ],
+      "examples": [
+        {
+          "jp": "彼の話はおもしろすぎて、笑わずにはいられなかった。",
+          "en": "His story was so funny I couldn't help laughing."
+        },
+        {
+          "jp": "あまりにひどいので、文句を言わずにはいられなかった。",
+          "en": "It was so bad I couldn't stop myself from complaining."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-10-6"
+      ],
+      "title": "〜がたい",
+      "structure": "Vます-stem + がたい",
+      "meaning": "\"Hard to…\": hard to accept emotionally, almost impossible.",
+      "explanation": "がたい goes with verbs of thinking and feeling: 信じがたい (hard to believe), 忘れがたい (unforgettable), 許しがたい (unforgivable). It is formal and expresses that something is emotionally difficult, unlike にくい, which is about physical difficulty.",
+      "summary": "Stem + がたい = hard to (believe / accept / forget).",
+      "details": "- それは信じ**がたい**話だ。 That's a hard story to believe.\n- 忘れ**がたい**思い出 an unforgettable memory\n- Compare: このペンは書き**にくい** (physically hard).",
+      "tags": [
+        "ease-difficulty",
+        "formal-written"
+      ],
+      "examples": [
+        {
+          "jp": "あの優しい人がうそをついたとは、信じがたい。",
+          "en": "It's hard to believe that kind person lied."
+        },
+        {
+          "jp": "初めての海外旅行は、忘れがたい経験になった。",
+          "en": "My first trip abroad became an unforgettable experience."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-16-6"
+      ],
+      "title": "〜を込めて",
+      "structure": "N（気持ち・愛・心…）を込めて",
+      "meaning": "\"With (feeling)\", \"full of…\": putting a feeling into an action.",
+      "explanation": "を込めて says that a feeling is put into what you do or make: 心を込めて (with all one's heart), 感謝を込めて (with gratitude). It is common in letters and when giving gifts.",
+      "summary": "N を込めて = with (love / thanks / care).",
+      "details": "- 心**を込めて**手紙を書いた。 I wrote the letter from the heart.\n- 感謝の気持ち**を込めて**、花を贈ります。 I'm sending flowers to say thank you.\n- 愛**を込めて** (with love)",
+      "tags": [
+        "emotion-expression"
+      ],
+      "examples": [
+        {
+          "jp": "母のために、心を込めてケーキを焼いた。",
+          "en": "I baked a cake for my mother with all my heart."
+        },
+        {
+          "jp": "お世話になった先生に、感謝を込めて手紙を書いた。",
+          "en": "I wrote a letter of thanks to the teacher who had helped me so much."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-19-4"
+      ],
+      "title": "〜ような気がする",
+      "structure": "Plain form（な-adj な／Nの）+ ような気がする",
+      "meaning": "\"I have a feeling that…\", \"it feels as if…\".",
+      "explanation": "ような気がする expresses a vague impression with no clear evidence. It softens a statement: 前に会ったような気がする (I feel like we've met before). Without ような, 〜気がする is also common: 雨が降る気がする.",
+      "summary": "〜ような気がする = I have a feeling that…",
+      "details": "- この道、前に通った**ような気がする**。 I feel as if I've walked this road before.\n- 何か忘れている**ような気がする**。 I have a feeling I've forgotten something.",
+      "tags": [
+        "conjecture-inference",
+        "emotion-expression"
+      ],
+      "examples": [
+        {
+          "jp": "あの人、どこかで会ったような気がするんだけど。",
+          "en": "I feel like I've met that person somewhere."
+        },
+        {
+          "jp": "今日は何かいいことがありそうな気がする。",
+          "en": "I have a feeling something good will happen today."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-19-5"
+      ],
+      "title": "〜ように見える",
+      "structure": "Plain form（な-adj な／Nの）+ ように見える",
+      "meaning": "\"Looks like…\", \"seems (to the eye)…\".",
+      "explanation": "ように見える describes how something looks, often contrasting with reality: 若く見える (looks young). Compare そうに見える (looks as if, from signs) and みたい (casual).",
+      "summary": "〜ように見える = looks (as if)…",
+      "details": "- 彼は疲れている**ように見える**。 He looks tired.\n- 遠くから見ると、本物の花の**ように見える**。 From a distance it looks like a real flower.\n- い-adj: 若く**見える**, な-adj: 元気に**見える**",
+      "tags": [
+        "similarity-appearance",
+        "conjecture-inference"
+      ],
+      "examples": [
+        {
+          "jp": "この絵は写真のように見える。",
+          "en": "This painting looks like a photograph."
+        },
+        {
+          "jp": "楽しそうに見えるけど、本当は大変らしい。",
+          "en": "It looks like fun, but apparently it's really hard."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-2-5"
+      ],
+      "title": "まるで〜ようだ／みたいだ",
+      "structure": "まるで + N の／plain form + ようだ（ような N／ように）",
+      "meaning": "\"Just like…\", \"as if…\": a vivid comparison with something it is not.",
+      "explanation": "まるで warns that a comparison is coming and makes it stronger: the thing is not really what it is compared to, but it feels exactly like it. It ends in ようだ, or みたいだ in conversation.",
+      "summary": "まるで〜ようだ = just as if…, exactly like…",
+      "details": "- 今日は**まるで**夏の**ような**暑さだ。 Today's heat is like midsummer.\n- 彼は**まるで**何も知らない**かのように**話した。 He talked as if he knew nothing.\n- **まるで**夢**みたい**！ It's like a dream!",
+      "tags": [
+        "similarity-appearance"
+      ],
+      "examples": [
+        {
+          "jp": "窓から見える景色は、まるで絵のようだった。",
+          "en": "The view from the window was just like a painting."
+        },
+        {
+          "jp": "二人はまるで本当の姉妹のように仲がいい。",
+          "en": "The two of them get on as if they were real sisters."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-19-6"
+      ],
+      "title": "〜とみえる",
+      "structure": "Plain form + とみえる",
+      "meaning": "\"It seems that…\", \"apparently…\": a conclusion drawn from what you observe.",
+      "explanation": "とみえる (見える) reasons from visible evidence to a conclusion about someone else's situation: よほど疲れているとみえて、すぐ寝た (he must have been very tired, as he fell asleep at once). It is slightly literary.",
+      "summary": "〜とみえる = it appears (from what I see) that…",
+      "details": "- 電気が消えている。もう寝た**とみえる**。 The light's off. She must already be asleep.\n- 彼はよほどうれしかった**とみえて**、一日中笑っていた。 He must have been really happy; he was smiling all day.",
+      "tags": [
+        "conjecture-inference",
+        "formal-written"
+      ],
+      "examples": [
+        {
+          "jp": "道がぬれているから、夜に雨が降ったとみえる。",
+          "en": "The road is wet, so it must have rained during the night."
+        },
+        {
+          "jp": "子どもはお腹がすいていたとみえて、あっという間に全部食べた。",
+          "en": "The child must have been hungry; they ate everything in no time."
+        }
+      ]
+    }
+  ],
+  "19": [
+    {
+      "replaces": [
+        "n3-grammar-20-3"
+      ],
+      "title": "〜ようとする",
+      "structure": "Volitional form + とする",
+      "meaning": "\"Try to…\"; \"be about to…\".",
+      "explanation": "With an action you control, 〜ようとする means you attempt it, often without success: 開けようとしたが、開かなかった. With a change or event, it means it is about to happen: 電車が出ようとしている.",
+      "summary": "Volitional + とする = try to / be just about to.",
+      "details": "- 起きよう**とした**が、体が動かなかった。 I tried to get up, but my body wouldn't move.\n- 家を出よう**としたとき**、電話が鳴った。 Just as I was about to leave, the phone rang.",
+      "tags": [
+        "attempt",
+        "time-relative"
+      ],
+      "examples": [
+        {
+          "jp": "思い出そうとしても、どうしても名前が出てこない。",
+          "en": "Even when I try to remember, the name just won't come."
+        },
+        {
+          "jp": "寝ようとしたところに、友だちから電話がかかってきた。",
+          "en": "Just as I was going to bed, a friend called."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-20-4"
+      ],
+      "title": "〜ようとしない",
+      "structure": "Volitional form + としない",
+      "meaning": "\"Won't (even try to)…\", \"refuses to…\" (about someone else).",
+      "explanation": "〜ようとしない describes another person's unwillingness: they do not even try. It usually expresses the speaker's frustration and is not used about yourself.",
+      "summary": "Volitional + としない = (they) won't even try to…",
+      "details": "- 弟は野菜を食べよう**としない**。 My brother won't touch vegetables.\n- 何度聞いても、理由を話そう**としない**。 However many times I ask, she won't say why.",
+      "tags": [
+        "volitional-intention",
+        "partial-negation"
+      ],
+      "examples": [
+        {
+          "jp": "子どもは怒られても、謝ろうとしなかった。",
+          "en": "Even after being told off, the child wouldn't apologise."
+        },
+        {
+          "jp": "父は医者に行こうとしないので、家族は心配している。",
+          "en": "My father won't go to the doctor, so the family is worried."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-20-5"
+      ],
+      "title": "〜ふりをする",
+      "structure": "Plain form（な-adj な／Nの）+ ふりをする",
+      "meaning": "\"Pretend to…\", \"act as if…\".",
+      "explanation": "ふり means outward appearance; 〜ふりをする means acting as if something were true when it is not: 寝ているふり (pretending to sleep), 知らないふり (pretending not to know).",
+      "summary": "〜ふりをする = pretend to…",
+      "details": "- 話しかけられたくなくて、寝ている**ふりをした**。 I didn't want to be spoken to, so I pretended to be asleep.\n- 本当は知っているのに、知らない**ふりをした**。 I knew, but pretended I didn't.",
+      "tags": [
+        "similarity-appearance"
+      ],
+      "examples": [
+        {
+          "jp": "母に呼ばれたけど、聞こえないふりをした。",
+          "en": "My mother called me, but I pretended not to hear."
+        },
+        {
+          "jp": "彼は分かったふりをしているだけだと思う。",
+          "en": "I think he's just pretending to understand."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-1-1"
+      ],
+      "title": "〜ように言う／頼む／注意する",
+      "structure": "V dictionary form／Vない + ように + 言う・頼む・注意する",
+      "meaning": "Reports a request, instruction or warning: \"tell / ask / warn (someone) to…\".",
+      "explanation": "ように turns an order or request into indirect speech: 「早く来てください」 → 早く来るように言った. The person who receives the instruction takes に. Negatives use 〜ないように.",
+      "summary": "V ように言う／頼む = tell / ask (someone) to…",
+      "details": "- 先生は学生に、宿題を出す**ように言った**。 The teacher told the students to hand in their homework.\n- 母に、早く帰る**ように頼まれた**。 My mother asked me to come home early.\n- 医者に、お酒を飲まない**ように注意された**。 The doctor warned me not to drink.",
+      "tags": [
+        "request",
+        "quotation"
+      ],
+      "examples": [
+        {
+          "jp": "部長に、明日までに報告書を出すように言われた。",
+          "en": "The manager told me to hand in the report by tomorrow."
+        },
+        {
+          "jp": "隣の人に、夜は静かにするように頼んだ。",
+          "en": "I asked my neighbour to keep the noise down at night."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-23-2"
+      ],
+      "title": "〜てごらん",
+      "structure": "Vて + ごらん（なさい）",
+      "meaning": "\"Try (doing)…\", \"have a go\": an invitation to someone younger.",
+      "explanation": "ごらん comes from ご覧になる (look), but 〜てごらん is used by parents, teachers and older people toward children and juniors. It is a gentle encouragement, not polite language; to equals, use 〜てみて.",
+      "summary": "Vて ごらん = try (doing) it (to a child or junior).",
+      "details": "- これ、食べ**てごらん**。おいしいよ。 Try this. It's good.\n- もう一度、言っ**てごらん**。 Say it once more.\n- 窓の外を見**てごらん**。 Look out of the window.",
+      "tags": [
+        "attempt",
+        "advice-suggestion"
+      ],
+      "examples": [
+        {
+          "jp": "怖くないから、一人で乗ってごらん。",
+          "en": "It's not scary. Have a go at riding it by yourself."
+        },
+        {
+          "jp": "分からなかったら、もう一度考えてごらん。",
+          "en": "If you don't get it, try thinking about it again."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-8-6"
+      ],
+      "title": "〜ても構わない",
+      "structure": "Vて／adj くて・で／N で + も構わない",
+      "meaning": "\"It's all right if…\", \"I don't mind if…\".",
+      "explanation": "ても構わない gives permission or shows that you don't mind, like てもいい but slightly more formal and stronger in \"it's no problem\". As a question, ても構いませんか asks politely for permission.",
+      "summary": "〜ても構わない = it's fine if…, I don't mind.",
+      "details": "- 明日でも**構いません**。 Tomorrow is fine too.\n- ここに座っ**ても構いませんか**。 Do you mind if I sit here?\n- 少しぐらい高く**ても構わない**。 I don't mind if it's a little expensive.",
+      "tags": [
+        "permission",
+        "concession-contrast"
+      ],
+      "examples": [
+        {
+          "jp": "時間がなければ、返事は来週でも構いません。",
+          "en": "If you're short of time, next week is fine for your reply."
+        },
+        {
+          "jp": "窓を開けても構いませんか。",
+          "en": "Do you mind if I open the window?"
+        }
+      ]
+    }
+  ],
+  "20": [
+    {
+      "replaces": [
+        "n3-grammar-10-1"
+      ],
+      "title": "〜ずに",
+      "structure": "Vない-form（ない → ず）+ に（する → せずに）",
+      "meaning": "\"Without (doing)…\": a written ないで.",
+      "explanation": "ずに means the same as ないで, but sounds a little more formal or written. Drop ない and add ずに: 食べないで → 食べずに. する is the exception: せずに.",
+      "summary": "〜ずに = without doing (formal ないで).",
+      "details": "- 朝ご飯を食べ**ずに**家を出た。 I left home without breakfast.\n- 何も言わ**ずに**帰ってしまった。 He went home without saying anything.\n- 勉強**せずに**試験を受けた。 I took the exam without studying.",
+      "tags": [
+        "simultaneous-action",
+        "formal-written"
+      ],
+      "examples": [
+        {
+          "jp": "辞書を使わずに、この記事を読んでみてください。",
+          "en": "Try reading this article without a dictionary."
+        },
+        {
+          "jp": "連絡もせずに休むのは、よくないですよ。",
+          "en": "It's not good to take time off without letting anyone know."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-21-1"
+      ],
+      "title": "〜もせずに",
+      "structure": "N（する verb noun）／Vます-stem + もせずに",
+      "meaning": "\"Without even…\": criticising someone for not doing an obvious thing.",
+      "explanation": "も adds \"even\" to せずに: the person did not even do the basic thing expected, such as checking, asking or saying thank you. It usually carries disapproval.",
+      "summary": "〜もせずに = without even (doing the obvious thing).",
+      "details": "- 彼は確認**もせずに**、書類を出した。 He handed in the papers without even checking them.\n- お礼**も言わずに**帰ってしまった。 She left without even saying thank you.\n- 寝**もせずに**働いた。 I worked without even sleeping.",
+      "tags": [
+        "emphasis-limitation",
+        "emotion-expression"
+      ],
+      "examples": [
+        {
+          "jp": "弟は返事もせずに、部屋に入ってしまった。",
+          "en": "My brother went into his room without even answering."
+        },
+        {
+          "jp": "よく考えもせずに、高いカメラを買ってしまった。",
+          "en": "I bought an expensive camera without even thinking it through."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-14-4"
+      ],
+      "title": "〜ずに済む／〜ないで済む",
+      "structure": "Vない-form + ずに済む／ないで済む",
+      "meaning": "\"Get away without (having to)…\", \"be spared…\".",
+      "explanation": "済む means \"be settled, be enough\". 〜ずに済む says that you were spared something you expected to have to do: 歩かずに済んだ (I didn't have to walk after all). The opposite, 〜て済む, means \"it was enough to just…\".",
+      "summary": "〜ずに済む = luckily didn't have to…",
+      "details": "- 友だちが車で送ってくれたので、歩か**ずに済んだ**。 A friend drove me, so I didn't have to walk.\n- 早く気がついたので、大きな問題にならないで**済んだ**。 We noticed early, so it didn't become a big problem.\n- 謝る**だけで済んだ**。 An apology was enough.",
+      "tags": [
+        "result-consequence",
+        "obligation-necessity"
+      ],
+      "examples": [
+        {
+          "jp": "古い服をもらったので、新しいのを買わずに済んだ。",
+          "en": "I was given some old clothes, so I didn't need to buy new ones."
+        },
+        {
+          "jp": "電話で説明できたので、会社に行かないで済んだ。",
+          "en": "I could explain over the phone, so I didn't have to go to the office."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-12-2"
+      ],
+      "title": "〜っぱなし",
+      "structure": "Vます-stem + っぱなし（だ／にする）",
+      "meaning": "\"Left (on / open)…\", \"keep (doing) without stopping\".",
+      "explanation": "っぱなし has two uses. It describes something left in a state that should have been changed, usually carelessly: 電気をつけっぱなし (left the light on). It also means doing something continuously: 立ちっぱなし (standing the whole time).",
+      "summary": "Stem + っぱなし = left (on / open), or non-stop.",
+      "details": "- 窓を開け**っぱなし**で出かけてしまった。 I went out and left the window open.\n- テレビをつけ**っぱなし**にしないで。 Don't leave the TV on.\n- 電車でずっと立ち**っぱなし**だった。 I was standing the whole way on the train.",
+      "tags": [
+        "state-continuation"
+      ],
+      "examples": [
+        {
+          "jp": "水を出しっぱなしにしないでください。",
+          "en": "Please don't leave the water running."
+        },
+        {
+          "jp": "今日は一日中、会議で座りっぱなしだった。",
+          "en": "I was sitting in meetings all day today."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-13-3"
+      ],
+      "title": "〜たりしない",
+      "structure": "Vたり + しない",
+      "meaning": "\"Wouldn't (do something like)…\": a soft, firm denial.",
+      "explanation": "たり with a negative suggests that something, or anything like it, is not done: 人の悪口を言ったりしない (I don't say bad things about people, or anything of the kind). It is softer than a plain negative, and often reassures: 怒ったりしないから、話して.",
+      "summary": "Vたりしない = (I) wouldn't do (anything like) that.",
+      "details": "- 心配しないで。だれにも言っ**たりしない**よ。 Don't worry. I won't tell anyone.\n- 彼はうそをつい**たりしない**人だ。 He's not the kind of person who lies.",
+      "tags": [
+        "partial-negation",
+        "listing-examples"
+      ],
+      "examples": [
+        {
+          "jp": "怒ったりしないから、本当のことを話して。",
+          "en": "I won't get angry, so tell me the truth."
+        },
+        {
+          "jp": "大切な本だから、貸したりしない。",
+          "en": "It's a precious book, so I won't lend it to anyone."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-14-5"
+      ],
+      "title": "〜ている場合じゃない",
+      "structure": "Vて いる／N + 場合じゃない（ではない）",
+      "meaning": "\"This is no time for (doing)…\".",
+      "explanation": "The pattern says that the current situation does not allow an activity: something more urgent needs attention. It is often said to yourself to change behaviour: 寝ている場合じゃない.",
+      "summary": "〜ている場合じゃない = this is no time to be…",
+      "details": "- 明日は試験だ。遊んでいる**場合じゃない**。 The exam's tomorrow. This is no time to be messing around.\n- 今はけんか**している場合ではない**。",
+      "tags": [
+        "obligation-necessity",
+        "emphasis-assertion"
+      ],
+      "examples": [
+        {
+          "jp": "もう八時だ。のんびりご飯を食べている場合じゃない。",
+          "en": "It's eight already. This is no time to be eating breakfast slowly."
+        },
+        {
+          "jp": "人のことを心配している場合じゃない。自分の仕事が終わっていないんだから。",
+          "en": "I've got no time to worry about others; my own work isn't finished."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-14-6"
+      ],
+      "title": "〜ても始まらない",
+      "structure": "Vて + も始まらない",
+      "meaning": "\"It's no use…\", \"there's no point in…\" (it won't change anything).",
+      "explanation": "Literally \"even if you…, nothing starts\". It says that an action is pointless because it cannot help the situation: 今さら後悔しても始まらない (there's no use regretting it now).",
+      "summary": "〜ても始まらない = it's no use (doing)…",
+      "details": "- 今さら泣い**ても始まらない**。 There's no point crying now.\n- ここで文句を言っ**ても始まらない**。 It's no use complaining here.",
+      "tags": [
+        "result-consequence",
+        "advice-suggestion"
+      ],
+      "examples": [
+        {
+          "jp": "終わったことを考えても始まらない。次をがんばろう。",
+          "en": "There's no use dwelling on what's over. Let's do our best next time."
+        },
+        {
+          "jp": "一人で悩んでいても始まらないから、先生に相談してみたら？",
+          "en": "Worrying on your own won't get you anywhere; why not talk to your teacher?"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "n3-grammar-24-9"
+      ],
+      "title": "〜てもしょうがない／〜てもしかたがない",
+      "structure": "Vて／adj くて・で + もしょうがない・もしかたがない",
+      "meaning": "\"It's pointless to…\", or \"it can't be helped that…\".",
+      "explanation": "With an action, it means doing it is useless: 心配してもしょうがない. With a fact or result, it means the result is understandable or unavoidable: 準備しなかったから、失敗してもしかたがない (no wonder it failed). Do not confuse it with 〜てしょうがない (unbearably).",
+      "summary": "〜てもしょうがない = no point in… / it can't be helped if…",
+      "details": "| 〜てもしょうがない | 〜てしょうがない |\n| :--- | :--- |\n| no point, can't be helped | unbearably |\n| 悩ん**でもしょうがない** | 眠く**てしょうがない** |",
+      "tags": [
+        "result-consequence",
+        "emotion-expression"
+      ],
+      "examples": [
+        {
+          "jp": "準備をしなかったのだから、失敗してもしかたがない。",
+          "en": "You didn't prepare, so it's no surprise you failed."
+        },
+        {
+          "jp": "もう決まったことだから、反対してもしょうがない。",
+          "en": "It's already decided, so there's no point objecting."
+        }
+      ]
+    }
+  ]
+}

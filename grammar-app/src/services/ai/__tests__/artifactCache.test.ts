@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { artifactKey, fromLegacyMaps, getArtifact, putArtifact, type ArtifactCache } from '../artifactCache';
-import { migrateAiCache } from '../../../store/aiCacheMigration';
+import { migrateAiCache, v13N3Maps } from '../../../store/aiCacheMigration';
 
 describe('putArtifact', () => {
   it('stores and reads back by kind + uid', () => {
@@ -44,13 +44,16 @@ describe('migrating the persisted cache', () => {
     aiKanjiMnemonics: { 'n3-kanji-2-5': 'story', 'n4-kanji-1-1': 'sun story' },
   };
 
+  // n3-kanji-2-5 moved in the N3 restructure (store v13); the others kept their uids.
+  const n3Kanji25 = v13N3Maps()['kanji-mnemonic']!['n3-kanji-2-5'] ?? 'n3-kanji-2-5';
+
   it('v7: every non-empty note and example survives as an artifact', () => {
     const { artifacts } = migrateAiCache(v7, 7);
     expect(Object.keys(artifacts).sort()).toEqual(
       [
         'grammar-examples:n5-grammar-1-1',
         'grammar-nuance:n5-grammar-1-1',
-        'kanji-mnemonic:n3-kanji-2-5',
+        `kanji-mnemonic:${n3Kanji25}`,
         'kanji-mnemonic:n4-kanji-1-1',
         'vocab-help:n5-vocab-1-1',
       ].sort()
@@ -68,6 +71,7 @@ describe('migrating the persisted cache', () => {
   it('pre-v4 caches start empty; v8 passes through', () => {
     expect(migrateAiCache(v7, 3)).toEqual({ artifacts: {} });
     const v8 = { artifacts: fromLegacyMaps(v7) };
-    expect(migrateAiCache(v8, 8)).toEqual(v8);
+    expect(migrateAiCache(v8, 13)).toEqual(v8);
+    expect(getArtifact(migrateAiCache(v8, 8).artifacts, 'kanji-mnemonic', n3Kanji25)).toBe('story');
   });
 });

@@ -2,6 +2,7 @@
  * Pure migration helpers for the persisted AI cache (useAiArtifactStore).
  */
 import { ArtifactCache, ArtifactKind, CachedArtifact, LegacyAiMaps, artifactKey, fromLegacyMaps } from '../services/ai/artifactCache';
+import { N3_GRAMMAR_UIDS, N3_KANJI_UIDS, N3_VOCAB_UIDS } from './n3RestructureUids';
 import { N4_GRAMMAR_UIDS, N4_KANJI_UIDS, N4_VOCAB_UIDS } from './n4RestructureUids';
 import { N5_GRAMMAR_UIDS, N5_KANJI_UIDS, N5_VOCAB_UIDS } from './n5RestructureUids';
 
@@ -358,8 +359,26 @@ export function v12N4Maps(): Partial<Record<ArtifactKind, Record<string, string>
   return v12Maps;
 }
 
+// v13: N3 left its old lessons the same way (scripts/restructure-n3.ts).
+
+let v13Maps: Partial<Record<ArtifactKind, Record<string, string>>> | null = null;
+
+/** v13 uid maps per artifact kind, unpacked on first use. */
+export function v13N3Maps(): Partial<Record<ArtifactKind, Record<string, string>>> {
+  if (!v13Maps) {
+    const grammar = unpackUidMap(N3_GRAMMAR_UIDS, 'n3-grammar-');
+    v13Maps = {
+      'grammar-examples': grammar,
+      'grammar-nuance': grammar,
+      'vocab-help': unpackUidMap(N3_VOCAB_UIDS, 'n3-vocab-'),
+      'kanji-mnemonic': unpackUidMap(N3_KANJI_UIDS, 'n3-kanji-'),
+    };
+  }
+  return v13Maps;
+}
+
 /**
- * Migrates any persisted AI cache to v12: one artifact map (the v8 shape) with every
+ * Migrates any persisted AI cache to v13: one artifact map (the v8 shape) with every
  * artifact under its item's current uid. v4–v7 keep their entries, minus the uids later content changes
  * reassigned; anything older starts empty (its keys were the pre-uid ids, which collide
  * across levels).
@@ -371,6 +390,7 @@ export function migrateAiCache(persisted: unknown, version: number): { artifacts
     if (version < 10) artifacts = renumberVocabArtifacts(artifacts, V10);
     if (version < 11) artifacts = renameArtifacts(artifacts, v11N5Maps());
     if (version < 12) artifacts = renameArtifacts(artifacts, v12N4Maps());
+    if (version < 13) artifacts = renameArtifacts(artifacts, v13N3Maps());
     return { artifacts };
   }
   const maps = persisted as LegacyAiMaps | undefined;
@@ -384,5 +404,5 @@ export function migrateAiCache(persisted: unknown, version: number): { artifacts
 
   const artifacts = fromLegacyMaps({ ...maps, aiKanjiMnemonics: mnemonics, aiVocabNotes: notes });
   const renumbered = renumberVocabArtifacts(renumberVocabArtifacts(artifacts, V9), V10);
-  return { artifacts: renameArtifacts(renameArtifacts(renumbered, v11N5Maps()), v12N4Maps()) };
+  return { artifacts: renameArtifacts(renameArtifacts(renameArtifacts(renumbered, v11N5Maps()), v12N4Maps()), v13N3Maps()) };
 }

@@ -1,0 +1,474 @@
+{
+  "6": [
+    {
+      "replaces": ["n3-grammar-5-4"],
+      "title": "〜くらい／〜ぐらい（to the extent that）",
+      "structure": "Plain form（な-adj な）／N + くらい・ぐらい",
+      "meaning": "Gives the degree of something by example: \"so… that\", \"enough to…\"; also \"at least\".",
+      "explanation": "Beyond \"about\" with numbers, くらい describes a degree by comparing it to an example: 泣きたいくらい痛い (it hurts so much I could cry). With a small thing it means \"at least\" or \"only\": 電話ぐらいしてよ (at least give me a call).",
+      "summary": "〜くらい = to the point of…; small N くらい = at least / only N.",
+      "details": "- 立っていられない**くらい**疲れた。 I was so tired I could hardly stand.\n- 自分の部屋**ぐらい**自分で掃除しなさい。 At least clean your own room yourself.\n- 彼**くらい**上手な人はいない。 There's nobody as skilled as him.",
+      "tags": ["degree-extent"],
+      "examples": [
+        { "jp": "おなかが痛くて、歩けないくらいだった。", "en": "My stomach hurt so much I could hardly walk." },
+        { "jp": "忙しくても、メールの返事ぐらいはできるでしょう。", "en": "However busy you are, you can at least reply to an email." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-5-5"],
+      "title": "A は B ほど〜ない",
+      "structure": "A は B ほど + adj／V negative",
+      "meaning": "\"A is not as… as B\".",
+      "explanation": "ほど with a negative compares A unfavourably with B. B is the standard, and A falls short of it. With a whole clause as B: 思ったほど難しくなかった (it wasn't as hard as I thought).",
+      "summary": "A は B ほど〜ない = A is not as… as B.",
+      "details": "- 今年の夏は去年**ほど**暑く**ない**。 This summer isn't as hot as last year.\n- 試験は思った**ほど**難しく**なかった**。 The exam wasn't as hard as I'd thought.\n- 〜**ほど**〜**はない**: 旅行**ほど**楽しいもの**はない**。 Nothing is as fun as travelling.",
+      "tags": ["comparison", "degree-extent"],
+      "examples": [
+        { "jp": "この町は東京ほど人が多くない。", "en": "This town isn't as crowded as Tokyo." },
+        { "jp": "家族と過ごす時間ほど大切なものはない。", "en": "Nothing is as precious as time spent with family." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-13-4"],
+      "title": "〜ほど（so… that）",
+      "structure": "Plain form（な-adj な）／N + ほど",
+      "meaning": "\"So much that…\": an extreme degree, shown by an example.",
+      "explanation": "Like くらい, ほど gives a degree by example, but it sounds a little more serious and can describe a higher degree: 死ぬほど (to death). It cannot be used for \"at least\" as くらい can.",
+      "summary": "〜ほど = so… that (strong degree).",
+      "details": "- 涙が出る**ほど**笑った。 I laughed so hard I cried.\n- 死ぬ**ほど**疲れた。 I'm dead tired.\n- 驚く**ほど**安い。 Surprisingly cheap.",
+      "tags": ["degree-extent"],
+      "examples": [
+        { "jp": "この料理は、びっくりするほど辛かった。", "en": "This dish was shockingly spicy." },
+        { "jp": "足が動かなくなるほど歩いた。", "en": "I walked until my legs wouldn't move." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-18-2"],
+      "title": "〜に比べて",
+      "structure": "N／Vの + に比べて（比べると）",
+      "meaning": "\"Compared with…\".",
+      "explanation": "に比べて sets up a standard of comparison, and the sentence then says how the topic differs. It is more formal than より and often appears with statistics and changes over time.",
+      "summary": "N に比べて = compared with N.",
+      "details": "- 去年**に比べて**、今年は雨が多い。 Compared with last year, there's more rain this year.\n- 都会**に比べると**、田舎は物価が安い。 Compared with the city, prices are lower in the countryside.",
+      "tags": ["comparison"],
+      "examples": [
+        { "jp": "十年前に比べて、外国人の観光客がずいぶん増えた。", "en": "Compared with ten years ago, foreign tourists have increased a lot." },
+        { "jp": "兄に比べて、わたしは背が低い。", "en": "I'm short compared with my older brother." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-23-7"],
+      "title": "〜よりも／何よりも",
+      "structure": "A は B よりも + adj ／ 何よりも + adj／V",
+      "meaning": "\"Even more than B\"; 何よりも: \"above all\".",
+      "explanation": "よりも is a stressed より: the comparison is emphatic. 何よりも (more than anything) and だれよりも (more than anyone) state that something is the most important or strongest of all.",
+      "summary": "よりも = (even) more than; 何よりも = above all.",
+      "details": "- 思っていた**よりも**ずっと簡単だった。 It was much easier than I'd expected.\n- 健康が**何よりも**大切だ。 Health matters more than anything.\n- 彼は**だれよりも**早く来る。 He comes earlier than anyone.",
+      "tags": ["comparison", "emphasis-limitation"],
+      "examples": [
+        { "jp": "お金よりも、自由な時間がほしい。", "en": "More than money, I want free time." },
+        { "jp": "旅行で何よりも楽しかったのは、地元の人との会話だった。", "en": "What I enjoyed most of all on the trip was talking with local people." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-8-8"],
+      "title": "〜わりに（は）",
+      "structure": "Plain form（な-adj な／Nの）+ わりに（は）",
+      "meaning": "\"Considering…\", \"for…\": the result is not what you would expect from that fact.",
+      "explanation": "わりに compares something with what you would normally expect from it: 値段のわりに (for the price), 年のわりに (for their age). The result can be better or worse than expected.",
+      "summary": "〜わりに = considering…, (surprisingly) for…",
+      "details": "- この店は値段の**わりに**おいしい。 This place is good for the price.\n- 祖父は年の**わりに**元気だ。 My grandfather is lively for his age.\n- よく勉強した**わりには**、点が悪かった。 Considering how hard I studied, my score was poor.",
+      "tags": ["concession-contrast", "comparison"],
+      "examples": [
+        { "jp": "このかばんは大きいわりに軽い。", "en": "This bag is light for its size." },
+        { "jp": "たくさん練習したわりには、上手にならなかった。", "en": "Considering how much I practised, I didn't get much better." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-17-1"],
+      "title": "〜にしては",
+      "structure": "Plain form／N + にしては",
+      "meaning": "\"For (someone who is)…\": the fact does not match what you would expect of it.",
+      "explanation": "にしては compares a specific person or thing with what is typical of its kind: 初めてにしては上手だ (pretty good for a first time). It is close to わりに but takes a definite fact about the subject (being a beginner, a child, in May).",
+      "summary": "〜にしては = for (a beginner / May / a child)…, surprisingly.",
+      "details": "- 初めて作った**にしては**、よくできている。 It's well made for a first attempt.\n- 五月**にしては**暑い日だ。 It's a hot day for May.\n- 小学生**にしては**しっかりしている。 Very mature for a primary-school pupil.",
+      "tags": ["concession-contrast", "comparison"],
+      "examples": [
+        { "jp": "日本に来て半年にしては、日本語がとても上手ですね。", "en": "Your Japanese is very good for someone who's only been in Japan six months." },
+        { "jp": "プロにしては、ミスが多すぎる。", "en": "For a professional, that's far too many mistakes." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-1-2"],
+      "title": "あまりにも／あまりの N に",
+      "structure": "あまりにも + adj ／ あまりの + N + に",
+      "meaning": "\"Far too\", \"so extremely… (that)\".",
+      "explanation": "あまりにも stresses a degree that goes beyond the normal, usually with a bad or surprising result. あまりの + noun + に means \"because of the sheer (heat, pain…)\": あまりの暑さに (in the overwhelming heat).",
+      "summary": "あまりにも = far too; あまりの N に = because of the sheer N.",
+      "details": "- この問題は**あまりにも**難しい。 This problem is far too difficult.\n- **あまりの**寒さ**に**、手が動かなくなった。 It was so cold my hands stopped working.\n- Compare: **あまり**〜ない = not very.",
+      "tags": ["degree-extent", "excessive-degree"],
+      "examples": [
+        { "jp": "値段があまりにも高くて、何も買えなかった。", "en": "The prices were so high that I couldn't buy anything." },
+        { "jp": "あまりのうれしさに、思わず泣いてしまった。", "en": "I was so happy that I burst into tears." }
+      ]
+    }
+  ],
+  "7": [
+    {
+      "replaces": ["n3-grammar-7-2"],
+      "title": "〜がち",
+      "structure": "Vます-stem／N + がち（だ／な N）",
+      "meaning": "\"Tend to…\", \"prone to…\", usually something undesirable.",
+      "explanation": "がち describes a tendency that happens more often than it should: forgetting, getting sick, being late. It works as a な-adjective: 忘れがちな人, 病気がちだ.",
+      "summary": "〜がち = tends to (do something bad).",
+      "details": "- 冬は風邪をひき**がち**だ。 People tend to catch colds in winter.\n- 彼は約束を忘れ**がち**だ。 He's apt to forget his promises.\n- 曇り**がち**の天気 (mostly cloudy weather)",
+      "tags": ["frequency", "habit-effort"],
+      "examples": [
+        { "jp": "一人で暮らしていると、食事が簡単になりがちだ。", "en": "Living alone, you tend to eat simple meals." },
+        { "jp": "子どものころ、わたしは病気がちだった。", "en": "As a child, I was often ill." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-7-3"],
+      "title": "〜気味（ぎみ）",
+      "structure": "Vます-stem／N + 気味（だ）",
+      "meaning": "\"A touch of\", \"slightly…\": a mild sign of something, usually bad.",
+      "explanation": "気味 describes a slight degree, felt now: 風邪気味 (a bit of a cold), 疲れ気味 (a bit tired), 遅れ気味 (running a little behind). がち is about frequency; 気味 is about a present, mild state.",
+      "summary": "〜気味 = a bit…, a touch of…",
+      "details": "| がち | 気味 |\n| :--- | :--- |\n| tends to happen often | slight sign right now |\n| 病気**がち** (often ill) | 風邪**気味** (a bit of a cold) |",
+      "tags": ["degree-extent", "similarity-appearance"],
+      "examples": [
+        { "jp": "今日は少し風邪気味なので、早めに帰ります。", "en": "I have a bit of a cold today, so I'll go home early." },
+        { "jp": "最近、仕事が忙しくて疲れ気味だ。", "en": "Work has been busy lately, and I'm a bit worn out." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-7-4"],
+      "title": "〜っぽい",
+      "structure": "N／Vます-stem／い-adj stem + っぽい",
+      "meaning": "\"-ish\", \"like\", \"tends to\": a casual quality or tendency.",
+      "explanation": "っぽい is casual. After nouns it means \"looks or feels like\": 子どもっぽい (childish), 白っぽい (whitish). After verb stems it means \"easily does\": 怒りっぽい (quick to anger), 忘れっぽい (forgetful). It conjugates as an い-adjective.",
+      "summary": "〜っぽい = -ish, like (casual); stem + っぽい = easily (gets angry, forgets).",
+      "details": "- 彼は**子どもっぽい**ところがある。 He has a childish side.\n- 最近**忘れっぽく**なった。 I've got forgetful lately.\n- **白っぽい**シャツ (a whitish shirt)",
+      "tags": ["similarity-appearance", "colloquial"],
+      "examples": [
+        { "jp": "父は年を取って、怒りっぽくなった。", "en": "My father has got quick-tempered with age." },
+        { "jp": "この料理、ちょっと油っぽいね。", "en": "This dish is a bit greasy." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-7-5"],
+      "title": "〜だらけ",
+      "structure": "N + だらけ",
+      "meaning": "\"Full of\", \"covered in\" something unpleasant.",
+      "explanation": "だらけ says something is covered or filled with an unwanted thing: 泥だらけ (covered in mud), 間違いだらけ (full of mistakes), ごみだらけ. It is negative; for good things use いっぱい.",
+      "summary": "N だらけ = covered in / full of (something bad).",
+      "details": "- 子どもが**泥だらけ**で帰ってきた。 My child came home covered in mud.\n- この作文は**間違いだらけ**だ。 This essay is full of mistakes.\n- ✗ 花だらけの公園 → ✓ 花がいっぱいの公園",
+      "tags": ["degree-extent", "emotion-expression"],
+      "examples": [
+        { "jp": "雨の中でサッカーをして、服が泥だらけになった。", "en": "I played football in the rain and my clothes got covered in mud." },
+        { "jp": "引っ越したばかりの部屋は、段ボールだらけだ。", "en": "My new flat is full of cardboard boxes." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-7-6"],
+      "title": "〜一方だ",
+      "structure": "V dictionary form + 一方だ",
+      "meaning": "\"Keep on…ing\", \"more and more\": a change that only goes in one direction.",
+      "explanation": "一方だ describes a trend that keeps going one way, often in a bad direction: 増える一方 (just keeps rising), 悪くなる一方. The verb is a verb of change.",
+      "summary": "V 一方だ = keeps (getting worse / increasing) in one direction.",
+      "details": "- 物価は上がる**一方だ**。 Prices just keep going up.\n- 祖母の病気は悪くなる**一方だ**。 My grandmother's illness keeps getting worse.",
+      "tags": ["change-of-state", "state-continuation"],
+      "examples": [
+        { "jp": "この町の人口は減る一方だ。", "en": "The population of this town just keeps shrinking." },
+        { "jp": "仕事が増える一方で、休む時間がない。", "en": "My workload keeps growing and I have no time to rest." }
+      ]
+    }
+  ],
+  "8": [
+    {
+      "replaces": ["n3-grammar-8-2"],
+      "title": "〜に対して",
+      "structure": "N に対して（の N）／ plain form + のに対して",
+      "meaning": "\"Toward, against\" (target of an action or feeling); \"whereas\" (contrast).",
+      "explanation": "With a person or thing, に対して marks the target of an attitude or action: 先生に対して失礼だ (rude to the teacher). After a clause with の, it contrasts two facts: 兄は背が高いのに対して、弟は低い (whereas…).",
+      "summary": "N に対して = toward N; 〜のに対して = whereas.",
+      "details": "- 客**に対して**丁寧に話す。 Speak politely to customers.\n- 質問**に対する**答え the answer to a question\n- 東京は晴れている**のに対して**、大阪は雨だ。 Tokyo is sunny, whereas Osaka is rainy.",
+      "tags": ["concession-contrast", "viewpoint-standpoint"],
+      "examples": [
+        { "jp": "子どもに対して、そんな言い方はよくない。", "en": "You shouldn't speak to a child like that." },
+        { "jp": "姉が外で遊ぶのが好きなのに対して、妹は家で本を読むのが好きだ。", "en": "My older sister likes playing outside, whereas my younger sister likes reading at home." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-8-3"],
+      "title": "〜ながらも",
+      "structure": "Vます-stem／い-adj／な-adj／N + ながら（も）",
+      "meaning": "\"Although\", \"while… still\": two facts that seem to clash.",
+      "explanation": "Here ながら does not mean \"while doing\" but \"although\". It links a state with something that contradicts it: 狭いながらも (small as it is), 知っていながら (despite knowing). It is a little formal and often appears in writing.",
+      "summary": "〜ながらも = although, despite (being)…",
+      "details": "- 狭い**ながらも**、住みやすい部屋だ。 It's small, but it's a comfortable flat.\n- 悪いと知り**ながら**、うそをついた。 I lied even though I knew it was wrong.\n- 残念**ながら** (unfortunately)",
+      "tags": ["concession-contrast"],
+      "examples": [
+        { "jp": "彼は文句を言いながらも、最後まで手伝ってくれた。", "en": "Although he grumbled, he helped me to the end." },
+        { "jp": "小さいながらも、自分の店を持つことができた。", "en": "Small as it is, I've managed to have my own shop." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-8-4"],
+      "title": "〜くせに",
+      "structure": "Plain form（な-adj な／Nの）+ くせに",
+      "meaning": "\"Even though… (and I think that's wrong)\": criticism or contempt.",
+      "explanation": "くせに is like のに but stronger and personal: the speaker criticises someone for acting against what is expected of them. The two clauses usually have the same subject, and it is rude, so it is used about friends, family or in complaints, never to superiors.",
+      "summary": "〜くせに = even though (and that annoys me).",
+      "details": "- 知っている**くせに**、教えてくれない。 He knows, but he won't tell me.\n- 子どもの**くせに**、生意気だ。 Cheeky, for a child.\n- **くせに** blames; **のに** just regrets.",
+      "tags": ["concession-contrast", "emotion-expression"],
+      "examples": [
+        { "jp": "自分は何もしないくせに、人には文句ばかり言う。", "en": "He does nothing himself, yet all he does is complain about others." },
+        { "jp": "お金がないくせに、また高い服を買ったの？", "en": "You've got no money, and you bought expensive clothes again?" }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-8-5"],
+      "title": "どんなに〜ても",
+      "structure": "どんなに + Vて／adj くて・で + も",
+      "meaning": "\"No matter how (much)…\".",
+      "explanation": "どんなに strengthens 〜ても: however far the condition goes, the result is the same. いくら〜ても means the same and is a little more casual, and is often used with amounts.",
+      "summary": "どんなに〜ても = however (hard / much)…",
+      "details": "- **どんなに**忙しく**ても**、朝ご飯は食べる。 However busy I am, I eat breakfast.\n- **どんなに**頼ん**でも**、聞いてくれなかった。 No matter how I begged, he wouldn't listen.",
+      "tags": ["concession-contrast", "conditional"],
+      "examples": [
+        { "jp": "どんなに疲れていても、寝る前に日記を書くことにしている。", "en": "However tired I am, I make a point of writing my diary before bed." },
+        { "jp": "どんなに高くても、この絵がほしい。", "en": "I want this painting no matter how expensive it is." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-13-2"],
+      "title": "たとえ〜ても",
+      "structure": "たとえ + Vて／adj くて・で／N で + も",
+      "meaning": "\"Even if (it were the case that)…\": a hypothetical, often extreme condition.",
+      "explanation": "たとえ signals that the following ても clause is a supposition, possibly unlikely, and that the result holds even then. It adds firmness: たとえ反対されても、やる (even if they object, I'll do it).",
+      "summary": "たとえ〜ても = even if (supposing)…",
+      "details": "- **たとえ**雨が降っ**ても**、試合は行います。 Even if it rains, the match will go ahead.\n- **たとえ**冗談**でも**、そんなことを言ってはいけない。 Even as a joke, you mustn't say that.",
+      "tags": ["concession-contrast", "conditional"],
+      "examples": [
+        { "jp": "たとえ家族に反対されても、わたしはこの仕事を続けたい。", "en": "Even if my family objects, I want to keep doing this job." },
+        { "jp": "たとえ小さなことでも、困ったことがあったら相談してください。", "en": "Even if it's something small, come to me if you have a problem." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-9-5"],
+      "title": "〜といっても",
+      "structure": "Plain form／N + といっても",
+      "meaning": "\"Although I say…, (it's not that much)\": correcting the impression a word gives.",
+      "explanation": "といっても admits a statement but limits it, so the listener does not imagine too much: 料理ができるといっても、簡単なものだけ (I can cook, but only simple things).",
+      "summary": "〜といっても = I say…, but (don't expect too much).",
+      "details": "- 旅行**といっても**、近くの温泉に一泊するだけだ。 It's a trip, but just one night at a nearby hot spring.\n- 英語が話せる**といっても**、日常会話くらいです。 I can speak English, but only everyday conversation.",
+      "tags": ["concession-contrast", "partial-negation"],
+      "examples": [
+        { "jp": "庭があるといっても、とても小さいんです。", "en": "We do have a garden, but it's tiny." },
+        { "jp": "休みといっても、家の仕事で忙しい。", "en": "It's my day off, but I'm busy with housework." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-24-2"],
+      "title": "〜にしても",
+      "structure": "Plain form／N + にしても",
+      "meaning": "\"Even if…\", \"even granting that…\": accepting a point, but still objecting to something.",
+      "explanation": "にしても admits that something may be true or understandable, then adds a reservation: 忙しいにしても、連絡くらいすべきだ (even if you're busy, you should at least get in touch). It also appears as それにしても (\"even so, still\").",
+      "summary": "〜にしても = even if (that's so), still…",
+      "details": "- 冗談**にしても**、言いすぎだ。 Even as a joke, that's going too far.\n- 行く**にしても**、行かない**にしても**、早く決めて。 Whether you go or not, decide soon.\n- **それにしても**、暑いね。 Even so, it's hot, isn't it.",
+      "tags": ["concession-contrast"],
+      "examples": [
+        { "jp": "遅れるにしても、電話ぐらいしてほしかった。", "en": "Even if you were going to be late, I wish you'd at least called." },
+        { "jp": "安いにしても、こんなに古いパソコンは買いたくない。", "en": "Cheap or not, I don't want to buy such an old computer." }
+      ]
+    }
+  ],
+  "9": [
+    {
+      "replaces": ["n3-grammar-5-1"],
+      "title": "〜ばいい／〜たらいい／〜といい",
+      "structure": "Vば／Vたら／V dictionary form と + いい",
+      "meaning": "Advice (\"you should…\") and wishes (\"I hope…\").",
+      "explanation": "All three give advice: 先生に聞けばいい (you should just ask the teacher). As wishes, they express hope about things outside your control: 明日晴れるといいね (I hope it's fine tomorrow). 〜といい is the most common for wishes; 〜ばいい can sound a little cold as advice.",
+      "summary": "〜ばいい／たらいい = you should (just)…; 〜といい(ね) = I hope…",
+      "details": "| Use | Example |\n| :--- | :--- |\n| advice | 分からなければ、先生に聞け**ばいい**。 |\n| asking advice | どうし**たらいい**ですか。 |\n| wish | 試験に合格できる**といいですね**。 |\n| regret (past) | もっと早く来れ**ばよかった**。 |",
+      "tags": ["advice-suggestion", "conditional"],
+      "examples": [
+        { "jp": "道が分からなかったら、駅員に聞けばいいよ。", "en": "If you don't know the way, just ask the station staff." },
+        { "jp": "明日の運動会、晴れるといいですね。", "en": "I hope it's sunny for tomorrow's sports day." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-9-1"],
+      "title": "〜ば〜ほど",
+      "structure": "Vば V dictionary form ほど ／ い-adj ければ い-adj ほど ／ な-adj なら な-adj なほど",
+      "meaning": "\"The more…, the more…\".",
+      "explanation": "Repeat the same word, first in the ば-form and then with ほど: 読めば読むほど (the more you read). The second half says what increases with it. The ば part is often dropped: 練習するほど上手になる.",
+      "summary": "〜ば〜ほど = the more…, the more…",
+      "details": "- 考えれ**ば**考える**ほど**、分からなくなる。 The more I think about it, the less I understand.\n- 野菜は新しけれ**ば**新しい**ほど**おいしい。 The fresher vegetables are, the better.\n- 静か**なら**静か**なほど**いい。 The quieter the better.",
+      "tags": ["conditional", "degree-extent"],
+      "examples": [
+        { "jp": "日本語は勉強すればするほど、おもしろくなる。", "en": "The more you study Japanese, the more interesting it gets." },
+        { "jp": "部屋は広ければ広いほどいいというわけではない。", "en": "It's not true that the bigger a room is, the better." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-12-6"],
+      "title": "もしも〜たら",
+      "structure": "もしも + 〜たら／〜ば／〜なら",
+      "meaning": "\"If by any chance…\", \"in the unlikely event that…\".",
+      "explanation": "もしも is an emphatic もし: it stresses that the situation is unlikely or serious. It is common for emergencies and imagined situations: もしも地震が起きたら.",
+      "summary": "もしも〜たら = if, by any chance… (stronger もし).",
+      "details": "- **もしも**道に迷っ**たら**、この番号に電話して。 If by any chance you get lost, call this number.\n- **もしも**魔法が使え**たら**、何をしたい？ If you could use magic, what would you do?",
+      "tags": ["conditional"],
+      "examples": [
+        { "jp": "もしも宝くじが当たったら、仕事を辞めて旅行したい。", "en": "If I ever won the lottery, I'd quit my job and travel." },
+        { "jp": "もしも火事になったら、エレベーターは使わないでください。", "en": "In the event of a fire, do not use the lifts." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-12-7"],
+      "title": "〜とすれば／〜としたら／〜とすると",
+      "structure": "Plain form + とすれば／としたら／とすると",
+      "meaning": "\"If we suppose that…\", \"assuming…\".",
+      "explanation": "These set up a supposition and reason from it. The first part is a hypothesis or something you have just learned: それが本当だとすれば (if that's true). The second part is a conclusion, a judgement or a question.",
+      "summary": "〜とすれば／としたら = supposing that…, (then)…",
+      "details": "- 明日出発する**としたら**、今日中に準備しないと。 If we're leaving tomorrow, we need to get ready today.\n- その話が本当だ**とすれば**、大変なことだ。 If that story is true, it's serious.\n- 一億円あった**としたら**、何に使う？ Supposing you had 100 million yen, what would you spend it on?",
+      "tags": ["conditional", "conjecture-inference"],
+      "examples": [
+        { "jp": "電車が止まっているとすれば、バスで行くしかない。", "en": "If the trains are stopped, we'll have to take the bus." },
+        { "jp": "もう一度生まれるとしたら、何になりたいですか。", "en": "If you could be born again, what would you like to be?" }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-11-2"],
+      "title": "〜さえ〜ば",
+      "structure": "N さえ + Vば／adj ければ ／ Vます-stem さえ すれば",
+      "meaning": "\"If only…\", \"as long as…\": the one condition that is enough.",
+      "explanation": "さえ〜ば says that this single condition is all that is needed for the result: 時間さえあれば (if only I had time). With verbs, use the ます-stem + さえ すれば: 練習しさえすれば.",
+      "summary": "〜さえ〜ば = as long as / if only (that one thing).",
+      "details": "- お金**さえ**あれ**ば**、何でもできると思っている。 He thinks that as long as he has money, he can do anything.\n- この薬を飲み**さえ**すれ**ば**、治ります。 As long as you take this medicine, you'll get better.",
+      "tags": ["conditional", "emphasis-limitation"],
+      "examples": [
+        { "jp": "天気さえよければ、ここから富士山が見えます。", "en": "As long as the weather's good, you can see Mt. Fuji from here." },
+        { "jp": "あなたさえいてくれれば、ほかには何もいらない。", "en": "As long as you're with me, I don't need anything else." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-14-2"],
+      "title": "〜てからでないと／〜てからでなければ",
+      "structure": "Vて + からでないと／からでなければ + negative",
+      "meaning": "\"Not until…\", \"unless (you) first…\".",
+      "explanation": "The pattern says that one thing must happen first before the second is possible. The second half is negative or a word like 無理, だめ: 確かめてからでないと、答えられない.",
+      "summary": "〜てからでないと〜ない = can't… until (you) first…",
+      "details": "- 家族に相談し**てからでないと**、決められません。 I can't decide until I've talked to my family.\n- お金を払っ**てからでなければ**、入れません。 You can't go in until you've paid.",
+      "tags": ["conditional", "time-relative"],
+      "examples": [
+        { "jp": "実物を見てからでないと、買うかどうか決められない。", "en": "I can't decide whether to buy it until I've seen the real thing." },
+        { "jp": "この仕事は、研修を受けてからでなければできません。", "en": "You can't do this job until you've had the training." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-13-7"],
+      "title": "〜てはじめて",
+      "structure": "Vて + はじめて",
+      "meaning": "\"Only after…\", \"not until… did (I)\": a realisation that comes only after an experience.",
+      "explanation": "はじめて (for the first time) after the て-form says that it took this experience to understand or notice something. The second half is usually 分かる, 気づく, 知る.",
+      "summary": "〜てはじめて = only after (doing) did I (realise)…",
+      "details": "- 病気になっ**てはじめて**、健康の大切さが分かった。 It wasn't until I got ill that I understood how important health is.\n- 一人で暮らし**てはじめて**、親のありがたさに気づいた。",
+      "tags": ["time-relative", "experience"],
+      "examples": [
+        { "jp": "外国に住んではじめて、自分の国のよさが分かった。", "en": "Only after living abroad did I see what's good about my own country." },
+        { "jp": "子どもを育ててはじめて、母の苦労を知った。", "en": "It wasn't until I raised children myself that I knew how hard my mother had worked." }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "replaces": ["n3-grammar-10-2"],
+      "title": "〜べきだ／〜べきではない",
+      "structure": "V dictionary form + べきだ（する → すべき／するべき）",
+      "meaning": "\"Should\", \"ought to\" / \"should not\": a duty or the right thing to do.",
+      "explanation": "べきだ states what is right according to morals or common sense, so it sounds stronger than ほうがいい. It is used for general statements and opinions, but said to a superior it is too direct. する becomes すべき or するべき.",
+      "summary": "V べきだ = ought to; べきではない = ought not to.",
+      "details": "- 約束は守る**べきだ**。 You should keep your promises.\n- 人の悪口を言う**べきではない**。 You shouldn't speak ill of people.\n- もっと早く相談**すべき**だった。 I should have asked for advice sooner.",
+      "tags": ["obligation-necessity", "advice-suggestion"],
+      "examples": [
+        { "jp": "学生は勉強するべきだと父はいつも言う。", "en": "My father always says students should study." },
+        { "jp": "そんな大事なことは、一人で決めるべきではない。", "en": "You shouldn't decide something that important on your own." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-10-3"],
+      "title": "〜ばよかった",
+      "structure": "Vば／Vなければ + よかった（のに）",
+      "meaning": "\"I wish I had…\", \"I should have…\": regret about the past.",
+      "explanation": "Literally \"it would have been good if…\". Said about yourself it is regret; with のに at the end, about someone else, it is criticism or sympathy: 言えばよかったのに (you should have said).",
+      "summary": "〜ばよかった = I should have…; 〜なければよかった = I shouldn't have…",
+      "details": "- もっと勉強すれ**ばよかった**。 I wish I'd studied more.\n- あんなこと、言わなけれ**ばよかった**。 I shouldn't have said that.\n- 来れ**ばよかったのに**。 You should have come.",
+      "tags": ["emotion-expression", "conditional"],
+      "examples": [
+        { "jp": "雨が降ってきた。傘を持ってくればよかった。", "en": "It's started raining. I should have brought an umbrella." },
+        { "jp": "こんなに混むなら、もっと早く出ればよかった。", "en": "If I'd known it'd be this crowded, I'd have left earlier." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-10-4"],
+      "title": "〜ば〜のに",
+      "structure": "Vば／adj ければ + 〜のに",
+      "meaning": "\"If only…, (but it isn't so)\": a wish contrary to reality.",
+      "explanation": "The ば clause states a situation that is not true, and のに at the end shows regret or frustration that it is not: 時間があれば行けるのに (if I had time I could go, but I don't).",
+      "summary": "〜ば〜のに = if only… (but sadly not).",
+      "details": "- もう少し安けれ**ば**、買う**のに**。 If it were a bit cheaper, I'd buy it.\n- 彼も来れ**ば**楽しかった**のに**。 It would have been fun if he'd come too.",
+      "tags": ["conditional", "emotion-expression"],
+      "examples": [
+        { "jp": "もっと近ければ、毎日来られるのに。", "en": "If it were closer, I could come every day." },
+        { "jp": "早く言ってくれれば、手伝ったのに。", "en": "If you'd told me sooner, I'd have helped." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-22-5"],
+      "title": "〜たものだ",
+      "structure": "Vた + ものだ",
+      "meaning": "\"Used to…\": fond memories of something done often in the past.",
+      "explanation": "Vた ものだ looks back on a past habit with nostalgia: 子どものころ、よくこの川で泳いだものだ. With the dictionary form, ものだ states what is natural or expected (人は変わるものだ), a separate use.",
+      "summary": "Vた ものだ = used to (often), with nostalgia.",
+      "details": "- 学生のころは、よく徹夜した**ものだ**。 I often used to stay up all night as a student.\n- 昔はこの辺りで、よく遊んだ**ものです**。 We used to play around here a lot.\n- General truth: 時間がたつのは早い**ものだ**。 Time flies.",
+      "tags": ["experience", "emotion-expression"],
+      "examples": [
+        { "jp": "小さいころは、毎年夏になると祖父の家に遊びに行ったものだ。", "en": "When I was little, I used to visit my grandfather's house every summer." },
+        { "jp": "昔はよく友だちと朝まで話したものです。", "en": "I used to talk with friends until morning." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-20-6"],
+      "title": "〜つもりだった／〜たつもりで",
+      "structure": "V dictionary form + つもりだった ／ Vた・N の + つもりで",
+      "meaning": "\"I meant to…\" (but didn't); \"(acting) as if…\".",
+      "explanation": "つもりだった says that a plan or belief turned out wrong: 行くつもりだった (I meant to go). Vた つもり means you thought you had done something: 閉めたつもりだった (I thought I'd shut it). 〜つもりで means acting with a particular attitude: 旅行に行ったつもりで、貯金する.",
+      "summary": "つもりだった = I meant to / I thought I had; 〜つもりで = as if, imagining that…",
+      "details": "- 今日は早く帰る**つもりだった**が、無理だった。 I meant to go home early today, but couldn't.\n- 鍵をかけた**つもり**だったのに、開いていた。 I thought I'd locked it, but it was open.\n- 先生になった**つもりで**説明してみて。 Try explaining as if you were the teacher.",
+      "tags": ["volitional-intention", "concession-contrast"],
+      "examples": [
+        { "jp": "メールを送ったつもりだったが、まだ下書きに入っていた。", "en": "I thought I'd sent the email, but it was still in my drafts." },
+        { "jp": "週末は勉強するつもりだったのに、一日中寝てしまった。", "en": "I meant to study at the weekend, but I slept all day." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-16-1"],
+      "title": "〜ところだった",
+      "structure": "V dictionary form + ところだった（もう少しで…）",
+      "meaning": "\"Nearly…\", \"almost…\": something bad that very nearly happened.",
+      "explanation": "With もう少しで or 危うく, V dictionary form + ところだった says a bad thing almost happened but did not. Do not confuse it with Vた ところだ (just did), which is about timing.",
+      "summary": "〜ところだった = nearly (did), but luckily didn't.",
+      "details": "- もう少しで電車に乗り遅れる**ところだった**。 I very nearly missed the train.\n- 危うく事故になる**ところだった**。 It nearly turned into an accident.\n- Compare: 今、着いた**ところだ**。 I've just arrived.",
+      "tags": ["time-relative", "possibility"],
+      "examples": [
+        { "jp": "アラームに気づかなくて、もう少しで寝坊するところだった。", "en": "I didn't hear my alarm and very nearly overslept." },
+        { "jp": "自転車が急に出てきて、危うくぶつかるところだった。", "en": "A bicycle came out suddenly and I almost hit it." }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import type { DocType, Level, SearchHit, SearchOptions, SearchResponse } from '.
 import { realIndex } from './realIndex';
 import { titleAliases } from './dedupedAliases';
 import { unpackUidMap } from '../../../store/aiCacheMigration';
+import { N3_GRAMMAR_UIDS, N3_KANJI_UIDS, N3_VOCAB_UIDS } from '../../../store/n3RestructureUids';
 import { N5_GRAMMAR_UIDS, N5_KANJI_UIDS, N5_VOCAB_UIDS } from '../../../store/n5RestructureUids';
 
 const { source } = realIndex();
@@ -28,16 +29,20 @@ async function run(q: string, opts: Partial<SearchOptions> = {}): Promise<Search
   return source.search(q, { ...N5, ...opts });
 }
 
-// The PM list predates the 2026-11 N5 restructure (docs/content/n5-restructure.md): its N5
-// uids are translated to the current ones, and N5 words match by title + level (their
-// lessons moved).
-const N5_NOW: Record<string, string> = {
+// The PM list predates the 2026-11 N5 and N3 restructures (docs/content/n5-restructure.md,
+// docs/content/n3-restructure.md): their uids are translated to the current ones, and N5/N3
+// rows match by title + level (their lessons moved).
+const MOVED: Record<string, string> = {
   ...unpackUidMap(N5_GRAMMAR_UIDS, 'n5-grammar-'),
   ...unpackUidMap(N5_VOCAB_UIDS, 'n5-vocab-'),
   ...unpackUidMap(N5_KANJI_UIDS, 'n5-kanji-'),
+  ...unpackUidMap(N3_GRAMMAR_UIDS, 'n3-grammar-'),
+  ...unpackUidMap(N3_VOCAB_UIDS, 'n3-vocab-'),
+  ...unpackUidMap(N3_KANJI_UIDS, 'n3-kanji-'),
 };
-const now = (uid: string): string => N5_NOW[uid] ?? uid;
-const current = (r: Ref): Ref => (r.level === 'N5' ? { ...r, uid: r.uid && now(r.uid), lesson: undefined } : r);
+const now = (uid: string): string => MOVED[uid] ?? uid;
+const current = (r: Ref): Ref =>
+  r.level === 'N5' || r.level === 'N3' ? { ...r, uid: r.uid && now(r.uid), lesson: undefined } : r;
 
 function matches(h: SearchHit, ref: Ref): boolean {
   return matchesCurrent(h, current(ref));
@@ -129,7 +134,8 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 
   it('T-08 mei = めい = メイ: kanji with on メイ in level, lesson order (any rank level)', async () => {
-    const expected = ['明 N5 L10', '名 N5 L18', '迷 N3 L1', '命 N3 L1', '鳴 N3 L12', '謎 N3 L14', '盟 N1 L2', '銘 N1 L12'];
+    // N3 lessons follow the 2026-11 N3 restructure (docs/content/n3-restructure.md).
+    const expected = ['明 N5 L10', '名 N5 L18', '命 N3 L7', '迷 N3 L11', '鳴 N3 L21', '謎 N3 L24', '盟 N1 L2', '銘 N1 L12'];
     for (const q of ['mei', 'めい', 'メイ']) {
       const r = await run(q, { limitPerType: Infinity, rankLevel: 'N3' });
       const exact = r.groups.kanji.filter((h) => h.tier === 0);
@@ -145,7 +151,7 @@ describe('§5 acceptance list (golden queries)', () => {
     const meaningHits = r.groups.grammar.filter((h) => h.matchKind === 'english');
     expect(titles(meaningHits).sort()).toEqual(
       [
-        'けど／けれども N5 L10', '〜のに（although, and yet） N4 L9', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
+        'けど／けれども N5 L10', '〜のに（although, and yet） N4 L9', '〜ながらも N3 L8', '〜といっても N3 L8', '〜ものの N2 L4', '〜つつ（も） N2 L4',
         '〜とはいえ N1 L1', '〜ものを N1 L1', '〜ところを N1 L32',
       ].sort()
     );
@@ -176,12 +182,13 @@ describe('§5 acceptance list (golden queries)', () => {
     expectContains(r, 'grammar', [{ t: '〜に比べて', level: 'N3', lesson: 18 }]);
   });
 
-  it('T-12 degree/extent: chip "Degree / Extent · 45"; tapping lists 45 incl. ばかりか, ずつ, だらけ', async () => {
+  // 45 → 46: the N3 rewrite (2026-11) re-tagged its points.
+  it('T-12 degree/extent: chip "Degree / Extent · 46"; tapping lists 46 incl. ばかりか, ずつ, だらけ', async () => {
     const r = await run('degree/extent');
     const chip = r.categories.find((c) => c.label === 'Degree / Extent');
-    expect(chip?.count).toBe(45);
+    expect(chip?.count).toBe(46);
     const list = await run('', { category: chip?.id, limitPerType: Infinity });
-    expect(list.totals.grammar).toBe(45);
+    expect(list.totals.grammar).toBe(46);
     expectContains(list, 'grammar', [
       { t: '〜ばかりか', level: 'N2', lesson: 9 },
       { t: '〜ずつ', level: 'N3', lesson: 5 },
@@ -205,10 +212,11 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 
   // 49 since the N5 restructure: すみませんが、〜 (introductory が) is a connective, not a contrast.
-  it('T-14 contrast: chip "Concession / Contrast · 49" (48 + 〜わりに); に対して and にひきかえ by meaning; 反面 via the chip', async () => {
+  // 49 → 51: the N3 rewrite (2026-11) re-tagged its points.
+  it('T-14 contrast: chip "Concession / Contrast · 51"; に対して and にひきかえ by meaning; 反面 via the chip', async () => {
     const r = await run('contrast');
     const chip = r.categories.find((c) => c.label === 'Concession / Contrast');
-    expect(chip?.count).toBe(49);
+    expect(chip?.count).toBe(51);
     expectContains(r, 'grammar', [{ t: '〜にひきかえ', level: 'N1', lesson: 21 }]);
     // Amended: chip members now appear in the results, so 〜反面 (meaning "On the other
     // hand") is in the group; with 56 rows it and 〜に対して sit behind "Show all".
@@ -234,7 +242,7 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-17 ばかり: grammar first with all 8', async () => {
     const r = await run('ばかり');
     expect(r.groupOrder[0]).toBe('grammar');
-    const want: [Level, number][] = [['N4', 21], ['N3', 5], ['N3', 9], ['N2', 9], ['N2', 17], ['N2', 19], ['N1', 17], ['N1', 17]];
+    const want: [Level, number][] = [['N4', 21], ['N3', 22], ['N3', 11], ['N2', 9], ['N2', 17], ['N2', 19], ['N1', 17], ['N1', 17]];
     const got = r.groups.grammar.map((h) => [h.level, h.lesson]);
     for (const w of want) expect(got).toContainEqual(w);
     expect(r.groups.grammar.filter((h) => h.level === 'N1' && h.lesson === 17)).toHaveLength(2);
