@@ -9,6 +9,8 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import type { DocType, Level, SearchHit, SearchOptions, SearchResponse } from '../types';
 import { realIndex } from './realIndex';
 import { titleAliases } from './dedupedAliases';
+import { unpackUidMap } from '../../../store/aiCacheMigration';
+import { N5_GRAMMAR_UIDS, N5_KANJI_UIDS, N5_VOCAB_UIDS } from '../../../store/n5RestructureUids';
 
 const { source } = realIndex();
 
@@ -26,7 +28,22 @@ async function run(q: string, opts: Partial<SearchOptions> = {}): Promise<Search
   return source.search(q, { ...N5, ...opts });
 }
 
-function matches(h: SearchHit, r: Ref): boolean {
+// The PM list predates the 2026-11 N5 restructure (docs/content/n5-restructure.md): its N5
+// uids are translated to the current ones, and N5 words match by title + level (their
+// lessons moved).
+const N5_NOW: Record<string, string> = {
+  ...unpackUidMap(N5_GRAMMAR_UIDS, 'n5-grammar-'),
+  ...unpackUidMap(N5_VOCAB_UIDS, 'n5-vocab-'),
+  ...unpackUidMap(N5_KANJI_UIDS, 'n5-kanji-'),
+};
+const now = (uid: string): string => N5_NOW[uid] ?? uid;
+const current = (r: Ref): Ref => (r.level === 'N5' ? { ...r, uid: r.uid && now(r.uid), lesson: undefined } : r);
+
+function matches(h: SearchHit, ref: Ref): boolean {
+  return matchesCurrent(h, current(ref));
+}
+
+function matchesCurrent(h: SearchHit, r: Ref): boolean {
   if (r.uid) return h.uid === r.uid;
   if (h.title === r.t) return h.level === r.level && (r.lesson === undefined || h.lesson === r.lesson);
   // A dictionary form removed by scripts/dedupe-vocab.ts is now taught by its ます row.
@@ -34,8 +51,9 @@ function matches(h: SearchHit, r: Ref): boolean {
 }
 
 /** A ref is present when it is a row or a collapsed duplicate (alsoAt) of one. */
-function present(list: SearchHit[], r: Ref): boolean {
-  return list.some((h) => matches(h, r) || (r.uid !== undefined && h.alsoAt?.some((a) => a.uid === r.uid)));
+function present(list: SearchHit[], ref: Ref): boolean {
+  const r = current(ref);
+  return list.some((h) => matchesCurrent(h, r) || (r.uid !== undefined && h.alsoAt?.some((a) => a.uid === r.uid)));
 }
 
 function expectContains(res: SearchResponse, type: DocType, refs: Ref[]): void {
@@ -57,12 +75,12 @@ beforeAll(async () => {
 });
 
 describe('§5 acceptance list (golden queries)', () => {
-  it('T-01 わかります: exact row, 分かる as lemma hit, grammar N5 L9', async () => {
+  it('T-01 わかります: exact row, 分かる as lemma hit, grammar N5 L11', async () => {
     const r = await run('わかります');
     expectTop(r, 'vocab', { t: 'わかります', level: 'N5', uid: 'n5-vocab-9-1' });
-    const wakaru = r.groups.vocab.find((h) => h.title === '分かる' && h.level === 'N5' && h.lesson === 4);
+    const wakaru = r.groups.vocab.find((h) => h.title === '分かる' && h.level === 'N5' && h.lesson === 11);
     expect(wakaru?.matchKind).toMatch(/lemma|deinflected/);
-    expect(r.groups.grammar.some((h) => h.level === 'N5' && h.lesson === 9 && h.title.startsWith('N が あります／わかります'))).toBe(true);
+    expect(r.groups.grammar.some((h) => h.level === 'N5' && h.lesson === 11 && h.title.startsWith('N が 好きです／上手です／わかります'))).toBe(true);
   });
 
   // 分る (rare okurigana variant) left N2: N5 わかります now covers it (cumulative coverage).
@@ -90,7 +108,7 @@ describe('§5 acceptance list (golden queries)', () => {
     expectTop(r, 'kanji', { t: '因', level: 'N3', uid: 'n3-kanji-21-12' });
   });
 
-  it('T-06 分: kanji first; vocab 自分, 十分, 半分; grammar 今 -時-分です', async () => {
+  it('T-06 分: kanji first; vocab 自分, 十分, 半分; grammar 今 〜時〜分です', async () => {
     const r = await run('分');
     expect(r.groupOrder[0]).toBe('kanji');
     expectTop(r, 'kanji', { t: '分', level: 'N5', lesson: 4 });
@@ -103,7 +121,7 @@ describe('§5 acceptance list (golden queries)', () => {
     expectContains(all, 'vocab', [{ t: '半分', level: 'N5' }]);
     // Same top rows for an N3 learner: the current level gets no priority (orchestrator decision).
     expectContains(await run('分', { rankLevel: 'N3' }), 'vocab', [{ t: '自分', level: 'N5', lesson: 4 }, { t: '十分', level: 'N4', lesson: 7 }]);
-    expect(r.groups.grammar.some((h) => h.title === '今 -時-分です' && h.level === 'N5')).toBe(true);
+    expect(r.groups.grammar.some((h) => h.title === '今 〜時〜分です' && h.level === 'N5')).toBe(true);
   });
 
   it('T-07 ぷん / pun → 分 (on プン)', async () => {
@@ -111,7 +129,7 @@ describe('§5 acceptance list (golden queries)', () => {
   });
 
   it('T-08 mei = めい = メイ: kanji with on メイ in level, lesson order (any rank level)', async () => {
-    const expected = ['明 N5 L16', '名 N5 L18', '迷 N3 L1', '命 N3 L1', '鳴 N3 L12', '謎 N3 L14', '盟 N1 L2', '銘 N1 L12'];
+    const expected = ['明 N5 L10', '名 N5 L18', '迷 N3 L1', '命 N3 L1', '鳴 N3 L12', '謎 N3 L14', '盟 N1 L2', '銘 N1 L12'];
     for (const q of ['mei', 'めい', 'メイ']) {
       const r = await run(q, { limitPerType: Infinity, rankLevel: 'N3' });
       const exact = r.groups.kanji.filter((h) => h.tier === 0);
@@ -126,7 +144,7 @@ describe('§5 acceptance list (golden queries)', () => {
     const meaningHits = r.groups.grammar.filter((h) => h.matchKind === 'english');
     expect(titles(meaningHits).sort()).toEqual(
       [
-        'けど／けれども N5 L8', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
+        'けど／けれども N5 L10', '〜ながらも N3 L8', '〜といっても N3 L9', '〜ものの N2 L4', '〜つつ（も） N2 L4',
         '〜とはいえ N1 L1', '〜ものを N1 L1', '〜ところを N1 L32',
       ].sort()
     );
@@ -139,7 +157,7 @@ describe('§5 acceptance list (golden queries)', () => {
   it('T-10 ?tag=comparison: exactly 18, N5 → N1', async () => {
     const list = await source.listByTag('comparison');
     expect(list).toHaveLength(18);
-    expect(list[0].title).toBe('Aは Bより adjective です');
+    expect(list[0].title).toBe('Aは Bより adj です');
     expect(list[0].level).toBe('N5');
     expect(list[0].lesson).toBe(12);
     expect(list[17].title).toBe('〜きっての');
@@ -185,10 +203,11 @@ describe('§5 acceptance list (golden queries)', () => {
     ]);
   });
 
-  it('T-14 contrast: chip "Concession / Contrast · 50" (49 + 〜わりに); に対して and にひきかえ by meaning; 反面 via the chip', async () => {
+  // 49 since the N5 restructure: すみませんが、〜 (introductory が) is a connective, not a contrast.
+  it('T-14 contrast: chip "Concession / Contrast · 49" (48 + 〜わりに); に対して and にひきかえ by meaning; 反面 via the chip', async () => {
     const r = await run('contrast');
     const chip = r.categories.find((c) => c.label === 'Concession / Contrast');
-    expect(chip?.count).toBe(50);
+    expect(chip?.count).toBe(49);
     expectContains(r, 'grammar', [{ t: '〜にひきかえ', level: 'N1', lesson: 21 }]);
     // Amended: chip members now appear in the results, so 〜反面 (meaning "On the other
     // hand") is in the group; with 56 rows it and 〜に対して sit behind "Show all".
@@ -360,17 +379,17 @@ describe('§5 acceptance list (golden queries)', () => {
 
   it('T-38 even never matches "event"', async () => {
     const r = await run('even', { limitPerType: Infinity });
-    expect(r.groups.grammar.some((h) => h.title.startsWith('A(place)で Bが あります') && h.level === 'N5')).toBe(false);
+    expect(r.groups.grammar.some((h) => h.title.startsWith('N(place)で N(event)が あります') && h.level === 'N5')).toBe(false);
     expect(r.groups.vocab.some((h) => /\bevent/i.test(h.meaning) && !/\beven\b/i.test(h.meaning))).toBe(false);
   });
 
   it('T-39 に: exact-only, particle grammar, vocab 二 and 荷, ≤ 40', async () => {
     const top = await run('に', { rankLevel: 'N3' });
-    expect(titles(top.groups.grammar).slice(0, 2)).toEqual(['N(time)に V N5 L4', 'N(person)に あげます、etc. N5 L7']);
+    expect(titles(top.groups.grammar).slice(0, 2)).toEqual(['A(place)に Bが あります／います N5 L4', 'Aは B(place)に あります／います N5 L4']);
     const r = await run('に', { limitPerType: Infinity });
     expect(r.exactOnly).toBe(true);
-    expect(titles(r.groups.grammar)).toContain('N(time)に V N5 L4');
-    expect(titles(r.groups.grammar)).toContain('N(person)に あげます、etc. N5 L7');
+    expect(titles(r.groups.grammar)).toContain('N(time)に V N5 L6');
+    expect(titles(r.groups.grammar)).toContain('N(person)に あげます／貸します／教えます N5 L9');
     expect(r.groups.vocab.every((h) => h.reading === 'に')).toBe(true);
     expect(present(r.groups.vocab, { t: '二', level: 'N5', uid: 'n5-vocab-2-29' })).toBe(true);
     expect(present(r.groups.vocab, { t: '荷', level: 'N1' })).toBe(true);
@@ -396,14 +415,14 @@ describe('§5 acceptance list (golden queries)', () => {
     const r = await run('ちょうど');
     const row = r.groups.vocab.find((h) => h.title === 'ちょうど');
     const at = [row, ...(row?.alsoAt ?? [])].map((x) => `${x?.level}-${x?.lesson}`).sort();
-    expect(at).toEqual(['N4-21', 'N5-22']);
+    expect(at).toEqual(['N4-21', 'N5-6']);
   });
 
   it('T-42 丁度: no word match; kanji 丁 and 度 listed', async () => {
     const r = await run('丁度');
     expect(r.wordMatch).toBe(false);
     expect(r.totals.vocab + r.totals.grammar).toBe(0);
-    expect(r.groups.kanji.map((h) => h.uid).sort()).toEqual(['n1-kanji-11-6', 'n5-kanji-22-6'].sort());
+    expect(r.groups.kanji.map((h) => h.uid).sort()).toEqual(['n1-kanji-11-6', now('n5-kanji-22-6')].sort());
   });
 
   it('T-43 (data side) ものの with level N2 and ばかり with N2,N3 filter by level', async () => {
@@ -427,7 +446,7 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
   it('R1 direct meaning hits rank above chip members that merely share the function', async () => {
     const soon = await run('as soon as');
     expect(top(soon.groups.grammar, 5)).toEqual(expect.arrayContaining(['〜次第（だ／で）', '〜か〜ないかのうちに']));
-    expect(top(soon.groups.grammar, 5)).not.toContain('今 -時-分です');
+    expect(top(soon.groups.grammar, 5)).not.toContain('今 〜時〜分です');
     const acc = await run('according to');
     expect(acc.groups.grammar[0].title).toBe('〜によると／〜によれば');
     const even = await run('even', { limitPerType: Infinity });
@@ -490,8 +509,13 @@ describe('regression 2026-11 (R1–R14, D1–D3)', () => {
 
   it('R14 want → the たい point first; a gloss match before an explanation-sentence match', async () => {
     const g = (await run('want')).groups.grammar.map((h) => h.title);
-    expect(g[0]).toBe('V ます-form たいです');
-    expect(g.indexOf('V-て ほしい / V-ないで ほしい')).toBeLessThan(g.indexOf('Word(s) ですか'));
+    expect(g[0]).toBe('V ます-stem たいです');
+    // The old explanation-sentence hit (N5 "Word(s) ですか") no longer mentions "want" since
+    // the N5 rewrite; if it ever matches again, it must still rank below the gloss match.
+    const hoshii = g.indexOf('V-て ほしい / V-ないで ほしい');
+    const echo = g.indexOf('N ですか（checking what you heard）');
+    expect(hoshii).toBeGreaterThan(0);
+    if (echo >= 0) expect(hoshii).toBeLessThan(echo);
   });
 
   it('a set phrase leads its casual short form (おはよう → おはようございます N5)', async () => {

@@ -1,0 +1,449 @@
+{
+  "1": [
+    {
+      "replaces": ["n5-grammar-1-1"],
+      "title": "Aは Bです",
+      "structure": "N1は N2です",
+      "meaning": "Says what or who something is: \"A is B.\"",
+      "explanation": "は (read わ) marks the topic, the thing you are talking about; です closes the sentence politely. The same form covers \"I am\", \"you are\" and \"it is\": Japanese does not change the verb for the person.",
+      "summary": "The basic polite statement: topic + は, then what it is + です.",
+      "note": "The particle は is always pronounced わ.",
+      "details": "| Part | Role |\n| :--- | :--- |\n| **N1は** | the topic: what the sentence is about |\n| **N2です** | what is said about it, politely |\n\nThe subject is often dropped once it is clear: asked what you do, you can answer just 学生です。",
+      "tags": ["topic-focus-particle", "definition-meaning"],
+      "examples": [
+        { "jp": "わたしはアンナです。", "en": "I'm Anna." },
+        { "jp": "森さんは先生です。", "en": "Mr. Mori is a teacher." },
+        { "jp": "ケンさんは大学の学生です。", "en": "Ken is a university student." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-1-2"],
+      "title": "Aは Bじゃ ありません",
+      "structure": "N1は N2じゃ ありません／では ありません",
+      "meaning": "The negative of です: \"A is not B.\"",
+      "explanation": "Replace です with じゃ ありません. では ありません means the same and sounds more formal; you will see it in writing and announcements.",
+      "summary": "じゃ ありません (formal: では ありません) turns \"is\" into \"is not\".",
+      "details": "- 会社員**です**。 I am an office worker.\n- 会社員**じゃ ありません**。 I am not an office worker.\n- 会社員**では ありません**。 (same, more formal)\n\nIn writing では is read でわ, just as the topic particle は is read わ.",
+      "tags": ["topic-focus-particle", "definition-meaning", "negative-manner"],
+      "examples": [
+        { "jp": "わたしは先生じゃありません。", "en": "I'm not a teacher." },
+        { "jp": "リーさんは医者ではありません。", "en": "Ms. Lee is not a doctor." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-1-3"],
+      "title": "Sか",
+      "structure": "Sentence + か",
+      "meaning": "Turns a statement into a question.",
+      "explanation": "Add か to the end of a polite sentence and it becomes a question; the word order stays the same. A question word such as だれ or 何 goes where the answer will go.",
+      "summary": "End a sentence with か to ask; no change of word order.",
+      "note": "In writing, a question with か usually ends with 。, not ?",
+      "details": "| Statement | Question |\n| :--- | :--- |\n| アンナさんは学生です。 | アンナさんは学生です**か**。 |\n| あの人は先生です。 | あの人は**だれ**です**か**。 |\n\nSpeak the final か with a rising tone.",
+      "tags": ["question-embedding", "particle-usage"],
+      "examples": [
+        { "jp": "エマさんは学生ですか。", "en": "Are you a student, Emma?" },
+        { "jp": "あの人はだれですか。", "en": "Who is that person?" },
+        { "jp": "ケンさんは何歳ですか。", "en": "How old are you, Ken?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-2-3"],
+      "title": "はい、そうです／いいえ、ちがいます",
+      "structure": "はい、そうです。／いいえ、そうじゃ ありません。／いいえ、ちがいます。",
+      "meaning": "Short answers to a \"Is it ...?\" question.",
+      "explanation": "To a question ending in N です か, answer はい、そうです (yes, that's right) or いいえ、そうじゃ ありません／いいえ、ちがいます (no, it isn't). Then you can add the correct information.",
+      "summary": "そうです confirms, そうじゃ ありません or ちがいます denies.",
+      "details": "- 先生ですか。 → **はい、そうです。**\n- 先生ですか。 → **いいえ、ちがいます。**学生です。\n\nそうです answers questions about what something *is*. For questions with a verb (行きますか), answer with the verb instead: はい、行きます。",
+      "tags": ["definition-meaning", "acknowledgment"],
+      "examples": [
+        { "jp": "小林さんは会社員ですか。…はい、そうです。", "en": "Are you an office worker, Mr. Kobayashi? — Yes, I am." },
+        { "jp": "アンナさんは先生ですか。…いいえ、ちがいます。学生です。", "en": "Are you a teacher, Anna? — No, I'm not. I'm a student." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-1-4"],
+      "title": "Nも",
+      "structure": "N1は N2です。N3も N2です。",
+      "meaning": "\"Also\": the same thing is true of another topic.",
+      "explanation": "When what you say about a second topic is the same as what you said about the first, put も in place of は after the second topic.",
+      "summary": "も replaces は to mean \"also\".",
+      "note": "は and も never stand together on one noun: も takes the place of は.",
+      "details": "- わたし**は**学生です。リーさん**も**学生です。\n- I am a student. Ms. Lee is a student too.\n\nAfter a negative, も still means \"also\": わたしも先生じゃありません (I'm not a teacher either).",
+      "tags": ["topic-focus-particle", "particle-usage"],
+      "examples": [
+        { "jp": "わたしは学生です。エマさんも学生です。", "en": "I'm a student. Emma is a student too." },
+        { "jp": "森さんは先生じゃありません。わたしも先生じゃありません。", "en": "Mr. Mori isn't a teacher. I'm not a teacher either." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-1-5"],
+      "title": "Aの B（belonging to a group）",
+      "structure": "N1の N2",
+      "meaning": "Links two nouns: here, the group or place a person belongs to.",
+      "explanation": "の joins two nouns, and the first one describes the second. In introductions it tells where someone studies or works: 東京大学の学生 is \"a student at Tokyo University\".",
+      "summary": "N1の N2: N2 that belongs to or is part of N1.",
+      "details": "Read の phrases from the end: the last noun is the main one.\n\n| Phrase | Meaning |\n| :--- | :--- |\n| 東京大学**の**学生 | a student *at* Tokyo University |\n| ABC会社**の**会社員 | an employee *of* ABC company |\n| 日本語**の**先生 | a teacher *of* Japanese |",
+      "tags": ["particle-usage", "definition-meaning"],
+      "examples": [
+        { "jp": "ケンさんは東京大学の学生です。", "en": "Ken is a student at Tokyo University." },
+        { "jp": "森さんは日本語の先生です。", "en": "Mr. Mori is a Japanese teacher." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-1-6"],
+      "title": "〜さん",
+      "structure": "Name + さん",
+      "meaning": "A polite title after another person's name: Mr., Ms.",
+      "explanation": "Add さん after the family or given name of the person you are talking to or about. Never use it with your own name. Teachers and doctors are usually called 先生 instead, e.g. 森先生.",
+      "summary": "さん goes after other people's names, never your own.",
+      "note": "When you know the person's name, Japanese often uses it with さん instead of あなた.",
+      "details": "- 森**さん**は先生です。 (talking about Mr. Mori)\n- わたしは森です。 (introducing yourself: no さん)\n\nさん works for men and women, married or not. Calling someone by name + さん is usually more natural than あなた, which can sound distant.",
+      "tags": ["keigo-polite"],
+      "examples": [
+        { "jp": "はじめまして。青木です。", "en": "How do you do? I'm Aoki." },
+        { "jp": "青木さんは会社員です。", "en": "Mr. Aoki is an office worker." }
+      ]
+    }
+  ],
+  "2": [
+    {
+      "replaces": ["n5-grammar-2-1"],
+      "title": "これ／それ／あれ",
+      "structure": "これ／それ／あれ は N です",
+      "meaning": "\"This one / that one / that one over there\": pointing at things.",
+      "explanation": "これ is something near the speaker, それ something near the listener, and あれ something far from both. They stand alone as nouns, so they take は or が like any noun.",
+      "summary": "これ (near me), それ (near you), あれ (away from us both).",
+      "details": "| Word | Where the thing is |\n| :--- | :--- |\n| **これ** | close to the speaker |\n| **それ** | close to the listener |\n| **あれ** | away from both |\n\nAsking which thing: **どれ** (Lesson 10).",
+      "tags": ["demonstrative"],
+      "examples": [
+        { "jp": "これは辞書です。", "en": "This is a dictionary." },
+        { "jp": "それはわたしのかばんです。", "en": "That's my bag." },
+        { "jp": "あれは何ですか。", "en": "What is that over there?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-2-2"],
+      "title": "この N／その N／あの N",
+      "structure": "この／その／あの + N",
+      "meaning": "\"This ___ / that ___ / that ___ over there\" before a noun.",
+      "explanation": "この, その and あの point the same way as これ／それ／あれ, but they cannot stand alone: a noun always follows them.",
+      "summary": "この／その／あの always come right before a noun.",
+      "note": "これ本 is wrong: use この本.",
+      "details": "- **これ**は本です。 This is a book.\n- **この本**はわたしのです。 This book is mine.\n\nThe word you are pointing with decides the form: alone → これ, with a noun → この.",
+      "tags": ["demonstrative"],
+      "examples": [
+        { "jp": "この雑誌は青木さんのです。", "en": "This magazine is Mr. Aoki's." },
+        { "jp": "あの人はだれですか。", "en": "Who is that person over there?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-6-4"],
+      "title": "何（なに／なん）",
+      "structure": "何 + ですか／の N／を V",
+      "meaning": "\"What\": the same kanji has two readings.",
+      "explanation": "何 is read なん before sounds of the t, d and n rows (です, の, 歳, counters) and なに in most other places, such as before を or が. Listen for the reading; the kanji does not show it.",
+      "summary": "何 is なん before です, の and counters; なに before particles like を.",
+      "details": "| Reading | Typical places |\n| :--- | :--- |\n| **なん** | 何ですか, 何の本, 何歳, 何時 |\n| **なに** | 何を, 何が, 何も |",
+      "tags": ["question-embedding"],
+      "examples": [
+        { "jp": "これは何ですか。…カメラです。", "en": "What is this? — It's a camera." },
+        { "jp": "それは何の本ですか。", "en": "What is that book about?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-2-5"],
+      "title": "Aの B（owner, content）・Nの",
+      "structure": "N1の N2／N1の",
+      "meaning": "の for who owns something or what it is about; N1の alone means \"N1's one\".",
+      "explanation": "Besides group membership (Lesson 1), の shows the owner (わたしの本, my book) or the content (日本語の本, a Japanese book). When the thing is already clear, drop it and say just the owner + の: これはわたしのです (this is mine).",
+      "summary": "わたしの本 = my book; わたしの = mine.",
+      "details": "| Phrase | Meaning |\n| :--- | :--- |\n| わたし**の**かばん | my bag |\n| 車**の**雑誌 | a magazine about cars |\n| だれ**の**ですか | whose is it? |\n| アンナさん**の**です | it's Anna's |",
+      "tags": ["particle-usage", "definition-meaning"],
+      "examples": [
+        { "jp": "これはだれのかばんですか。", "en": "Whose bag is this?" },
+        { "jp": "そのかさはリーさんのです。", "en": "That umbrella is Ms. Lee's." },
+        { "jp": "これはカメラの雑誌です。", "en": "This is a magazine about cameras." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-2-4"],
+      "title": "S1か、S2か",
+      "structure": "S1か、S2か",
+      "meaning": "\"Is it A or B?\": a question offering two choices.",
+      "explanation": "Put two questions one after the other. The answer repeats the right choice; do not answer with はい or いいえ.",
+      "summary": "Two か-questions in a row ask the listener to choose.",
+      "details": "- それはペンです**か**、えんぴつです**か**。 Is that a pen or a pencil?\n- …えんぴつです。 It's a pencil. (not はい／いいえ)",
+      "tags": ["question-embedding", "alternative-choice"],
+      "examples": [
+        { "jp": "これは「1」ですか、「7」ですか。…「7」です。", "en": "Is this a 1 or a 7? — It's a 7." },
+        { "jp": "エマさんは学生ですか、先生ですか。", "en": "Is Emma a student or a teacher?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-2-6"],
+      "title": "そうですか",
+      "structure": "そうですか。",
+      "meaning": "\"I see\" / \"Oh, really?\": taking in new information.",
+      "explanation": "Said with a falling tone, そうですか shows you have heard and understood what someone told you. It is not a real question and needs no answer.",
+      "summary": "A falling そうですか means \"I see\".",
+      "note": "Do not raise your voice at the end, or it sounds like doubt.",
+      "details": "Compare:\n- **そうです**。 That's right. (an answer)\n- **そうですか**。 I see. (a reaction)",
+      "tags": ["acknowledgment"],
+      "examples": [
+        { "jp": "これは日本のカメラですよ。…そうですか。", "en": "This is a Japanese camera, you know. — Oh, I see." },
+        { "jp": "わたしは二十歳です。…そうですか。", "en": "I'm twenty. — I see." }
+      ]
+    }
+  ],
+  "3": [
+    {
+      "replaces": ["n5-grammar-3-1"],
+      "title": "ここ／そこ／あそこ（こちら／そちら／あちら）",
+      "structure": "ここ／そこ／あそこ は N です",
+      "meaning": "\"Here / there / over there\" for places, with polite forms こちら／そちら／あちら.",
+      "explanation": "The place words follow the same near-me / near-you / away-from-both split as これ／それ／あれ. こちら, そちら and あちら are the polite versions, used by shop and office staff and when showing someone the way.",
+      "summary": "ここ／そこ／あそこ for places; こちら／そちら／あちら are politer.",
+      "details": "| Plain | Polite | Meaning |\n| :--- | :--- | :--- |\n| ここ | こちら | here |\n| そこ | そちら | there (near you) |\n| あそこ | あちら | over there |\n| どこ | どちら | where |",
+      "tags": ["demonstrative"],
+      "examples": [
+        { "jp": "ここは教室です。", "en": "This is the classroom." },
+        { "jp": "受付はあちらです。", "en": "Reception is over there." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-3-2"],
+      "title": "Aは B(place)です",
+      "structure": "N(thing/person)は N(place)です",
+      "meaning": "Says where something or someone is.",
+      "explanation": "With a place word after は, です tells you the location: トイレはあそこです (the toilet is over there). It is the simplest way to say where things are; あります／います (Lesson 4) does the same job in more detail.",
+      "summary": "N は place です: \"N is at (place)\".",
+      "details": "- お手洗い**は**あそこ**です**。 The toilet is over there.\n- 森さん**は**事務所**です**。 Mr. Mori is in the office.",
+      "tags": ["existence-location", "topic-focus-particle"],
+      "examples": [
+        { "jp": "トイレはあそこです。", "en": "The toilet is over there." },
+        { "jp": "先生は事務所です。", "en": "The teacher is in the office." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-3-3"],
+      "title": "どこ／どちら",
+      "structure": "N は どこ／どちら ですか",
+      "meaning": "\"Where?\"; どちら is the polite form and also asks about a company or country.",
+      "explanation": "Use どこ to ask where something is. どちら is politer, and when asked about someone's company, school or country (お国はどちらですか) it means \"which one\".",
+      "summary": "どこ asks where; どちら is the polite version.",
+      "details": "- 駅は**どこ**ですか。 Where is the station?\n- お国は**どちら**ですか。 Where are you from? (lit. which is your country?)\n- 会社は**どこ**ですか。 Which company do you work for?",
+      "tags": ["question-embedding"],
+      "examples": [
+        { "jp": "銀行はどこですか。", "en": "Where's the bank?" },
+        { "jp": "お国はどちらですか。…イギリスです。", "en": "Where are you from? — The UK." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-3-5"],
+      "title": "こ／そ／あ／ど",
+      "structure": "こ〜／そ〜／あ〜／ど〜",
+      "meaning": "The pattern behind all pointing words.",
+      "explanation": "Pointing words come in sets of four. Learn the first syllable and you know where the thing is: こ near me, そ near you, あ away from both, ど the question.",
+      "summary": "こ・そ・あ・ど give near-me, near-you, far and which.",
+      "details": "| | こ | そ | あ | ど |\n| :--- | :--- | :--- | :--- | :--- |\n| thing | これ | それ | あれ | どれ |\n| + noun | この | その | あの | どの |\n| place | ここ | そこ | あそこ | どこ |\n| polite / direction | こちら | そちら | あちら | どちら |",
+      "tags": ["demonstrative"],
+      "examples": [
+        { "jp": "ここは図書館です。そこは食堂です。", "en": "This is the library. That's the cafeteria." },
+        { "jp": "あの建物は何ですか。", "en": "What is that building over there?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-3-4"],
+      "title": "Aの B（made in / made by）",
+      "structure": "N(country／company)の N(product)",
+      "meaning": "の for where a product comes from or who makes it.",
+      "explanation": "Put a country or maker before の to say where something was made: 日本の車 (a Japanese car). The question is どこの: どこのカメラですか (where is the camera from?).",
+      "summary": "国／会社 + の + product; ask with どこの.",
+      "details": "- **日本の**時計 a watch made in Japan\n- **どこの**ワインですか。 Where is the wine from?\n- …**フランスの**です。 It's French.",
+      "tags": ["particle-usage", "definition-meaning"],
+      "examples": [
+        { "jp": "これはどこのカメラですか。…日本のです。", "en": "Where is this camera from? — It's Japanese." },
+        { "jp": "わたしの時計はスイスのです。", "en": "My watch is Swiss." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-3-6", "n5-grammar-6-8", "n5-grammar-13-6"],
+      "title": "お〜／ご〜（polite prefixes）",
+      "structure": "お + N／ご + N",
+      "meaning": "Polite prefixes that make a noun sound respectful or refined.",
+      "explanation": "お and ご go before some nouns to show respect for the person they belong to (お国, ご家族) or simply to sound polite (お茶, お金). As a rule お goes with native Japanese words and ご with Chinese-origin words, but learn each word as it comes. Never use them for your own things when speaking about yourself.",
+      "summary": "お／ご before a noun: respectful about others, or just polite.",
+      "note": "Some words almost always take お: お茶, お金, お手洗い.",
+      "details": "| Use | Examples |\n| :--- | :--- |\n| respect for the other person | **お**国, **お**名前, **ご**家族 |\n| polite everyday words | **お**茶, **お**金, **お**酒 |\n| staff speaking to customers | **ご**注文, **ご**予約 |",
+      "tags": ["keigo-polite", "keigo-respectful"],
+      "examples": [
+        { "jp": "お名前は？", "en": "May I have your name?" },
+        { "jp": "お手洗いはあちらです。", "en": "The restroom is over there." }
+      ]
+    }
+  ],
+  "4": [
+    {
+      "replaces": ["n5-grammar-10-1"],
+      "title": "N が あります／います",
+      "structure": "N が あります (things)／N が います (people, animals)",
+      "meaning": "\"There is\" / \"there are\": something exists.",
+      "explanation": "あります is for things and plants; います is for people and animals, anything that moves by itself. The thing that exists is marked with が.",
+      "summary": "あります for things, います for living things that move.",
+      "note": "Trees and flowers take あります; fish in a tank take います.",
+      "details": "| Verb | For |\n| :--- | :--- |\n| **あります** | things, plants, events |\n| **います** | people, animals |\n\nNegative: ありません／いません.",
+      "tags": ["existence-location"],
+      "examples": [
+        { "jp": "いすがあります。", "en": "There's a chair." },
+        { "jp": "犬がいます。", "en": "There's a dog." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-2"],
+      "title": "A(place)に Bが あります／います",
+      "structure": "N(place)に N が あります／います",
+      "meaning": "\"There is B in/at A\": introducing what is in a place.",
+      "explanation": "Start with the place + に, then the thing + が. This order answers \"what is there?\" and is how you describe a room or a street.",
+      "summary": "Place に, thing が, あります／います.",
+      "details": "- 部屋**に**ベッド**が**あります。 There's a bed in the room.\n- 庭**に**猫**が**います。 There's a cat in the garden.\n- 何がありますか／だれがいますか。 What is there? / Who is there?",
+      "tags": ["existence-location"],
+      "examples": [
+        { "jp": "部屋に机といすがあります。", "en": "There's a desk and a chair in the room." },
+        { "jp": "庭に猫がいます。", "en": "There's a cat in the garden." },
+        { "jp": "教室にだれがいますか。", "en": "Who is in the classroom?" }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-3"],
+      "title": "Aは B(place)に あります／います",
+      "structure": "N は N(place)に あります／います",
+      "meaning": "\"A is in/at B\": saying where a known thing is.",
+      "explanation": "When the thing is already the topic (you both know it), put it first with は and give the place with に. This order answers \"where is it?\". For short answers, place + です also works.",
+      "summary": "Known thing は, place に, あります／います.",
+      "details": "| Question | Pattern |\n| :--- | :--- |\n| What is in the room? | 部屋**に**何**が**ありますか |\n| Where is the key? | 鍵**は**どこ**に**ありますか |\n\nShort answer: 鍵は机の上です。",
+      "tags": ["topic-focus-particle", "existence-location"],
+      "examples": [
+        { "jp": "鍵はかばんの中にあります。", "en": "The key is in the bag." },
+        { "jp": "ケンさんはどこにいますか。…図書館にいます。", "en": "Where's Ken? — He's in the library." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-4"],
+      "title": "Aの 上／下／前／後ろ…（position words）",
+      "structure": "N の 上／下／前／後ろ／右／左／中／外／隣／近く／間",
+      "meaning": "Position words that say exactly where something is.",
+      "explanation": "Position words are nouns, so they follow の: 机の上 (on the desk). Then add に, で or です as usual. 間 needs two things: AとBの間 (between A and B).",
+      "summary": "N の + position word: 机の上, 駅の前, 銀行の隣.",
+      "details": "| Word | Meaning |\n| :--- | :--- |\n| 上／下 | on, above / under |\n| 前／後ろ | in front / behind |\n| 右／左 | right / left |\n| 中／外 | inside / outside |\n| 隣 | next to (same kind) |\n| 近く | near |\n| AとBの間 | between A and B |",
+      "tags": ["existence-location"],
+      "examples": [
+        { "jp": "本は机の上にあります。", "en": "The book is on the desk." },
+        { "jp": "銀行は駅の前です。", "en": "The bank is in front of the station." },
+        { "jp": "犬はいすの下にいます。", "en": "The dog is under the chair." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-5"],
+      "title": "A や B［など］",
+      "structure": "N1 や N2［など］",
+      "meaning": "\"A, B and so on\": naming some examples, not a full list.",
+      "explanation": "や links nouns when you mention only some of the things. など at the end (\"etc.\") makes this clear. To list everything, use と (Lesson 5).",
+      "summary": "や gives examples; と gives the complete list.",
+      "details": "- かばんに本**と**ペンがあります。 There's a book and a pen in the bag (that's all).\n- かばんに本**や**ペン**など**があります。 There are books, pens and other things in the bag.",
+      "tags": ["listing-examples"],
+      "examples": [
+        { "jp": "冷蔵庫に肉や野菜があります。", "en": "There's meat, vegetables and so on in the fridge." },
+        { "jp": "駅の近くに銀行や郵便局などがあります。", "en": "Near the station there are banks, a post office and other places." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-6"],
+      "title": "N ですか（checking what you heard）",
+      "structure": "N ですか",
+      "meaning": "Repeating a key word with ですか to check you understood.",
+      "explanation": "When you catch only part of what someone said, repeat the important word with ですか. It shows you are following and gives the speaker the chance to correct you.",
+      "summary": "Echo a word + ですか to confirm it.",
+      "note": "Use a rising tone: you are asking.",
+      "details": "- 本屋はどこですか。…本屋**ですか**。駅の前です。 Where's the bookshop? — The bookshop? It's in front of the station.",
+      "tags": ["confirmation-seeking"],
+      "examples": [
+        { "jp": "トイレはどこですか。…トイレですか。あそこです。", "en": "Where's the toilet? — The toilet? Over there." },
+        { "jp": "ABCストアはどこですか。…ABCストアですか。駅の隣です。", "en": "Where's ABC Store? — ABC Store? Next to the station." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-10-7"],
+      "title": "N は ありませんか",
+      "structure": "N は ありませんか",
+      "meaning": "\"Do you have N?\" asked politely, often in a shop.",
+      "explanation": "Asking in the negative (\"don't you have...?\") sounds softer than ありますか, so it is common when looking for something in a shop or asking for help.",
+      "summary": "ありませんか is a soft way to ask whether something is available.",
+      "details": "- 地図**はありませんか**。 Do you have a map?\n- すみません、小さいの**はありませんか**。 Excuse me, do you have a smaller one?",
+      "tags": ["confirmation-seeking", "request"],
+      "examples": [
+        { "jp": "すみません、地図はありませんか。", "en": "Excuse me, do you have a map?" },
+        { "jp": "もっと安いのはありませんか。", "en": "Don't you have a cheaper one?" }
+      ]
+    }
+  ],
+  "5": [
+    {
+      "replaces": ["n5-grammar-11-1"],
+      "title": "Numbers and counters",
+      "structure": "N を Number(+counter) V／ひとつ、ふたつ…とお",
+      "meaning": "Counting things: the native numbers and the most common counters.",
+      "explanation": "Japanese counts things with a number plus a counter that depends on the kind of thing. The native set ひとつ…とお counts general things up to ten. The number usually goes after the noun and its particle, right before the verb: りんごを三つ買います.",
+      "summary": "Noun + particle, then number + counter, then the verb.",
+      "note": "Watch the sound changes: 一人 ひとり, 二人 ふたり, then さんにん, よにん.",
+      "details": "| Counter | For | 1 / 2 / 3 |\n| :--- | :--- | :--- |\n| 〜つ | things in general (up to 10) | ひとつ / ふたつ / みっつ |\n| 〜人 | people | ひとり / ふたり / さんにん |\n| 〜枚 | flat things (paper, shirts) | いちまい / にまい / さんまい |\n| 〜台 | machines, cars | いちだい / にだい / さんだい |\n| 〜本 | long things (pens, bottles) | いっぽん / にほん / さんぼん |\n\nAsk with いくつ (how many things) or 何人／何枚 etc.",
+      "tags": ["meta-conjugation"],
+      "examples": [
+        { "jp": "りんごを三つください。", "en": "Three apples, please." },
+        { "jp": "教室に学生が五人います。", "en": "There are five students in the classroom." },
+        { "jp": "切手を二枚ください。", "en": "Two stamps, please." }
+      ]
+    },
+    {
+      "replaces": [],
+      "title": "いくらですか／N を ください",
+      "structure": "N は いくらですか／N を［Number］ください",
+      "meaning": "Asking the price and asking for something in a shop.",
+      "explanation": "いくら asks how much something costs. To ask for something, say the thing + を + ください, adding the amount before ください if you need more than one.",
+      "summary": "いくらですか for prices; 〜を ください to buy.",
+      "details": "- この傘は**いくらですか**。…1,500円です。 How much is this umbrella? — 1,500 yen.\n- これ**を ください**。 I'll take this.\n- 切手**を**五枚**ください**。 Five stamps, please.\n\nLarge numbers count in 万 (10,000): 3万円 is 30,000 yen.",
+      "tags": ["request", "question-embedding"],
+      "examples": [
+        { "jp": "このかばんはいくらですか。…8,000円です。", "en": "How much is this bag? — 8,000 yen." },
+        { "jp": "じゃ、これをください。", "en": "Then I'll take this one." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-4-6"],
+      "title": "Aと B",
+      "structure": "N1 と N2",
+      "meaning": "\"A and B\": joining nouns in a complete list.",
+      "explanation": "と joins nouns only, never sentences or adjectives. It names every item; for a partial list use や (Lesson 4).",
+      "summary": "と = \"and\" between nouns, for the full list.",
+      "details": "- パン**と**牛乳をください。 Bread and milk, please.\n- Sentences are joined differently: そして (Lesson 16) or the て-form.",
+      "tags": ["listing-examples", "particle-usage"],
+      "examples": [
+        { "jp": "パンと牛乳をください。", "en": "Bread and milk, please." },
+        { "jp": "かばんにペンとノートがあります。", "en": "There's a pen and a notebook in the bag." }
+      ]
+    },
+    {
+      "replaces": ["n5-grammar-11-3"],
+      "title": "Quantity だけ／N だけ",
+      "structure": "Number(+counter) だけ／N だけ",
+      "meaning": "\"Only\" a certain amount or thing.",
+      "explanation": "だけ after a number or a noun limits it: \"just this much, nothing more\". It can replace が and を, or follow other particles.",
+      "summary": "だけ = only, after a quantity or a noun.",
+      "details": "- 一つ**だけ**ください。 Just one, please.\n- 日曜日**だけ**休みです。 Only Sunday is a day off.",
+      "tags": ["emphasis-limitation"],
+      "examples": [
+        { "jp": "お菓子は一つだけです。", "en": "There's only one sweet." },
+        { "jp": "財布に千円だけあります。", "en": "I have only 1,000 yen in my wallet." }
+      ]
+    }
+  ]
+}

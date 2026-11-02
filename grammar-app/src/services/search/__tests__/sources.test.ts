@@ -159,7 +159,7 @@ describe('index build (real data)', () => {
     expect(build.report.masu.length).toBeGreaterThan(200);
     expect(build.report.masu.every((r) => /^n[54]-/.test(r.uid))).toBe(true);
     const lemma = (uid: string) => build.report.masu.filter((r) => r.uid === uid).map((r) => r.lemma);
-    expect(lemma('n5-vocab-9-1')).toEqual(['わかる']);
+    expect(lemma('n5-vocab-11-1')).toEqual(['わかる']); // わかります
   });
 
   it('ships only kanji compounds that are not vocab rows', () => {

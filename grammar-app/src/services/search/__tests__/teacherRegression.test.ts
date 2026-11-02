@@ -147,10 +147,10 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(r.queryAs).toBe('こんにちは');
   });
   it('#29 minna → みんな top', async () => {
-    expect((await run('minna')).groups.vocab[0]).toMatchObject({ title: 'みんな', level: 'N5', lesson: 18 });
+    expect((await run('minna')).groups.vocab[0]).toMatchObject({ title: 'みんな', level: 'N5', lesson: 1 });
   });
   it('#30 onna → 女 top', async () => {
-    expect((await run('onna')).groups.vocab[0]).toMatchObject({ title: '女', level: 'N5', lesson: 8 });
+    expect((await run('onna')).groups.vocab[0]).toMatchObject({ title: '女', level: 'N5', lesson: 1 });
   });
   it('#31 こんにちわ → こんにちは', async () => {
     expect((await run('こんにちわ')).groups.vocab[0].title).toBe('こんにちは');
@@ -164,7 +164,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     const r = await run('because');
     expect(r.groupOrder[0]).toBe('grammar');
     const top3 = titles(r.groups.grammar.slice(0, 3));
-    expect(top3).toContain('S1から、S2');
+    expect(top3).toContain('S1から、S2（because）');
     expect(top3.some((t) => t.includes('ので'))).toBe(true);
   });
   it('#34 before → まえに in grammar top 3', async () => {
@@ -248,10 +248,10 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(labels).toContain('Feelings / attitude');
     expect(labels).not.toContain('Obligation');
   });
-  it('#52 have ever → Experience chip; Vた-form ことが あります in grammar', async () => {
+  it('#52 have ever → Experience chip; V た ことが あります in grammar', async () => {
     const r = await run('have ever');
     expect(r.categories.map((c) => c.label)).toContain('Experience');
-    expect(r.groups.grammar.some((h) => h.title === 'Vた-form ことが あります' && h.level === 'N5')).toBe(true);
+    expect(r.groups.grammar.some((h) => h.title === 'V た ことが あります' && h.level === 'N5')).toBe(true);
   });
   // ---- F13 kanji
   it('#53 日 → kanji group is 日 only', async () => {

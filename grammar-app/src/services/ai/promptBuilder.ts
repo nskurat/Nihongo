@@ -66,7 +66,7 @@ export function formatTargetVocab(v: VocabItem): string | null {
 function lessonCeiling(level: LevelType, lesson: number): string[] {
   if (level === 'N5') {
     const lines = [
-      `- The learner has studied N5 Lessons 1–${lesson} only (Minna no Nihongo Lessons 1–${lesson}). Do not use grammar from later lessons.`,
+      `- The learner has studied N5 Lessons 1–${lesson} only. Do not use grammar from later lessons.`,
     ];
     const notYet = N5_FORM_MILESTONES.filter((m) => m.lesson > lesson);
     if (notYet.length) {
