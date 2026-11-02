@@ -1,6 +1,5 @@
 /**
  * Global search contract shared by the data layer (index, planner, matcher) and the UI.
- * Source of truth: docs/search/04-data.md §1 and §5, docs/search/03-ux.md §7.2.
  * Changing a field here is a contract change — update both docs.
  */
 import type { LevelType } from '../../types/japanese';

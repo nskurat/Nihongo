@@ -1,5 +1,5 @@
 /**
- * Core expressions (docs/search/07-regression.md R8): everyday greetings and 日本語 that N5
+ * Core expressions (search regression R8): everyday greetings and 日本語 that N5
  * learners use from day one but the textbook lessons never listed as vocab (some sat at
  * N2/N3, where the list-derived pipeline placed them). Each goes into the N5 lesson that
  * teaches it in the Minna no Nihongo sequence the N5 lessons follow: greetings with the

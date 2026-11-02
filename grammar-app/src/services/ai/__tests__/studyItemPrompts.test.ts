@@ -169,7 +169,8 @@ describe('vocab usage prompt', () => {
     expect(splitVocabHeadword('取る [ノートを〜]')).toEqual({ word: '取る', usageHint: 'ノートを〜' });
     expect(splitVocabHeadword('[お]花見')).toEqual({ word: '（お）花見', usageHint: undefined });
     expect(splitVocabHeadword('平凡 [な]').word).toBe('平凡（な）');
-    const prompt = vocabHelpPromptFor(row<VocabItem>(n3Vocab, 'n3-vocab-8-3'), 'N3');
+    const toru = Object.values(n3Vocab as unknown as Rows<VocabItem>).flat().find((v) => v.word === '取る [ノートを〜]')!;
+    const prompt = vocabHelpPromptFor(toru, 'N3');
     expect(prompt).toContain('Word: 取る（とる）');
     expect(prompt).toContain('Typical use: ノートを〜');
     expect(prompt).toContain('Meaning: take (notes)');
@@ -200,7 +201,7 @@ describe('kanji mnemonic prompt', () => {
   });
 
   it('N3 kunyomi separators are unified and compound notes stripped', () => {
-    const k = row<KanjiItem>(n3Kanji, 'n3-kanji-3-1'); // 悲, compound 悲観的 reading "ひかんてき [な]"
+    const k = Object.values(n3Kanji as unknown as Rows<KanjiItem>).flat().find((r) => r.kanji === '悲')!; // compound 悲観的 reading "ひかんてき [な]"
     expect(formatKanjiReadings(k)).toBe('On: ヒ | Kun: かな.しい');
     const prompt = kanjiMnemonicPromptFor(k, 'N3');
     expect(prompt).toContain('悲観的（ひかんてき）');

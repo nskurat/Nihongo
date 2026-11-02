@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 /**
- * One-time migration (stage 4 of the level audit, see docs/grammar-level-audit.md):
+ * One-time migration (stage 4 of the 2026-10 level audit):
  * moves points whose level is contested up one level, drops one duplicate, and parks
  * one N2 point. Where jlptsensei and Bunpro agree on a harder level the point moves;
  * where they disagree the point also moves (uncertain -> higher level).

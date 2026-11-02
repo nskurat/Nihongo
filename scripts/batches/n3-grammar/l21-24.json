@@ -1,0 +1,319 @@
+{
+  "21": [
+    {
+      "replaces": ["n3-grammar-21-2"],
+      "title": "〜かける／〜かけの",
+      "structure": "Vます-stem + かける ／ かけの N ／ かけだ",
+      "meaning": "\"Start to… (but not finish)\", \"half-done\".",
+      "explanation": "かける shows an action that has started but stopped partway, or is about to happen: 言いかけてやめた (started to say, then stopped). かけの + noun describes something half-finished: 読みかけの本, 食べかけのパン.",
+      "summary": "Stem + かける = begin to (and stop); かけの N = half-done N.",
+      "details": "- 何か言い**かけて**、やめた。 He started to say something, then stopped.\n- 机の上に飲み**かけの**コーヒーがある。 There's a half-drunk coffee on the desk.\n- 死に**かけた**花 a dying flower",
+      "tags": ["time-relative", "completion"],
+      "examples": [
+        { "jp": "読みかけの小説を電車に忘れてしまった。", "en": "I left the novel I was halfway through on the train." },
+        { "jp": "寝かけたときに、電話が鳴った。", "en": "Just as I was dropping off, the phone rang." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-21-3"],
+      "title": "〜込む",
+      "structure": "Vます-stem + 込む",
+      "meaning": "\"Into\" (movement inward); \"thoroughly, deeply\" (intensity).",
+      "explanation": "込む adds the idea of going inside: 飛び込む (jump into), 書き込む (write in). It can also mean doing something deeply or for a long time: 考え込む (be lost in thought), 話し込む (talk at length), 信じ込む (firmly believe).",
+      "summary": "Stem + 込む = into / deeply.",
+      "details": "| Inward | Deeply |\n| :--- | :--- |\n| 飛び**込む** jump in | 考え**込む** sink into thought |\n| 入れ**込む** put in | 話し**込む** talk at length |\n| 書き**込む** fill in | 思い**込む** be convinced |",
+      "tags": ["direction-movement", "degree-extent"],
+      "examples": [
+        { "jp": "子どもたちが次々とプールに飛び込んだ。", "en": "The children jumped into the pool one after another." },
+        { "jp": "友だちと話し込んで、終電に乗り遅れた。", "en": "I got so caught up talking with a friend that I missed the last train." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-21-4"],
+      "title": "〜直す",
+      "structure": "Vます-stem + 直す",
+      "meaning": "\"Redo\", \"do again (properly)\".",
+      "explanation": "直す after a verb stem means doing something again to fix or improve it: 書き直す (rewrite), 見直す (look over again, also \"see in a new light\"), やり直す (start over).",
+      "summary": "Stem + 直す = do again (to correct).",
+      "details": "- 間違いが多いので、レポートを書き**直した**。 There were a lot of mistakes, so I rewrote the report.\n- もう一度、最初からやり**直そう**。 Let's start over from the beginning.\n- 計画を見**直す** review a plan",
+      "tags": ["attempt", "change-of-state"],
+      "examples": [
+        { "jp": "番号を間違えたので、電話をかけ直した。", "en": "I'd dialled the wrong number, so I called again." },
+        { "jp": "間違いが見つかったので、書類を書き直して、もう一度出した。", "en": "I found a mistake, so I rewrote the form and handed it in again." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-21-5"],
+      "title": "〜合う",
+      "structure": "Vます-stem + 合う",
+      "meaning": "\"Do… to each other\", \"together\".",
+      "explanation": "合う makes an action mutual: 助け合う (help each other), 話し合う (discuss), 知り合う (get to know each other). The subject is plural, or the partner takes と.",
+      "summary": "Stem + 合う = do… mutually, with each other.",
+      "details": "- 困ったときは助け**合おう**。 Let's help each other when times are hard.\n- 問題について話し**合った**。 We discussed the problem.\n- 大学で妻と知り**合った**。 I met my wife at university.",
+      "tags": ["simultaneous-action"],
+      "examples": [
+        { "jp": "家族で話し合って、引っ越すことに決めた。", "en": "We talked it over as a family and decided to move." },
+        { "jp": "二人は目を見合わせて、笑った。", "en": "The two of them looked at each other and laughed." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-24-1", "n3-grammar-10-7"],
+      "title": "〜きる／〜きれない",
+      "structure": "Vます-stem + きる（切る）／ きれない",
+      "meaning": "\"Do completely, to the end\" / \"can't (do) it all\".",
+      "explanation": "きる adds completeness: 使いきる (use up), 走りきる (run all the way), 疲れきる (be exhausted). Its potential negative きれない says that the amount is too much to finish: 食べきれない (can't eat it all), 数えきれない (countless).",
+      "summary": "Stem + きる = completely; stem + きれない = too much to (finish).",
+      "details": "- お金を全部使い**きった**。 I've spent all my money.\n- マラソンを最後まで走り**きった**。 I ran the marathon to the finish.\n- こんなにたくさん、食べ**きれない**。 I can't eat all this.\n- 数え**きれない**ほどの星 countless stars",
+      "tags": ["completion", "degree-extent"],
+      "examples": [
+        { "jp": "この本は面白くて、一晩で読みきってしまった。", "en": "This book was so good that I read the whole thing in one night." },
+        { "jp": "料理が多すぎて、二人では食べきれなかった。", "en": "There was too much food for the two of us to finish." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-22-2"],
+      "title": "〜上げる",
+      "structure": "Vます-stem + 上げる",
+      "meaning": "\"Finish (making)…\", \"complete\"; also \"up\" (direction).",
+      "explanation": "上げる after a stem can mean raising something (持ち上げる, lift up), but at N3 it most often means finishing a piece of work: 書き上げる (finish writing), 作り上げる (complete, build up), 仕上げる (put the finishing touches).",
+      "summary": "Stem + 上げる = finish (a piece of work); lift up.",
+      "details": "- 一晩でレポートを書き**上げた**。 I finished writing the report in one night.\n- みんなで一つの作品を作り**上げた**。 We completed a piece of work together.\n- 重い箱を持ち**上げる** lift a heavy box",
+      "tags": ["completion", "creation-completion"],
+      "examples": [
+        { "jp": "三年かけて、やっと小説を書き上げた。", "en": "After three years, I finally finished writing my novel." },
+        { "jp": "このセーターは、母が一か月で編み上げたものだ。", "en": "My mother knitted this sweater in a month." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-22-3"],
+      "title": "〜通す",
+      "structure": "Vます-stem + 通す",
+      "meaning": "\"Keep (doing) to the end\", \"do… all the way through\".",
+      "explanation": "通す (pass through) after a stem means doing something without stopping until the end, often against difficulty: 走り通す (run the whole way), 守り通す (protect to the end), やり通す (see it through).",
+      "summary": "Stem + 通す = do it all the way through.",
+      "details": "- 最後までやり**通す**つもりだ。 I intend to see it through to the end.\n- 一度も休まずに走り**通した**。 I ran the whole way without stopping once.\n- 秘密を守り**通す** keep a secret to the end",
+      "tags": ["completion", "habit-effort"],
+      "examples": [
+        { "jp": "大変な仕事だったが、最後までやり通した。", "en": "It was a tough job, but I saw it through to the end." },
+        { "jp": "彼は三時間、立ち通しで話し続けた。", "en": "He kept talking for three hours, standing the whole time." }
+      ]
+    }
+  ],
+  "22": [
+    {
+      "replaces": ["n3-grammar-5-3"],
+      "title": "〜ばかりでなく／〜だけでなく",
+      "structure": "Plain form（な-adj な／N）+ ばかりでなく／だけでなく、〜も",
+      "meaning": "\"Not only… but also…\".",
+      "explanation": "The pattern adds a second point to the first, usually with も in the second part: 英語だけでなく、中国語も話せる. ばかりでなく is a little more formal than だけでなく.",
+      "summary": "A だけでなく B も = not only A but also B.",
+      "details": "- 彼は勉強**だけでなく**、スポーツ**も**得意だ。 He's good not only at studying but at sport too.\n- この店は安い**ばかりでなく**、味**も**いい。 This place isn't just cheap; it tastes good too.",
+      "tags": ["listing-examples", "emphasis-limitation"],
+      "examples": [
+        { "jp": "この町は、日本人だけでなく、外国人の観光客にも人気がある。", "en": "This town is popular not only with Japanese people but also with foreign tourists." },
+        { "jp": "運動は体ばかりでなく、心にもいい。", "en": "Exercise is good not only for the body but for the mind too." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-13-5"],
+      "title": "〜上に",
+      "structure": "Plain form（な-adj な／Nである）+ 上に",
+      "meaning": "\"On top of…\", \"besides…\": adding a second point of the same kind.",
+      "explanation": "上に adds a further fact in the same direction: both good or both bad. 狭い上に、高い (it's small, and expensive on top of that). It sounds more written than し or それに.",
+      "summary": "A 上に B = A, and on top of that B.",
+      "details": "- この部屋は広い**上に**、日当たりもいい。 This room is spacious and gets lots of sun too.\n- 道に迷った**上に**、雨にも降られた。 I got lost, and on top of that I got caught in the rain.",
+      "tags": ["listing-examples", "degree-extent"],
+      "examples": [
+        { "jp": "あの店は安い上に、店員もとても親切だ。", "en": "That shop is cheap, and the staff are really friendly too." },
+        { "jp": "熱がある上に、せきも出て、つらい。", "en": "I've got a fever and a cough as well; I feel awful." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-24-7"],
+      "title": "例えば〜など／〜とか",
+      "structure": "例えば + N（や N）など ／ 例えば〜とか",
+      "meaning": "\"For example…\": introducing examples, often closed with など or とか.",
+      "explanation": "例えば announces that examples follow. In writing, the list usually ends in など; in speech, とか is common. In an argument, 例えば also introduces a hypothetical case: 例えば、明日雨だったらどうする？",
+      "summary": "例えば〜など = for example… (and so on).",
+      "details": "- 和食、**例えば**すしや天ぷら**など**が好きだ。 I like Japanese food, for example sushi and tempura.\n- **例えば**、宝くじが当たったら、何をしますか。 Say you won the lottery, what would you do?",
+      "tags": ["listing-examples"],
+      "examples": [
+        { "jp": "スポーツ、例えばテニスやサッカーなどをするのが好きです。", "en": "I like playing sports, for example tennis and football." },
+        { "jp": "例えば、来週ではどうですか。", "en": "How about next week, for example?" }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-17-4"],
+      "title": "〜をはじめ（として）",
+      "structure": "N + をはじめ（として）、〜",
+      "meaning": "\"Starting with…\", \"including…\": a leading example, then the rest.",
+      "explanation": "をはじめ picks the most typical or important example and implies others of the same kind: 社長をはじめ、社員全員 (the president and all the staff). It is formal and common in speeches and writing.",
+      "summary": "N をはじめ = beginning with N, and others.",
+      "details": "- 東京**をはじめ**、大きな都市では家賃が高い。 In big cities, Tokyo first among them, rent is high.\n- 校長先生**をはじめ**、多くの先生が来てくださった。 The principal and many teachers came.",
+      "tags": ["listing-examples", "formal-written"],
+      "examples": [
+        { "jp": "この店では、すしをはじめ、いろいろな日本料理が食べられる。", "en": "At this restaurant you can eat all sorts of Japanese food, sushi first and foremost." },
+        { "jp": "両親をはじめ、たくさんの人に助けてもらった。", "en": "I was helped by many people, my parents above all." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-19-2"],
+      "title": "〜はもちろん／〜はもとより",
+      "structure": "N + はもちろん（はもとより）、N も",
+      "meaning": "\"Not to mention…\", \"let alone…\": the first point goes without saying.",
+      "explanation": "はもちろん treats the first item as obvious and adds a less obvious one: 子どもはもちろん、大人も楽しめる (adults can enjoy it, not to mention children). はもとより means the same and is more formal.",
+      "summary": "A はもちろん B も = B too, not to mention A.",
+      "details": "- この映画は子ども**はもちろん**、大人**も**楽しめる。 Adults can enjoy this film, never mind children.\n- 彼は英語**はもとより**、フランス語**も**話せる。",
+      "tags": ["listing-examples", "emphasis-limitation"],
+      "examples": [
+        { "jp": "この公園は、週末はもちろん、平日も人が多い。", "en": "This park is busy on weekdays, never mind the weekend." },
+        { "jp": "料理はもちろん、店の雰囲気もとてもいい。", "en": "The atmosphere is great too, not to mention the food." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-6-1"],
+      "title": "N は〜の一つだ",
+      "structure": "N1 は + N2（plural idea）の一つだ",
+      "meaning": "\"N1 is one of the…\".",
+      "explanation": "の一つだ places something in a larger group, often with a superlative: 日本で最も高い山の一つ. The group is understood as plural even though Japanese nouns do not change.",
+      "summary": "A は B の一つだ = A is one of the B.",
+      "details": "- 京都は日本で最も人気がある町**の一つだ**。 Kyoto is one of the most popular cities in Japan.\n- それは大きな問題**の一つです**。 That is one of the big problems.",
+      "tags": ["definition-meaning"],
+      "examples": [
+        { "jp": "富士山は、世界で最も美しい山の一つだと言われている。", "en": "Mt. Fuji is said to be one of the most beautiful mountains in the world." },
+        { "jp": "これは、わたしがいちばん好きな歌の一つです。", "en": "This is one of my favourite songs." }
+      ]
+    }
+  ],
+  "23": [
+    {
+      "replaces": ["n3-grammar-24-5"],
+      "title": "〜は〜で有名だ",
+      "structure": "N1 は N2 で有名だ",
+      "meaning": "\"N1 is famous for N2\".",
+      "explanation": "で marks the reason for the fame. The pattern is common in descriptions of places and people: この町は温泉で有名だ. For \"famous as\", use として: 歌手として有名だ.",
+      "summary": "A は B で有名だ = A is famous for B.",
+      "details": "- 北海道はおいしい魚**で有名だ**。 Hokkaido is famous for its delicious fish.\n- 彼は作家**として有名だ**。 He is famous as a writer.",
+      "tags": ["cause-reason", "definition-meaning"],
+      "examples": [
+        { "jp": "この寺は、秋の紅葉で有名です。", "en": "This temple is famous for its autumn leaves." },
+        { "jp": "この店は、大きくて安いハンバーガーで有名だ。", "en": "This restaurant is famous for its big, cheap burgers." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-17-3"],
+      "title": "〜を中心に",
+      "structure": "N + を中心に（として）／ を中心とした N",
+      "meaning": "\"Centred on…\", \"mainly…\".",
+      "explanation": "を中心に says what is at the centre of an activity, an area or a group: 若者を中心に人気がある (popular mainly among young people). It is common in news and descriptions.",
+      "summary": "N を中心に = centred on / mainly N.",
+      "details": "- このゲームは、若い人**を中心に**人気がある。 This game is popular, mainly with young people.\n- 東京**を中心に**、大雨が降った。 Heavy rain fell, centred on Tokyo.",
+      "tags": ["viewpoint-standpoint"],
+      "examples": [
+        { "jp": "この授業では、会話を中心に勉強します。", "en": "In this class we focus mainly on conversation." },
+        { "jp": "駅を中心に、新しい店が次々とできている。", "en": "New shops are opening one after another around the station." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-22-1"],
+      "title": "〜向け／〜向き",
+      "structure": "N + 向け（の N／に）／ N + 向き（の N／だ）",
+      "meaning": "向け: \"made for (a target)\"; 向き: \"suited to\".",
+      "explanation": "向け says who something was designed for: 子ども向けの本 (a book for children). 向き says who or what it happens to suit: 初心者向きのコース (a course suited to beginners). Something can be made for adults but suit children too.",
+      "summary": "N 向け = made for N; N 向き = suitable for N.",
+      "details": "| 向け (intended for) | 向き (suited to) |\n| :--- | :--- |\n| 外国人**向け**の雑誌 | この仕事は彼**向き**だ |\n| 子ども**向け**の番組 | 夏**向き**の服 |",
+      "tags": ["purpose", "viewpoint-standpoint"],
+      "examples": [
+        { "jp": "これは留学生向けに作られた日本語の教科書です。", "en": "This is a Japanese textbook written for international students." },
+        { "jp": "この山は高くないので、初心者向きです。", "en": "This mountain isn't high, so it's good for beginners." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-24-3"],
+      "title": "〜的（てき）",
+      "structure": "N + 的（な N／に）",
+      "meaning": "\"-al\", \"-ic\", \"in terms of…\": turns a noun into a な-adjective.",
+      "explanation": "的 attaches to Sino-Japanese nouns to make な-adjectives: 経済的 (economic, economical), 一般的 (general), 具体的 (concrete). With に it becomes an adverb: 個人的に (personally).",
+      "summary": "N 的 = N-related, N-like (な-adjective).",
+      "details": "- 具体**的な**例を挙げてください。 Please give a concrete example.\n- 個人**的に**は、反対です。 Personally, I'm against it.\n- この車は経済**的**だ。 This car is economical.",
+      "tags": ["meta-conjugation", "formal-written"],
+      "examples": [
+        { "jp": "この問題について、もう少し具体的に説明してください。", "en": "Please explain this problem a little more concretely." },
+        { "jp": "日本では、靴を脱いで家に入るのが一般的だ。", "en": "In Japan it's usual to take your shoes off before going into a house." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-24-4"],
+      "title": "〜は別として",
+      "structure": "N／〜かどうか + は別として",
+      "meaning": "\"Leaving aside…\", \"apart from…\".",
+      "explanation": "は別として puts one point aside so that you can talk about the rest: 値段は別として、デザインはいい (setting the price aside, the design is good). With かどうか, it means \"whether or not…\".",
+      "summary": "A は別として = leaving A aside.",
+      "details": "- 結果**は別として**、よくがんばった。 Whatever the result, you did your best.\n- 好きかどうか**は別として**、一度は見たほうがいい。 Whether you like it or not, you should see it once.",
+      "tags": ["concession-contrast", "viewpoint-standpoint"],
+      "examples": [
+        { "jp": "冗談は別として、本当にこの仕事は大変だ。", "en": "Joking aside, this job really is tough." },
+        { "jp": "上手かどうかは別として、毎日練習することが大切だ。", "en": "Whether you're good or not, practising every day is what matters." }
+      ]
+    }
+  ],
+  "24": [
+    {
+      "replaces": ["n3-grammar-12-1"],
+      "title": "The suffering passive（迷惑の受け身）",
+      "structure": "A は B に + intransitive／transitive passive",
+      "meaning": "\"Have (something) happen to you\": the passive of an action that bothers the speaker.",
+      "explanation": "Japanese can make a passive even from intransitive verbs to show that someone was affected badly: 雨に降られた (I got rained on), 子どもに泣かれた (the baby cried on me). The agent takes に. It describes inconvenience, not just an event.",
+      "summary": "A は B に Vpassive = A was (badly) affected by B doing V.",
+      "details": "- 帰りに雨に降**られた**。 I got caught in the rain on the way home.\n- 夜中に隣の人に騒が**れて**、眠れなかった。 The neighbours made a racket and I couldn't sleep.\n- 友だちに先に帰ら**れた**。 My friend went home without me.",
+      "tags": ["passive", "emotion-expression"],
+      "examples": [
+        { "jp": "電車の中で赤ちゃんに泣かれて、困ってしまった。", "en": "A baby started crying on the train, and I didn't know what to do." },
+        { "jp": "大事な時に、父に死なれて、本当につらかった。", "en": "Losing my father at such a crucial time was really hard." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-8-1", "n3-grammar-8-7"],
+      "title": "〜によって／〜による",
+      "structure": "N によって（は）／ N による N",
+      "meaning": "\"By\" (agent of creation), \"depending on\", \"because of\", \"by means of\".",
+      "explanation": "によって has four common uses. With a passive it names the creator or discoverer: 小説は〜によって書かれた. It says that things differ depending on something: 人によって (depending on the person). It gives a formal cause: 事故による遅れ (delay caused by an accident). And it names a means: 話し合いによって (through discussion).",
+      "summary": "によって = by (creator) / depending on / due to / by means of.",
+      "details": "| Use | Example |\n| :--- | :--- |\n| creator (passive) | この寺は八世紀に天皇**によって**建てられた。 |\n| depending on | 国**によって**習慣が違う。 |\n| cause | 台風**による**被害 |\n| means | 話し合い**によって**解決した。 |",
+      "tags": ["passive", "cause-reason"],
+      "examples": [
+        { "jp": "この曲は、有名なピアニストによって作られた。", "en": "This piece was composed by a famous pianist." },
+        { "jp": "同じ言葉でも、地方によって意味が違うことがある。", "en": "The same word can mean different things depending on the region." },
+        { "jp": "大雪による電車の遅れで、多くの人が困った。", "en": "Train delays caused by heavy snow caused problems for many people." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-16-5"],
+      "title": "〜に慣れる",
+      "structure": "N／Vの + に慣れる（慣れている）",
+      "meaning": "\"Get used to…\".",
+      "explanation": "The thing you get used to takes に; a verb needs の or こと first: 早く起きるのに慣れた. The state is 慣れている. 慣れない + noun describes something unfamiliar: 慣れない仕事.",
+      "summary": "N に慣れる = get used to N.",
+      "details": "- 日本の生活**に慣れた**。 I've got used to life in Japan.\n- 毎朝早く起きる**のに慣れて**きた。 I'm getting used to getting up early every morning.\n- **慣れない**仕事で疲れた。 I'm tired from work I'm not used to.",
+      "tags": ["change-of-state", "habit-effort"],
+      "examples": [
+        { "jp": "最初は大変だったが、だんだん新しい仕事に慣れてきた。", "en": "It was hard at first, but I've gradually got used to the new job." },
+        { "jp": "辛い料理を食べるのに慣れていないので、少し苦手だ。", "en": "I'm not used to eating spicy food, so I'm not keen on it." }
+      ]
+    },
+    {
+      "replaces": ["n3-grammar-6-3"],
+      "title": "〜の代わりに／〜代わりに",
+      "structure": "N の代わりに ／ plain form + 代わりに",
+      "meaning": "\"Instead of…\", \"in place of…\"; with a clause, \"in exchange for…\".",
+      "explanation": "の代わりに says one thing or person replaces another: 父の代わりに (on behalf of my father). After a clause it can mean that one fact is balanced by another: 料理を作る代わりに、掃除をしてね (I'll cook, and in return you clean).",
+      "summary": "N の代わりに = instead of N; clause 代わりに = in exchange for.",
+      "details": "- 部長の**代わりに**、わたしが会議に出た。 I attended the meeting in place of the manager.\n- 砂糖の**代わりに**、はちみつを使う。 Use honey instead of sugar.\n- この部屋は狭い**代わりに**、家賃が安い。 This room is small, but the rent is cheap to make up for it.",
+      "tags": ["alternative-choice"],
+      "examples": [
+        { "jp": "母が病気なので、母の代わりにわたしが料理を作った。", "en": "My mother is ill, so I cooked instead of her." },
+        { "jp": "英語を教えてもらう代わりに、日本語を教えてあげた。", "en": "In exchange for English lessons, I taught them Japanese." }
+      ]
+    }
+  ]
+}

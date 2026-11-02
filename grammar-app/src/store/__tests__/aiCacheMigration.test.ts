@@ -14,6 +14,7 @@ import {
   v9VocabUid,
   v11N5Maps,
   v12N4Maps,
+  v13N3Maps,
   withoutKeys,
 } from '../aiCacheMigration';
 import { artifactKey, type ArtifactCache } from '../../services/ai/artifactCache';
@@ -43,8 +44,9 @@ describe('withoutShiftedUids', () => {
   });
 });
 
-/** A pre-v11 N5 or pre-v12 N4 vocab uid → its uid in the restructured lessons (others unchanged). */
-const now = (uid: string) => v11N5Maps()['vocab-help']?.[uid] ?? v12N4Maps()['vocab-help']?.[uid] ?? uid;
+/** A pre-v11 N5, pre-v12 N4 or pre-v13 N3 vocab uid → its uid in the restructured lessons (others unchanged). */
+const now = (uid: string) =>
+  v11N5Maps()['vocab-help']?.[uid] ?? v12N4Maps()['vocab-help']?.[uid] ?? v13N3Maps()['vocab-help']?.[uid] ?? uid;
 
 describe('v9: vocab notes follow their words', () => {
   const vocab = (level: string) =>
@@ -101,7 +103,7 @@ describe('v10: near-repeat merges', () => {
   const wordOf = new Map(['n5', 'n4', 'n3', 'n2'].flatMap((l) => Object.values(vocab(l)).flat().map((r) => [r.uid, r.word] as const)));
 
   it('redirects each merged row to a current row of the same word', () => {
-    expect(wordOf.get(V10_REMOVED_VOCAB_UIDS['n1-vocab-30-81'])).toBe('よほど');
+    expect(wordOf.get(now(V10_REMOVED_VOCAB_UIDS['n1-vocab-30-81']))).toBe('よほど');
     expect(wordOf.get(now(V10_REMOVED_VOCAB_UIDS['n3-vocab-1-127']))).toBe('ぜひ');
     for (const target of Object.values(V10_REMOVED_VOCAB_UIDS)) expect(wordOf.has(now(target))).toBe(true);
   });
@@ -115,7 +117,7 @@ describe('v10: near-repeat merges', () => {
   it('a v9 cache migrates through v10; a v8 cache through v9 and v10', () => {
     const entry = (uid: string) => ({ kind: 'vocab-help' as const, uid, data: uid, ts: 1 });
     const v9 = { artifacts: { [artifactKey('vocab-help', 'n3-vocab-22-51')]: entry('n3-vocab-22-51') } };
-    expect(Object.keys(migrateAiCache(v9, 9).artifacts)).toEqual([artifactKey('vocab-help', 'n3-vocab-22-50')]);
+    expect(Object.keys(migrateAiCache(v9, 9).artifacts)).toEqual([artifactKey('vocab-help', now('n3-vocab-22-50'))]);
   });
 });
 
@@ -202,6 +204,38 @@ describe('v12: the N4 restructure', () => {
   it('migrateAiCache applies it to v11 caches and passes v12 through', () => {
     const v11 = { artifacts: { [artifactKey('vocab-help', 'n4-vocab-1-1')]: { kind: 'vocab-help' as const, uid: 'n4-vocab-1-1', data: '探します note', ts: 1 } } };
     expect(Object.keys(migrateAiCache(v11, 11).artifacts)).toEqual([artifactKey('vocab-help', now('n4-vocab-1-1'))]);
-    expect(migrateAiCache(v11, 12)).toEqual(v11);
+    expect(Object.keys(migrateAiCache(v11, 12).artifacts)).toEqual([artifactKey('vocab-help', 'n4-vocab-1-1')]); // v12 caches skip the v12 step
+  });
+});
+
+describe('v13: the N3 restructure', () => {
+  const data = (section: string) =>
+    JSON.parse(readFileSync(resolve(__dirname, `../../data/n3/${section}.json`), 'utf-8')) as Record<string, { uid: string; word?: string; kanji?: string; title?: string }[]>;
+  const uids = (section: string) => new Set(Object.values(data(section)).flat().map((r) => r.uid));
+  const maps = v13N3Maps();
+
+  it('maps every pre-restructure N3 row to a current row', () => {
+    const grammar = maps['grammar-examples']!;
+    expect(Object.keys(grammar).length).toBeGreaterThan(100);
+    for (const [section, map] of [['grammar', grammar], ['vocab', maps['vocab-help']!], ['kanji', maps['kanji-mnemonic']!]] as const) {
+      const current = uids(section);
+      for (const target of Object.values(map)) expect(current.has(target), `${section} ${target}`).toBe(true);
+    }
+  });
+
+  it('follows known items to their new lessons', () => {
+    const row = (section: string, uid: string) => Object.values(data(section)).flat().find((r) => r.uid === uid);
+    const grammar = (uid: string) => maps['grammar-examples']![uid] ?? uid;
+    expect(row('vocab', now('n3-vocab-1-2'))?.word).toBe('先輩');
+    expect(row('kanji', maps['kanji-mnemonic']!['n3-kanji-1-1'] ?? 'n3-kanji-1-1')?.kanji).toBe('迷');
+    expect(row('grammar', grammar('n3-grammar-5-2'))?.title).toBe('〜おかげで／〜せいで');
+    // つまり and すなわち became one point
+    expect(grammar('n3-grammar-3-4')).toBe(grammar('n3-grammar-24-6'));
+  });
+
+  it('migrateAiCache applies it to v12 caches and passes v13 through', () => {
+    const v12 = { artifacts: { [artifactKey('vocab-help', 'n3-vocab-1-2')]: { kind: 'vocab-help' as const, uid: 'n3-vocab-1-2', data: '先輩 note', ts: 1 } } };
+    expect(Object.keys(migrateAiCache(v12, 12).artifacts)).toEqual([artifactKey('vocab-help', now('n3-vocab-1-2'))]);
+    expect(migrateAiCache(v12, 13)).toEqual(v12);
   });
 });

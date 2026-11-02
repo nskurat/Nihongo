@@ -3,7 +3,7 @@ import axe from 'axe-core';
 /**
  * Rules jsdom cannot evaluate: it does no layout or painting, so colour contrast
  * (and anything else needing computed rendering) would only produce noise. Those are
- * covered by the manual checklist in docs/a11y.md instead.
+ * left to a manual check (docs/backlog.md, Accessibility).
  */
 const DISABLED_RULES = ['color-contrast', 'color-contrast-enhanced'] as const;
 

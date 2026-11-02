@@ -1,7 +1,7 @@
 import { ICHIDAN_I_EXCEPTIONS } from './lemmaExceptions';
 
 /**
- * ます-form → dictionary form for N5/N4 rows (docs/search/04-data.md §2.3). Inferred at
+ * ます-form → dictionary form for N5/N4 rows. Inferred at
  * build time; `pos` is used when it names a group, else e-row/corpus/exception rules.
  * Every derived lemma is written to the build report for teacher review.
  */

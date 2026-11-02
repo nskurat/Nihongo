@@ -12,7 +12,7 @@ import { LEVELS } from '../grammar-app/src/services/search/shard';
 import type { TagTaxonomy } from '../grammar-app/src/types/japanese';
 
 /**
- * Builds the global-search index shards (docs/search/04-data.md §4.3) from src/data into
+ * Builds the global-search index shards from src/data into
  * grammar-app/src/generated/search/ (gitignored, so it can never drift from the data).
  * Runs before `npm run dev` and `npm run build`. The worker imports the shards with
  * `?url`, so Vite emits them as content-hashed assets under the app's BASE_URL.

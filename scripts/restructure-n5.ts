@@ -13,7 +13,7 @@ import {
 } from './lib/n5Restructure';
 
 /**
- * One-time N5 restructure (2026-11, docs/content/n5-restructure.md): N5 grammar and vocab
+ * One-time N5 restructure (2026-11): N5 grammar and vocab
  * leave the Minna no Nihongo lesson order for this app's own 25-lesson sequence.
  *
  *  - grammar: replaced by the authored batches in scripts/batches/n5-grammar/*.json

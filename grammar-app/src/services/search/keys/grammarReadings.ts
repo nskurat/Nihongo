@@ -1,5 +1,5 @@
 /**
- * Kana readings of the kanji in grammar titles (regression R3, docs/search/07-regression.md):
+ * Kana readings of the kanji in grammar titles (regression R3):
  * learners type 〜上で as うえで and 〜次第 as しだい. Titles carry no reading, and the vocab
  * data can't settle one (上 is うえ/じょう/かみ), so this is teacher-curated reference data,
  * like `aliases.ts`. Each entry is a written form as it appears in titles (kanji plus

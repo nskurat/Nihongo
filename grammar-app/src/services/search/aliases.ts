@@ -1,6 +1,5 @@
 /**
- * Function-category alias layer (docs/search/02-requirements.md §3 Should #10,
- * docs/search/04-data.md §6, teacher §4, teacher review F11). Reference data over the
+ * Function-category alias layer (teacher review F11). Reference data over the
  * EXISTING tags only — no re-tagging.
  *
  * - `tags`: a grammar point belongs to the category when it carries one of these tags…

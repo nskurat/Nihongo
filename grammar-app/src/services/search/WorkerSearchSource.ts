@@ -24,8 +24,8 @@ function defaultWorker(): WorkerLike {
 }
 
 /**
- * Default search source: a Web Worker over the prebuilt index shards
- * (docs/search/04-data.md §4.4). The worker is created lazily on the first call (the
+ * Default search source: a Web Worker over the prebuilt index shards.
+ * The worker is created lazily on the first call (the
  * header field calls `warmup()` on focus), so lesson pages never pay for the index.
  * Load failures reject with `ContentError('load-failed')`; the next call retries.
  */

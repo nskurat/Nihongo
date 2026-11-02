@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 
 /**
- * One-time migration (stage 1 of the level audit, see docs/grammar-level-audit.md):
+ * One-time migration (stage 1 of the 2026-10 level audit):
  *  - moves N3 grammar points that are really N4 into the matching N4 lesson,
  *  - drops N3 duplicates (within N3, or of an N4/N5 point we already teach),
  *  - parks N3 points that are really N2/N1 in data/n2/grammar.json (not shown in the UI),

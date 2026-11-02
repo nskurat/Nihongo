@@ -1,5 +1,5 @@
 /**
- * The teacher's 65 regression queries (docs/search/06-teacher-review.md §3), against the
+ * The teacher's 65 regression queries, against the
  * real data with rankLevel N5. Each row names the finding it locks in.
  */
 import { describe, expect, it } from 'vitest';
@@ -129,7 +129,7 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect((await run('いいです')).groups.vocab[0].title).toBe('いい');
   });
   // ---- F6 plain-form grammar keys
-  // N4 titles and lessons follow the 2026-11 N4 restructure (docs/content/n4-restructure.md).
+  // N4 titles and lessons follow the 2026-11 N4 restructure.
   it('#25 てしまう → Vて しまいます top', async () => {
     expect((await run('てしまう')).groups.grammar[0]).toMatchObject({ title: 'Vて しまいます', level: 'N4', lesson: 6 });
   });
@@ -301,8 +301,11 @@ describe('teacher regression set (06-teacher-review §3)', () => {
     expect(titleAliases(top.title)).toContain('食べる');
     expect(top.matchKind).toMatch(/exact|lemma/); // 食べる is now taught by its ます row
   });
-  it('#64 mei → 明, 名, 迷 exact', async () => {
-    expect(titles((await run('mei')).groups.kanji.slice(0, 3))).toEqual(['明', '名', '迷']);
+  // N3 kanji follow the 2026-11 N3 restructure: 命 (L7) now comes before 迷 (L11).
+  it('#64 mei → 明, 名 first; 迷 among the exact hits', async () => {
+    const top = titles((await run('mei')).groups.kanji.slice(0, 4));
+    expect(top.slice(0, 2)).toEqual(['明', '名']);
+    expect(top).toContain('迷');
   });
   it('#65 ころぶ → kanji 転 exact, vocab 転ぶ', async () => {
     const r = await run('ころぶ');

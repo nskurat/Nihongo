@@ -12,7 +12,7 @@ interface AppState {
   showTranslations: boolean;
   /**
    * The lesson visited last. Its level is the search ranking level and the header badge on
-   * /search; leaving search with no in-app history returns here (docs/search/03-ux.md §1.3).
+   * /search; leaving search with no in-app history returns here.
    */
   lastLesson: LastLesson;
 

@@ -3,7 +3,7 @@ import { applyVocabExamples, type ExampleBatch, type LessonFile } from './lib/n5
 
 /**
  * Replaces the example sentences of the N4 core vocab rows with the ones written for the
- * N4 restructure (scripts/batches/n4-vocab-examples.json, docs/content/n4-restructure.md).
+ * N4 restructure (scripts/batches/n4-vocab-examples.json).
  * Checks each row's word first; changes nothing else. Idempotent.
  *
  *   npx tsx scripts/rewrite-n4-vocab-examples.ts [--dry-run]
