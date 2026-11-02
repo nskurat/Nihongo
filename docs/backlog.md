@@ -93,6 +93,17 @@ From `docs/reading-library-nav-ux.md`: a "your N3 passage is ready" notice when 
 generation finishes on another level; per-level history switcher; story id in the URL;
 per-level furigana/English toggles; library filter by in-progress.
 
+## 7. UI
+
+- **Kanji cards don't show compound readings** — `features/kanji/KanjiSection.tsx` lists each
+  compound's word and meaning only. Since 2026-11-01 every compound has a reading (N4 rows
+  filled by `scripts/fix-n4-compounds.ts`); showing it (or furigana) would help learners.
+- **Out-of-range lesson URLs** — `/n9/grammar/1`, `/n3/grammar/99` or an old `/n5/vocab/26`
+  link render the level's default lesson but keep the bad URL (QA `docs/search/05-qa.md` §6).
+  A `replace` redirect to the canonical URL would fix bookmarks and sharing.
+- **Search on mobile** — tab order (chips before filters, QA BUG-17) was re-checked on desktop
+  only in the 2026-11-01 regression; re-check at 390 px.
+
 ## Settled decisions
 
 These hold for all remaining work. Do not revisit them without the owner.
@@ -122,6 +133,9 @@ These hold for all remaining work. Do not revisit them without the owner.
 - Accessibility: axe-core in the jsdom project (`src/test/axe.ts`) gates every page and dialog;
   contrast and screen readers are a manual checklist (`docs/a11y.md`). Bundle budget is
   `scripts/lib/bundleBudget.ts`, checked against a local build — no preview deploy.
+- A content change that shifts positional uids (dedupe, moves) ships an AI-cache renumbering
+  in `store/aiCacheMigration.ts` (`renumberVocabArtifacts`, bump the store version): paid
+  results follow their word; a removed row's note goes to its kept twin. Never drop them silently.
 - Vitest has two projects: `node` for `*.test.ts`, `jsdom` for `*.test.tsx`. Tests never reach
   the network (`src/test/setup.node.ts`); AI is mocked with `src/test/mockAi.ts`.
 
