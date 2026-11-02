@@ -70,8 +70,7 @@ Rows in `src/data/*.json` are generated: fixes go through `scripts/`, never by h
   from the book's English, and the book's さくら大学 (`n4-grammar-3-4`). 104 of the 166 N4
   rows share that shape, across all 25 lessons. N3 hasn't been checked yet. Do each level like
   N5 (`docs/content/n5-restructure.md`): our own lesson order, regrouped vocab, every point
-  rewritten, a Japanese-teacher review before merge, then add the level to
-  `textbookGuard.test.ts`. The N4 AI prompts still say "Minna no Nihongo Lessons 26–50"
+  rewritten, and a Japanese-teacher review before merge. The N4 AI prompts still say "Minna no Nihongo Lessons 26–50"
   (`prompts.ts`, `promptBuilder.ts`); that goes with the N4 rewrite.
 - **N4 grammar words filed in N5 vocab**: もし〜たら and いくら〜ても (N5 lesson 25) are N4
   conditionals that no N5 grammar point teaches. Move them to N4 with the N4 rewrite, or mark

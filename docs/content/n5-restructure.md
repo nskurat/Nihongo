@@ -94,10 +94,3 @@ uid. Where rows merged, the most recently generated note wins.
 
 Scripts that placed rows into N5 lessons before this change (`add-core-expressions.ts`,
 `fill-n5-n4-gaps.ts` for N5) describe the old lesson numbers and are not re-run.
-
-## Guard
-
-`grammar-app/src/__tests__/textbookGuard.test.ts` fails if a guarded level's grammar holds a
-numbered example from the book pages checked so far (stored only as hashes). It also fails
-if a grammar row or a vocab example uses the book's cast. N5 is guarded. Add N4 and N3 when they are rewritten. Pointed at N4 today, it finds the
-11 known copies.
